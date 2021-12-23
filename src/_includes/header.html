@@ -2,10 +2,14 @@
   <div class="{% if include.container_class %} {{include.container_class}} {% else %} container-fluid {% endif %} flex-row justify-content-center">
     <div class="navbar-brand">
       <a href="{{site.url}}">
+    
+        <span>ZeroTrust</span><span style="color: #8ab9ff; font-weight: 500; margin-left: 2px;">NetworkAccess</span><span></span>
+        <!---
         {% if include.light_logo %}
          <img src="{{site.data.general_settings.light_logo_1x}}" srcset="{{site.data.general_settings.light_logo_1x}} 1x, {{site.data.general_settings.light_logo_2x}} 2x" class="{% if include.logo_class %} {{include.logo_class}} {% else %} logo-light {% endif %}" alt="{{site.data.general_settings.title}}"/>
          {% endif %}
          <img src="{{site.data.general_settings.black_logo_1x}}" srcset="{{site.data.general_settings.black_logo_1x}} 1x, {{site.data.general_settings.black_logo_2x}} 2x" class="{% if include.logo_class %} {{include.logo_class}} {% else %} logo-dark {% endif %} {% if include.black_logo_disable %} d-none {% endif %}" alt="{{site.data.general_settings.title}}"/>
+        -->
       </a>
     </div>
     <div class="navbar-other ml-auto order-lg-3">

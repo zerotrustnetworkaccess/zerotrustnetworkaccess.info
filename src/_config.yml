@@ -3,7 +3,7 @@ url: "https://snowlake.netlify.app" # the base hostname & protocol for your site
 permalink: "/:title"
 
 # Build settings
-theme: snowlake
+#theme: snowlake
 plugins:
   - jekyll-feed
   - jekyll-paginate-v2

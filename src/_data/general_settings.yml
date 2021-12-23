@@ -1,5 +1,5 @@
 # General Settings
-title: "Snowlake premium jekyll template"
+title: "The no-bullshit ZTNA vendor directory | Enclave Networks"
 email: "tortoizthemes@gmail.com"
 email_2: "support@tortoizthemes.com"
 description: >- # this means to ignore newlines until "baseurl:"
@@ -12,9 +12,9 @@ black_logo_2x: "/assets/images/logo@2x.png"
 light_logo_1x: "/assets/images/logo-light.png"
 light_logo_2x: "/assets/images/logo-light@2x.png"
 
-address_01: 'Moonshine St. 14/05 <br /> Light City, London'
-phone_number: "+00 (123) 456 78 90"
-copyright_text: "© 2021 Snowlake.  All rights reserved."
+address_01: ""
+phone_number: ""
+copyright_text: "© 2021 Enclave Networks. All rights reserved."
 
 google_analytics:
   enable: false
