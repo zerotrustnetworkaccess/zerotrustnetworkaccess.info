@@ -167,11 +167,11 @@ pip-log.txt
 .jekyll-cache
 
 # ignore locally built jekyll assets
-_site/*/
-_site/*
-!_site/_headers
-!_site/.well-known/
-!_site/.well-known/*
+src/_site/*/
+src/_site/*
+!src/_site/_headers
+!src/_site/.well-known/
+!src/_site/.well-known/*
 node_modules
 .jekyll-metadata
 .jekyll-cache
