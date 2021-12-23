@@ -1,8 +1,0 @@
-:root {
-	--color-default: #a4bf9e;
-	--rgb-default: 164, 191, 158;
-	--btn-hover-default: 0 0 0 5px rgba(var(--rgb-default), 0.25);
-}
-.icon-blob-default:after {
-    color: rgba(var(--rgb-default), 0.3);
-}
