@@ -1,0 +1,75 @@
+---
+layout: default
+overflow: true
+page_content:
+  title: "We'll be back shortly!"
+  sub_title: "Our website is under construction. Estimated Time Remaining:"
+  date: "Jan 1 2025"
+---
+
+<div class="wrapper image-wrapper bg-image no-overlay h-100" data-image-src="{{relative_url}}/assets/images/art/bg16.jpg">
+  <div class="content-wrapper inverse-text text-center d-flex flex-column justify-content-between h-100">
+    {% if site.data.general_settings.light_logo_1x %}
+    <div class="container inner pt-40 pb-80">
+      <div class="logo"> 
+      	<a href="{{site.url}}">
+      		<img src="{{site.data.general_settings.light_logo_1x}}"  alt="{{site.data.general_settings.title}}" />
+      	</a> 
+      </div>
+    </div>
+    <!-- /.container -->
+    {% endif %}
+    <div class="container">
+      {% if page.page_content.title %}
+       <h1 class="hero mb-40">{{page.page_content.title}}</h1>
+      {% endif %}
+      {% if page.page_content.sub_title %}
+      <p class="lead larger">{{page.page_content.sub_title}}</p>
+      {% endif %}
+      <div class="space20"></div>
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <div class="countdown" data-date="{{page.page_content.date}}">
+            <div class="row text-center">
+              <div class="col-md-3">
+                <h3 data-days>0</h3>
+                <p class="mb-0">days</p>
+              </div>
+              <!--/column -->
+              <div class="col-md-3">
+                <h3 data-hours>0</h3>
+                <p class="mb-0">hours</p>
+              </div>
+              <!--/column -->
+              <div class="col-md-3">
+                <h3 data-minutes>0</h3>
+                <p class="mb-0">minutes</p>
+              </div>
+              <!--/column -->
+              <div class="col-md-3">
+                <h3 data-seconds>0</h3>
+                <p class="mb-0">seconds</p>
+              </div>
+              <!--/column -->
+            </div>
+            <!-- /.row -->
+          </div>
+          <!--/.countdown -->
+        </div>
+        <!-- /column -->
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container -->
+    <div class="container inner pt-80 pb-40">
+        <p>{{site.data.general_settings.copyright_text}}</p>
+	    <ul class="social social-mute social-s">
+	      {% for social_info in site.data.general_settings.social_accounts.links %}
+	      <li><a target="_blank" href="{{social_info.url}}"><i class="{{social_info.icon}}"></i></a></li>
+	      {% endfor %}
+	    </ul>
+    </div>
+    <!-- /.container -->
+  </div>
+  <!-- /.content-wrapper -->
+</div>

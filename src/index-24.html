@@ -1,0 +1,229 @@
+---
+layout: default
+newslettter:
+  enabled: true
+  title: "Join the mailing list and get %10 off"
+  sub_title: "Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla."
+  form_action: "tortoiztheme@gmail.com"
+  button_text: "Join"
+  image: "/assets/images/concept/concept19.png"
+slider_area:
+  enabled: true
+  sliders:
+    - title: "Packaging Boxes"
+      old_price: "$55.00"
+      new_price: "$45.00"
+      image: "/assets/images/art/s10.jpg"
+      url: "#"
+    - title: "Childrens Book"
+      old_price: "$55.00"
+      new_price: "$45.00"
+      image: "/assets/images/art/s11.jpg"
+      url: "#"
+    - title: "Pure Jar Mini"
+      old_price: "$55.00"
+      new_price: "$45.00"
+      image: "/assets/images/art/s12.jpg"
+      url: "#"
+
+products_area:
+  enabled: true
+  products:
+    - title: "Shopping Bag"
+      old_price: "$55"
+      new_price: "$45"
+      image_1: "/assets/images/art/s1.jpg"
+      image_2: "/assets/images/art/s1-2.jpg"
+      url: "#"
+    - title: "Shopping Bag"
+      old_price: "$55"
+      new_price: "$45"
+      image_1: "/assets/images/art/s2.jpg"
+      image_2: "/assets/images/art/s2-2.jpg"
+      url: "#"
+    - title: "Shopping Bag"
+      old_price: "$55"
+      new_price: "$45"
+      image_1: "/assets/images/art/s3.jpg"
+      image_2: "/assets/images/art/s3-2.jpg"
+      url: "#"
+    - title: "Shopping Bag"
+      old_price: "$55"
+      new_price: "$45"
+      image_1: "/assets/images/art/s4.jpg"
+      image_2: "/assets/images/art/s4-2.jpg"
+      url: "#"
+    - title: "Shopping Bag"
+      old_price: "$55"
+      new_price: "$45"
+      image_1: "/assets/images/art/s5.jpg"
+      image_2: "/assets/images/art/s5-2.jpg"
+      url: "#"
+    - title: "Shopping Bag"
+      old_price: "$55"
+      new_price: "$45"
+      image_1: "/assets/images/art/s6.jpg"
+      image_2: "/assets/images/art/s6-2.jpg"
+      url: "#"
+    - title: "Half Fold Book"
+      new_price: "$45"
+      image_1: "/assets/images/art/s7.jpg"
+      image_2: "/assets/images/art/s7-2.jpg"
+      url: "#"
+    - title: "Brand Box"
+      new_price: "$45"
+      image_1: "/assets/images/art/s8.jpg"
+      image_2: "/assets/images/art/s8-2.jpg"
+      url: "#"
+    - title: "Wine Bag"
+      new_price: "$45"
+      image_1: "/assets/images/art/s9.jpg"
+      image_2: "/assets/images/art/s9-2.jpg"
+      url: "#"
+---
+
+<div class="white-wrapper">
+  <div class="container">
+  	<div class="row">
+  		<div class="col-md-12">
+  			{% include header.html container_class="container"  logo_class="logo" %}
+  		</div>
+  	</div>
+  </div>
+  {% if page.newslettter.enabled %}
+  <div class="modal fade modal-popup" id="modal-06" tabindex="-1" role="dialog" aria-labelledby="modal-06" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="box bg-white p-40 text-center">
+          <div class="row">
+            {% if page.newslettter.image %}
+            <div class="col-md-8 offset-md-2">
+              <figure class="mb-30">
+                <img src="{{page.newslettter.image}}"  alt="{{page.newslettter.image}}"/>
+              </figure>
+            </div>
+            <!-- /column -->
+            {% endif %}
+          </div>
+          <!-- /.row -->
+          {% if page.newslettter.title %}
+           <h3>{{page.newslettter.title}}</h3>
+          {% endif %}
+          {% if page.newslettter.sub_title %}
+           <p>{{page.newslettter.sub_title}}</p>
+          {% endif %}
+          <div class="newsletter-wrapper">
+            <div class="row">
+              <div class="col-md-10 offset-md-1">
+                <form action="https://formsubmit.io/send/{{page.newslettter.form_action}}" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                  <div id="mc_embed_signup_scroll" class="input-group">
+                    <input type="email" value="" name="EMAIL" class="email form-control mb-0 mr-2 mb-sm-0" id="mce-EMAIL" placeholder="Email Address" required>
+                    <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn btn-rounded btn-default mr-0 mb-0 pull-right">{{page.newslettter.button_text}}</button>
+                    <div class="clearfix"></div>
+                  </div>
+                </form>
+              </div>
+              <!-- /.newsletter-wrapper -->
+            </div>
+            <!-- /column -->
+          </div>
+          <!-- /.row -->
+        </div>
+        <!--/.box -->
+      </div>
+      <!--/.modal-content -->
+    </div>
+    <!--/.modal-dialog -->
+  </div>
+  <!--/.modal -->
+  {% endif %}
+  <div class="wrapper white-wrapper">
+    <div class="container inner pt-0">
+      {% if page.slider_area.enabled %}
+      <div class="basic-slider owl-carousel grid dots-on-top" data-margin="5">
+        {% for slide in page.slider_area.sliders %}
+        <div class="item item-detailed">
+          <figure class="rounded mb-20">
+            {% if slide.image %}
+            <div class="item-detailed-image">
+              <img src="{{slide.image}}" alt="{{slide.title}}"/>
+            </div>
+            {% endif %}
+            <a href="#" class="hover-icon-first" data-tip="Add to Wishlist"><i class="jam jam-heart"></i></a>
+            <a href="#" class="hover-icon-second" data-tip="Add to cart"><i class="jam jam-shopping-cart"></i></a>
+          </figure>
+          <div class="item-content">
+            {% if slide.title %}
+             <h2 class="post-title mb-10"><a href="{{slide.url}}">{{slide.title}}</a></h2>
+            {% endif %}
+            <div class="price mb-0">
+              {% if slide.old_price %}
+               <del><span class="amount">{{slide.old_price}}</span></del> 
+              {% endif %}
+              {% if slide.new_price %}
+              <ins><span class="amount">{{slide.new_price}}</span></ins>
+              {% endif %}
+            </div>
+            <span class="ratings four"></span>
+          </div>
+          <!-- /.item-content -->
+        </div>
+        {% endfor %}
+      </div>
+      <!-- /.basic-slider -->
+      {% endif %}
+      {% if page.products_area.enabled %}
+      <div class="space50"></div>
+      <div class="grid grid-view">
+        <div class="tiles">
+          <div class="row isotope">
+          {% for product in page.products_area.products %}
+            <div class="item item-detailed grid-sizer col-md-6 col-lg-4">
+              <figure class="rounded mb-20">
+                <div class="item-detailed-image">
+                  {% if product.image_1 %}
+                   <img src="{{product.image_1}}" alt="{{product.title}}"/>
+                  {% endif %}
+                  {% if product.image_2 %}
+                  <img src="{{product.image_2}}" alt="{{product.title}}"/>
+                  {% endif %}
+                </div>
+                <a href="#" class="hover-icon-first" data-tip="Add to Wishlist"><i class="jam jam-heart"></i></a>
+                <a href="#" class="hover-icon-second" data-tip="Add to cart"><i class="jam jam-shopping-cart"></i></a>
+                <span class="item-label bg-rose">Sale!</span>
+              </figure>
+              <div class="item-content">
+                {% if product.title %}
+                 <h2 class="post-title mb-10"><a href="{{product.url}}">{{product.title}}</a></h2>
+                {% endif %}
+                <div class="price mb-0">
+                  {% if product.old_price %}
+                  <del><span class="amount">{{product.old_price}}</span></del> 
+                  {% endif %}
+                  {% if product.new_price %}
+                  <ins><span class="amount">{{product.new_price}}</span></ins>
+                  {% endif %}
+                </div>
+                <span class="ratings four"></span>
+              </div>
+              <!-- /.item-content -->
+            </div>
+            <!-- /.item -->    
+          {% endfor %}
+          </div>
+          <!-- /.row -->
+        </div>
+        <!-- /.tiles -->
+      </div>
+      <!-- /.grid -->
+      {% endif %}
+    </div>
+    <!-- /.container -->
+  </div>
+  <!-- /.wrapper -->
+  {% include footer_3.html light_logo="true" %}
+</div>
+<!-- /.content-wrapper -->

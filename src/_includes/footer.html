@@ -1,0 +1,116 @@
+  <footer class="{% if include.extra_class %} {{include.extra_class}} {% else %} dark-wrapper inverse-text {% endif %}">
+    <div class="container inner">
+      <div class="row">
+        <div class="col-md-6 col-lg-3">
+          <div class="widget">
+            <h3 class="widget-title">Popular Posts</h3>
+            <ul class="image-list">
+              {% for post in site.posts limit: 3 %}
+              <li>
+                {% if post.post_image %}
+                <figure class="rounded">
+                  <a href="{{post.url}}">
+                    <img src="{{post.post_image}}" alt="{{post.title}}"/>
+                  </a>
+                </figure>
+                {% endif %}
+                <div class="post-content">
+                  {% if post.title %}
+                   <h6 class="post-title"><a href="{{post.url}}">{{post.title}}</a></h6>
+                  {% endif %}
+                  {% if post.date %}
+                  <div class="meta">
+                    <span class="date"><i class="jam jam-clock"></i>{{post.date | date_to_string}}</span>
+                  </div>
+                  {% endif %}
+                </div>
+              </li>
+              {% endfor %}
+            </ul>
+            <!-- /.image-list -->
+          </div>
+          <!-- /.widget -->
+        </div>
+        <!-- /column -->
+        <div class="col-md-6 col-lg-3">
+          <div class="widget">
+            <h3 class="widget-title">Tags</h3>
+            <ul class="list-unstyled tag-list">
+            {% capture tags %}
+              {% for tag in site.tags %}
+                <li data-sort="{{ site.posts.size | minus: tag[1].size | prepend: '0000' | slice: -4, 4 }}">
+                   <a class="btn btn-s" href="/{{ site.tag_page_dir }}/{{ tag[0] | slugify: 'pretty' }}">{{ tag[0] }}</a>
+                </li>
+              {% endfor %}
+            {% endcapture %}
+            {{ tags | split:'</li>' | sort | join:'</li>' }}
+            </ul>
+          </div>
+          <div class="widget">
+            <h3 class="widget-title">Categories</h3>
+            <ul class="unordered-list column-2">
+            {% for category in site.categories %}
+            {% assign category_name = category[0] %}
+            <li>
+              <a class="text-capitalize nocolor" href="/category/{{ category_name | slugify }}/">{{ category_name | replace: "-", " " }}</a>
+            </li>
+            {% endfor %}
+            </ul>
+          </div>
+          <!-- /.widget -->
+        </div>
+        <!-- /column -->
+        <div class="col-md-6 col-lg-3">
+          <div class="widget">
+            <h3 class="widget-title">Get in Touch</h3>
+            <address>{{site.data.general_settings.address_01}}</address>
+            <a href="mailto:{{site.data.general_settings.email}}">{{site.data.general_settings.email}}</a><br /> {{site.data.general_settings.phone_number}}
+          </div>
+          <!-- /.widget -->
+          <div class="widget">
+            {% if site.data.general_settings.social_accounts.title %}
+            <h3 class="widget-title">{{site.data.general_settings.social_accounts.title}}</h3>
+            {% endif %}
+            <ul class="social social-mute social-s ml-auto">
+              {% for social_info in site.data.general_settings.social_accounts.links %}
+              <li><a href="{{social_info.url}}"><i class="{{social_info.icon}}"></i></a></li>
+              {% endfor %}
+            </ul>
+          </div>
+          <!-- /.widget -->
+        </div>
+        <!-- /column -->
+        <div class="col-md-6 col-lg-3">
+          <div class="widget">
+            {% if site.data.general_settings.external_links.title %}
+            <h3 class="widget-title">{{site.data.general_settings.external_links.title}}</h3>
+            {% endif %}
+            <ul class="list-unstyled">
+             {% for external_link in site.data.general_settings.external_links.links %}
+              <li><a href="{{external_link.url}}" class="nocolor">{{external_link.text}}</a></li>
+             {% endfor %}
+            </ul>
+          </div>
+          <!-- /.widget -->
+          <div class="widget">
+            {% if site.data.general_settings.external_links_02.title %}
+            <h3 class="widget-title">{{site.data.general_settings.external_links_02.title}}</h3>
+            {% endif %}
+            <ul class="list-unstyled">
+             {% for external_link in site.data.general_settings.external_links_02.links %}
+              <li><a href="{{external_link.url}}" class="nocolor">{{external_link.text}}</a></li>
+             {% endfor %}
+            </ul>
+          </div>
+          <!-- /.widget -->
+        </div>
+        <!-- /column -->
+      </div>
+      <!--/.row -->
+      <div class="space50"></div>
+      {% if site.data.general_settings.copyright_text %}
+      <p class="text-center mb-0">{{site.data.general_settings.copyright_text}}</p>
+      {% endif %}
+    </div>
+    <!-- /.container -->
+  </footer>

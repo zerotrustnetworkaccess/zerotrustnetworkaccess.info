@@ -1,0 +1,49 @@
+  <div class="post">
+    <div class="box bg-white shadow">
+      <div class="post-gallery light-gallery-wrapper">
+        <div class="tiles tiles-s">
+          <div class="items row">
+            {% for photos in post.gallery %}
+            {% if forloop.index < 3%}
+            <div class="item col-md-6">
+              <figure class="overlay overlay1 rounded"><a href="{{photos.img}}" class="lightbox">
+                <img src="{{photos.img}}" alt="{{photos.img}}"></a>
+                <figcaption>
+                  <h5 class="from-top mb-0">View Larger</h5>
+                </figcaption>
+              </figure>
+            </div>
+            {% else %}
+            <div class="item col-md-4">
+              <figure class="overlay overlay1 rounded"><a href="{{photos.img}}" class="lightbox">
+                <img src="{{photos.img}}" alt="{{photos.img}}"></a>
+                <figcaption>
+                  <h5 class="from-top mb-0">View Larger</h5>
+                </figcaption>
+              </figure>
+            </div>
+            {% endif %}
+            {% endfor %}
+            <!--/.item -->
+          </div>
+          <!--/.items -->
+        </div>
+        <!--/.tiles -->
+      </div>
+      <!--/.post-gallery -->
+      <div class="space40"></div>
+      <div class="post-content">
+        <div class="category text-center"><a href="/category/{{post.categories[0] | slugify}}" class="badge badge-pill bg-meander">{{post.categories[0]}}</a></div>
+        <h2 class="post-title text-center"><a href="{{post.url}}">{{post.title}}</a></h2>
+        <div class="meta text-center">
+          <span class="date"><i class="jam jam-clock"></i>{{post.date | date_to_string}}</span>
+          {% if post.author %}
+          <span class="author"><i class="jam jam-user"></i><a href="/{{post.author | slugify}}">By {{post.author}}</a></span>
+          {% endif %}
+        </div>
+        <p>{{post.excerpt | strip_html | truncatewords: "100"}}</p>
+        <div class="text-center"><a href="{{post.url}}" class="more">Read more</a></div>
+      </div>
+    </div>
+    <!-- /.post -->
+  </div>

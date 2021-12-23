@@ -1,0 +1,22 @@
+<div class="space30 d-block d-md-none"></div>
+<div class="pagination text-center">
+    {% if paginator.total_pages > 1 %}
+    <ul>
+      {% if paginator.previous_page %}
+      <li>
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}">
+          <i class="jam jam-arrow-left"></i> Previous
+        </a>
+      </li>
+      {% endif %}
+      {% if paginator.next_page %}
+      <li>
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl }}">
+         Next <i class="jam jam-arrow-right"></i>
+        </a>
+      </li>
+      {% endif %}
+    </ul>
+    {% endif %}
+</div>
+<!-- /.pagination -->

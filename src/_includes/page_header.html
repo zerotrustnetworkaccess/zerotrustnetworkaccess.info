@@ -1,0 +1,15 @@
+{% if page.page_header.enable %}
+<div class="wrapper image-wrapper bg-image page-title-wrapper inverse-text" data-image-src="{{page.page_header.background_image}}">
+  <div class="container inner text-center">
+    <div class="space90"></div>
+    {% if page.page_header.title %}
+     <h1 class="page-title">{{page.page_header.title}}</h1>
+    {% endif %}
+    {% if page.page_header.sub_title %}
+     <p class="lead">{{page.page_header.sub_title}}</p>
+     {% endif %}
+  </div>
+  <!-- /.container -->
+</div>
+<!-- /.wrapper -->
+{% endif %}

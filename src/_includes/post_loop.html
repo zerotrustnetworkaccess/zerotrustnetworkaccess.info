@@ -1,0 +1,24 @@
+{% if post.post_image %}
+<figure class="overlay overlay1 rounded mb-30">
+	<a href="{{post.url}}"><img class="post-thumb" src="{{post.post_image}}" alt="{{post.title}}"/></a>
+  <figcaption>
+    <h5 class="from-top mb-0">Read More</h5>
+  </figcaption>
+</figure>
+{% endif %}
+{% if post.categories %}
+ <div class="category">
+ 	 <a href="/category/{{post.categories[0] | slugify}}" class="badge badge-pill bg-purple">{{post.categories[0]}}</a>
+ </div>
+{% endif %}
+<h2 class="post-title"><a href="{{post.url}}">{{post.title}}</a></h2>
+<div class="post-content">
+  <p>{{post.excerpt | strip_html | truncatewords: 25}}</p>
+</div>
+<!-- /.post-content -->
+<div class="meta mb-0">
+	{% if post.date %}
+	<span class="date"><i class="jam jam-clock"></i>{{post.date | date_to_string}}</span>
+	{% endif %}
+	<span class="comments"><i class="jam jam-user"></i><a href="/authors/{{post.author | slugify}}"> {{post.author}}</a></span>
+</div>

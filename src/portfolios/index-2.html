@@ -1,0 +1,153 @@
+---
+layout: page
+title: "Grid Portfolio with Details"
+sub_title: "Aenean lacinia bibendum nulla sed consectetur"
+black_menu: true
+
+portfolios_area:
+  enable: true
+  categories:
+    - title: "Branding"
+      filter: "branding"
+
+    - title: "Corporate"
+      filter: "corporate"
+
+    - title: "Application"
+      filter: "application"
+
+    - title: "Video"
+      filter: "video"
+
+  portfolios:
+    - title: "Fringilla Nullam"
+      sub_title: "Corporate, Application"
+      sm_image: "/assets/images/art/p1.jpg"
+      big_image: "/assets/images/art/p1-full.jpg"
+      url: "#"
+      filters:
+        - corporate
+        - branding
+    - title: "Ridiculus Parturient"
+      sub_title: "Application"
+      sm_image: "/assets/images/art/p2.jpg"
+      big_image: "/assets/images/art/p2-full.jpg"
+      url: "#"
+      filters:
+        - application
+    - title: "Nullam Mollis"
+      sub_title: "Application"
+      sm_image: "/assets/images/art/p3.jpg"
+      big_image: "/assets/images/art/p3-full.jpg"
+      url: "#"
+      filters:
+        - video
+    - title: "Ridiculus Parturient"
+      sub_title: "Application"
+      sm_image: "/assets/images/art/p4.jpg"
+      big_image: "/assets/images/art/p4-full.jpg"
+      url: "#"
+      filters:
+        - branding
+    - title: "Ridiculus Tristique"
+      sub_title: "Application"
+      sm_image: "/assets/images/art/p5.jpg"
+      big_image: "/assets/images/art/p5-full.jpg"
+      url: "#"
+      filters:
+        - application
+        - branding
+    - title: "Euismod Risus"
+      sub_title: "Application"
+      sm_image: "/assets/images/art/p6.jpg"
+      big_image: "/assets/images/art/p6-full.jpg"
+      url: "#"
+      filters:
+        - corporate
+    - title: "Sollicitudin Pharetra"
+      sub_title: "Audio, Video"
+      sm_image: "/assets/images/art/p7.jpg"
+      big_image: "/assets/images/art/p7-full.jpg"
+      url: "#"
+      filters:
+        - branding
+    - title: "Consectetur Malesuada"
+      sub_title: "Branding"
+      sm_image: "/assets/images/art/p8.jpg"
+      big_image: "/assets/images/art/p8-full.jpg"
+      url: "#"
+      filters:
+        - video
+    - title: "Ridiculus Parturient"
+      sub_title: "Application"
+      sm_image: "/assets/images/art/p9.jpg"
+      big_image: "/assets/images/art/p9-full.jpg"
+      url: "#"
+      filters:
+        - corporate
+        - branding
+    - title: "Ridiculus Parturient"
+      sub_title: "Application"
+      sm_image: "/assets/images/art/p10.jpg"
+      big_image: "/assets/images/art/p10-full.jpg"
+      url: "#"
+      filters:
+        - branding
+    - title: "Ultricies Aenean"
+      sub_title: "Corporate"
+      sm_image: "/assets/images/art/p11.jpg"
+      big_image: "/assets/images/art/p11-full.jpg"
+      url: "#"
+      filters:
+        - branding
+    - title: "Pellentesque Commodo"
+      sub_title: "Branding"
+      sm_image: "/assets/images/art/p12.jpg"
+      big_image: "/assets/images/art/p12-full.jpg"
+      url: "#"
+      filters:
+        - branding
+---
+
+{% if page.portfolios_area.enable %}
+<div class="wrapper light-wrapper">
+  <div class="container inner">
+    <div class="grid grid-view boxed">
+      <div class="isotope-filter text-center">
+        <ul>
+          <li><a class="button active" data-filter="*">All</a></li>
+          {% for category in page.portfolios_area.categories %}
+           <li><a class="button" data-filter=".{{category.filter}}">{{category.title}}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="clearfix"></div>
+      <div class="tiles text-center light-gallery-wrapper">
+        <div class="row isotope">
+          {% for portfolio in  page.portfolios_area.portfolios %}
+          <div class="item grid-sizer col-md-6 col-lg-4 {% for filter in portfolio.filters %} {{filter}} {% endfor %}">
+            <div class="box bg-white shadow p-30">
+              <figure class="main overlay overlay2 rounded mb-30">
+                <a href="{{portfolio.big_image}}" class="lightbox"> 
+              	  <img src="{{portfolio.sm_image}}" alt="{{portfolio.title}}"/>
+                </a>
+              </figure>
+              <div class="post-content">
+                <h2 class="post-title mb-10"><a href="{{portfolio.url}}">{{portfolio.title}}</a></h2>
+                <div class="meta mb-0">{{portfolio.sub_title}}</div>
+              </div>
+              <!-- /.post-content -->
+            </div>
+            <!-- /.box -->
+          </div>
+          <!-- /.item -->
+          {% endfor %}
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.tiles -->
+    </div>
+    <!-- /.grid -->
+  </div>
+</div>
+{% endif %}

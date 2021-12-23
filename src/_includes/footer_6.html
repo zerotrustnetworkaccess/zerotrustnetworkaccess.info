@@ -1,0 +1,44 @@
+<footer class="dark-wrapper inverse-text">
+  <div class="container inner pt-80 pb-50 text-center">
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="widget">
+              <h3 class="widget-title">Our Location</h3>
+              {% if site.data.general_settings.address_01 %}
+               <address class="mb-0">{{site.data.general_settings.address_01}}</address>
+              {% endif %}
+            </div>
+            <!-- /.widget -->
+          </div>
+          <!-- /column -->
+          <div class="col-md-4">
+            <div class="widget">
+              <h3 class="widget-title">Follow</h3>
+              <ul class="social social-mute social-s">
+                {% for social_info in site.data.general_settings.social_accounts.links %}
+                <li><a href="{{social_info.url}}"><i class="{{social_info.icon}}"></i></a></li>
+                {% endfor %}
+              </ul>
+            </div>
+            <!-- /.widget -->
+          </div>
+          <!-- /column -->
+          <div class="col-md-4">
+            <div class="widget">
+              <h3 class="widget-title">Contact</h3>
+              <a href="mailto:{{site.general_settings.email}}" class="nocolor">{{site.data.general_settings.email}}</a> <br /> {{site.data.general_settings.phone_number}}
+            </div>
+            <!-- /.widget -->
+          </div>
+          <!-- /column -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /column -->
+    </div>
+    <div class="space30"></div>
+    <p class="text-center">{{site.data.general_settings.copyright_text}}</p>
+  </div>
+</footer>

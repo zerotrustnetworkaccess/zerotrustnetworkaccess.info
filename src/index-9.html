@@ -1,0 +1,456 @@
+---
+layout: default
+
+hero_area:
+  enable: true
+  title: "Hello! We Are Snowlake"
+  sub_title: "We love to turn great ideas into beautiful products"
+  bg_image: "/assets/images/art/bg27.jpg"
+  button_text: "See Projects"
+  button_url: "#"
+
+projects_area:
+  enable: true
+  title: "Our Projects"
+  sub_title: "Check out some of our awesome projects with creative ideas and great design."
+  projects:
+    - title: "Fringilla Nullam"
+      img: "/assets/images/art/fp1.jpg"
+      url: "#"
+
+    - title: "Ridiculus Parturient"
+      img: "/assets/images/art/fp2.jpg"
+      url: "#"
+      
+    - title: "Ornare Ipsum"
+      img: "/assets/images/art/fp3.jpg"
+      url: "#"
+      
+    - title: "Nullam Mollis"
+      img: "/assets/images/art/fp4.jpg"
+      url: "#"
+      
+    - title: "Euismod Risus"
+      img: "/assets/images/art/fp5.jpg"
+      url: "#"
+      
+    - title: "Ridiculus Tristique"
+      img: "/assets/images/art/fp6.jpg"
+      url: "#"
+      
+    - title: "Sollicitudin Pharetr"
+      img: "/assets/images/art/fp7.jpg"
+      url: "#"
+      
+    - title: "Tristique Venenatis"
+      img: "/assets/images/art/fp8.jpg"
+      url: "#"
+      
+    - title: "Cursus Fusce"
+      img: "/assets/images/art/fp9.jpg"
+      url: "#"
+      
+    - title: "Consectetur Malesuada"
+      img: "/assets/images/art/fp10.jpg"
+      url: "#"
+
+about_area: 
+  enable: true
+  title: "What We Do?"
+  sub_title: "We specialize in web, mobile, brand & product design. We love to turn ideas into beautiful things."
+  projects_number: 450
+  project_tag: "Completed Projects"
+  image: "/assets/images/art/about7.png"
+  skills:
+    - title: "Web Development"
+      numbers: 100
+      style: "pink"
+
+    - title: "Product Design"
+      numbers: 80
+      style: "blue"
+
+    - title: "Identity & Branding"
+      numbers: 85
+      style: "green"
+
+    - title: "Mobile Development"
+      numbers: 90
+      style: "purple"
+
+boxes_area:
+  enable: true
+  lists:
+    - title: "Web Development"
+      description: "Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida."
+      icon: "icofont-code"
+      bg_color: "bg-pink"
+
+    - title: "Product Design"
+      description: "Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida."
+      icon: "icofont-magic-alt"
+      bg_color: "bg-blue"
+
+    - title: "Identity & Branding"
+      description: "Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida."
+      icon: "icofont-paint"
+      bg_color: "bg-green"
+
+    - title: "Mobile Development"
+      description: "Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida."
+      icon: "icofont-smart-phone"
+      bg_color: "bg-purple"
+
+video_area:
+  enable: true
+  title: "Our Process"
+  sub_title: |
+    Curabitur nec orci orci. Ut fringilla nisl quis consectetur ultrices. Morbi mattis nisl vitae fringilla volutpat. Ut molestie metus vitae imperdiet. Maecenas ornare ut lectus ac volutpat. Vestibulum erat massa finibus.
+  vimeo_video_id: "165101721"
+  button_text: "More Details"
+  button_url: "#"
+  lists:
+    - Aenean eu leo quam ornare.
+    - Nullam quis risus eget mollis.
+    - Donec elit non mi porta gravida.
+    - Fusce dapibus cursus commodo.
+
+  services:
+    - title: "Collect Ideas"
+      description: "Cum sociis natoque penatibus et magnis dis parturient montes nascetur."
+
+    - title: "Data Analysis"
+      description: "Cum sociis natoque penatibus et magnis dis parturient montes nascetur."
+
+    - title: "Magic Touch"
+      description: "Cum sociis natoque penatibus et magnis dis parturient montes nascetur."
+
+testimonials:
+  enable: true
+  image: "/assets/images/art/about9.png"
+  projects_number: 500
+  project_tag: "Happy Customers"
+  feedback:
+
+    - quote: |
+        Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat.
+      image: "/assets/images/art/t5.jpg" 
+      name: "Cornelia Gibson"
+      designation: "Financial Analyst"
+  
+    - quote: |
+        Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vestibulum id ligula porta felis euismod semper. Cras justo odio, dapibus.
+      image: "/assets/images/art/t2.jpg" 
+      name: "Coriss Ambady"
+      designation: "Marketing Specialist"
+  
+    - quote: |
+        Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras justo odio, dapibus ac facilisis in, egestas eget.
+      image: "/assets/images/art/t3.jpg" 
+      name: "Barclay Widerski"
+      designation: "Sales Manager"
+
+clients_carousel_area:
+  enable: true
+
+blogs_area:
+  enable: true
+  title: "Our Journal"
+  posts_number: 6
+
+---
+
+<div class="content-wrapper">
+{% include header_3.html %}
+{% if page.hero_area.enable %}
+<div class="hero-area"> 
+<div class="wrapper image-wrapper bg-image page-title-wrapper inverse-text" data-image-src="{{page.hero_area.bg_image}}">
+  <div class="container inner text-center">
+    <div class="row">
+    	<div class="col-md-7 mx-auto">
+		    <div class="space140"></div>
+		    {% if page.hero_area.title %}
+		     <h2 class="section-title text-uppercase mb-30 text-center">{{page.hero_area.title}}</h2>
+		    {% endif %}
+		    {% if page.hero_area.sub_title %}
+		     <h1 class="display-1">{{page.hero_area.sub_title}}</h1>
+		    {% endif %}
+		    {% if page.hero_area.button_text %}
+		    <div class="space20"></div>
+		    <a href="{{page.hero_area.button_url}}" class="btn btn-l btn-white scroll">{{page.hero_area.button_text}}</a>
+		    {% endif %}
+    	</div>
+    </div>
+  </div>
+  <!-- /.container -->
+  <div class="divider"><svg xmlns="http://www.w3.org/2000/svg" class="fill-light-wrapper" preserveAspectRatio="none" viewBox="0 0 1070 20.98">
+      <path d="M0,0V21H1070V0A6830.24,6830.24,0,0,1,0,0Z" /></svg></div>
+</div>
+</div>
+{% endif %}
+{% if page.projects_area.enable %}
+<div class="wrapper light-wrapper" id="portfolio">
+  <div class="container inner">
+  	{% if page.projects_area.title %}
+     <h2 class="section-title text-uppercase mb-20 text-center">{{page.projects_area.title}}</h2>
+    {% endif %}
+    {% if page.projects_area.sub_title %}
+     <p class="lead larger text-center">{{page.projects_area.sub_title}}</p>
+    {% endif %}
+    <div class="space30"></div>
+    <div class="grid grid-view">
+      <div class="tiles tiles-m">
+        <div class="row isotope">
+          {% for project in page.projects_area.projects %}
+          <div class="item grid-sizer col-md-6 corporate application">
+            <figure class="overlay overlay1 rounded">
+            	<a href="{{project.url}}"> 
+            		<img src="{{project.img}}" alt="{{project.title}}"/>
+            	</a>
+              <figcaption>
+                <h5 class="from-top mb-0">{{project.title}}</h5>
+              </figcaption>
+            </figure>
+          </div>
+          <!-- /.item -->
+          {% endfor %}
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.tiles -->
+    </div>
+    <!-- /.grid -->
+  </div>
+  <!-- /.container -->
+ </div>
+ <!-- /.wrapper -->
+ {% endif %}
+	<div class="wrapper gray-wrapper">
+	  <div class="container inner">
+        {% if page.about_area.enable %}
+	    <div class="row align-items-center">
+	      <div class="col-lg-6 order-lg-2 text-center">
+	        <div>
+	          {% if page.about_area.image %}
+	          <figure>
+	          	<img src="{{page.about_area.image}}" alt="{{page.about_area.title}}"/>
+	          </figure>
+	          {% endif %}
+	          <div class="row counter counter-s position-absolute" style="top: 45%; right: 8%;">
+	            <div class="col-md-10 text-center">
+	              <div class="box bg-white shadow">
+	              	{% if page.about_area.projects_number %}
+	                 <h3><span class="value">{{page.about_area.projects_number}}</span>+</h3>
+	                {% endif %}
+	                {% if page.about_area.project_tag %}
+	                 <p>{{page.about_area.project_tag}}</p>
+	                {% endif %}
+	              </div>
+	              <!--/.box -->
+	            </div>
+	            <!--/column -->
+	          </div>
+	          <!--/.row -->
+	        </div>
+	      </div>
+	      <!--/column -->
+	      <div class="space30 d-none d-md-block d-lg-none"></div>
+	      <div class="col-lg-6 pr-60 pr-md-15">
+	      	{% if page.about_area.title %}
+	         <h2 class="section-title text-uppercase mb-20">{{ page.about_area.title }}</h2>
+	        {% endif %}
+	        {% if  page.about_area.sub_title %}
+	         <p class="lead larger">{{page.about_area.sub_title}}</p>
+	        {% endif %}
+	        <div class="space20"></div>
+	        <ul class="progress-list">
+	          {% for skills in page.about_area.skills %}
+	          <li>
+	            <p>{{skills.title}}</p>
+	            <div class="progressbar line {{skills.style}}" data-value="{{skills.numbers}}"></div>
+	          </li>
+	          {% endfor %}
+	        </ul>
+	        <!-- /.progress-list -->
+	      </div>
+	      <!--/column -->
+	    </div>
+	    <!--/.row --> 
+        {% endif %}
+        {% if page.boxes_area.enable %}
+        <div class="boxes-area"> 
+	    <div class="space60"></div>
+	    <div class="row text-center">
+          {% for list in page.boxes_area.lists %}
+	      <div class="col-md-6 col-lg-3">
+	        <div class="box {{list.bg_color}} shadow inverse-text">
+	          <div class="icon color-white fs-42 mb-20"> 
+	          	<i class="{{list.icon}}"></i> 
+	          </div>
+	          <h5>{{list.title}}</h5>
+	          <p>{{list.description}}</p>
+	        </div>
+	      </div>
+          {% endfor %}
+	    </div>
+	    <!--/.row -->
+	  </div>
+	  {% endif %}
+	  </div>
+	</div>
+	<!-- /.wrapper -->
+	{% if page.video_area.enable %}
+	<div class="video-area">
+	<div class="wrapper light-wrapper">
+	  <div class="container inner">
+	    <div class="row">
+	     {% if page.video_area.vimeo_video_id %}
+	      <div class="col-lg-8">
+	        <div class="player" data-plyr-provider="vimeo" data-plyr-embed-id="{{page.video_area.vimeo_video_id}}"></div>
+	      </div>
+	      {% endif %}
+	      <div class="space30 d-none d-md-block d-lg-none"></div>
+	      <div class="col-lg-4 pl-50 pl-md-15">
+	      {% if page.video_area.title %}
+	        <h2 class="section-title text-uppercase mb-20">{{page.video_area.title}}</h2>
+	      {% endif %}
+	      {% if page.video_area.sub_title %}
+	        <p>{{page.video_area.sub_title}}</p>
+	       {% endif %}
+	        <ul class="icon-list bullet-default">
+	         {% for list in page.video_area.lists %}
+	          <li>
+	          	<i class="jam jam-arrow-right"></i> {{list}}
+	          </li>
+	          {% endfor %}
+	        </ul>
+	        {% if page.video_area.button_text %}
+	         <div class="space10"></div>
+	         <a href="{{page.video_area.button_url}}" class="btn mb-0">{{page.video_area.button_text}}</a>
+	        {% endif %}
+	      </div>
+	      <!--/column -->
+	    </div>
+	    <!--/.row -->
+	    <div class="space80"></div>
+	    <div class="row gutter-60 gutter-md-30">
+         {% for service in page.video_area.services %}
+	      <div class="space30 d-none d-md-block d-lg-none"></div>
+	      <div class="col-lg-4">
+	        <div class="d-flex flex-row">
+	          <div>
+	            <span class="icon icon-bg icon-bg-default color-default mr-25">
+	            	<span class="number">{{forloop.index}}</span>
+	            </span>
+	          </div>
+	          <div>
+	            <h5>{{service.title}}</h5>
+	            <p class="mb-0">{{service.description}}</p>
+	          </div>
+	        </div>
+	      </div>
+          {% endfor %}
+	    </div>
+	    <!--/.row -->
+	  </div>
+	  <!-- /.container -->
+	</div>
+	<!-- /.wrapper -->
+	</div>
+  {% endif %}
+  <div class="wrapper gray-wrapper">
+    <div class="container inner">
+      {% if page.testimonials.enable %}
+      <div class="row align-items-center">
+        <div class="col-lg-6 order-lg-2">
+          <div>
+            {% if page.testimonials.image %}
+             <figure><img src="{{page.testimonials.image}}" alt="{{page.testimonials.project_tag}}"/></figure>
+            {% endif %}
+            <div class="row counter counter-s position-absolute" style="top: 10%; left: 25%;">
+              <div class="col-md-10 text-center">
+                <div class="box bg-white shadow">
+                  <h3><span class="value">{{page.testimonials.projects_number}}</span>+</h3>
+                  <p>{{page.testimonials.project_tag}}</p>
+                </div>
+                <!--/.box -->
+              </div>
+              <!--/column -->
+            </div>
+            <!--/.row -->
+          </div>
+        </div>
+        <!--/column -->
+        <div class="space20 d-md-none"></div>
+        <div class="space50 d-none d-md-block d-lg-none"></div>
+        <div class="col-lg-6 pr-60 pr-md-15">
+          <div class="basic-slider owl-carousel gap-small text-center" data-margin="30">
+      	   {% for quote in page.testimonials.feedback %}
+            <div class="item">
+              <blockquote class="icon larger">
+                <p>"{{quote.quote}}"</p>
+                <div class="blockquote-details justify-content-center">
+                  {% if quote.image %}
+                  <div class="img-blob blob1">
+                    <img src="{{quote.image}}" alt="{{quote.title}}"/>
+                  </div>
+                  {% endif %}
+                  <div class="info">
+                    <h6 class="mb-0">{{quote.name}}</h6>
+                    <span class="meta mb-0">{{quote.designation}}</span>
+                  </div>
+                </div>
+              </blockquote>
+            </div>
+           {% endfor %}
+          </div>
+          <!-- /.owl-carousel -->
+        </div>
+        <!--/column -->
+      </div>
+      <!--/.row -->
+      {% endif %}
+      {% if page.clients_carousel_area.enable %}
+      <div class="space80"></div>
+      {% include clients_carousel.html %}
+      {% endif %}
+    </div>
+    <!-- /.container -->
+  </div>
+  <!-- /.wrapper -->
+  {% if page.blogs_area.enable %}
+	<div class="wrapper light-wrapper">
+	  <div class="container inner">
+	  	{% if page.blogs_area.title %}
+	    <h2 class="section-title text-uppercase text-center mb-40">{{page.blogs_area.title}}</h2>
+	    {% endif %}
+	    <div class="grid-view">
+	      <div class="carousel owl-carousel blog-posts" data-margin="30" data-dots="true" data-autoplay="false" data-autoplay-timeout="5000" data-responsive='{"0":{"items": "1"}, "768":{"items": "2"}, "992":{"items": "3"}}'>
+            {% for post in site.posts limit: page.blogs_area.posts_number %}
+	        <div class="item">
+	          <figure class="overlay overlay1 rounded mb-30">
+	          	{% if post.post_image %}
+	            	<a href="{{post.url}}"><img src="{{post.post_image}}" class="post-thumb" alt="{{post.title}}"/></a>
+	          	{% endif %}
+	            <figcaption>
+	              <h5 class="from-top mb-0">Read More</h5>
+	            </figcaption>
+	          </figure>
+	          <div class="category">
+	          	<a href="/category/{{post.categories[0] | slugify}}" class="badge badge-pill bg-purple">{{post.categories[0]}}</a>
+	          </div>
+	          <h2 class="post-title"><a href="{{post.url}}">{{post.title}}</a></h2>
+	          <div class="meta mb-0"><span class="date"><i class="jam jam-clock"></i> {{post.date | date_to_string}}</span></div>
+	        </div>
+          {% endfor %}
+	      </div>
+	      <!-- /.owl-carousel -->
+	    </div>
+	    <!-- /.grid-view -->
+	  </div>
+	  <!-- /.container -->
+	</div>
+	<!-- /.wrapper -->
+	{% endif %}
+  {% include footer_3.html light_logo="true" %}
+</div>

@@ -1,0 +1,7 @@
+<div class="carousel owl-carousel clients" data-margin="30" data-loop="true" data-dots="false" data-autoplay="true" data-autoplay-timeout="3000" data-responsive='{"0":{"items": "2"}, "768":{"items": "4"}, "992":{"items": "5"}, "1140":{"items": "6"}}'>
+  {% for img in site.data.general_settings.gallery.images %}
+  <div class="item pl-15 pr-15">
+  	<img src="{{img.img}}" alt="{{img.img}}"/>
+  </div>
+  {% endfor %}
+</div>

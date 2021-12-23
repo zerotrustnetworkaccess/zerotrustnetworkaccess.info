@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+  <title>Snowlake - Jekyll Corporate Theme</title>
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600" type="text/css" media="all">
+  <link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all">
+
+</head>
+<body>
+  <div class="wrap">
+    <header class="site-header" role="banner">
+      <h1 class="site-title">Snowlake</h1>
+      <p class="site-description">Theme Documentation</p>
+    </header><!-- .site-header -->
+    <div id="main">
+      <div class="intro">
+        <p>First of all a huge thanks for purchasing this theme! If you have any questions that are not answered here, please feel free to email via our user page <a href="https://themeforest.net/user/tortoiz">here</a>.</p>
+        <ul class="byline">
+          <li><em>Email:</em> <a href="mailto:tortoizthemes@gmail.com">tortoizthemes@gmail.com</a></li>
+          <li><em>Twitter:</em> <a href="https://twitter.com/tortoizthemes">@tortoizthemes</a></li>
+        </ul>
+      </div><!-- .intro -->
+
+      <div id="content" role="main">
+
+        <div class='alert alert-primary'>
+          👋 &nbsp; For the most recent updated documentation, please check the <a href="ttps://tortoizthemes.com/" class='alert-link'>online version</a>&nbsp; 👉
+        </div>
+
+        <section>
+          <h2 id="toc">Table of Contents</h2>
+          <ol>
+            <li><a href="#general_settings">General Settings</a></li>
+            <li><a href="#menu_settings">Menu Settings</a></li>
+            <li><a href="#createPost">Create Post</a></li>
+            <li><a href="#createPage">Create Page</a></li>
+            <li><a href="#DisqusComments">Disqus Comments</a></li>
+            <li><a href="#GoogleAnalytics">Google Analytics</a></li>
+            <li><a href="#SocialMediaLinks">Social Media Links</a></li>
+            <li><a href="#gallery_setting">Gallery Carousel</a></li>
+            <li><a href="#contact_area">Contact Form</a></li>
+            <li><a href="#google_map">Google Map</a></li>
+            <li><a href="#Deployment">Deployment</a></li>
+          </li>
+          <li><a href="#Credits">Credits</a></li>
+        </ol>
+        <hr />
+      </section>
+
+      <section>
+        <h3 id="general_settings">General Settings</h3>
+
+        <p>Snowlake theme comes with different customizations in the <code>_data/general_settings.yml</code> <a href="https://jekyllrb.com/docs/configuration/">General Settings Files</a> file:</p>
+
+        <p>Our Theme Is Forestry CMS Supported, if you want you can use forestry, it will be more easyer setting and updating everytingh, so we heighly recomand you to use forestry for more details browse https://forestry.io/</p>
+        <p>In forestry in the left sidebar click general settings button, then you can change all general information from here, </p>
+        <img src="assets/images/general_settings.png" alt="general settings" class="img-fluid mb-4">
+         <br/>
+         <br/>
+         <br/>
+        <p>If you not use forestry you have to change data from _data/general_settings.yml file</p>
+
+<pre><code>
+# General Settings
+title: "Snowlake premium jekyll template"
+email: "rubel2585@gmail.com"
+email_2: "rubel8525@yahoo.com"
+description: >- # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+
+black_logo_1x: "/assets/images/logo.png"
+black_logo_2x: "/assets/images/logo@2x.png"
+light_logo_1x: "/assets/images/logo-light.png"
+light_logo_2x: "/assets/images/logo-light@2x.png"
+twitter_username: jekyllrb
+github_username:  jekyll
+
+address_01: 'Moonshine St. 14/05 <br /> Light City, London'
+phone_number: "+00 (123) 456 78 90"
+copyright_text: "© 2020 Snowlake.  All rights reserved."
+
+social_accounts:
+  title: "Follow Us"
+  links:
+    - url: "#"
+      icon: "jam jam-twitter"
+
+    - url: "#"
+      icon: "jam jam-facebook"
+
+    - url: "#"
+      icon: "jam jam-instagram"
+
+    - url: "#"
+      icon: "jam jam-vimeo"
+      
+    - url: "#"
+      icon: "jam jam-youtube"
+
+
+external_links:
+  title: "Learn More"
+  links:
+    - url: "#"
+      text: "About Us"
+    - url: "#"
+      text: "Our Story"
+    - url: "#"
+      text: "Projects"
+    - url: "#"
+      text: "Pricing"
+    - url: "#"
+      text: "Features"
+
+
+external_links_02:
+  title: "Need Help?"
+  links:
+    - url: "#"
+      text: "Support"
+    - url: "#"
+      text: "Get Started"
+    - url: "#"
+      text: "Contact Us"
+    - url: "#"
+      text: "Terms of Use"
+    - url: "#"
+      text: "Privacy Policy"
+
+
+external_links_03:
+  title: "Company"
+  links:
+    - url: "#"
+      text: "Our Team"
+    - url: "#"
+      text: "Strategy"
+    - url: "#"
+      text: "Service"
+    - url: "#"
+      text: "Mission"
+    - url: "#"
+      text: "Process"
+
+footer_newsletter:
+  title: "Our Newsletter"
+  sub_title: "Subscribe to our newsletter to get our news & deals delivered to your inbox!"
+  subscribe_button_text: "Join"
+
+
+one_page_nav_settings:
+  links:
+    - text: "Home"
+      url: "#home"
+    - text: "Services"
+      url: "#services"
+    - text: "Experiences"
+      url: "#experiences"
+    - text: "Portfolio"
+      url: "#portfolio"
+    - text: "Testimonials"
+      url: "#testimonials"
+    - text: "Contact"
+      url: "#contact"
+
+author_page_header:
+  header_background_image: "/assets/images/art/bg31.jpg"
+</code></pre>
+
+      <hr>
+      </section>
+      <section>
+      	<h3 id="menu_settings">Navigation Menu Settings</h3>
+      	<p>In forestry click sidebar's Navigation Menu Buttons, from here you can change menu text and url</p>
+      	<p>if you are not using Forestry Go to _data/navigation.yml file and change here menu text and url </p>
+      	<img src="assets/images/navigation_menu.png" alt="navigation menu" class="img-fluid mb-4"/>
+      </section>
+
+      <section>
+        <h3 id="createPost">Create Post</h3>
+        <p>For Forestry Click Posts Link >> Create New > Posts  thats it, now you can create a new post from here</p>
+
+        <img class="img-fluid mb-4" src="assets/images/new_post.png" alt="new post"/>
+
+        <p>Or To create a new post, you can create a new markdown file inside the <code>_posts</code> directory, following the <a href="https://jekyllrb.com/docs/posts/#creating-post-files">recommended file structure</a>, these are the page configuration you can add.</p>
+
+        <p>The following is an example post file.</p>
+
+
+<pre><code>
+---
+layout: post
+title: "Nullam id dolor elit id nibh pharetra augue venenatis"
+date: 2020-10-03 20:37:13 +0600
+categories: [couples]
+author: "Tortoiz Theme"
+post_image: "/assets/images/art/b16.jpg"
+---
+</code></pre>
+
+        <br/>
+
+        <p>You can set the author, featured or not, tags, and the post image</p>
+
+        <p>The <code>featured</code> key is to mark the post as a featured post, this will add a simple star icon (☆) to the post created.</code>
+
+        <p>To keep things more organized, add post images to <strong>/images/pages</strong> directory, and add add page images to <strong>/images/pages</strong> directory.</p>
+
+        <p>To create a draft post, create your draft file under the <strong>_drafts</strong> directory, and you can find more information at <a href="http://jekyllrb.com/docs/drafts/">Working with drafts</a></p>
+        <hr>
+      </section>
+
+      <section>
+        <h3 id="createPage">Create Page</h3>
+
+        <p>To create a new page, just create a new markdown file inside the <code>_pages</code> directory, and these are the page configuration you can add.</p>
+
+        <p>The following is the <code>about.md</code> file that you can find as an example included in the theme.</p>
+
+<pre><code>
+---
+layout: page
+title: "Classic Grid Blog"
+sub_title: "Aenean lacinia bibendum nulla sed consectetur Test"
+header_image: "/assets/images/art/bg31.jpg"
+white_menu: true
+---
+</code></pre>
+
+        <br/>
+        <p>In Forestry Click Pages >> Create New select Pages, thats it, now you can write something in your new page</p>
+        <br/>
+         <img src="assets/images/new_page.png" alt="new page" class="img-fluid"/>
+        <br/>
+        <br/>
+        <br/>
+        <hr/>
+        <p>Things you can change are: <code>title</code>, <code>permalink</code>, and <code>image</code> path.</p>
+      </section>
+      <section>
+        <h3 id="DisqusComments">Disqus Comments</h3>
+        <p>Aspire Theme comes with Disqus comments enabled.</p>
+        <p>Open <code>_includes/disqus.html</code> file, and change the <code>design_grid</code> value in line 15 with your Disqus account shortname.</p>
+  <pre><code>
+    s.src = '//snowlake.disqus.com/embed.js';
+  </code></pre>
+        <br>
+        <p>So, if your Disqus shortname is `exampleone`, the final code above should be</p>
+  <pre><code>
+    s.src = '//exampleone.disqus.com/embed.js';
+  </code></pre>
+        <br>
+        <p>That’s all what you need to setup Disqus from the theme side. If you get any issue regarding that comments are unable to load. <a href="https://help.disqus.com/customer/portal/articles/466182-publisher-quick-start-guide">First make sure you have registered your website with Disqus (Step 1)</a></p>
+        <p>And also check <a href="https://help.disqus.com/customer/portal/articles/472007-i-m-receiving-the-message-%22we-were-unable-to-load-disqus-%22">Disqus troubleshooting guide</a> if you still have issues.</p>
+        <hr>
+      </section>
+      <section>
+        <h3 id="GoogleAnalytics">Google Analytics</h3>
+        <p>To integrate Google Analytics, open <code>_includes/analytics.html</code> and add your Google Analytics code.</p>
+        <hr>
+        <p>in forestry go to general settings select Google analytics click to enable and give the key</p>
+        <img src="assets/images/analytics.png" alt="analytics" class="img-fluid"/>
+        <br/>
+        <br/>
+        <p>Or Go to _data/general_settings.yml file and change the key and enable</p>
+      <section>
+        <h3 id="SocialMediaLinks">Social Media Links</h3>
+        <p>Social media icons are placed in:</p>
+        <ul>
+          <li><code>_data/general_settings.yml </code></li>
+        </ul>
+        <p>The theme is using <a href="https://jam-icons.com/">jam Icons</a>, which contains very simple and clean icons. Here you can find a list of the social media icons to use:</p>
+<pre><code>
+social_accounts:
+  title: "Follow Us"
+  links:
+    - url: "#"
+      icon: "jam jam-twitter"
+
+    - url: "#"
+      icon: "jam jam-facebook"
+
+    - url: "#"
+      icon: "jam jam-instagram"
+
+    - url: "#"
+      icon: "jam jam-vimeo"
+      
+    - url: "#"
+      icon: "jam jam-youtube"
+</code></pre>
+        <hr/>
+        <p>For Forestry Go To General Settings Select Social Accounts, give icon class and url.</p>
+      </section>
+      <section>
+        <h3 id="gallery_setting">Gallery Carousel</h3>
+        <img src="assets/images/gallery.png" alt="" class="img-fluid"/>
+        <p>For Changing Gallery Carousel's Images Goto General Settings >> Gallery >> change or upload images here</p>
+        <img src="assets/images/add_gallery_image.png" alt="gallery" class="img-fluid"/>
+      </section>
+      <section>
+        <h3 id="contact_area">Contact Form</h3>
+        <p>please signup here, https://formsubmit.io/ , For Contact Form We Heighly Recomand you To use https://formsubmit.io/  it's free and perfect for static sites, when user submit any form you will recove email with users messages. in contact area set your email in action_email. </p>
+        <p>You can also add two email globally from general settings</p>
+        <img src="assets/images/contact_form.png" alt="contact form" class="img-fluid"/>
+        <br/>
+        <br/>
+        <br/>
+      </section>
+      <section>
+        <h3 id="google_map">Google Map Settings</h3>
+        <p>For Google Map Embed Goto https://www.embedgooglemap.net/ search your location get html code and embed this code in you pages map_iframe option. </p>
+
+      </section>
+      <section>
+        <h3 id="Deployment">Deployment</h3>
+        <p>To install locally, more to the theme root and run <code>bundle install</code> to install the dependencies, then run <code>jekyll serve</code> to start the jekyll server.</p>
+
+        <p>I would recommend checking the <a href="https://jekyllrb.com/docs/deployment-methods/">Deployment methods</a> page on Jekyll website.</p>
+        <hr>
+      </section>
+      <section>
+        <h3 id="Credits">Credits</h3>
+        <p>We have used the following scripts, fonts or other files as listed.</p>
+
+        <ul>
+          <li><a href="https://jam-icons.com/">Jam Icons</a></li>
+          <li><a href="http://fitvidsjs.com/">FitVids.js</a></li>
+          <li><a href="https://github.com/pattex/jekyll-tagging">jekyll/tagging</a></li>
+          <li>Preview Images form <a href="https://unsplash.com/">unsplash.com</a> & <a href="https://www.pexels.com/">pexels.com</a></li>
+        </ul>
+        <hr>
+      </section>
+
+      <p><a href="#toc">Go To Table of Contents</a></p>
+    </div><!-- #content -->
+  </div><!-- #main -->
+  <footer class="site-info" role="contentinfo">
+    <p>© 2020 tortoizthemes. All rights reserved.</p>
+  </footer><!-- .site-info -->
+</div><!-- .wrap -->
+</body>
+</html>

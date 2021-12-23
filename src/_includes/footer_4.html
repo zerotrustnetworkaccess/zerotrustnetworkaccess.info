@@ -1,0 +1,78 @@
+<footer class="image-wrapper bg-image page-title-wrapper inverse-text" data-image-src="/assets/images/art/bg4.jpg">
+  <div class="divider"><svg xmlns="http://www.w3.org/2000/svg" class="fill-light-wrapper position-absolute" preserveAspectRatio="none" viewBox="0 0 1070 52">
+ <path d="M0,0S247,91,505,32c261.17-59.72,565-13,565-13V0Z" /></svg></div>
+  <div class="space100"></div>
+  <div class="container inner">
+    <div class="row">
+      <div class="col-md-4 col-lg-3">
+        <div class="widget">
+         <a href="{{site.data.general_settings.url}}">
+          {% if include.light_logo %}
+            <img src="{{site.data.general_settings.light_logo_1x}}" srcset="{{site.data.general_settings.light_logo_1x}} 1x, {{site.data.general_settings.light_logo_2x}} 2x" alt="{{site.data.general_settings.title}}"/>
+            {% else %}
+            <img src="{{site.data.general_settings.black_logo_1x}}" srcset="{{site.data.general_settings.black_logo_2x}} 1x, {{site.data.general_settings.black_logo_2x}} 2x" alt="{{site.data.general_settings.title}}"/>
+          {% endif %}
+         </a>
+          <div class="space40"></div>
+          <p>{{site.data.general_settings.copyright_text}}</p>
+        </div>
+        <!-- /.widget -->
+      </div>
+      <!-- /column -->
+      <div class="col-md-4 col-lg-3">
+        <div class="widget">
+          <h3 class="widget-title">Get in Touch</h3>
+          {% if site.data.general_settings.address_01 %}
+           <address>{{site.data.general_settings.address_01}}</address>
+          {% endif %}
+           <a href="mailto:{{site.data.general_settings.email}}">{{site.data.general_settings.email}}</a><br />
+          {{site.data.general_setting.phone_number}}
+        </div>
+        <!-- /.widget -->
+      </div>
+      <!-- /column -->
+      <div class="col-md-4 col-lg-3">
+        {% assign external_links = site.data.general_settings.external_links %}
+        <div class="widget">
+          {% if external_links.title %}
+           <h5 class="widget-title">{{external_links.title}}</h5>
+          {% endif %}
+          <ul class="list-unstyled mb-0">
+            {% for links in external_links.links %}
+            <li><a href="{{libks.url}}">{{links.text}}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+        <!-- /.widget -->
+      </div>
+      <!-- /column -->
+      <div class="space30 d-none d-md-block d-lg-none"></div>
+      <div class="col-md-12 col-lg-3">
+        <div class="widget">
+          {% if site.data.general_settings.footer_newsletter.title %}
+           <h3 class="widget-title">{{site.data.general_settings.footer_newsletter.title}}</h3>
+          {% endif %}
+          {% if site.data.general_settings.footer_newsletter.sub_title %}
+           <p>{{site.data.general_settings.footer_newsletter.sub_title}}</p>
+          {% endif %}
+          <div class="space10"></div>
+          <div class="newsletter-wrapper">
+            <form action="https://formsubmit.io/send/{{site.data.general_settings.email}}" target="_blank">
+              <div id="mc_embed_signup_scroll" class="input-group">
+                <input type="email"  name="user_email" class="email form-control mb-0 mr-2 mb-sm-0"  placeholder="Email Address" required>
+                <button type="submit" class="btn btn-rounded btn-default mr-0 mb-0 pull-right">
+                {{site.data.general_settings.footer_newsletter.subscribe_button_text}}
+               </button>
+              </div>
+            </form>
+          </div>
+          <!-- /.newsletter-wrapper -->
+        </div>
+        <!-- /.widget -->
+      </div>
+      <!-- /column -->
+    </div>
+    <!--/.row -->
+  </div>
+  <!-- /.container -->
+</footer>

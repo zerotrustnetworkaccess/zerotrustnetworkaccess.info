@@ -1,0 +1,92 @@
+---
+layout: default
+page_header:
+  title: "Lightbox"
+  sub_title: "Click the thumbnails to see the lightbox options"
+  background_image: "/assets/images/art/bg1.jpg"
+lightbox_area:
+  enabled: true
+  lightboxes:
+
+    - thumbnail: "/assets/images/art/l1.jpg"
+      lightbox_url: "/assets/images/art/l1-full.jpg"
+      title: "Image"
+      hover_title: "View Larger"
+      caption_title: "Heading"
+      caption_sub_title: "Purus Vulputate Sem Tellus Quam"
+
+    - thumbnail: "/assets/images/art/l2.jpg"
+      lightbox_url: "/assets/images/art/l2-full.jpg"
+      title: "Caption Example"
+      hover_title: "View Larger"
+      caption_title: "Heading"
+      caption_sub_title: "Purus Vulputate Sem Tellus Quam"
+
+    - thumbnail: "/assets/images/art/l3.jpg"
+      lightbox_url: "https://vimeo.com/90355541"
+      title: "Vimeo Video"
+      hover_title: "View Larger"
+      caption_title: "Heading"
+      caption_sub_title: "Purus Vulputate Sem Tellus Quam"
+
+    - thumbnail: "/assets/images/art/l4.jpg"
+      lightbox_url: "https://www.youtube.com/watch?v=26TbMXXOe0I"
+      title: "YouTube Video"
+      hover_title: "View Larger"
+      caption_title: "Heading"
+      caption_sub_title: "Purus Vulputate Sem Tellus Quam"
+---
+{% include header.html container_class="container" extra_class="absolute transparent inverse-text nav-uppercase" light_logo="true" %}
+<div class="wrapper image-wrapper bg-image page-title-wrapper inverse-text" data-image-src="{{page.page_header.background_image}}">
+  <div class="container inner text-center">
+    <div class="space90"></div>
+    {% if page.page_header.title %}
+     <h1 class="page-title">{{page.page_header.title}}</h1>
+    {% endif %}
+    {% if page.page_header.sub_title %}
+     <p class="lead">{{page.page_header.sub_title}}</p>
+    {% endif %}
+  </div>
+  <!-- /.container -->
+</div>
+<!-- /.wrapper -->
+<div class="wrapper light-wrapper">
+  <div class="container inner">
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <div class="grid text-center light-gallery-wrapper">
+          <div class="tiles">
+            <div class="isotope row">
+             {% for lightbox in page.lightbox_area.lightboxes %}
+              <div class="item grid-sizer col-md-6">
+                <figure class="overlay overlay1 rounded mb-15">
+                  <a href="{{lightbox.lightbox_url}}" class="lightbox" data-sub-html=".caption"> 
+                    <img src="{{lightbox.thumbnail}}" alt="{{lightbox.title}}"/>
+                  </a>
+                  <figcaption>
+                    <h5 class="from-top mb-0">{{lightbox.hover_title}}</h5>
+                  </figcaption>
+                </figure>
+                <h4>{{lightbox.title}}</h4>
+                <div class="caption d-none">
+                  <h5>{{lightbox.caption_title}}</h5>
+                  <p>{{lightbox.caption_sub_title}}</p>
+                </div>
+              </div>
+              <!--/column -->
+              {% endfor %}
+            </div>
+            <!--/.row -->
+          </div>
+          <!-- /.tiles -->
+        </div>
+        <!-- /.grid -->
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</div>
+<!-- /.wrapper -->
+{% include footer_3.html light_logo="true" %}

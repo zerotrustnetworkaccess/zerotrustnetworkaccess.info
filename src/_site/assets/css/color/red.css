@@ -1,0 +1,10 @@
+:root {
+	--color-default: #d75959;
+	--rgb-default: 215, 89, 89;
+}
+.title-bg.bg-default {
+    background: rgba(var(--rgb-default), 0.1);
+}
+.bg-opacity-default {
+    background: rgba(var(--rgb-default), 0.065);
+}

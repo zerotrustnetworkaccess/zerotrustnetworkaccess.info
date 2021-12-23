@@ -1,0 +1,34 @@
+<div class="container-fluid p-30">
+  <div class="grid-view">
+    <div class="carousel owl-carousel" data-margin="30" data-dots="true" data-autoplay="false" data-autoplay-timeout="5000" data-responsive='{"0":{"items": "1"}, "768":{"items": "2"}, "1441":{"items": "3"}}'>
+      {% assign slider_posts = site.posts | where: "slider_post", true %}
+      {% for post in slider_posts %}
+      <div class="item">
+        <figure class="overlay caption caption-overlay rounded mb-0">
+          <a href="{{post.url}}"><img src="{{post.post_image}}" alt="{{post.title}}"/></a>
+          <figcaption class="d-flex text-left p-30">
+            <div class="align-self-end mt-auto">
+              {% if post.categories %}
+              <div class="category d-inline-flex">
+                <a href="/category/{{post.categories[0] | slugify}}" class="badge badge-pill bg-violet">{{post.categories[0]}}</a>
+              </div>
+              {% endif %}
+              <h3>{{post.title}}</h3>
+              <div class="meta mb-0">
+                {% if post.date %}
+                 <span class="date"><i class="jam jam-clock"></i>{{post.date | date_to_string}}</span>
+                {% endif %}
+                {% if post.author %}
+                 <span class="author"><i class="jam jam-user"></i>By {{post.author}}</span>
+                {% endif %}
+              </div>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+     {% endfor %}
+    </div>
+    <!-- /.owl-carousel -->
+  </div>
+  <!-- /.grid-view -->
+</div>

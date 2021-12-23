@@ -1,0 +1,142 @@
+---
+layout: page
+title: "Contact Us"
+sub_title: |
+  Aenean lacinia bibendum nulla sed consectetur
+header_image: "/assets/images/art/bg3.jpg"
+white_menu: true
+
+contact_info:
+  enable: true
+  contact_data:
+    - icon: "/assets/images/icons/ui-gps.png"
+      info: "Moon Street Light Avenue<br> 14/05 Jupiter, JP 80630"
+
+    - icon: "/assets/images/icons/co-telephone.png"
+      info: "00 (123) 456 78 90<br/> 00 (987) 654 32 10"
+
+    - icon: "/assets/images/icons/co-email-5.png"
+      info:
+      - "manager@email.com <br/>"
+      - "asistant@email.com"
+
+contact_form:
+  enable: true
+  title: "Request Photography Pricing"
+  sub_title: "For more information please get in touch using the form below:"
+  action_email: "tortoizthemes@gmail.com"
+  bg_image: "/assets/images/art/bg20.jpg"
+  forms_data: 
+
+    - field_type: "input"
+      field_name: "user_first_name"
+      placeholder: "First Name" 
+      error_message: "First Name Is required"
+
+    - field_type: "input"
+      field_name: "user_last_name"
+      placeholder: "Last Name" 
+      error_message: "Last Name Is required"
+
+    - field_type: "input"
+      field_name: "user_phone"
+      placeholder: "Phone Number" 
+      error_message: "Phone Number Is required"
+
+    - field_type: "input"
+      field_name: "user_email"
+      placeholder: "Email"
+      error_message: "Email Is required"
+
+    - field_type: "textarea"
+      field_name: "user_message"
+      placeholder: "Message"
+      error_message: "Message Is required"
+
+google_maps:
+  enable: true
+  map_iframe: |
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3172.4564967931838!2d-122.03250858386237!3d37.33169997984258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb5b6e94ffe23%3A0x63bb79532baa6af4!2sApple+Campus!5e0!3m2!1sen!2str!4v1553850783971!5m2!1sen!2str" style="width:100%; height: 500px; border:0" allowfullscreen></iframe>
+---
+
+{% if page.contact_info.enable %}
+<div class="wrapper gray-wrapper">
+  <div class="container inner">
+    <div class="row text-center gutter-60">
+      {% for contact_data in page.contact_info.contact_data %}
+      <div class="col-md-4">
+        {% if contact_data.icon %}
+        <div class="icon icon-svg mb-20">
+          <img src="{{contact_data.icon}}" alt="{{contact_data.info}}"/>
+        </div>
+        {% endif %}
+        {% if contact_data.info %}
+         <p class="mb-0">{{contact_data.info}}</p>
+        {% endif %}
+      </div>
+      <!--/column -->
+      {% endfor %}
+    </div>
+    <!--/.row -->
+  </div>
+  <!-- /.container -->
+</div>
+<!-- /.wrapper -->
+{% endif %}
+{% if page.contact_form.enable %}
+<div class="wrapper light-wrapper">
+  <div class="container inner">
+    <div class="row">
+      <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+        {% if page.contact_form.title %}
+         <h2 class="section-title text-center">{{ page.contact_form.title }}</h2>
+        {% endif %}
+        {% if page.contact_form.sub_title %}
+         <p class="text-center">{{ page.contact_form.sub_title }}</p>
+        {% endif %}
+        <div class="space30"></div>
+        <form id="contact-form" action="https://formsubmit.io/send/{{page.contact_form.action_email}}">
+          <div class="messages"></div>
+          <div class="controls">
+            <div class="form-row">
+              {% for contact_data in page.contact_form.forms_data %}
+              {% if contact_data.field_type == "input" %}
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input id="{{contact_data.field_name}}" type="text" name="{{contact_data.field_name}}" class="form-control" placeholder="{{contact_data.placeholder}} *" required="required" data-error="{{contact_data.error_message}}">
+                  <div class="help-block with-errors"></div>
+                </div>
+              </div>
+              {% else if contact_data.field_type == "textarea"  %}
+              <div class="col-md-12">
+                <div class="form-group">
+                  <textarea id="{{contact_data.field_name}}" name="{{contact_data.field_name}}" class="form-control" placeholder="{{contact_data.placeholder}} *" rows="4" required="required" data-error="{{contact_data.error_message}}"></textarea>
+                  <div class="help-block with-errors"></div>
+                </div>
+              </div>
+              {% endif %}
+              {% endfor %}
+            </div>
+            <div class="form-row">
+              <div class="col-md-12 text-center">
+                <input type="submit" class="btn btn-send" value="Send message">
+              </div>
+            </div>
+          </div>
+        </form>
+        <!-- /form -->
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</div>
+<!-- /.wrapper -->
+{% endif %}
+{% if page.google_maps.enable %}
+<div class="google-map">
+  {{page.google_maps.map_iframe}}
+</div>
+<!--/.google-map -->
+{% endif %}

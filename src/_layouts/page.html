@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+{% if page.white_menu %}
+ {% if page.header_image %}
+   {% include header.html extra_class="wide absolute transparent inverse-text nav-uppercase" light_logo="true"  container_class="container"%}
+  {% else %}
+  {% include header.html extra_class="wide transparent inverse-text nav-uppercase" light_logo="true"  container_class="container"%}
+ {% endif %}
+{% else if page.black_menu %}
+{% if page.header_image %}
+{% include header.html extra_class="absolute transparent" logo_class="logo" container_class="container" %}
+{% else %}
+{% include header.html extra_class="transparent" logo_class="logo" container_class="container" %}
+{% endif %}
+{% else %}
+{% if page.header_image %}
+{% include header.html extra_class="absolute transparent" logo_class="logo" container_class="container" %}
+{% else %}
+{% include header.html extra_class="transparent" logo_class="logo" container_class="container" %}
+{% endif %}
+{% endif %}
+
+{% include pages/page_header.html %}
+
+{{content}}
+
+{% include footer_2.html light_logo="true" %}

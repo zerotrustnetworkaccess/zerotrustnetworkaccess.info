@@ -1,0 +1,61 @@
+---
+layout: default
+slider_area:
+  - img: "/assets/images/art/slider-bg13.jpg"
+  - img: "/assets/images/art/slider-bg14.jpg"
+  - img: "/assets/images/art/slider-bg15.jpg"
+  - img: "/assets/images/art/slider-bg16.jpg"
+  - img: "/assets/images/art/slider-bg17.jpg"
+  - img: "/assets/images/art/slider-bg18.jpg"
+---
+{% include header.html extra_class="wide absolute transparent inverse-text nav-uppercase" light_logo="true" %}
+<div class="rev_slider_wrapper fullscreen-container">
+  <div id="slider12" class="rev_slider fullscreenbanner dark-wrapper" data-version="5.4.7">
+    <ul>
+      {% for slider in page.slider_area %}
+      <li data-transition="parallaxvertical" data-thumb="{{slider.img}}">
+        <img src="{{slider.img}}" alt="{{slider.img}}"/>
+      </li>
+      {% endfor %}
+    </ul>
+    <div class="tp-static-layers">
+      <div class="tp-caption tp-static-layer color-white" 
+         data-x="right" 
+         data-y="bottom" 
+         data-hoffset="['20','20','20','20']" 
+         data-voffset="['20','20','20','20']" 
+         data-fontsize="['16','16','16','16']" 
+         data-lineheight="['28','28','28','28']" 
+         data-width="['1000','1000','1000','1000']" 
+         data-visibility="['on','on','on','off']" 
+         data-textAlign="['right','right','right','right']" 
+         data-whitespace="['normal','normal','normal','normal']" 
+         data-frames='[{"delay":0,"speed":300,"frame":"0","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' 
+         data-startslide="0" 
+         data-endslide="7" 
+         data-responsive="on" 
+         data-responsive_offset="on" 
+         data-basealign="slide" style="z-index: 9; letter-spacing: 1px;">{{site.data.general_settings.copyright_text}}</div>
+      <div class="tp-caption tp-static-layer rev-scroll-btn  rs-parallaxlevel-5" 
+         data-x="['center','center','center','center']" 
+         data-hoffset="['0','0','0','0']" 
+         data-y="['bottom','bottom','bottom','bottom']" 
+         data-voffset="['20','20','20','20']" 
+         data-width="28" 
+         data-height="44" 
+         data-visibility="['on','on','off','off']" 
+         data-whitespace="nowrap" 
+         data-type="button" 
+         data-actions='[{"event":"click","action":"scrollbelow","offset":"px","delay":"","speed":"300","ease":"Linear.easeNone"}]' 
+         data-basealign="slide" 
+         data-responsive_offset="on" 
+         data-responsive="off" 
+         data-frames='[{"delay":0,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]' 
+         data-startslide="0" 
+         data-endslide="7" style="z-index: 19; min-width: 28px; max-width: 28px; max-width: 44px; max-width: 44px; white-space: nowrap;font-weight: 400;border-color:rgba(255,255,255,1);border-style:solid;border-width:2px;border-radius:12px;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;"><span></span></div>
+    </div>
+    <div class="tp-bannertimer tp-bottom"></div>
+  </div>
+  <!-- /.rev_slider -->
+</div>
+<!-- /.rev_slider_wrapper -->

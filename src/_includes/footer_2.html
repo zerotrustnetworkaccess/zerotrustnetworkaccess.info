@@ -1,0 +1,89 @@
+<footer class="{% if include.extra_class %} {{include.extra_class}} {% else %} dark-wrapper inverse-text {% endif %}">
+  <div class="container inner">
+    <div class="row">
+      <div class="col-md-12 col-lg-3 text-center text-lg-left">
+        <div class="widget"> 
+          {% if include.light_logo %}
+            <img src="{{site.data.general_settings.light_logo_1x}}" srcset="{{site.data.general_settings.light_logo_1x}} 1x, {{site.data.general_settings.light_logo_2x}} 2x" alt="{{site.data.general_settings.title}}"/>
+            {% else %}
+            <img src="{{site.data.general_settings.black_logo_1x}}" srcset="{{site.data.general_settings.black_logo_2x}} 1x, {{site.data.general_settings.black_logo_2x}} 2x" alt="{{site.data.general_settings.title}}"/>
+          {% endif %}
+          {% if site.data.general_settings.description %}
+          <div class="space20"></div>
+          <p>{{site.data.general_settings.description}}</p>
+          {% endif %}
+        </div>
+        <!-- /.widget -->
+      </div>
+      <!-- /column -->
+      <div class="space30 d-lg-none d-xl-none"></div>
+      <div class="col-6 col-md-3 col-lg-2 offset-lg-1">
+        {% assign extrnal_link_02 = site.data.general_settings.external_links_02 %}
+        <div class="widget">
+          {% if extrnal_link_02.title %}
+           <h5 class="widget-title">{{extrnal_link_02.title}}</h5>
+          {% endif %}
+          <ul class="list-unstyled mb-0">
+            {% for links in extrnal_link_02.links %}
+            <li><a href="{{links.url}}">{{links.text}}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+        <!-- /.widget -->
+      </div>
+      <!-- /column -->
+      <div class="col-6 col-md-3 col-lg-2">
+        {% assign external_links = site.data.general_settings.external_links %}
+        <div class="widget">
+          {% if external_links.title %}
+           <h5 class="widget-title">{{external_links.title}}</h5>
+          {% endif %}
+          <ul class="list-unstyled mb-0">
+            {% for links in external_links.links %}
+            <li><a href="{{libks.url}}">{{links.text}}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+        <!-- /.widget -->
+      </div>
+      <!-- /column -->
+      <div class="col-6 col-md-3 col-lg-2">
+        {% assign external_links_03 = site.data.general_settings.external_links_03 %}
+        <div class="widget">
+          {% if external_links_03.title %}
+           <h5 class="widget-title">{{external_links_03.title}}</h5>
+          {% endif %}
+          <ul class="list-unstyled mb-0">
+            {% for links_03 in external_links_03.links %}
+            <li><a href="{{links_03.url}}">{{links_03.text}}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+        <!-- /.widget -->
+      </div>
+      <!-- /column -->
+      <div class="col-6 col-md-3 col-lg-2">
+        <div class="widget">
+          <h5 class="widget-title">Contact</h5>
+          {% if site.data.general_settings.address_01 %}
+          <address>{{site.data.general_settings.address_01}}</address>
+          {% endif %}
+          <a href="mailto:{{site.data.general_settings.email}}">{{site.data.general_settings.email}}</a><br />
+           {{site.data.general_setting.phone_number}}
+        </div>
+        <!-- /.widget -->
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+  <div class="container inner pt-0 pb-40 d-flex align-items-center">
+    <p class="mb-0 mr-auto">{{site.data.general_settings.data.genaral_settings.copyright_text}}</p>
+    <ul class="social social-mute social-s ml-auto">
+      {% for social_links in site.data.general_settings.social_accounts.links %}
+       <li><a href="{{social_links.url}}"><i class="{{social_links.icon}}"></i></a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</footer>

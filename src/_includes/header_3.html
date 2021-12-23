@@ -1,0 +1,153 @@
+  <nav class="navbar navbar-fancy absolute nav-uppercase navbar-expand-lg flex-column">
+    <div class="container">
+      <div class="navbar-brand">
+      <a href="{{site.url}}">
+        {% if include.light_logo %}
+         <img src="{{site.data.general_settings.light_logo_1x}}" srcset="{{site.data.general_settings.light_logo_1x}} 1x, {{site.data.general_settings.light_logo_2x}} 2x" class="{% if include.logo_class %} {{include.logo_class}} {% else %} logo-light {% endif %}" alt="{{site.data.general_settings.title}}"/>
+         {% endif %}
+         <img src="{{site.data.general_settings.black_logo_1x}}" srcset="{{site.data.general_settings.black_logo_1x}} 1x, {{site.data.general_settings.black_logo_2x}} 2x" class="{% if include.logo_class %} {{include.logo_class}} {% else %} logo-dark {% endif %} {% if include.black_logo_disable %} d-none {% endif %}" alt="{{site.data.general_settings.title}}"/>
+      </a>
+      </div>
+      <div class="navbar-other ml-auto order-lg-3">
+      <ul class="navbar-nav flex-row align-items-center" data-sm-skip="true">
+        <li class="nav-item">
+          <div class="navbar-hamburger d-lg-none d-xl-none ml-auto">
+            <button class="hamburger animate plain" data-toggle="offcanvas-nav"><span></span></button>
+          </div>
+        </li>
+        <li class="dropdown search-dropdown position-static nav-item">
+          <a href="#" role="button" class="collapse-toggle" data-toggle="collapse" data-target=".search-dropdown-menu" aria-haspopup="true" aria-expanded="false"><i class="jam jam-search"></i></a>
+          <div class="dropdown-menu search-dropdown-menu w-100 collapse">
+            <div class="form-wrapper">
+              <form class="inverse-text">
+                <input type="text" id="search-input" class="form-control" placeholder="Search blog posts.."/>
+              </form>
+              <!-- /.search-form -->
+              <i class="dropdown-close jam jam-close"></i>
+            </div>
+            <!-- /.form-wrapper -->
+             <ul id="results-container" class="position-static"></ul>
+          </div>
+        </li>
+        <li class="nav-item"><button class="plain" data-toggle="offcanvas-info"><i class="jam jam-info"></i></button></li>
+      </ul>
+      <!-- /.navbar-nav -->
+      </div>
+      <!-- /.navbar-other -->
+      <div class="navbar-collapse offcanvas-nav">
+      <div class="offcanvas-header d-lg-none d-xl-none">
+        <a href="{{site.data.general_settings.url}}">
+          <img src="{{site.data.general_settings.light_logo_1x}}" srcset="{{site.data.general_settings.light_logo_1x}} 1x, {{site.data.general_settings.light_logo_2x}} 2x" alt="{{site.data.general_settings.title}}"/></a>
+        <button class="plain offcanvas-close offcanvas-nav-close"><i class="jam jam-close"></i></button>
+      </div>
+      <ul class="navbar-nav mx-auto">
+        {% for menu in site.data.navigation.main_menu %}
+        {% assign check_menu = menu.menu_type %}
+        {% case check_menu %}
+        {% when "megamenu" %} 
+        <li class="nav-item">
+        <a class="nav-link" href="{{menu.url}}">{{menu.text}}</a>
+          <ul class="dropdown-menu mega-menu boxed list-view text-left">
+            <li class="mega-menu-content">
+              <div class="row">
+                {% for column in menu.submenu cols: 4 %}
+                <div class="col-lg-3">
+                  <ul class="list-unstyled">
+                    <li><a class="dropdown-item" href="{{column.url}}">{{column.text}}</a></li>
+                  </ul>
+                </div>
+                <!--/column -->
+                {% endfor %}
+              </div>
+              <!--/.row -->
+            </li>
+            <!--/.mega-menu-content-->
+          </ul>
+          <!--/.dropdown-menu -->
+        </li>
+        {% when "dropdown" %}
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="{{menu.url}}">{{menu.text}}</a>
+          <ul class="dropdown-menu">
+            {% if menu.label_two %}
+       <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">{{menu.sub_menu_text}}</a>
+         <ul class="dropdown-menu">
+           {% for label_two in menu.label_two %}
+            <li class="nav-item"><a class="dropdown-item" href="{{label_two.url}}">{{label_two.text}}</a></li>
+           {% endfor %}
+         </ul>
+       </li>
+       {% endif %}
+       {% if menu.submenu %}
+        {% for label_one in menu.submenu %}
+              <li><a class="dropdown-item" href="{{label_one.url}}">{{label_one.text}}</a></li>
+              {% endfor %}
+              {% endif %}
+          </ul>
+        </li>
+        {% else %}
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="{{menu.url}}">{{menu.text}}</a>
+          <ul class="dropdown-menu">
+            {% if menu.label_two %}
+       <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">{{menu.sub_menu_text}}</a>
+         <ul class="dropdown-menu">
+           {% for label_two in menu.label_two %}
+            <li class="nav-item"><a class="dropdown-item" href="{{label_two.url}}">{{label_two.text}}</a></li>
+           {% endfor %}
+         </ul>
+       </li>
+       {% endif %}
+       {% if menu.submenu %}
+        {% for label_one in menu.submenu %}
+              <li><a class="dropdown-item" href="{{label_one.url}}">{{label_one.text}}</a></li>
+              {% endfor %}
+              {% endif %}
+          </ul>
+        </li>
+        {% endcase %}
+        {% endfor %}
+      </ul>
+      <!-- /.navbar-nav -->
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+  </nav>
+  <!-- /.navbar -->
+<div class="offcanvas-info inverse-text">
+  <button class="plain offcanvas-close offcanvas-info-close"><i class="jam jam-close"></i></button>
+  <a href="{{site.url}}">
+    <img src="{{site.data.general_settings.light_logo_1x}}" srcset="{{site.data.general_settings.light_logo_1x}} 1x, {{site.data.general_settings.light_logo_2x}} 2x" class="{% if include.logo_class %} {{include.logo_class}} {% else %} logo-light {% endif %}" alt="{{site.data.general_settings.title}}"/>
+  </a>
+  <div class="space30"></div>
+  <p>{{site.data.general_settings.description}}</p>
+  <div class="space20"></div>
+  <div class="widget">
+    <h5 class="widget-title">Contact Info</h5>
+    <address> {{site.data.general_settings.address_01}}<div class="space20"></div>
+      <a href="mailto:{{site.data.general_settings.email}}" class="nocolor">{{site.general_settings.email}}</a><br /> {{site.data.general_settings.phone_number}} </address>
+  </div>
+  <!-- /.widget -->
+  <div class="widget">
+    {% if site.data.general_settings.external_links.title %}
+     <h3 class="widget-title">{{site.data.general_settings.external_links.title}}</h3>
+    {% endif %}
+    <ul class="list-unstyled">
+     {% for external_link in site.data.general_settings.external_links.links %}
+      <li><a href="{{external_link.url}}" class="nocolor">{{external_link.text}}</a></li>
+     {% endfor %}
+    </ul>
+  </div>
+  <!-- /.widget -->
+  <div class="widget">
+    {% if site.data.general_settings.social_accounts.title %}
+     <h3 class="widget-title">{{site.data.general_settings.social_accounts.title}}</h3>
+    {% endif %}
+    <ul class="social social-mute social-s ml-auto">
+      {% for social_info in site.data.general_settings.social_accounts.links %}
+      <li><a href="{{social_info.url}}"><i class="{{social_info.icon}}"></i></a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  <!-- /.widget -->
+</div>
+<!-- /.offcanvas-info -->

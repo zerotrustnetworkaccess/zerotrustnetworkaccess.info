@@ -1,0 +1,27 @@
+<div class="post">
+  <div class="box bg-white shadow">
+    {% if post.post_image %}
+    <figure class="main overlay overlay1 rounded">
+      <a href="{{post.url}}">
+       <img src="{{post.post_image}}" alt="{{post.title}}"/></a>
+      <figcaption>
+        <h5 class="from-top mb-0">Read More</h5>
+      </figcaption>
+    </figure>
+    {% endif %}
+    <div class="space40"></div>
+    <div class="post-content">
+      <div class="category text-center"><a href="/category/{{post.categories[0] | slugify}}" class="badge badge-pill bg-hibiscus">{{post.categories[0]}}</a></div>
+      <h2 class="post-title text-center"><a href="{{post.url}}">{{post.title}}</a></h2>
+      <div class="meta text-center">
+        <span class="date"><i class="jam jam-clock"></i>{{post.date | date_to_string}}</span>
+        {% if post.author %}
+        <span class="author"><i class="jam jam-user"></i><a href="/{{post.author | slugify}}">By {{post.author}}</a></span>
+        {% endif %}
+      </div>
+      <p>{{post.excerpt | strip_html | truncatewords: "80"}}</p>
+      <div class="text-center"><a href="{{post.url}}" class="more">Read more</a></div>
+    </div>
+  </div>
+</div>
+<!-- /.post -->

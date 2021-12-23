@@ -1,0 +1,236 @@
+main_menu:
+
+  - text: "Home"
+    url: "/"
+    menu_type: "megamenu"
+    submenu:
+
+      - text: "Home 1"
+        url: "/"
+
+      - text: "Home 2"
+        url: "/index-2"
+
+      - text: "Home 3"
+        url: "/index-3"
+
+      - text: "Home 4"
+        url: "/index-4"
+
+      - text: "Home 5"
+        url: "/index-5"
+
+      - text: "Home 6"
+        url: "/index-6"
+
+      - text: "Home 7"
+        url: "/index-7"
+
+      - text: "Home 8"
+        url: "/index-8"
+
+      - text: "Home 9"
+        url: "/index-9"
+
+      - text: "Home 10"
+        url: "/index-10"
+
+      - text: "Home 11"
+        url: "/index-11"
+
+      - text: "Home 12"
+        url: "/index-12"
+
+      - text: "Home 13"
+        url: "/index-13"
+
+      - text: "Home 14"
+        url: "/index-14"
+
+      - text: "Home 15"
+        url: "/index-15"
+
+      - text: "Home 16"
+        url: "/index-16"
+
+      - text: "Home 17"
+        url: "/index-17"
+
+      - text: "Home 18"
+        url: "/index-18"
+
+      - text: "Home 19"
+        url: "/index-19"
+
+      - text: "Home 20"
+        url: "/index-20"
+
+      - text: "Home 21"
+        url: "/index-21"
+
+      - text: "Home 22"
+        url: "/index-22"
+
+      - text: "Home 23"
+        url: "/index-23"
+
+      - text: "Home 24"
+        url: "/index-24"
+
+      - text: "Home 25"
+        url: "/index-25"
+
+      - text: "Home 26"
+        url: "/index-26"
+
+      - text: "Home 27"
+        url: "/index-27"
+
+      - text: "Home 28"
+        url: "/index-28"
+
+      - text: "Home 29"
+        url: "/index-29"
+
+      - text: "Home 30"
+        url: "/index-30"
+
+      - text: "Home 31"
+        url: "/index-31"
+
+      - text: "Waves"
+        url: "/waves"
+
+      - text: "wrappers"
+        url: "/wrappers"
+
+      - text: "About "
+        url: "/about"
+
+      - text: "Lists"
+        url: "/lists"
+
+      - text: "Coming Soon"
+        url: "/coming_soon"
+
+  - text: "Features"
+    url: "/"
+    menu_type: "dropdown"
+    submenu:
+      - text: "About Page"
+        url: "/about"
+
+      - text: "Portfolio"
+        url: "/portfolios/"
+
+      - text: "Contact"
+        url: "/contact"
+    has_submenu: "true"
+    sub_menu_text: "services"
+    label_two:
+      - text: "service 01"
+        url: "/services/index"
+
+      - text: "service 02"
+        url: "/services/index-2"
+
+      - text: "service 03"
+        url: "/services/index-3"
+
+      - text: "service 04"
+        url: "/services/index-4"
+
+
+    submenu:
+
+      - text: "Portfolio "
+        url: "/portfolio"
+
+      - text: "Contact"
+        url: "/contact"
+
+      - text: "About"
+        url: "/about"
+
+      - text: "service 04"
+        url: "/services/index-4"
+
+  - text: "Elements"
+    url: "/"
+    submenu:
+
+      - text: "Portfolio "
+        url: "/portfolio/"
+
+      - text: "Contact"
+        url: "/contact"
+
+      - text: "About"
+        url: "/about"
+
+      - text: "service 04"
+        url: "/services/index-4"
+        
+    menu_type: "dropdown"
+    has_submenu: "true"
+    sub_menu_text: "Elements"
+    label_two:
+      - text: "service 01"
+        url: "/services/index"
+
+      - text: "service 02"
+        url: "/services/index-2"
+
+      - text: "service 03"
+        url: "/services/index-3"
+
+      - text: "service 04"
+        url: "/services/index-4"
+
+  - text: "Portfolio"
+    url: "/portfolios/"
+    submenu:
+      - text: "Portfolio 02"
+        url: "/portfolios/index-2"
+
+      - text: "Portfolio 03"
+        url: "/portfolios/index-3"
+
+      - text: "Portfolio 04"
+        url: "/portfolios/index-4"
+
+      - text: "Portfolio 05"
+        url: "/portfolios/index-5"
+
+      - text: "Portfolio 06"
+        url: "/portfolios/index-6"
+
+      - text: "Portfolio 07"
+        url: "/portfolios/index-7"
+
+  - text: "Blog"
+    url: "/"
+    submenu:
+      - text: "Blog 01"
+        url: "/blogs/index"
+
+      - text: "Blog 02"
+        url: "/blogs/index-2"
+
+      - text: "blog-3"
+        url: "/blogs/index-3"
+
+      - text: "blog-4"
+        url: "/blogs/index-4"
+
+      - text: "blog-5"
+        url: "/blogs/index-5"
+
+      - text: "blog-6"
+        url: "/blogs/index-6"
+
+      - text: "blog-7"
+        url: "/blogs/index-7"
+
+      - text: "blog-8"
+        url: "/blogs/index-8"

@@ -1,0 +1,124 @@
+---
+layout: page
+title: "Masonry Portfolio"
+sub_title: "Aenean lacinia bibendum nulla sed consectetur"
+black_menu: true
+portfolio_area:
+  categories:
+    - title: "Branding"
+      filter: "branding"
+
+    - title: "Corporate"
+      filter: "corporate"
+
+    - title: "Application"
+      filter: "application"
+
+    - title: "Video"
+      filter: "video"
+  portfolios:
+    - title: "Fringilla Nullam"
+      image: "/assets/images/art/m1.jpg"
+      url: "#"
+      filters:
+        - corporate
+        - branding
+    - title: "Ridiculus Parturient"
+      image: "/assets/images/art/m2.jpg"
+      url: "#"
+      filters:
+        - application
+    - title: "Ornare Ipsum"
+      image: "/assets/images/art/m3.jpg"
+      url: "#"
+      filters:
+        - video
+    - title: "Nullam Mollis"
+      image: "/assets/images/art/m4.jpg"
+      url: "#"
+      filters:
+        - corporate
+        - application
+    - title: "Euismod Risus"
+      image: "/assets/images/art/m5.jpg"
+      url: "#"
+      filters:
+        - branding
+    - title: "Pellentesque Commodo"
+      image: "/assets/images/art/m6.jpg"
+      url: "#"
+      filters:
+        - video
+        - branding
+    - title: "Pellentesque Commodo"
+      image: "/assets/images/art/m7.jpg"
+      url: "#"
+      filters:
+        - video
+        - branding
+    - title: "Pellentesque Commodo"
+      image: "/assets/images/art/m8.jpg"
+      url: "#"
+      filters:
+        - video
+        - branding
+    - title: "Pellentesque Commodo"
+      image: "/assets/images/art/m9.jpg"
+      url: "#"
+      filters:
+        - video
+        - branding
+    - title: "Pellentesque Commodo"
+      image: "/assets/images/art/m10.jpg"
+      url: "#"
+      filters:
+        - video
+        - branding
+    - title: "Pellentesque Commodo"
+      image: "/assets/images/art/m11.jpg"
+      url: "#"
+      filters:
+        - video
+        - branding
+    - title: "Pellentesque Commodo"
+      image: "/assets/images/art/m12.jpg"
+      url: "#"
+      filters:
+        - video
+        - branding
+---
+
+<div class="wrapper light-wrapper">
+  <div class="container inner">
+    <div class="grid grid-view">
+      <div class="isotope-filter text-center">
+        <ul>
+          <li><a class="button active" data-filter="*">All</a></li>
+          {% for category in page.portfolio_area.categories %}
+           <li><a class="button" data-filter=".{{category.filter}}">{{category.title}}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="clearfix"></div>
+      <div class="tiles tiles-m">
+        <div class="row isotope">
+        {% for portfolio in page.portfolio_area.portfolios %}
+          <div class="item grid-sizer col-md-6 col-lg-4 {% for filter in portfolio.filters %} {{filter}} {% endfor %}">
+            <figure class="overlay overlay1 rounded">
+            <a href="{{portfolio.url}}">
+             <img src="{{portfolio.image}}" alt="{{portfolio.title}}"/></a>
+              <figcaption>
+                <h5 class="from-top mb-0">{{portfolio.title}}</h5>
+              </figcaption>
+            </figure>
+          </div>
+          <!-- /.item -->
+         {% endfor %}
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.tiles -->
+    </div>
+    <!-- /.grid -->
+  </div>
+</div>

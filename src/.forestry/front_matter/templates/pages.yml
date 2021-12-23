@@ -1,0 +1,22 @@
+---
+label: Pages
+hide_body: true
+fields:
+- type: text
+  name: layout
+  label: layout
+  config:
+    required: true
+  default: page
+- type: text
+  name: title
+  label: title
+- type: text
+  name: sub_title
+  label: sub_title
+- type: file
+  name: header_image
+  label: header_image
+- type: boolean
+  name: white_menu
+  label: white_menu

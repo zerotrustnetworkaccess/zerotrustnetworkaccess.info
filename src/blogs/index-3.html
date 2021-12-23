@@ -1,0 +1,29 @@
+---
+layout: page
+title: "Boxed Grid Blog"
+sub_title: "Aenean lacinia bibendum nulla sed consectetur"
+black_menu: true
+pagination:
+  enabled: true
+  per_page: 9
+permalink: "/blogs/index-3"
+---
+
+<div class="wrapper light-wrapper">
+<div class="container inner">
+<div class="blog grid grid-view">
+  <div class="row isotope">
+  {% for post in paginator.posts %}
+    <div class="item post grid-sizer col-md-6 col-lg-4">
+      {% include post_loop.html %}
+    </div>
+    <!-- /.post --> 
+   {% endfor %}
+  </div>
+  <!-- /.row -->
+</div>
+<!-- /.blog -->
+{% include pagination.html %}
+</div>
+<!-- /.container -->
+</div>

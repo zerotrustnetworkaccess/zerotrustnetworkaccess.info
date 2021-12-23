@@ -1,0 +1,34 @@
+---
+label: Posts
+hide_body: false
+fields:
+- type: text
+  name: layout
+  label: layout
+  config:
+    required: true
+  default: post
+- type: text
+  name: title
+  label: title
+- type: datetime
+  name: date
+  label: date
+- type: text
+  name: tags
+  label: tags
+- type: list
+  name: categories
+  label: categories
+- type: text
+  name: author
+  label: author
+- type: file
+  name: post_image
+  label: post_image
+- type: text
+  name: post_format
+  label: post_format
+- type: boolean
+  name: trending
+  label: trending

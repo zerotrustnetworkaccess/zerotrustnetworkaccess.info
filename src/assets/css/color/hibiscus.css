@@ -1,0 +1,5 @@
+:root {
+	--color-default: #ad7c83;
+	--rgb-default: 173, 124, 131;
+	--btn-hover-default: 0 0 0 5px rgba(var(--rgb-default), 0.25);
+}

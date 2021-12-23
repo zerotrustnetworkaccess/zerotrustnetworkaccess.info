@@ -1,0 +1,25 @@
+<div class="post">
+  <div class="box bg-white shadow">
+    <div class="post-slider">
+      <div class="basic-slider owl-carousel" data-margin="5">
+        {% for gallery in post.gallery %}
+         <div class="item"><img src="{{gallery.img}}" alt="{{post.img}}"/></div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="space60"></div>
+    <div class="post-content">
+      <div class="category text-center"><a href="/category/{{post.categories[0] | slugify}}" class="badge badge-pill bg-brown">{{post.categories[0]}}</a></div>
+      <h2 class="post-title text-center"><a href="{{post.url}}">{{post.title}}</a></h2>
+      <div class="meta text-center">
+        <span class="date"><i class="jam jam-clock"></i>{{post.date | date_to_string}}</span>
+        {% if post.uthor %}
+         <span class="author"><i class="jam jam-user"></i><a href="/{{post.author | slugify}}">By {{post.author}}</a></span>
+        {% endif %}
+      </div>
+      <p> Post Content Here {{post.excerpt | strip_html | truncatewords: "100"}}</p>
+      <div class="text-center"><a href="{{post.url}}" class="more">Read more</a></div>
+    </div>
+  </div>
+</div>
+<!-- /.post -->

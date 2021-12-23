@@ -1,0 +1,81 @@
+{% for author_info in site.authors %}
+{% if author_info.primary_author %}
+<div class="sidebox widget">
+  <h3 class="widget-title">About Me</h3>
+  {% if author_info.image %}
+  <figure class="rounded mb-20">
+    <img src="{{author_info.image}}" alt="{{author_info.title}}"/>
+  </figure>
+  {% endif %}
+  {% if author_info.bio %}
+   <p>{{author_info.bio}}</p>
+  {% endif %}
+  {% if author_info.social_accounts %}
+  <ul class="social social-color social-s">
+    {% for account in author_info.social_accounts %}
+     <li><a href="{{account.url}}"><i class="{{account.icon}}"></i></a></li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+  <div class="clearfix"></div>
+</div>
+<!-- /.widget -->
+{% endif %}
+{% endfor %}
+<div class="sidebox widget">
+  <h3 class="widget-title">Popular Posts</h3>
+  <ul class="image-list">
+    {% for post in site.posts limit: "5" %}
+    <li>
+      {% if post.post_image %}
+      <figure class="rounded"><a href="blog-post.html">
+        <img src="{{post.post_image}}" alt="{{post.title}}"/></a>
+      </figure>
+      {% endif %}
+      <div class="post-content">
+        <h6 class="post-title"> 
+          <a href="{{post.url}}">{{post.title}}</a> 
+        </h6>
+        <div class="meta">
+          {% if post.date %}
+           <span class="date"><i class="jam jam-clock"></i> {{post.date | date_to_string}}</span>
+          {% endif %}
+        </div>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+  <!-- /.image-list -->
+</div>
+<!-- /.widget -->
+<div class="sidebox widget">
+  <h3 class="widget-title">Categories</h3>
+  <ul class="icon-list">
+    {% assign categories_list = site.categories %}
+      {% if categories_list.first[0] == null %}
+        {% for category in categories_list %}
+          <li class="bullet-default"><i class="jam jam-chevron-right"></i> <a class="text-capitalize" href="/category/{{ category | downcase | downcase | url_escape | strip | replace: ' ', '-' }}">{{ category | camelcase }} <span>({{ site.tags[category].size }})</span></a></li>
+        {% endfor %}
+      {% else %}
+        {% for category in categories_list %}
+          <li class="bullet-default"><i class="jam jam-chevron-right"></i> <a class="text-capitalize" href="/category/{{ category[0] | downcase | url_escape | strip | replace: ' ', '-' }}">{{ category[0] | camelcase }} <span>({{ category[1].size }})</span></a></li>
+        {% endfor %}
+      {% endif %}
+    {% assign categories_list = nil %}
+</ul>
+</div>
+<!-- /.widget -->
+<div class="sidebox widget">
+  <h3 class="widget-title">Tags</h3>
+  <ul class="list-unstyled tag-list">
+    {% capture tags %}
+      {% for tag in site.tags %}
+        <li data-sort="{{ site.posts.size | minus: tag[1].size | prepend: '0000' | slice: -4, 4 }}">
+           <a class="btn btn-s" href="/{{ site.tag_page_dir }}/{{ tag[0] | slugify: 'pretty' }}">{{ tag[0] }} <span> ({{ tag[1].size }})</span></a>
+        </li>
+      {% endfor %}
+    {% endcapture %}
+    {{ tags | split:'</li>' | sort | join:'</li>' }}
+</ul>
+</div>
+<!-- /.widget -->

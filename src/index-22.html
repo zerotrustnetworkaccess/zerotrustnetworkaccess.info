@@ -1,0 +1,61 @@
+---
+layout: default
+page_header:
+  title: "Hello, I am Jonathan Davis."
+  description: |
+    I’m a corporate brand designer based in New York City. I’m very <br class="d-none d-xl-block" />passionate about the work that I do, and if you are curious you can find my <br class="d-none d-xl-block" />works on <a href="#" class="color-s-dribbble">Dribbble</a>, my portfolio on <a href="#" class="color-s-behance">Behance</a>, and my shots on <a href="#" class="color-s-instagram">Instagram</a>
+projects:
+  - title: "Paper Branding"
+    image: "/assets/images/art/fp1.jpg"
+    url: "#"
+  - title: "Cardboard Brand Box"
+    image: "/assets/images/art/fp3.jpg"
+    url: "#"
+  - title: "Cardboard Brand Box"
+    image: "/assets/images/art/fp3.jpg"
+    url: "#"
+  - title: "Shopping Paperbag"
+    image: "/assets/images/art/fp4.jpg"
+    url: "#"
+  - title: "Sunshine Corporate"
+    image: "/assets/images/art/fp5.jpg"
+    url: "#"
+  - title: "Sunshine Corporate"
+    image: "/assets/images/art/fp6.jpg"
+    url: "#"
+  - title: "Sunshine Corporate"
+    image: "/assets/images/art/fp7.jpg"
+    url: "#"
+  - title: "Kyte Company"
+    image: "/assets/images/art/fp11.jpg"
+    url: "#"
+
+
+---
+<div class="wrapper pattern-wrapper bg-image h-100" data-image-src="{{relative_url}}/assets/images/art/pattern.png">
+  <div class="content-wrapper h-100 p-60 pt-80 inverse-text">
+    {% if page.page_header.title %}
+     <h1 class="display-1">{{page.page_header.title}}</h1>
+    {% endif %}
+    <div class="space10"></div>
+    {% if page.page_header.description %}
+    <h2 class="display-4">{{page.page_header.description}}</h2>
+    {% endif %}
+    <div class="space70"></div>
+    <div class="grid-view">
+      <div class="carousel owl-carousel dots-left" data-margin="30" data-dots="true" data-autoplay="false" data-autoplay-timeout="5000" data-responsive='{"0":{"items": "1"}, "768":{"items": "2"}, "1441":{"items": "3"}}'>
+        {% for pro in page.projects %}
+        <div class="item">
+          <figure class="rounded mb-20">
+            <img src="{{pro.image}}" alt="{{pro.title}}"/><a class="item-link" href="{{pro.url}}"><i class="jam jam-link"></i></a>
+          </figure>
+          <h2 class="post-title"><a href="{{pro.url}}">{{pro.title}}</a></h2>
+        </div>
+        {% endfor %}
+      </div>
+      <!-- /.owl-carousel -->
+      <div class="space100"></div>
+    </div>
+    <!-- /.grid-view -->
+  </div>
+</div>

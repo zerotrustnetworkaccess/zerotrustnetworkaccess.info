@@ -1,0 +1,106 @@
+body,
+.icon-blob span,
+.icon-blob h3,
+.icon-blob p,
+.icon-blob .step {
+    font-family: 'HK Grotesk', sans-serif !important;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar-nav .nav-link,
+.dropdown-item,
+.mega-menu-content a,
+.btn,
+strong,
+.hero,
+.display-1,
+.display-2,
+.dropcap,
+.navbar-nav .nav-link,
+.dropdown-item,
+.mega-menu-content a,
+.nav-uppercase .navbar-nav .nav-link,
+.navbar-other .nav-item .cart-dropdown-menu .meta.price,
+.badge-cart,
+.badge,
+.alert-link,
+.blockquote-footer,
+.meta,
+.more,
+.breadcrumbs,
+.breadcrumbs *,
+.isotope-filter ul li a,
+.pagination ul>li>a,
+.icon-blob span,
+.icon-blob .step,
+th,
+.pricing-switcher,
+.item-detailed .item-label,
+.item-detailed .price,
+.nav-tabs .nav-link,
+.accordion-wrapper .card-header button,
+label:not(.custom-control-label) {
+    font-weight: 600;
+}
+.display-3,
+.counter h3,
+.counter p,
+.countdown h3 {
+    font-weight: 500;
+}
+.display-4 {
+	font-size: 1.4rem;
+	line-height: 1.9rem;
+    font-weight: 300;
+}
+blockquote.larger p {
+	font-weight: 300;
+}
+.lead {
+	font-weight: 400;
+}
+.lead.larger {
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+}
+.navbar-nav .nav-link,
+.dropdown-item,
+.mega-menu-content a {
+    font-size: 0.8rem;
+}
+@media (min-width: 992px) {
+    .dropdown-item,
+    .mega-menu-content a {
+        font-size: 0.7rem;
+        font-weight: 400;
+    }
+}
+@media (max-width: 991.98px) {
+    .dropdown-item,
+    .mega-menu-content a {
+        font-size: 0.75rem;
+        font-weight: 400;
+    }
+}
+.btn {
+	padding: 0.9rem 1.3rem 0.9rem;
+}
+.btn-s {
+    padding: 0.65rem 0.9rem 0.65rem;
+}
+.btn-l {
+    padding: 1.05rem 1.5rem 1.05rem;
+}
+.badge {
+    padding: 0.35rem 0.7rem 0.35rem;
+}
+.title-bg {
+    padding: 0.35rem 0.7rem 0.35rem;
+}
+.isotope-filter ul li a {
+    padding: 0.6rem 0.9rem 0.65rem;
+}
