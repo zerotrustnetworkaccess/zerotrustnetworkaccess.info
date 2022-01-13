@@ -92,3 +92,10 @@ vendors:
     url: "https://github.com/juanfont/headscale"
     license: "Open Source"
     deployment: "Self-hosted"
+
+  - company: "Twingate"
+    product: ""
+    url: "https://twingate.com/"
+    license: ""
+    deployment: ""
+    pricing: ""
