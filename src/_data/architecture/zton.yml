@@ -101,13 +101,6 @@ vendors:
     deployment: "SaaS"
     pricing: "Published"
 
-  - company: "Banyan Security"
-    product: ""
-    url: "https://www.banyansecurity.io/"
-    license: ""
-    deployment: ""
-    pricing: ""
-
   - company: "Gravitl"
     product: "Netmaker"
     url: "https://gravitl.com/"
