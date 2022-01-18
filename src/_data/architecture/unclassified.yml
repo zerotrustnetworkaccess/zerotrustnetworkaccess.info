@@ -642,3 +642,10 @@ vendors:
     license: ""
     deployment: ""
     pricing: ""
+
+  - company: "Ericom"
+    product: "Ericom ZTEdge SASE Platform"
+    url: "https://www.ericom.com/"
+    license: ""
+    deployment: ""
+    pricing: ""
