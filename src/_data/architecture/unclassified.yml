@@ -216,13 +216,6 @@ vendors:
     deployment: ""
     pricing: ""
 
-  - company: "Gravitl"
-    product: "Netmaker"
-    url: "https://gravitl.com/"
-    license: ""
-    deployment: ""
-    pricing: "" 
-
   - company: "Guardicore"
     product: ""
     url: "https://www.guardicore.com/"
