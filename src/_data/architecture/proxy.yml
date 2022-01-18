@@ -4,7 +4,7 @@ sort_order: "6"
 description: "..."
 image: "https://via.placeholder.com/2280x1200"
 paragraphs: 
-  - text: "Customer hosts a proxy appliance on the Public Internet with open ports. Clients to connect to public proxy and authenticate. Some architectures chain proxies together, secondary proxies may connect to the primary with reverse tunnels and so not also require a presence on the Public Internet."
+  - text: "Customer hosts a proxy appliance on the Public Internet with open ports. Clients to connect to public proxy and authenticate. Some architectures chain proxies together, secondary proxies may connect to the primary with reverse tunnels and so not also require a presence on the Public Internet. Usually no endpoint agent is required. Proxies are often publically visible."
 strengths:
   - title: "Protocol aware. Access to application traffic."
     description: ""
