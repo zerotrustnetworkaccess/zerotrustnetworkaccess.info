@@ -28,3 +28,10 @@ vendors:
     license: ""
     deployment: ""
     pricing: ""
+
+  - company: "Pomerium"
+    product: "Pomerium"
+    url: "https://www.pomerium.com/"
+    license: ""
+    deployment: ""
+    pricing: ""
