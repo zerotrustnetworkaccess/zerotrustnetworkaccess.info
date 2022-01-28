@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="shortcut icon" href="{{relative_url}}/assets/images/favicon.png"/>
+  <title>{% if page.title %} {{ page.title }} {% else %} {{ site.data.general_settings.title }}{% endif %}</title>
+  <link rel="stylesheet" type="text/css" href="{{relative_url}}/assets/css/bootstrap.min.css"/>
+  <link rel="stylesheet" type="text/css" href="{{relative_url}}/assets/css/plugins.css"/>
+  <link rel="stylesheet" type="text/css" href="{{relative_url}}/assets/revolution/css/settings.css"/>
+  <link rel="stylesheet" type="text/css" href="{{relative_url}}/assets/revolution/css/layers.css"/>
+  <link rel="stylesheet" type="text/css" href="{{relative_url}}/assets/revolution/css/navigation.css"/>
+  <link rel="stylesheet" type="text/css" href="{{relative_url}}/assets/type/type.css"/>
+  <link rel="stylesheet" type="text/css" href="{{relative_url}}/assets/css/style.css"/>
+  <link rel="stylesheet" type="text/css" href="{{relative_url}}/assets/css/color/leaf.css"/>
+  <link rel="stylesheet" type="text/css" href="{{relative_url}}/assets/css/timeline.min.css"/>
+  <link rel="stylesheet" type="text/css" href="{{relative_url}}/assets/css/custom.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Abhaya+Libre:400,500,600,700,800&display=swap" rel="stylesheet"/>
+  {% if site.data.general_settings.google_analytics.enable %}
+   {% include analytics.html %}
+  {% endif %}
+</head>
+<body>
+{{ content }}
+</body>
+</html>

@@ -1,0 +1,97 @@
+$fontfamily: jost;
+$fontstyle: normal;
+$title-fontweight: 500;
+$text-fontweight: 300;
+$tablet: 744px;
+
+.titles {
+  font-family: $fontfamily;
+  font-style: $fontstyle;
+  font-weight: $title-fontweight;
+}
+
+.text {
+  font-family: $fontfamily;
+  font-style: $fontstyle;
+  font-weight: $text-fontweight;
+}
+
+.ztna-h1 {
+  @extend .titles;
+  font-size: 50px;
+  line-height: 72px;
+}
+
+.ztna-h2 {
+  @extend .titles;
+  font-size: 32px;
+  line-height: 46px;
+}
+
+.ztna-h3 {
+  @extend .titles;
+  font-size: 22px;
+  line-height: 32px;
+}
+
+.ztna-h4 {
+  @extend .titles;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.ztna-h5 {
+  @extend .titles;
+  font-size: 16px;
+  line-height: 23px;
+  text-transform: uppercase;
+}
+
+.ztna-p {
+  @extend .text;
+  font-size: 22px;
+  line-height: 150%;
+}
+
+.ztna-small-text {
+  @extend .text;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+@media (max-width: $tablet) {
+  .ztna-h1 {
+    font-size: 32px;
+    line-height: 46px;
+  }
+
+  .ztna-h2 {
+    font-size: 24px;
+    line-height: 35px;
+  }
+
+  .ztna-h3 {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .ztna-h4 {
+    font-size: 14px;
+    line-height: 130%;
+  }
+
+  .ztna-h5 {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .ztna-p {
+    font-size: 18px;
+    line-height: 150%;
+  }
+
+  .ztna-small-text {
+    font-size: 14px;
+    line-height: 150%;
+  }
+}

@@ -1,0 +1,87 @@
+$light-blue-1: #44a0f8;
+$light-blue-2: #4476f8;
+$dark-blue-1: #254be9;
+$dark-blue-2: #4c25e9;
+$violet-1: #7416ed;
+$violet-2: #a118e1;
+$pink: #bc1dcb;
+$green: #30c9ad;
+$red: #ea5b8e;
+$dark-text: #0e2942;
+$dark-buttons: #16334f;
+$light-text-1: #3e5871;
+$light-text-2: #99acbe;
+$light-text-3: #cad8e6;
+$back-ground-color: #f9fafc;
+
+$gradient-proportion: $light-blue-1 0%, $dark-blue-1 31.59%, $violet-1 67.71%,
+  $pink 100%;
+
+$direction: right;
+
+@mixin gradient($direction, $gradient-proportion) {
+  background: -webkit-linear-gradient($direction, $gradient-proportion);
+  background: -moz-linear-gradient($direction, $gradient-proportion);
+  background: -o-linear-gradient($direction, $gradient-proportion);
+  background: linear-gradient($direction, $gradient-proportion);
+}
+
+.light-blue-1 {
+  color: $light-blue-1;
+}
+
+.light-blue-2 {
+  color: $light-blue-2;
+}
+
+.dark-blue-1 {
+  color: $dark-blue-1;
+}
+
+.dark-blue-2 {
+  color: $dark-blue-2;
+}
+
+.violet-1 {
+  color: $violet-1;
+}
+
+.violet-2 {
+  color: $violet-2;
+}
+
+.pink {
+  color: $pink;
+}
+
+.green {
+  color: $green;
+}
+
+.red {
+  color: $red;
+}
+
+.dark-text {
+  color: $dark-text;
+}
+
+.dark-buttons {
+  color: $dark-buttons;
+}
+
+.light-text-1 {
+  color: $light-text-1;
+}
+
+.light-text-2 {
+  color: $light-text-2;
+}
+
+.light-text-3 {
+  color: $light-text-3;
+}
+
+.gradient-background {
+  @include gradient($direction, $gradient-proportion);
+}
