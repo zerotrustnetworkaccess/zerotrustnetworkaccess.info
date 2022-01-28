@@ -649,3 +649,10 @@ vendors:
     license: ""
     deployment: ""
     pricing: ""
+
+  - company: "BastionZero"
+    product: "BastionZero"
+    url: "https://www.bastionzero.com"
+    license: ""
+    deployment: ""
+    pricing: ""
