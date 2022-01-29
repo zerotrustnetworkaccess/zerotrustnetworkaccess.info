@@ -1,3 +1,9 @@
+.ztna-tag {
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+}
+
 .ztna-button {
   padding: 13px 30px;
   border-radius: 25px;
@@ -9,4 +15,23 @@
   border-radius: 25px;
   border: none;
   box-shadow: 0px 0px 15px rgba(10, 63, 113, 0.1);
+}
+
+.ztna-input {
+  border-radius: 20px;
+}
+// & ::placeholder {
+//   @extend .text;
+//   font-size: 16px;
+//   line-height: 150%;
+// }
+
+.ztna-tag-large {
+  @extend .ztna-tag;
+  padding: 8px 20px;
+}
+
+.ztna-tag-small {
+  @extend .ztna-tag;
+  padding: 3px 10px;
 }

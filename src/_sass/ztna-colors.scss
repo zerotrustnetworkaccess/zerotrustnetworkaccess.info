@@ -13,7 +13,7 @@ $dark-buttons: #16334f;
 $light-text-1: #3e5871;
 $light-text-2: #99acbe;
 $light-text-3: #cad8e6;
-$back-ground-color: #f9fafc;
+$background-color: #f9fafc;
 
 $gradient-proportion: $light-blue-1 0%, $dark-blue-1 31.59%, $violet-1 67.71%,
   $pink 100%;
@@ -87,8 +87,16 @@ $direction: right;
   color: $light-text-3;
 }
 
+.background-color {
+  background-color: $background-color;
+}
+
 .light-blue-background-1 {
   background-color: $light-blue-1;
+}
+
+.dark-buttons-background {
+  background-color: $dark-buttons;
 }
 
 .white-background {
