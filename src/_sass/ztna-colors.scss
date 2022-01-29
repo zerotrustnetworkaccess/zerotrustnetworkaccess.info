@@ -7,6 +7,7 @@ $violet-2: #a118e1;
 $pink: #bc1dcb;
 $green: #30c9ad;
 $red: #ea5b8e;
+$white: #fff;
 $dark-text: #0e2942;
 $dark-buttons: #16334f;
 $light-text-1: #3e5871;
@@ -62,6 +63,10 @@ $direction: right;
   color: $red;
 }
 
+.white {
+  color: $white;
+}
+
 .dark-text {
   color: $dark-text;
 }
@@ -80,6 +85,14 @@ $direction: right;
 
 .light-text-3 {
   color: $light-text-3;
+}
+
+.light-blue-background-1 {
+  background-color: $light-blue-1;
+}
+
+.white-background {
+  background-color: $white;
 }
 
 .gradient-background {
