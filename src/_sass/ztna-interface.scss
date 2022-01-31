@@ -34,4 +34,32 @@
 .ztna-tag-small {
   @extend .ztna-tag;
   padding: 3px 10px;
+  width: min-content;
+}
+
+.ztna-post-preview-wrapper {
+  width: 360px;
+  height: 388px;
+}
+
+.ztna-post-image {
+  width: 360px;
+  height: 220px;
+  border-radius: 30px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.ztna-post-ui {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ztna-margin-bottom-10 {
+  margin-bottom: 10px;
+}
+
+.ztna-margin-bottom-20 {
+  margin-bottom: 20px;
 }

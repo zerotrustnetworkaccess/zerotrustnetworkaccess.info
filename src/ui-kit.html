@@ -1,11 +1,13 @@
 ---
 layout: ui-kit
-title: UI-Kit
+title: ZTNA UI-Kit
 permalink: /ui-kit.html
+cover: ./assets/media/movie.jpg
+date: February 18, 2021
 ---
 <body>
 <div class="ui-wrapper">
-<h1 class="ztna-h1 violet-1"> ZTNA UI-kit </h1>
+<h1 class="ztna-h1 violet-1"> {{page.title}} </h1>
 <h2 class="ztna-h1 violet-1"> Typography </h2>
 <!-- website -->
 <h1 class="ztna-h1"> H1 heading </h1>
@@ -104,23 +106,36 @@ permalink: /ui-kit.html
 <!-- buttons -->
 <h2 class="ztna-h1 violet-1"> Interface </h2>
 <div class="ui-section"> 
-   <button class="ztna-button light-blue-background-1 white ztna-h4">Show me the full list of ZTNA vendors</button>
-   <button class="ztna-small-button white-background light-blue-1 ztna-h4">Read →</button>
-   <input type="email" name="" id="" placeholder="Email" class="ztna-small-text light-text-2 dark-buttons-background">
-   <div class="ztna-tag-large background-color">
-    <a class="ztna-small-text light-text-1">Cloud-based Identity Aware Proxy</a>
-   </div>
-   <div class="ztna-tag-small background-color">
-    <a class="ztna-small-text light-text-1">Finance</a>
-   </div>
-</div>
+    <div>
+        <button class="ztna-button light-blue-background-1 white ztna-h4">Show me the full list of ZTNA vendors</button>
+        <p class="light-text-1 ztna-small-text ui-label">Large button</p> 
+    </div>
+   
+    <div>
+        <button class="ztna-small-button white-background light-blue-1 ztna-h4">Read →</button>
+        <p class="light-text-1 ztna-small-text ui-label">Small button</p> 
+    </div>
 
-
-
-
- <!-- tags -->
-<div> 
-    
+    <div>
+        <input type="email" name="" id="" placeholder="Email" class="ztna-small-text light-text-2 dark-buttons-background">
+        <p class="light-text-1 ztna-small-text ui-label">Small button</p> 
+    </div>
+   
+    <div>
+        <div class="ztna-tag-large background-color">
+            <a class="ztna-small-text light-text-1">Cloud-based Identity Aware Proxy</a>
+           </div>
+        <p class="light-text-1 ztna-small-text ui-label">Tag and table selector</p> 
+    </div>
+   
+    <div>
+        <div class="ztna-tag-small background-color">
+            <a class="ztna-small-text light-text-1">Programming</a>
+        </div>
+        <p class="light-text-1 ztna-small-text ui-label">Blog info label</p> 
+    </div>
+   
+   
 </div>
 
 <!-- tables -->
@@ -130,8 +145,17 @@ permalink: /ui-kit.html
 
 
 <!-- post preview -->
-<div> 
-    
+<div class="ztna-post-preview-wrapper"> 
+    <div class="ztna-post-image ztna-margin-bottom-20" style="background-image: url({{page.cover}})"></div>
+    <div class="ztna-tag-small background-color ztna-margin-bottom-10">
+        <a class="ztna-small-text light-text-1">Programming</a>
+    </div>
+    <h4 class="ztna-h4 ztna-margin-bottom-20"> Post heading </h4>
+    <div class="ztna-post-ui">
+        <button class="ztna-small-button white-background light-blue-1 ztna-h4">Read →</button>
+        <p class="ztna-small-text">{{page.date}}</p>
+    </div>
 </div>
+
 </div>
 </body>
