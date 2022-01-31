@@ -112,7 +112,10 @@ date: February 18, 2021
     </div>
    
     <div>
-        <button class="ztna-small-button white-background light-blue-1 ztna-h4">Read →</button>
+        <button class="ztna-small-button white-background light-blue-1 ztna-h4">
+            Read
+            <img src = "./assets/icons/right-arrow.svg" alt="" class="ztna-margin-left-10"/>
+        </button>
         <p class="light-text-1 ztna-small-text ui-label">Small button</p> 
     </div>
 
@@ -145,6 +148,7 @@ date: February 18, 2021
 
 
 <!-- post preview -->
+<div>
 <div class="ztna-post-preview-wrapper"> 
     <div class="ztna-post-image ztna-margin-bottom-20" style="background-image: url({{page.cover}})"></div>
     <div class="ztna-tag-small background-color ztna-margin-bottom-10">
@@ -152,9 +156,17 @@ date: February 18, 2021
     </div>
     <h4 class="ztna-h4 ztna-margin-bottom-20"> Post heading </h4>
     <div class="ztna-post-ui">
-        <button class="ztna-small-button white-background light-blue-1 ztna-h4">Read →</button>
-        <p class="ztna-small-text">{{page.date}}</p>
+        <button class="ztna-small-button white-background light-blue-1 ztna-h4">
+            Read
+            <img src = "./assets/icons/right-arrow.svg" alt="" class="ztna-margin-left-10"/>
+        </button>
+        <div class="ztna-blog-date">
+            <img src = "./assets/icons/calendar.svg" class="light-text-1 ztna-margin-right-10" alt="My Happy SVG"/>
+            <div class="ztna-small-text">{{page.date}}</div>
+        </div>
     </div>
+</div>
+<p class="light-text-1 ztna-small-text ui-label">Post card</p> 
 </div>
 
 </div>
