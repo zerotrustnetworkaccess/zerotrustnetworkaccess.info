@@ -1,0 +1,46 @@
+<footer>
+    <div>
+        {% include components/ztna-logo.html%}
+        {% assign description = site.data.ztna-footer.about_ZTNA %}
+        <div class="ztna-margin-bottom-30"></div>
+        <ul class="list-unstyled mb-0">
+            {% for content in description.content %}
+            <li class="ztna-margin-bottom-20">
+               <p>{{content.text}}</p>
+            </li>
+            {% endfor %}
+          </ul>
+    </div>
+    
+    <div>
+        {% assign subscription = site.data.ztna-footer.subscribtion %}
+        <div>
+             <h5 class="light-text-3 ztna-margin-bottom-30">{{subscription.title}}</h5>
+          <p>
+            {{subscription.text}}
+          </p>
+          <div class="ztna-margin-bottom-30"></div>
+          {% include components/input.html%}
+          <div class="ztna-margin-bottom-20"></div>
+          {% include components/button.html content=subscription.cta%}
+        </div>
+    </div>
+
+    <div>
+        {% assign social_accounts = site.data.ztna-footer.social_accounts %}
+        <div>
+             <h5 class="light-text-3 ztna-margin-bottom-30">{{social_accounts.title}}</h5>
+
+             <ul class="list-unstyled mb-0">
+                {% for links in social_accounts.links %}
+                <li class="ztna-margin-bottom-20">
+                    <img src="{{links.icon}}" class="ztna-margin-right-10">
+                    <a href="{{links.url}}">{{links.title}}</a>
+                </li>
+                {% endfor %}
+              </ul>
+        </div>
+            
+    </div>
+
+</footer>

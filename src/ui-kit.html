@@ -6,6 +6,8 @@ cover: ./assets/media/movie.jpg
 date: February 18, 2021
 ---
 <body>
+
+
 <div class="ui-wrapper">
 <h1 class="violet-1"> {{page.title}} </h1>
 <h2 class="violet-1"> Typography </h2>
@@ -112,7 +114,7 @@ date: February 18, 2021
     </div>
    
     <div>
-        <button class="ztna-small-button white-background light-blue-1 ztna-h4">
+        <button class="ztna-small-button white-background light-blue-1 h4">
             Read
             <img src = "./assets/icons/right-arrow.svg" alt="" class="ztna-margin-left-10"/>
         </button>
@@ -121,7 +123,7 @@ date: February 18, 2021
 
     <div>
         <input type="email" name="" id="" placeholder="Email" class="ztna-small-text light-text-2 dark-buttons-background">
-        <p class="light-text-1 ztna-small-text ui-label">Small button</p> 
+        <p class="light-text-1 ztna-small-text ui-label">input</p> 
     </div>
    
     <div>
@@ -141,11 +143,7 @@ date: February 18, 2021
    
 </div>
 
-<!-- tables -->
 
-
-
-<!-- post preview -->
 <div>
 <div class="ztna-post-preview-wrapper"> 
     <div class="ztna-post-image ztna-margin-bottom-20" style="background-image: url({{page.cover}})"></div>
@@ -219,4 +217,5 @@ date: February 18, 2021
 <p class="light-text-1 ztna-small-text ui-label">Table</p> 
 </div>
 </div>
+{%include ztna-footer.html%}
 </body>

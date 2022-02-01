@@ -156,7 +156,7 @@ sub {
 sup {
   top: -0.5em;
 }
-a {
+/* a {
   color: #007bff;
   text-decoration: none;
   background-color: transparent;
@@ -177,7 +177,7 @@ a:not([href]):not([tabindex]):hover {
 }
 a:not([href]):not([tabindex]):focus {
   outline: 0;
-}
+} */
 code,
 kbd,
 pre,

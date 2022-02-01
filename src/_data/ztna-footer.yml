@@ -1,0 +1,31 @@
+about_ZTNA:
+  content:
+    - text: "The Zero Trust Network Access site is curated by Enclave Networks Ltd."
+
+    - text: "Unless otherwise noted, content on this site is licensed under the Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License."
+
+    - text: "© 2021 Enclave Networks. All rights reserved."
+
+subscribtion:
+  title: "Subscribe to our blog"
+  text: "Lorem Ipsum is simply dummy text of printing and typesetting industry."
+  cta: "Subscribe"
+
+social_accounts:
+  title: "Quick Links"
+  links:
+    - url: "#"
+      title: "Edit on GitHub"
+      icon: ../assets/icons/github-footer-icon.svg
+
+    - url: "#"
+      title: "Guidelines"
+      icon: ../assets/icons/guidelines-footer-icon.svg
+
+    - url: "#"
+      title: "Twitter"
+      icon: ../assets/icons/twitter-footer-icon.svg
+
+    - url: "#"
+      title: "LinkedIn"
+      icon: ../assets/icons/linked-footer-icon.svg
