@@ -1,0 +1,17 @@
+
+
+<nav style="background-color: blue;">
+    {% include components/ztna-logo.html%}
+    
+    <ul>
+        {% assign menu = site.data.ztna-header.menu %}
+        {% for link in menu %}
+        <li >
+            <img src="{{link.icon}}">
+            <a href="{{link.url}}">{{link.title}}</a>
+        </li>
+        {% endfor %}
+        
+    </ul>
+    
+</nav> 

@@ -1,0 +1,13 @@
+menu:
+  - url: "#"
+    title: "Blog"
+    icon: ../assets/icons/blog-header-icon.svg
+  - url: "#"
+    title: "Edit on GitHub"
+    icon: ../assets/icons/github-header-icon.svg
+  - url: "#"
+    title: "Search"
+    icon: ../assets/icons/search-header-icon.svg
+  - url: "#"
+    title: "Info"
+    icon: ../assets/icons/info-header-icon.svg

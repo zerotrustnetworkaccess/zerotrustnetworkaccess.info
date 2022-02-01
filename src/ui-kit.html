@@ -3,10 +3,11 @@ layout: ui-kit
 title: ZTNA UI-Kit
 permalink: /ui-kit.html
 cover: ./assets/media/movie.jpg
-date: February 18, 2021
+date: February 29, 2021
 ---
 <body>
-
+    {%include ztna-header.html container_class="container" %}
+    
 
 <div class="ui-wrapper">
 <h1 class="violet-1"> {{page.title}} </h1>
@@ -156,10 +157,7 @@ date: February 18, 2021
             Read
             <img src = "./assets/icons/right-arrow.svg" alt="svg icon" class="ztna-margin-left-10"/>
         </button>
-        <div class="ztna-blog-date">
-            <img src = "./assets/icons/calendar.svg" class="light-text-1 ztna-margin-right-10" alt="svg icon"/>
-            <p class="ztna-small-text">{{page.date}}</p>
-        </div>
+       {% include components/post-date.html%}
     </div>
 </div>
 <p class="light-text-1 ztna-small-text ui-label">Post card</p> 
