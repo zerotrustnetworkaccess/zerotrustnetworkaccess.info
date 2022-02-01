@@ -162,9 +162,9 @@ textarea {
 strong {
   font-weight: bold;
 }
-p {
+/* p {
   margin: 0 0 1rem;
-}
+} */
 .hover {
   -webkit-transition: all 200ms ease-in-out;
   -o-transition: all 200ms ease-in-out;
@@ -216,7 +216,7 @@ a:focus {
 strong {
   font-weight: 500;
 }
-h1,
+/* h1,
 h2,
 h3,
 h4,
@@ -289,7 +289,7 @@ h6.text-uppercase,
 .h6.text-uppercase {
   font-size: 0.7rem;
   line-height: 1rem;
-}
+} */
 .grid-view h2.post-title {
   margin-bottom: 1rem;
   font-size: 1.1rem;

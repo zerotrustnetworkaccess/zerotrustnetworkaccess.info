@@ -16,38 +16,43 @@ $tablet: 744px;
   font-weight: $text-fontweight;
 }
 
-.ztna-h1 {
+h1,
+h1 {
   @extend .titles;
   font-size: 50px;
   line-height: 72px;
 }
 
-.ztna-h2 {
+h2,
+.h2 {
   @extend .titles;
   font-size: 32px;
   line-height: 46px;
 }
 
-.ztna-h3 {
+h3,
+.h3 {
   @extend .titles;
   font-size: 22px;
   line-height: 32px;
 }
 
-.ztna-h4 {
+h4,
+.h4 {
   @extend .titles;
   font-size: 16px;
   line-height: 150%;
 }
 
-.ztna-h5 {
+h5,
+h5 {
   @extend .titles;
   font-size: 16px;
   line-height: 23px;
   text-transform: uppercase;
 }
 
-.ztna-p {
+p {
   @extend .text;
   font-size: 22px;
   line-height: 150%;
@@ -60,32 +65,37 @@ $tablet: 744px;
 }
 
 @media (max-width: $tablet) {
-  .ztna-h1 {
+  h1,
+  .h1 {
     font-size: 32px;
     line-height: 46px;
   }
 
-  .ztna-h2 {
+  h2,
+  h2 {
     font-size: 24px;
     line-height: 35px;
   }
 
-  .ztna-h3 {
+  h3,
+  .h3 {
     font-size: 18px;
     line-height: 26px;
   }
 
-  .ztna-h4 {
+  h4,
+  h4 {
     font-size: 14px;
     line-height: 130%;
   }
 
-  .ztna-h5 {
+  h5,
+  .h5 {
     font-size: 14px;
     line-height: 20px;
   }
 
-  .ztna-p {
+  p {
     font-size: 18px;
     line-height: 150%;
   }
