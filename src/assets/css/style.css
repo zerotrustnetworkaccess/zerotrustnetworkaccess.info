@@ -725,7 +725,7 @@ button.hamburger.animate.active:after {
   left: auto;
   right: -300px;
   width: 300px;
-  padding-top: 3rem;
+  padding-top: 5rem;
   padding-right: 1.5rem;
   padding-left: 1.5rem;
   overflow-y: auto;
@@ -754,10 +754,10 @@ button.hamburger.animate.active:after {
 }
 .offcanvas-close {
   position: absolute;
-  top: 0.5rem;
-  left: 0.8rem;
+  top: 2rem;
+  right: 2rem;
   cursor: pointer;
-  color: var(--color-white);
+  /* color: var(--color-white); */
   font-size: 1.2rem;
   -webkit-transition: all 200ms ease-in-out !important;
   -o-transition: all 200ms ease-in-out !important;

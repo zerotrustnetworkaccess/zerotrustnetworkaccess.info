@@ -2,7 +2,8 @@
     <div>
         {% include components/ztna-logo.html%}
         {% assign description = site.data.ztna-footer.about_ZTNA %}
-        <div class="ztna-margin-bottom-30"></div>
+        
+        <div class="space30"></div>
         <ul class="list-unstyled mb-0">
             {% for content in description.content %}
             <li class="ztna-margin-bottom-20">
@@ -19,7 +20,7 @@
           <p>
             {{subscription.text}}
           </p>
-          <div class="ztna-margin-bottom-30"></div>
+          <div class="space30"></div>
           {% include components/input.html%}
           <div class="ztna-margin-bottom-20"></div>
           {% include components/button.html content=subscription.cta%}

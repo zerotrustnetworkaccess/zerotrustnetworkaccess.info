@@ -1,17 +1,141 @@
-
-
-<nav style="background-color: blue;">
-    {% include components/ztna-logo.html%}
-    
-    <ul>
-        {% assign menu = site.data.ztna-header.menu %}
-        {% for link in menu %}
-        <li >
-            <img src="{{link.icon}}">
-            <a href="{{link.url}}">{{link.title}}</a>
+<nav class="navbar {% if include.extra_class %} {{include.extra_class}} {% endif %} navbar-hover-opacity navbar-expand-lg">
+    <div class="{% if include.container_class %} {{include.container_class}} {% else %} container-fluid {% endif %} flex-row justify-content-center">
+      <div class="navbar-brand">
+        <a href="{{site.url}}">
+      
+          <span>ZeroTrust</span><span style="color: #8ab9ff; font-weight: 500; margin-left: 2px;">NetworkAccess</span><span></span>
+          <!---
+          {% if include.light_logo %}
+           <img src="{{site.data.general_settings.light_logo_1x}}" srcset="{{site.data.general_settings.light_logo_1x}} 1x, {{site.data.general_settings.light_logo_2x}} 2x" class="{% if include.logo_class %} {{include.logo_class}} {% else %} logo-light {% endif %}" alt="{{site.data.general_settings.title}}"/>
+           {% endif %}
+           <img src="{{site.data.general_settings.black_logo_1x}}" srcset="{{site.data.general_settings.black_logo_1x}} 1x, {{site.data.general_settings.black_logo_2x}} 2x" class="{% if include.logo_class %} {{include.logo_class}} {% else %} logo-dark {% endif %} {% if include.black_logo_disable %} d-none {% endif %}" alt="{{site.data.general_settings.title}}"/>
+          -->
+        </a>
+      </div>
+      <div class="navbar-other ml-auto order-lg-3">
+        <ul class="navbar-nav flex-row align-items-center" data-sm-skip="true">
+          <li class="nav-item">
+            <div class="navbar-hamburger d-lg-none d-xl-none ml-auto">
+              <button class="hamburger animate plain" data-toggle="offcanvas-nav"><span></span></button>
+            </div>
+          </li>
+          <li class="dropdown search-dropdown position-static nav-item">
+            <a href="#" role="button" class="collapse-toggle" data-toggle="collapse" data-target=".search-dropdown-menu" aria-haspopup="true" aria-expanded="false"><i class="jam jam-search"></i></a>
+            <div class="dropdown-menu search-dropdown-menu w-100 collapse">
+              <div class="form-wrapper">
+                <form class="inverse-text">
+                  <input type="text" id="search-input" class="form-control" placeholder="Search blog posts.."/>
+                  <i class="dropdown-close jam jam-close"></i>
+                </form>
+                <!-- /.search-form -->
+              </div>
+              <!-- /.form-wrapper -->
+             <ul id="results-container" class="position-static"></ul>
+            </div>
+          </li>
+          <li class="nav-item"><button class="plain" data-toggle="offcanvas-info"><i class="jam jam-info"></i></button></li>
+        </ul>
+        <!-- /.navbar-nav -->
+      </div>
+      <!-- /.navbar-other -->
+      <div class="navbar-collapse offcanvas-nav">
+        <div class="offcanvas-header d-lg-none d-xl-none">
+          <a href="{{site.url}}">
+            <img src="{{site.data.general_settings.light_logo_1x}}" srcset="{{site.data.general_settings.light_logo_1x}} 1x, {{site.data.general_settings.light_logo_2x}} 2x" alt="{{site.data.general_settings.title}}"/></a>
+          <button class="plain offcanvas-close offcanvas-nav-close"><i class="jam jam-close"></i></button>
+        </div>
+        <ul class="navbar-nav mx-auto">
+            {% for menu in site.data.navigation.main_menu %}
+            {% assign check_menu = menu.menu_type %}
+            {% case check_menu %}
+          {% when "megamenu" %} 
+          <li class="nav-item">
+          <a class="nav-link" href="{{menu.url}}">{{menu.text}}</a>
+            <ul class="dropdown-menu mega-menu boxed list-view text-left">
+              <li class="mega-menu-content">
+                <div class="row">
+                  {% for column in menu.submenu cols: 4 %}
+                  <div class="col-lg-3">
+                    <ul class="list-unstyled">
+                      <li><a class="dropdown-item" href="{{column.url}}">{{column.text}}</a></li>
+                    </ul>
+                  </div>
+                  <!--/column -->
+                  {% endfor %}
+                </div>
+                <!--/.row -->
+              </li>
+              <!--/.mega-menu-content-->
+            </ul>
+            <!--/.dropdown-menu -->
+          </li>
+          {% when "dropdown" %}
+          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="{{menu.url}}">{{menu.text}}</a>
+            <ul class="dropdown-menu">
+                {% if menu.label_two %}
+                   <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">{{menu.sub_menu_text}}</a>
+                     <ul class="dropdown-menu">
+                          {% for label_two in menu.label_two %}
+                        <li class="nav-item"><a class="dropdown-item" href="{{label_two.url}}">{{label_two.text}}</a></li>
+                          {% endfor %}
+                     </ul>
+                   </li>
+                 {% endif %}
+               {% if menu.submenu %}
+                {% for label_one in menu.submenu %}
+                <li><a class="dropdown-item" href="{{label_one.url}}">{{label_one.text}}</a></li>
+                {% endfor %}
+                {% endif %}
+            </ul>
+          </li>
+          {% else %}
+          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="{{menu.url}}">{{menu.text}}</a>
+            <ul class="dropdown-menu">
+                {% if menu.label_two %}
+               <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">{{menu.sub_menu_text}}</a>
+                 <ul class="dropdown-menu">
+                      {% for label_two in menu.label_two %}
+                    <li class="nav-item"><a class="dropdown-item" href="{{label_two.url}}">{{label_two.text}}</a></li>
+                      {% endfor %}
+                 </ul>
+               </li>
+               {% endif %}
+               {% if menu.submenu %}
+                {% for label_one in menu.submenu %}
+                <li><a class="dropdown-item" href="{{label_one.url}}">{{label_one.text}}</a></li>
+          {% endfor %}
+          {% endif %}
+            </ul>
+          </li>
+          {% endcase %}
+            {% endfor %}
+        </ul>
+        <!-- /.navbar-nav -->
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+  <!-- /.navbar -->
+  <div class="offcanvas-info white-background">
+    <button class="plain offcanvas-close offcanvas-info-close light-text-2"><i class="jam jam-close"></i></button>
+    <a href="{{site.url}}">
+        <img src="{{site.data.general_settings.black_logo_1x}}" 
+        srcset="{{site.data.general_settings.black_logo_1x}} 1x, {{site.data.general_settings.black_logo_2x}} 2x" 
+        class="{% if include.logo_class %} {{include.logo_class}} {% else %} logo-light {% endif %}" 
+        alt="{{site.data.general_settings.title}}"/>
+    </a>
+    <div class="space30"></div>
+    {% assign description = site.data.general_settings.description %}
+    <ul class="list-unstyled mb-0">
+        {% for content in description %}
+        <li class="ztna-margin-bottom-20">
+           <p class="ztna-small-text light-text-1">{{content.text}}</p>
         </li>
         {% endfor %}
-        
-    </ul>
-    
-</nav> 
+      </ul>
+    <!-- <p >{{site.data.general_settings.description}}</p> -->
+    <div class="space20"></div>
+  
+  </div>
+  <!-- /.offcanvas-info -->

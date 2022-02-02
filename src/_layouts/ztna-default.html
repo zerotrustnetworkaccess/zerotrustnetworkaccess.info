@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,31 +16,18 @@
   <link rel="stylesheet" type="text/css" href="{{relative_url}}/assets/css/timeline.min.css"/>
   <link rel="stylesheet" type="text/css" href="{{relative_url}}/assets/css/custom.css"/>
   <link href="https://fonts.googleapis.com/css?family=Abhaya+Libre:400,500,600,700,800&display=swap" rel="stylesheet"/>
+  {% if site.data.general_settings.google_analytics.enable %}
+   {% include analytics.html %}
+  {% endif %}
 </head>
-<body>
-  {% if page.white_menu %}
- {% if page.header_image %}
-   {% include header.html extra_class="wide absolute transparent inverse-text nav-uppercase" light_logo="true"  container_class="container"%}
-  {% else %}
-  {% include header.html extra_class="wide transparent inverse-text nav-uppercase" light_logo="true"  container_class="container"%}
- {% endif %}
-{% else if page.black_menu %}
-{% if page.header_image %}
-{% include header.html extra_class="absolute transparent" logo_class="logo" container_class="container" %}
-{% else %}
-{% include header.html extra_class="transparent" logo_class="logo" container_class="container" %}
-{% endif %}
-{% else %}
-{% if page.header_image %}
-{% include header.html extra_class="absolute transparent" logo_class="logo" container_class="container" %}
-{% else %}
-{% include header.html extra_class="transparent" logo_class="logo" container_class="container" %}
-{% endif %}
-{% endif %}
+<body {% if page.overflow %} class="overflow-hidden" {% endif %}>
 
+    {% include ztna-header.html container_class="container" extra_class="absolute transparent inverse-text nav-uppercase" light_logo="true" %}
 
-{{ content }}
-<script src="{{relative_url}}/assets/js/jquery.min.js"></script>
+  <div class="content-wrapper">
+    {{ content }}
+  </div>
+  <script src="{{relative_url}}/assets/js/jquery.min.js"></script>
   <script src="{{relative_url}}/assets/js/popper.min.js"></script>
   <script src="{{relative_url}}/assets/js/bootstrap.min.js"></script>
   <script src="{{relative_url}}/assets/revolution/js/jquery.themepunch.tools.min.js"></script>
