@@ -1,0 +1,12 @@
+.popular-post-list {
+  list-style: none;
+  padding: 0;
+  a {
+    text-decoration: none;
+  }
+}
+
+.post-meta {
+  display: flex;
+  //   justify-content: space-between;
+}

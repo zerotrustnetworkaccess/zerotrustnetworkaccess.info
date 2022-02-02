@@ -489,12 +489,13 @@ canvas {
 .navbar-nav .nav-link,
 .dropdown-item,
 .mega-menu-content a {
-  font-size: 0.85rem;
+  /* font-size: 0.85rem; */
   font-weight: 500;
+  text-decoration: none;
 }
 .nav-uppercase .navbar-nav .nav-link {
   font-size: 0.7rem;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: 0.5px;
 }
 .dropdown-menu {
@@ -755,9 +756,8 @@ button.hamburger.animate.active:after {
 .offcanvas-close {
   position: absolute;
   top: 2rem;
-  right: 2rem;
+  right: 1.3rem;
   cursor: pointer;
-  /* color: var(--color-white); */
   font-size: 1.2rem;
   -webkit-transition: all 200ms ease-in-out !important;
   -o-transition: all 200ms ease-in-out !important;
@@ -6581,20 +6581,20 @@ footer.inverse-text address {
   .navbar.navbar-fancy:not(.fixed) .dropdown-menu {
     border-radius: 0.2rem;
   }
-  .navbar .navbar-nav .nav-link {
+  /* .navbar .navbar-nav .nav-link {
     padding-right: 1.2rem;
     padding-left: 1.2rem;
-  }
+  } */
   .dropdown-menu:not(.mega-menu):not(.image-dropdown) {
     padding: 0.6rem 0;
   }
   .search-dropdown .dropdown-menu {
     padding: 0 !important;
   }
-  .navbar-other .nav-item a:not(.btn),
+  /* .navbar-other .nav-item a:not(.btn),
   .navbar-other .nav-item button {
     font-size: 1.1rem;
-  }
+  } */
   .dropdown-item,
   .mega-menu-content a {
     font-size: 0.75rem;

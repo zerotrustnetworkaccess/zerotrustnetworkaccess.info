@@ -1,10 +1,9 @@
 nav {
-  display: flex;
-
-  ul {
+  li {
     display: flex;
-    li {
-      list-style: none;
-    }
+    align-items: center;
+  }
+  a {
+    text-decoration: none;
   }
 }

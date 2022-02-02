@@ -1,34 +1,15 @@
 
 <div class="sidebox widget">
-  <h3 class="widget-title">Popular Posts</h3>
-  <ul class="image-list">
-    {% for post in site.posts limit: "5" %}
-    <li>
-      {% if post.post_image %}
-      <figure class="rounded"><a href="blog-post.html">
-        <img src="{{post.post_image}}" alt="{{post.title}}"/></a>
-      </figure>
-      {% endif %}
-      <div class="post-content">
-        <h6 class="post-title"> 
-          <a href="{{post.url}}">{{post.title}}</a> 
-        </h6>
-        <div class="meta">
-          {% if post.date %}
-           <span class="date"><i class="jam jam-clock"></i> {{post.date | date_to_string}}</span>
-          {% endif %}
-        </div>
-      </div>
-    </li>
-    {% endfor %}
-  </ul>
+  {% include components/popular-posts.html%}
+  
+  
   
 </div>
 
 
 <div class="sidebox widget">
-  <h3 class="widget-title">Subscribe</h3>
-  
+
+  {% include components/subscribe.html%}
   
 </div>
 

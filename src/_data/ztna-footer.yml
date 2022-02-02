@@ -16,16 +16,16 @@ social_accounts:
   links:
     - url: "#"
       title: "Edit on GitHub"
-      icon: ../assets/icons/github-footer-icon.svg
+      icon: /assets/icons/github-footer-icon.svg
 
     - url: "#"
       title: "Guidelines"
-      icon: ../assets/icons/guidelines-footer-icon.svg
+      icon: /assets/icons/guidelines-footer-icon.svg
 
     - url: "#"
       title: "Twitter"
-      icon: ../assets/icons/twitter-footer-icon.svg
+      icon: /assets/icons/twitter-footer-icon.svg
 
     - url: "#"
       title: "LinkedIn"
-      icon: ../assets/icons/linked-footer-icon.svg
+      icon: /assets/icons/linked-footer-icon.svg
