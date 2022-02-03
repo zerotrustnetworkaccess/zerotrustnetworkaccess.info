@@ -9,10 +9,54 @@ pagination:
 permalink: "/blogs/index"
 ---
 
-<div class="wrapper white-background">
+
+  
+
   <div class="container inner">
+    <div class="categories-wrapper">
+  
+      <ul class="categories-list">
+        {% assign categories_list = site.categories %}
+          {% if categories_list.first[0] == null %}
+            {% for category in categories_list %}
+              <li>
+                <div class="ztna-tag-large background-color">
+              <a class="ztna-small-text light-text-1" href="/category/{{ category | downcase | downcase | url_escape | strip | replace: ' ', '-' }}""> 
+                {{ category | camelcase }} 
+                <span>({{ site.tags[category].size }})</span>
+              </a>
+             </div>
+                <!-- <a class="text-capitalize" href="/category/{{ category | downcase | downcase | url_escape | strip | replace: ' ', '-' }}">
+                  {{ category | camelcase }} 
+                  
+                </a> -->
+              </li>
+            {% endfor %}
+          {% else %}
+            {% for category in categories_list %}
+              <li>
+                <div class="ztna-tag-large background-color">
+              <a class="ztna-small-text light-text-1" href="/category/{{ category[0] | downcase | url_escape | strip | replace: ' ', '-' }}"> {{ category[0] | camelcase }} </a>
+             </div>
+                <!-- <a class="text-capitalize" href="/category/{{ category[0] | downcase | url_escape | strip | replace: ' ', '-' }}">
+                  {{ category[0] | camelcase }} 
+                </a> -->
+              </li>
+            {% endfor %}
+          {% endif %}
+        {% assign categories_list = nil %}
+    </ul>
+    <div class="space30"></div>
+    </div>
+    
     <div class="row">
       <div class="col-lg-8">
+        {% for post in site.posts %}
+        {% if post.recommended %}
+        {% include components/recomeded-post.html %}
+
+        {% endif%}
+        {% endfor %}
         <div class="blog grid grid-view">
           <div class="row isotope">
            {% for post in paginator.posts %}

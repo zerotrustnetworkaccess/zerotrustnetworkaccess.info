@@ -1,0 +1,20 @@
+<div class="recomended-post-wrapper"> 
+    <div class="ztna-recomended-post-image" 
+    style="background-image: url({{post.post_image}})">
+</div>
+<div class="space20"></div>
+    <div class="ztna-tag-small background-color ztna-margin-bottom-10">
+        <a class="ztna-small-text light-text-1">{{post.categories[0] | slugify}}</a>
+    </div>
+    <div class="space10"></div>
+    <h2 class="darl-text"> {{post.title}} </h2>
+    <div class="space30"></div>
+    <div class="ztna-post-ui">
+        <button class="ztna-small-button white-background light-blue-1 h4">
+            Read
+            <img src = "/assets/icons/right-arrow.svg" alt="svg icon" class="ztna-margin-left-10"/>
+        </button>
+       {% include components/post-date.html%}
+    </div>
+    <div class="space60"></div>
+</div>
