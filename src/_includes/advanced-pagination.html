@@ -54,9 +54,11 @@
 <ul class="pagination" role="navigation" aria-labelledby="pagination-label">
 
     {% if paginator.previous_page %}
-    <li class="previous">
+    <li class=" previous">
         {% if paginator.previous_page == 1 %}
-        <a class="pagination-item" href="{{ page.paginate.root }}" rel="prev">previous<span class="sr-only"> page</span></a>
+        <a class="pagination-item ztna-small-button white-background" href="{{ page.paginate.root }}" rel="prev">
+            <img src="/assets/icons/left-arrow.svg">
+            <span class="sr-only"> page</span></a>
         {% else %}
         <a class="pagination-item" href="{{ paginator.previous_page_path }}" rel="prev">previous<span class="sr-only"> page</span></a>
         {% endif %}
@@ -64,13 +66,16 @@
     {% endif %}
 
     {% unless paginator.page == 1 %}
-    <li class="page first">
-        <a class="pagination-item" href="{{ page.paginate.root }}"><span class="sr-only">page </span>1</a>
+    <li class=" first">
+        <a class="pagination-item ztna-small-button white-background" href="{{ page.paginate.root }}"><span class="sr-only">page </span>1</a>
     </li>
     <li class="pages-indicator{{ indicator_first }} pages-indicator--offset-{{ relative_first }}"><span aria-hidden="true">...</span><span class="sr-only">Skipped pages indicator</span></li>
     {% else %}
-    <li class="page first current-page">
-        <span class="pagination-item"><span class="sr-only">current page</span><span aria-hidden="true">1</span></span>
+    <li class=" current-page">
+        <span class="pagination-item ztna-small-button white-background first">
+            <span class="sr-only">current page</span>
+            <span aria-hidden="true" class="ztna-small-text">1</span>
+        </span>
     </li>
     {% endunless %}
 
@@ -78,11 +83,15 @@
     {% if count >= page_amountprev and count <= page_amountnext %}
     {% assign relative_to_current = paginator.page | minus: count | replace: '-', '' | divided_by: 1 %}
     {% unless count == totalpages %}
-    <li class="page offset-{{relative_to_current}}{% if count == paginator.page %} current-page{% endif %}">
+    <li class=" offset-{{relative_to_current}}{% if count == paginator.page %} current-page{% endif %}">
         {% if count == paginator.page %}
-        <span class="pagination-item"><span class="sr-only">current page</span><span aria-hidden="true">{{ count }}</span></span>
+        <span class="pagination-item">
+            <span class="sr-only">current page</span>
+            <span aria-hidden="true" class="ztna-small-text">{{ count }}</span>
+        </span>
         {% else %}
-        <a class="pagination-item" href="{{ page.paginate.root | append: '/page' | append: count | append: '/' | replace: '//', '/' }}"><span class="sr-only">page </span>{{ count }}</a>
+        <a class="pagination-item" href="{{ page.paginate.root | append: '/blogs/index/page' |  append: '/' | append: count | append: /index.html/' | replace: '//', '/' }}">
+            <span class="sr-only">page </span>{{ count }}</a>
         {% endif %}
     </li>
     {% endunless %}
@@ -90,19 +99,30 @@
     {% endfor %}
 
     {% unless paginator.page == totalpages %}
-    <li class="pages-indicator{{ indicator_last }} pages-indicator--offset-{{ relative_last }}"><span aria-hidden="true">...</span><span class="sr-only">Skipped pages indicator</span></li>
-    <li class="page last">
-        <a class="pagination-item" href="{{ page.paginate.root | append: '/page' | append: totalpages | append: '/' | replace: '//', '/' }}"><span class="sr-only">page </span>{{ totalpages }}</a>
+    <li class="pages-indicator{{ indicator_last }} pages-indicator--offset-{{ relative_last }}">
+        <span aria-hidden="true" class="ztna-small-text">...</span>
+        <span class="sr-only">Skipped pages indicator</span>
+    </li>
+    <li class=" last">
+        <a class="pagination-item  ztna-small-button white-background" href="{{ page.paginate.root | append: '/blogs/index/page' | append: '/' | append: totalpages |  append: '/index.html/' | replace: '//', '/' }}">
+            <span class="sr-only">page </span>
+            {{ totalpages }}
+        </a>
     </li>
     {% else %}
-    <li class="page last current-page">
-        <span class="pagination-item"><span class="sr-only">current page</span><span aria-hidden="true">{{ totalpages }}</span></span>
+    <li class=" last current-page">
+        <span class="pagination-item ztna-small-button white-background ">
+            <span class="sr-only">current page</span>
+            <span aria-hidden="true" class="ztna-small-text">{{ totalpages }}</span>
+        </span>
     </li>
     {% endunless %}
 
     {% if paginator.next_page %}
-    <li class="next">
-        <a class="pagination-item" href="{{ paginator.next_page_path }}" rel="next">next<span class="sr-only"> page</span></a>
+    <li class="next  ">
+        <a class="pagination-item ztna-small-button white-background" href="{{ paginator.next_page_path }}" rel="next">
+            <img src="/assets/icons/pagination-right-arrow.svg">
+            <span class="sr-only"> page</span></a>
     </li>
     {% endif %}
 </ul>

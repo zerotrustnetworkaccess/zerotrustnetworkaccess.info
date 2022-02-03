@@ -16,7 +16,7 @@ $pages-sr-only: true !default;
 // Styling
 $pages-margin: 1em 0 !default;
 $pages-item-margin: 0 0.2em !default;
-$pages-item-size: 36px !default;
+$pages-item-size: 40px !default;
 $pages-item-background: #eee !default;
 $pages-item-color: #333 !default;
 $pages-item-link-color: #1847ad !default;
@@ -52,15 +52,17 @@ $pages-item-active-color: white !default;
   .previous,
   .next {
     display: inline-block;
+    width: $pages-item-size;
+    height: $pages-item-size;
   }
 
-  .previous a:before {
-    content: "« ";
-  }
+  // .previous a:before {
+  //   content: "« ";
+  // }
 
-  .next a:after {
-    content: " »";
-  }
+  // .next a:after {
+  //   content: " »";
+  // }
 
   // First breakpoint
   @include pages-breakpoint($pages-breakpoint1) {
