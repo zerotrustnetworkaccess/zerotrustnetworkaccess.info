@@ -61,7 +61,7 @@ permalink: "/blogs/index"
           <div class="row isotope">
            {% for post in paginator.posts %}
             <div class="item post grid-sizer col-md-6">
-             {% include post_loop.html %}
+             {% include components/post-preview.html %}
             </div>
             <!-- /.post -->
            {% endfor %}

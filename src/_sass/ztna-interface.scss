@@ -47,6 +47,9 @@ input {
   @extend .ztna-tag;
   padding: 3px 10px;
   width: min-content;
+  a {
+    text-decoration: none;
+  }
 }
 
 .ztna-post-preview-wrapper {
