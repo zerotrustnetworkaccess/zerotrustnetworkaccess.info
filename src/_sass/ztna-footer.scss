@@ -5,9 +5,9 @@ footer {
   padding-top: 100px;
   padding-bottom: 100px;
   background-color: $dark-text;
-  display: flex;
-  column-gap: 40px;
-  justify-content: center;
+  // display: flex;
+  // column-gap: 40px;
+  // justify-content: center;
 
   a {
     @extend h4;
@@ -16,7 +16,7 @@ footer {
   }
 
   div {
-    width: 364px;
+    //width: 364px;
   }
 
   p {

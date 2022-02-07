@@ -1,5 +1,8 @@
 <footer>
-    <div>
+  <div class="container">
+  <div class="row">
+
+  <div class="col-md">
         {% include components/ztna-logo.html%}
         {% assign description = site.data.ztna-footer.about_ZTNA %}
         
@@ -13,7 +16,7 @@
           </ul>
     </div>
     
-    <div>
+    <div class="col-md">
         {% assign subscription = site.data.ztna-footer.subscribtion %}
         <div>
              <h5 class="light-text-3 ztna-margin-bottom-30">{{subscription.title}}</h5>
@@ -27,7 +30,7 @@
         </div>
     </div>
 
-    <div>
+    <div class="col-md">
         {% assign social_accounts = site.data.ztna-footer.social_accounts %}
         <div>
              <h5 class="light-text-3 ztna-margin-bottom-30">{{social_accounts.title}}</h5>
@@ -43,5 +46,6 @@
         </div>
             
     </div>
-
+  </div>  
+</div>
 </footer>

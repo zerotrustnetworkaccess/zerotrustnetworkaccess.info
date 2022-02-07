@@ -10,9 +10,22 @@ permalink: "/blogs/index"
 ---
 
 
-  
 
-  <div class="container inner">
+<div class="title-wrapper">
+  <div class="container text-center">
+    {% if page.title %}
+    <div class="space50"></div> 
+    <h1 class="dark-text">{{page.title}}</h1>
+    <div class="space10"></div> 
+    {% endif %}
+    {% if page.sub_title %}
+     <p class="light-text-1">{{page.sub_title}}</p>
+     <div class="space50"></div>
+    {% endif %}
+  </div>
+</div>
+
+  <div class="container ">
     <div class="categories-wrapper">
   
       <ul class="categories-list">
@@ -21,7 +34,7 @@ permalink: "/blogs/index"
             {% for category in categories_list %}
               <li>
                 <div class="ztna-tag-large background-color">
-              <a class="ztna-small-text light-text-1" href="/category/{{ category | downcase | downcase | url_escape | strip | replace: ' ', '-' }}""> 
+              <a class="ztna-small-text light-text-1" href="/category/{{ category | downcase | downcase | url_escape | strip | replace: ' ', '-' }}"> 
                 {{ category | camelcase }} 
                 <span>({{ site.tags[category].size }})</span>
               </a>
@@ -51,12 +64,13 @@ permalink: "/blogs/index"
     
     <div class="row">
       <div class="col-lg-8">
-        {% for post in site.posts %}
-        {% if post.recommended %}
-        {% include components/recomeded-post.html %}
-
-        {% endif%}
-        {% endfor %}
+        <div class="row isotope">
+          {% for post in site.posts %}
+          {% if post.recommended %}
+          {% include components/recomeded-post.html %}
+          {% endif%}
+          {% endfor %}
+        </div>
         <div class="blog grid grid-view">
           <div class="row isotope">
            {% for post in paginator.posts %}

@@ -485,6 +485,7 @@ canvas {
 }
 .navbar-nav .nav-link {
   color: #303030;
+  fill: #303030;
 }
 .navbar-nav .nav-link,
 .dropdown-item,
@@ -564,6 +565,7 @@ canvas {
 .navbar-other .nav-item a:not(.btn),
 .navbar-other .nav-item button {
   color: #303030;
+  fill: #303030;
   cursor: pointer;
   -webkit-transition: all 200ms ease-in-out;
   -o-transition: all 200ms ease-in-out;
@@ -6224,6 +6226,7 @@ pre {
 .inverse-text address,
 .inverse-text .nav-tabs .nav-link {
   color: var(--color-white);
+  fill: var(--color-white);
 }
 .inverse-text.dark-wrapper .navbar-other .nav-item button.hamburger:before,
 .inverse-text.dark-wrapper .navbar-other .nav-item button.hamburger span,
