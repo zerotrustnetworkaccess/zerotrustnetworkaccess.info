@@ -1,0 +1,65 @@
+---
+layout: ztna-default
+---
+
+{% if page.white_menu %}
+
+ {% if page.header_image %}
+   {% include ztna-header.html extra_class="wide absolute transparent inverse-text nav-uppercase" light_logo="true"  container_class="container"%}
+  {% else %}
+  {% include ztna-header.html extra_class="wide transparent inverse-text nav-uppercase" light_logo="true"  container_class="container"%}
+ {% endif %}
+
+{% else if page.black_menu %}
+{% if page.header_image %}
+{% include ztna-header.html extra_class="absolute transparent" logo_class="logo" container_class="container" %}
+{% else %}
+{% include ztna-header.html extra_class="transparent" logo_class="logo" container_class="container" %}
+{% endif %}
+{% else %}
+
+{% if page.header_image %}
+{% include ztna-header.html extra_class="absolute transparent" logo_class="logo" container_class="container" %}
+{% else %}
+{% include ztna-header.html extra_class="transparent" logo_class="logo" container_class="container" %}
+{% endif %}
+
+{% endif %}
+
+{% if page.post_image %}
+<img style="background-image: url({{page.post_image}})" class="ztna-post-cover">
+{% endif %}
+
+
+
+
+<div class="container ">
+    <div>
+        <div class="space30"></div>
+        {% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
+    
+    
+    <a href="/">Home</a>
+    
+    {% for crumb in crumbs offset: 1 %}
+      {% if forloop.last %}
+        <img src="../assets/icons/right-arrow.svg"> {{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}
+      {% elsif crumb == "blogs" %}
+      <img src="../assets/icons/right-arrow.svg">  <a href="/blogs/index"> Blog</a>
+      {% else %} 
+      <img src="../assets/icons/right-arrow.svg">  <a href="{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' }}{% endfor %}">{{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}</a>
+      {% endif %}
+    {% endfor %}
+    <div class="space30"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-8">
+        {{content}}
+      </div>
+      <aside class="col-lg-4 sidebar">
+       {% include sidebar.html %}
+      </aside>
+    </div>
+  </div>
+</div>

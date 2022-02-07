@@ -6,12 +6,19 @@
   border-radius: 20px;
   display: flex;
   align-items: center;
+  a {
+    text-decoration: none;
+  }
 }
 
 .ztna-button {
   padding: 13px 30px;
   border-radius: 25px;
   border: none;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 }
 
 .ztna-small-button {
@@ -21,6 +28,10 @@
   box-shadow: 0px 0px 15px rgba(10, 63, 113, 0.1);
   display: flex;
   align-items: center;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 }
 
 input {
@@ -47,9 +58,6 @@ input {
   @extend .ztna-tag;
   padding: 3px 10px;
   width: min-content;
-  a {
-    text-decoration: none;
-  }
 }
 
 .ztna-post-preview-wrapper {

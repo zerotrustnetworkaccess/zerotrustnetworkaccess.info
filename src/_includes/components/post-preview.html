@@ -1,3 +1,4 @@
+
 <div class="ztna-post-preview-wrapper"> 
     <div class="ztna-post-image ztna-margin-bottom-20" style="background-image: url({{post.post_image}})"></div>
     <div class="ztna-tag-small background-color ztna-margin-bottom-10">
@@ -5,10 +6,14 @@
     </div>
     <h4 class="ztna-margin-bottom-20"> {{post.title}} </h4>
     <div class="ztna-post-ui">
-        <button class="ztna-small-button white-background light-blue-1 h4">
-            Read
-            <img src = "/assets/icons/right-arrow.svg" alt="svg icon" class="ztna-margin-left-10"/>
-        </button>
+        
+        <div class="ztna-small-button white-background light-blue-1 h4">
+            <a href="{{post.url}}">
+                Read
+                <img src = "/assets/icons/right-arrow.svg" alt="svg icon" class="ztna-margin-left-10"/>
+            </a>
+        </div>
+        
        {% include components/post-date.html%}
     </div>
 </div>
