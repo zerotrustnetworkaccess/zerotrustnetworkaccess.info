@@ -4,7 +4,7 @@ page_header:
   enable: true
   title: "The no-bullshit ZTNA vendor directory"
   sub_title: "A curated, impartial and <strong>open-source</strong> directory of ZTNA vendors and architectures."
-  button_text: "Show me the Full List of ZTNA Vendors"
+  button_text: "Show me the full list of ZTNA vendors"
   button_url: "#vendors"
   background_image: "/assets/images/art/bg5.jpg"
   statistics:
@@ -16,6 +16,15 @@ page_header:
       quantity: 7
     - title: "Executive Orders"
       quantity: 1
+
+no-bulshit-proof:
+  label: "Lorem ipsum is simply dummy" 
+  title: "Why no-bullshit?"
+  benefits:
+    - "Curated, but impartial"
+    - "Technical and Architecture based - not marketing"
+    - "Open source contribution, helps to grow the knowledge base"
+    - "No agenda"
 
 architecture-summary:
   enabled: true
@@ -69,34 +78,38 @@ testimonials:
 
   {% if page.page_header.enable %}
   {% assign page_d = page.page_header %}
+
   <div class="wrapper image-wrapper bg-image page-title-wrapper inverse-text" data-image-src="{{page_d.background_image}}">
-    <div class="container inner text-center">
-      <div class="space90"></div>
+    <div class="ztna-head-container mx-auto text-center">
+
       {% if page_d.title %}
-      <h1 class="page-title">{{page_d.title}}</h1>
+      <h1>{{page_d.title}}</h1>
       {% endif %}
+      <div class="space10"></div>
       {% if page_d.sub_title %}
-      <p class="lead mb-30">{{page_d.sub_title}}</p>
+      <p class="ztna-subtitle">{{page_d.sub_title}}</p>
+      
       {% endif %}
       {% if page_d.statistics %}
-      <div class="row counter align-items-center mb-60">
-        <div class="col-lg-6 mx-auto">
-          <div class="space20"></div>
-          <div class="row counter">
+          <div class="ztna-counter-wrapper">
             {% for list in page_d.statistics %}
-            <div class="col-md-3">
-              <h3 class="value">{{list.quantity}}</h3>
-              <p>{{list.title}}</p>
+            <div class="ztna-counter-item">
+              <p class="h1">{{list.quantity}}</p>
+              <p  class="ztna-small-text">{{list.title}}</p>
             </div>
             {% endfor %}
           </div>
-        </div>
-      </div>
+     
+    
       {% endif %}
 
 
       {% if page_d.button_text %}
-        <a href="{{page_d.button_url}}" class="btn btn-blue btn-strong-hover">{{page_d.button_text}}</a>
+      
+        {% include components/link.html content=page_d.button_text %}
+  
+      
+       
       {% endif %}
     </div>
     <div class="divider"><svg xmlns="http://www.w3.org/2000/svg" class="fill-light-wrapper" preserveAspectRatio="none" viewBox="0 0 1070 20.98">
@@ -104,6 +117,8 @@ testimonials:
     </div>
   </div>
   {% endif %}
+
+
   
   <div class="wrapper white-wrapper">
     <div class="container inner pt-100">
@@ -412,7 +427,7 @@ testimonials:
             </div>
           </div>
 
-            <div class="space60"></div>
+            <!-- <div class="space60"></div>
             <div class="text-center">
               <h2 class="title-bg bg-default color-grey">{{arch.name}} Vendors</h2>
             </div>
@@ -447,7 +462,7 @@ testimonials:
       {% endfor %}
 
     </div>
-  </div>
+  </div> -->
 
   {% if page.testimonials.enable %}
   <div class="wrapper light-wrapper">
