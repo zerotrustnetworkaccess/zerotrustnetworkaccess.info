@@ -17,9 +17,16 @@
   border: none;
   width: max-content;
   display: inline-block;
+  // background-color: $light-blue-1;
+
   a {
     text-decoration: none;
     color: inherit;
+  }
+  &:hover {
+    cursor: pointer;
+    // background-color: none;
+    @extend .gradient-background;
   }
 }
 

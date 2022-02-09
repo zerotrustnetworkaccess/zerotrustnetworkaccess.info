@@ -3185,22 +3185,22 @@ ul.dial li:first-child .dial-item-info {
   /* margin-bottom: 0.6rem; */
 }
 .counter p {
-  font-size: 0.8rem;
+  /* font-size: 0.8rem; */
   margin-bottom: 0;
-  line-height: 1.1rem;
+  /* line-height: 1.1rem; */
 }
 .counter .box {
-  padding: 1.5rem;
+  /* padding: 1.5rem; */
 }
 .counter-s h3 {
-  font-size: 1.8rem;
+  /* font-size: 1.8rem; */
 }
 .counter-s .icon-blob {
   width: 6.5rem;
   height: 6.5rem;
 }
 .counter-s .icon-blob:after {
-  font-size: 6.5rem;
+  /* font-size: 6.5rem; */
 }
 .counter-s .icon-blob h3 {
   margin-bottom: 0.1rem;

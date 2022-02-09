@@ -93,8 +93,8 @@ testimonials:
       {% if page_d.statistics %}
           <div class="ztna-counter-wrapper">
             {% for list in page_d.statistics %}
-            <div class="ztna-counter-item">
-              <p class="h1">{{list.quantity}}</p>
+            <div class="ztna-counter-item counter">
+              <p class="h1 value">{{list.quantity}}</p>
               <p  class="ztna-small-text">{{list.title}}</p>
             </div>
             {% endfor %}
