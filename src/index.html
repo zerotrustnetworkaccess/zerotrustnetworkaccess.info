@@ -1,31 +1,5 @@
 ---
 layout: ztna-default
-page_header:
-  enable: true
-  title: "The no-bullshit ZTNA vendor directory"
-  sub_title: "A curated, impartial and <strong>open-source</strong> directory of ZTNA vendors and architectures."
-  button_text: "Show me the full list of ZTNA vendors"
-  button_url: "#vendors"
-  background_image: "/assets/images/art/bg5.jpg"
-  statistics:
-    - title: "Vendors"
-      quantity: 104
-    - title: "Architectures"
-      quantity: 9
-    - title: "NIST tenets"
-      quantity: 7
-    - title: "Executive Orders"
-      quantity: 1
-
-no-bulshit-proof:
-  enable: true
-  label: "Lorem ipsum is simply dummy" 
-  title: "Why no-bullshit?"
-  reasons:
-    - "Curated, but impartial"
-    - "Technical and Architecture based - not marketing"
-    - "Open source contribution, helps to grow the knowledge base"
-    - "No agenda"
 
 architecture-summary:
   enabled: true
@@ -77,20 +51,19 @@ testimonials:
 
 <div class="content-wrapper">
 
-  {% if page.page_header.enable %}
-  {% assign page_d = page.page_header %}
+  {% if site.data.landing.page-header.enable %}
+  {% assign page_d = site.data.landing.page-header %}
 
   <div class="wrapper image-wrapper bg-image page-title-wrapper inverse-text" data-image-src="{{page_d.background_image}}">
     <div class="ztna-head-container mx-auto text-center">
-
       {% if page_d.title %}
-      <h1>{{page_d.title}}</h1>
+        <h1>{{page_d.title}}</h1>
+          {% endif %}
+            <div class="space10"></div>
+          {% if page_d.sub_title %}
+        <p class="ztna-subtitle ztna-margin-bottom-30-20">{{page_d.sub_title}}</p>
       {% endif %}
-      <div class="space10"></div>
-      {% if page_d.sub_title %}
-      <p class="ztna-subtitle">{{page_d.sub_title}}</p>
-      
-      {% endif %}
+
       {% if page_d.statistics %}
           <div class="ztna-counter-wrapper">
             {% for list in page_d.statistics %}
@@ -100,17 +73,10 @@ testimonials:
             </div>
             {% endfor %}
           </div>
-     
-    
       {% endif %}
 
-
       {% if page_d.button_text %}
-      
         {% include components/link.html content=page_d.button_text %}
-  
-      
-       
       {% endif %}
     </div>
     <div class="divider"><svg xmlns="http://www.w3.org/2000/svg" class="fill-light-wrapper" preserveAspectRatio="none" viewBox="0 0 1070 20.98">
@@ -120,161 +86,121 @@ testimonials:
   {% endif %}
 
 
-  {% if page.no-bulshit-proof.enable %} 
-  <div class="no-bulshit-wrapper background-color">
-    {% assign no-bulshit = page.no-bulshit-proof %}
-    <div class="col-4 text-center mx-auto">  
-      <p class="h5 light-text-2">{{no-bulshit.label}}</p>  
-      <div class="space10"></div>
-      <h2 class="dark-text">{{no-bulshit.title}}</h2>
-      <div class="space10"></div>
-    </div>
-
-
-    <div class="col-10 mx-auto"> 
-      <div class="row mx-auto">
-          
-        {% for reason in no-bulshit.reasons%}
-            <div class="col-md-6 col-lg-3 col-sm-12 text-center ztna-num-label-wrapper">
-              <p p class="light-blue-background-2 ztna-num-label white h2">{{forloop.index}}</p>
-              <div class="ztna-num-label-spacer"> </div>
-              <p class="h3 dark-text">{{reason}}</p>
-            </div>
-        {% endfor %}
-      </div>
-    </div>
-    {% endif %}
-  </div>
-
-  
-  <div class="wrapper white-wrapper">
-    <div class="container inner pt-100">
-      {% if site.data.ztna.enable %}
-      {% assign ztna = site.data.ztna %}
-        <div class="ztna"> 
-          <div class="space140"></div>
-          <div class="row align-items-center">
-            {% if ztna.image %}
-            <div class="col-lg-6">
-              <figure>
-                <img src="{{ztna.image}}" alt="{{ztna.title}}"/>
-              </figure>
-            </div>
-            {% endif %}
-            <div class="space20 d-md-none"></div>
-            <div class="space50 d-none d-md-block d-lg-none"></div>
-            <div class="col-lg-6 pl-60 pl-md-15">
-              {% if ztna.title %}
-              <h2 class="title-color color-gray">{{ztna.title}}</h2>
-              {% endif %}
-              {% if ztna.sub_title %}
-              <h3 class="display-3">{{ztna.sub_title}}</h3>
-              {% endif %}
-              <div class="space20"></div>
-              {% if ztna.description %}
-              <p>{{ztna.description}}</p>
-              {% endif %}
-              <ul class="icon-list bullet-default">
-              {% for list in ztna.lists %}
-                <li>
-                  <i class="icofont-verification-check"></i>
-                  {{list}}
-              </li>
-              {% endfor %}
-              </ul>
-            </div>
-            <!--/column -->
-          </div>
-          <!--/.row -->
+  {% if site.data.landing.ztna-no-bullshit.enable %} 
+    {% assign no-bullshit = site.data.landing.ztna-no-bullshit %}
+      <div class="ztna-landing-section-wrapper background-color"> 
+        <div class="col-4 text-center mx-auto">  
+          <p class="h5 light-text-2">{{no-bullshit.label}}</p>  
+          <div class="space10"></div>
+          <h2 class="dark-text">{{no-bullshit.title}}</h2>
+          <div class="space10"></div>
         </div>
-      {% endif %}
 
-      {% if site.data.nist-sp-800-207.enable %}
-      {% assign nist = site.data.nist-sp-800-207 %}
-        <div class="nist-sp-800-207">
-          <div class="space140"></div>
-          <div class="row align-items-center">
-            <div class="col-lg-6 pl-60 pl-sm-15">
-              {% if nist.title %}
-              <h2 class="title-color color-gray">{{nist.sub_title}}</h2>
+        <div class="col-8 mx-auto"> 
+          <div class="row mx-auto">
+              
+            {% for reason in no-bullshit.reasons%}
+                <div class="col-md-6 col-lg-3 col-sm-12 text-center ztna-num-label-wrapper">
+                  <p p class="light-blue-background-2 ztna-num-label white h2">{{forloop.index}}</p>
+                  <div class="ztna-num-label-spacer"> </div>
+                  <p class="h3 dark-text">{{reason}}</p>
+                </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+  {% endif %}
+  
+  
+      {% if site.data.landing.ztna.enable %}
+      {% assign ztna = site.data.landing.ztna %}
+      <div class="ztna-landing-section-wrapper white-background">
+        <div class="col-lg-8 col-md-10 col-sm-10 mx-auto">
+          <div class="row align-items-center d-flex">
+              {% if ztna.image %}
+              <div class="col-md-12 col-lg-6 d-flex justify-content-center order-0 order-md-1 order-sm-1">
+                <figure>
+                  <img src="{{ztna.image}}" alt="{{ztna.title}}" class="ztna-margin-top-50-40 "/>
+                </figure>
+              </div>
               {% endif %}
-              {% if nist.sub_title %}
-              <h3 class="display-3">{{nist.title}}</h3>
-              {% endif %}
-              <div class="space20"></div>
-              {% for paragraph in nist.paragraphs %}
-              <p>{{paragraph.text}}</p>
-              {% endfor %}
-            </div>
-            <div class="col-lg-6">
-              <div id="dial1">
-                <ul class="dial">
-                  {% for tenents in nist.tenents %}
-                  <li>
-                    <div class="dial-item {% if forlop.index == 1 %} active {% endif %}" data-cyrcleBox="cf1-{{forloop.index}}"><span class="icon icon-blob icon-blob-{{tenents.color}} color-{{tenents.color}} mb-20"><i class="{{tenents.icon}}"></i><span class="step bg-{{tenents.color}}">{{forloop.index}}</span></span></div>
-                    <div class="dial-item-info" id="cf1-{{forloop.index}}">
-                      <div class="dial-item-info-inner">
-                        <h3>{{forloop.index}}. {{tenents.title}}</h3>
-                        <p>{{tenents.description}}</p>
-                      </div>
-                    </div>
-                  </li>
-                  {% endfor %}
+
+              <div class="col-md-12 col-lg-6 order-1 order-md-0 order-sm-0">
+                {% if ztna.title %}
+                <p class="h5 light-text-2">{{ztna.title}}</p>
+                {% endif %}
+                <div class="space10"></div>
+                {% if ztna.sub_title %}
+                <h2 class="dark-text ztna-margin-bottom-30-20">{{ztna.sub_title}}</h2>
+                {% endif %}
+                
+                {% if ztna.description %}
+                <p class="ztna-small-text light-text-1">{{ztna.description}}</p>
+                <div class="space10"></div>
+                <div class="ztna-margin-bottom-30-20">
+                  <a href="{{ztna.more.link}}" target="_blank" class=" ztna-small-text light-blue-1">{{ztna.more.text}}</a>
+                </div>
+                
+                {% endif %}
+                <ul class="icon-list bullet-default">
+                {% for list in ztna.lists.text %}
+                  <li class="ztna-small-text light-text-1">
+                    <img src="{{site.data.landing.ztna.lists.icon}}">
+                    {{list}}
+                    <div class="space10"></div>
+                </li>
+                {% endfor %}
                 </ul>
               </div>
-            </div>
-            <!--/column -->
+              <!--/column -->
+          
+            <!--/.row -->
           </div>
-          <!--/row -->
         </div>
+      </div>
       {% endif %}
+
+    
       
-      {% if site.data.sase.enable %}
-      {% assign sase = site.data.sase %}
-        <div class="sase"> 
-          <div class="space140"></div>
-          <div class="row align-items-center">
+      {% if site.data.landing.sase.enable %}
+      {% assign sase = site.data.landing.sase %}
+        <div class="ztna-landing-section-wrapper white-background">
+          <div class="col-lg-8 col-md-10  mx-auto">
+            <div class="row align-items-center d-flex">
+                
 
-            {% if sase.image %}
-            <div class="col-lg-6">
-              <figure>
-                <img src="{{sase.image}}" alt="{{sase.title}}"/>
-              </figure>
-            </div>
-            {% endif %}
-            
-            <div class="space20 d-md-none"></div>
-            <div class="space50 d-none d-md-block d-lg-none"></div>
+                <div class="col-md-10 col-lg-6 ">
+                  {% if sase.title %}
+                  <p class="h5 light-text-2">{{sase.title}}</p>
+                  {% endif %}
+                  <div class="space10"></div>
+                  {% if sase.sub_title %}
+                  <h2 class="dark-text ztna-margin-bottom-30-20">{{sase.sub_title}}</h2>
+                  {% endif %}
+                  
+                  {% if sase.description %}
+                  <p class="ztna-small-text light-text-1">{{sase.description}}</p>
+                  <div class="space20"></div>
+                  {% endif %}
 
-            <div class="col-lg-6 pr-60 pr-md-15">
-              {% if sase.title %}
-              <h2 class="title-color color-gray">{{sase.title}}</h2>
-              {% endif %}
-              {% if sase.sub_title %}
-              <h3 class="display-3">{{sase.sub_title}}</h3>
-              {% endif %}
-              {% for paragraph in sase.paragraphs %}
-              <p>{{paragraph.text}}</p>
-              {% endfor %}
-              <!--
-              {% for list in sase.lists %}
-              <div class="space30"></div>
-              <div class="d-flex flex-row justify-content-center">
-                <div>
-                  <span class="icon icon-blob icon-blob-{{list.icon_color}} color-{{list.icon_color}} mr-25">
-                    <i class="{{list.icon}}"></i>
-                    <span class="step bg-{{list.icon_color}}">{{forloop.index}}</span>
-                  </span>
+                  {% for links in sase.more %}
+                    <a href="{{links.link}}" target="_blank" class=" ztna-small-text light-blue-1">{{links.text}}</a>
+                    <div class="space10"></div>
+                  {% endfor %}
+                  
+                  
+                
                 </div>
-                <div>
-                  <h5>{{list.title}}</h5>
-                  <p class="mb-0">{{list.description}}</p>
+                <!--/column -->
+                {% if sase.image %}
+                <div class="col-md-10 col-lg-6 d-flex justify-content-center ">
+                  <figure>
+                    <img src="{{sase.image}}" alt="{{sase.title}}" class="ztna-margin-top-50-40 "/>
+                  </figure>
                 </div>
-              </div>
-              {% endfor %}
-              -->
+                {% endif %}
+              <!--/.row -->
             </div>
-
           </div>
         </div>
       {% endif %}

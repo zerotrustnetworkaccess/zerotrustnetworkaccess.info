@@ -22,10 +22,30 @@
   margin-bottom: 20px;
 }
 
-.ztna-margin-bottom-30 {
+.ztna-margin-bottom-30-20 {
   margin-bottom: 30px;
+}
+
+.ztna-margin-top-50-40 {
+  margin-top: 0;
 }
 
 .ztna-center {
   margin: 0 auto;
+}
+
+@media only screen and (max-width: $breakpoint-sm) {
+  .ztna-margin-bottom-30-20 {
+    margin-bottom: 20px;
+  }
+
+  .ztna-margin-top-50-40 {
+    margin-top: 40px;
+  }
+}
+
+@media only screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-lg) {
+  .ztna-margin-top-50-40 {
+    margin-top: 50px;
+  }
 }

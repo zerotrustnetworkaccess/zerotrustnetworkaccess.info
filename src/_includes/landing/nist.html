@@ -1,0 +1,39 @@
+{% if site.data.nist-sp-800-207.enable %}
+{% assign nist = site.data.nist-sp-800-207 %}
+  <div class="nist-sp-800-207 background-color">
+    <div class="space140"></div>
+    <div class="row align-items-center">
+      <div class="col-lg-6 pl-60 pl-sm-15">
+        {% if nist.title %}
+        <h2 class="title-color color-gray">{{nist.sub_title}}</h2>
+        {% endif %}
+        {% if nist.sub_title %}
+        <h3 class="display-3">{{nist.title}}</h3>
+        {% endif %}
+        <div class="space20"></div>
+        {% for paragraph in nist.paragraphs %}
+        <p>{{paragraph.text}}</p>
+        {% endfor %}
+      </div>
+      <div class="col-lg-6">
+        <div id="dial1">
+          <ul class="dial">
+            {% for tenents in nist.tenents %}
+            <li>
+              <div class="dial-item {% if forlop.index == 1 %} active {% endif %}" data-cyrcleBox="cf1-{{forloop.index}}"><span class="icon icon-blob icon-blob-{{tenents.color}} color-{{tenents.color}} mb-20"><i class="{{tenents.icon}}"></i><span class="step bg-{{tenents.color}}">{{forloop.index}}</span></span></div>
+              <div class="dial-item-info" id="cf1-{{forloop.index}}">
+                <div class="dial-item-info-inner">
+                  <h3>{{forloop.index}}. {{tenents.title}}</h3>
+                  <p>{{tenents.description}}</p>
+                </div>
+              </div>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <!--/column -->
+    </div>
+    <!--/row -->
+  </div>
+{% endif %}

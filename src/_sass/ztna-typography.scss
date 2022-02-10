@@ -68,6 +68,15 @@ p {
   line-height: 150%;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
 @media only screen and (max-width: $breakpoint-sm) {
   .ztna-head-container {
     h1,

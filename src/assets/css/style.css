@@ -146,11 +146,11 @@ body {
   padding-left: 30px;
   padding-right: 30px;
 }
-body,
+/* body,
 li,
 address {
   line-height: 1.4rem;
-}
+} */
 input,
 button,
 select,

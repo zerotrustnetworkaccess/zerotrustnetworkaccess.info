@@ -1,0 +1,8 @@
+enable: true
+label: "Lorem ipsum is simply dummy"
+title: "Why no-bullshit?"
+reasons:
+  - "Curated, but impartial"
+  - "Technical and Architecture based - not marketing"
+  - "Open source contribution, helps to grow the knowledge base"
+  - "No agenda"

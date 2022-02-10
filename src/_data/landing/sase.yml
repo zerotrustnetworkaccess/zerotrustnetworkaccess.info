@@ -1,0 +1,19 @@
+enable: true
+title: "Security, at the edge"
+sub_title: "Gartner hails a SASE future. Forrester calls it Zero-Trust Edge."
+description: "Secure Service Access Edge (SASE) or Zero-Trust Edge (ZTE) combines network security functions with WAN capabilities to support the dynamic secure access needs of organizations. These capabilities are delivered primarily as a Service and based upon the identity of the entity, real time context and security / compliance policies. Central to the Zero Trust Edge (ZTE) model is Zero Trust Network Access (ZTNA) to authenticate and authorize users."
+more:
+  - link: https://blogs.gartner.com/andrew-lerner/2019/12/23/say-hello-sase-secure-access-service-edge
+    text: Andrew Lerner, Gartner (2019)
+  - link: https://go.forrester.com/blogs/take-security-to-the-zero-trust-edge
+    text: David Holmes, Forrester (2021
+image: "/assets/images/landing/sase.png"
+# lists:
+#   - title: "Network"
+#     description: "(such as SD-WAN, NaaS, CDN). Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut metus mauris."
+#     icon: "jam jam-search-folder"
+#     icon_color: "teal"
+#   - title: "Security"
+#     description: "(such as SWG, CASB, FWaaS and ZTNA). Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut metus mauris."
+#     icon: "jam jam-lightbulb"
+#     icon_color: "blue"
