@@ -18,9 +18,10 @@ page_header:
       quantity: 1
 
 no-bulshit-proof:
+  enable: true
   label: "Lorem ipsum is simply dummy" 
   title: "Why no-bullshit?"
-  benefits:
+  reasons:
     - "Curated, but impartial"
     - "Technical and Architecture based - not marketing"
     - "Open source contribution, helps to grow the knowledge base"
@@ -118,6 +119,32 @@ testimonials:
   </div>
   {% endif %}
 
+
+  {% if page.no-bulshit-proof.enable %} 
+  <div class="no-bulshit-wrapper background-color">
+    {% assign no-bulshit = page.no-bulshit-proof %}
+    <div class="col-4 text-center mx-auto">  
+      <p class="h5 light-text-2">{{no-bulshit.label}}</p>  
+      <div class="space10"></div>
+      <h2 class="dark-text">{{no-bulshit.title}}</h2>
+      <div class="space10"></div>
+    </div>
+
+
+    <div class="col-10 mx-auto"> 
+      <div class="row mx-auto">
+          
+        {% for reason in no-bulshit.reasons%}
+            <div class="col-md-6 col-lg-3 col-sm-12 text-center ztna-num-label-wrapper">
+              <p p class="light-blue-background-2 ztna-num-label white h2">{{forloop.index}}</p>
+              <div class="ztna-num-label-spacer"> </div>
+              <p class="h3 dark-text">{{reason}}</p>
+            </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
 
   
   <div class="wrapper white-wrapper">
