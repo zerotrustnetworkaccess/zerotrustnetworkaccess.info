@@ -5,14 +5,14 @@
         <div class="col-lg-8 col-md-10 col-sm-10 mx-auto">
           <div class="row align-items-center d-flex">
               {% if ztna.image %}
-              <div class="col-md-12 col-lg-6 col-sm-12 d-flex justify-content-center order-lg-first order-md-last order-sm-last">
+              <div class="col-md-12 col-lg-6 d-flex justify-content-center order-last order-lg-first">
                 <figure>
                   <img src="{{ztna.image}}" alt="{{ztna.title}}" class="ztna-margin-top-50-40 "/>
                 </figure>
               </div>
               {% endif %}
 
-              <div class="col-md-12 col-lg-6 col-sm-12 order-lg-last order-md-first order-sm-first">
+              <div class="col-md-12 col-lg-6 order-first">
                 {% if ztna.title %}
                 <p class="h5 light-text-2">{{ztna.title}}</p>
                 {% endif %}
