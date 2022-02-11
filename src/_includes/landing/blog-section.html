@@ -1,0 +1,34 @@
+{% if site.data.landing.blog.enable %}
+{% assign blog = site.data.landing.blog%}
+<div class="pt-100 pb-100 pt-md-70 pb-md-70">
+    <div class="col-6 text-center mx-auto">  
+        <p class="h5 light-text-2">{{blog.label}}</p>  
+        <div class="space10"></div>
+        <h2 class="dark-text">{{blog.title}}</h2>
+        <div class="space10"></div>
+      </div>
+
+     <div class="col-lg-10 mx-auto">
+        <div class="row">
+            {% for post in paginator.posts %}
+             <div class="item post grid-sizer col-4">
+              {% include components/post-preview.html %}
+             </div>
+            {% endfor %}
+        </div>
+     </div>
+    
+     <div class="row">
+         <div class="col-1 mx-auto">
+             <a href="{{baseurl}}{{blog.button.link}}">
+                {% include components/link.html content=blog.button.text %}
+             </a>
+           
+         </div>
+        
+     </div>
+     
+    
+</div>
+
+{% endif%}

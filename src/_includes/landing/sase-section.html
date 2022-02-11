@@ -1,0 +1,42 @@
+{% if site.data.landing.sase.enable %}
+      {% assign sase = site.data.landing.sase %}
+      <div class="ztna-landing-section-wrapper white-background">
+        <div class="col-lg-8 col-md-10 col-sm-10 mx-auto">
+          <div class="row align-items-center d-flex">
+                
+
+                <div class="col-md-10 col-lg-6 ">
+                  {% if sase.title %}
+                  <p class="h5 light-text-2">{{sase.title}}</p>
+                  {% endif %}
+                  <div class="space10"></div>
+                  {% if sase.sub_title %}
+                  <h2 class="dark-text ztna-margin-bottom-30-20">{{sase.sub_title}}</h2>
+                  {% endif %}
+                  
+                  {% if sase.description %}
+                  <p class="ztna-small-text light-text-1">{{sase.description}}</p>
+                  <div class="space20"></div>
+                  {% endif %}
+
+                  {% for links in sase.more %}
+                    <a href="{{links.link}}" target="_blank" class=" ztna-small-text light-blue-1">{{links.text}}</a>
+                    <div class="space10"></div>
+                  {% endfor %}
+                  
+                  
+                
+                </div>
+                <!--/column -->
+                {% if sase.image %}
+                <div class="col-md-10 col-lg-6 d-flex justify-content-center ">
+                  <figure>
+                    <img src="{{sase.image}}" alt="{{sase.title}}" class="ztna-margin-top-50-40 "/>
+                  </figure>
+                </div>
+                {% endif %}
+              <!--/.row -->
+            </div>
+          </div>
+        </div>
+      {% endif %}
