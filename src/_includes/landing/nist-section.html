@@ -1,6 +1,28 @@
-{% if site.data.nist-sp-800-207.enable %}
-{% assign nist = site.data.nist-sp-800-207 %}
-  <div class="nist-sp-800-207 background-color">
+{% if site.data.landing.nist-sp-800-207.enable %}
+{% assign nist = site.data.landing.nist-sp-800-207 %}
+
+<div class="ztna-landing-section-wrapper">
+  <div class="col-lg-8 col-md-10 col-sm-12 mx-auto"> 
+
+      <div class="col-lg-8 text-center mx-auto">  
+      <p class="h5 light-text-2">{{nist.label}}</p>  
+      <div class="space10"></div>
+      <h2 class="dark-text ztna-margin-bottom-30-20">{{nist.title}}</h2>
+
+      {% for paragraph in nist.paragraphs %}
+        <p class="ztna-small-text light-text-1" >{{paragraph.text}}</p>
+        <div class="space20"></div>
+      {% endfor %}
+
+      {% for links in nist.more %}
+          <a href="{{links.link}}" target="_blank" class=" ztna-small-text light-blue-1">{{links.text}}</a>
+         
+      {% endfor %}
+     
+  </div>
+</div>
+
+  <!-- <div class="nist-sp-800-207 background-color">
     <div class="space140"></div>
     <div class="row align-items-center">
       <div class="col-lg-6 pl-60 pl-sm-15">
@@ -32,8 +54,8 @@
           </ul>
         </div>
       </div>
-      <!--/column -->
+
     </div>
-    <!--/row -->
-  </div>
+
+  </div> -->
 {% endif %}

@@ -2,32 +2,34 @@
 {% assign blog = site.data.landing.blog%}
 <div class="ztna-landing-section-wrapper">
     <div class="col-lg-8 col-md-10 col-sm-12 mx-auto"> 
-    
+
         <div class="col-lg-8 text-center mx-auto">  
         <p class="h5 light-text-2">{{blog.label}}</p>  
         <div class="space10"></div>
         <h2 class="dark-text">{{blog.title}}</h2>
+       
     </div>
 
-     
-     <div class="ztna-post-container">
+    <div class="row">
         {% for post in site.posts limit: 3 %}
-            <div class="ztna-post-responsive">
-              {% include components/post-preview.html %}
-            </div>
-        {% endfor %}
-    </div>
+        <div class="ztna-post-responsive col-lg-4 col-md-6 col-sm-12">
+          {% include components/post-preview.html %}
+        </div>
+    {% endfor %}
+     </div>
+     
+      
+      
+
  
-    
-     <div class="row ">
-         <div class="col-2 mx-auto">
+
+         <div class="text-center">
              <a href="{{baseurl}}{{blog.button.link}}">
                 {% include components/link.html content=blog.button.text %}
              </a>
            
          </div>
-        
-     </div>
+
      
     </div>
 </div>
