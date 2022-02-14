@@ -1,66 +1,61 @@
 {% if site.data.landing.nist-sp-800-207.enable %}
 {% assign nist = site.data.landing.nist-sp-800-207 %}
 
-<div class="ztna-landing-section-wrapper">
-  <div class="col-lg-8 col-md-10 col-sm-12 mx-auto"> 
+<div class="container-fluid background-white ztna-landing-section-wrapper d-flex justify-content-center">
+  <div class="ztna-content-wrapper mx-auto text-center">
+    <p class="h5 light-text-2">{{nist.label}}</p>  
+    <div class="space10"></div>
+    <h2 class="dark-text ztna-margin-bottom-30-20">{{nist.title}}</h2>
 
-      <div class="col-lg-8 text-center mx-auto">  
-      <p class="h5 light-text-2">{{nist.label}}</p>  
-      <div class="space10"></div>
-      <h2 class="dark-text ztna-margin-bottom-30-20">{{nist.title}}</h2>
+    {% for paragraph in nist.paragraphs %}
+      <p class="ztna-small-text light-text-1" >{{paragraph.text}}</p>
+      <div class="space20"></div>
+    {% endfor %}
 
-      {% for paragraph in nist.paragraphs %}
-        <p class="ztna-small-text light-text-1" >{{paragraph.text}}</p>
-        <div class="space20"></div>
+    {% for link in nist.more %}
+        <a href="{{link.link}}" target="_blank" class=" ztna-small-text light-blue-1">{{link.text}}</a>
+    {% endfor %}
+    <div class="space50"></div>
+
+    <div class="row">
+      {% for tenet in nist.tenets %}
+      {% assign mod = forloop.index | modulo: 2 %}
+        {% if mod != 0 %}
+        <div class="col-3 text-center">
+          <h4 class={{tenet.color}}>{{tenet.title}}</h4>
+          <div class="space10"></div>
+          <p class="ztna-small-text" class="{{tenet.color}}" >{{tenet.description}}</p>
+          <div class="space20"></div>
+          
+        </div>
+        {% endif %}
       {% endfor %}
-
-      {% for link in nist.more %}
-          <a href="{{link.link}}" target="_blank" class=" ztna-small-text light-blue-1">{{link.text}}</a>
-         
+    </div>
+    <div class="ztna-nist-illustration">
+      {% for tenet in nist.tenets %}
+        <img class="line" src="/assets/images/landing/nist/main-line/{{forloop.index}}.png" alt={{tenet.title}}}>
+        {% assign mod = forloop.index | modulo: 2 %}
+          {% if mod == 0 %}
+          <img class="arrow-down" src="{{tenet.image}}" alt={{tenet.title}}>
+          {% else %}
+          <img class="arrow-up" src="{{tenet.image}}" alt={{tenet.title}}>
+        {% endif %}
       {% endfor %}
-
-     
   </div>
-  <div class="space50"></div>
-  <div class="col-12">
-  <div class="row">
-  {% for tenet in nist.tenets %}
-    {% assign mod = forloop.index | modulo: 2 %}
-
-      {% if mod != 0 %}
-      <div class="col-3 text-center">
-        <h4 class={{tenet.color}}>{{tenet.title}}</h4>
-        <div class="space10"></div>
-        <p class="ztna-small-text" class="{{tenet.color}}" >{{tenet.description}}</p>
-        <div class="space20"></div>
-        <img src="{{tenet.image}}" alt={{tenet.title}}>
-      </div>
-    {% endif %}
-  {% endfor %}
-</div>
-<div>
-  {% for tenet in nist.tenets %}
-  <img src="/assets/images/landing/nist/main-line/{{forloop.index}}.png" alt={{tenet.title}}}>
-  {% endfor %}
-
-</div>
-<div class="row">
-  {% for tenet in nist.tenets %}
-    {% assign mod = forloop.index | modulo: 2 %}
-
-      {% if mod == 0 %}
-      <div class="col-3 text-center">
-        <img src="{{tenet.image}}" alt={{tenet.title}}>
-        <h4 class={{tenet.color}}>{{tenet.title}}</h4>
-        <div class="space10"></div>
-        <p class="ztna-small-text" class="{{tenet.color}}" >{{tenet.description}}</p>
-        <div class="space20"></div>
-        
-      </div>
-    {% endif %}
-  {% endfor %}
+  <div class="row d-flex justify-content-center">
+    {% for tenet in nist.tenets %}
+      {% assign mod = forloop.index | modulo: 2 %}
+        {% if mod == 0 %}
+        <div class="col-3 text-center">
+          <h4 class={{tenet.color}}>{{tenet.title}}</h4>
+          <div class="space10"></div>
+          <p class="ztna-small-text" class="{{tenet.color}}" >{{tenet.description}}</p>
+          <div class="space20"></div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+  </div>
 </div>
 
-</div>
-</div>
 {% endif %}

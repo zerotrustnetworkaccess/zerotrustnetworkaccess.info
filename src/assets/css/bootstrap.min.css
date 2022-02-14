@@ -3686,7 +3686,7 @@ input[type="submit"].btn-block {
   justify-content: space-between;
   padding: 0.5rem 1rem;
 }
-.navbar > .container,
+.navbar >,
 .navbar > .container-fluid {
   display: -ms-flexbox;
   display: flex;

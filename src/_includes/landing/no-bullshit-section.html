@@ -1,24 +1,21 @@
 {% if site.data.landing.ztna-no-bullshit.enable %} 
 {% assign no-bullshit = site.data.landing.ztna-no-bullshit %}
-  <div class="ztna-landing-section-wrapper background-color"> 
-    <div class="col-4 text-center mx-auto">  
-      <p class="h5 light-text-2">{{no-bullshit.label}}</p>  
-      <div class="space10"></div>
-      <h2 class="dark-text">{{no-bullshit.title}}</h2>
-      <div class="space10"></div>
+<div class="container-fluid background-color ztna-landing-section-wrapper d-flex justify-content-center">
+  <div class="ztna-content-wrapper">
+    <p class="h5 light-text-2 text-center">{{no-bullshit.label}}</p>  
+    <div class="space10"></div>
+    <h2 class="dark-text text-center">{{no-bullshit.title}}</h2>
+    <div class="space10"></div>
+    <div class="row mx-auto">   
+      {% for reason in no-bullshit.reasons%}
+          <div class="col-lg-3 col-md-6 col-sm-12 text-center ztna-num-label-wrapper">
+            <p p class="light-blue-background-2 ztna-num-label white h2">{{forloop.index}}</p>
+            <div class="ztna-num-label-spacer"> </div>
+            <p class="h3 dark-text">{{reason}}</p>
+          </div>
+      {% endfor %}
     </div>
-
-    <div class="col-8 mx-auto"> 
-      <div class="row mx-auto">
-          
-        {% for reason in no-bullshit.reasons%}
-            <div class="col-md-6 col-lg-3 col-sm-12 text-center ztna-num-label-wrapper">
-              <p p class="light-blue-background-2 ztna-num-label white h2">{{forloop.index}}</p>
-              <div class="ztna-num-label-spacer"> </div>
-              <p class="h3 dark-text">{{reason}}</p>
-            </div>
-        {% endfor %}
-      </div>
+    
     </div>
-  </div>
+</div>
 {% endif %}
