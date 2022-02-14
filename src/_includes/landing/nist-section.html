@@ -20,41 +20,68 @@
           <div class="space50"></div>
         </div>
       
-
-    <div class="row">
-        {% for tenet in nist.tenets %}
-        {% assign mod = forloop.index | modulo: 2 %}
-          {% if mod != 0 %}
-          <div class="col-3 text-center ">
-            <h4 class={{tenet.color}}>{{tenet.title}}</h4>
-            <div class="space10"></div>
-            <p class="ztna-small-text" class="{{tenet.color}}" >{{tenet.description}}</p>
-            <div class="space20"></div>
-            
-          </div>
-          {% endif %}
-        {% endfor %}
-      </div>
-      <div class="row justify-content-start">
-
-        <img src="/assets/images/landing/nist/arrows.png" class="tenet-illustration"> 
-    </div>
-    <div class="row d-flex justify-content-center">
-      {% for tenet in nist.tenets %}
-        {% assign mod = forloop.index | modulo: 2 %}
-          {% if mod == 0 %}
-          <div class="col-3 text-center">
-            <div class="space20"></div>
-            <h4 class={{tenet.color}}>{{tenet.title}}</h4>
-            <div class="space10"></div>
-            <p class="ztna-small-text" class="{{tenet.color}}" >{{tenet.description}}</p>
-            <div class="space20"></div>
-          </div>
-        {% endif %}
-      {% endfor %}
+    <div class="desktop-nist-illustration">
+      <div class="row">
+          {% for tenet in nist.tenets %}
+          {% assign mod = forloop.index | modulo: 2 %}
+            {% if mod != 0 %}
+            <div class="col-3 text-center ">
+              <h4 class={{tenet.color}}>{{tenet.title}}</h4>
+              <div class="space10"></div>
+              <p class="ztna-small-text" class="{{tenet.color}}" >{{tenet.description}}</p>
+              <div class="space20"></div>
+              
+            </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+        <div class="row justify-content-start">
+          <img src="/assets/images/landing/nist/arrows.png" class="tenet-illustration"> 
+        </div>
+        <div class="row d-flex justify-content-center">
+          {% for tenet in nist.tenets %}
+            {% assign mod = forloop.index | modulo: 2 %}
+              {% if mod == 0 %}
+              <div class="col-3 text-center">
+                <div class="space20"></div>
+                <h4 class={{tenet.color}}>{{tenet.title}}</h4>
+                <div class="space10"></div>
+                <p class="ztna-small-text" class="{{tenet.color}}" >{{tenet.description}}</p>
+                <div class="space20"></div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
     </div>
   </div>
-
 </div>
+
+<div class="ztna-nist-container-fluid background-white" id="container">
+
+  
+      <div style="width: 1580px;" >
+   
+            <img src="/assets/images/landing/nist/arrows-mobile.png" class="tenet-illustration"> 
+
+          <div style="display: flex;">
+          {% for tenet in nist.tenets %}
+              <div style="width: 210px; margin-right: 30px;">
+                <div class="space20"></div>
+                <h4 class={{tenet.color}}>{{tenet.title}}</h4>
+                <div class="space10"></div>
+                <p class="ztna-small-text" class="{{tenet.color}}" >{{tenet.description}}</p>
+                <div class="space20"></div>
+              </div>
+          {% endfor %}
+        </div>
+   
+      </div>
+      
+      <button class="ztna-button light-blue-background-1 white ztna-h4" id="slideLeft">Prev</button>
+      <button class="ztna-button light-blue-background-1 white ztna-h4" id="slideRight">Next</button>
+ 
+</div>    
+
+
 
 {% endif %}
