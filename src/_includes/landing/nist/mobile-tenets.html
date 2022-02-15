@@ -1,0 +1,28 @@
+<div class="mobile-nist-illustration background-color ">
+    <div class="ztna-nist-container-fluid " id="container">
+        <div class="nist-mobile-scroll-container">
+            <img src="/assets/images/landing/nist/arrows-mobile.png" class="tenet-illustration-mobile"> 
+  
+            <div style="display: flex;">
+            {% for tenet in nist.tenets %}
+            <div class="nist-mobile-scroll-item text-center">
+                  <div class="space20"></div>
+                  <h4 class={{tenet.color}}>{{tenet.title}}</h4>
+                  <div class="space10"></div>
+                  <p class="ztna-small-text" class="{{tenet.color}}" >{{tenet.description}}</p>
+                  <div class="space20"></div>
+                </div>
+            {% endfor %}
+          </div>
+     
+        </div>
+      </div>
+      <div class="row d-flex justify-content-center background-color ztna-padding-bottom-100-70">
+        <button class="ztna-small-button-left white-background light-blue-1 h4 mr-10" id="slideLeft">{%include icons/button-left-arrow.svg %} Prev</button>
+        <button class="ztna-small-button-right white-background light-blue-1 h4 ml-10" id="slideRight">Next {%include icons/button-right-arrow.svg %}</button>
+      </div>
+  
+      
+  </div>    
+  </div> 
+    

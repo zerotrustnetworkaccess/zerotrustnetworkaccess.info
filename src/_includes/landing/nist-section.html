@@ -1,10 +1,10 @@
 {% if site.data.landing.nist-sp-800-207.enable %}
 {% assign nist = site.data.landing.nist-sp-800-207 %}
 
-<div class="container-fluid background-white ztna-landing-section-wrapper d-flex justify-content-center">
+<div class="container-fluid background-color ztna-nist-section-wrapper d-flex justify-content-center">
   <div class="ztna-content-wrapper ">
-      <div class="row d-flex justify-content-center">
-       
+      <div class="row d-flex justify-content-center ">
+        <div class="col-12 ztna-margin-bottom-50-40">
           <p class="h5 light-text-2">{{nist.label}}</p>  
           <div class="space10"></div>
           <h2 class="dark-text ztna-margin-bottom-30-20">{{nist.title}}</h2>
@@ -17,70 +17,12 @@
           {% for link in nist.more %}
               <a href="{{link.link}}" target="_blank" class=" ztna-small-text light-blue-1">{{link.text}}</a>
           {% endfor %}
-          <div class="space50"></div>
         </div>
-      
-    <div class="desktop-nist-illustration">
-      <div class="row">
-          {% for tenet in nist.tenets %}
-          {% assign mod = forloop.index | modulo: 2 %}
-            {% if mod != 0 %}
-            <div class="col-3 text-center ">
-              <h4 class={{tenet.color}}>{{tenet.title}}</h4>
-              <div class="space10"></div>
-              <p class="ztna-small-text" class="{{tenet.color}}" >{{tenet.description}}</p>
-              <div class="space20"></div>
-              
-            </div>
-            {% endif %}
-          {% endfor %}
-        </div>
-        <div class="row justify-content-start">
-          <img src="/assets/images/landing/nist/arrows.png" class="tenet-illustration"> 
-        </div>
-        <div class="row d-flex justify-content-center">
-          {% for tenet in nist.tenets %}
-            {% assign mod = forloop.index | modulo: 2 %}
-              {% if mod == 0 %}
-              <div class="col-3 text-center">
-                <div class="space20"></div>
-                <h4 class={{tenet.color}}>{{tenet.title}}</h4>
-                <div class="space10"></div>
-                <p class="ztna-small-text" class="{{tenet.color}}" >{{tenet.description}}</p>
-                <div class="space20"></div>
-              </div>
-            {% endif %}
-          {% endfor %}
-        </div>
-    </div>
+      </div>
+      {% include landing/nist/desktop-tenets.html %}
   </div>
 </div>
-
-<div class="ztna-nist-container-fluid background-white" id="container">
-
-  
-      <div style="width: 1580px;" >
-   
-            <img src="/assets/images/landing/nist/arrows-mobile.png" class="tenet-illustration"> 
-
-          <div style="display: flex;">
-          {% for tenet in nist.tenets %}
-              <div style="width: 210px; margin-right: 30px;">
-                <div class="space20"></div>
-                <h4 class={{tenet.color}}>{{tenet.title}}</h4>
-                <div class="space10"></div>
-                <p class="ztna-small-text" class="{{tenet.color}}" >{{tenet.description}}</p>
-                <div class="space20"></div>
-              </div>
-          {% endfor %}
-        </div>
-   
-      </div>
-      
-      <button class="ztna-button light-blue-background-1 white ztna-h4" id="slideLeft">Prev</button>
-      <button class="ztna-button light-blue-background-1 white ztna-h4" id="slideRight">Next</button>
- 
-</div>    
+{% include landing/nist/mobile-tenets.html %}
 
 
 

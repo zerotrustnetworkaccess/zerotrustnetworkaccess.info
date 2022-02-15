@@ -1,0 +1,32 @@
+<div class="desktop-nist-illustration">
+    <div class="row">
+        {% for tenet in nist.tenets %}
+        {% assign mod = forloop.index | modulo: 2 %}
+          {% if mod != 0 %}
+          <div class="col-3 text-center ">
+            <h4 class={{tenet.color}}>{{tenet.title}}</h4>
+            <div class="space10"></div>
+            <p class="ztna-small-text" class="{{tenet.color}}" >{{tenet.description}}</p>
+            <div class="space20"></div>
+            
+          </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+      <div class="row justify-content-start">
+        <img src="/assets/images/landing/nist/arrows.png" class="tenet-illustration-desktop"> 
+      </div>
+      <div class="row d-flex justify-content-center">
+        {% for tenet in nist.tenets %}
+          {% assign mod = forloop.index | modulo: 2 %}
+            {% if mod == 0 %}
+            <div class="col-3 text-center">
+              <div class="space20"></div>
+              <h4 class={{tenet.color}}>{{tenet.title}}</h4>
+              <div class="space10"></div>
+              <p class="ztna-small-text" class="{{tenet.color}}" >{{tenet.description}}</p>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+  </div>
