@@ -214,6 +214,17 @@ $(document).ready(function () {
       autoHeight: true,
       loop: true,
       margin: $bslider.data("margin"),
+      navContainerClass: "ztna-slider-navbuttons-wrapper",
+      navClass: [
+        "owl-prev ztna-small-button-left white-background light-blue-1 h4 ml-10",
+        "owl-next ztna-small-button-right white-background light-blue-1 h4 ml-10",
+      ],
+      navText: [
+        "<img src='/assets/icons/left-arrow.svg'> Prev",
+        "Next <img src='/assets/icons/right-arrow.svg'>",
+      ],
+      dotsClass: "ztna-slider-dots-wrapper",
+      dotClass: "ztna-slider-dot-item light-text-2-background",
     });
   });
   $(".carousel").each(function () {
@@ -221,13 +232,36 @@ $(document).ready(function () {
     $carousel.owlCarousel({
       autoHeight: false,
       nav: true,
-      dots: $carousel.data("dots"),
+      dots: true,
       dotsEach: true,
-      loop: $carousel.data("loop"),
+      loop: false,
       margin: $carousel.data("margin"),
-      autoplay: $carousel.data("autoplay"),
-      autoplayTimeout: $carousel.data("autoplay-timeout"),
-      responsive: $carousel.data("responsive"),
+      autoplay: true,
+      autoplayTimeout: 3000,
+      navContainerClass: "ztna-slider-navbuttons-wrapper",
+      navClass: [
+        "owl-prev ztna-small-button-left white-background light-blue-1 h4 ml-10",
+        "owl-next ztna-small-button-right white-background light-blue-1 h4 ml-10",
+      ],
+      navText: [
+        "<img src='/assets/icons/left-arrow.svg'> Prev",
+        "Next <img src='/assets/icons/right-arrow.svg'>",
+      ],
+      dotsClass: "ztna-slider-dots-wrapper",
+      dotClass: "ztna-slider-dot-item light-text-2-background",
+
+      responsiveClass: true,
+      responsive: {
+        0: {
+          items: 1,
+        },
+        575: {
+          items: 2,
+        },
+        992: {
+          items: 3,
+        },
+      },
     });
   });
   /*-----------------------------------------------------------------------------------*/

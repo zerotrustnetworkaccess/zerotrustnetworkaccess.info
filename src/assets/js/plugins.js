@@ -6173,11 +6173,17 @@
       (e.prototype.initialize = function () {
         var b,
           c = this._core.settings;
-        (this._controls.$relative = (
-          c.navContainer
-            ? a(c.navContainer)
-            : a("<div>").addClass(c.navContainerClass).appendTo(this.$element)
+
+        (this._controls.$absolute = (
+          c.dotsContainer
+            ? a(c.dotsContainer)
+            : a("<div>").addClass(c.dotsClass).appendTo(this.$element)
         ).addClass("disabled")),
+          (this._controls.$relative = (
+            c.navContainer
+              ? a(c.navContainer)
+              : a("<div>").addClass(c.navContainerClass).appendTo(this.$element)
+          ).addClass("disabled")),
           (this._controls.$previous = a("<" + c.navElement + ">")
             .addClass(c.navClass[0])
             .html(c.navText[0])
@@ -6205,11 +6211,6 @@
                 .append(a("<span>"))
                 .prop("outerHTML"),
             ]),
-          (this._controls.$absolute = (
-            c.dotsContainer
-              ? a(c.dotsContainer)
-              : a("<div>").addClass(c.dotsClass).appendTo(this.$element)
-          ).addClass("disabled")),
           this._controls.$absolute.on(
             "click",
             "button",

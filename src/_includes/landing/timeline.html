@@ -1,0 +1,90 @@
+{% if page.timeline.enable  %}
+  <div class="wrapper image-wrapper bg-image inverse-text" data-image-src="{{page.timeline.bg_image}}">
+    
+    <div class="container">
+      <div class="space60"></div>
+      <h2 class="title-color color-white text-center">{{page.timeline.title}}</h2>
+    </div>
+    
+    <!--
+    <div class="space60"></div>
+    <div class="container inner">
+      <div class="row">
+        <div class="col-md-10 offset-md-1">
+          <div class="row text-center">
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+    -->
+    
+    <!-- thanks https://squarechip.github.io/timeline/ -->
+
+    <div class="container">
+      <div class="timeline">
+        <div class="timeline__wrap">
+          <div class="timeline__items">
+            <div class="timeline__item">
+              <div class="timeline__content">
+                <h2>2018</h2>
+                <p>Lorem ipsum dolor sit amet.</p>
+              </div>
+            </div>
+            <div class="timeline__item">
+              <div class="timeline__content">
+                Your content / markup 2
+              </div>
+            </div>
+            <div class="timeline__item">
+              <div class="timeline__content">
+                Your content / markup 3
+              </div>
+            </div>
+            <div class="timeline__item">
+              <div class="timeline__content">
+                Your content / markup 4
+              </div>
+            </div>
+            <div class="timeline__item">
+              <div class="timeline__content">
+                Your content / markup 5
+              </div>
+            </div>
+            <div class="timeline__item">
+              <div class="timeline__content">
+                Your content / markup 6
+              </div>
+            </div>
+            <div class="timeline__item">
+              <div class="timeline__content">
+                Your content / markup 7
+              </div>
+            </div>
+            <div class="timeline__item">
+              <div class="timeline__content">
+                Your content / markup 7
+              </div>
+            </div>
+            <div class="timeline__item">
+              <div class="timeline__content">
+                Your content / markup 8
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="space60"></div>
+      </div>
+  
+      <script>
+        window.addEventListener('load', function() {
+          timeline(document.querySelectorAll('.timeline'), {
+            mode: 'horizontal',
+            visibleItems: 6
+          });
+        });
+      </script>
+    </div>
+  </div>
+  {% endif %}

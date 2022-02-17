@@ -3,42 +3,47 @@
 {% assign architecture-summary = site.data.landing.architecture-summary %}
 <div class="container-fluid background-color ztna-landing-section-wrapper d-flex justify-content-center">
   <div class="ztna-content-wrapper">
-    <p class="h5 light-text-2 text-center">{{architecture-summary.label}}</p>  
-    <div class="space10"></div>
-    <h2 class="dark-text text-center ztna-margin-bottom-50-40">{{architecture-summary.title}}</h2>
-  
-    
-    <div class="basic-slider owl-carousel grid" data-margin="5">
-        {% for architecture in site.data.architecture %}
-          {% assign arch = architecture[1] %}
-          <div class="item item-detailed">
-            <figure class="ztna-slider-image mb-20">
-              {% if arch.image %}
-              <div class="item-detailed-image">
-                <img src="{{arch.image}}" alt="{{arch.name}}"/>
-              </div>
-              {% endif %}
-            </figure>
-           
-            <div class="item-content text-center col-8 mx-auto">
-              {% if arch.name %}
-              <h3 id="arch.name" class="dark-text"><a href="#{{arch.name | replace: ' ', '-' | downcase }}">{{arch.name}}</a></h3>
-              {% endif %}
-              <div class="space10"></div>
-              <div class="ztna-margin-bottom-30-20">
-                {% if arch.description %}
-                <p class="light-text-1 ztna-small-text">{{arch.description}}</p>
-                {% endif %}
-              </div>
-            </div>
-          </div>
-        {% endfor %}
-      </div>
-      <!-- <div class="text-center" id="custom-nav-position" style="width: 100px; height: 100px; background-color: red;"></div> -->
-      <div class="text-center">
-        {%include components/link.html content=architecture-summary.button %}
-      </div>
+
+    <div class="row d-flex justify-content-center ">
+      <div class="col-12 ztna-margin-bottom-50-40 text-center">
+
+        <p class="h5 light-text-2 text-center">{{architecture-summary.label}}</p>  
+        <div class="space10"></div>
+        <h2 class="dark-text text-center ztna-margin-bottom-50-40">{{architecture-summary.title}}</h2>
       
-    </div>
+        
+        <div class="basic-slider owl-carousel grid" data-margin="5">
+            {% for architecture in site.data.architecture %}
+              {% assign arch = architecture[1] %}
+              <div class="item item-detailed">
+                <figure class="ztna-slider-image mb-20">
+                  {% if arch.image %}
+                  <div class="item-detailed-image">
+                    <img src="{{arch.image}}" alt="{{arch.name}}"/>
+                  </div>
+                  {% endif %}
+                </figure>
+              <div class="space30"></div>
+                <div class="item-content text-center col-8 mx-auto">
+                  {% if arch.name %}
+                  <h3 id="arch.name" class="dark-text"><a href="#{{arch.name | replace: ' ', '-' | downcase }}">{{arch.name}}</a></h3>
+                  {% endif %}
+                  <div class="space10"></div>
+                  <div class="ztna-margin-bottom-30-20">
+                    {% if arch.description %}
+                    <p class="light-text-1 ztna-small-text">{{arch.description}}</p>
+                    {% endif %}
+                  </div>
+                  <div class="text-center">
+                    {%include components/link.html content=architecture-summary.button %}
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+      
+      </div>
+    </div>    
+  </div>
 </div>
 {% endif %}
