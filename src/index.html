@@ -1,95 +1,27 @@
 ---
 layout: ztna-default
 
-architecture-summary:
-  enabled: true
-  title: "Architecture"
-  sub_title: "Many roads lead to ZTNA<br />Each architecture has strengths, weaknesses and trade-offs"
-
 timeline:
   enable: true
   title: "Technology Timeline"
   bg_image: "/assets/images/art/bg7.jpg"
-
-testimonials:
-  enable: true
-  title: "Customer Stories"
-  sub_title: "Customer satisfaction is our major goal. See what our customers are saying about us."
-  feedback:
-
-    - quote: |
-        Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat.
-      image: "/assets/images/art/t5.jpg" 
-      name: "Cornelia Gibson"
-      designation: "Financial Analyst"
-  
-    - quote: |
-        Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vestibulum id ligula porta felis euismod semper. Cras justo odio, dapibus.
-      image: "/assets/images/art/t2.jpg" 
-      name: "Coriss Ambady"
-      designation: "Marketing Specialist"
-  
-    - quote: |
-        Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras justo odio, dapibus ac facilisis in, egestas eget.
-      image: "/assets/images/art/t3.jpg" 
-      name: "Barclay Widerski"
-      designation: "Sales Manager"
-  
-    - quote: |
-        Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras justo odio, dapibus ac facilisis in, egestas eget.
-      image: "/assets/images/art/t6.jpg" 
-      name: "Barclay Widerski"
-      designation: "Sales Manager"
-  
-    - quote: |
-        Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras justo odio, dapibus ac facilisis in, egestas eget.
-      image: "/assets/images/art/t5.jpg" 
-      name: "Jackie Sanders"
-      designation: "Sales Specialist"
 
 ---
 
 <div class="content-wrapper">
 
  {% include landing/header.html %}
+
  {% include landing/no-bullshit-section.html %}
+
  {% include landing/ztna-section.html %}
  {% include landing/nist-section.html %}
  {% include landing/sase-section.html %}
+ {% include landing/architecture-summary-section.html %}
+ {% include landing/testimonials.html %}
  {% include landing/blog-section.html %}
 
-  <div class="wrapper">
-    <div class="container inner pt-0">
-      <div class="space140"></div>
-      <h2 class="title-color color-gray text-center">{{page.architecture-summary.title}}</h2>
-      <h3 class="display-3 text-center">{{page.architecture-summary.sub_title}}</h3>
-      <div class="basic-slider owl-carousel grid" data-margin="5">
-        {% for architecture in site.data.architecture %}
-          {% assign arch = architecture[1] %}
-
-          <div class="item item-detailed">
-            <figure class="rounded mb-20">
-              {% if arch.image %}
-              <div class="item-detailed-image">
-                <img src="{{arch.image}}" alt="{{arch.name}}"/>
-              </div>
-              {% endif %}
-            </figure>
-            <div class="item-content">
-              {% if arch.name %}
-              <h2 id="arch.name" class="post-title mb-10"><a href="#{{arch.name | replace: ' ', '-' | downcase }}">{{arch.name}}</a></h2>
-              {% endif %}
-              <div class="mb-0">
-                {% if arch.description %}
-                <p>{{arch.description}}</p>
-                {% endif %}
-              </div>
-            </div>
-          </div>
-        {% endfor %}
-      </div>
-    </div>
-  </div>
+  
 
   {% if page.timeline.enable  %}
   <div class="wrapper image-wrapper bg-image inverse-text" data-image-src="{{page.timeline.bg_image}}">
@@ -268,50 +200,7 @@ testimonials:
     </div>
   </div> -->
 
-  {% if page.testimonials.enable %}
-  <div class="wrapper light-wrapper">
-    <div class="container inner">
-      <div class="testimonials-area">
-        <div class="row">
-            <div class="col-md-7 mx-auto">
-                {% if page.testimonials.title %}
-                <h2 class="title-color color-gray text-center mb-30">{{page.testimonials.title}}</h2>
-                {% endif %} {% if page.testimonials.sub_title %}
-                <h3 class="display-3 text-center">{{page.testimonials.sub_title}}</h3>
-                {% endif %}
-            </div>
-        </div>
-      <div class="space10"></div>
-      <div class="grid-view">
-        <div class="carousel owl-carousel gap-small" data-margin="0" data-dots="true" data-autoplay="false" data-autoplay-timeout="5000" data-responsive='{"0":{"items": "1"}, "768":{"items": "2"}, "992":{"items": "2"}, "1140":{"items": "3"}}'>
-        {% for feedback in page.testimonials.feedback %}
-        <div class="item">
-            <div class="item-inner">
-                <div class="bg-white shadow p-3">
-                    <blockquote>
-                        <p>"{{feedback.quote}}"</p>
-                        <div class="blockquote-details">
-                            {% if feedback.image %}
-                            <div class="img-blob blob1">
-                                <img src="{{feedback.image}}" alt="{{feedback.name}}" />
-                            </div>
-                            {% endif %}
-                            <div class="info">
-                                <h6 class="mb-0">{{feedback.name}}</h6>
-                                <span class="meta mb-0">{{feedback.designation}}</span>
-                            </div>
-                        </div>
-                    </blockquote>
-                </div>
-            </div>
-        </div>
-        {% endfor %}
-        </div>
-      </div>
-      </div>
-    </div>
-  </div>
-  {% endif %}
+  
 
 
 

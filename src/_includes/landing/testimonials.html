@@ -1,0 +1,63 @@
+
+{% if site.data.landing.testimonials.enable %} 
+{% assign testimonials = site.data.landing.testimonials %}
+<div class="container-fluid background-color ztna-landing-section-wrapper d-flex justify-content-center">
+  <div class="ztna-content-wrapper">
+    <p class="h5 light-text-2 text-center">{{testimonials.label}}</p>  
+    <div class="space10"></div>
+    <h2 class="dark-text text-center ztna-margin-bottom-50-40">{{testimonials.title}}</h2>
+  
+    <div class="carousel owl-carousel gap-small" data-margin="0" data-dots="true" data-autoplay="false" data-autoplay-timeout="5000" data-responsive='{"0":{"items": "1"}, "768":{"items": "2"}, "992":{"items": "2"}, "1140":{"items": "3"}}'>
+        {% for feedback in testimonials.feedback %}
+        <div class="item">
+            <div class="item-inner">
+                <div class="bg-white shadow p-3">
+                    <blockquote>
+                        <p>"{{feedback.quote}}"</p>
+                        <div class="blockquote-details">
+                            {% if feedback.image %}
+                            <div class="img-blob blob1">
+                                <img src="{{feedback.image}}" alt="{{feedback.name}}" />
+                            </div>
+                            {% endif %}
+                            <div class="info">
+                                <h6 class="mb-0">{{feedback.name}}</h6>
+                                <span class="meta mb-0">{{feedback.designation}}</span>
+                            </div>
+                        </div>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        </div>
+    
+      
+    </div>
+</div>
+{% endif %}
+
+
+
+
+{% if page.testimonials.enable %}
+  <div class="wrapper light-wrapper">
+    <div class="container inner">
+      <div class="testimonials-area">
+        <div class="row">
+            <div class="col-md-7 mx-auto">
+                {% if page.testimonials.title %}
+                <h2 class="title-color color-gray text-center mb-30">{{page.testimonials.title}}</h2>
+                {% endif %} {% if page.testimonials.sub_title %}
+                <h3 class="display-3 text-center">{{page.testimonials.sub_title}}</h3>
+                {% endif %}
+            </div>
+        </div>
+      <div class="space10"></div>
+      <div class="grid-view">
+        
+      </div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
