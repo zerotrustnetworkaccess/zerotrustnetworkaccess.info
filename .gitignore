@@ -178,6 +178,5 @@ node_modules
 .jekyll-cache
 
 # Styling
-_sass/
 .sass-cache/
 .vscode/
