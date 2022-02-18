@@ -1,0 +1,39 @@
+@import "ztna-colors";
+
+.timeline {
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5px;
+
+  p {
+    margin: 0 25px;
+  }
+  p:first-child {
+    color: $timeline-active !important;
+    background-color: $dark-text !important;
+    border-radius: 25px;
+    padding: 8px 20px;
+    margin-left: 5px;
+  }
+}
+
+.timeline-items {
+  .timeline-item {
+    display: none;
+  }
+
+  .timeline-item:first-child {
+    display: block;
+  }
+}
+
+.timeline-item-date-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}

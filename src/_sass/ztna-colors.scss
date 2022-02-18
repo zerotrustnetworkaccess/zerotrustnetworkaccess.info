@@ -16,11 +16,12 @@ $light-text-3: #cad8e6;
 $background-color: #f5f7fb;
 $table-backgroud: #fdfdff;
 $divider: #efefef;
+$timeline-active: #bdcfe2;
 
 $gradient-proportion: $light-blue-1 0%, $dark-blue-1 31.59%, $violet-1 67.71%,
   $pink 100%;
 
-$direction: right;
+$direction: left;
 
 @mixin gradient($direction, $gradient-proportion) {
   background: -webkit-linear-gradient($direction, $gradient-proportion);
@@ -127,4 +128,8 @@ $direction: right;
 
 .gradient-background {
   @include gradient($direction, $gradient-proportion);
+}
+
+.timeline-active {
+  color: $timeline-active;
 }
