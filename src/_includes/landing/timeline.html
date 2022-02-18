@@ -12,7 +12,7 @@
 
         <div class="timeline gradient-background">
           {% for node in timeline.nodes %}
-          <p class="h4 white">{{node.year}}</p>
+          <p class="h4 white timelineYear" onclick="currentTimelineItem({{forloop.index}})">{{node.year}}</p>
           {% endfor %}
         </div>
         <div class="space40"></div>
@@ -31,8 +31,8 @@
    
         {% endfor %}
         <div class="row d-flex justify-content-center dark-text-background ">
-          <button class="ztna-small-button-left dark-buttons-background light-blue-1 h4 mr-10" id="slideLeft">{%include icons/button-left-arrow.svg %} Prev</button>
-          <button class="ztna-small-button-right dark-buttons-background light-blue-1 h4 ml-10" id="slideRight">Next {%include icons/button-right-arrow.svg %}</button>
+          <button class="ztna-small-button-left dark-buttons-background light-blue-1 h4 mr-10" onclick="plusTimelineItem(-1)">{%include icons/button-left-arrow.svg %} Prev</button>
+          <button class="ztna-small-button-right dark-buttons-background light-blue-1 h4 ml-10" onclick="plusTimelineItem(1)">Next {%include icons/button-right-arrow.svg %}</button>
         </div>
         </div>
         

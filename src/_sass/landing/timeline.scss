@@ -11,8 +11,16 @@
 
   p {
     margin: 0 25px;
+    &:hover {
+      color: $timeline-active !important;
+      background-color: $dark-text !important;
+      border-radius: 25px;
+      padding: 8px 20px;
+      margin-left: 5px;
+    }
   }
-  p:first-child {
+
+  .active {
     color: $timeline-active !important;
     background-color: $dark-text !important;
     border-radius: 25px;
@@ -24,10 +32,6 @@
 .timeline-items {
   .timeline-item {
     display: none;
-  }
-
-  .timeline-item:first-child {
-    display: block;
   }
 }
 
