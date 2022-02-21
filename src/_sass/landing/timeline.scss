@@ -1,37 +1,40 @@
 @import "ztna-colors";
 
 .timeline {
-  width: 100%;
+  width: 90%;
   height: 50px;
   border-radius: 25px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 5px;
-
-  p {
-    margin: 0 25px;
-    &:hover {
-      color: $timeline-active !important;
-      background-color: $dark-text !important;
-      border-radius: 25px;
-      padding: 8px 20px;
-      margin-left: 5px;
-    }
-  }
+  position: relative;
 
   .active {
     color: $timeline-active !important;
     background-color: $dark-text !important;
     border-radius: 25px;
     padding: 8px 20px;
-    margin-left: 5px;
+    cursor: pointer;
+  }
+}
+
+.timelineYear {
+  padding: 8px 20px;
+
+  &:hover {
+    color: $timeline-active !important;
+    background-color: $dark-text !important;
+    border-radius: 25px;
+    padding: 8px 20px;
+    cursor: pointer;
   }
 }
 
 .timeline-items {
   .timeline-item {
     display: none;
+    opacity: 1;
   }
 }
 
@@ -41,3 +44,58 @@
   justify-content: center;
   gap: 10px;
 }
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+// @media only screen and (max-width: 700px) {
+//   .timelineYear {
+//     padding: 8px 14px;
+
+//     &:hover {
+//       padding: 8px 14px;
+//     }
+//   }
+
+//   .timeline {
+//     .active {
+//       padding: 8px 14px;
+//     }
+//   }
+// }
+
+@media only screen and (max-width: $breakpoint-md) {
+  .timeline {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 0;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+//style="left: {{forloop.index}}00px"
+// position: absolute;

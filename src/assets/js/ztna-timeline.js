@@ -3,9 +3,12 @@ showTimelineItems(timelineItemIndex);
 
 function plusTimelineItem(n) {
   showTimelineItems((timelineItemIndex += n));
+  console.log("click");
+  n > 0
+    ? (document.getElementById("timeline").scrollLeft += 74)
+    : (document.getElementById("timeline").scrollLeft -= 74);
 }
 
-// Thumbnail image controls
 function currentTimelineItem(n) {
   showTimelineItems((timelineItemIndex = n));
 }
@@ -14,6 +17,7 @@ function showTimelineItems(n) {
   let i;
   const timelineItems = document.getElementsByClassName("timeline-item");
   const timelineYears = document.getElementsByClassName("timelineYear");
+
   if (n > timelineItems.length) {
     timelineItemIndex = 1;
   }
@@ -31,4 +35,5 @@ function showTimelineItems(n) {
   }
   timelineItems[timelineItemIndex - 1].style.display = "block";
   timelineYears[timelineItemIndex - 1].className += " active";
+  console.log(timelineYears);
 }
