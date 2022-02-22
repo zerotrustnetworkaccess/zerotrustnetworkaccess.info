@@ -1,9 +1,11 @@
 name: "Identity Defined Network"
+filters:
+  - idn
 abbreviation: "IDN"
 sort_order: "5"
 description: "..."
 image: "/assets/images/architecture/idn.png"
-paragraphs: 
+paragraphs:
   - text: "Nullam quis risus eget urna mollis ornare."
 strengths:
   - title: "Nullam quis risus eget urna mollis ornare."
@@ -26,7 +28,7 @@ tradeoffs:
     description: ""
   - title: "Fusce dapibus, tellus ac cursus commodo."
     description: ""
-vendors: 
+vendors:
   - company: "Tempered Networks"
     product: "Airwall"
     url: "https://www.temperednetworks.com/"

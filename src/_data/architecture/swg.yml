@@ -1,4 +1,6 @@
 name: "Secure Web Gateway"
+filters:
+  - swg
 abbreviation: "SWG"
 sort_order: "3"
 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non libero at sapien laoreet dapibus. Donec in semper augue. Sed elit odio, consectetur ut risus ac, sodales scelerisque nisl. Integer enim eros, ullamcorper a sodales faucibus, molestie vel urna. Sed euismod molestie pretium."

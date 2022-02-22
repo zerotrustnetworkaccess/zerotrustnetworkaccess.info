@@ -1,6 +1,8 @@
 name: "Zero-Trust Overlay Network"
+filters:
+  - zton
 abbreviation: ""
-sort_order: 1
+sort_order: "1"
 description: "Direct, peer to peer connectivity enabled by UDP or TCP hole punching."
 image: "/assets/images/architecture/zton.png"
 paragraphs:
@@ -72,7 +74,7 @@ vendors:
     license: "Open Source"
     deployment: "SaaS and Self-hosted"
     pricing: "Published"
-  
+
   - company: "Ananda Networks"
     product: "Ananda"
     url: "https://www.ananda.net/"
@@ -106,4 +108,4 @@ vendors:
     url: "https://gravitl.com/"
     license: "Open Source"
     deployment: "Self-hosted"
-    pricing: "Paid support" 
+    pricing: "Paid support"

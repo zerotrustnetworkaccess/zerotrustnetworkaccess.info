@@ -35,5 +35,4 @@ function showTimelineItems(n) {
   }
   timelineItems[timelineItemIndex - 1].style.display = "block";
   timelineYears[timelineItemIndex - 1].className += " active";
-  console.log(timelineYears);
 }
