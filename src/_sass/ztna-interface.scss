@@ -210,4 +210,16 @@ td {
     @include postTemplateWidth(336px);
     @include postTemplateHeight(200px);
   }
+
+  .ztna-table {
+    width: 1170px;
+  }
+
+  .table-wrapper {
+    overflow-x: scroll;
+    z-index: 10;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
 }
