@@ -1,5 +1,6 @@
 enable: true
 label: "Lorem Ipsum is simply"
+title: "The no-bullshit ZTNA vendor directory"
 categories:
   - name: "Cloud-based Identity Aware Proxy"
     filter: "cbiawp"

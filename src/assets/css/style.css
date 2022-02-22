@@ -4363,43 +4363,43 @@ a.btn-play-wrapper .btn-play:hover {
   font-size: 0;
   line-height: 0;
   padding: 0;
-  margin-bottom: 1.2rem;
+  /* margin-bottom: 1.2rem; */
 }
 .isotope-filter ul li {
   display: inline-block;
-  padding: 0;
+  /* padding: 0;
   margin: 0 1rem 0 0;
-  line-height: 2.5rem;
+  line-height: 2.5rem; */
 }
-.text-center .isotope-filter ul li {
+/* .text-center .isotope-filter ul li {
   margin: 0 0.5rem;
-}
+} */
 .isotope-filter ul li a {
-  color: #404040;
+  /* color: #404040; */
   cursor: pointer;
   -webkit-transition: all 150ms ease-in-out;
   -o-transition: all 150ms ease-in-out;
   transition: all 150ms ease-in-out;
-  font-weight: 500;
-  text-transform: uppercase;
-  padding: 0.6rem 0.9rem 0.55rem;
-  font-size: 0.65rem;
+  /* font-weight: 500; */
+  /* text-transform: uppercase; */
+  /* padding: 0.6rem 0.9rem 0.55rem; */
+  /* font-size: 0.65rem;
   letter-spacing: 0.025rem;
-  line-height: 1;
-  border-radius: 1.5rem;
-  background: none;
+  line-height: 1; */
+  /* border-radius: 1.5rem; */
+  /* background: none; */
 }
-.isotope-filter ul li a:hover {
+/* .isotope-filter ul li a:hover {
   color: var(--color-default) !important;
-}
+} */
 .isotope-filter ul li a.active {
-  color: var(--color-default);
+  /* color: var(--color-default);
   background: var(--color-white);
   -webkit-box-shadow: var(--shadow) !important;
-  box-shadow: var(--shadow) !important;
+  box-shadow: var(--shadow) !important; */
 }
 .isotope-filter ul li a.active:hover {
-  color: var(--color-default) !important;
+  /* color: var(--color-default) !important; */
 }
 .mosaic .item {
   width: 25%;

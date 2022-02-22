@@ -1,6 +1,7 @@
 name: "Cloud-based Identity Aware Proxy"
 filters:
   - cbiawp
+displayByDeafult: false
 abbreviation: ""
 sort_order: "6"
 description: "..."

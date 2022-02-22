@@ -16,8 +16,11 @@ $content-width: 1170px;
   border-radius: 20px;
   display: flex;
   align-items: center;
-  a {
+  a,
+  &:hover {
+    cursor: pointer;
     text-decoration: none;
+    @extend .light-blue-1;
   }
 }
 
@@ -83,7 +86,10 @@ input {
 .ztna-tag-large {
   @extend .ztna-tag;
   padding: 8px 20px;
-  width: min-content;
+  width: fit-content;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .ztna-tag-small {
@@ -136,13 +142,20 @@ input {
 }
 
 .ztna-table-body {
-  tr:last-child th:first-child {
-    border-bottom-left-radius: 20px;
+  tr:last-child {
+    th:first-child,
+    td:first-child {
+      border-bottom-left-radius: 20px;
+    }
   }
 
-  tr:last-child th:last-child {
-    border-bottom-right-radius: 20px;
+  tr:last-child {
+    th:last-child,
+    td:last-child {
+      border-bottom-right-radius: 20px;
+    }
   }
+
   tr:nth-child(even) {
     background-color: $background-color;
   }
@@ -150,15 +163,19 @@ input {
   tr:nth-child(odd) {
     background-color: $table-backgroud;
   }
-
-  th:nth-child(2) {
-    @extend .h4;
-  }
 }
 
 th {
   @extend .ztna-small-text;
   padding: 8px 20px;
+}
+
+td {
+  @extend .ztna-small-text;
+  padding: 8px 20px;
+  a {
+    @extend .h4;
+  }
 }
 
 .ztna-slider-image {

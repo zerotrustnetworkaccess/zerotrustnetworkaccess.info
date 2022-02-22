@@ -4,12 +4,19 @@
     
     {% assign vendors = site.data.landing.vendors %}
     <div class="grid grid-view">
-      <div class="isotope-filter text-center">
+      {% if vendors.title %}
+      <p class="h5 light-text-2">{{vendors.label}}</p>
+      {% endif %}
+      <div class="space10"></div>
+      {% if vendors.title %}
+      <h2 class="dark-text ztna-margin-bottom-30-20">{{vendors.title}}</h2>
+      {% endif %}
+      <div class="isotope-filter ztna-margin-bottom-50-40">
         <ul>
-          <li><a class="button active" data-filter="*">All</a></li>
           {% for filters in vendors.categories %}
-          <li><a class="button" data-filter=".{{filters.filter}}">{{filters.name}}</a></li>
+          <li><a class="ztna-tag-large background-color light-text-1 ztna-small-text mb-10 mr-10 button" data-filter=".{{filters.filter}}">{{filters.name}}</a></li>
           {% endfor %}
+          <li><a class="ztna-tag-large background-color light-text-1 ztna-small-text mb-10 mr-10 button" data-filter="*">All</a></li>
         </ul>
       </div>
 
@@ -17,211 +24,84 @@
       {% for architecture in site.data.architecture %}
       {% assign arch = architecture[1] %}
         {% if arch.vendors %}
-          <div class="item grid-sizer col-12 {% for filter in arch.filters %} {{filter}} {% endfor %}">
-            <div class="space140" id="{{arch.name | replace: ' ', '-' | downcase }}"></div>
-            <h3 class="display-3">{{arch.name}} {% if arch.abbreviation != "" %}({{arch.abbreviation}}){% endif %}</h3>
-            <div class="space10"></div>
+          <div class="item grid-sizer col-12 
+          {% for filter in arch.filters %} {{filter}} {% endfor %}
+          {% if arch.displayByDeafult %} focus {% endif %}
+          ">
+            <div id="{{arch.name | replace: ' ', '-' | downcase }}"></div>
+            <h2 class="dark-text ztna-margin-bottom-20-10">{{arch.name}} {% if arch.abbreviation != "" %}({{arch.abbreviation}}){% endif %}</h2>
             <div class="row">
-              <div class="col-md-8">
+              <div class="col-12">
                 {% for paragraph in arch.paragraphs %}
-                  <p>{{paragraph.text}}</p>
+                  <p class="ztna-small-text">{{paragraph.text}}</p>
                 {% endfor %}
               </div>
-              <div class="col-md-4"></div>
             </div>
             <div class="space30"></div>
         
           <div class="row">
             <div class="col-md-4">
               {% if arch.strengths %}
-                <h4>Strengths</h4>
+                <h4 class="dark-text ztna-margin-bottom-20-10"> Strengths</h4>
                 <ul class="icon-list bullet-green">
                   {% for strength in arch.strengths %}
-                    <li><i class="jam jam-check"></i> {{strength.title}}</li>
+                    <li><i class="jam jam-plus-circle"></i> {{strength.title}}</li>
+                    <div class="space10"></div>
                   {% endfor %}
                 </ul>
               {% endif %}
             </div>
             <div class="col-md-4">
-              <h4>Weaknesses</h4>
+              <h4 class="dark-text ztna-margin-bottom-20-10">Weaknesses</h4>
               <ul class="icon-list bullet-red">
                 {% for weakness in arch.weaknesses %}
                   <li><i class="jam jam-minus-circle"></i> {{weakness.title}}</li>
+                  <div class="space10"></div>
                 {% endfor %}
               </ul>
             </div>
             <div class="col-md-4">
-              <h4>Trade-offs</h4>
+              <h4 class="dark-text ztna-margin-bottom-20-10">Trade-offs</h4>
               <ul class="icon-list bullet-blue">
                 {% for tradeoff in arch.tradeoffs %}
                   <li><i class="jam jam-star"></i> {{tradeoff.title}}</li>
+                  <div class="space10"></div>
                 {% endfor %}
               </ul>
             </div>
           </div>
-      
-            <div class="space60"></div>
-            <div class="text-center">
-              <h2 class="title-bg bg-default color-grey">{{arch.name}} Vendors</h2>
-            </div>
-           <div class="container-fluid">
-              <table class="table table-sm">
-                <thead class="thead-light">
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Company</th>
-                    <th scope="col">Product</th>
-                    <th scope="col">License</th>
-                    <th scope="col">Deployment</th>
-                    <th scope="col">Pricing</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {% assign vendors = arch.vendors | sort: 'company' %}
-                  {% for vendor in vendors %}
-                  <tr>
-                    <td scope="row">{{ forloop.index }}.</td>
-                    <td><a href="{{vendor.url}}" target="_blank" rel="noopener noreferrer" class="color-blue">{{vendor.company}}</a></td>
-                    <td>{{vendor.product}}</td>
-                    <td>{{vendor.license}}</td>
-                    <td>{{vendor.deployment}}</td>
-                    <td>{{vendor.pricing}}</td>
-                  </tr>
-                  {% endfor %}
-                </tbody>
-              </table>
-            </div>
+            <div class="space30"></div>
+            <h3 class="dark-text ztna-margin-bottom-20-10">{{arch.name}} Vendors</h3>
+            <table class="ztna-table ztna-margin-bottom-50-40">
+              <thead class="ztna-table-head background-color light-text-2 ztna-h4">
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Company</th>
+                  <th scope="col">Product</th>
+                  <th scope="col">License</th>
+                  <th scope="col">Deployment</th>
+                  <th scope="col">Pricing</th>
+                </tr>
+              </thead>
+              <tbody class="ztna-table-body ztna-small-text">
+                {% assign vendors = arch.vendors | sort: 'company' %}
+                {% for vendor in vendors %}
+                <tr>
+                  <td scope="row">{{ forloop.index }}.</td>
+                  <td><a href="{{vendor.url}}" target="_blank" rel="noopener noreferrer" class="light-blue-1">{{vendor.company}}</a></td>
+                  <td>{{vendor.product}}</td>
+                  <td>{{vendor.license}}</td>
+                  <td>{{vendor.deployment}}</td>
+                  <td>{{vendor.pricing}}</td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+       
           </div>
         {% endif %}
       {% endfor %}
-    </div>
-  </div>
-    </div>
-  </div>
-
-
-
-  <!-- ---
-layout: page
-title: "Masonry Portfolio"
-sub_title: "Aenean lacinia bibendum nulla sed consectetur"
-black_menu: true
-portfolio_area:
-  categories:
-    - title: "Branding"
-      filter: "branding"
-
-    - title: "Corporate"
-      filter: "corporate"
-
-    - title: "Application"
-      filter: "application"
-
-    - title: "Video"
-      filter: "video"
-  portfolios:
-    - title: "Fringilla Nullam"
-      image: "/assets/images/art/m1.jpg"
-      url: "#"
-      filters:
-        - corporate
-        - branding
-    - title: "Ridiculus Parturient"
-      image: "/assets/images/art/m2.jpg"
-      url: "#"
-      filters:
-        - application
-    - title: "Ornare Ipsum"
-      image: "/assets/images/art/m3.jpg"
-      url: "#"
-      filters:
-        - video
-    - title: "Nullam Mollis"
-      image: "/assets/images/art/m4.jpg"
-      url: "#"
-      filters:
-        - corporate
-        - application
-    - title: "Euismod Risus"
-      image: "/assets/images/art/m5.jpg"
-      url: "#"
-      filters:
-        - branding
-    - title: "Pellentesque Commodo"
-      image: "/assets/images/art/m6.jpg"
-      url: "#"
-      filters:
-        - video
-        - branding
-    - title: "Pellentesque Commodo"
-      image: "/assets/images/art/m7.jpg"
-      url: "#"
-      filters:
-        - video
-        - branding
-    - title: "Pellentesque Commodo"
-      image: "/assets/images/art/m8.jpg"
-      url: "#"
-      filters:
-        - video
-        - branding
-    - title: "Pellentesque Commodo"
-      image: "/assets/images/art/m9.jpg"
-      url: "#"
-      filters:
-        - video
-        - branding
-    - title: "Pellentesque Commodo"
-      image: "/assets/images/art/m10.jpg"
-      url: "#"
-      filters:
-        - video
-        - branding
-    - title: "Pellentesque Commodo"
-      image: "/assets/images/art/m11.jpg"
-      url: "#"
-      filters:
-        - video
-        - branding
-    - title: "Pellentesque Commodo"
-      image: "/assets/images/art/m12.jpg"
-      url: "#"
-      filters:
-        - video
-        - branding
---- -->
-
-<!-- <div class="wrapper light-wrapper">
-  <div class="container inner">
-    <div class="grid grid-view">
-      <div class="isotope-filter text-center">
-        <ul>
-          <li><a class="button active" data-filter="*">All</a></li>
-          {% for category in page.portfolio_area.categories %}
-           <li><a class="button" data-filter=".{{category.filter}}">{{category.title}}</a></li>
-          {% endfor %}
-        </ul>
+        </div>
       </div>
-      <div class="clearfix"></div>
-      <div class="tiles tiles-m">
-        <div class="row isotope">
-        {% for portfolio in page.portfolio_area.portfolios %}
-          <div class="item grid-sizer col-md-6 col-lg-4 {% for filter in portfolio.filters %} {{filter}} {% endfor %}">
-            <figure class="overlay overlay1 rounded">
-            <a href="{{portfolio.url}}">
-             <img src="{{portfolio.image}}" alt="{{portfolio.title}}"/></a>
-              <figcaption>
-                <h5 class="from-top mb-0">{{portfolio.title}}</h5>
-              </figcaption>
-            </figure>
-          </div>
-          <!-- /.item -->
-         <!-- {% endfor %} -->
-        <!-- </div> -->
-        <!-- /.row -->
-      <!-- </div> -->
-      <!-- /.tiles -->
-    <!-- </div> -->
-    <!-- /.grid -->
-  <!-- </div>
-</div> --> 
+    </div>
+  </div>

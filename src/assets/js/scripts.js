@@ -161,6 +161,7 @@ $(document).ready(function () {
       var $grid = $gridContainer.find(".isotope").imagesLoaded(function () {
         $grid.isotope({
           itemSelector: ".item",
+          filter: ".focus",
           layoutMode: "masonry",
           percentPosition: true,
           masonry: {
