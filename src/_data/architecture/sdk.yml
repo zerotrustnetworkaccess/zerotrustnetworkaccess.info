@@ -1,6 +1,7 @@
 name: "Software Development Kits (SDKs)"
 filters:
   - sdk
+displayByDeafult: false
 abbreviation: "SDK"
 sort_order: "5"
 description: ""

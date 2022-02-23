@@ -127,7 +127,7 @@ input {
 .ztna-table {
   border-radius: 20px;
   table-layout: auto;
-  width: 100%;
+  // width: 100%;
 }
 
 .ztna-table-head {
@@ -178,6 +178,14 @@ td {
   }
 }
 
+.ztna-overflow {
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 .ztna-slider-image {
   border-radius: 30px;
 }
@@ -202,6 +210,20 @@ td {
   }
 }
 
+@media only screen and (max-width: $breakpoint-md) {
+  .ztna-table {
+    width: 1170px;
+    z-index: 10;
+  }
+
+  .table-wrapper {
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
 @media only screen and (max-width: $breakpoint-sm) {
   .ztna-post-ui {
     @include postTemplateWidth(336px);
@@ -213,11 +235,12 @@ td {
 
   .ztna-table {
     width: 1170px;
+    z-index: 10;
   }
 
   .table-wrapper {
     overflow-x: scroll;
-    z-index: 10;
+    scroll-behavior: smooth;
     &::-webkit-scrollbar {
       display: none;
     }

@@ -2,7 +2,7 @@ name: "Identity Defined Network"
 filters:
   - idn
 abbreviation: "IDN"
-displayByDeafult: true
+displayByDeafult: false
 sort_order: "5"
 description: "..."
 image: "/assets/images/architecture/idn.png"

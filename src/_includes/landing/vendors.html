@@ -1,17 +1,17 @@
 
-<div class="container-fluid background-white ztna-landing-section-wrapper d-flex justify-content-center">
+<div class="container-fluid background-white ztna-landing-section-wrapper d-flex justify-content-center px-0 ">
   <div class="ztna-content-wrapper"> 
     
     {% assign vendors = site.data.landing.vendors %}
     <div class="grid grid-view">
       {% if vendors.title %}
-      <p class="h5 light-text-2">{{vendors.label}}</p>
+      <p class="h5 light-text-2 ml-15">{{vendors.label}}</p>
       {% endif %}
       <div class="space10"></div>
       {% if vendors.title %}
-      <h2 class="dark-text ztna-margin-bottom-30-20">{{vendors.title}}</h2>
+      <h2 class="dark-text ztna-margin-bottom-30-20 ml-15 mr-15">{{vendors.title}}</h2>
       {% endif %}
-      <div class="isotope-filter ztna-margin-bottom-50-40">
+      <div class="isotope-filter ztna-margin-bottom-50-40 ml-15 mr-15">
         <ul>
           {% for filters in vendors.categories %}
           <li><a class="ztna-tag-large background-color light-text-1 ztna-small-text mb-10 mr-10 button" data-filter=".{{filters.filter}}">{{filters.name}}</a></li>
@@ -20,27 +20,28 @@
         </ul>
       </div>
 
-    <div class="row isotope">
+    <div class="row isotope ">
       {% for architecture in site.data.architecture %}
       {% assign arch = architecture[1] %}
         {% if arch.vendors %}
           <div class="item grid-sizer col-12 
           {% for filter in arch.filters %} {{filter}} {% endfor %}
           {% if arch.displayByDeafult %} focus {% endif %}
-          ">
+          " >
             <div id="{{arch.name | replace: ' ', '-' | downcase }}"></div>
-            <h2 class="dark-text ztna-margin-bottom-20-10">{{arch.name}} {% if arch.abbreviation != "" %}({{arch.abbreviation}}){% endif %}</h2>
+            <h2 class="dark-text ztna-margin-bottom-20-10 ml-15 mr-15">{{arch.name}} {% if arch.abbreviation != "" %}({{arch.abbreviation}}){% endif %}</h2>
             <div class="row">
               <div class="col-12">
                 {% for paragraph in arch.paragraphs %}
-                  <p class="ztna-small-text">{{paragraph.text}}</p>
+                  <p class="ztna-small-text ml-15 mr-15">{{paragraph.text}}</p>
                 {% endfor %}
               </div>
             </div>
             <div class="space30"></div>
         
           <div class="row">
-            <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="col-lg-4 col-md-6 col-sm-12 ">
+              <div class="ml-15 mr-15">
               {% if arch.strengths %}
                 <h4 class="dark-text ztna-margin-bottom-20-10"> Strengths</h4>
                 <ul class="icon-list bullet-green">
@@ -51,7 +52,10 @@
                 </ul>
               {% endif %}
             </div>
+            </div>
             <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="ml-15 mr-15">
+                {% if arch.strengths %}
               <h4 class="dark-text ztna-margin-bottom-20-10">Weaknesses</h4>
               <ul class="icon-list bullet-red">
                 {% for weakness in arch.weaknesses %}
@@ -59,8 +63,12 @@
                   <div class="space10"></div>
                 {% endfor %}
               </ul>
+              {% endif %}
+            </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="ml-15 mr-15">
+                {% if arch.strengths %}
               <h4 class="dark-text ztna-margin-bottom-20-10">Trade-offs</h4>
               <ul class="icon-list bullet-blue">
                 {% for tradeoff in arch.tradeoffs %}
@@ -68,12 +76,14 @@
                   <div class="space10"></div>
                 {% endfor %}
               </ul>
+              {% endif %}
+            </div>
             </div>
           </div>
             <div class="space30"></div>
-            <h3 class="dark-text ztna-margin-bottom-20-10">{{arch.name}} Vendors</h3>
+            <h3 class="dark-text ztna-margin-bottom-20-10 ml-15 mr-15">{{arch.name}} Vendors</h3>
               <div class="table-wrapper">
-                <table class="ztna-table ztna-margin-bottom-50-40">
+                <table class="ztna-table ml-15 ztna-margin-bottom-50-40">
                   <thead class="ztna-table-head background-color light-text-2 ztna-h4">
                     <tr>
                       <th scope="col">#</th>

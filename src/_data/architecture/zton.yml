@@ -1,6 +1,7 @@
 name: "Zero-Trust Overlay Network"
 filters:
   - zton
+displayByDeafult: true
 abbreviation: ""
 sort_order: "1"
 description: "Direct, peer to peer connectivity enabled by UDP or TCP hole punching."

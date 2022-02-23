@@ -1,6 +1,7 @@
 name: "SD-WAN"
 filters:
   - sdwan
+displayByDeafult: false
 abbreviation: ""
 sort_order: "11"
 description: "Inter-site encryption and routing, bandwidth control, path selection and application visibility between appliances at the edge of each logical or physical network in the organisation."

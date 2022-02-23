@@ -1,6 +1,7 @@
 name: "Identity Aware Proxy"
 filters:
   - iap
+displayByDeafult: false
 abbreviation: "IAP"
 sort_order: "12"
 description: "..."
