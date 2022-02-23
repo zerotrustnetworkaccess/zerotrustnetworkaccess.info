@@ -1,7 +1,7 @@
-
-<div class="container-fluid background-white ztna-landing-section-wrapper d-flex justify-content-center px-0 ">
-  <div class="ztna-content-wrapper"> 
-    
+<div
+  class="container-fluid background-white ztna-landing-section-wrapper d-flex justify-content-center px-0"
+>
+  <div class="ztna-content-wrapper">
     {% assign vendors = site.data.landing.vendors %}
     <div class="grid grid-view">
       {% if vendors.title %}
@@ -9,110 +9,151 @@
       {% endif %}
       <div class="space10"></div>
       {% if vendors.title %}
-      <h2 class="dark-text ztna-margin-bottom-30-20 ml-15 mr-15">{{vendors.title}}</h2>
+      <h2 class="dark-text ztna-margin-bottom-30-20 ml-15 mr-15">
+        {{vendors.title}}
+      </h2>
       {% endif %}
       <div class="isotope-filter ztna-margin-bottom-50-40 ml-15 mr-15">
         <ul>
           {% for filters in vendors.categories %}
-          <li><a class="ztna-tag-large background-color light-text-1 ztna-small-text mb-10 mr-10 button" data-filter=".{{filters.filter}}">{{filters.name}}</a></li>
+          <li>
+            <a
+              class="ztna-tag-large background-color light-text-1 ztna-small-text mb-10 mr-10 button"
+              data-filter=".{{filters.filter}}"
+            >
+              {{filters.name}}
+            </a>
+          </li>
           {% endfor %}
-          <li><a class="ztna-tag-large background-color light-text-1 ztna-small-text mb-10 mr-10 button" data-filter="*">All</a></li>
+          <li>
+            <a
+              class="ztna-tag-large background-color light-text-1 ztna-small-text mb-10 mr-10 button"
+              data-filter="*"
+            >
+              All
+            </a>
+          </li>
         </ul>
       </div>
 
-    <div class="row isotope ">
-      {% for architecture in site.data.architecture %}
-      {% assign arch = architecture[1] %}
-        {% if arch.vendors %}
-          <div class="item grid-sizer col-12 
+      <div class="row isotope">
+        {% for architecture in site.data.architecture %} {% assign arch =
+        architecture[1] %} {% if arch.vendors %}
+        <div
+          class="item grid-sizer col-12 
           {% for filter in arch.filters %} {{filter}} {% endfor %}
           {% if arch.displayByDeafult %} focus {% endif %}
-          " >
-            <div id="{{arch.name | replace: ' ', '-' | downcase }}"></div>
-            <h2 class="dark-text ztna-margin-bottom-20-10 ml-15 mr-15">{{arch.name}} {% if arch.abbreviation != "" %}({{arch.abbreviation}}){% endif %}</h2>
-            <div class="row">
-              <div class="col-12">
-                {% for paragraph in arch.paragraphs %}
-                  <p class="ztna-small-text ml-15 mr-15">{{paragraph.text}}</p>
-                {% endfor %}
-              </div>
-            </div>
-            <div class="space30"></div>
-        
+          "
+        >
+          <div id="{{arch.name | replace: ' ', '-' | downcase }}"></div>
+          <h2 class="dark-text ztna-margin-bottom-20-10 ml-15 mr-15">
+            {{arch.name}} {% if arch.abbreviation != ""
+            %}({{arch.abbreviation}}){% endif %}
+          </h2>
           <div class="row">
-            <div class="col-lg-4 col-md-6 col-sm-12 ">
+            <div class="col-12">
+              {% for paragraph in arch.paragraphs %}
+              <p class="ztna-small-text ml-15 mr-15">{{paragraph.text}}</p>
+              {% endfor %}
+            </div>
+          </div>
+          <div class="space30"></div>
+
+          <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12">
               <div class="ml-15 mr-15">
-              {% if arch.strengths %}
-                <h4 class="dark-text ztna-margin-bottom-20-10"> Strengths</h4>
+                {% if arch.strengths %}
+                <h4 class="dark-text ztna-margin-bottom-20-10">Strengths</h4>
                 <ul class="icon-list bullet-green">
                   {% for strength in arch.strengths %}
-                    <li><i class="jam jam-plus-circle"></i> {{strength.title}}</li>
-                    <div class="space10"></div>
+                  <li>
+                    <i class="jam jam-plus-circle"></i>
+                    {{strength.title}}
+                  </li>
+                  <div class="space10"></div>
                   {% endfor %}
                 </ul>
-              {% endif %}
-            </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-              <div class="ml-15 mr-15">
-                {% if arch.strengths %}
-              <h4 class="dark-text ztna-margin-bottom-20-10">Weaknesses</h4>
-              <ul class="icon-list bullet-red">
-                {% for weakness in arch.weaknesses %}
-                  <li><i class="jam jam-minus-circle"></i> {{weakness.title}}</li>
-                  <div class="space10"></div>
-                {% endfor %}
-              </ul>
-              {% endif %}
-            </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-              <div class="ml-15 mr-15">
-                {% if arch.strengths %}
-              <h4 class="dark-text ztna-margin-bottom-20-10">Trade-offs</h4>
-              <ul class="icon-list bullet-blue">
-                {% for tradeoff in arch.tradeoffs %}
-                  <li><i class="jam jam-star"></i> {{tradeoff.title}}</li>
-                  <div class="space10"></div>
-                {% endfor %}
-              </ul>
-              {% endif %}
-            </div>
-            </div>
-          </div>
-            <div class="space30"></div>
-            <h3 class="dark-text ztna-margin-bottom-20-10 ml-15 mr-15">{{arch.name}} Vendors</h3>
-              <div class="table-wrapper">
-                <table class="ztna-table ml-15 ztna-margin-bottom-50-40">
-                  <thead class="ztna-table-head background-color light-text-2 ztna-h4">
-                    <tr>
-                      <th scope="col">#</th>
-                      <th scope="col">Company</th>
-                      <th scope="col">Product</th>
-                      <th scope="col">License</th>
-                      <th scope="col">Deployment</th>
-                      <th scope="col">Pricing</th>
-                    </tr>
-                  </thead>
-                  <tbody class="ztna-table-body ztna-small-text">
-                    {% assign vendors = arch.vendors | sort: 'company' %}
-                    {% for vendor in vendors %}
-                    <tr>
-                      <td scope="row">{{ forloop.index }}.</td>
-                      <td><a href="{{vendor.url}}" target="_blank" rel="noopener noreferrer" class="light-blue-1">{{vendor.company}}</a></td>
-                      <td>{{vendor.product}}</td>
-                      <td>{{vendor.license}}</td>
-                      <td>{{vendor.deployment}}</td>
-                      <td>{{vendor.pricing}}</td>
-                    </tr>
-                    {% endfor %}
-                  </tbody>
-                </table>
+                {% endif %}
               </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="ml-15 mr-15">
+                {% if arch.strengths %}
+                <h4 class="dark-text ztna-margin-bottom-20-10">Weaknesses</h4>
+                <ul class="icon-list bullet-red">
+                  {% for weakness in arch.weaknesses %}
+                  <li>
+                    <i class="jam jam-minus-circle"></i>
+                    {{weakness.title}}
+                  </li>
+                  <div class="space10"></div>
+                  {% endfor %}
+                </ul>
+                {% endif %}
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="ml-15 mr-15">
+                {% if arch.strengths %}
+                <h4 class="dark-text ztna-margin-bottom-20-10">Trade-offs</h4>
+                <ul class="icon-list bullet-blue">
+                  {% for tradeoff in arch.tradeoffs %}
+                  <li>
+                    <i class="jam jam-star"></i>
+                    {{tradeoff.title}}
+                  </li>
+                  <div class="space10"></div>
+                  {% endfor %}
+                </ul>
+                {% endif %}
+              </div>
+            </div>
           </div>
-        {% endif %}
-      {% endfor %}
+          <div class="space30"></div>
+          <h3 class="dark-text ztna-margin-bottom-20-10 ml-15 mr-15">
+            {{arch.name}} Vendors
+          </h3>
+          <div class="table-wrapper">
+            <table class="ztna-table ml-15 ztna-margin-bottom-50-40">
+              <thead
+                class="ztna-table-head background-color light-text-2 ztna-h4"
+              >
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Company</th>
+                  <th scope="col">Product</th>
+                  <th scope="col">License</th>
+                  <th scope="col">Deployment</th>
+                  <th scope="col">Pricing</th>
+                </tr>
+              </thead>
+              <tbody class="ztna-table-body ztna-small-text">
+                {% assign vendors = arch.vendors | sort: 'company' %} {% for
+                vendor in vendors %}
+                <tr>
+                  <td scope="row">{{ forloop.index }}.</td>
+                  <td>
+                    <a
+                      href="{{vendor.url}}"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="light-blue-1"
+                    >
+                      {{vendor.company}}
+                    </a>
+                  </td>
+                  <td>{{vendor.product}}</td>
+                  <td>{{vendor.license}}</td>
+                  <td>{{vendor.deployment}}</td>
+                  <td>{{vendor.pricing}}</td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
         </div>
+        {% endif %} {% endfor %}
       </div>
     </div>
   </div>
+</div>

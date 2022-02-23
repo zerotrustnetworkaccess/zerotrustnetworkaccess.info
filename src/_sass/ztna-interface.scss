@@ -4,13 +4,13 @@
 
 $content-width: 1170px;
 
-@mixin postTemplateWidth($px) {
-  width: $px;
-}
+// @mixin postTemplateWidth($px) {
+//   width: $px;
+// }
 
-@mixin postTemplateHeight($px) {
-  height: $px;
-}
+// @mixin postTemplateHeight($px) {
+//   height: $px;
+// }
 
 .ztna-tag {
   border-radius: 20px;
@@ -107,11 +107,16 @@ input {
   align-items: center;
 }
 
+.ztna-post-wrapper {
+  max-width: 364px;
+  width: 100%;
+  margin: 50px 0px 40px 0px;
+}
 .ztna-post-image {
   border-radius: 30px;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
 }
 
 .ztna-blog-date {
@@ -192,21 +197,21 @@ td {
 
 @media only screen and (min-width: $breakpoint-lg) {
   .ztna-post-ui {
-    @include postTemplateWidth(364px);
+    // @include postTemplateWidth(364px);
   }
   .ztna-post-image {
-    @include postTemplateWidth(364px);
-    @include postTemplateHeight(230px);
+    // @include postTemplateWidth(364px);
+    // @include postTemplateHeight(230px);
   }
 }
 
 @media only screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-lg) {
   .ztna-post-ui {
-    @include postTemplateWidth(316px);
+    // @include postTemplateWidth(316px);
   }
   .ztna-post-image {
-    @include postTemplateWidth(316px);
-    @include postTemplateHeight(200px);
+    // @include postTemplateWidth(316px);
+    // @include postTemplateHeight(200px);
   }
 }
 
@@ -226,11 +231,11 @@ td {
 }
 @media only screen and (max-width: $breakpoint-sm) {
   .ztna-post-ui {
-    @include postTemplateWidth(336px);
+    // @include postTemplateWidth(336px);
   }
   .ztna-post-image {
-    @include postTemplateWidth(336px);
-    @include postTemplateHeight(200px);
+    // @include postTemplateWidth(336px);
+    // @include postTemplateHeight(200px);
   }
 
   .ztna-table {
