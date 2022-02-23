@@ -7,13 +7,4 @@ more:
     text: Andrew Lerner, Gartner (2019)
   - link: https://go.forrester.com/blogs/take-security-to-the-zero-trust-edge
     text: David Holmes, Forrester (2021
-image: "/assets/images/landing/sase.png"
-# lists:
-#   - title: "Network"
-#     description: "(such as SD-WAN, NaaS, CDN). Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut metus mauris."
-#     icon: "jam jam-search-folder"
-#     icon_color: "teal"
-#   - title: "Security"
-#     description: "(such as SWG, CASB, FWaaS and ZTNA). Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut metus mauris."
-#     icon: "jam jam-lightbulb"
-#     icon_color: "blue"
+image: "/assets/images/landing/sase@2x.png"
