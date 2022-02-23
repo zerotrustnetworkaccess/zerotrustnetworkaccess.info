@@ -22,7 +22,7 @@
         <figure class="ztna-slider-image mb-20">
           {% if arch.image %}
           <div class="item-detailed-image">
-            <img src="{{arch.image}}" alt="{{arch.name}}"/>
+            <img srcset="{{arch.image}} 1x, {{arch.image_2x}} 2x" alt="{{arch.name}}"/>
           </div>
           {% endif %}
         </figure>

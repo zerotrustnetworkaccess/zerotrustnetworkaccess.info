@@ -5,7 +5,8 @@ displayByDeafult: false
 abbreviation: ""
 sort_order: "6"
 description: "..."
-image: "/assets/images/architecture/cloud-proxy@2x.png"
+image: "/assets/images/architecture/cloud-proxy.png"
+image_2x: "/assets/images/architecture/cloud-proxy@2x.png"
 paragraphs:
   - text: "Vendor ingests some, or all traffic from the Enterprise to the vendor's network, applies security filtering and provides egress pathways to the Public Internet, SaaS or internal applications."
 strengths:

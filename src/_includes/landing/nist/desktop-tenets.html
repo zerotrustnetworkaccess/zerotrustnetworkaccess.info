@@ -14,7 +14,7 @@
         {% endfor %}
       </div>
       <div class="row justify-content-start">
-        <img src="{{site.data.landing.nist-sp-800-207.desktop_illustration}}" class="tenet-illustration-desktop"> 
+        <img srcset="{{site.data.landing.nist-sp-800-207.desktop_illustration}} 1x, {{site.data.landing.nist-sp-800-207.desktop_illustration_2x}} 2x" class="tenet-illustration-desktop" alt="{{site.data.landing.nist-sp-800-207.title}}"> 
       </div>
       <div class="row d-flex justify-content-center">
         {% for tenet in nist.tenets %}

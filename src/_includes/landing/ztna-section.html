@@ -7,20 +7,21 @@
         {% if ztna.image %}
         <div class="col-md-12 col-lg-6 d-flex justify-content-center order-last order-lg-first">
           <figure>
-            <img src="{{ztna.image}}" alt="{{ztna.title}}" class="ztna-margin-top-50-40 "/>
+            <img 
+            srcset="{{ztna.image}} 1x, {{ztna.image_2x}} 2x" alt="{{ztna.title}}" class="ztna-margin-top-50-40 "/>
           </figure>
         </div>
         {% endif %}
 
         <div class="col-md-12 col-lg-6 order-first d-flex justify-content-center">
           <div>
-          {% if ztna.title %}
+          {% if ztna.label %}
          
-          <p class="h5 light-text-2">{{ztna.title}}</p>
+          <p class="h5 light-text-2">{{ztna.label}}</p>
           {% endif %}
           <div class="space10"></div>
-          {% if ztna.sub_title %}
-          <h2 class="dark-text ztna-margin-bottom-30-20">{{ztna.sub_title}}</h2>
+          {% if ztna.title %}
+          <h2 class="dark-text ztna-margin-bottom-30-20">{{ztna.title}}</h2>
           {% endif %}
           
           {% if ztna.description %}

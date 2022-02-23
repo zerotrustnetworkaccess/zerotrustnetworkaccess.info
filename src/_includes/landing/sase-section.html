@@ -6,12 +6,12 @@
                 
 
                 <div class="col-md-12 col-lg-6 ">
-                  {% if sase.title %}
-                  <p class="h5 light-text-2">{{sase.title}}</p>
+                  {% if sase.label %}
+                  <p class="h5 light-text-2">{{sase.label}}</p>
                   {% endif %}
                   <div class="space10"></div>
-                  {% if sase.sub_title %}
-                  <h2 class="dark-text ztna-margin-bottom-30-20">{{sase.sub_title}}</h2>
+                  {% if sase.title %}
+                  <h2 class="dark-text ztna-margin-bottom-30-20">{{sase.title}}</h2>
                   {% endif %}
                   
                   {% if sase.description %}
@@ -31,7 +31,7 @@
                 {% if sase.image %}
                 <div class="col-md-12 col-lg-6 d-flex justify-content-center ">
                   <figure>
-                    <img src="{{sase.image}}" alt="{{sase.title}}" class="ztna-margin-top-50-40 "/>
+                    <img srcset="{{sase.image}} 1x, {{sase.image_2x}} 2x" alt="{{sase.title}}" class="ztna-margin-top-50-40" alt="{{sase.title}}"/>
                   </figure>
                 </div>
                 {% endif %}

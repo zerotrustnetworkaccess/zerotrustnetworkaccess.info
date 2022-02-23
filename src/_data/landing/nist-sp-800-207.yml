@@ -52,5 +52,7 @@ tenets:
     color: "pink"
     image: "/assets/images/landing/nist/nist-tenets-lg/7.png"
 
-desktop_illustration: "/assets/images/landing/7tenets-arrows-desktop@2x.png"
-mobile_illustration: "/assets/images/landing/7tenets-arrows-responsive@2x.png"
+desktop_illustration: "/assets/images/landing/7tenets-arrows-desktop.png"
+desktop_illustration_2x: "/assets/images/landing/7tenets-arrows-desktop@2x.png"
+mobile_illustration: "/assets/images/landing/7tenets-arrows-responsive.png"
+mobile_illustration_2x: "/assets/images/landing/7tenets-arrows-responsive@2x.png"

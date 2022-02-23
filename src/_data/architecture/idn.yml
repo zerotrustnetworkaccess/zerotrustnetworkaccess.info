@@ -5,7 +5,8 @@ abbreviation: "IDN"
 displayByDeafult: false
 sort_order: "5"
 description: "..."
-image: "/assets/images/architecture/idn@2x.png"
+image: "/assets/images/architecture/idn.png"
+image_2x: "/assets/images/architecture/idn@2x.png"
 paragraphs:
   - text: "Nullam quis risus eget urna mollis ornare."
 strengths:
