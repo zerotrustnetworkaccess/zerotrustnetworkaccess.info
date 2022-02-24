@@ -23,7 +23,10 @@
     {% endif %}
 
     {% if page_d.button_text %}
-      {% include components/link.html content=page_d.button_text %}
+        <a href="#vendors">
+          {% include components/link.html content=page_d.button_text %}
+        </a>
+     
     {% endif %}
   </div>
   <div class="divider"><svg xmlns="http://www.w3.org/2000/svg" class="fill-light-wrapper" preserveAspectRatio="none" viewBox="0 0 1070 20.98">

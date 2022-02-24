@@ -4,13 +4,9 @@
 
 $content-width: 1170px;
 
-// @mixin postTemplateWidth($px) {
-//   width: $px;
-// }
-
-// @mixin postTemplateHeight($px) {
-//   height: $px;
-// }
+html {
+  scroll-behavior: smooth;
+}
 
 .ztna-tag {
   border-radius: 20px;

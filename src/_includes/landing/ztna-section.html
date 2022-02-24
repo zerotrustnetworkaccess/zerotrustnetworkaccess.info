@@ -5,7 +5,7 @@
   <div class="ztna-content-wrapper">
     <div class="row align-items-center d-flex">
         {% if ztna.image %}
-        <div class="col-md-12 col-lg-6 d-flex justify-content-center order-last order-lg-first">
+        <div class="col-md-12 col-lg-6 d-flex justify-content-center order-last order-lg-first pr-40">
           <figure>
             <img 
             srcset="{{ztna.image}} 1x, {{ztna.image_2x}} 2x" alt="{{ztna.title}}" class="ztna-margin-top-50-40 "/>
@@ -13,7 +13,7 @@
         </div>
         {% endif %}
 
-        <div class="col-md-12 col-lg-6 order-first d-flex justify-content-center">
+        <div class="col-md-12 col-lg-6 order-first d-flex justify-content-center pl-40 pt-10">
           <div>
           {% if ztna.label %}
          
@@ -26,13 +26,13 @@
           
           {% if ztna.description %}
           <p class="ztna-small-text light-text-1">{{ztna.description}}</p>
-          <div class="space10"></div>
+          <div class="space20"></div>
           <div class="ztna-margin-bottom-30-20">
             <a href="{{ztna.more.link}}" target="_blank" class=" ztna-small-text light-blue-1">{{ztna.more.text}}</a>
           </div>
           
           {% endif %}
-          <ul class="icon-list bullet-default">
+          <ul class="icon-list bullet-default mb-0">
           {% for list in ztna.lists.text %}
             <li class="ztna-small-text light-text-1">
               <img src="{{site.data.landing.ztna.lists.icon}}">
