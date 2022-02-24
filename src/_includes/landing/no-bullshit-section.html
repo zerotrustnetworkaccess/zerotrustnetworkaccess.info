@@ -1,7 +1,7 @@
 {% if site.data.landing.ztna-no-bullshit.enable %} 
 {% assign no-bullshit = site.data.landing.ztna-no-bullshit %}
 <div class="container-fluid background-color ztna-landing-section-wrapper d-flex justify-content-center">
-  <div class="ztna-content-wrapper">
+  <div class="ztna-content-wrapper mt-5">
     <p class="h5 light-text-2 text-center">{{no-bullshit.label}}</p>  
     <div class="space10"></div>
     <h2 class="dark-text text-center">{{no-bullshit.title}}</h2>
@@ -10,7 +10,7 @@
       {% for reason in no-bullshit.reasons%}
           <div class="col-lg-3 col-md-6 col-sm-12 text-center ztna-num-label-wrapper">
             <p p class="light-blue-background-2 ztna-num-label white h2">{{forloop.index}}</p>
-            <div class="ztna-num-label-spacer"> </div>
+            <div class="ztna-margin-bottom-20-10"> </div>
             <p class="h3 dark-text">{{reason}}</p>
           </div>
       {% endfor %}

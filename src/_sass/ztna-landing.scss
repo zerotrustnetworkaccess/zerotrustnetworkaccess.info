@@ -28,12 +28,7 @@
 }
 
 .ztna-num-label-wrapper {
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-
-.ztna-num-label-spacer {
-  height: 20px;
+  margin-top: 40px;
 }
 
 .mobile-nist-illustration {
@@ -133,6 +128,10 @@
     max-width: 600px;
     margin: 0 auto;
     padding: 180px 0 68px 0;
+  }
+
+  .ztna-num-label-wrapper {
+    margin-bottom: 50px;
   }
   .ztna-post-responsive {
     &:nth-child(3) {
