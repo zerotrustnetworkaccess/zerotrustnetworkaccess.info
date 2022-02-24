@@ -70,13 +70,23 @@ html {
   }
 }
 
-input {
+.ztna-input {
   width: 100%;
   border: none;
   border-radius: 20px;
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 15px;
+  &:hover {
+    cursor: pointer;
+    @extend .input-active;
+  }
+  &::placeholder {
+    @extend .light-text-2;
+  }
+  &:active {
+    @extend .input-active;
+  }
 }
 
 .ztna-tag-large {
@@ -192,23 +202,9 @@ td {
 }
 
 @media only screen and (min-width: $breakpoint-lg) {
-  .ztna-post-ui {
-    // @include postTemplateWidth(364px);
-  }
-  .ztna-post-image {
-    // @include postTemplateWidth(364px);
-    // @include postTemplateHeight(230px);
-  }
 }
 
 @media only screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-lg) {
-  .ztna-post-ui {
-    // @include postTemplateWidth(316px);
-  }
-  .ztna-post-image {
-    // @include postTemplateWidth(316px);
-    // @include postTemplateHeight(200px);
-  }
 }
 
 @media only screen and (max-width: $breakpoint-md) {
@@ -226,14 +222,6 @@ td {
   }
 }
 @media only screen and (max-width: $breakpoint-sm) {
-  .ztna-post-ui {
-    // @include postTemplateWidth(336px);
-  }
-  .ztna-post-image {
-    // @include postTemplateWidth(336px);
-    // @include postTemplateHeight(200px);
-  }
-
   .ztna-table {
     width: 1170px;
     z-index: 10;

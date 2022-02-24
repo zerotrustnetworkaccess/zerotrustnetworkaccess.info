@@ -1,17 +1,22 @@
-<footer>
-  <div class="container">
+<div class="container-fluid ztna-landing-section-wrapper dark-text-background">
+  <div class="ztna-content-wrapper mx-auto">
   <div class="row">
 
   <div class="col-md">
-        {% include components/ztna-logo.html%}
-        {% assign description = site.data.ztna-footer.about_ZTNA %}
-        
-        <div class="space30"></div>
+    <div class="ztna-margin-bottom-30-20">
+      {% include components/ztna-logo.html%}
+    </div>
+     
+
+
+        {% assign description = site.data.ztna-footer.about_ZTNA %}       
         <ul class="list-unstyled mb-0">
             {% for content in description.content %}
-            <li class="ztna-margin-bottom-20">
-               <p>{{content.text}}</p>
+            <li >
+               <p class="ztna-small-text light-text-2">{{content.text}}</p>
+               <div class="space20"></div>
             </li>
+           
             {% endfor %}
           </ul>
     </div>
@@ -19,13 +24,14 @@
     <div class="col-md">
         {% assign subscription = site.data.ztna-footer.subscribtion %}
         <div>
-             <h5 class="light-text-3 ztna-margin-bottom-30">{{subscription.title}}</h5>
-          <p>
+             <h3 class="light-text-3 ztna-margin-bottom-30 ztna-margin-bottom-30-20">{{subscription.title}}</h5>
+            
+          <p class="ztna-small-text light-text-2 ztna-margin-bottom-30-20">
             {{subscription.text}}
           </p>
-          <div class="space30"></div>
+         
           {% include components/input.html%}
-          <div class="ztna-margin-bottom-20"></div>
+          <div class="space20"></div>
           {% include components/button.html content=subscription.cta%}
         </div>
     </div>
@@ -33,13 +39,13 @@
     <div class="col-md">
         {% assign social_accounts = site.data.ztna-footer.social_accounts %}
         <div>
-             <h5 class="light-text-3 ztna-margin-bottom-30">{{social_accounts.title}}</h5>
-
+             <h3 class="light-text-3 ztna-margin-bottom-30-20">{{social_accounts.title}}</h3>
+             
              <ul class="list-unstyled mb-0">
                 {% for links in social_accounts.links %}
-                <li class="ztna-margin-bottom-20">
-                    <img src="{{links.icon}}" class="ztna-margin-right-10">
-                    <a href="{{links.url}}">{{links.title}}</a>
+                <li >
+                  <a class="text-link light-blue-1" href="{{links.url}}"><img src="{{links.icon}}" class="ztna-margin-right-10">{{links.title}}</a>
+                    <div class="space20"></div>
                 </li>
                 {% endfor %}
               </ul>
