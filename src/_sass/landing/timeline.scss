@@ -1,7 +1,7 @@
 @import "ztna-colors";
 
 .timeline {
-  width: 90%;
+  width: 100%;
   height: 50px;
   border-radius: 25px;
   display: flex;
@@ -14,19 +14,19 @@
     color: $timeline-active !important;
     background-color: $dark-text !important;
     border-radius: 25px;
-    padding: 8px 20px;
+    padding: 8px 48px;
     cursor: pointer;
   }
 }
 
 .timelineYear {
-  padding: 8px 20px;
+  padding: 8px 48px;
 
   &:hover {
     color: $timeline-active !important;
     background-color: $dark-text !important;
     border-radius: 25px;
-    padding: 8px 20px;
+    padding: 8px 48px;
     cursor: pointer;
   }
 }

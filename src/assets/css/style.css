@@ -1926,10 +1926,10 @@ button.close:before {
 /*  24. BLOCKQUOTE
 /*-----------------------------------------------------------------------------------*/
 blockquote p {
-  font-size: 0.9rem;
+  /* font-size: 0.9rem;
   line-height: 1.5rem;
   font-style: normal;
-  color: #707070;
+  color: #707070; */
 }
 blockquote.icon p {
   font-size: 1rem;
@@ -2009,7 +2009,7 @@ blockquote.icon.icon-left:before {
   padding-left: 1rem;
 }
 .blockquote-details .img-blob img {
-  width: 3.5rem;
+  /* width: 3.5rem; */
 }
 .blockquote-details span {
   font-size: 0.8rem;
@@ -2233,7 +2233,8 @@ ol {
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   height: auto;
-  width: 4.5rem;
+  /* width: 4.5rem; */
+  width: 80px;
   max-width: 100%;
   -webkit-mask-size: auto auto;
   -webkit-mask-box-image-repeat: space;
@@ -2331,7 +2332,7 @@ ol {
 .owl-carousel .owl-item .img-blob img,
 .owl-carousel .owl-item .img-blob-s img {
   display: inline;
-  width: 3.5rem;
+  /* width: 3.5rem; */
 }
 /*-----------------------------------------------------------------------------------*/
 /*  27. CLIENTS

@@ -5,7 +5,7 @@
           <div class="row align-items-center d-flex">
                 
 
-                <div class="col-md-12 col-lg-6 ">
+                <div class="col-md-12 col-lg-6 pr-35">
                   {% if sase.label %}
                   <p class="h5 light-text-2">{{sase.label}}</p>
                   {% endif %}
@@ -20,7 +20,7 @@
                   {% endif %}
 
                   {% for links in sase.more %}
-                    <a href="{{links.link}}" target="_blank" class=" ztna-small-text light-blue-1">{{links.text}}</a>
+                    <a href="{{links.link}}" target="_blank" class=" ztna-small-text light-blue-1 text-link">{{links.text}}</a>
                     <div class="space10"></div>
                   {% endfor %}
                   
@@ -29,9 +29,9 @@
                 </div>
                 <!--/column -->
                 {% if sase.image %}
-                <div class="col-md-12 col-lg-6 d-flex justify-content-center ">
-                  <figure>
-                    <img srcset="{{sase.image}} 1x, {{sase.image_2x}} 2x" alt="{{sase.title}}" class="ztna-margin-top-50-40" alt="{{sase.title}}"/>
+                <div class="col-md-12 col-lg-6 d-flex justify-content-center pl-35">
+                  <figure class="ztna-margin-top-50-40">
+                    <img srcset="{{sase.image}} 1x, {{sase.image_2x}} 2x" alt="{{sase.title}}"  alt="{{sase.title}}"/>
                   </figure>
                 </div>
                 {% endif %}

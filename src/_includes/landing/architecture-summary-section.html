@@ -5,11 +5,11 @@
   <div class="ztna-content-wrappe mx-auto">
 
     <div class="row d-flex justify-content-center ">
-      <div class="col-8 col-md-10 col-sm-12 ztna-margin-bottom-50-40 text-center">
+      <div class="col-lg-7 col-md-10 col-sm-12 ztna-margin-bottom-50-40 text-center">
 
         <p class="h5 light-text-2 text-center">{{architecture-summary.label}}</p>  
         <div class="space10"></div>
-        <h2 class="dark-text text-center ztna-margin-bottom-50-40">{{architecture-summary.title}}</h2>
+        <h2 class="dark-text text-center">{{architecture-summary.title}}</h2>
 
       </div>
     </div>    
@@ -38,7 +38,9 @@
             {% endif %}
           </div>
           <div class="text-center">
-            {%include components/link.html content=architecture-summary.button %}
+            <a href="#vendors">
+              {%include components/link.html content=architecture-summary.button %}
+            </a>
           </div>
         </div>
       </div>
