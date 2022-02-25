@@ -1,20 +1,20 @@
 
 {% if site.data.landing.ztna.enable %}
 {% assign ztna = site.data.landing.ztna %}
-<div class="container-fluid background-white ztna-landing-section-wrapper d-flex justify-content-center">
+<div class="container-fluid background-white ztna-landing-section-wrapper d-flex justify-content-center px-md-40-20">
   <div class="ztna-content-wrapper">
     <div class="row align-items-center d-flex">
         {% if ztna.image %}
-        <div class="col-md-12 col-lg-6 d-flex justify-content-center order-last order-lg-first pr-40">
+        <div class="col-md-12 col-lg-6 d-flex justify-content-center order-last order-lg-first pr-lg-40">
           
-          <figure>
+      <figure>
             <img 
-            srcset="{{ztna.image}} 1x, {{ztna.image_2x}} 2x" alt="{{ztna.title}}" class="ztna-margin-top-50-40 "/>
-          </figure>
+            srcset="{{ztna.image}} 1x, {{ztna.image_2x}} 2x" alt="{{ztna.title}}" class="ztna-margin-top-50-40"/>
+   </figure>
         </div>
         {% endif %}
 
-        <div class="col-md-12 col-lg-6 order-first d-flex justify-content-center pl-40 ">
+        <div class="col-md-12 col-lg-6 order-first d-flex justify-content-center pl-lg-40">
           <div>
           {% if ztna.label %}
          
