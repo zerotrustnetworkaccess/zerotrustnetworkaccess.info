@@ -1,36 +1,42 @@
-{% if site.data.landing.page-header.enable %}
-{% assign page_d = site.data.landing.page-header %}
+{% if site.data.landing.page-header.enable %} {% assign page_d =
+site.data.landing.page-header %}
 
-<div class="wrapper image-wrapper bg-image page-title-wrapper inverse-text" data-image-src="{{page_d.background_image}}">
+<div
+  class="wrapper image-wrapper bg-image page-title-wrapper inverse-text"
+  data-image-src="{{page_d.background_image}}"
+>
   <div class="ztna-head-container mx-auto text-center">
     {% if page_d.title %}
-      <h1>{{page_d.title}}</h1>
-        {% endif %}
-          <div class="space10"></div>
-        {% if page_d.sub_title %}
-      <p class="ztna-subtitle ztna-margin-bottom-30-20">{{page_d.sub_title}}</p>
+    <h1>{{page_d.title}}</h1>
     {% endif %}
+    <div class="space10"></div>
+    {% if page_d.sub_title %}
+    <p class="ztna-subtitle ztna-margin-bottom-30-20">{{page_d.sub_title}}</p>
+    {% endif %} {% if page_d.statistics %}
+    <div class="ztna-counter-wrapper">
+      {% for list in page_d.statistics %}
+      <div class="ztna-counter-item counter">
+        <p class="h1 value">{{list.quantity}}</p>
+        <p class="ztna-small-text">{{list.title}}</p>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %} {% if page_d.button_text %}
+    <a href="#vendors">
+      {% include components/link.html content=page_d.button_text %}
+    </a>
 
-    {% if page_d.statistics %}
-        <div class="ztna-counter-wrapper">
-          {% for list in page_d.statistics %}
-          <div class="ztna-counter-item counter">
-            <p class="h1 value">{{list.quantity}}</p>
-            <p  class="ztna-small-text">{{list.title}}</p>
-          </div>
-          {% endfor %}
-        </div>
-    {% endif %}
-
-    {% if page_d.button_text %}
-        <a href="#vendors">
-          {% include components/link.html content=page_d.button_text %}
-        </a>
-     
     {% endif %}
   </div>
-  <div class="divider"><svg xmlns="http://www.w3.org/2000/svg" class="fill-light-wrapper" preserveAspectRatio="none" viewBox="0 0 1070 20.98">
-    <path d="M0,0V21H1070V0A6830.24,6830.24,0,0,1,0,0Z" /></svg>
+  <div class="divider">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="fill-light-wrapper"
+      preserveAspectRatio="none"
+      viewBox="0 0 1070 20.98"
+    >
+      <path d="M0,0V21H1070V0A6830.24,6830.24,0,0,1,0,0Z" />
+    </svg>
   </div>
 </div>
 {% endif %}

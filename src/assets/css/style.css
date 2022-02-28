@@ -2239,6 +2239,7 @@ ol {
   -webkit-mask-size: auto auto;
   -webkit-mask-box-image-repeat: space;
 }
+
 .img-blob.blob1 img {
   -webkit-mask-box-image: url(../images/blob/blob1.svg);
   -webkit-mask-image: url(../images/blob/blob1.svg);
@@ -2334,6 +2335,13 @@ ol {
   display: inline;
   /* width: 3.5rem; */
 }
+
+@media only screen and (max-width: 575px) {
+  .img-blob img {
+    width: 50px;
+  }
+}
+
 /*-----------------------------------------------------------------------------------*/
 /*  27. CLIENTS
 /*-----------------------------------------------------------------------------------*/

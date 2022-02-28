@@ -135,6 +135,10 @@ html {
   justify-content: space-between;
 }
 
+.sm-scroll-item {
+  width: 100%;
+}
+
 .ztna-table {
   border-radius: 20px;
   table-layout: auto;
@@ -205,20 +209,28 @@ td {
 }
 
 @media only screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-lg) {
+  .ztna-post-image {
+    height: 200px;
+  }
 }
 
-@media only screen and (max-width: $breakpoint-md) {
-  .ztna-table {
-    width: 1170px;
-    z-index: 10;
-  }
-
-  .table-wrapper {
+@media only screen and (max-width: $breakpoint-sm) {
+  .scroll-wrapper {
     overflow-x: scroll;
     scroll-behavior: smooth;
     &::-webkit-scrollbar {
       display: none;
     }
+  }
+
+  .sm-scroll-item {
+    //width: 1000px;
+    // z-index: 10;
+  }
+
+  .ztna-table {
+    width: 1170px;
+    z-index: 10;
   }
 }
 @media only screen and (max-width: $breakpoint-sm) {
@@ -233,5 +245,9 @@ td {
     &::-webkit-scrollbar {
       display: none;
     }
+  }
+
+  .ztna-post-image {
+    height: 200px;
   }
 }

@@ -177,6 +177,8 @@ node_modules
 .jekyll-metadata
 .jekyll-cache
 
-# Styling
+# custom
 .sass-cache/
 .vscode/
+vendor
+.zshrc

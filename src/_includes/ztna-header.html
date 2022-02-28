@@ -1,100 +1,130 @@
-<nav class="navbar {% if include.extra_class %} {{include.extra_class}} {% endif %} navbar-hover-opacity navbar-expand-lg">
-    <div class="{% if include.container_class %} {{include.container_class}} {% else %} container-fluid {% endif %} flex-row justify-content-center">
-      <div class="navbar-brand">
-        <a href="{{site.url}}" >
-      
-          <span>ZeroTrust</span><span style="color: #8ab9ff; font-weight: 500; margin-left: 2px;">NetworkAccess</span><span></span>
-          
-        </a>
-      </div>
-      
-      <div class="navbar-other ml-auto order-lg-3">
-        <ul class="navbar-nav flex-row align-items-center" data-sm-skip="true">
-          <li class="nav-item">
-            <div class="navbar-hamburger d-lg-none d-xl-none ml-auto">
-              <button class="hamburger animate plain" data-toggle="offcanvas-nav">
-                  <span></span></button>
-            </div>
-          </li>
-
-          
-          <li class="dropdown search-dropdown position-static nav-item ztna-margin-right-60">
-            {% include icons/search-header-icon.svg cls="nav-link inverse-text" %}
-            <a href="#" role="button" class="collapse-toggle h4 ztna-margin-left-10" data-toggle="collapse" data-target=".search-dropdown-menu" aria-haspopup="true" aria-expanded="false">
-            Search
-            </a>
-
-            <div class="dropdown-menu search-dropdown-menu w-100 collapse">
-              <div class="form-wrapper">
-                <form class="inverse-text">
-                  <input type="text" id="search-input" class="form-control" placeholder="Search blog posts.."/>
-                  <i class="dropdown-close jam jam-close"></i>
-                </form>
-                <!-- /.search-form -->
-              </div>
-              <!-- /.form-wrapper -->
-             <ul id="results-container" class="position-static"></ul>
-            </div>
-          </li> 
-
-
-
-          <li class="nav-item">
-            <button class="plain h4" data-toggle="offcanvas-info">
-              {% include icons/info-header-icon.svg cls="nav-link inverse-text" %}
-              Info
-            </button>
-          </li>
-        </ul>
-        <!-- /.navbar-nav -->
-      </div>
-      <!-- /.navbar-other -->
-      <div class="navbar-collapse offcanvas-nav">
-        <div class="offcanvas-header d-lg-none d-xl-none">
-          <a href="{{site.url}}">
-            <img src="{{site.data.general_settings.light_logo_1x}}" srcset="{{site.data.general_settings.light_logo_1x}} 1x, {{site.data.general_settings.light_logo_2x}} 2x" alt="{{site.data.general_settings.title}}"/></a>
-          <button class="plain offcanvas-close offcanvas-nav-close">
-              <i class="jam jam-close"></i>
-            </button>
-        </div>
-        <ul class="navbar-nav mx-auto">
-            {% for menu in site.data.navigation.main_menu %}
-            
-          <li class="nav-item ztna-margin-right-60">
-          
-          {% include icons/{{menu.icon}} cls="nav-link inverse-text" %}
-          <a class="nav-link h4 ztna-margin-left-10" href="{{menu.url}}">{{menu.text}}</a>
-            
-          </li>
-          {% endfor %}
-        </ul>
-        <!-- /.navbar-nav -->
-      </div>
-      <!-- /.navbar-collapse -->
+<nav
+  class="navbar {% if include.extra_class %} {{include.extra_class}} {% endif %} navbar-hover-opacity navbar-expand-lg"
+>
+  <div
+    class="{% if include.container_class %} {{include.container_class}} {% else %} container-fluid {% endif %} flex-row justify-content-center"
+  >
+    <div class="navbar-brand">
+      <a href="{{site.url}}">
+        <span>ZeroTrust</span
+        ><span style="color: #8ab9ff; font-weight: 500; margin-left: 2px"
+          >NetworkAccess</span
+        ><span></span>
+      </a>
     </div>
-    <!-- /.container-fluid -->
-  </nav>
-  <!-- /.navbar -->
-  <div class="offcanvas-info white-background">
-    <button class="plain offcanvas-close offcanvas-info-close light-text-2"><i class="jam jam-close"></i></button>
-    <a href="{{site.url}}">
-        <img src="{{site.data.general_settings.enclave_logo_1x}}" 
-        srcset="{{site.data.general_settings.enclave_logo_1x}} 1x, {{site.data.general_settings.enclave_logo_2x}} 2x" 
-        class="{% if include.logo_class %} {{include.logo_class}} {% else %} logo-light {% endif %}" 
-        alt="{{site.data.general_settings.title}}"/>
-    </a>
-    <div class="space30"></div>
-    {% assign description = site.data.general_settings.description %}
-    <ul class="list-unstyled mb-0">
-        {% for content in description %}
-        <li class="ztna-margin-bottom-20">
-            
-           <p class="h4 light-text-1">{{content.text}}</p>
+
+    <div class="navbar-other ml-auto order-lg-3">
+      <ul class="navbar-nav flex-row align-items-center" data-sm-skip="true">
+        <li class="nav-item">
+          <div class="navbar-hamburger d-lg-none d-xl-none ml-auto">
+            <button class="hamburger animate plain" data-toggle="offcanvas-nav">
+              <span></span>
+            </button>
+          </div>
+        </li>
+
+        <li
+          class="dropdown search-dropdown position-static nav-item ztna-margin-right-60"
+        >
+          {% include icons/search-header-icon.svg cls="nav-link inverse-text" %}
+          <a
+            href="#"
+            role="button"
+            class="collapse-toggle h4 ztna-margin-left-10"
+            data-toggle="collapse"
+            data-target=".search-dropdown-menu"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Search
+          </a>
+
+          <div class="dropdown-menu search-dropdown-menu w-100 collapse">
+            <div class="form-wrapper">
+              <form class="inverse-text">
+                <input
+                  type="text"
+                  id="search-input"
+                  class="form-control"
+                  placeholder="Search blog posts.."
+                />
+                <i class="dropdown-close jam jam-close"></i>
+              </form>
+              <!-- /.search-form -->
+            </div>
+            <!-- /.form-wrapper -->
+            <ul id="results-container" class="position-static"></ul>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <button class="plain h4" data-toggle="offcanvas-info">
+            {% include icons/info-header-icon.svg cls="nav-link inverse-text" %}
+            Info
+          </button>
+        </li>
+      </ul>
+      <!-- /.navbar-nav -->
+    </div>
+    <!-- /.navbar-other -->
+    <div class="navbar-collapse offcanvas-nav">
+      <div class="offcanvas-header d-lg-none d-xl-none">
+        <a href="{{site.url}}">
+          <img
+            src="{{site.data.general_settings.light_logo_1x}}"
+            srcset="
+              {{site.data.general_settings.light_logo_1x}} 1x,
+              {{site.data.general_settings.light_logo_2x}} 2x
+            "
+            alt="{{site.data.general_settings.title}}"
+        /></a>
+        <button class="plain offcanvas-close offcanvas-nav-close">
+          <i class="jam jam-close"></i>
+        </button>
+      </div>
+      <ul class="navbar-nav mx-auto">
+        {% for menu in site.data.navigation.main_menu %}
+
+        <li class="nav-item ztna-margin-right-60">
+          {% include icons/{{menu.icon}} cls="nav-link inverse-text" %}
+          <a class="nav-link h4 ztna-margin-left-10" href="{{menu.url}}"
+            >{{menu.text}}</a
+          >
         </li>
         {% endfor %}
       </ul>
-    
-    <div class="space20"></div>
-  
+      <!-- /.navbar-nav -->
+    </div>
+    <!-- /.navbar-collapse -->
   </div>
-  <!-- /.offcanvas-info -->
+  <!-- /.container-fluid -->
+</nav>
+<!-- /.navbar -->
+<div class="offcanvas-info white-background">
+  <button class="plain offcanvas-close offcanvas-info-close light-text-2">
+    <i class="jam jam-close"></i>
+  </button>
+  <a href="{{site.url}}">
+    <img
+      src="{{site.data.general_settings.enclave_logo_1x}}"
+      srcset="
+        {{site.data.general_settings.enclave_logo_1x}} 1x,
+        {{site.data.general_settings.enclave_logo_2x}} 2x
+      "
+      class="{% if include.logo_class %} {{include.logo_class}} {% else %} logo-light {% endif %}"
+      alt="{{site.data.general_settings.title}}"
+    />
+  </a>
+  <div class="space30"></div>
+  {% assign description = site.data.general_settings.description %}
+  <ul class="list-unstyled mb-0">
+    {% for content in description %}
+    <li class="ztna-margin-bottom-20">
+      <p class="h4 light-text-1">{{content.text}}</p>
+    </li>
+    {% endfor %}
+  </ul>
+
+  <div class="space20"></div>
+</div>
+<!-- /.offcanvas-info -->

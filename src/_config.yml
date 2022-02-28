@@ -1,3 +1,5 @@
+encoding: utf-8
+
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://snowlake.netlify.app" # the base hostname & protocol for your site, e.g. http://example.com
 

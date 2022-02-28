@@ -1,32 +1,32 @@
 <div class="ztna-post-wrapper mx-auto">
-    <div class="ztna-margin-bottom-20">
-      <img
-        class="ztna-post-image"
-        src="{{post.post_image}}"
-        alt="{{post.title}}"
-      />
-    </div>
-    <div class="ztna-tag-small background-color ztna-margin-bottom-10">
-      <a
-        href="/category/{{post.categories[0] | slugify}}"
-        class="ztna-small-text light-text-1"
-      >
-        {{post.categories[0]}}
+  <div class="ztna-margin-bottom-20">
+    <img
+      class="ztna-post-image"
+      src="{{post.post_image}}"
+      alt="{{post.title}}"
+    />
+  </div>
+  <div class="ztna-tag-small background-color ztna-margin-bottom-10">
+    <a
+      href="/category/{{post.categories[0] | slugify}}"
+      class="ztna-small-text light-text-1"
+    >
+      {{post.categories[0]}}
+    </a>
+  </div>
+  <h3 class="ztna-margin-bottom-20">{{post.title}}</h3>
+  <div class="ztna-post-ui">
+    <div class="ztna-small-button white-background light-blue-1 h4">
+      <a href="{{post.url}}">
+        Read
+        <img
+          src="/assets/icons/right-arrow.svg"
+          alt="svg icon"
+          class="ztna-margin-left-10"
+        />
       </a>
     </div>
-    <h3 class="ztna-margin-bottom-20">{{post.title}}</h3>
-    <div class="ztna-post-ui">
-      <div class="ztna-small-button white-background light-blue-1 h4">
-        <a href="{{post.url}}">
-          Read
-          <img
-            src="/assets/icons/right-arrow.svg"
-            alt="svg icon"
-            class="ztna-margin-left-10"
-          />
-        </a>
-      </div>
-  
-      {% include components/post-date.html%}
-    </div>
+
+    {% include components/post-date.html%}
   </div>
+</div>

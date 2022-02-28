@@ -1,9 +1,9 @@
 {% if site.data.landing.blog.enable %} {% assign blog = site.data.landing.blog%}
-<div class="container-fluid ztna-landing-section-wrapper">
+<div class="container-fluid ztna-landing-section-wrapper px-md-40-20">
   <div class="ztna-content-wrapper mx-auto">
     <div class="row d-flex justify-content-center">
       <div
-        class="col-lg-6 col-md-10 col-sm-12 col ztna-margin-bottom-50-40 text-center"
+        class="col-lg-6 col-md-10 col-sm-12 ztna-margin-bottom-50-40 text-center"
       >
         <p class="h5 light-text-2">{{blog.label}}</p>
         <div class="space10"></div>
@@ -12,7 +12,7 @@
     </div>
     <div class="row">
       {% for post in site.posts limit: 3 %}
-      <div class="ztna-post-responsive col-lg-4 col-md-6 col-sm-12">
+      <div class="ztna-post-responsive col-lg-4 col-md-6 col-sm-6 mb-0">
         {% include components/post-preview.html %}
       </div>
       {% endfor %}

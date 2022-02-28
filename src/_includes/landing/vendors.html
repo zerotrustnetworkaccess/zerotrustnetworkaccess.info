@@ -6,15 +6,15 @@
     {% assign vendors = site.data.landing.vendors %}
     <div class="grid grid-view">
       {% if vendors.title %}
-      <p class="h5 light-text-2 ">{{vendors.label}}</p>
+      <p class="h5 light-text-2 mr-md-40-20 ml-md-40-20">{{vendors.label}}</p>
       {% endif %}
       <div class="space10"></div>
       {% if vendors.title %}
-      <h2 class="dark-text ztna-margin-bottom-30-20 mr-15">
+      <h2 class="dark-text ztna-margin-bottom-30-20 mr-md-40-20 ml-md-40-20">
         {{vendors.title}}
       </h2>
       {% endif %}
-      <div class="isotope-filter ztna-margin-bottom-40-20 mr-15">
+      <div class="isotope-filter ztna-margin-bottom-40-20 mr-md-40 ml-md-40-20">
         <ul>
           {% for filters in vendors.categories %}
           <li>
@@ -47,22 +47,24 @@
           "
         >
           <div id="{{arch.name | replace: ' ', '-' | downcase }}"></div>
-          <h2 class="dark-text ztna-margin-bottom-20-10 mr-15">
+          <h2
+            class="dark-text ztna-margin-bottom-20-10 mr-md-40-20 ml-md-40-20"
+          >
             {{arch.name}} {% if arch.abbreviation != ""
             %}({{arch.abbreviation}}){% endif %}
           </h2>
           <div class="row">
-            <div class="col-8">
+            <div class="col-8 mr-md-40-20 ml-md-40-20">
               {% for paragraph in arch.paragraphs %}
-              <p class="ztna-small-text mr-15">{{paragraph.text}}</p>
+              <p class="ztna-small-text">{{paragraph.text}}</p>
               {% endfor %}
             </div>
           </div>
           <div class="space30"></div>
 
           <div class="row">
-            <div class="col-lg-4 col-md-6 col-sm-12">
-              <div class="mr-15">
+            <div class="col-lg-4 col-md-6 col-sm-6">
+              <div class="mr-md-40-20 ml-md-40-20">
                 {% if arch.strengths %}
                 <h3 class="dark-text ztna-margin-bottom-20-10">Strengths</h3>
                 <ul class="icon-list bullet-green mb-0">
@@ -77,8 +79,8 @@
                 {% endif %}
               </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-              <div class="mr-15">
+            <div class="col-lg-4 col-md-6 col-sm-6">
+              <div class="mr-md-40-20 ml-md-40-20">
                 {% if arch.strengths %}
                 <h3 class="dark-text ztna-margin-bottom-20-10">Weaknesses</h3>
                 <ul class="icon-list bullet-red mb-0">
@@ -93,8 +95,8 @@
                 {% endif %}
               </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-              <div class="mr-15">
+            <div class="col-lg-4 col-md-6 col-sm-6">
+              <div class="mr-md-40-20 ml-md-40-20">
                 {% if arch.strengths %}
                 <h3 class="dark-text ztna-margin-bottom-20-10">Trade-offs</h3>
                 <ul class="icon-list bullet-blue mb-0">
@@ -111,10 +113,12 @@
             </div>
           </div>
           <div class="space20"></div>
-          <h3 class="dark-text ztna-margin-bottom-20-10 mr-15">
+          <h3
+            class="dark-text ztna-margin-bottom-20-10 mr-md-40-20 ml-md-40-20"
+          >
             {{arch.name}} Vendors
           </h3>
-          <div class="table-wrapper">
+          <div class="scroll-wrapper ml-md-40-20 mr-md-40">
             <table class="ztna-table ztna-margin-bottom-50-40">
               <thead
                 class="ztna-table-head background-color light-text-2 ztna-h4"

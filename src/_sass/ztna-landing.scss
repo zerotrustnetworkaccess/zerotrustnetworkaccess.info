@@ -94,14 +94,15 @@
 
 .ztna-slider-dot-item {
   width: 10px;
-  height: 12px;
+  height: 10px;
   margin: 10px;
+  line-height: 10px;
   display: block;
   -webkit-backface-visibility: visible;
   -webkit-transition: all 200ms ease-in-out;
   -o-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
-  border-radius: 100%;
+  border-radius: 50%;
   border: none;
   opacity: 0.3;
   &:hover,
@@ -148,6 +149,9 @@
 
   .ztna-nist-section-wrapper {
     padding-bottom: 50px;
+  }
+  .ztna-nist-container-fluid {
+    padding-left: 40px;
   }
 }
 
@@ -204,8 +208,7 @@
   }
 
   .ztna-slider-dot-item {
-    width: 6px;
-    height: 12px;
+    width: 8px;
   }
   .ztna-slider-dots-wrapper {
     margin-top: 10px;
@@ -214,5 +217,7 @@
 
   .ztna-testimonial-card {
     margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }

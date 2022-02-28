@@ -31,7 +31,7 @@
 }
 
 .ztna-margin-bottom-50-40 {
-  margin-bottom: 50px;
+  margin-bottom: 50px !important;
 }
 
 .ztna-margin-bottom-40-20 {
@@ -59,21 +59,13 @@
   padding-right: 40px !important;
 }
 
-.pl-lg-40 {
-  padding-left: 36px !important;
-}
-
-.pr-lg-40 {
-  padding-right: 36px !important;
-}
-
 @media only screen and (max-width: $breakpoint-sm) {
   .ztna-margin-bottom-30-20 {
     margin-bottom: 20px;
   }
 
   .ztna-margin-bottom-50-40 {
-    margin-bottom: 40px;
+    margin-bottom: 40px !important;
   }
 
   .ztna-margin-top-50-40 {
@@ -101,12 +93,16 @@
     padding-bottom: 30px !important;
   }
 
-  .pl-lg-40 {
-    padding-left: 0px !important;
+  .mb-md-54-40 {
+    margin-bottom: 54px !important;
   }
 
-  .pr-lg-40 {
-    padding-right: 0px !important;
+  .mr-md-40-20 {
+    margin-right: 20px;
+  }
+
+  .ml-md-40-20 {
+    margin-left: 20px;
   }
 }
 
@@ -119,11 +115,33 @@
     padding-right: 40px !important;
   }
 
+  .mb-md-54-40 {
+    margin-bottom: 54px !important;
+  }
+
+  .mr-md-40-20 {
+    margin-right: 40px;
+  }
+
+  .ml-md-40-20 {
+    margin-left: 40px;
+  }
+
+  .mr-md-40 {
+    margin-right: 40px;
+  }
+}
+
+@media only screen and (min-width: $breakpoint-lg) {
   .pl-lg-40 {
-    padding-left: 15px !important;
+    padding-left: 36px !important;
   }
 
   .pr-lg-40 {
-    padding-right: 15px !important;
+    padding-right: 36px !important;
+  }
+
+  .mb-md-54-40 {
+    margin-bottom: 40px !important;
   }
 }
