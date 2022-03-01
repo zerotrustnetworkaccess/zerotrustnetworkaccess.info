@@ -15,11 +15,11 @@
             {% endfor %}
         </div>
       
-      <div class="col-lg-8 col-md-12 col-sm-12 text-center">
+      <div class="col-lg-8 col-md-12 col-sm-12 px-0 text-center">
         <div class="space40"></div>
         <div class="timeline-items ">
             {% for node in timeline.nodes %}
-            <div class="timeline-item ztna-margin-bottom-40-20 fade">
+            <div class="timeline-item ztna-margin-bottom-40-20 fade mr-md-40-20 ml-md-40-20">
               <div class="timeline-item-date-wrapper ztna-margin-bottom-30-20">
                 {% include icons/calendar.svg cls="light-blue-1" %}
                 <p class="h4 light-blue-1">{{node.year}}</p>

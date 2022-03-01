@@ -92,7 +92,7 @@ html {
 .ztna-tag-large {
   @extend .ztna-tag;
   padding: 8px 20px;
-  width: fit-content;
+  width: max-content;
   &:hover {
     cursor: pointer;
   }
@@ -135,13 +135,13 @@ html {
   justify-content: space-between;
 }
 
-.sm-scroll-item {
-  width: 100%;
-}
+// .sm-scroll-item {
+//   width: 100%;
+// }
 
 .ztna-table {
   border-radius: 20px;
-  table-layout: auto;
+  // table-layout: auto;
   width: 100%;
 }
 
@@ -181,12 +181,13 @@ html {
 }
 
 th {
-  @extend .ztna-small-text;
+  @extend .h4;
   padding: 8px 20px;
 }
 
 td {
   @extend .ztna-small-text;
+  width: fit-content;
   padding: 8px 20px;
   a {
     @extend .h4;
@@ -216,6 +217,7 @@ td {
 
 @media only screen and (max-width: $breakpoint-sm) {
   .scroll-wrapper {
+    width: 100%;
     overflow-x: scroll;
     scroll-behavior: smooth;
     &::-webkit-scrollbar {
@@ -224,8 +226,9 @@ td {
   }
 
   .sm-scroll-item {
-    //width: 1000px;
-    // z-index: 10;
+    // width: 380px;
+    // display: flex;
+    z-index: 10;
   }
 
   .ztna-table {

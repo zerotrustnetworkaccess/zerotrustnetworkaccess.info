@@ -54,9 +54,9 @@
             %}({{arch.abbreviation}}){% endif %}
           </h2>
           <div class="row">
-            <div class="col-8 mr-md-40-20 ml-md-40-20">
+            <div class="col-lg-12 mr-md-40-20 ml-md-40-20">
               {% for paragraph in arch.paragraphs %}
-              <p class="ztna-small-text">{{paragraph.text}}</p>
+              <p class="ztna-small-text light-text-1">{{paragraph.text}}</p>
               {% endfor %}
             </div>
           </div>
@@ -64,12 +64,12 @@
 
           <div class="row">
             <div class="col-lg-4 col-md-6 col-sm-6">
-              <div class="mr-md-40-20 ml-md-40-20">
+              <div class="mr-md-40-20 ml-md-40-20 mb-md-30">
                 {% if arch.strengths %}
                 <h3 class="dark-text ztna-margin-bottom-20-10">Strengths</h3>
                 <ul class="icon-list bullet-green mb-0">
                   {% for strength in arch.strengths %}
-                  <li>
+                  <li class="ztna-small-text light-text-1">
                     <i class="jam jam-plus-circle"></i>
                     {{strength.title}}
                   </li>
@@ -80,12 +80,12 @@
               </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
-              <div class="mr-md-40-20 ml-md-40-20">
+              <div class="mr-md-40-20 ml-md-40-20 mb-md-30">
                 {% if arch.strengths %}
                 <h3 class="dark-text ztna-margin-bottom-20-10">Weaknesses</h3>
                 <ul class="icon-list bullet-red mb-0">
                   {% for weakness in arch.weaknesses %}
-                  <li>
+                  <li class="ztna-small-text light-text-1">
                     <i class="jam jam-minus-circle"></i>
                     {{weakness.title}}
                   </li>
@@ -101,7 +101,7 @@
                 <h3 class="dark-text ztna-margin-bottom-20-10">Trade-offs</h3>
                 <ul class="icon-list bullet-blue mb-0">
                   {% for tradeoff in arch.tradeoffs %}
-                  <li>
+                  <li class="ztna-small-text light-text-1">
                     <i class="jam jam-star"></i>
                     {{tradeoff.title}}
                   </li>
@@ -120,9 +120,7 @@
           </h3>
           <div class="scroll-wrapper ml-md-40-20 mr-md-40">
             <table class="ztna-table ztna-margin-bottom-50-40">
-              <thead
-                class="ztna-table-head background-color light-text-2 ztna-h4"
-              >
+              <thead class="ztna-table-head background-color light-text-2">
                 <tr>
                   <th scope="col">#</th>
                   <th scope="col">Company</th>
@@ -132,7 +130,7 @@
                   <th scope="col">Pricing</th>
                 </tr>
               </thead>
-              <tbody class="ztna-table-body ztna-small-text">
+              <tbody class="ztna-table-body ztna-small-text dark-text">
                 {% assign vendors = arch.vendors | sort: 'company' %} {% for
                 vendor in vendors %}
                 <tr>
