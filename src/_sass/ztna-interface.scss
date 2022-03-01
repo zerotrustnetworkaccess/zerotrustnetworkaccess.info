@@ -135,9 +135,9 @@ html {
   justify-content: space-between;
 }
 
-// .sm-scroll-item {
-//   width: 100%;
-// }
+.width-100 {
+  width: 100%;
+}
 
 .ztna-table {
   border-radius: 20px;
@@ -220,6 +220,16 @@ td {
     width: 100%;
     overflow-x: scroll;
     scroll-behavior: smooth;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .scroll-tags {
+    width: 100%;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    display: flex;
     &::-webkit-scrollbar {
       display: none;
     }

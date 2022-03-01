@@ -2,20 +2,22 @@
   class="container-fluid background-white ztna-landing-section-wrapper d-flex justify-content-center px-0"
   id="vendors"
 >
-  <div class="ztna-content-wrapper">
+  <div class="ztna-content-wrapper width-100">
     {% assign vendors = site.data.landing.vendors %}
     <div class="grid grid-view">
       {% if vendors.title %}
-      <p class="h5 light-text-2 mr-md-40-20 ml-md-40-20">{{vendors.label}}</p>
+      <div
+        class="mr-md-40-20 ml-md-40-20 ztna-margin-bottom-30-20 mr-lg-40 ml-lg-40"
+      >
+        <p class="h5 light-text-2">{{vendors.label}}</p>
+        {% endif %}
+        <div class="space10"></div>
+        {% if vendors.title %}
+        <h2 class="dark-text">{{vendors.title}}</h2>
+      </div>
       {% endif %}
-      <div class="space10"></div>
-      {% if vendors.title %}
-      <h2 class="dark-text ztna-margin-bottom-30-20 mr-md-40-20 ml-md-40-20">
-        {{vendors.title}}
-      </h2>
-      {% endif %}
-      <div class="isotope-filter ztna-margin-bottom-40-20 mr-md-40 ml-md-40-20">
-        <ul>
+      <div class="isotope-filter ztna-margin-bottom-40-20">
+        <ul class="scroll-tags pl-md-40-20 mr-lg-40 ml-lg-40">
           {% for filters in vendors.categories %}
           <li>
             <a
@@ -41,22 +43,26 @@
         {% for architecture in site.data.architecture %} {% assign arch =
         architecture[1] %} {% if arch.vendors %}
         <div
-          class="item grid-sizer col-12 
+          class="item grid-sizer col-12  mx-auto
           {% for filter in arch.filters %} {{filter}} {% endfor %}
           {% if arch.displayByDeafult %} focus {% endif %}
           "
         >
           <div id="{{arch.name | replace: ' ', '-' | downcase }}"></div>
           <h2
-            class="dark-text ztna-margin-bottom-20-10 mr-md-40-20 ml-md-40-20"
+            class="dark-text ztna-margin-bottom-20-10 mr-md-40-20 ml-md-40-20 mr-lg-40 ml-lg-40"
           >
             {{arch.name}} {% if arch.abbreviation != ""
             %}({{arch.abbreviation}}){% endif %}
           </h2>
           <div class="row">
-            <div class="col-lg-12 mr-md-40-20 ml-md-40-20">
+            <div class="col-12">
               {% for paragraph in arch.paragraphs %}
-              <p class="ztna-small-text light-text-1">{{paragraph.text}}</p>
+              <p
+                class="ztna-small-text light-text-1 mr-md-40-20 ml-md-40-20 mr-lg-40 ml-lg-40"
+              >
+                {{paragraph.text}}
+              </p>
               {% endfor %}
             </div>
           </div>
@@ -64,7 +70,7 @@
 
           <div class="row">
             <div class="col-lg-4 col-md-6 col-sm-6">
-              <div class="mr-md-40-20 ml-md-40-20 mb-md-30">
+              <div class="mr-md-40-20 ml-md-40-20 mb-md-30 ml-lg-40">
                 {% if arch.strengths %}
                 <h3 class="dark-text ztna-margin-bottom-20-10">Strengths</h3>
                 <ul class="icon-list bullet-green mb-0">
@@ -96,7 +102,7 @@
               </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
-              <div class="mr-md-40-20 ml-md-40-20">
+              <div class="mr-md-40-20 ml-md-40-20 mr-lg-40">
                 {% if arch.strengths %}
                 <h3 class="dark-text ztna-margin-bottom-20-10">Trade-offs</h3>
                 <ul class="icon-list bullet-blue mb-0">
@@ -114,11 +120,11 @@
           </div>
           <div class="space20"></div>
           <h3
-            class="dark-text ztna-margin-bottom-20-10 mr-md-40-20 ml-md-40-20"
+            class="dark-text ztna-margin-bottom-20-10 mr-md-40-20 ml-md-40-20 mr-lg-40 ml-lg-40"
           >
             {{arch.name}} Vendors
           </h3>
-          <div class="scroll-wrapper ml-md-40-20 mr-md-40">
+          <div class="scroll-wrapper ml-md-40-20 mr-md-40 mr-lg-40 ml-lg-40">
             <table class="ztna-table ztna-margin-bottom-50-40">
               <thead class="ztna-table-head background-color light-text-2">
                 <tr>
