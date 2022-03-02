@@ -1,9 +1,49 @@
 nav {
+  height: 80px;
   li {
     display: flex;
     align-items: center;
   }
   a {
     text-decoration: none;
+  }
+}
+
+.ztna-logo {
+  margin-left: 55px !important;
+}
+
+.menu {
+  margin-right: 55px;
+}
+
+.fly-out-bg {
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100%;
+}
+
+.fly-out-logo {
+  width: 57%;
+}
+
+@media only screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-lg) {
+  .ztna-logo {
+    margin-left: 40px !important;
+  }
+
+  .menu {
+    margin-right: 55px;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-sm) {
+  .ztna-logo {
+    margin-left: 20px !important;
+    width: 180px;
+  }
+
+  .menu {
+    margin-right: 20px;
   }
 }

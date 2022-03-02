@@ -81,6 +81,12 @@ a {
   }
 }
 
+a.button-link {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
 @media only screen and (max-width: $breakpoint-sm) {
   h1,
   .h1 {
