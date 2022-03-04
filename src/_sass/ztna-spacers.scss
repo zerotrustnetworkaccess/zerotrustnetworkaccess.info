@@ -46,6 +46,10 @@
   margin-top: 0;
 }
 
+.ztna-info-icon {
+  margin-left: 6px;
+}
+
 .ztna-padding-bottom-100-70 {
   padding-bottom: 100px;
 }
@@ -174,5 +178,11 @@
   }
   .ml-lg-40 {
     margin-left: 40px !important;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-md) {
+  .mb-md-50 {
+    margin-bottom: 50px !important;
   }
 }

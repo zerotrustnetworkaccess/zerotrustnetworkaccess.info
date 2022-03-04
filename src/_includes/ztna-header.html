@@ -1,72 +1,61 @@
 <nav
-  class="navbar {% if include.extra_class %} {{include.extra_class}} {% endif %} navbar-hover-opacity navbar-expand-sm"
+  class="navbar navbar-hover-opacity navbar-expand-md {% if include.extra_class %} {{include.extra_class}} {% endif %} "
 >
-  <div
-    class="container-fluid d-flex flex-row justify-content-between align-content-center px-0"
-  >
-    <div class="navbar-brand align-self-center ztna-logo">
-      <a href="{{site.url}}">
-        <img
-          src="{{site.data.general_settings.light_logo_1x}}"
-          srcset="
-            {{site.data.general_settings.light_logo_1x}} 1x,
-            {{site.data.general_settings.light_logo_2x}} 2x
-          "
-          alt="{{site.data.general_settings.title}}"
-      /></a>
-    </div>
+  
+    <a href="{{site.url}}" class="navbar-brand ztna-logo">
+      <img
+        src="{{site.data.general_settings.light_logo_1x}}"
+        srcset="
+          {{site.data.general_settings.light_logo_1x}} 1x,
+          {{site.data.general_settings.light_logo_2x}} 2x
+        "
+        alt="{{site.data.general_settings.title}}"
+    /></a>
+ 
 
-    <div class="navbar-other ml-auto order-lg-3 align-self-center">
-      <ul class="navbar-nav flex-row align-items-center" data-sm-skip="true">
-        <li class="nav-item">
-          <div class="navbar-hamburger d-lg-none d-xl-none ml-auto">
-            <button class="hamburger animate plain" data-toggle="offcanvas-nav">
-              <span></span>
-            </button>
-          </div>
-        </li>
-      </ul>
-      <!-- /.navbar-nav -->
-    </div>
-    <!-- /.navbar-other -->
-    <div
-      class="navbar-collapse offcanvas-nav align-self-center justify-content-end"
-    >
-      <div class="offcanvas-header d-lg-none d-xl-none">
-        <a href="{{site.url}}">
-          <img
-            src="{{site.data.general_settings.light_logo_1x}}"
-            srcset="
-              {{site.data.general_settings.light_logo_1x}} 1x,
-              {{site.data.general_settings.light_logo_2x}} 2x
-            "
-            alt="{{site.data.general_settings.title}}"
-        /></a>
-        <button class="plain offcanvas-close offcanvas-nav-close">
-          <i class="jam jam-close"></i>
+  <div class="navbar-nav" data-sm-skip="true">
+    <li class="nav-item">
+      <div class="navbar-hamburger d-lg-none d-xl-none d-md-none mr-20">
+        <button class="hamburger animate plain" data-toggle="offcanvas-nav">
+          <span></span>
         </button>
       </div>
-      <ul class="navbar-nav menu">
-        {% for menu in site.data.navigation.main_menu %}
-
-        <li class="nav-item mr-60-40">
-          {% include icons/{{menu.icon}} cls="nav-link inverse-text" %}
-          <a class="nav-link h4 ztna-margin-left-10" href="{{menu.url}}"
-            >{{menu.text}}</a
-          >
-        </li>
-        {% endfor %}
-        <li class="nav-item">
-          <button class="plain h4" data-toggle="offcanvas-info">
-            {% include icons/info-header-icon.svg cls="nav-link inverse-text" %}
-            Info
-          </button>
-        </li>
-      </ul>
-      <!-- /.navbar-nav -->
-    </div>
-    <!-- /.navbar-collapse -->
+    </li>
   </div>
+
+  <div
+    class="navbar-collapse offcanvas-nav align-self-center justify-content-end mobile-bg pl-40"
+
+  >
+    <div class="offcanvas-header d-lg-none d-xl-none d-md-none">
+      <button class="plain offcanvas-close offcanvas-nav-close icon-hover light-text-2">
+        <i class="jam jam-close"></i>
+      </button>
+    </div>
+
+    <ul class="navbar-nav menu">
+      {% for menu in site.data.navigation.main_menu %}
+
+      <li class="ztna-nav-item mr-60-40 mb-md-50">
+  
+        <a class="nav-link " href="{{menu.url}}"
+          >{% include icons/{{menu.icon}} cls="nav-link  mobile-menu-items-fill" %}
+          <span class="text-link ml-10 mobile-menu-items-color">{{menu.text}}</span>
+        </a>
+        
+      </li>
+      
+      {% endfor %}
+      <li class="ztna-nav-item">
+        <button class="plain text-link" data-toggle="offcanvas-info">
+          {% include icons/info-header-icon.svg cls="nav-link mobile-menu-items-fill" %}<span class="h4 mobile-menu-items-color ml-10">Info</span>
+        </button>
+      </li>
+    </ul>
+    <!-- /.navbar-nav -->
+
+  <!-- /.navbar-collapse -->
+  <!-- </div> -->
   <!-- /.container-fluid -->
 </nav>
 <!-- /.navbar -->
@@ -83,7 +72,7 @@ background-image: -webkit-image-set(
   );
 "
 >
-  <button class="plain offcanvas-close offcanvas-info-close light-text-2">
+  <button class="plain offcanvas-close offcanvas-info-close light-text-2 icon-hover">
     <i class="jam jam-arrow-left"></i>
   </button>
   <a href="{{site.url}}">
@@ -110,7 +99,7 @@ background-image: -webkit-image-set(
   <div class="space30"></div>
   <a href="https://enclave.io/" class="button-link">
     <div
-      class="ztna-small-button-left white-background light-blue-1 h4 justify-content-center"
+      class="ztna-small-button white-background light-blue-1 h4 justify-content-center"
     >
       {%include icons/web-header-icon.svg %} Visit website
     </div>
@@ -118,11 +107,12 @@ background-image: -webkit-image-set(
   <div class="space10"></div>
   <a href="#" class="button-link">
     <div
-      class="ztna-small-button-left white-background light-blue-1 h4 justify-content-center"
+      class="ztna-small-button white-background light-blue-1 h4 justify-content-center"
     >
       {%include icons/github-header-icon.svg cls="light-blue-1-fill"%} Visit
       github
     </div>
   </a>
+  <div class="space40"></div>
 </div>
 <!-- /.offcanvas-info -->

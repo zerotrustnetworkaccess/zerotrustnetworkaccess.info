@@ -6494,17 +6494,17 @@ footer.inverse-text address {
 }
 @media (min-width: 992px) {
   .navbar-nav .nav-link {
-    padding-top: 1.7rem;
-    padding-bottom: 1.7rem;
+    /* padding-top: 1.7rem;
+    padding-bottom: 1.7rem; */
   }
   .navbar.transparent .navbar-nav .nav-link {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    /* padding-top: 2rem;
+    padding-bottom: 2rem; */
   }
   .navbar.fixed .navbar-nav .nav-link,
   .navbar.navbar-fancy .navbar-nav .nav-link {
-    padding-top: 1.3rem;
-    padding-bottom: 1.3rem;
+    /* padding-top: 1.3rem;
+    padding-bottom: 1.3rem; */
   }
   .navbar-nav .nav-link:hover,
   .navbar-nav .nav-link.active,
@@ -6786,8 +6786,8 @@ footer.inverse-text address {
   .navbar-nav .nav-link,
   .dropdown-item,
   .mega-menu-content a {
-    padding-top: 0.7rem;
-    padding-bottom: 0.7rem;
+    /* padding-top: 0.7rem;
+    padding-bottom: 0.7rem; */
   }
   .navbar-other .nav-item a:not(.btn),
   .navbar-other .nav-item button {
@@ -6836,42 +6836,7 @@ footer.inverse-text address {
   .navbar.extended .logo-light {
     display: none;
   }
-  .offcanvas-nav {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 100%;
-    left: -300px;
-    width: 300px;
-    padding-right: 1.5rem;
-    padding-left: 1.5rem;
-    padding-bottom: 0.5rem;
-    overflow-y: auto;
-    visibility: hidden;
-    background: #1e2228;
-    -webkit-transition-timing-function: ease-in-out;
-    -o-transition-timing-function: ease-in-out;
-    transition-timing-function: ease-in-out;
-    -webkit-transition-duration: 0.3s;
-    -o-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-property: left, visibility;
-    -o-transition-property: left, visibility;
-    transition-property: left, visibility;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: start;
-    -moz-background-clip: padding;
-    -webkit-background-clip: padding;
-    background-clip: padding-box;
-  }
-  .offcanvas-nav.open {
-    left: 0;
-    visibility: visible;
-  }
-  .navbar.fixed .offcanvas-nav.open {
-    display: none !important;
-  }
+
   .navbar-expand-lg .navbar-nav {
     -ms-flex-direction: column;
     -webkit-box-orient: vertical;
@@ -7152,6 +7117,43 @@ footer.inverse-text address {
   }
   .image-block-wrapper [class*="container"] .box {
     padding: 4rem 3rem;
+  }
+
+  .offcanvas-nav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: auto;
+    right: -300px;
+    width: 300px;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    padding-bottom: 0.5rem;
+    overflow-y: auto;
+    visibility: hidden;
+    background: #1e2228;
+    -webkit-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+    -webkit-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: right, visibility;
+    -o-transition-property: right, visibility;
+    transition-property: right, visibility;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding;
+    background-clip: padding-box;
+  }
+  .offcanvas-nav.open {
+    right: 0;
+    visibility: visible;
+  }
+  .navbar.fixed .offcanvas-nav.open {
+    display: none !important;
   }
 }
 @media (max-width: 575.98px) {

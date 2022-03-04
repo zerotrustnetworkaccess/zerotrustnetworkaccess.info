@@ -9,12 +9,25 @@ nav {
   }
 }
 
+.ztna-nav-item {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  padding-bottom: 5px;
+  box-sizing: content-box;
+  width: fit-content;
+  &:hover {
+    padding-bottom: 4px;
+    border-bottom: 1px solid;
+  }
+}
+
 .ztna-logo {
   margin-left: 55px !important;
 }
 
 .menu {
   margin-right: 55px;
+  width: fit-content;
 }
 
 .fly-out-bg {
@@ -25,6 +38,10 @@ nav {
 
 .fly-out-logo {
   width: 57%;
+}
+
+.icon-hover:hover {
+  color: $light-text-1;
 }
 
 @media only screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-lg) {
@@ -45,5 +62,32 @@ nav {
 
   .menu {
     margin-right: 20px;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-md) {
+  .menu {
+    margin-right: 0;
+  }
+
+  .mobile-bg {
+    background-color: $white;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100%;
+    background-image: url("/assets/images/header/fly-out-back@2x.png");
+  }
+
+  .mobile-menu-items-color {
+    color: $dark-text !important;
+  }
+
+  .mobile-menu-items-fill {
+    fill: $dark-text !important;
+  }
+  .ztna-nav-item {
+    &:hover {
+      border-bottom: 1px solid $dark-text;
+    }
   }
 }

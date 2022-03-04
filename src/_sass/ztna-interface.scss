@@ -50,6 +50,9 @@ html {
   display: flex;
   align-items: center;
   column-gap: 10px;
+  &:hover {
+    filter: drop-shadow(0px 0px 15px rgba(10, 63, 113, 0.15));
+  }
 }
 
 .ztna-small-button-right {
