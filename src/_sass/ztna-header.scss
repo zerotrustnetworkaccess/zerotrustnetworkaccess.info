@@ -21,8 +21,31 @@ nav {
   }
 }
 
+.banner--clone {
+  .ztna-logo {
+    background-image: url("/assets/images/logo@2x.png");
+  }
+  .ztna-nav-item {
+    .text-link,
+    .h4 {
+      color: $dark-text;
+    }
+
+    &:hover {
+      padding-bottom: 4px;
+      border-bottom: 1px solid $dark-text;
+    }
+  }
+}
+
 .ztna-logo {
   margin-left: 55px !important;
+  margin-top: 30px !important;
+  background-image: url("/assets/images/logo-light@2x.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 256px;
+  height: 20px;
 }
 
 .menu {
