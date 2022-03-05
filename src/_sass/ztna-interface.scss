@@ -30,6 +30,25 @@ html {
   border: none;
   width: max-content;
   display: inline-block;
+  // @extend .gradient-background;
+  // background-size: 400% 100%;
+
+  // -moz-transition: background-position 1s ease-in-out;
+  // -o-transition: background-position 1s ease-in-out;
+  // -webkit-transition: background-position 1s ease-in-out;
+  // transition: background-position 1s ease-in-out;
+  @extend .gradient-background;
+  -webkit-background-size: 100% 1200%;
+  -moz-background-size: 100% 1200%;
+  -o-background-size: 100% 1200%;
+  background-size: 100% 1200%;
+
+  background-position: 0% 0%;
+
+  -webkit-transition: background-position 2s ease;
+  -moz-transition: background-position 2s ease;
+  -o-transition: background-position 2s ease;
+  transition: background-position 2s ease;
 
   a {
     text-decoration: none;
@@ -37,8 +56,11 @@ html {
   }
   &:hover {
     cursor: pointer;
-
-    @extend .gradient-background;
+    background-position: 0 0;
+    -webkit-transition: background-position 2s ease;
+    -moz-transition: background-position 2s ease;
+    -o-transition: background-position 2s ease;
+    transition: background-position 2s ease;
   }
 }
 
@@ -120,6 +142,13 @@ html {
   max-width: 364px;
   width: 100%;
   margin: 0px 0px 40px 0px;
+  a:hover {
+    text-decoration: none;
+
+    h3 {
+      color: $light-blue-1;
+    }
+  }
 }
 .ztna-post-image {
   border-radius: 30px;

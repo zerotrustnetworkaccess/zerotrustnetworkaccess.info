@@ -23,7 +23,13 @@ nav {
 
 .banner--clone {
   .ztna-logo {
-    background-image: url("/assets/images/logo@2x.png");
+    background: -webkit-image-set(
+      url("/assets/images/logo.png") 1x,
+      url("/assets/images/logo@2x.png") 2x
+    );
+    background-repeat: no-repeat;
+    background-size: contain;
+    align-self: center;
   }
   .ztna-nav-item {
     .text-link,
@@ -41,7 +47,12 @@ nav {
 .ztna-logo {
   margin-left: 55px !important;
   margin-top: 30px !important;
-  background-image: url("/assets/images/logo-light@2x.png");
+  margin-bottom: 30px !important;
+  align-self: center;
+  background: -webkit-image-set(
+    url("/assets/images/logo-light.png") 1x,
+    url("/assets/images/logo-light@2x.png") 2x
+  );
   background-repeat: no-repeat;
   background-size: contain;
   width: 256px;
@@ -79,7 +90,9 @@ nav {
 
 @media only screen and (max-width: $breakpoint-sm) {
   .ztna-logo {
-    margin-left: 20px !important;
+    margin-left: 35px !important;
+    margin-top: 18px !important;
+    margin-bottom: 18px !important;
     width: 180px;
   }
 
