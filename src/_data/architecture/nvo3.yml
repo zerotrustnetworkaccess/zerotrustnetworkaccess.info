@@ -1,9 +1,12 @@
 name: "Network Virtualization Overlays"
+filters:
+  - nvo3
+displayByDeafult: false
 abbreviation: "NVO3"
-sort_order: "5"
+sort_order: "10"
 description: "https://datatracker.ietf.org/wg/nvo3/documents/"
 image: "https://via.placeholder.com/2280x1200"
-paragraphs: 
+paragraphs:
   - text: "Nullam quis risus eget urna mollis ornare."
 strengths:
   - title: "Nullam quis risus eget urna mollis ornare."
@@ -26,4 +29,4 @@ tradeoffs:
     description: ""
   - title: "Fusce dapibus, tellus ac cursus commodo."
     description: ""
-vendors: 
+vendors:

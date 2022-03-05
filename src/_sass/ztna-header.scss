@@ -1,9 +1,129 @@
 nav {
+  height: 80px;
   li {
     display: flex;
     align-items: center;
   }
   a {
     text-decoration: none;
+  }
+}
+
+.ztna-nav-item {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  padding-bottom: 5px;
+  box-sizing: content-box;
+  width: fit-content;
+  &:hover {
+    padding-bottom: 4px;
+    border-bottom: 1px solid;
+  }
+}
+
+.banner--clone {
+  .ztna-logo {
+    background: -webkit-image-set(
+      url("/assets/images/logo.png") 1x,
+      url("/assets/images/logo@2x.png") 2x
+    );
+    background-repeat: no-repeat;
+    background-size: contain;
+    align-self: center;
+  }
+  .ztna-nav-item {
+    .text-link,
+    .h4 {
+      color: $dark-text;
+    }
+
+    &:hover {
+      padding-bottom: 4px;
+      border-bottom: 1px solid $dark-text;
+    }
+  }
+}
+
+.ztna-logo {
+  margin-left: 55px !important;
+  margin-top: 30px !important;
+  margin-bottom: 30px !important;
+  align-self: center;
+  background: -webkit-image-set(
+    url("/assets/images/logo-light.png") 1x,
+    url("/assets/images/logo-light@2x.png") 2x
+  );
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 256px;
+  height: 20px;
+}
+
+.menu {
+  margin-right: 55px;
+  width: fit-content;
+}
+
+.fly-out-bg {
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100%;
+}
+
+.fly-out-logo {
+  width: 57%;
+}
+
+.icon-hover:hover {
+  color: $light-text-1;
+}
+
+@media only screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-lg) {
+  .ztna-logo {
+    margin-left: 40px !important;
+  }
+
+  .menu {
+    margin-right: 55px;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-sm) {
+  .ztna-logo {
+    margin-left: 35px !important;
+    margin-top: 18px !important;
+    margin-bottom: 18px !important;
+    width: 180px;
+  }
+
+  .menu {
+    margin-right: 20px;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-md) {
+  .menu {
+    margin-right: 0;
+  }
+
+  .mobile-bg {
+    background-color: $white;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100%;
+    background-image: url("/assets/images/header/fly-out-back@2x.png");
+  }
+
+  .mobile-menu-items-color {
+    color: $dark-text !important;
+  }
+
+  .mobile-menu-items-fill {
+    fill: $dark-text !important;
+  }
+  .ztna-nav-item {
+    &:hover {
+      border-bottom: 1px solid $dark-text;
+    }
   }
 }

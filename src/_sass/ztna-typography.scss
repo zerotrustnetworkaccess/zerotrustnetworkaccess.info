@@ -1,3 +1,5 @@
+@import "ztna-breakpoionts";
+
 $fontfamily: jost;
 $fontstyle: normal;
 $title-fontweight: 500;
@@ -19,10 +21,10 @@ $tablet: 744px;
 }
 
 h1,
-h1 {
+.h1 {
   @extend .titles;
   font-size: 50px;
-  line-height: 72px;
+  line-height: 72.25px;
 }
 
 h2,
@@ -43,11 +45,11 @@ h4,
 .h4 {
   @extend .titles;
   font-size: 16px;
-  // line-height: 150%;
+  line-height: 150%;
 }
 
 h5,
-h5 {
+.h5 {
   @extend .titles;
   font-size: 16px;
   line-height: 23px;
@@ -66,15 +68,33 @@ p {
   line-height: 150%;
 }
 
-@media (max-width: $tablet) {
+a.text-link {
+  font-weight: 500;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+a.button-link {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-sm) {
   h1,
   .h1 {
     font-size: 32px;
     line-height: 46px;
   }
-
   h2,
-  h2 {
+  .h2 {
     font-size: 24px;
     line-height: 35px;
   }
@@ -86,11 +106,10 @@ p {
   }
 
   h4,
-  h4 {
+  .h4 {
     font-size: 14px;
     line-height: 130%;
   }
-
   h5,
   .h5 {
     font-size: 14px;
@@ -101,9 +120,13 @@ p {
     font-size: 18px;
     line-height: 150%;
   }
-
   .ztna-small-text {
     font-size: 14px;
     line-height: 150%;
+  }
+
+  a.text-link {
+    font-weight: 500;
+    line-height: 130%;
   }
 }

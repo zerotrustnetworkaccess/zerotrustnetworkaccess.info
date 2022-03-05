@@ -1,0 +1,45 @@
+{% if site.data.landing.timeline.enable  %}
+{% assign timeline = site.data.landing.timeline %}
+<div class="timeline-container-fluid dark-text-background ztna-landing-section-wrapper">
+  <div class="ztna-content-wrapper d-flex flex-column align-items-center mx-auto">
+
+      <div class="col-8 col-md-12 col-sm-12 ztna-margin-bottom-50-40 text-center">
+        <h2 class="light-text-3 text-center">{{timeline.title}}</h2>
+      </div>
+        <div id="timeline" class="timeline gradient-background align-self-md-center align-self-sm-start align-self-lg-center">
+            {% for node in timeline.nodes %}
+            <p class="h4 white timelineYear" 
+            onclick="currentTimelineItem({{forloop.index}})"
+  
+            >{{node.year}}</p>
+            {% endfor %}
+        </div>
+      
+      <div class="col-lg-8 col-md-12 col-sm-12 px-0 text-center">
+        <div class="space40"></div>
+        <div class="timeline-items ">
+            {% for node in timeline.nodes %}
+            <div class="timeline-item ztna-margin-bottom-40-20 fade mr-md-40-20 ml-md-40-20">
+              <div class="timeline-item-date-wrapper ztna-margin-bottom-30-20">
+                {% include icons/calendar.svg cls="light-blue-1" %}
+                <p class="h4 light-blue-1">{{node.year}}</p>
+              </div>
+            
+              <h3 class="light-text-3">{{node.title}}</h3>
+              <div class="space10"></div>
+              <p class="ztna-small-text light-text-2">{{node.description}}</p>
+            </div>
+    
+            {% endfor %}
+            <div class="row d-flex justify-content-center dark-text-background ">
+              <button class="ztna-small-button-left dark-buttons-background light-blue-1 h4 mr-10" onclick="plusTimelineItem(-1)">{%include icons/button-left-arrow.svg %} Prev</button>
+              <button class="ztna-small-button-right dark-buttons-background light-blue-1 h4 ml-10" onclick="plusTimelineItem(1)">Next {%include icons/button-right-arrow.svg %}</button>
+            </div>
+          </div>
+        </div>
+      </div>
+     
+  </div>
+</div>
+
+{% endif %}

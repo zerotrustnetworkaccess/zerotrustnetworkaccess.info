@@ -86,18 +86,18 @@ hr {
   overflow: visible;
 }
 /* h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-}
-p {
-  margin-top: 0;
-  margin-bottom: 1rem;
-} */
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+  p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  } */
 abbr[data-original-title],
 abbr[title] {
   text-decoration: underline;
@@ -115,7 +115,7 @@ dl,
 ol,
 ul {
   margin-top: 0;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
 }
 ol ol,
 ol ul,
@@ -157,27 +157,27 @@ sup {
   top: -0.5em;
 }
 /* a {
-  color: #007bff;
-  text-decoration: none;
-  background-color: transparent;
-  -webkit-text-decoration-skip: objects;
-}
-a:hover {
-  color: #0056b3;
-  text-decoration: underline;
-}
-a:not([href]):not([tabindex]) {
-  color: inherit;
-  text-decoration: none;
-}
-a:not([href]):not([tabindex]):focus,
-a:not([href]):not([tabindex]):hover {
-  color: inherit;
-  text-decoration: none;
-}
-a:not([href]):not([tabindex]):focus {
-  outline: 0;
-} */
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+  }
+  a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+  a:not([href]):not([tabindex]) {
+    color: inherit;
+    text-decoration: none;
+  }
+  a:not([href]):not([tabindex]):focus,
+  a:not([href]):not([tabindex]):hover {
+    color: inherit;
+    text-decoration: none;
+  }
+  a:not([href]):not([tabindex]):focus {
+    outline: 0;
+  } */
 code,
 kbd,
 pre,
@@ -323,47 +323,47 @@ template {
   display: none !important;
 }
 /* .h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin-bottom: 0.5rem;
-  font-family: inherit;
-  font-weight: 500;
-  line-height: 1.2;
-  color: inherit;
-}
-.h1,
-h1 {
-  font-size: 2.5rem;
-}
-.h2,
-h2 {
-  font-size: 2rem;
-}
-.h3,
-h3 {
-  font-size: 1.75rem;
-}
-.h4,
-h4 {
-  font-size: 1.5rem;
-}
-.h5,
-h5 {
-  font-size: 1.25rem;
-}
-.h6,
-h6 {
-  font-size: 1rem;
-} */
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 0.5rem;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.2;
+    color: inherit;
+  }
+  .h1,
+  h1 {
+    font-size: 2.5rem;
+  }
+  .h2,
+  h2 {
+    font-size: 2rem;
+  }
+  .h3,
+  h3 {
+    font-size: 1.75rem;
+  }
+  .h4,
+  h4 {
+    font-size: 1.5rem;
+  }
+  .h5,
+  h5 {
+    font-size: 1.25rem;
+  }
+  .h6,
+  h6 {
+    font-size: 1rem;
+  } */
 .lead {
   font-size: 1.25rem;
   font-weight: 300;
@@ -3686,7 +3686,7 @@ input[type="submit"].btn-block {
   justify-content: space-between;
   padding: 0.5rem 1rem;
 }
-.navbar > .container,
+.navbar >,
 .navbar > .container-fluid {
   display: -ms-flexbox;
   display: flex;
@@ -3866,9 +3866,9 @@ input[type="submit"].btn-block {
     position: absolute;
   }
   /* .navbar-expand-lg .navbar-nav .nav-link {
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
-  } */
+      padding-right: 0.5rem;
+      padding-left: 0.5rem;
+    } */
   .navbar-expand-lg > .container,
   .navbar-expand-lg > .container-fluid {
     -ms-flex-wrap: nowrap;
