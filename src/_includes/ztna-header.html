@@ -1,9 +1,14 @@
 <nav
   class="navbar navbar-hover-opacity navbar-expand-md {% if include.extra_class %} {{include.extra_class}} {% endif %} "
 >
-  
+  {% if include.dark_logo %}
+  <a href="{{site.url}}" class="ztna-dark-logo"></a>
+
+    {% else %}
     <a href="{{site.url}}" class="ztna-logo"></a>
- 
+    {% endif %}
+        
+        
 
   <div class="navbar-nav" data-sm-skip="true">
     <li class="nav-item">
