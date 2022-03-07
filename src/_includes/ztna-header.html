@@ -30,7 +30,9 @@
     <ul class="navbar-nav menu">
       {% for menu in site.data.navigation.main_menu %}
 
-      <li class="ztna-nav-item mr-60-40 mb-md-50">
+      <li class="ztna-nav-item mr-60-40 mb-md-50
+      {% if menu.text == 'Github' and include.hide_github %} ztna-hidden {% endif %}
+      ">
   
         <a class="nav-link " href="{{menu.url}}"
           >{% include icons/{{menu.icon}} cls="nav-link  mobile-menu-items-fill" %}

@@ -65,7 +65,8 @@
     analytics.html %} {% endif %}
   </head>
   <body {% if page.overflow %} class="overflow-hidden" {% endif %}>
-    {% include ztna-header.html container_class="container" dark_logo="true"%}
+    {% include ztna-header.html container_class="container" dark_logo="true"
+    hide_github="true" %}
 
     <div class="content-wrapper">{{ content }}</div>
     {% include ztna-footer.html%}

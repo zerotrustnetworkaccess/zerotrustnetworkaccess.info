@@ -24,6 +24,10 @@ html {
   max-width: $content-width;
 }
 
+.ztna-hidden {
+  display: none;
+}
+
 .ztna-button {
   padding: 13px 30px;
   border-radius: 25px;
