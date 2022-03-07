@@ -1,4 +1,5 @@
 @import "ztna-breakpoionts";
+@import "ztna-colors.scss";
 
 $fontfamily: jost;
 $fontstyle: normal;
@@ -78,6 +79,11 @@ a {
   &:hover {
     text-decoration: underline;
     cursor: pointer;
+
+    h3,
+    h4 {
+      color: $light-blue-1;
+    }
   }
 }
 
