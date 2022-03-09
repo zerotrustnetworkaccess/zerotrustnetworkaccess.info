@@ -17,7 +17,7 @@ $background-color: #f5f7fb;
 $table-backgroud: #fdfdff;
 $divider: #efefef;
 $timeline-active: #bdcfe2;
-$input-active: #1f3f5d;
+$input-active-dark: #1f3f5d;
 
 $gradient-proportion: $light-blue-1 0%, $dark-blue-1 31.59%, $violet-1 67.71%,
   $pink 100%;
@@ -143,8 +143,8 @@ $direction: left;
   color: $timeline-active;
 }
 
-.input-active {
-  background-color: $input-active;
+.input-active-dark {
+  background-color: $input-active-dark;
 }
 
 .light-blue-1-fill {
