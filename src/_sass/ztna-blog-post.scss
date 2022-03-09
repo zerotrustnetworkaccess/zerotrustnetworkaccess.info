@@ -1,7 +1,49 @@
+$small-spacer: 20px;
+$medium-spacer: 30px;
+$large-spacer: 50px;
+
 .ztna-post-cover {
   width: 100%;
   height: 300px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.post-typography {
+  .h1,
+  h1,
+  .h2,
+  h2,
+  .h3,
+  h3 {
+    @extend .dark-text;
+    margin-bottom: $small-spacer;
+  }
+
+  p {
+    @extend .ztna-small-text;
+    @extend .light-text-1;
+    margin-bottom: $medium-spacer;
+  }
+
+  a {
+    @extend .light-blue-1;
+  }
+
+  & :nth-child(2) {
+    margin-bottom: $large-spacer;
+  }
+
+  table,
+  pre,
+  code,
+  blockquote {
+    margin-bottom: $medium-spacer;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-sm) {
+  $small-spacer: 10px;
+  $large-spacer: 40px;
 }
