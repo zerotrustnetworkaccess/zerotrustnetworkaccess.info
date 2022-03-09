@@ -32,13 +32,12 @@ $fig-spacer: 10px;
     @extend .light-blue-1;
   }
 
-  & :nth-child(2) {
-    margin-bottom: $large-spacer;
-  }
+  // & :nth-child(2) {
+  //   margin-bottom: $large-spacer;
+  // }
 
   pre,
-  code,
-  blockquote {
+  code {
     margin-bottom: $medium-spacer;
   }
 
@@ -69,9 +68,52 @@ $fig-spacer: 10px;
       @extend .light-text-1;
     }
   }
+
+  pre {
+    @extend .background-color;
+    border-radius: 30px;
+    padding: 30px;
+  }
+
+  code {
+    @extend .light-text-1;
+    font-family: "Source Code Pro", monospace;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+blockquote {
+  border-radius: 30px;
+  padding: 34px 30px 20px 30px;
+  margin-bottom: $medium-spacer;
+  p {
+    margin-bottom: 16px !important;
+  }
+  p.h4 {
+    @extend .h4;
+    margin-bottom: 0 !important;
+  }
+  img {
+    -webkit-mask-box-image: url(../images/blob/blob1.svg);
+    -webkit-mask-image: url(../images/blob/blob1.svg);
+    mask-image: url(../images/blob/blob1.svg);
+    -webkit-mask-position: center center;
+    mask-position: center center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+  }
 }
 
 @media only screen and (max-width: $breakpoint-sm) {
   $small-spacer: 10px;
   $large-spacer: 40px;
+  blockquote {
+    border-radius: 30px;
+    padding: 34px 30px 20px 30px;
+    margin-bottom: $medium-spacer;
+    p {
+      margin-bottom: 8px;
+    }
+  }
 }

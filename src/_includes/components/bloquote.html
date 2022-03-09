@@ -1,9 +1,11 @@
-<blockquote>
-  <img src="" alt="" />
+<blockquote class="background-color">
+  <div class="mb-15">{%include icons/quote.svg cls="light-blue-1-fill"%}</div>
   <p>{{include.blockquote}}</p>
-  <div>
-    <img src="" alt="" />
-    <p>{{include.author}}</p>
-    <p>{{include.occupation}}</p>
+  <div class="d-flex align-items-center">
+    <img src="{{include.author_photo}}" alt="" class="img-blob blob1 mr-20" />
+    <div>
+      <p class="h4">{{include.author}}</p>
+      <p>{{include.occupation}}</p>
+    </div>
   </div>
 </blockquote>
