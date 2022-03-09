@@ -5,10 +5,28 @@ date: 2022-02-06 23:37:13 +0600
 categories: [architecture, SD-WAN, SDP]
 author: "Tortoiz Theme"
 post_image: "/assets/images/test-post/test-post.jpg"
+figure: "/assets/images/test-post/blog-cockpit-plugin.png"
 post_format: "general"
 trending: true
 time_to_read: "15 min"
 permalink: /blogs/:title
+qoute:
+  blockquote: "As you can see, the spawn() method accepts your command as an array of strings. From here it will return any output as a string. The command enclave status --json writes JSON to stdout so that gives us easy access to the data, which is easily parsed into JS Object and can then be manipulated as you’d expect."
+  author: "Tony Stark"
+  occupation: "Ironman"
+table:
+  - type: "ICMP"
+    protocol: "ICMP"
+    port_range: "-"
+    destinations: "all IPv4, all IPv6"
+  - type: "All TCP"
+    protocol: "TCP"
+    port_range: "all ports"
+    destinations: "all IPv4, all IPv6"
+  - type: "All UDP"
+    protocol: "UPD"
+    port_range: "all ports"
+    destinations: "all IPv4, all IPv6"
 ---
 
 <h1>{{page.title}}</h1>
@@ -16,8 +34,35 @@ permalink: /blogs/:title
 
 <p>For those who don’t know, Cockpit is web-based a management portal for Linux servers, developed in conjunction with RedHat Linux. It’s incredibly powerful; letting you manage near enough everything about the server through a web portal, and if you can’t do it through the web portal, Cockpit gives you access to a terminal in the browser too, so no need to SSH into your box. Oh and obviously given the topic of this blog post there are plug-ins! </p>
 
+<figure> 
+<img src="{{page.figure}}">
+<figcaption> blog cockpit plugin</figcaption>
+</figure>
+
 <h2>So… plug-ins?</h2> 
 <p> Knowing Cockpit supports plug-ins, my first question was: how do I make one for Enclave? To my surprise it was fairly simple. All you need is a manifest.json file, an index.html file and an index.js file. That’s it. You now have a plug-in.</p>
+ 
+  <table>
+              <thead>
+                <tr>
+                  <th scope="col">Type</th>
+                  <th scope="col">Protocol</th>
+                  <th scope="col">Port Range</th>
+                  <th scope="col">Destinations</th>
+           
+                </tr>
+              </thead>
+              <tbody>
+                {% for data in page.table %}
+                <tr>
+                  <td>{{data.type}}</td>
+                  <td>{{data.protocol}}</td>
+                  <td>{{data.port_range}}</td>
+                  <td>{{data.destinations}}</td>
+                </tr>
+            {%endfor%}
+              </tbody>
+            </table>
 
 <p>Well not quite, you need do some supporting code, but that’s the overall structure. To use your newly created plug-in you’ll need to place the files in /home/[username]/.local/share/cockpit/[pluginName]. Now that’s done, refreshing the Cockpit UI in the browser will show your newly created plug-in on the left-hand menu.</p>
 
@@ -27,9 +72,8 @@ permalink: /blogs/:title
 
 <p>The main functionality of the Enclave plug-in for Cockpit is based on the Enclave command-line interface. Enclave offers a --json modifier for most CLI commands, so I’ve made the plug-in call enclave status --json to get a structured document representing the status of the Enclave agent.</p>
 
-<blockquote class="blockquote single-quote">
-  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo non labore totam tempora sed neque repellat numquam eaque inventore! Iusto saepe ipsum, ex, commodi asperiores iure dolores amet dolorem eos voluptatum, aliquid incidunt non perferendis earum dignissimos quod iste accusantium deleniti.Risus sociis urna elementum ultricies justo quisque, mattis in eros facilisis mauris vestibulum sed, luctus proin nibh nonummy integer, nullam sit eget cum duis. Et sodales blandit, libero pede suscipit, tincidunt amet </p>
-</blockquote>
+{% include components/bloquote.html author=page.qoute.author occupation=page.qoute.occupation blockquote=page.qoute.blockquote %}
+
 <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
 <p>eleifend hac porta faucibus aliquam eros, massa facilisis, sed pede maecenas porttitor id magnis. Ac sed aliquam in felis amet, adipiscing pede a amet faucibus sit, quis in et ullamcorper vel commodo. Volutpat ut pede sem ipsum non, sapien adipiscing, suspendisse neque, quis dolor donec dolor. Sit voluptatibus, scelerisque in semper lacus nostra, ac integer dolor mauris tempus eget</p>
 

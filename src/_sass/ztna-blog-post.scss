@@ -1,6 +1,7 @@
 $small-spacer: 20px;
 $medium-spacer: 30px;
 $large-spacer: 50px;
+$fig-spacer: 10px;
 
 .ztna-post-cover {
   width: 100%;
@@ -35,11 +36,38 @@ $large-spacer: 50px;
     margin-bottom: $large-spacer;
   }
 
-  table,
   pre,
   code,
   blockquote {
     margin-bottom: $medium-spacer;
+  }
+
+  table {
+    @extend .ztna-table;
+    margin-bottom: $medium-spacer;
+
+    thead {
+      @extend .ztna-table-head;
+      @extend .background-color;
+      @extend .light-text-2;
+    }
+    tbody {
+      @extend .ztna-table-body;
+      @extend .ztna-small-text;
+      @extend .dark-text;
+    }
+  }
+
+  figure {
+    margin-bottom: $large-spacer;
+    img {
+      border-radius: 30px;
+      margin-bottom: $fig-spacer;
+    }
+    figcaption {
+      @extend .ztna-small-text;
+      @extend .light-text-1;
+    }
   }
 }
 
