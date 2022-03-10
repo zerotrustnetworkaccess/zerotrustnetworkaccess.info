@@ -3,7 +3,7 @@ layout: ztna-post
 title: "Linux, Cockpit And Enclave"
 date: 2022-02-06 23:37:13 +0600
 categories: [architecture, SD-WAN, SDP]
-author: "Tortoiz Theme"
+author: "Tony Stark"
 post_image: "/assets/images/test-post/test-post.jpg"
 figure: "/assets/images/test-post/blog-cockpit-plugin.png"
 post_format: "general"

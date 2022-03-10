@@ -1,8 +1,8 @@
-<div class="container">
+<div class="container mb-100 ztna-content-wrapper">
   {% assign posts = site.posts | where: "categories", include.category[0]%} {%
   if posts.size == 1 %}
-  <div>
-    <h2>Recent articles</h2>
+  <div class="mr-md-40-20 ml-md-40-20">
+    <h2 class="ztna-margin-bottom-50-40 dark-text">Recent articles</h2>
     <div class="row d-flex justify-content-center">
       {% assign count = 0 %} {% for post in site.posts %} {% if post.url
       !=page.url %} {% assign count = count | plus:1 %}
@@ -13,9 +13,9 @@
   </div>
   {% if count == 3 %}{% break %} {% endif %} {% endif %} {% endfor %} {% else %}
   <div>
-    <h2>Related articles</h2>
+    <h2 class="ztna-margin-bottom-50-40 dark-text">Related articles</h2>
 
-    <div class="row d-flex justify-content-center">
+    <div class="row d-flex justify-content-start">
       {% assign count = 0 %} {%for post in posts %} {% if post.url !=page.url %}
       {% assign count = count | plus:1 %}
       <div class="ztna-post-responsive col-lg-4 col-md-6 col-sm-6 mb-0">
@@ -26,13 +26,3 @@
   </div>
   {% endif %}
 </div>
-
-<!-- <h2>Related articles</h2>
-<div class="row d-flex justify-content-center">
-  {% for post in site.posts | limit:3 %} {% if post.categories contains
-  include.category[0] %}
-  <div class="ztna-post-responsive col-lg-4 col-md-6 col-sm-6 mb-0">
-    {% include components/post-preview.html %}
-  </div>
-  {% endif %} {% endfor %}
-</div> -->

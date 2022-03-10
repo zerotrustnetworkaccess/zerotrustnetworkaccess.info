@@ -3,7 +3,7 @@
 }
 
 .ztna-margin-right-10 {
-  margin-right: 10px;
+  margin-right: 10px !important;
 }
 
 .ztna-margin-right-40 {
@@ -44,6 +44,10 @@
 
 .ztna-margin-top-50-40 {
   margin-top: 0;
+}
+
+.mt-50-40 {
+  margin-top: 50px !important;
 }
 
 .ztna-info-icon {
@@ -115,6 +119,9 @@
 
   .pl-sm-20 {
     padding-left: 20px !important;
+  }
+  .mt-50-40 {
+    margin-top: 40px !important;
   }
 }
 

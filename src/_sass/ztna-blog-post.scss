@@ -32,10 +32,6 @@ $fig-spacer: 10px;
     @extend .light-blue-1;
   }
 
-  // & :nth-child(2) {
-  //   margin-bottom: $large-spacer;
-  // }
-
   pre,
   code {
     margin-bottom: $medium-spacer;
@@ -80,6 +76,30 @@ $fig-spacer: 10px;
     font-family: "Source Code Pro", monospace;
     font-size: 16px;
     line-height: 24px;
+  }
+
+  .ztna-small-button-left {
+    width: fit-content;
+  }
+
+  a.ztna-small-button-left {
+    text-decoration: none;
+  }
+
+  .ztna-tag-small {
+    width: max-content;
+  }
+
+  a.ztna-tag-small {
+    @extend .light-text-1;
+    &:hover {
+      @extend .light-blue-1;
+    }
+  }
+
+  p.ztna-tag-small {
+    margin-bottom: 10px;
+    pointer-events: none;
   }
 }
 

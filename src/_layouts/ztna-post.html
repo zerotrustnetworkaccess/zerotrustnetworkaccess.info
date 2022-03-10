@@ -5,13 +5,14 @@ layout: ztna-default
 {% if page.post_image %} 
 <img style="background-image: url({{page.post_image}})" class="ztna-post-cover ztna-margin-bottom-50-40"> 
 {% endif %} 
-<div class="container ">
+<div class="container ztna-content-wrapper">
   {% include components/bread-crumbs.html %} 
  
-    <div class="row">
+    <div class="row mr-md-40-20 ml-md-40-20">
       <div class="col-lg-8 post-typography">
         {% include components/post-metadata.html %} 
         {{content}}
+        <a class="ztna-small-button-left white-background light-blue-1 h4 mt-50-40" href="/blogs/index/">{%include icons/button-left-arrow.svg %} Back to blog</a>
       </div>
       <aside class="col-lg-4 sidebar"> {% include sidebar.html %} </aside>
     </div>
