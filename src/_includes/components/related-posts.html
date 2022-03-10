@@ -1,0 +1,19 @@
+<h2>Related articles</h2>
+<div class="row d-flex justify-content-center">
+  {% if post.url !=page.url %} {% assign posts = site.posts | where:
+  "categories", include.category[0]%} {%for post in posts |limit: 3 %}
+  <div class="ztna-post-responsive col-lg-4 col-md-6 col-sm-6 mb-0">
+    {% include components/post-preview.html %}
+  </div>
+  {% endfor %} {% endif %}
+</div>
+
+<!-- <h2>Related articles</h2>
+<div class="row d-flex justify-content-center">
+  {% for post in site.posts | limit:3 %} {% if post.categories contains
+  include.category[0] %}
+  <div class="ztna-post-responsive col-lg-4 col-md-6 col-sm-6 mb-0">
+    {% include components/post-preview.html %}
+  </div>
+  {% endif %} {% endfor %}
+</div> -->
