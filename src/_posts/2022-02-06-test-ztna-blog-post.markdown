@@ -66,6 +66,10 @@ table:
 
 <p>Well not quite, you need do some supporting code, but that’s the overall structure. To use your newly created plug-in you’ll need to place the files in /home/[username]/.local/share/cockpit/[pluginName]. Now that’s done, refreshing the Cockpit UI in the browser will show your newly created plug-in on the left-hand menu.</p>
 
+<p>With my prior blog post about using Enclave to control your homelab servers, I made a passing mention to Cockpit. Now I’ll be honest I’d not heard about Cockpit until I started looking into moving my home media server over to Linux (I use Fedora Server). With some investigation it seemed that Cockpit was near enough perfect for what I wanted to do: manage my Linux server’s local storage and updates from a slick UI. Not to mention error logging!</p>
+
+<p>For those who don’t know, Cockpit is web-based a management portal for Linux servers, developed in conjunction with RedHat Linux. It’s incredibly powerful; letting you manage near enough everything about the server through a web portal, and if you can’t do it through the web portal, Cockpit gives you access to a terminal in the browser too, so no need to SSH into your box. Oh and obviously given the topic of this blog post there are plug-ins! </p>
+
 <p>Psst we’ve made <a href="#">it open source you can find it here! </a> </p>
 
 <h3>How does the plug-in work?</h3>

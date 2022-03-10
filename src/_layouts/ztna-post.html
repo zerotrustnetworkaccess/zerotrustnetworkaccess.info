@@ -7,12 +7,23 @@ layout: ztna-default
 {% endif %} 
 <div class="container ">
   {% include components/bread-crumbs.html %} 
+ 
     <div class="row">
       <div class="col-lg-8 post-typography">
+        {% include components/post-metadata.html %} 
         {{content}}
       </div>
       <aside class="col-lg-4 sidebar"> {% include sidebar.html %} </aside>
     </div>
+  </div>
+  <div class="container inner">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        {% include disqus_comments.html %}
+      </div>
+      <!-- /column -->
+    </div>
+    <!-- /.row -->
   </div>
   {% include components/related-posts.html category=page.categories %}
 </div>

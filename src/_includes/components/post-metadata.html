@@ -1,0 +1,16 @@
+<div class="d-flex">
+  {% for category in page.categories%}
+
+  <a
+    href="/category/{{page.categories}}"
+    class="ztna-tag-small background-color ztna-margin-bottom-10 ztna-small-text light-text-1"
+  >
+    {{category}}
+  </a>
+  {% endfor%}
+  <p>Time to read</p>
+  {% include components/time-2-read.html%}
+
+  <p>Author</p>
+  {% include components/post-date.html%}
+</div>
