@@ -1,11 +1,30 @@
-<h2>Related articles</h2>
-<div class="row d-flex justify-content-center">
-  {% if post.url !=page.url %} {% assign posts = site.posts | where:
-  "categories", include.category[0]%} {%for post in posts |limit: 3 %}
-  <div class="ztna-post-responsive col-lg-4 col-md-6 col-sm-6 mb-0">
-    {% include components/post-preview.html %}
+<div class="container">
+  {% assign posts = site.posts | where: "categories", include.category[0]%} {%
+  if posts.size == 1 %}
+  <div>
+    <h2>Recent articles</h2>
+    <div class="row d-flex justify-content-center">
+      {% assign count = 0 %} {% for post in site.posts %} {% if post.url
+      !=page.url %} {% assign count = count | plus:1 %}
+      <div class="ztna-post-responsive col-lg-4 col-md-6 col-sm-6 mb-0">
+        {% include components/post-preview.html %}
+      </div>
+    </div>
   </div>
-  {% endfor %} {% endif %}
+  {% if count == 3 %}{% break %} {% endif %} {% endif %} {% endfor %} {% else %}
+  <div>
+    <h2>Related articles</h2>
+
+    <div class="row d-flex justify-content-center">
+      {% assign count = 0 %} {%for post in posts %} {% if post.url !=page.url %}
+      {% assign count = count | plus:1 %}
+      <div class="ztna-post-responsive col-lg-4 col-md-6 col-sm-6 mb-0">
+        {% include components/post-preview.html %}
+      </div>
+      {% if count == 3 %}{% break %} {% endif %} {% endif %} {% endfor %}
+    </div>
+  </div>
+  {% endif %}
 </div>
 
 <!-- <h2>Related articles</h2>

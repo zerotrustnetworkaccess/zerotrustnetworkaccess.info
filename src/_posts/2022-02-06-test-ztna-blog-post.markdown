@@ -2,7 +2,7 @@
 layout: ztna-post
 title: "Linux, Cockpit And Enclave"
 date: 2022-02-06 23:37:13 +0600
-categories: [wedding, architecture, SD-WAN, SDP]
+categories: [architecture, SD-WAN, SDP]
 author: "Tortoiz Theme"
 post_image: "/assets/images/test-post/test-post.jpg"
 figure: "/assets/images/test-post/blog-cockpit-plugin.png"
@@ -74,7 +74,7 @@ table:
 
 {% include components/bloquote.html author=page.qoute.author occupation=page.qoute.occupation blockquote=page.qoute.blockquote author_photo=page.qoute.author_photo%}
 
-<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
+<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
 <p>eleifend hac porta faucibus aliquam eros, massa facilisis, sed pede maecenas porttitor id magnis. Ac sed aliquam in felis amet, adipiscing pede a amet faucibus sit, quis in et ullamcorper vel commodo. Volutpat ut pede sem ipsum non, sapien adipiscing, suspendisse neque, quis dolor donec dolor. Sit voluptatibus, scelerisque in semper lacus nostra, ac integer dolor mauris tempus eget</p>
 
 <pre><code>
