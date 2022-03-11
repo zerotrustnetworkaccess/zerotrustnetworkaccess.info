@@ -2,7 +2,7 @@
 layout: ztna-post
 title: "Linux, Cockpit And Enclave"
 date: 2022-02-06 23:37:13 +0600
-categories: [wedding, architecture, SD-WAN, SDP]
+categories: [wedding, SD-WAN, SDP]
 author: "Tony Stark"
 post_image: "/assets/images/test-post/test-post.jpg"
 figure: "/assets/images/test-post/blog-cockpit-plugin.png"
@@ -42,7 +42,7 @@ table:
 
 <h2>So… plug-ins?</h2> 
 <p> Knowing Cockpit supports plug-ins, my first question was: how do I make one for Enclave? To my surprise it was fairly simple. All you need is a manifest.json file, an index.html file and an index.js file. That’s it. You now have a plug-in.</p>
- 
+ <div class="scroll-wrapper">
   <table>
     <thead>
       <tr>
@@ -63,7 +63,7 @@ table:
       {%endfor%}
     </tbody>
   </table>
-
+</div>
 <p>Well not quite, you need do some supporting code, but that’s the overall structure. To use your newly created plug-in you’ll need to place the files in /home/[username]/.local/share/cockpit/[pluginName]. Now that’s done, refreshing the Cockpit UI in the browser will show your newly created plug-in on the left-hand menu.</p>
 
 <p>With my prior blog post about using Enclave to control your homelab servers, I made a passing mention to Cockpit. Now I’ll be honest I’d not heard about Cockpit until I started looking into moving my home media server over to Linux (I use Fedora Server). With some investigation it seemed that Cockpit was near enough perfect for what I wanted to do: manage my Linux server’s local storage and updates from a slick UI. Not to mention error logging!</p>
@@ -80,7 +80,7 @@ table:
 
 <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
 <p>eleifend hac porta faucibus aliquam eros, massa facilisis, sed pede maecenas porttitor id magnis. Ac sed aliquam in felis amet, adipiscing pede a amet faucibus sit, quis in et ullamcorper vel commodo. Volutpat ut pede sem ipsum non, sapien adipiscing, suspendisse neque, quis dolor donec dolor. Sit voluptatibus, scelerisque in semper lacus nostra, ac integer dolor mauris tempus eget</p>
-
+<div class="scroll-wrapper">
 <pre><code>!(function (t) { "function" == typeof define && define.amd
         ? define(["jquery"], t)
         : "object" == typeof module && "object" == typeof module.exports
@@ -104,5 +104,5 @@ table:
         canAnimate = !!$.fn.animate;
   </code>
 </pre>
-
+</div>
 <p>Accumsan augue ullamcorper eros viverra neque, libero est metus libero. Lacinia wisi feugiat tellus neque dui pellentesque, libero Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit est velit similique laborum, cumque aliquam porro dicta debitis repellat, tempore dignissimos, neque ab fuga voluptatibus. Earum numquam repellat sed perspiciatis ratione explicabo, odit! Repellendus voluptatibus nemo praesentium</p>

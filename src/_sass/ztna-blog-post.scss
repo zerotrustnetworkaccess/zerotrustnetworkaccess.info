@@ -34,6 +34,7 @@ $fig-spacer: 10px;
 
   table {
     @extend .ztna-table;
+    overflow-x: scroll;
     margin-bottom: $medium-spacer;
 
     thead {
@@ -130,6 +131,10 @@ blockquote {
 @media only screen and (max-width: $breakpoint-sm) {
   $small-spacer: 10px;
   $large-spacer: 40px;
+  .ztna-post-cover {
+    height: 150px;
+  }
+
   blockquote {
     border-radius: 30px;
     padding: 34px 30px 20px 30px;
@@ -137,5 +142,14 @@ blockquote {
     p {
       margin-bottom: 8px;
     }
+    img {
+      width: 50px;
+    }
+  }
+}
+
+@media only screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-lg) {
+  .ztna-post-cover {
+    height: 250px;
   }
 }

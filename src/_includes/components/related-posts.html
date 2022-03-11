@@ -1,9 +1,11 @@
-<div class="container mb-100 ztna-content-wrapper ml-55-40-20 mr-55-40-20">
+<div
+  class="container-fluid mb-100 ztna-mb-md-100-70 ztna-content-wrapper mx-auto px-md-40-20"
+>
   {% assign posts = site.posts | where: "categories", include.category[0]%} {%
   if posts.size == 1 %}
   <div>
     <h2 class="ztna-margin-bottom-50-40 dark-text">Recent articles</h2>
-    <div class="row d-flex justify-content-center">
+    <div class="d-flex justify-content-start">
       {% assign count = 0 %} {% for post in site.posts %} {% if post.url
       !=page.url %} {% assign count = count | plus:1 %}
       <div class="ztna-post-responsive col-lg-4 col-md-6 col-sm-6 mb-0">
@@ -14,12 +16,11 @@
   {% if count == 3 %}{% break %} {% endif %} {% endif %} {% endfor %} {% else %}
   <div>
     <h2 class="ztna-margin-bottom-50-40 dark-text">Related articles</h2>
-
-    <div class="row d-flex justify-content-start">
+    <div class="d-flex justify-content-xl-start justify-content-md-between">
       {% assign count = 0 %} {%for post in posts %} {% if post.url !=page.url %}
       {% assign count = count | plus:1 %}
-      <div class="ztna-post-responsive col-lg-4 col-md-6 col-sm-6 mb-0">
-        {% include components/post-preview.html %}
+      <div class="ztna-post-responsive col-lg-4 col-md-6 col-sm-6 mb-0 px-0">
+        <div class="col-12">{% include components/post-preview.html %}</div>
       </div>
       {% if count == 3 %}{% break %} {% endif %} {% endif %} {% endfor %}
     </div>

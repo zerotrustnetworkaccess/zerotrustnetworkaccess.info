@@ -153,7 +153,7 @@ html {
 .ztna-post-wrapper {
   max-width: 364px;
   width: 100%;
-  margin: 0px 0px 40px 0px;
+  margin: 0;
   a:hover {
     text-decoration: none;
   }
@@ -286,6 +286,10 @@ td {
     width: 1170px;
     z-index: 10;
   }
+
+  .ztna-post-wrapper {
+    max-width: 316px;
+  }
 }
 @media only screen and (max-width: $breakpoint-sm) {
   .ztna-table {
@@ -303,5 +307,9 @@ td {
 
   .ztna-post-image {
     height: 200px;
+  }
+
+  .ztna-post-wrapper {
+    max-width: none;
   }
 }
