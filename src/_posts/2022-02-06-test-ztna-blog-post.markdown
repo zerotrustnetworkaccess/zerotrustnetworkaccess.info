@@ -2,7 +2,7 @@
 layout: ztna-post
 title: "Linux, Cockpit And Enclave"
 date: 2022-02-06 23:37:13 +0600
-categories: [architecture, SD-WAN, SDP]
+categories: [wedding, architecture, SD-WAN, SDP]
 author: "Tony Stark"
 post_image: "/assets/images/test-post/test-post.jpg"
 figure: "/assets/images/test-post/blog-cockpit-plugin.png"
@@ -81,29 +81,28 @@ table:
 <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
 <p>eleifend hac porta faucibus aliquam eros, massa facilisis, sed pede maecenas porttitor id magnis. Ac sed aliquam in felis amet, adipiscing pede a amet faucibus sit, quis in et ullamcorper vel commodo. Volutpat ut pede sem ipsum non, sapien adipiscing, suspendisse neque, quis dolor donec dolor. Sit voluptatibus, scelerisque in semper lacus nostra, ac integer dolor mauris tempus eget</p>
 
-<pre><code>
-!(function (t) {
-  "function" == typeof define && define.amd
-    ? define(["jquery"], t)
-    : "object" == typeof module && "object" == typeof module.exports
-    ? (module.exports = t(require("jquery")))
-    : t(jQuery);
-})(function ($) {
-  var menuTrees = [],
-    mouse = !1,
-    touchEvents = "ontouchstart" in window,
-    mouseDetectionEnabled = !1,
-    requestAnimationFrame =
-      window.requestAnimationFrame ||
-      function (t) {
-        return setTimeout(t, 1e3 / 60);
-      },
-    cancelAnimationFrame =
-      window.cancelAnimationFrame ||
-      function (t) {
-        clearTimeout(t);
-      },
-    canAnimate = !!$.fn.animate;
-</code></pre>
+<pre><code>!(function (t) { "function" == typeof define && define.amd
+        ? define(["jquery"], t)
+        : "object" == typeof module && "object" == typeof module.exports
+        ? (module.exports = t(require("jquery")))
+        : t(jQuery);
+    })(function ($) {
+      var menuTrees = [],
+        mouse = !1,
+        touchEvents = "ontouchstart" in window,
+        mouseDetectionEnabled = !1,
+        requestAnimationFrame =
+          window.requestAnimationFrame ||
+          function (t) {
+            return setTimeout(t, 1e3 / 60);
+          },
+        cancelAnimationFrame =
+          window.cancelAnimationFrame ||
+          function (t) {
+            clearTimeout(t);
+          },
+        canAnimate = !!$.fn.animate;
+  </code>
+</pre>
 
 <p>Accumsan augue ullamcorper eros viverra neque, libero est metus libero. Lacinia wisi feugiat tellus neque dui pellentesque, libero Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit est velit similique laborum, cumque aliquam porro dicta debitis repellat, tempore dignissimos, neque ab fuga voluptatibus. Earum numquam repellat sed perspiciatis ratione explicabo, odit! Repellendus voluptatibus nemo praesentium</p>

@@ -1,7 +1,7 @@
-<div class="container mb-100 ztna-content-wrapper">
+<div class="container mb-100 ztna-content-wrapper ml-55-40-20 mr-55-40-20">
   {% assign posts = site.posts | where: "categories", include.category[0]%} {%
   if posts.size == 1 %}
-  <div class="mr-md-40-20 ml-md-40-20">
+  <div>
     <h2 class="ztna-margin-bottom-50-40 dark-text">Recent articles</h2>
     <div class="row d-flex justify-content-center">
       {% assign count = 0 %} {% for post in site.posts %} {% if post.url

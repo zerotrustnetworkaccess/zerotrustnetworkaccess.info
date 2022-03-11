@@ -1,9 +1,9 @@
 <div
-  class="row d-flex align-items-center justify-content-start ztna-margin-bottom-30-20"
+  class="d-flex align-items-center justify-content-start ztna-margin-bottom-30-20 ztna-content-wrapper"
 >
   {% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
 
-  <a href="/" class="ztna-small-text light-text-1 mx-2">Home</a>
+  <a href="/" class="ztna-small-text light-text-1 mr-10">Home</a>
 
   {% for crumb in crumbs offset: 1 %} {% if forloop.last %} {% include
   icons/button-right-arrow.svg cls="light-text-1-fill"%}

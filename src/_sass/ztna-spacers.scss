@@ -67,6 +67,18 @@
   padding-right: 40px !important;
 }
 
+.mr-55-40-20 {
+  margin-right: 55x !important;
+}
+
+.ml-55-40-20 {
+  margin-left: 55px !important;
+}
+
+.space-20-30-20 {
+  height: 20px !important;
+}
+
 @media only screen and (max-width: $breakpoint-sm) {
   .ztna-margin-bottom-30-20 {
     margin-bottom: 20px;
@@ -123,6 +135,18 @@
   .mt-50-40 {
     margin-top: 40px !important;
   }
+
+  .ml-55-40-20 {
+    margin-left: 20px !important;
+  }
+
+  .mr-55-40-20 {
+    margin-right: 20px !important;
+  }
+
+  .space-20-30-20 {
+    height: 20px !important;
+  }
 }
 
 @media only screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-lg) {
@@ -156,6 +180,17 @@
 
   .mr-60-40 {
     margin-right: 40px;
+  }
+  .mr-55-40-20 {
+    margin-right: 40x !important;
+  }
+
+  .ml-55-40-20 {
+    margin-left: 40x !important;
+  }
+
+  .space-20-30-20 {
+    height: 30px !important;
   }
 }
 

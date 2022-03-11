@@ -5,10 +5,10 @@ layout: ztna-default
 {% if page.post_image %} 
 <img style="background-image: url({{page.post_image}})" class="ztna-post-cover ztna-margin-bottom-50-40"> 
 {% endif %} 
-<div class="container ztna-content-wrapper">
+<div class="container ztna-content-wrapper ml-55-40-20 mr-55-40-20">
   {% include components/bread-crumbs.html %} 
  
-    <div class="row mr-md-40-20 ml-md-40-20">
+    <div class="row mr-md-40-20 ml-md-40-20 ztna-margin-bottom-50-40">
       <div class="col-lg-8 post-typography">
         {% include components/post-metadata.html %} 
         {{content}}
@@ -17,14 +17,6 @@ layout: ztna-default
       <aside class="col-lg-4 sidebar"> {% include sidebar.html %} </aside>
     </div>
   </div>
-  <div class="container inner">
-    <div class="row">
-      <div class="col-lg-10 mx-auto">
-        {% include disqus_comments.html %}
-      </div>
-      <!-- /column -->
-    </div>
-    <!-- /.row -->
-  </div>
+ 
   {% include components/related-posts.html category=page.categories %}
 </div>

@@ -32,11 +32,6 @@ $fig-spacer: 10px;
     @extend .light-blue-1;
   }
 
-  pre,
-  code {
-    margin-bottom: $medium-spacer;
-  }
-
   table {
     @extend .ztna-table;
     margin-bottom: $medium-spacer;
@@ -63,6 +58,11 @@ $fig-spacer: 10px;
       @extend .ztna-small-text;
       @extend .light-text-1;
     }
+  }
+
+  pre,
+  code {
+    margin-bottom: $medium-spacer;
   }
 
   pre {
@@ -122,6 +122,8 @@ blockquote {
     mask-position: center center;
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
+    width: 60px;
+    height: auto;
   }
 }
 
