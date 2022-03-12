@@ -86,6 +86,13 @@
 .ztna-margin-bottom-30-12 {
   margin-bottom: 30px;
 }
+.ml--15 {
+  margin-left: -15px !important;
+}
+
+.mr-40-30-0 {
+  margin-right: 3.125%;
+}
 
 @media only screen and (max-width: $breakpoint-sm) {
   .ztna-margin-bottom-30-20 {
@@ -174,6 +181,14 @@
   .ml-sm-20 {
     margin-left: 20px !important;
   }
+
+  .ml--15 {
+    margin-left: 0px !important;
+  }
+
+  .mr-40-30-0 {
+    margin-right: 0px;
+  }
 }
 
 @media only screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-lg) {
@@ -238,6 +253,14 @@
 
   .mr-md-40 {
     margin-right: 40px !important;
+  }
+
+  .ml--15 {
+    margin-left: -15px !important;
+  }
+
+  .mr-40-30-0 {
+    margin-right: 4%;
   }
 }
 

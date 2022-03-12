@@ -15,13 +15,14 @@
   </div>
   {% if count == 3 %}{% break %} {% endif %} {% endif %} {% endfor %} {% else %}
   <div class="ml-lg-40 mr-lg-40 mr-md-40-20 ml-md-40-20">
-    <h2 class="ztna-margin-bottom-50-40 dark-text">Related articles</h2>
-    <div class="d-flex justify-content-xl-start justify-content-md-between">
+    <h2 class="ztna-margin-bottom-50-40 dark-text pl-15">Related articles</h2>
+    <div class="d-flex">
       {% assign count = 0 %} {%for post in posts %} {% if post.url !=page.url %}
       {% assign count = count | plus:1 %}
-      <div class="ztna-post-responsive col-lg-4 col-md-6 col-sm-6 mb-0 px-0">
-        <div class="col-12">{% include components/post-preview.html %}</div>
+      <div class="ztna-post-responsive col-lg-4 col-md-6 col-sm-6 mb-0">
+        {% include components/post-preview.html %}
       </div>
+
       {% if count == 3 %}{% break %} {% endif %} {% endif %} {% endfor %}
     </div>
   </div>
