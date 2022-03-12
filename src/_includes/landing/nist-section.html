@@ -1,0 +1,27 @@
+{% if site.data.landing.nist-sp-800-207.enable %} {% assign nist =
+site.data.landing.nist-sp-800-207 %}
+
+<div
+  class="container-fluid background-color ztna-nist-section-wrapper d-flex justify-content-center px-md-40-20"
+>
+  <div class="ztna-content-wrapper">
+    <div class="row d-flex justify-content-center">
+      <div class="col-lg-8 ztna-margin-bottom-50-40 text-center">
+        <p class="h5 light-text-2">{{nist.label}}</p>
+        <div class="space10"></div>
+        <h2 class="dark-text ztna-margin-bottom-30-20">{{nist.title}}</h2>
+
+        {% for paragraph in nist.paragraphs %}
+        <p class="ztna-small-text light-text-1">{{paragraph.text}}</p>
+        <div class="space20"></div>
+        {% endfor %} {% for link in nist.more %}
+        <a href="{{link.link}}" target="_blank" class="text-link light-blue-1"
+          >{{link.text}}</a
+        >
+        {% endfor %}
+      </div>
+    </div>
+    {% include landing/nist/desktop-tenets.html %}
+  </div>
+</div>
+{% include landing/nist/mobile-tenets.html %} {% endif %}

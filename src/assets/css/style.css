@@ -146,11 +146,11 @@ body {
   padding-left: 30px;
   padding-right: 30px;
 }
-body,
+/* body,
 li,
 address {
   line-height: 1.4rem;
-}
+} */
 input,
 button,
 select,
@@ -758,7 +758,7 @@ button.hamburger.animate.active:after {
 .offcanvas-close {
   position: absolute;
   top: 2rem;
-  right: 1.3rem;
+  left: 1.3rem;
   cursor: pointer;
   font-size: 1.2rem;
   -webkit-transition: all 200ms ease-in-out !important;
@@ -1926,10 +1926,10 @@ button.close:before {
 /*  24. BLOCKQUOTE
 /*-----------------------------------------------------------------------------------*/
 blockquote p {
-  font-size: 0.9rem;
+  /* font-size: 0.9rem;
   line-height: 1.5rem;
   font-style: normal;
-  color: #707070;
+  color: #707070; */
 }
 blockquote.icon p {
   font-size: 1rem;
@@ -2009,7 +2009,7 @@ blockquote.icon.icon-left:before {
   padding-left: 1rem;
 }
 .blockquote-details .img-blob img {
-  width: 3.5rem;
+  /* width: 3.5rem; */
 }
 .blockquote-details span {
   font-size: 0.8rem;
@@ -2233,11 +2233,13 @@ ol {
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   height: auto;
-  width: 4.5rem;
+  /* width: 4.5rem; */
+  width: 80px;
   max-width: 100%;
   -webkit-mask-size: auto auto;
   -webkit-mask-box-image-repeat: space;
 }
+
 .img-blob.blob1 img {
   -webkit-mask-box-image: url(../images/blob/blob1.svg);
   -webkit-mask-image: url(../images/blob/blob1.svg);
@@ -2331,8 +2333,15 @@ ol {
 .owl-carousel .owl-item .img-blob img,
 .owl-carousel .owl-item .img-blob-s img {
   display: inline;
-  width: 3.5rem;
+  /* width: 3.5rem; */
 }
+
+@media only screen and (max-width: 575px) {
+  .img-blob img {
+    width: 50px;
+  }
+}
+
 /*-----------------------------------------------------------------------------------*/
 /*  27. CLIENTS
 /*-----------------------------------------------------------------------------------*/
@@ -3179,28 +3188,28 @@ ul.dial li:first-child .dial-item-info {
 /*  38. COUNTER
 /*-----------------------------------------------------------------------------------*/
 .counter h3 {
-  font-size: 2.3rem;
+  /* font-size: 2.3rem;
   line-height: 1;
-  font-weight: 400;
-  margin-bottom: 0.6rem;
+  font-weight: 400; */
+  /* margin-bottom: 0.6rem; */
 }
 .counter p {
-  font-size: 0.8rem;
+  /* font-size: 0.8rem; */
   margin-bottom: 0;
-  line-height: 1.1rem;
+  /* line-height: 1.1rem; */
 }
 .counter .box {
-  padding: 1.5rem;
+  /* padding: 1.5rem; */
 }
 .counter-s h3 {
-  font-size: 1.8rem;
+  /* font-size: 1.8rem; */
 }
 .counter-s .icon-blob {
   width: 6.5rem;
   height: 6.5rem;
 }
 .counter-s .icon-blob:after {
-  font-size: 6.5rem;
+  /* font-size: 6.5rem; */
 }
 .counter-s .icon-blob h3 {
   margin-bottom: 0.1rem;
@@ -4231,21 +4240,22 @@ a.btn-play-wrapper .btn-play:hover {
 /*-----------------------------------------------------------------------------------*/
 .owl-carousel {
   border-radius: 0.2rem;
+  position: relative;
 }
 .owl-carousel .owl-nav {
-  position: absolute;
+  /* position: absolute; */
   width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  pointer-events: none;
+  /* height: 100%; */
+  /* top: 0; */
+  /* left: 0; */
+  /* pointer-events: none; */
   line-height: 1;
 }
 .owl-carousel .owl-dots {
   text-align: center;
   -webkit-tap-highlight-color: transparent;
-  position: absolute;
-  left: 0;
+  /* position: absolute;
+  right: 0; */
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4260,6 +4270,7 @@ a.btn-play-wrapper .btn-play:hover {
   margin-top: 1rem;
   line-height: 1;
 }
+
 .owl-carousel.dots-left .owl-dots {
   text-align: left;
   -webkit-box-pack: start;
@@ -4361,43 +4372,43 @@ a.btn-play-wrapper .btn-play:hover {
   font-size: 0;
   line-height: 0;
   padding: 0;
-  margin-bottom: 1.2rem;
+  /* margin-bottom: 1.2rem; */
 }
 .isotope-filter ul li {
   display: inline-block;
-  padding: 0;
+  /* padding: 0;
   margin: 0 1rem 0 0;
-  line-height: 2.5rem;
+  line-height: 2.5rem; */
 }
-.text-center .isotope-filter ul li {
+/* .text-center .isotope-filter ul li {
   margin: 0 0.5rem;
-}
+} */
 .isotope-filter ul li a {
-  color: #404040;
+  /* color: #404040; */
   cursor: pointer;
   -webkit-transition: all 150ms ease-in-out;
   -o-transition: all 150ms ease-in-out;
   transition: all 150ms ease-in-out;
-  font-weight: 500;
-  text-transform: uppercase;
-  padding: 0.6rem 0.9rem 0.55rem;
-  font-size: 0.65rem;
+  /* font-weight: 500; */
+  /* text-transform: uppercase; */
+  /* padding: 0.6rem 0.9rem 0.55rem; */
+  /* font-size: 0.65rem;
   letter-spacing: 0.025rem;
-  line-height: 1;
-  border-radius: 1.5rem;
-  background: none;
+  line-height: 1; */
+  /* border-radius: 1.5rem; */
+  /* background: none; */
 }
-.isotope-filter ul li a:hover {
+/* .isotope-filter ul li a:hover {
   color: var(--color-default) !important;
-}
+} */
 .isotope-filter ul li a.active {
-  color: var(--color-default);
+  /* color: var(--color-default);
   background: var(--color-white);
   -webkit-box-shadow: var(--shadow) !important;
-  box-shadow: var(--shadow) !important;
+  box-shadow: var(--shadow) !important; */
 }
 .isotope-filter ul li a.active:hover {
-  color: var(--color-default) !important;
+  /* color: var(--color-default) !important; */
 }
 .mosaic .item {
   width: 25%;
@@ -6483,17 +6494,17 @@ footer.inverse-text address {
 }
 @media (min-width: 992px) {
   .navbar-nav .nav-link {
-    padding-top: 1.7rem;
-    padding-bottom: 1.7rem;
+    /* padding-top: 1.7rem;
+    padding-bottom: 1.7rem; */
   }
   .navbar.transparent .navbar-nav .nav-link {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    /* padding-top: 2rem;
+    padding-bottom: 2rem; */
   }
   .navbar.fixed .navbar-nav .nav-link,
   .navbar.navbar-fancy .navbar-nav .nav-link {
-    padding-top: 1.3rem;
-    padding-bottom: 1.3rem;
+    /* padding-top: 1.3rem;
+    padding-bottom: 1.3rem; */
   }
   .navbar-nav .nav-link:hover,
   .navbar-nav .nav-link.active,
@@ -6775,8 +6786,8 @@ footer.inverse-text address {
   .navbar-nav .nav-link,
   .dropdown-item,
   .mega-menu-content a {
-    padding-top: 0.7rem;
-    padding-bottom: 0.7rem;
+    /* padding-top: 0.7rem;
+    padding-bottom: 0.7rem; */
   }
   .navbar-other .nav-item a:not(.btn),
   .navbar-other .nav-item button {
@@ -6825,42 +6836,7 @@ footer.inverse-text address {
   .navbar.extended .logo-light {
     display: none;
   }
-  .offcanvas-nav {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 100%;
-    left: -300px;
-    width: 300px;
-    padding-right: 1.5rem;
-    padding-left: 1.5rem;
-    padding-bottom: 0.5rem;
-    overflow-y: auto;
-    visibility: hidden;
-    background: #1e2228;
-    -webkit-transition-timing-function: ease-in-out;
-    -o-transition-timing-function: ease-in-out;
-    transition-timing-function: ease-in-out;
-    -webkit-transition-duration: 0.3s;
-    -o-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-property: left, visibility;
-    -o-transition-property: left, visibility;
-    transition-property: left, visibility;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: start;
-    -moz-background-clip: padding;
-    -webkit-background-clip: padding;
-    background-clip: padding-box;
-  }
-  .offcanvas-nav.open {
-    left: 0;
-    visibility: visible;
-  }
-  .navbar.fixed .offcanvas-nav.open {
-    display: none !important;
-  }
+
   .navbar-expand-lg .navbar-nav {
     -ms-flex-direction: column;
     -webkit-box-orient: vertical;
@@ -7141,6 +7117,43 @@ footer.inverse-text address {
   }
   .image-block-wrapper [class*="container"] .box {
     padding: 4rem 3rem;
+  }
+
+  .offcanvas-nav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: auto;
+    right: -300px;
+    width: 300px;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    padding-bottom: 0.5rem;
+    overflow-y: auto;
+    visibility: hidden;
+    background: #1e2228;
+    -webkit-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+    -webkit-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: right, visibility;
+    -o-transition-property: right, visibility;
+    transition-property: right, visibility;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding;
+    background-clip: padding-box;
+  }
+  .offcanvas-nav.open {
+    right: 0;
+    visibility: visible;
+  }
+  .navbar.fixed .offcanvas-nav.open {
+    display: none !important;
   }
 }
 @media (max-width: 575.98px) {

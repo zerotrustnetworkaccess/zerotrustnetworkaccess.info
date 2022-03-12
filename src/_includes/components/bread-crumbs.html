@@ -1,0 +1,33 @@
+<div
+  class="d-flex align-items-center justify-content-start ztna-margin-bottom-30-20 ztna-content-wrapper mr-lg-55 ml-lg-55 mr-md-40-20 ml-md-40-20"
+>
+  {% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
+
+  <a href="/" class="ztna-small-text light-text-1 mr-10">Home</a>
+
+  {% for crumb in crumbs offset: 1 %} {% if forloop.last %} {% include
+  icons/button-right-arrow.svg cls="light-text-1-fill"%}
+
+  <span class="ztna-small-text light-text-1 mx-2">
+    {{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}
+  </span>
+
+  {% elsif crumb == "blogs" %} {% include icons/button-right-arrow.svg
+  cls="light-text-1-fill"%}
+
+  <a href="/blogs/index" class="ztna-small-text light-text-1 mx-2"> Blog</a> {%
+  else %} {% include icons/button-right-arrow.svg cls="light-text-1-fill"%}
+
+  <a
+    href="{% assign crumb_limit = forloop.index | plus: 1 %}
+    {% for crumb in crumbs limit: crumb_limit %}
+        {{ crumb | append: '/' }}
+    {% endfor %}"
+    class="ztna-small-text light-text-1 mx-2"
+  >
+    <span class="ztna-small-text light-text-1 mx-2"
+      >>{{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}</span
+    >
+  </a>
+  {% endif %} {% endfor %}
+</div>

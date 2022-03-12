@@ -1,0 +1,44 @@
+{% if site.data.landing.testimonials.enable %} {% assign testimonials =
+site.data.landing.testimonials %}
+<div
+  class="container-fluid background-color ztna-landing-section-wrapper px-md-40-20"
+>
+  <div class="ztna-content-wrapper mx-auto">
+    <div class="row d-flex justify-content-center">
+      <div
+        class="col-lg-8 col-md-10 col-sm-12 col ztna-margin-bottom-50-40 text-center"
+      >
+        <p class="h5 light-text-2 text-center">{{testimonials.label}}</p>
+        <div class="space10"></div>
+        <h2 class="dark-text text-center">{{testimonials.title}}</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="carousel owl-carousel ztna-carousels-wrapper">
+    {% for feedback in testimonials.feedback %}
+    <div class="item">
+      <div class="ztna-testimonial-card white-background">
+        <blockquote>
+          <p class="light-text-1">"{{feedback.quote}}"</p>
+          <div class="space20"></div>
+          <div class="blockquote-details">
+            {% if feedback.image %}
+            <div class="img-blob blob1">
+              <img src="{{feedback.image}}" alt="{{feedback.name}}" />
+            </div>
+            {% endif %}
+            <div class="info">
+              <p class="h4 light-text-1">{{feedback.name}}</p>
+              <p class="ztna-small-text light-text-1">
+                {{feedback.designation}}
+              </p>
+            </div>
+          </div>
+        </blockquote>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}

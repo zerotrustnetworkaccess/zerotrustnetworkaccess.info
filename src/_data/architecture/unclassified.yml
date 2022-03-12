@@ -1,9 +1,12 @@
 name: "Unclassified"
+filters:
+  - unclassified
+displayByDeafult: false
 abbreviation: ""
 sort_order: "7"
 description: "..."
 image: "https://via.placeholder.com/2280x1200"
-paragraphs: 
+paragraphs:
   - text: "Nullam quis risus eget urna mollis ornare."
 strengths:
   - title: "Nullam quis risus eget urna mollis ornare."
@@ -26,7 +29,7 @@ tradeoffs:
     description: ""
   - title: "Fusce dapibus, tellus ac cursus commodo."
     description: ""
-vendors: 
+vendors:
   - company: "NetSkope"
     product: "Private Access"
     url: "https://www.netskope.com/products/private-access"
@@ -74,7 +77,7 @@ vendors:
     url: "https://www.catonetworks.com/"
     license: ""
     deployment: "App Proxy"
-    pricing: "" 
+    pricing: ""
 
   - company: "Centrify"
     product: ""
@@ -95,14 +98,14 @@ vendors:
     url: "https://www.checkpoint.com/solutions/zero-trust-security/"
     license: ""
     deployment: ""
-    pricing: "" 
+    pricing: ""
 
   - company: "Deep Cloud Technology"
-    product: "<span title=\"China Only\">Deep Cloud</span>"
+    product: '<span title="China Only">Deep Cloud</span>'
     url: "https://www.deepcloudsdp.com/"
     license: ""
     deployment: "SDP"
-    pricing: "" 
+    pricing: ""
 
   - company: "Cohesive"
     product: ""
@@ -116,14 +119,14 @@ vendors:
     url: "https://colortokens.com/product/xshield-workload-protection/"
     license: ""
     deployment: ""
-    pricing: "" 
+    pricing: ""
 
   - company: "Containo"
     product: ""
     url: "https://containo.us/maesh/"
     license: ""
     deployment: ""
-    pricing: "" 
+    pricing: ""
 
   - company: "Cyber Ark"
     product: ""
@@ -172,7 +175,7 @@ vendors:
     url: "https://fly.io/"
     license: ""
     deployment: ""
-    pricing: "" 
+    pricing: ""
 
   - company: "Forcepoint"
     product: ""
@@ -186,14 +189,14 @@ vendors:
     url: "https://www.forescout.com/framework/zero-trust/"
     license: ""
     deployment: ""
-    pricing: "" 
+    pricing: ""
 
   - company: "Fyde"
     product: ""
     url: "https://www.fyde.com/"
     license: ""
     deployment: ""
-    pricing: "" 
+    pricing: ""
 
   - company: "Google"
     product: "BeyondCorp Remote Access"
@@ -228,7 +231,7 @@ vendors:
     url: "https://www.hashicorp.com/blog/hashicorp-boundary"
     license: ""
     deployment: ""
-    pricing: "" 
+    pricing: ""
 
   - company: "Illumio"
     product: ""
@@ -242,7 +245,7 @@ vendors:
     url: "https://inlets.dev/"
     license: ""
     deployment: ""
-    pricing: "" 
+    pricing: ""
 
   - company: "InstaSafe"
     product: "Secure Access"
@@ -291,7 +294,7 @@ vendors:
     url: "https://www.mobileiron.com/en/solutions/zero-trust"
     license: ""
     deployment: ""
-    pricing: "" 
+    pricing: ""
 
   - company: "Mysocket.io"
     product: ""
@@ -312,7 +315,7 @@ vendors:
     url: "https://netfoundry.io/"
     license: ""
     deployment: ""
-    pricing: "" 
+    pricing: ""
 
   - company: "NetMotion Software"
     product: ""
@@ -326,17 +329,17 @@ vendors:
     url: "https://ngrok.com/product/ngrok-link"
     license: ""
     deployment: ""
-    pricing: "" 
+    pricing: ""
 
   - company: "Odo.io"
     product: ""
     url: "https://odo.io/"
     license: ""
     deployment: ""
-    pricing: "" 
+    pricing: ""
 
   - company: "Okta"
-    product: "<span title=\"Formerly ScaleFT Server Access\">Advanced Server Access</span>"
+    product: '<span title="Formerly ScaleFT Server Access">Advanced Server Access</span>'
     url: "https://www.okta.com/products/advanced-server-access/"
     license: ""
     deployment: "ZTNA as a Service"
@@ -347,14 +350,14 @@ vendors:
     url: "https://openvpn.net/"
     license: ""
     deployment: ""
-    pricing: "" 
+    pricing: ""
 
   - company: "Palo Alto Networks"
     product: "Prisma Access"
     url: "https://www.paloaltonetworks.com/"
     license: ""
     deployment: ""
-    pricing: "" 
+    pricing: ""
 
   - company: "Pritunl"
     product: ""
@@ -375,7 +378,7 @@ vendors:
     url: "https://remote.it/"
     license: ""
     deployment: ""
-    pricing: "" 
+    pricing: ""
 
   - company: "Retrieve.ro"
     product: ""
@@ -389,14 +392,14 @@ vendors:
     url: "https://www.safe-t.com/"
     license: ""
     deployment: "Software-Defined Access Suite"
-    pricing: "" 
+    pricing: ""
 
   - company: "SAIFE"
     product: "Continuum"
     url: "https://www.saife.io/products/continuum_/"
     license: ""
     deployment: "ZTNA as a Service"
-    pricing: "" 
+    pricing: ""
 
   - company: "Silver Peak"
     product: ""
@@ -445,7 +448,7 @@ vendors:
     url: "http://viptela.com"
     license: ""
     deployment: ""
-    pricing: "" 
+    pricing: ""
 
   - company: "VMWare"
     product: "Workspace One Unified Access Gateway"
@@ -466,7 +469,7 @@ vendors:
     url: "https://www.weave.works/"
     license: ""
     deployment: ""
-    pricing: "" 
+    pricing: ""
 
   - company: "Xage"
     product: ""
@@ -586,13 +589,6 @@ vendors:
     license: ""
     deployment: ""
     pricing: ""
-
-
-
-
-
-
-
 
   - company: "Cisco"
     product: ""

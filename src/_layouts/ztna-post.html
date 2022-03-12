@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="{{relative_url}}/assets/images/favicon.png"
+    />
+    <title>
+      {% if page.title %} {{ page.title }} {% else %} {{
+      site.data.general_settings.title }}{% endif %}
+    </title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{relative_url}}/assets/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{relative_url}}/assets/css/plugins.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{relative_url}}/assets/revolution/css/settings.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{relative_url}}/assets/revolution/css/layers.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{relative_url}}/assets/revolution/css/navigation.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{relative_url}}/assets/type/type.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{relative_url}}/assets/css/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{relative_url}}/assets/css/color/leaf.css"
+    />
+    <!-- <link rel="stylesheet" type="text/css" href="{{relative_url}}/assets/css/timeline.min.css"/> -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{relative_url}}/assets/css/custom.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Abhaya+Libre:400,500,600,700,800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap"
+      rel="stylesheet"
+    />
+    {% if site.data.general_settings.google_analytics.enable %} {% include
+    analytics.html %} {% endif %}
+  </head>
+  <body {% if page.overflow %} class="overflow-hidden" {% endif %}>
+    {% include ztna-header.html container_class="container" dark_logo="true"
+    hide_github="true" %}
+    {% if page.post_image %} 
+    <img style="background-image: url({{page.post_image}})" class="ztna-post-cover ztna-margin-bottom-50-40"> 
+    {% endif %} 
+    <div class="container-fluid ztna-content-wrapper mx-auto px-0">
+      {% include components/bread-crumbs.html %} 
+     
+        <div class="row ztna-margin-bottom-50-40 ml-lg-40 mr-lg-40">
+          <div class="col-lg-8 post-typography ">
+            {% include components/post-metadata.html %} 
+            {{content}}
+            <a class="ztna-small-button-left white-background light-blue-1 h4 mt-50-40" href="/blogs/index/">{%include icons/button-left-arrow.svg %} Back to blog</a>
+          </div>
+          <aside class="col-lg-4 sidebar"> {% include sidebar.html %} </aside>
+        </div>
+      </div>
+     
+      {% include components/related-posts.html category=page.categories %}
+    </div>
+  
+    {% include ztna-footer.html cls="pl-40-15 pr-40-15"%}
+    <script src="{{relative_url}}/assets/js/jquery.min.js"></script>
+    <script src="{{relative_url}}/assets/js/popper.min.js"></script>
+    <script src="{{relative_url}}/assets/js/bootstrap.min.js"></script>
+    <script src="{{relative_url}}/assets/revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script src="{{relative_url}}/assets/revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="{{relative_url}}/assets/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+    <script src="{{relative_url}}/assets/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+    <script src="{{relative_url}}/assets/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="{{relative_url}}/assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="{{relative_url}}/assets/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+    <script src="{{relative_url}}/assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="{{relative_url}}/assets/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script src="{{relative_url}}/assets/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="{{relative_url}}/assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
+    <script src="{{relative_url}}/assets/js/plugins.js"></script>
+    <script src="{{relative_url}}/assets/js/scripts.js"></script>
+    <script src="{{relative_url}}/assets/js/slideButtons.js"></script>
+    <script src="{{relative_url}}/assets/js/ztna-timeline.js"></script>
+  </body>
+</html>
+
+

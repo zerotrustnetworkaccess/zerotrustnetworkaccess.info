@@ -1,9 +1,12 @@
 name: "SD-WAN"
+filters:
+  - sdwan
+displayByDeafult: false
 abbreviation: ""
-sort_order: "5"
+sort_order: "11"
 description: "Inter-site encryption and routing, bandwidth control, path selection and application visibility between appliances at the edge of each logical or physical network in the organisation."
 image: "https://via.placeholder.com/2280x1200"
-paragraphs: 
+paragraphs:
   - text: "Nullam quis risus eget urna mollis ornare."
 strengths:
   - title: "Nullam quis risus eget urna mollis ornare."
@@ -26,11 +29,10 @@ tradeoffs:
     description: ""
   - title: "Fusce dapibus, tellus ac cursus commodo."
     description: ""
-vendors: 
+vendors:
   - company: "Open Systems"
     product: "ZTNA"
     url: "https://www.open-systems.com/sase/ztna/"
     license: ""
     deployment: ""
     pricing: ""
-

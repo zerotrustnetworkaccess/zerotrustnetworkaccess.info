@@ -1,9 +1,13 @@
 name: "Next Generation Firewall"
+filters:
+  - ngfw
+displayByDeafult: false
 abbreviation: "NGFW"
+
 sort_order: "4"
 description: "Slicing the network into small logical segments and controlling access to applications and data on those segments. Diving the network into smaller segments reduces the attack surface for malicious attackers. Micro-segmentation policies are based on logical attributes or resource identity versus the user’s identity or IP addresses."
 image: "https://via.placeholder.com/2280x1200"
-paragraphs: 
+paragraphs:
   - text: "Nullam quis risus eget urna mollis ornare."
 strengths:
   - title: "Nullam quis risus eget urna mollis ornare."
@@ -26,4 +30,4 @@ tradeoffs:
     description: ""
   - title: "Fusce dapibus, tellus ac cursus commodo."
     description: ""
-vendors: 
+vendors:

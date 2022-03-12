@@ -1,9 +1,12 @@
 name: "Software Development Kits (SDKs)"
+filters:
+  - sdk
+displayByDeafult: false
 abbreviation: "SDK"
 sort_order: "5"
 description: ""
 image: "https://via.placeholder.com/2280x1200"
-paragraphs: 
+paragraphs:
   - text: "Nullam quis risus eget urna mollis ornare."
 strengths:
   - title: "Nullam quis risus eget urna mollis ornare."
@@ -26,14 +29,13 @@ tradeoffs:
     description: ""
   - title: "Fusce dapibus, tellus ac cursus commodo."
     description: ""
-vendors: 
-
+vendors:
   - company: "NetFoundry"
     product: "Ziti"
     url: "https://ziti.dev/"
     license: ""
     deployment: ""
-    pricing: "" 
+    pricing: ""
 
   - company: "ZeroTier"
     product: "libzt"
@@ -41,4 +43,3 @@ vendors:
     license: "Open Source"
     deployment: "SaaS"
     pricing: "Available"
-  

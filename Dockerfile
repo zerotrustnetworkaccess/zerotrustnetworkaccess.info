@@ -7,7 +7,7 @@ ENV JEKYLL_ENV=production
 COPY src .
 
 # run bundle install and then clear the directory
-RUN bundle install && \
+RUN bundle install --binstubs && \
     rm -rf $WEB_DIR
 
 ENTRYPOINT ["/usr/local/bin/bundle"]

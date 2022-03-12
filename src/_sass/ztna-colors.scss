@@ -13,14 +13,16 @@ $dark-buttons: #16334f;
 $light-text-1: #3e5871;
 $light-text-2: #99acbe;
 $light-text-3: #cad8e6;
-$background-color: #f9fafc;
+$background-color: #f5f7fb;
 $table-backgroud: #fdfdff;
 $divider: #efefef;
+$timeline-active: #bdcfe2;
+$input-active-dark: #1f3f5d;
 
 $gradient-proportion: $light-blue-1 0%, $dark-blue-1 31.59%, $violet-1 67.71%,
   $pink 100%;
 
-$direction: right;
+$direction: left;
 
 @mixin gradient($direction, $gradient-proportion) {
   background: -webkit-linear-gradient($direction, $gradient-proportion);
@@ -85,12 +87,20 @@ $direction: right;
   background-color: $dark-text;
 }
 
+.dark-text-fill {
+  fill: $dark-text;
+}
+
 .dark-buttons {
   color: $dark-buttons;
 }
 
 .light-text-1 {
   color: $light-text-1;
+}
+
+.light-text-1-fill {
+  fill: $light-text-1;
 }
 
 .light-text-2 {
@@ -109,6 +119,10 @@ $direction: right;
   background-color: $light-blue-1;
 }
 
+.light-blue-background-2 {
+  background-color: $light-blue-2;
+}
+
 .dark-buttons-background {
   background-color: $dark-buttons;
 }
@@ -117,6 +131,22 @@ $direction: right;
   background-color: $white;
 }
 
+.light-text-2-background {
+  background-color: $light-text-2;
+}
+
 .gradient-background {
   @include gradient($direction, $gradient-proportion);
+}
+
+.timeline-active {
+  color: $timeline-active;
+}
+
+.input-active-dark {
+  background-color: $input-active-dark;
+}
+
+.light-blue-1-fill {
+  fill: $light-blue-1;
 }

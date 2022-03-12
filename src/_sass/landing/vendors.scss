@@ -1,0 +1,8 @@
+.isotope-filter {
+  .active {
+    filter: drop-shadow(0px 0px 15px rgba(10, 63, 113, 0.1));
+    @extend .h4;
+    @extend .white-background;
+    @extend .dark-text;
+  }
+}

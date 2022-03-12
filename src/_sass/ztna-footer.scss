@@ -5,9 +5,6 @@ footer {
   padding-top: 100px;
   padding-bottom: 100px;
   background-color: $dark-text;
-  // display: flex;
-  // column-gap: 40px;
-  // justify-content: center;
 
   a {
     @extend h4;
@@ -15,11 +12,40 @@ footer {
     color: $light-blue-1;
   }
 
-  div {
-    //width: 364px;
-  }
-
   p {
     @extend .ztna-small-text;
+  }
+}
+
+.footer-col {
+  max-width: 364px;
+}
+
+@media only screen and (max-width: $breakpoint-sm) {
+  .footer-col {
+    max-width: 335px;
+  }
+}
+
+@media only screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
+  .mr-md-50 {
+    margin-right: 30px;
+  }
+}
+
+@media only screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+  .mr-md-50 {
+    margin-right: 50px;
+  }
+}
+
+@media only screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-lg) {
+  .footer-col {
+    max-width: 316px;
+  }
+
+  .md-flex {
+    display: flex;
+    justify-content: flex-start;
   }
 }

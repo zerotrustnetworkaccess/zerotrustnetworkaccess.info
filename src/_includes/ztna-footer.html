@@ -1,51 +1,68 @@
-<footer>
-  <div class="container">
-  <div class="row">
+<div
+  class="container-fluid ztna-landing-section-wrapper dark-text-background px-md-40-20"
+>
+  <div class="ztna-content-wrapper mx-auto {{include.cls}}">
+    <div class="row">
+      <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-md-54-40">
+        <div class="footer-col">
+          <div class="ztna-margin-bottom-30-20">
+            {% include components/ztna-logo.html%}
+          </div>
 
-  <div class="col-md">
-        {% include components/ztna-logo.html%}
-        {% assign description = site.data.ztna-footer.about_ZTNA %}
-        
-        <div class="space30"></div>
-        <ul class="list-unstyled mb-0">
+          {% assign description = site.data.ztna-footer.about_ZTNA %}
+          <ul class="list-unstyled mb-0">
             {% for content in description.content %}
-            <li class="ztna-margin-bottom-20">
-               <p>{{content.text}}</p>
+            <li>
+              <p class="ztna-small-text light-text-2">{{content.text}}</p>
+              <div class="space20"></div>
+            </li>
+
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-md-54-40">
+        {% assign subscription = site.data.ztna-footer.subscribtion %}
+        <div class="footer-col">
+          <h3
+            class="light-text-3 ztna-margin-bottom-30 ztna-margin-bottom-30-20"
+          >
+            {{subscription.title}}
+          </h3>
+
+          <p class="ztna-small-text light-text-2 ztna-margin-bottom-30-20">
+            {{subscription.text}}
+          </p>
+
+          {% include components/input.html cls="ztna-small-text light-text-3
+          dark-buttons-background ztna-input-dark"%}
+          <div class="space20"></div>
+          {% include components/button.html content=subscription.cta%}
+        </div>
+      </div>
+
+      <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+        {% assign social_accounts = site.data.ztna-footer.social_accounts %}
+        <div>
+          <h3 class="light-text-3 ztna-margin-bottom-30-20">
+            {{social_accounts.title}}
+          </h3>
+
+          <ul class="list-unstyled md-flex mb-0">
+            {% for links in social_accounts.links %}
+            <li>
+              <a class="text-link light-blue-1 mr-md-50" href="{{links.url}}"
+                ><img
+                  src="{{links.icon}}"
+                  class="ztna-margin-right-10"
+                />{{links.title}}</a
+              >
+              <div class="space20"></div>
             </li>
             {% endfor %}
           </ul>
-    </div>
-    
-    <div class="col-md">
-        {% assign subscription = site.data.ztna-footer.subscribtion %}
-        <div>
-             <h5 class="light-text-3 ztna-margin-bottom-30">{{subscription.title}}</h5>
-          <p>
-            {{subscription.text}}
-          </p>
-          <div class="space30"></div>
-          {% include components/input.html%}
-          <div class="ztna-margin-bottom-20"></div>
-          {% include components/button.html content=subscription.cta%}
         </div>
+      </div>
     </div>
-
-    <div class="col-md">
-        {% assign social_accounts = site.data.ztna-footer.social_accounts %}
-        <div>
-             <h5 class="light-text-3 ztna-margin-bottom-30">{{social_accounts.title}}</h5>
-
-             <ul class="list-unstyled mb-0">
-                {% for links in social_accounts.links %}
-                <li class="ztna-margin-bottom-20">
-                    <img src="{{links.icon}}" class="ztna-margin-right-10">
-                    <a href="{{links.url}}">{{links.title}}</a>
-                </li>
-                {% endfor %}
-              </ul>
-        </div>
-            
-    </div>
-  </div>  
+  </div>
 </div>
-</footer>

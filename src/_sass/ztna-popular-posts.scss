@@ -4,15 +4,15 @@
   padding: 20px;
   background-color: $background-color;
   border-radius: 30px;
+  a:hover {
+    text-decoration: none;
+  }
 }
 
 .popular-post-list {
   list-style: none;
   padding: 0;
   margin: 0;
-  a {
-    text-decoration: none;
-  }
 }
 
 .post-meta {

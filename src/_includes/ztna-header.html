@@ -1,100 +1,114 @@
-<nav class="navbar {% if include.extra_class %} {{include.extra_class}} {% endif %} navbar-hover-opacity navbar-expand-lg">
-    <div class="{% if include.container_class %} {{include.container_class}} {% else %} container-fluid {% endif %} flex-row justify-content-center">
-      <div class="navbar-brand">
-        <a href="{{site.url}}" >
-      
-          <span>ZeroTrust</span><span style="color: #8ab9ff; font-weight: 500; margin-left: 2px;">NetworkAccess</span><span></span>
-          
-        </a>
+<nav
+  class="navbar navbar-hover-opacity navbar-expand-md {% if include.extra_class %} {{include.extra_class}} {% endif %} "
+>
+  {% if include.dark_logo %}
+  <a href="{{site.url}}" class="ztna-dark-logo"></a>
+
+    {% else %}
+    <a href="{{site.url}}" class="ztna-logo"></a>
+    {% endif %}
+        
+        
+
+  <div class="navbar-nav" data-sm-skip="true">
+    <li class="nav-item">
+      <div class="navbar-hamburger d-lg-none d-xl-none d-md-none mr-20">
+        <button class="hamburger animate plain" data-toggle="offcanvas-nav">
+          <span></span>
+        </button>
       </div>
-      
-      <div class="navbar-other ml-auto order-lg-3">
-        <ul class="navbar-nav flex-row align-items-center" data-sm-skip="true">
-          <li class="nav-item">
-            <div class="navbar-hamburger d-lg-none d-xl-none ml-auto">
-              <button class="hamburger animate plain" data-toggle="offcanvas-nav">
-                  <span></span></button>
-            </div>
-          </li>
-
-          
-          <li class="dropdown search-dropdown position-static nav-item ztna-margin-right-60">
-            {% include icons/search-header-icon.svg cls="nav-link inverse-text" %}
-            <a href="#" role="button" class="collapse-toggle h4 ztna-margin-left-10" data-toggle="collapse" data-target=".search-dropdown-menu" aria-haspopup="true" aria-expanded="false">
-            Search
-            </a>
-
-            <div class="dropdown-menu search-dropdown-menu w-100 collapse">
-              <div class="form-wrapper">
-                <form class="inverse-text">
-                  <input type="text" id="search-input" class="form-control" placeholder="Search blog posts.."/>
-                  <i class="dropdown-close jam jam-close"></i>
-                </form>
-                <!-- /.search-form -->
-              </div>
-              <!-- /.form-wrapper -->
-             <ul id="results-container" class="position-static"></ul>
-            </div>
-          </li> 
-
-
-
-          <li class="nav-item">
-            <button class="plain h4" data-toggle="offcanvas-info">
-              {% include icons/info-header-icon.svg cls="nav-link inverse-text" %}
-              Info
-            </button>
-          </li>
-        </ul>
-        <!-- /.navbar-nav -->
-      </div>
-      <!-- /.navbar-other -->
-      <div class="navbar-collapse offcanvas-nav">
-        <div class="offcanvas-header d-lg-none d-xl-none">
-          <a href="{{site.url}}">
-            <img src="{{site.data.general_settings.light_logo_1x}}" srcset="{{site.data.general_settings.light_logo_1x}} 1x, {{site.data.general_settings.light_logo_2x}} 2x" alt="{{site.data.general_settings.title}}"/></a>
-          <button class="plain offcanvas-close offcanvas-nav-close">
-              <i class="jam jam-close"></i>
-            </button>
-        </div>
-        <ul class="navbar-nav mx-auto">
-            {% for menu in site.data.navigation.main_menu %}
-            
-          <li class="nav-item ztna-margin-right-60">
-          
-          {% include icons/{{menu.icon}} cls="nav-link inverse-text" %}
-          <a class="nav-link h4 ztna-margin-left-10" href="{{menu.url}}">{{menu.text}}</a>
-            
-          </li>
-          {% endfor %}
-        </ul>
-        <!-- /.navbar-nav -->
-      </div>
-      <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container-fluid -->
-  </nav>
-  <!-- /.navbar -->
-  <div class="offcanvas-info white-background">
-    <button class="plain offcanvas-close offcanvas-info-close light-text-2"><i class="jam jam-close"></i></button>
-    <a href="{{site.url}}">
-        <img src="{{site.data.general_settings.enclave_logo_1x}}" 
-        srcset="{{site.data.general_settings.enclave_logo_1x}} 1x, {{site.data.general_settings.enclave_logo_2x}} 2x" 
-        class="{% if include.logo_class %} {{include.logo_class}} {% else %} logo-light {% endif %}" 
-        alt="{{site.data.general_settings.title}}"/>
-    </a>
-    <div class="space30"></div>
-    {% assign description = site.data.general_settings.description %}
-    <ul class="list-unstyled mb-0">
-        {% for content in description %}
-        <li class="ztna-margin-bottom-20">
-            
-           <p class="h4 light-text-1">{{content.text}}</p>
-        </li>
-        {% endfor %}
-      </ul>
-    
-    <div class="space20"></div>
-  
+    </li>
   </div>
-  <!-- /.offcanvas-info -->
+
+  <div class="navbar-collapse offcanvas-nav align-self-center justify-content-end mobile-bg pl-40">
+    <div class="offcanvas-header d-lg-none d-xl-none d-md-none">
+      <button class="plain offcanvas-close offcanvas-nav-close icon-hover light-text-2">
+        <i class="jam jam-close"></i>
+      </button>
+    </div>
+
+    <ul class="navbar-nav menu">
+      {% for menu in site.data.navigation.main_menu %}
+
+      <li class="ztna-nav-item mr-60-40 mb-md-50
+      {% if menu.text == 'Github' and include.hide_github %} ztna-hidden {% endif %}
+      ">
+  
+        <a class="nav-link " href="{{menu.url}}"
+          >{% include icons/{{menu.icon}} cls="nav-link  mobile-menu-items-fill" %}
+          <span class="text-link ml-10 mobile-menu-items-color">{{menu.text}}</span>
+        </a>
+        
+      </li>
+      
+      {% endfor %}
+      <li class="ztna-nav-item">
+        <button class="plain text-link" data-toggle="offcanvas-info">
+          {% include icons/info-header-icon.svg cls="nav-link mobile-menu-items-fill" %}<span class="h4 mobile-menu-items-color ml-10">Info</span>
+        </button>
+      </li>
+    </ul>
+    <!-- /.navbar-nav -->
+
+  <!-- /.navbar-collapse -->
+  <!-- </div> -->
+  <!-- /.container-fluid -->
+</nav>
+<!-- /.navbar -->
+<div
+  class="offcanvas-info white-background fly-out-bg"
+  style="
+background-image: -webkit-image-set(
+    url({{site.data.ztna-header.fly-out-bg}}) 1x,
+    url({{site.data.ztna-header.fly-out-bg-2x}}) 2x
+  );
+  background-image: image-set(
+    url({{site.data.ztna-header.fly-out-bg}}) 1x,
+    url({{site.data.ztna-header.fly-out-bg-2x}}) 2x
+  );
+"
+>
+  <button class="plain offcanvas-close offcanvas-info-close light-text-2 icon-hover">
+    <i class="jam jam-arrow-left"></i>
+  </button>
+  <a href="{{site.url}}">
+    <img
+      srcset="
+        {{site.data.general_settings.enclave_logo_1x}} 1x,
+        {{site.data.general_settings.enclave_logo_2x}} 2x
+      "
+      class="{% if include.logo_class %} {{include.logo_class}} {% else %} logo-light fly-out-logo{% endif %}"
+      alt="{{site.data.general_settings.title}}"
+    />
+  </a>
+  <div class="space30"></div>
+  {% assign description = site.data.general_settings.description %}
+  <ul class="list-unstyled mb-0">
+    {% for content in description %}
+    <li class="ztna-margin-bottom-20">
+      <p class="ztna-small-text light-text-1">{{content.text}}</p>
+    </li>
+    {% endfor %}
+  </ul>
+  <div class="space10"></div>
+  <hr class="post-divider" />
+  <div class="space30"></div>
+  <a href="https://enclave.io/" class="button-link">
+    <div
+      class="ztna-small-button white-background light-blue-1 h4 justify-content-center"
+    >
+      {%include icons/web-header-icon.svg %} Visit website
+    </div>
+  </a>
+  <div class="space10"></div>
+  <a href="#" class="button-link">
+    <div
+      class="ztna-small-button white-background light-blue-1 h4 justify-content-center"
+    >
+      {%include icons/github-header-icon.svg cls="light-blue-1-fill"%} Visit
+      github
+    </div>
+  </a>
+  <div class="space40"></div>
+</div>
+<!-- /.offcanvas-info -->
