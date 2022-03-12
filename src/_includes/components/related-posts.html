@@ -1,9 +1,9 @@
 <div
-  class="container-fluid mb-100 ztna-mb-md-100-70 ztna-content-wrapper mx-auto px-md-40-20"
+  class="container-fluid mb-100 ztna-mb-md-100-70 ztna-content-wrapper px-0 mx-auto"
 >
   {% assign posts = site.posts | where: "categories", include.category[0]%} {%
   if posts.size == 1 %}
-  <div>
+  <div class="ml-lg-40 mr-lg-40 mr-md-40-20 ml-md-40-20">
     <h2 class="ztna-margin-bottom-50-40 dark-text">Recent articles</h2>
     <div class="d-flex justify-content-start">
       {% assign count = 0 %} {% for post in site.posts %} {% if post.url
@@ -14,7 +14,7 @@
     </div>
   </div>
   {% if count == 3 %}{% break %} {% endif %} {% endif %} {% endfor %} {% else %}
-  <div>
+  <div class="ml-lg-40 mr-lg-40 mr-md-40-20 ml-md-40-20">
     <h2 class="ztna-margin-bottom-50-40 dark-text">Related articles</h2>
     <div class="d-flex justify-content-xl-start justify-content-md-between">
       {% assign count = 0 %} {%for post in posts %} {% if post.url !=page.url %}

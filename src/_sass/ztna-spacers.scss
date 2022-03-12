@@ -163,6 +163,17 @@
   .ztna-margin-bottom-30-12 {
     margin-bottom: 12px;
   }
+
+  .ml-md-40-20 {
+    margin-left: 20px !important;
+  }
+
+  .mr-md-40-20 {
+    margin-right: 20px !important;
+  }
+  .ml-sm-20 {
+    margin-left: 20px !important;
+  }
 }
 
 @media only screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-lg) {
@@ -198,11 +209,11 @@
     margin-right: 40px;
   }
   .mr-55-40-20 {
-    margin-right: 40x !important;
+    margin-right: 40px !important;
   }
 
   .ml-55-40-20 {
-    margin-left: 40x !important;
+    margin-left: 40px !important;
   }
 
   .space-20-30-20 {
@@ -211,6 +222,22 @@
 
   .ztna-mb-md-100-70 {
     margin-bottom: 100px !important;
+  }
+
+  .ml-md-40-20 {
+    margin-left: 40px !important;
+  }
+
+  .mr-md-40-20 {
+    margin-right: 40px !important;
+  }
+
+  .ml-md-40 {
+    margin-left: 40px !important;
+  }
+
+  .mr-md-40 {
+    margin-right: 40px !important;
   }
 }
 
@@ -225,6 +252,20 @@
 
   .mb-md-54-40 {
     margin-bottom: 40px !important;
+  }
+
+  .mr-lg-55 {
+    margin-right: 55px !important;
+  }
+  .ml-lg-55 {
+    margin-left: 55px !important;
+  }
+
+  .mr-lg-40 {
+    margin-right: 40px !important;
+  }
+  .ml-lg-40 {
+    margin-left: 40px !important;
   }
 }
 

@@ -8,7 +8,6 @@ post_image: "/assets/images/test-post/test-post.jpg"
 figure: "/assets/images/test-post/blog-cockpit-plugin.png"
 post_format: "general"
 trending: true
-time_to_read: "15 min"
 permalink: /blogs/:title
 qoute:
   blockquote: "As you can see, the spawn() method accepts your command as an array of strings. From here it will return any output as a string. The command enclave status --json writes JSON to stdout so that gives us easy access to the data, which is easily parsed into JS Object and can then be manipulated as you’d expect."

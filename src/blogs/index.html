@@ -31,21 +31,20 @@ permalink: "/blogs/index"
           {% if categories_list.first[0] == null %}
             {% for category in categories_list %}
               <li>
-                <div class="ztna-tag-large background-color">
-              <a class="ztna-small-text light-text-1" href="/category/{{ category | downcase | downcase | url_escape | strip | replace: ' ', '-' }}"> 
+              <a class="ztna-tag-large background-color light-text-1 ztna-small-text mb-10 mr-10 button" href="/category/{{ category | downcase | downcase | url_escape | strip | replace: ' ', '-' }}"> 
                 {{ category | camelcase }} 
                 <span>({{ site.tags[category].size }})</span>
               </a>
-             </div>
+      
              
               </li>
             {% endfor %}
           {% else %}
             {% for category in categories_list %}
               <li>
-                <div class="ztna-tag-large background-color">
-              <a class="ztna-small-text light-text-1" href="/category/{{ category[0] | downcase | url_escape | strip | replace: ' ', '-' }}"> {{ category[0] | camelcase }} </a>
-             </div>
+            
+              <a class="ztna-tag-large background-color light-text-1 ztna-small-text mb-10 mr-10 button" href="/category/{{ category[0] | downcase | url_escape | strip | replace: ' ', '-' }}"> {{ category[0] | camelcase }} </a>
+        
               
               </li>
             {% endfor %}
@@ -57,17 +56,17 @@ permalink: "/blogs/index"
     
     <div class="row">
       <div class="col-lg-8">
-        <div class="row isotope">
+        <div class="row ">
           {% for post in site.posts %}
           {% if post.recommended %}
-          {% include components/recomeded-post.html %}
+          {% include components/recommended-post.html %}
           {% endif%}
           {% endfor %}
         </div>
         <div class="blog grid grid-view">
-          <div class="row isotope">
+          <div class="row ">
            {% for post in paginator.posts %}
-            <div class="item post grid-sizer col-md-6">
+            <div class="post grid-sizer col-md-6">
              {% include components/post-preview.html %}
             </div>
             <!-- /.post -->

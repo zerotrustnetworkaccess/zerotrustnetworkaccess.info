@@ -5,10 +5,10 @@ layout: ztna-default
 {% if page.post_image %} 
 <img style="background-image: url({{page.post_image}})" class="ztna-post-cover ztna-margin-bottom-50-40"> 
 {% endif %} 
-<div class="container-fluid ztna-content-wrapper mx-auto px-0 px-md-40-20  ztna-mb-md-100-70">
+<div class="container-fluid ztna-content-wrapper mx-auto px-0">
   {% include components/bread-crumbs.html %} 
  
-    <div class="row ztna-margin-bottom-50-40">
+    <div class="row ztna-margin-bottom-50-40 ml-lg-40 mr-lg-40">
       <div class="col-lg-8 post-typography ">
         {% include components/post-metadata.html %} 
         {{content}}

@@ -18,11 +18,15 @@ $fig-spacer: 10px;
   h2,
   .h3,
   h3 {
+    @extend .mr-md-40-20;
+    @extend .ml-md-40-20;
     @extend .dark-text;
     margin-bottom: $small-spacer;
   }
 
   p {
+    @extend .mr-md-40-20;
+    @extend .ml-md-40-20;
     @extend .ztna-small-text;
     @extend .light-text-1;
     margin-bottom: $medium-spacer;
@@ -32,9 +36,13 @@ $fig-spacer: 10px;
     @extend .light-blue-1;
   }
 
+  .scroll-wrapper {
+    @extend .mr-md-40;
+    @extend .ml-md-40;
+    @extend .ml-sm-20;
+  }
   table {
     @extend .ztna-table;
-    overflow-x: scroll;
     margin-bottom: $medium-spacer;
 
     thead {
@@ -50,6 +58,8 @@ $fig-spacer: 10px;
   }
 
   figure {
+    @extend .mr-md-40-20;
+    @extend .ml-md-40-20;
     margin-bottom: $large-spacer;
     img {
       border-radius: 30px;
@@ -70,6 +80,9 @@ $fig-spacer: 10px;
     @extend .background-color;
     border-radius: 30px;
     padding: 30px;
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
   code {
@@ -80,6 +93,8 @@ $fig-spacer: 10px;
   }
 
   .ztna-small-button-left {
+    @extend .mr-md-40-20;
+    @extend .ml-md-40-20;
     width: fit-content;
   }
 
@@ -105,6 +120,8 @@ $fig-spacer: 10px;
 }
 
 blockquote {
+  @extend .mr-md-40-20;
+  @extend .ml-md-40-20;
   border-radius: 30px;
   padding: 34px 30px 20px 30px;
   margin-bottom: $medium-spacer;
@@ -134,13 +151,19 @@ blockquote {
   .ztna-post-cover {
     height: 150px;
   }
+  .post-typography code {
+    font-size: 14px;
+    line-height: 21px;
+  }
 
-  blockquote {
+  .post-typography blockquote {
     border-radius: 30px;
     padding: 34px 30px 20px 30px;
     margin-bottom: $medium-spacer;
     p {
       margin-bottom: 8px;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
     }
     img {
       width: 50px;
