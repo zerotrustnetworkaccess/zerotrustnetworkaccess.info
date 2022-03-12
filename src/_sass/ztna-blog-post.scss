@@ -180,3 +180,10 @@ blockquote {
     margin-right: 10px !important;
   }
 }
+
+@media only screen and (min-width: $breakpoint-lg) {
+  .px-lg-55 {
+    padding-left: 90px !important;
+    padding-right: 90px !important;
+  }
+}

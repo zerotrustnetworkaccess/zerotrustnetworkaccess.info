@@ -94,6 +94,13 @@
   margin-right: 3.125%;
 }
 
+.pl-40-15 {
+  padding-left: 60px !important;
+}
+.pr-40-15 {
+  padding-right: 60px !important;
+}
+
 @media only screen and (max-width: $breakpoint-sm) {
   .ztna-margin-bottom-30-20 {
     margin-bottom: 20px;
@@ -189,6 +196,20 @@
   .mr-40-30-0 {
     margin-right: 0px;
   }
+
+  .pl-40-15 {
+    padding-left: 0px !important;
+  }
+  .pr-40-15 {
+    padding-right: 0px !important;
+  }
+
+  .mr-md-25-5 {
+    margin-right: 5px !important;
+  }
+  .ml-md-25-5 {
+    margin-left: 5px !important;
+  }
 }
 
 @media only screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-lg) {
@@ -262,6 +283,20 @@
   .mr-40-30-0 {
     margin-right: 4%;
   }
+
+  .pl-40-15 {
+    padding-left: 0px !important;
+  }
+  .pr-40-15 {
+    padding-right: 0px !important;
+  }
+
+  .mr-md-25-5 {
+    margin-right: 25px !important;
+  }
+  .ml-md-25-5 {
+    margin-left: 25px !important;
+  }
 }
 
 @media only screen and (min-width: $breakpoint-lg) {
@@ -304,6 +339,13 @@
   }
   .ml-lg-40 {
     margin-left: 40px !important;
+  }
+
+  .pl-40-15 {
+    padding-left: 3px !important;
+  }
+  .pr-40-15 {
+    padding-right: 30px !important;
   }
 }
 
