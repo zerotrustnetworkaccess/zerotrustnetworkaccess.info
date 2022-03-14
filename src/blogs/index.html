@@ -5,11 +5,11 @@ sub_title: "Lorem Ipsum is simply dummy text of the printing and typesetting ind
 black_menu: true
 pagination:
   enabled: true
-  per_page: 8
+  per_page: 4
 permalink: "/blogs/index"
 ---
 
-<div class="container-fluid">
+<div class="container-fluid ztna-content-wrapper mx-auto px-0">
   <div
     class="col-lg-8 col-md-12 col-sm-12 ztna-margin-bottom-50-40 mx-auto text-center mt-50-40"
   >
@@ -23,9 +23,9 @@ permalink: "/blogs/index"
   </div>
 </div>
 
-<div class="container-fluid">
-  <div class="col-12 ztna-margin-bottom-30-20">
-    <ul class="categories-list">
+<div class="container-fluid ztna-content-wrapper mx-auto px-0">
+  <div class="col-12 ztna-margin-bottom-20-10 px-0">
+    <ul class="categories-list ml-lg-40 mr-lg-40">
       {% assign categories_list = site.categories %} {% if
       categories_list.first[0] == null %} {% for category in categories_list %}
       <li>
@@ -51,18 +51,20 @@ permalink: "/blogs/index"
   </div>
 </div>
 
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-lg-8">
+<div class="row ztna-content-wrapper mx-auto px-0 d-flex">
+  <div class="row ml-lg-40 mr-lg-40">
+    <div class="col-lg-8 px-0">
       {% for post in site.posts %} {% if post.recommended %} {% include
       components/recommended-post.html %} {% endif%} {% endfor %}
 
       <div class="row">
         {% for post in paginator.posts %}
-        <div class="col-md-6">{% include components/post-preview.html %}</div>
+        <div class="col-md-6">
+          {% include components/post-preview.html cls="mb-70-50" %}
+        </div>
         {% endfor %}
       </div>
-      {% include advanced-pagination.html %}
+      <div class="mb-100-70">{% include advanced-pagination.html %}</div>
     </div>
 
     <aside class="col-lg-4 sidebar">{% include sidebar.html %}</aside>

@@ -1,9 +1,17 @@
 .recommended-post-wrapper {
   position: relative;
+  max-width: 760px;
+  div.ztna-tag-large {
+    &:hover {
+      @extend .green;
+
+      cursor: default;
+    }
+  }
 }
 
 .recomended-label {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 3%;
+  right: 4.5%;
 }
