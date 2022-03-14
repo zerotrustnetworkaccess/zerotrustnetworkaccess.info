@@ -70,8 +70,56 @@
   </head>
   <body {% if page.overflow %} class="overflow-hidden" {% endif %}>
     {% include ztna-header.html container_class="container" dark_logo="true"
-    hide_github="true" %} {{content}} {% include ztna-footer.html cls="pl-40-15
-    pr-40-15"%}
+    hide_github="true" %}
+   
+    <div class="container-fluid ztna-content-wrapper mx-auto px-0">
+        <div
+    class="col-lg-8 col-md-12 col-sm-12 ztna-margin-bottom-50-40 mx-auto text-center mt-50-40"
+  >
+    {% if page.title %}
+    <h1 class="dark-text mr-md-40-20 ml-md-40-20">{{page.title}}</h1>
+    <div class="space10"></div>
+    {% endif %} {% if page.sub_title %}
+    <p class="light-text-1 mr-md-40-20 ml-md-40-20">{{page.sub_title}}</p>
+
+    {% endif %}
+  </div>
+  <div class="col-12 ztna-margin-bottom-20-10 px-0">
+    <ul class="categories-list ml-lg-40 mr-lg-40 mr-md-40-20 ml-md-40-20 ml-sm-20 scroll-wrapper">
+      {% assign categories_list = site.categories %} {% if
+      categories_list.first[0] == null %} {% for category in categories_list %}
+      <li>
+        <a
+          class="ztna-tag-large background-color light-text-1 ztna-small-text mb-10 mr-10 button"
+          href="/category/{{ category | downcase | downcase | url_escape | strip | replace: ' ', '-' }}"
+        >
+          {{ category | camelcase }}
+          <span>({{ site.tags[category].size }})</span>
+        </a>
+      </li>
+      {% endfor %} {% else %} {% for category in categories_list %}
+      <li>
+        <a
+          class="ztna-tag-large background-color light-text-1 ztna-small-text mb-10 mr-10 button"
+          href="/category/{{ category[0] | downcase | url_escape | strip | replace: ' ', '-' }}"
+        >
+          {{ category[0] | camelcase }}
+        </a>
+      </li>
+      {% endfor %} {% endif %}
+    </ul>
+  </div>
+     
+        <div class="row mb-100-70 ml-lg-40 mr-lg-40">
+          <div class="col-lg-8 mb-0">
+            {{content}}
+          </div>
+          <aside class="col-lg-4 sidebar mt-0"> {% include sidebar.html cls="mr-md-40-20 ml-md-40-20" %} </aside>
+        </div>
+      </div>
+    </div>
+  
+    {% include ztna-footer.html cls="pl-40-15 pr-40-15"%}
     <script src="{{relative_url}}/assets/js/jquery.min.js"></script>
     <script src="{{relative_url}}/assets/js/popper.min.js"></script>
     <script src="{{relative_url}}/assets/js/bootstrap.min.js"></script>
@@ -92,3 +140,5 @@
     <script src="{{relative_url}}/assets/js/ztna-timeline.js"></script>
   </body>
 </html>
+
+

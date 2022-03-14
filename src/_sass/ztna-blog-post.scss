@@ -71,6 +71,13 @@ $fig-spacer: 10px;
     }
   }
 
+  img {
+    @extend .mr-md-40-20;
+    @extend .ml-md-40-20;
+    margin-bottom: $large-spacer;
+    border-radius: 30px;
+  }
+
   pre,
   code {
     margin-bottom: $medium-spacer;

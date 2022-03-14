@@ -4,7 +4,6 @@
 }
 
 .categories-list {
-  width: 100%;
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
@@ -18,6 +17,7 @@
 
 @media only screen and (max-width: $breakpoint-sm) {
   .categories-list {
-    width: 1300px;
+    flex-wrap: nowrap;
+    padding-right: 15px;
   }
 }
