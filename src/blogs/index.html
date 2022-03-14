@@ -9,82 +9,62 @@ pagination:
 permalink: "/blogs/index"
 ---
 
-<div class="title-wrapper">
-  <div class="container text-center">
+<div class="container-fluid">
+  <div
+    class="col-lg-8 col-md-12 col-sm-12 ztna-margin-bottom-50-40 mx-auto text-center mt-50-40"
+  >
     {% if page.title %}
-    <div class="space50"></div> 
     <h1 class="dark-text">{{page.title}}</h1>
-    <div class="space10"></div> 
-    {% endif %}
-    {% if page.sub_title %}
-     <p class="light-text-1">{{page.sub_title}}</p>
-     <div class="space50"></div>
+    <div class="space10"></div>
+    {% endif %} {% if page.sub_title %}
+    <p class="light-text-1">{{page.sub_title}}</p>
+
     {% endif %}
   </div>
 </div>
 
-  <div class="container ">
-    <div class="categories-wrapper">
-  
-      <ul class="categories-list">
-        {% assign categories_list = site.categories %}
-          {% if categories_list.first[0] == null %}
-            {% for category in categories_list %}
-              <li>
-              <a class="ztna-tag-large background-color light-text-1 ztna-small-text mb-10 mr-10 button" href="/category/{{ category | downcase | downcase | url_escape | strip | replace: ' ', '-' }}"> 
-                {{ category | camelcase }} 
-                <span>({{ site.tags[category].size }})</span>
-              </a>
-      
-             
-              </li>
-            {% endfor %}
-          {% else %}
-            {% for category in categories_list %}
-              <li>
-            
-              <a class="ztna-tag-large background-color light-text-1 ztna-small-text mb-10 mr-10 button" href="/category/{{ category[0] | downcase | url_escape | strip | replace: ' ', '-' }}"> {{ category[0] | camelcase }} </a>
-        
-              
-              </li>
-            {% endfor %}
-          {% endif %}
-        {% assign categories_list = nil %}
+<div class="container-fluid">
+  <div class="col-12 ztna-margin-bottom-30-20">
+    <ul class="categories-list">
+      {% assign categories_list = site.categories %} {% if
+      categories_list.first[0] == null %} {% for category in categories_list %}
+      <li>
+        <a
+          class="ztna-tag-large background-color light-text-1 ztna-small-text mb-10 mr-10 button"
+          href="/category/{{ category | downcase | downcase | url_escape | strip | replace: ' ', '-' }}"
+        >
+          {{ category | camelcase }}
+          <span>({{ site.tags[category].size }})</span>
+        </a>
+      </li>
+      {% endfor %} {% else %} {% for category in categories_list %}
+      <li>
+        <a
+          class="ztna-tag-large background-color light-text-1 ztna-small-text mb-10 mr-10 button"
+          href="/category/{{ category[0] | downcase | url_escape | strip | replace: ' ', '-' }}"
+        >
+          {{ category[0] | camelcase }}
+        </a>
+      </li>
+      {% endfor %} {% endif %}
     </ul>
-    <div class="space30"></div>
-    </div>
-    
-    <div class="row">
-      <div class="col-lg-8">
-        <div class="row ">
-          {% for post in site.posts %}
-          {% if post.recommended %}
-          {% include components/recommended-post.html %}
-          {% endif%}
-          {% endfor %}
-        </div>
-        <div class="blog grid grid-view">
-          <div class="row ">
-           {% for post in paginator.posts %}
-            <div class="post grid-sizer col-md-6">
-             {% include components/post-preview.html %}
-            </div>
-            <!-- /.post -->
-           {% endfor %}
-          </div>
-          <!-- /.row -->
-        </div>
-        <!-- /.blog -->
-        {% include advanced-pagination.html %}
-      </div>
-      <!--/column -->
-      <div class="space30 d-none d-md-block d-lg-none"></div>
-      <aside class="col-lg-4 sidebar">
-       {% include sidebar.html %}
-      </aside>
-      <!-- /column .sidebar -->
-    </div>
-    <!--/.row -->
   </div>
-  <!-- /.container -->
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-8">
+      {% for post in site.posts %} {% if post.recommended %} {% include
+      components/recommended-post.html %} {% endif%} {% endfor %}
+
+      <div class="row">
+        {% for post in paginator.posts %}
+        <div class="col-md-6">{% include components/post-preview.html %}</div>
+        {% endfor %}
+      </div>
+      {% include advanced-pagination.html %}
+    </div>
+
+    <aside class="col-lg-4 sidebar">{% include sidebar.html %}</aside>
+  </div>
 </div>
