@@ -9,22 +9,24 @@ pagination:
 permalink: "/blogs/index"
 ---
 
-<div class="container-fluid ztna-content-wrapper mx-auto px-0">
+<div class="container-fluid ztna-content-wrapper px-0">
   <div
     class="col-lg-8 col-md-12 col-sm-12 ztna-margin-bottom-50-40 mx-auto text-center mt-50-40"
   >
     {% if page.title %}
-    <h1 class="dark-text">{{page.title}}</h1>
+    <h1 class="dark-text mr-md-40-20 ml-md-40-20">{{page.title}}</h1>
     <div class="space10"></div>
     {% endif %} {% if page.sub_title %}
-    <p class="light-text-1">{{page.sub_title}}</p>
+    <p class="light-text-1 mr-md-40-20 ml-md-40-20">{{page.sub_title}}</p>
 
     {% endif %}
   </div>
 </div>
 
-<div class="container-fluid ztna-content-wrapper mx-auto px-0">
-  <div class="col-12 ztna-margin-bottom-20-10 px-0">
+<div
+  class="container-fluid ztna-content-wrapper mx-auto px-0 mr-md-40-20 ml-md-40-20"
+>
+  <div class="col-12 ztna-margin-bottom-20-10 px-0 scroll-wrapper">
     <ul class="categories-list ml-lg-40 mr-lg-40">
       {% assign categories_list = site.categories %} {% if
       categories_list.first[0] == null %} {% for category in categories_list %}
@@ -52,14 +54,14 @@ permalink: "/blogs/index"
 </div>
 
 <div class="row ztna-content-wrapper mx-auto px-0 d-flex">
-  <div class="row ml-lg-40 mr-lg-40">
+  <div class="row ml-lg-40 mr-lg-40 mr-md-40-20 ml-md-40-20">
     <div class="col-lg-8 px-0">
       {% for post in site.posts %} {% if post.recommended %} {% include
       components/recommended-post.html %} {% endif%} {% endfor %}
 
       <div class="row">
         {% for post in paginator.posts %}
-        <div class="col-md-6">
+        <div class="col-md-6 col-sm-6">
           {% include components/post-preview.html cls="mb-70-50" %}
         </div>
         {% endfor %}
@@ -67,6 +69,10 @@ permalink: "/blogs/index"
       <div class="mb-100-70">{% include advanced-pagination.html %}</div>
     </div>
 
-    <aside class="col-lg-4 sidebar">{% include sidebar.html %}</aside>
+    <aside
+      class="col-lg-4 col-md-12 col-sm-12 sidebar ztna-margin-bottom-50-40 px-0"
+    >
+      {% include sidebar.html cls='ml-lg-80' %}
+    </aside>
   </div>
 </div>

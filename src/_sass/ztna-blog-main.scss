@@ -4,6 +4,7 @@
 }
 
 .categories-list {
+  width: 100%;
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
@@ -12,5 +13,11 @@
   margin: 0;
   a {
     text-decoration: none;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-sm) {
+  .categories-list {
+    width: 1300px;
   }
 }

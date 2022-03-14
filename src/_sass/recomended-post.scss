@@ -1,6 +1,11 @@
 .recommended-post-wrapper {
   position: relative;
   max-width: 760px;
+
+  a:hover {
+    text-decoration: none;
+  }
+
   div.ztna-tag-large {
     &:hover {
       @extend .green;
@@ -14,4 +19,10 @@
   position: absolute;
   top: 3%;
   right: 4.5%;
+}
+
+@media only screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-lg) {
+  .recommended-post-wrapper {
+    max-width: 100%;
+  }
 }

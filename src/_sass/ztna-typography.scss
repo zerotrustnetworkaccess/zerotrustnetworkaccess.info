@@ -76,10 +76,11 @@ a.text-link {
 a {
   color: inherit;
   text-decoration: none;
+
   &:hover {
     text-decoration: underline;
     cursor: pointer;
-
+    h2,
     h3,
     h4 {
       color: $light-blue-1;

@@ -6,3 +6,15 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+@media only screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-lg) {
+  .ztna-recomended-post-image {
+    height: 370px;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-sm) {
+  .ztna-recomended-post-image {
+    height: 180px;
+  }
+}
