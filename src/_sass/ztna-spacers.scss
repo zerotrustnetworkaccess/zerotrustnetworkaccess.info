@@ -109,6 +109,10 @@
   margin-bottom: 100px !important;
 }
 
+.mb-70-100-70 {
+  margin-bottom: 70px !important;
+}
+
 @media only screen and (max-width: $breakpoint-sm) {
   .ztna-margin-bottom-30-20 {
     margin-bottom: 20px;
@@ -228,6 +232,10 @@
   .mb-100-70 {
     margin-bottom: 70px !important;
   }
+
+  .mb-70-100-70 {
+    margin-bottom: 40px !important;
+  }
 }
 
 @media only screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-lg) {
@@ -318,6 +326,10 @@
   }
   .ml-md-25-5 {
     margin-left: 25px !important;
+  }
+
+  .mb-70-100-70 {
+    margin-bottom: 70px !important;
   }
 }
 
