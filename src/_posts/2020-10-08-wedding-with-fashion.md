@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: ztna-post
 title: "Wedding With Fashion And Trying"
 date: 2020-10-08 20:37:13 +0600
 tags: technology education

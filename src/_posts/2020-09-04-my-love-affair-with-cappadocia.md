@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: ztna-post
 title: "My Love Affair with Cappadocia"
 date: 2020-09-04 20:37:13 +0600
 author: "Tortoiz Theme"
