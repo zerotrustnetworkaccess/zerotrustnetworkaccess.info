@@ -21,11 +21,3 @@ social_accounts:
     - url: "#"
       title: "Guidelines"
       icon: /assets/icons/guidelines-footer-icon.svg
-
-    - url: "#"
-      title: "Twitter"
-      icon: /assets/icons/twitter-footer-icon.svg
-
-    - url: "#"
-      title: "LinkedIn"
-      icon: /assets/icons/linked-footer-icon.svg

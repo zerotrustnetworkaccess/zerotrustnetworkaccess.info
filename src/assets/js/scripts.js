@@ -76,13 +76,13 @@ $(document).ready(function () {
   $info_offcanvas_toggle.on("click", function (e) {
     e.stopPropagation();
     $info_offcanvas.toggleClass("open");
-    $header_search.collapse("hide");
+    // $header_search.collapse("hide");
   });
   $info_offcanvas.on("click", function (e) {
     e.stopPropagation();
   });
   $(document).on("click", function () {
-    $header_search.collapse("hide");
+    // $header_search.collapse("hide");
     $navbar_offcanvas.removeClass("open");
     $info_offcanvas.removeClass("open");
     $header_hamburger.removeClass("active");
@@ -235,9 +235,9 @@ $(document).ready(function () {
       nav: true,
       dots: true,
       dotsEach: true,
-      loop: false,
+      loop: true,
       margin: $carousel.data("margin"),
-      autoplay: true,
+      autoplay: false,
       autoplayTimeout: 3000,
       navContainerClass: "ztna-slider-navbuttons-wrapper",
       navClass: [

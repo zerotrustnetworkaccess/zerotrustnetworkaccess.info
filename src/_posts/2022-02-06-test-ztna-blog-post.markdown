@@ -105,3 +105,9 @@ table:
 </pre>
 </div>
 <p>Accumsan augue ullamcorper eros viverra neque, libero est metus libero. Lacinia wisi feugiat tellus neque dui pellentesque, libero Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit est velit similique laborum, cumque aliquam porro dicta debitis repellat, tempore dignissimos, neque ab fuga voluptatibus. Earum numquam repellat sed perspiciatis ratione explicabo, odit! Repellendus voluptatibus nemo praesentium</p>
+
+<h2>So… plug-ins?</h2> 
+<p> Knowing Cockpit supports plug-ins, my first question was: how do I make one for Enclave? To my surprise it was fairly simple. All you need is a manifest.json file, an index.html file and an index.js file. That’s it. You now have a plug-in.</p>
+
+<img src="{{page.figure}}">
+<p> Knowing Cockpit supports plug-ins, my first question was: how do I make one for Enclave? To my surprise it was fairly simple. All you need is a manifest.json file, an index.html file and an index.js file. That’s it. You now have a plug-in.</p>
