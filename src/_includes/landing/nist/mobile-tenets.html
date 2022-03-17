@@ -1,5 +1,5 @@
 <div class="mobile-nist-illustration background-color">
-  <div class="scroll-wrapper pr-15 pl-15 mx-auto" id="container">
+  <div class="scroll-wrapper pr-15 pl-15 mx-auto mb-md-40-30" id="container">
     <div class="nist-mobile-scroll-container">
       <img
         srcset="
@@ -13,11 +13,8 @@
         {% for tenet in nist.tenets %}
         <div class="nist-mobile-scroll-item text-center">
           <div class="space20"></div>
-          <h4 class="{{tenet.color}}">{{tenet.title}}</h4>
-          <div class="space10"></div>
-          <p class="ztna-small-text light-text-1" class="{{tenet.color}}">
-            {{tenet.description}}
-          </p>
+          {% include components/tenet.html color=tenet.color title=tenet.title
+          description=tenet.description%}
           <div class="space20"></div>
         </div>
         {% endfor %}

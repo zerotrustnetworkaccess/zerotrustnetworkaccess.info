@@ -3,11 +3,8 @@
     {% for tenet in nist.tenets %} {% assign mod = forloop.index | modulo: 2 %}
     {% if mod != 0 %}
     <div class="col-3 text-center">
-      <h4 class="{{tenet.color}}">{{tenet.title}}</h4>
-      <div class="space10"></div>
-      <p class="ztna-small-text light-text-1" class="{{tenet.color}}">
-        {{tenet.description}}
-      </p>
+      {% include components/tenet.html color=tenet.color title=tenet.title
+      description=tenet.description%}
       <div class="space20"></div>
     </div>
     {% endif %} {% endfor %}
@@ -27,11 +24,8 @@
     {% if mod == 0 %}
     <div class="col-3 text-center">
       <div class="space20"></div>
-      <h4 class="{{tenet.color}}">{{tenet.title}}</h4>
-      <div class="space10"></div>
-      <p class="ztna-small-text light-text-1" class="{{tenet.color}}">
-        {{tenet.description}}
-      </p>
+      {% include components/tenet.html color=tenet.color title=tenet.title
+      description=tenet.description%}
     </div>
     {% endif %} {% endfor %}
   </div>

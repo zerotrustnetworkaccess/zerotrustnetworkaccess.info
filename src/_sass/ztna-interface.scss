@@ -257,7 +257,6 @@ td {
 
 @media only screen and (max-width: $breakpoint-sm) {
   .scroll-wrapper {
-    width: 100%;
     overflow-x: scroll;
     scroll-behavior: smooth;
     &::-webkit-scrollbar {
@@ -280,19 +279,15 @@ td {
     z-index: 10;
   }
 
-  .table-wrapper {
-    overflow-x: scroll;
-    scroll-behavior: smooth;
-    &::-webkit-scrollbar {
-      display: none;
-    }
-  }
-
   .ztna-post-image {
     height: 200px;
   }
 
   .ztna-post-wrapper {
     max-width: none;
+  }
+
+  .sm-flex {
+    display: flex;
   }
 }
