@@ -182,7 +182,6 @@ html {
 
 .ztna-table {
   border-radius: 20px;
-  // table-layout: auto;
   width: 100%;
 }
 
@@ -264,22 +263,6 @@ td {
     &::-webkit-scrollbar {
       display: none;
     }
-  }
-
-  .scroll-tags {
-    width: 100%;
-    overflow-x: scroll;
-    scroll-behavior: smooth;
-    display: flex;
-    &::-webkit-scrollbar {
-      display: none;
-    }
-  }
-
-  .sm-scroll-item {
-    // width: 380px;
-    // display: flex;
-    z-index: 10;
   }
 
   .ztna-table {

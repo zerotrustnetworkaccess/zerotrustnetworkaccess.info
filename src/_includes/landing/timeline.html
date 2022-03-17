@@ -6,7 +6,7 @@
       <div class="col-8 col-md-12 col-sm-12 ztna-margin-bottom-50-40 text-center">
         <h2 class="light-text-3 text-center">{{timeline.title}}</h2>
       </div>
-        <div id="timeline" class="timeline gradient-background align-self-md-center align-self-sm-start align-self-lg-center">
+        <div id="timeline" class="timeline scroll-wrapper gradient-background align-self-md-center align-self-sm-start align-self-lg-center">
             {% for node in timeline.nodes %}
             <p class="h4 white timelineYear" 
             onclick="currentTimelineItem({{forloop.index}})"

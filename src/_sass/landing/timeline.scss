@@ -78,14 +78,11 @@
 
 @media only screen and (max-width: $breakpoint-md) {
   .timeline {
-    width: 100%;
     margin: 0;
-    overflow-x: auto;
+
     border-radius: 0;
     padding-left: 20px;
-    &::-webkit-scrollbar {
-      display: none;
-    }
+
     .active {
       padding: 11px 3%;
     }
