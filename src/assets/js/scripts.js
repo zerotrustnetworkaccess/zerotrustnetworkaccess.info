@@ -13,16 +13,16 @@ $(document).ready(function () {
 
   if ($(".navbar").length) {
     var options = {
-      offset: 80,
+      offset: 0,
       offsetSide: "top",
       classes: {
         clone: "banner--clone fixed",
         stick: "banner--stick",
         unstick: "banner--unstick",
       },
-      onStick: function () {
-        $($.SmartMenus.Bootstrap.init);
-      },
+      // onStick: function () {
+      //   $($.SmartMenus.Bootstrap.init);
+      // },
       // onUnstick: function () {
       //   $(".search-dropdown .dropdown-menu").collapse("hide");
       // },

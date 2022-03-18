@@ -612,10 +612,10 @@ acronym[title] {
   /* -webkit-transform: translateY(0%);
   -ms-transform: translateY(0%);
   transform: translateY(0%); */
-  background: rgba(var(--rgb-white), 0.95);
+  background: rgba(var(--rgb-white), 1);
 }
 .banner--stick.bg-white {
-  background: rgba(var(--rgb-white), 0.95) !important;
+  background: rgba(var(--rgb-white), 1) !important;
 }
 .banner--stick.navbar-fancy-dark {
   background: #242930 !important;

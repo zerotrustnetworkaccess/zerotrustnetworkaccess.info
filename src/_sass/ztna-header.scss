@@ -38,6 +38,8 @@ nav {
 }
 
 .banner--clone {
+  z-index: 1009;
+  opacity: 0;
   .ztna-logo {
     background: -webkit-image-set(
       url("/assets/images/logo.png") 1x,
@@ -58,6 +60,14 @@ nav {
       border-bottom: 1px solid $dark-text;
     }
   }
+}
+
+.banner--unstick {
+  opacity: 0;
+}
+
+.banner--stick {
+  opacity: 1 !important;
 }
 
 .ztna-logo-base {
