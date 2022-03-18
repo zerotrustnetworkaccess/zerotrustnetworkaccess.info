@@ -64,6 +64,7 @@ $fig-spacer: 10px;
     margin-bottom: $large-spacer;
     img {
       border-radius: 30px;
+
       margin-bottom: $fig-spacer;
     }
     figcaption {
@@ -73,8 +74,6 @@ $fig-spacer: 10px;
   }
 
   img {
-    @extend .mr-md-40-20;
-    @extend .ml-md-40-20;
     margin-bottom: $large-spacer;
     border-radius: 30px;
     width: 100%;
@@ -150,7 +149,7 @@ blockquote {
     mask-position: center center;
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
-    width: 60px;
+    width: 60px !important;
     height: auto;
   }
 }
@@ -188,6 +187,13 @@ blockquote {
   p.ztna-tag-small {
     margin-left: 0 !important;
     margin-right: 10px !important;
+  }
+
+  .post-typography blockquote {
+    p {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
   }
 }
 
