@@ -13,7 +13,7 @@ $(document).ready(function () {
 
   if ($(".navbar").length) {
     var options = {
-      offset: 150,
+      offset: 80,
       offsetSide: "top",
       classes: {
         clone: "banner--clone fixed",

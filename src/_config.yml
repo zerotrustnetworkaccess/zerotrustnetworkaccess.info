@@ -1,7 +1,7 @@
 encoding: utf-8
 
 baseurl: "/" # the subpath of your site, e.g. /blog
-url: "zerotrustnetworkaccess.com"
+url: "http://zerotrustnetworkaccess.com"
 # url: "https://snowlake.netlify.app" # the base hostname & protocol for your site, e.g. http://example.com
 
 permalink: "/:title"

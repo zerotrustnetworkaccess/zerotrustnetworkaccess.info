@@ -598,20 +598,20 @@ acronym[title] {
   z-index: 1008;
   top: 0;
   left: 0;
-  -webkit-transform: translateY(-100%);
+  /* -webkit-transform: translateY(-100%);
   -ms-transform: translateY(-100%);
   transform: translateY(-100%);
   -webkit-transition: all 300ms ease-in-out;
   -o-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out; */
 }
 .banner--clone:not(.banner--stick) .dropdown-menu.search-dropdown-menu {
   display: none !important;
 }
 .banner--stick {
-  -webkit-transform: translateY(0%);
+  /* -webkit-transform: translateY(0%);
   -ms-transform: translateY(0%);
-  transform: translateY(0%);
+  transform: translateY(0%); */
   background: rgba(var(--rgb-white), 0.95);
 }
 .banner--stick.bg-white {
