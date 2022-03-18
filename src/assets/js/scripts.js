@@ -20,9 +20,9 @@ $(document).ready(function () {
         stick: "banner--stick",
         unstick: "banner--unstick",
       },
-      // onStick: function () {
-      //   $($.SmartMenus.Bootstrap.init);
-      // },
+      onStick: function () {
+        $($.SmartMenus.Bootstrap.init);
+      },
       // onUnstick: function () {
       //   $(".search-dropdown .dropdown-menu").collapse("hide");
       // },

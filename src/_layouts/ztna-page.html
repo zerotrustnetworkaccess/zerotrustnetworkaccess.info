@@ -72,7 +72,7 @@
     {% include ztna-header.html container_class="container" dark_logo="true"
     hide_github="true" extra_class="nav-shadow" %}
    
-    <div class="container-fluid ztna-content-wrapper mx-auto px-0">
+    <div class="container-fluid ztna-blog-wrapper mx-auto px-0">
         <div
     class="col-lg-8 col-md-12 col-sm-12 ztna-margin-bottom-50-40 mx-auto text-center mt-50-40"
   >
@@ -84,7 +84,7 @@
 
     {% endif %}
   </div>
-  <div class="col-12 ztna-margin-bottom-20-10 px-0">
+  <div class="col-12 ztna-margin-bottom-20-10 px-lg-15">
     <ul class="categories-list ml-lg-40 mr-lg-40 mr-md-40 ml-md-40 scroll-wrapper">
       {% assign categories_list = site.categories %} {% if
       categories_list.first[0] == null %} {% for category in categories_list %}
@@ -119,7 +119,7 @@
       </div>
     </div>
   
-    {% include ztna-footer.html cls="pl-40-15 pr-40-15"%}
+    {% include ztna-footer.html %}
     <script src="{{relative_url}}/assets/js/jquery.min.js"></script>
     <script src="{{relative_url}}/assets/js/popper.min.js"></script>
     <script src="{{relative_url}}/assets/js/bootstrap.min.js"></script>

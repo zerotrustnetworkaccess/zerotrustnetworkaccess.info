@@ -74,7 +74,7 @@
     {% if page.post_image %} 
     <img style="background-image: url({{page.post_image}})" class="ztna-post-cover ztna-margin-bottom-50-40"> 
     {% endif %} 
-    <div class="container-fluid ztna-content-wrapper mx-auto px-0">
+    <div class="container-fluid ztna-blog-wrapper mx-auto px-0">
       {% include components/bread-crumbs.html %} 
      
         <div class="row ztna-margin-bottom-50-40 ml-lg-40 mr-lg-40">
@@ -94,7 +94,7 @@
       {% include components/related-posts.html category=page.categories %}
     </div>
   
-    {% include ztna-footer.html cls="pl-40-15 pr-40-15"%}
+    {% include ztna-footer.html%}
     <script src="{{relative_url}}/assets/js/jquery.min.js"></script>
     <script src="{{relative_url}}/assets/js/popper.min.js"></script>
     <script src="{{relative_url}}/assets/js/bootstrap.min.js"></script>

@@ -244,6 +244,11 @@
   .mb-md-40-30 {
     margin-bottom: 30px !important;
   }
+
+  .px-lg-15 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
 }
 
 @media only screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-lg) {
@@ -343,6 +348,11 @@
   .mb-md-40-30 {
     margin-bottom: 40px !important;
   }
+
+  .px-lg-15 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
 }
 
 @media only screen and (min-width: $breakpoint-lg) {
@@ -396,6 +406,10 @@
   }
   .pr-40-15 {
     padding-right: 30px !important;
+  }
+  .px-lg-15 {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
   }
 }
 

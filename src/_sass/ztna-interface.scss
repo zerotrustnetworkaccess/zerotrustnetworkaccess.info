@@ -2,7 +2,8 @@
 @import "ztna-typography.scss";
 @import "ztna-spacers.scss";
 
-$content-width: 1170px;
+$landing-width: 1170px;
+$blog-width: 1280px;
 
 html {
   scroll-behavior: smooth;
@@ -21,7 +22,11 @@ html {
 }
 
 .ztna-content-wrapper {
-  max-width: $content-width;
+  max-width: $landing-width;
+}
+
+.ztna-blog-wrapper {
+  max-width: $blog-width;
 }
 
 .ztna-hidden {
