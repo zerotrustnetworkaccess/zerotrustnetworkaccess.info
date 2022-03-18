@@ -39,10 +39,11 @@ $fig-spacer: 10px;
   .scroll-wrapper {
     @extend .mr-md-40;
     @extend .ml-md-40;
-    @extend .ml-sm-20;
   }
   table {
     @extend .ztna-table;
+    @extend .mr-sm-20;
+    @extend .ml-sm-20;
     margin-bottom: $medium-spacer;
 
     thead {
@@ -86,15 +87,16 @@ $fig-spacer: 10px;
 
   pre {
     @extend .background-color;
+    @extend .mr-sm-20;
+    @extend .ml-sm-20;
+    width: fit-content;
     border-radius: 30px;
     padding: 30px;
-    &::-webkit-scrollbar {
-      display: none;
-    }
   }
 
   code {
     @extend .light-text-1;
+    width: 100%;
     font-family: "Source Code Pro", monospace;
     font-size: 16px;
     line-height: 24px;
