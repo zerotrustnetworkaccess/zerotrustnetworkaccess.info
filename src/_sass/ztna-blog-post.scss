@@ -137,7 +137,7 @@ blockquote {
   padding: 34px 30px 20px 30px;
   margin-bottom: $medium-spacer;
   p {
-    margin-bottom: 16px !important;
+    margin-bottom: 0 !important;
   }
   p.h4 {
     @extend .h4;
@@ -153,6 +153,7 @@ blockquote {
     mask-repeat: no-repeat;
     width: 60px !important;
     height: auto;
+    margin: 0 !important;
   }
 }
 
