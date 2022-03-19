@@ -91,13 +91,12 @@
   width: 10px;
   height: 10px;
   margin: 10px;
-  line-height: 10px;
-  display: block;
+  padding: 0;
   -webkit-backface-visibility: visible;
   -webkit-transition: all 200ms ease-in-out;
   -o-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
-  border-radius: 50%;
+  border-radius: 100%;
   border: none;
   opacity: 0.3;
   &:hover,
@@ -217,6 +216,7 @@
 
   .ztna-slider-dot-item {
     width: 8px;
+    height: 8px;
   }
   .ztna-slider-dots-wrapper {
     margin-top: 10px;
