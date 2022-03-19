@@ -84,7 +84,7 @@ endfor %} {% endif %}
     {% else %}
     <a
       class="pagination-item"
-      href="{{ page.paginate.root | append: '/blogs/index/page' |  append: '/' | append: count | append: /index.html/' | replace: '//', '/' }}"
+      href="{{ page.paginate.root | append: '/blog/page' |  append: '/' | append: count | append: /index.html/' | replace: '//', '/' }}"
     >
       <span class="sr-only">page </span>{{ count }}</a
     >
@@ -101,7 +101,7 @@ endfor %} {% endif %}
   <li class="last">
     <a
       class="pagination-item ztna-small-button white-background"
-      href="{{ page.paginate.root | append: '/blogs/index/page' | append: '/' | append: totalpages |  append: '/index.html/' | replace: '//', '/' }}"
+      href="{{ page.paginate.root | append: '/blog/page' | append: '/' | append: totalpages |  append: '/index.html/' | replace: '//', '/' }}"
     >
       <span class="sr-only">page </span>
       {{ totalpages }}

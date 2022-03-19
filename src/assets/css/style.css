@@ -97,20 +97,20 @@ iframe {
   clear: both;
 }
 ::-moz-selection {
-  background: rgba(var(--rgb-default), 0.7);
-  color: var(--color-white);
+  /* background: rgba(var(--rgb-default), 0.7);
+  color: var(--color-white); */
 }
 ::selection {
-  background: rgba(var(--rgb-default), 0.7);
-  color: var(--color-white);
+  /* background: rgba(var(--rgb-default), 0.7);
+  color: var(--color-white); */
 }
 .bg-default ::-moz-selection {
   background: var(--color-white);
   color: #606060;
 }
 .bg-default ::selection {
-  background: var(--color-white);
-  color: #606060;
+  /* background: var(--color-white);
+  color: #606060; */
 }
 br {
   line-height: 0;

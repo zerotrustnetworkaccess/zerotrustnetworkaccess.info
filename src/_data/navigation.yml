@@ -1,6 +1,6 @@
 main_menu:
   - text: "Blog"
-    url: "/blogs/index"
+    url: "/blog"
     icon: blog-header-icon.svg
     # icon: "/assets/icons/blog-header-icon.svg"
 

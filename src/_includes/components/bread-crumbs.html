@@ -12,11 +12,11 @@
     {{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}
   </span>
 
-  {% elsif crumb == "blogs" %} {% include icons/button-right-arrow.svg
+  {% elsif crumb == "blog" %} {% include icons/button-right-arrow.svg
   cls="light-text-1-fill"%}
 
-  <a href="/blogs/index" class="ztna-small-text light-text-1 mx-2"> Blog</a> {%
-  else %} {% include icons/button-right-arrow.svg cls="light-text-1-fill"%}
+  <a href="/blog" class="ztna-small-text light-text-1 mx-2"> Blog</a> {% else %}
+  {% include icons/button-right-arrow.svg cls="light-text-1-fill"%}
 
   <a
     href="{% assign crumb_limit = forloop.index | plus: 1 %}
