@@ -24,3 +24,27 @@ categories:
     filter: "unclassified"
   - name: "Zero-Trust Overlay Network"
     filter: "zton"
+# function onHashchange() {
+
+#         var hashFilter = getHashFilter();
+#         if (!hashFilter && isIsotopeInit) {
+#           return;
+#         }
+#         isIsotopeInit = true;
+#         // filter isotope
+#         $grid.isotope({
+#           itemSelector: ".item",
+#           // layoutMode: "fitRows",
+#           // use filterFns
+#           filter: hashFilter,
+#         });
+#         // set selected class on button
+#         if (hashFilter) {
+#           $filterButtonGroup.find(".active").removeClass("active");
+#           $filterButtonGroup
+#             .find('[data-filter="' + hashFilter + '"]')
+#             .addClass("active");
+#         }
+#       }
+
+#       onHashchange();

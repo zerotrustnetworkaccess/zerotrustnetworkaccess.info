@@ -153,15 +153,35 @@ $(document).ready(function () {
   /*-----------------------------------------------------------------------------------*/
   /*	ISOTOPE GRID
 /*-----------------------------------------------------------------------------------*/
+
+  if (window.location.hash.match(/filter/)) {
+    $(document).ready(function () {
+      // Handler for .ready() called.
+      $("html, body").animate(
+        {
+          scrollTop: $("#vendors").offset().top,
+        },
+        "slow"
+      );
+    });
+  }
+
   function enableIsotope() {
     // for each container
+    function getHashFilter() {
+      // get filter=filterName
+      var matches = location.hash.match(/filter=([^&]+)/i);
+      var hashFilter = matches && matches[1];
+      return hashFilter && decodeURIComponent(hashFilter);
+    }
+
     $(".grid").each(function (i, gridContainer) {
       var $gridContainer = $(gridContainer);
       // init isotope for container
       var $grid = $gridContainer.find(".isotope").imagesLoaded(function () {
         $grid.isotope({
           itemSelector: ".item",
-          filter: ".focus",
+          // filter: ".focus",
           layoutMode: "masonry",
           percentPosition: true,
           masonry: {
@@ -184,15 +204,39 @@ $(document).ready(function () {
           },
         });
       });
-      // initi filters for container
+      var isIsotopeInit = false;
+      function onHashchange() {
+        var hashFilter = getHashFilter();
+        if (!hashFilter && isIsotopeInit) {
+          return;
+        }
+        isIsotopeInit = true;
+        // filter isotope
+        $grid.isotope({
+          itemSelector: ".item",
+          filter: hashFilter,
+        });
+        // set selected class on button
+        if (hashFilter) {
+          var $filterButtonGroup = $(".isotope-filter");
+          $filterButtonGroup.find(".active").removeClass("active");
+          $filterButtonGroup
+            .find('[data-filter="' + hashFilter + '"]')
+            .addClass("active");
+        }
+      }
+      $(window).on("hashchange", onHashchange);
+      onHashchange();
+
+      // init filters for container
       $gridContainer
         .find(".isotope-filter")
         .on("click", ".button", function () {
           var filterValue = $(this).attr("data-filter");
+          location.hash = "filter=" + encodeURIComponent(filterValue);
           $grid.isotope({ filter: filterValue });
         });
     });
-
     $(".isotope-filter").each(function (i, buttonGroup) {
       var $buttonGroup = $(buttonGroup);
       $buttonGroup.on("click", ".button", function () {
@@ -201,7 +245,9 @@ $(document).ready(function () {
       });
     });
   }
+
   enableIsotope();
+
   /*-----------------------------------------------------------------------------------*/
   /*	OWL CAROUSEL
 /*-----------------------------------------------------------------------------------*/

@@ -30,7 +30,7 @@
           {% endfor %}
           <li>
             <a
-              class="ztna-tag-large background-color light-text-1 ztna-small-text mb-10 mr-10 button"
+              class="active ztna-tag-large background-color light-text-1 ztna-small-text mb-10 mr-10 button"
               data-filter="*"
             >
               All
@@ -43,12 +43,12 @@
         {% for architecture in site.data.architecture %} {% assign arch =
         architecture[1] %} {% if arch.vendors %}
         <div
-          class="item grid-sizer col-12  mx-auto
+          class="item grid-sizer col-12 mx-auto
           {% for filter in arch.filters %} {{filter}} {% endfor %}
           {% if arch.displayByDeafult %} focus {% endif %}
           "
         >
-          <div id="{{arch.name | replace: ' ', '-' | downcase }}"></div>
+          <div id="{{arch.filters}}"></div>
           <h2
             class="dark-text ztna-margin-bottom-20-10 mr-md-40-20 ml-md-40-20 mr-lg-40 ml-lg-40"
           >
