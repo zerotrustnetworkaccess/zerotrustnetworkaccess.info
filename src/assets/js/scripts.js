@@ -154,7 +154,7 @@ $(document).ready(function () {
   /*	ISOTOPE GRID
 /*-----------------------------------------------------------------------------------*/
 
-  if (window.location.hash.match(/filter/)) {
+  const scrolltoVendors = () => {
     $(document).ready(function () {
       // Handler for .ready() called.
       $("html, body").animate(
@@ -164,7 +164,13 @@ $(document).ready(function () {
         "slow"
       );
     });
+  };
+
+  if (window.location.hash.match(/filter/)) {
+    scrolltoVendors();
   }
+
+  $(window).on("hashchange", scrolltoVendors);
 
   function enableIsotope() {
     // for each container
