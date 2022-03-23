@@ -1,7 +1,4 @@
-# General Settings
 title: "The no-bullshit ZTNA vendor directory | Enclave Networks"
-# email: "tortoizthemes@gmail.com"
-# email_2: "support@tortoizthemes.com"
 
 description:
   - text: The Zero Trust Network Access site is curated by Enclave Networks Ltd.
@@ -21,8 +18,8 @@ phone_number: ""
 copyright_text: "© 2021 Enclave Networks. All rights reserved."
 
 google_analytics:
-  enable: false
-  key: "UA-664136761-1" # UA-664136761-1
+  enable: true
+  key: "G-XW7G2V52ZN"
 
 external_links_02:
   title: "Need Help?"
