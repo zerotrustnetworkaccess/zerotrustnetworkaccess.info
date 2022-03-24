@@ -8,6 +8,8 @@ paragraphs:
 more:
   - text: Zero Trust Architecture, NIST (2020)
     link: https://csrc.nist.gov/publications/detail/sp/800-207/final
+  - text: Zero Trust Architecture Design Principles, NCSC (2021)
+    link: https://csrc.nist.gov/publications/detail/sp/800-207/final
 
 tenets:
   - title: "Everything is a Resource"

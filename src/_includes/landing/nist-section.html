@@ -14,14 +14,18 @@ site.data.landing.nist-sp-800-207 %}
         {% for paragraph in nist.paragraphs %}
         <p class="ztna-small-text light-text-1">{{paragraph.text}}</p>
         <div class="space20"></div>
-        {% endfor %} {% for link in nist.more %}
-        <a href="{{link.link}}" target="_blank" class="text-link light-blue-1"
-          >{{link.text}}</a
-        >
         {% endfor %}
+        <div class="d-flex justify-content-center flex-column">
+          {% for link in nist.more %}
+          <a href="{{link.link}}" target="_blank" class="text-link light-blue-1"
+            >{{link.text}}</a
+          >
+          <div class="space10"></div>
+          {% endfor %}
+        </div>
       </div>
+      {% include landing/nist/desktop-tenets.html %}
     </div>
-    {% include landing/nist/desktop-tenets.html %}
   </div>
+  {% include landing/nist/mobile-tenets.html %} {% endif %}
 </div>
-{% include landing/nist/mobile-tenets.html %} {% endif %}
