@@ -37,11 +37,18 @@
   }
 }
 
-.timeline-items {
-  .timeline-item {
-    display: none;
-    opacity: 1;
-  }
+.timeline-data-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.timeline-data {
+  display: flex;
+}
+
+.timeline-item {
+  width: 100%;
+  transition: all 1s;
 }
 
 .timeline-item-date-wrapper {
@@ -49,31 +56,6 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-}
-
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 @media only screen and (max-width: $breakpoint-md) {
