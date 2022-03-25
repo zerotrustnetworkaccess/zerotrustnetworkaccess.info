@@ -63,7 +63,7 @@ $fig-spacer: 10px;
     @extend .ml-md-40-20;
     margin-bottom: $large-spacer;
     img {
-      border-radius: 30px;
+      border-radius: 5px;
 
       margin-bottom: $fig-spacer;
     }
@@ -75,7 +75,7 @@ $fig-spacer: 10px;
 
   img {
     margin-bottom: $large-spacer;
-    border-radius: 30px;
+    border-radius: 5px;
     width: 100%;
   }
 

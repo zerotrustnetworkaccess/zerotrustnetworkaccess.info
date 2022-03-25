@@ -24,8 +24,6 @@ function plusTimelineItem(index, direction) {
     slide.style.transform = `translateX(${translate}%)`;
     currentItem = null;
   });
-  // console.log("currentItem buttons: " + currentItem);
-  console.log("translate 2: " + translate);
 
   if (translate === 0) {
     document.getElementById("prev").disabled = true;
@@ -35,9 +33,9 @@ function plusTimelineItem(index, direction) {
     document.getElementById("next").disabled = true;
   } else document.getElementById("next").disabled = false;
 
-  // n > 0
-  //   ? (document.getElementById("timeline").scrollLeft += 74)
-  //   : (document.getElementById("timeline").scrollLeft -= 74);
+  index > 0
+    ? (document.getElementById("timeline").scrollLeft += 74)
+    : (document.getElementById("timeline").scrollLeft -= 74);
 }
 
 function currentTimelineItem(index) {
