@@ -37,18 +37,21 @@ html {
   padding: 13px 30px;
   border-radius: 25px;
   border: none;
+  box-shadow: none;
   width: max-content;
   display: inline-block;
   background-size: 200% 100%;
-  animation: TransitioningBackground 1s ease;
 
   a {
     text-decoration: none;
     color: inherit;
   }
   &:hover {
-    @extend .gradient-background;
     cursor: pointer;
+    // -webkit-box-shadow: var(--btn-hover-ztna);
+    // box-shadow: var(--btn-hover-ztna);
+    -webkit-box-shadow: 0 0 0 4px rgba(68, 160, 248, 0.5);
+    box-shadow: 0 0 0 4px rgba(68, 160, 248, 0.5);
   }
 }
 
@@ -68,12 +71,11 @@ html {
   padding: 8px 20px;
   border-radius: 25px;
   border: none;
-  box-shadow: 0px 0px 15px rgba(10, 63, 113, 0.1);
+  border: 2px solid $light-blue-1;
   display: flex;
   align-items: center;
   column-gap: 10px;
   &:hover {
-    filter: drop-shadow(0px 0px 15px rgba(10, 63, 113, 0.15));
   }
 }
 
@@ -123,11 +125,10 @@ html {
 
 .ztna-input-light {
   @extend .ztna-input;
-  filter: drop-shadow(0px 0px 15px rgba(10, 63, 113, 0.1));
+  border: 2px solid $light-blue-1;
 
   &:hover {
     cursor: pointer;
-    filter: drop-shadow(0px 0px 15px rgba(10, 63, 113, 0.15));
   }
 }
 

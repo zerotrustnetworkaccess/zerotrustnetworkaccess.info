@@ -1,8 +1,9 @@
 .isotope-filter {
   .active {
-    filter: drop-shadow(0px 0px 15px rgba(10, 63, 113, 0.1));
+    letter-spacing: -0.043em;
+    font-weight: 500;
     @extend .h4;
-    @extend .white-background;
-    @extend .dark-text;
+    @extend .light-blue-background-2;
+    @extend .white;
   }
 }

@@ -9,6 +9,7 @@
 07. UTILITIES
 -------------------------------------------------------------------------------------*/
 :root {
+  --color-lightblue1: #44a0f8;
   --color-default: #848abd;
   --color-dark: #404040;
   --color-gray: #999;
@@ -52,6 +53,7 @@
   --rgb-rose: 209, 107, 134;
   --rgb-hibiscus: 173, 124, 131;
   --rgb-brown: 158, 136, 122;
+  --btn-hover-ztna: 0 0 0 4px rgba(var(--color-lightblue1), 0.5);
   --btn-hover-default: 0 0 0 5px rgba(var(--rgb-default), 0.2);
   --btn-hover-dark: 0 0 0 5px rgba(var(--rgb-dark), 0.2);
   --btn-hover-white: 0 0 0 5px rgba(var(--rgb-dark), 0.05);
