@@ -10,6 +10,12 @@ $three-in-row-posts-height: 230px;
 $two-in-row-posts-height: 260px;
 $md-sm-posts-height: 200px;
 
+$four-in-row-posts-max-width: 262px;
+$three-in-row-posts-max-width: 364px;
+$two-in-row-posts-max-width: 464px;
+$md-posts-max-width: 316px;
+$sm-posts-max-width: none;
+
 html {
   scroll-behavior: smooth;
 }
@@ -151,7 +157,6 @@ html {
 }
 
 .ztna-post-wrapper {
-  max-width: 364px;
   width: 100%;
   margin: 0;
   a:hover {
@@ -249,6 +254,10 @@ td {
   .ztna-md-sm-posts-height {
     height: $md-sm-posts-height;
   }
+
+  .ztna-md-max-width {
+    max-width: $md-posts-max-width;
+  }
 }
 
 @media only screen and (max-width: $breakpoint-sm) {
@@ -270,16 +279,12 @@ td {
     z-index: 10;
   }
 
-  .ztna-post-wrapper {
-    max-width: 316px;
-  }
-
   .ztna-md-sm-posts-height {
     height: $md-sm-posts-height;
   }
 
-  .ztna-post-wrapper {
-    max-width: none;
+  .ztna-sm-max-width {
+    max-width: $sm-posts-max-width;
   }
 
   .sm-flex {
@@ -288,14 +293,23 @@ td {
 }
 
 @media only screen and (min-width: $breakpoint-lg) {
+  .ztna-lg-4-posts-max-width {
+    max-width: $four-in-row-posts-max-width;
+  }
   .ztna-lg-4-posts-height {
     height: $four-in-row-posts-height;
+  }
+
+  .ztna-lg-3-posts-max-width {
+    max-width: $three-in-row-posts-max-width;
   }
 
   .ztna-lg-3-posts-height {
     height: $three-in-row-posts-height;
   }
-
+  .ztna-lg-2-posts-max-width {
+    max-width: $two-in-row-posts-max-width;
+  }
   .ztna-lg-2-posts-height {
     height: $two-in-row-posts-height;
   }

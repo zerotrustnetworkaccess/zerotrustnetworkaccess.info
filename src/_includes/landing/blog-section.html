@@ -10,11 +10,11 @@
         <h2 class="dark-text">{{blog.title}}</h2>
       </div>
     </div>
-    <div class="row mb-50-30">
+    <div class="row mb-50-30 justify-content-center">
       {% for post in site.posts limit: 4 %} {% if forloop.length >= 4 %}
       <div class="ztna-post-responsive col-lg-3 col-md-6 col-sm-6 mb-0">
         {% include components/post-preview.html
-        post-styling="ztna-lg-4-posts-height ztna-md-sm-posts-height"%}
+        post-styling="ztna-lg-4-posts-height ztna-md-sm-posts-height" %}
       </div>
       {% elsif forloop.length == 3 %}
       <div class="ztna-post-responsive col-lg-4 col-md-6 col-sm-6 mb-0 mx-auto">
@@ -22,7 +22,7 @@
         post-styling="ztna-lg-3-posts-height ztna-md-sm-posts-height"%}
       </div>
       {% elsif forloop.length == 2 %}
-      <div class="ztna-post-responsive col-lg-5 col-md-6 col-sm-6 mb-0 mx-auto">
+      <div class="ztna-post-responsive col-lg-5 col-md-6 col-sm-6 mb-0">
         {% include components/post-preview.html
         post-styling="ztna-lg-2-posts-height ztna-md-sm-posts-height"%}
       </div>
