@@ -3,7 +3,7 @@
   <div class="ztna-content-wrapper mx-auto">
     <div class="row d-flex justify-content-center">
       <div
-        class="col-lg-6 col-md-10 col-sm-12 ztna-margin-bottom-50-40 text-center"
+        class="col-lg-8 col-md-10 col-sm-12 ztna-margin-bottom-50-40 text-center"
       >
         <p class="h5 light-text-2">{{blog.label}}</p>
         <div class="space10"></div>
@@ -11,11 +11,27 @@
       </div>
     </div>
     <div class="row">
-      {% for post in site.posts limit: 3 %}
-      <div class="ztna-post-responsive col-lg-4 col-md-6 col-sm-6 mb-0">
-        {% include components/post-preview.html %}
+      {% for post in site.posts limit: 4 %} {% if forloop.length >= 4 %}
+      <div class="ztna-post-responsive col-lg-3 col-md-6 col-sm-6 mb-0">
+        {% include components/post-preview.html
+        post-styling="ztna-lg-4-posts-height ztna-md-sm-posts-height"%}
       </div>
-      {% endfor %}
+      {% elsif forloop.length == 3 %}
+      <div class="ztna-post-responsive col-lg-4 col-md-6 col-sm-6 mb-0 mx-auto">
+        {% include components/post-preview.html
+        post-styling="ztna-lg-3-posts-height ztna-md-sm-posts-height"%}
+      </div>
+      {% elsif forloop.length == 2 %}
+      <div class="ztna-post-responsive col-lg-5 col-md-6 col-sm-6 mb-0 mx-auto">
+        {% include components/post-preview.html
+        post-styling="ztna-lg-2-posts-height ztna-md-sm-posts-height"%}
+      </div>
+      {% elsif forloop.length == 1 %}
+      <div class="ztna-post-responsive col-lg-5 col-md-6 col-sm-6 mb-0 mx-auto">
+        {% include components/post-preview.html
+        post-styling="ztna-lg-2-posts-height ztna-md-sm-posts-height"%}
+      </div>
+      {% endif %} {% endfor %}
     </div>
     <div class="space40"></div>
     <div class="row d-flex justify-content-center">
