@@ -113,6 +113,10 @@
   margin-bottom: 70px !important;
 }
 
+.mb-50-30 {
+  margin-bottom: 50px;
+}
+
 @media only screen and (max-width: $breakpoint-sm) {
   .ztna-margin-bottom-30-20 {
     margin-bottom: 20px;
@@ -248,6 +252,10 @@
   .px-lg-15 {
     padding-left: 0 !important;
     padding-right: 0 !important;
+  }
+
+  .mb-50-30 {
+    margin-bottom: 30px;
   }
 }
 

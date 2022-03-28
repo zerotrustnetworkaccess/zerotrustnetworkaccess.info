@@ -10,7 +10,7 @@
         <h2 class="dark-text">{{blog.title}}</h2>
       </div>
     </div>
-    <div class="row">
+    <div class="row mb-50-30">
       {% for post in site.posts limit: 4 %} {% if forloop.length >= 4 %}
       <div class="ztna-post-responsive col-lg-3 col-md-6 col-sm-6 mb-0">
         {% include components/post-preview.html
@@ -33,7 +33,7 @@
       </div>
       {% endif %} {% endfor %}
     </div>
-    <div class="space40"></div>
+
     <div class="row d-flex justify-content-center">
       <div class="text-center">
         <a href="{{baseurl}}{{blog.button.link}}">
