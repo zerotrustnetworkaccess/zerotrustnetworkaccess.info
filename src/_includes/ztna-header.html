@@ -30,13 +30,13 @@
       </button>
     </div>
 
-    <ul class="navbar-nav menu">
+    <ul class="navbar-nav menu align-items-center">
       {% for menu in site.data.navigation.main_menu %}
 
       <li
         class="ztna-nav-item mr-60-40 mb-md-50 {% if menu.text == 'Github' and include.hide_github %} ztna-hidden {% endif %}"
       >
-        <a class="nav-link" href="{{menu.url}}"
+        <a class="nav-link d-flex align-items-center" href="{{menu.url}}"
           >{% include icons/{{menu.icon}} cls="nav-link mobile-menu-items-fill"
           %}
           <span class="text-link ml-10 {% if include.dark_logo %} mobile-menu-items-color {% endif %}"
