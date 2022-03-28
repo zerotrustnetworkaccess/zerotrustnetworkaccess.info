@@ -48,22 +48,8 @@ html {
   }
   &:hover {
     cursor: pointer;
-    // -webkit-box-shadow: var(--btn-hover-ztna);
-    // box-shadow: var(--btn-hover-ztna);
     -webkit-box-shadow: 0 0 0 4px rgba(68, 160, 248, 0.5);
     box-shadow: 0 0 0 4px rgba(68, 160, 248, 0.5);
-  }
-}
-
-@keyframes TransitioningBackground {
-  0% {
-    background-position: 1% 0%;
-  }
-  50% {
-    background-position: 99% 100%;
-  }
-  100% {
-    background-position: 1% 0%;
   }
 }
 
@@ -75,8 +61,6 @@ html {
   display: flex;
   align-items: center;
   column-gap: 10px;
-  &:hover {
-  }
 }
 
 .ztna-small-button-right {
@@ -154,6 +138,11 @@ html {
   display: inline-flex;
   justify-content: center;
   align-items: center;
+}
+
+.ztna-menu-icon {
+  width: auto;
+  height: 18px;
 }
 
 .ztna-post-wrapper {

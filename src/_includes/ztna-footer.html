@@ -51,10 +51,12 @@
           <ul class="list-unstyled md-flex mb-0">
             {% for links in social_accounts.links %}
             <li>
-              <a class="text-link light-blue-1 mr-md-50" href="{{links.url}}"
+              <a
+                class="text-link light-blue-1 mr-md-50 d-flex align-items-center"
+                href="{{links.url}}"
                 ><img
                   src="{{links.icon}}"
-                  class="ztna-margin-right-10"
+                  class="ztna-margin-right-10 ztna-menu-icon"
                 />{{links.title}}</a
               >
               <div class="space20"></div>
