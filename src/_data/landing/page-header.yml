@@ -5,10 +5,6 @@ button_text: "Show me the full list of ZTNA vendors"
 button_url: "#vendors"
 background_image: "assets/images/landing/cover.png"
 statistics:
-  - title: "Vendors"
-    quantity: 104
-  - title: "Architectures"
-    quantity: 9
   - title: "NIST tenets"
     quantity: 7
   - title: "Executive Orders"
