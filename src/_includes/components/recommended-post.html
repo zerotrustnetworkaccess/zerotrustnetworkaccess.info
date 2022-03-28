@@ -10,11 +10,11 @@
   </a>
   <div class="space20"></div>
 
-  <a
-    href="/category/{{post.categories[0] | slugify}}"
+  <div
     class="ztna-tag-small background-color ztna-margin-bottom-10 ztna-small-text light-text-1"
-    >{{post.categories[0] | slugify}}</a
   >
+    {{post.categories[0] | slugify}}
+  </div>
   <a href="{{post.url}}">
     <h2 class="dark-text">{{post.title}}</h2>
   </a>

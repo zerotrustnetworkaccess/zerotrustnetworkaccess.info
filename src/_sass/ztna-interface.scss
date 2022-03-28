@@ -20,18 +20,6 @@ html {
   scroll-behavior: smooth;
 }
 
-.ztna-tag {
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  a,
-  &:hover {
-    cursor: pointer;
-    text-decoration: none;
-    @extend .light-blue-1;
-  }
-}
-
 .ztna-content-wrapper {
   max-width: $landing-width;
 }
@@ -127,12 +115,24 @@ html {
   }
 }
 
+.ztna-tag {
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+}
+
 .ztna-tag-large {
   @extend .ztna-tag;
   padding: 8px 20px;
   width: max-content;
   &:hover {
     cursor: pointer;
+  }
+  a,
+  &:hover {
+    cursor: pointer;
+    text-decoration: none;
+    @extend .light-blue-1;
   }
 }
 
