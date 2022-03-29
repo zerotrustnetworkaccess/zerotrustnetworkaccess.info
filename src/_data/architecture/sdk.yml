@@ -5,7 +5,8 @@ displayByDeafult: false
 abbreviation: "SDK"
 sort_order: "5"
 description: ""
-image: "https://via.placeholder.com/2280x1200"
+image: "/assets/images/architecture/768-580.png"
+
 paragraphs:
   - text: "Nullam quis risus eget urna mollis ornare."
 strengths:

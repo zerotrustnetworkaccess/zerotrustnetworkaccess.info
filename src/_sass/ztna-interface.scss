@@ -53,9 +53,9 @@ html {
 }
 
 .ztna-small-button {
-  padding: 8px 20px;
+  padding: 6px 20px;
   border-radius: 25px;
-  border: none;
+  box-sizing: border-box;
   border: 2px solid $light-blue-1;
   display: flex;
   align-items: center;

@@ -24,32 +24,38 @@ architecture-summary = site.data.landing.architecture-summary %}
     {% for architecture in site.data.architecture %} {% assign arch =
     architecture[1] %}
     <div class="item item-detailed">
-      <figure class="ztna-slider-image mb-20">
-        {% if arch.image %}
-        <div class="item-detailed-image">
-          <img
-            srcset="{{arch.image}} 1x, {{arch.image_2x}} 2x"
-            alt="{{arch.name}}"
-          />
-        </div>
-        {% endif %}
-      </figure>
-      <div class="space30"></div>
-      <div class="item-content text-center col-lg-8 col-md-12 col px-0 mx-auto">
-        {% if arch.name %}
-        <h3 id="arch.name" class="dark-text">{{arch.name}}</h3>
-        {% endif %}
-        <div class="space10"></div>
-        <div class="ztna-margin-bottom-30-20">
-          {% if arch.description %}
-          <p class="light-text-1 ztna-small-text">{{arch.description}}</p>
-          {% endif %}
-        </div>
-        <div class="text-center">
-          <a href="#filter=.{{arch.filters}}">
-            {%include components/link.html content=architecture-summary.button
-            %}
-          </a>
+      <div class="item-content px-0 mx-auto">
+        <div class="row">
+          <div class="col-lg-4 col-md-12 text-center text-lg-left mb-0">
+            {% if arch.name %}
+            <h3 id="arch.name" class="dark-text">{{arch.name}}</h3>
+            {% endif %}
+            <div class="space10"></div>
+            <div class="ztna-margin-bottom-30-20">
+              {% if arch.description %}
+              <p class="light-text-1 ztna-small-text">{{arch.description}}</p>
+              {% endif %}
+            </div>
+            <div class="ml-5 ztna-margin-bottom-30-20">
+              <a href="#filter=.{{arch.filters}}">
+                {%include components/link.html
+                content=architecture-summary.button %}
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-8 col-md-12 mb-0">
+            <figure class="ztna-slider-image mb-10">
+              {% if arch.image %}
+              <div class="item-detailed-image">
+                <img
+                  srcset="{{arch.image}} 1x, {{arch.image_2x}} 2x"
+                  alt="{{arch.name}}"
+                />
+              </div>
+              {% endif %}
+            </figure>
+          </div>
         </div>
       </div>
     </div>

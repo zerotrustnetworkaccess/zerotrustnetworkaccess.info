@@ -6192,7 +6192,6 @@
               "click",
               a.proxy(function (a) {
                 this.prev(c.navSpeed);
-                console.log("click");
               }, this)
             )),
           (this._controls.$next = a("<" + c.navElement + ">")

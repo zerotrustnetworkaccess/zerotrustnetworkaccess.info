@@ -2,7 +2,6 @@ let timelineItemIndex = 1;
 let currentItem;
 const slides = document.querySelectorAll(".timeline-item");
 
-console.log(slides.length);
 let translateAmount = 100;
 let translate = 0;
 
@@ -12,7 +11,6 @@ function plusTimelineItem(index, direction) {
   showTimelineItems((timelineItemIndex += index));
 
   if (currentItem) {
-    console.log(currentItem);
     translate = -100 * (currentItem - 1);
   }
 
@@ -43,7 +41,6 @@ function currentTimelineItem(index) {
   currentItem = index;
   const translateAmount = 100 * -(index - 1);
 
-  console.log("currentItem years: " + currentItem);
   slides.forEach((slide) => {
     slide.style.transform = `translateX(${translateAmount}%)`;
   });
