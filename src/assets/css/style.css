@@ -430,8 +430,8 @@ canvas {
 }
 .navbar.fixed.banner--stick,
 .navbar.shadow:not(.fixed):not(.banner--stick) {
-  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.04);
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.04);
+  /* -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.04);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.04); */
 }
 .navbar-nav,
 .navbar-nav * {

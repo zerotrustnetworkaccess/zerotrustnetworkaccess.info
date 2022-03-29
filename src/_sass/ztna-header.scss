@@ -20,6 +20,10 @@ nav {
   width: 100%;
 }
 
+.ztna-shadow {
+  -webkit-box-shadow: 0px 0px 15px rgba(10, 63, 113, 0.15);
+  box-shadow: 0px 0px 15px rgba(10, 63, 113, 0.15);
+}
 .ztna-nav-item {
   padding-left: 0 !important;
   padding-right: 0 !important;
@@ -32,6 +36,7 @@ nav {
 }
 
 .banner--clone {
+  @extend .ztna-shadow;
   z-index: 1009;
   opacity: 0;
   .ztna-logo {

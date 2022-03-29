@@ -1,8 +1,7 @@
 .isotope-filter {
   .active {
-    letter-spacing: -0.043em;
     font-weight: 500;
-    @extend .h4;
+
     @extend .light-blue-background-2;
     @extend .white;
   }

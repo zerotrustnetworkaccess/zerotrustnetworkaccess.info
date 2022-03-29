@@ -25,6 +25,12 @@
   }
 }
 
+.year-wrapper {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 .timelineYear {
   padding: 8px 4%;
 

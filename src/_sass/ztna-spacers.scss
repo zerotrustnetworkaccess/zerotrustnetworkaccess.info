@@ -393,6 +393,20 @@
   .ml-lg-80 {
     margin-left: 80px;
   }
+
+  .pl-lg-16 {
+    padding-left: 16px !important;
+  }
+
+  .pr-lg-16 {
+    padding-right: 16px !important;
+  }
+  .pl-lg-3 {
+    padding-left: 1% !important;
+  }
+  .pr-lg-3 {
+    padding-right: 1% !important;
+  }
 }
 
 @media only screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {

@@ -14,9 +14,18 @@ site.data.landing.timeline %}
       class="timeline scroll-wrapper gradient-background align-self-md-center align-self-sm-start align-self-lg-center"
     >
       {% for node in timeline.nodes %} {% assign index = forloop.index %}
-      <p class="h4 white timelineYear" onclick="currentTimelineItem({{index}})">
-        {{node.year}}
-      </p>
+      <div
+        style="width: calc(100% / {{forloop.length}})"
+        class="year-wrapper pr-lg-3 pl-lg-3"
+        onclick="currentTimelineItem({{index}})"
+      >
+        <p
+          class="h4 white timelineYear text-center"
+          onclick="currentTimelineItem({{index}})"
+        >
+          {{node.year}}
+        </p>
+      </div>
       {% endfor %}
     </div>
     <div class="space40"></div>
@@ -27,7 +36,7 @@ site.data.landing.timeline %}
         <div class="timeline-data" style="width: {{size}}00%">
           {% for node in timeline.nodes %}
           <div
-            class="timeline-item ztna-margin-bottom-40-20 pl-md-40-20 pr-md-40-20"
+            class="timeline-item ztna-margin-bottom-40-20 pl-md-40-20 pr-md-40-20 pl-lg-16 pr-lg-16"
           >
             <div class="timeline-item-date-wrapper ztna-margin-bottom-30-20">
               {% include icons/calendar.svg cls="light-blue-1" %}
