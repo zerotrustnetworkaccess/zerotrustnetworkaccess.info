@@ -46,6 +46,14 @@
   margin-top: 0;
 }
 
+.pb-100-50-40 {
+  padding-bottom: 100px;
+}
+
+.pt-100-70 {
+  padding-top: 100px !important;
+}
+
 .mt-50-40 {
   margin-top: 50px !important;
 }
@@ -257,6 +265,14 @@
   .mb-50-30 {
     margin-bottom: 30px;
   }
+
+  .pb-100-50-40 {
+    padding-bottom: 40px !important;
+  }
+
+  .pt-100-70 {
+    padding-top: 70px !important;
+  }
 }
 
 @media only screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-lg) {
@@ -360,6 +376,10 @@
   .px-lg-15 {
     padding-left: 0 !important;
     padding-right: 0 !important;
+  }
+
+  .pb-100-50-40 {
+    padding-bottom: 50px !important;
   }
 }
 
