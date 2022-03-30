@@ -7,6 +7,8 @@ $title-fontweight: 500;
 $text-fontweight: 300;
 $tablet: 744px;
 
+$h3lineheight: 32px;
+
 .titles {
   font-family: $fontfamily;
   font-style: $fontstyle;
@@ -39,7 +41,7 @@ h3,
 .h3 {
   @extend .titles;
   font-size: 22px;
-  line-height: 32px;
+  line-height: $h3lineheight;
 }
 
 h4,

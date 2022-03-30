@@ -175,6 +175,11 @@ html {
   align-items: center;
 }
 
+.ztna-post-title {
+  height: $h3lineheight * 2;
+  overflow: hidden;
+}
+
 .ztna-post-ui {
   display: flex;
   justify-content: space-between;
