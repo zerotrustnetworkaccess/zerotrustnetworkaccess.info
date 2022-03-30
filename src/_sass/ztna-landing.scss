@@ -6,6 +6,11 @@
   padding-bottom: 116px;
 }
 
+.ztna-hero-background {
+  background: $head-background -webkit-image-set(url("/assets/images/landing/cover.png")
+        1x, url("/assets/images/landing/cover@2x.png") 2x);
+}
+
 .ztna-counter-wrapper {
   max-width: 600px;
   display: flex;
