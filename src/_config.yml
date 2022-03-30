@@ -97,7 +97,7 @@ sass:
 disqus:
   shortname: "zerotrustnetworkaccess"
 
-netlify:
+netlify: 
   headers:
     - paths:
         - /*
