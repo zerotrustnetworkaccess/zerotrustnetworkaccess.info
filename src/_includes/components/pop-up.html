@@ -1,0 +1,23 @@
+<div id="overlay"></div>
+<div class="text-center white-background" id="popup">
+  <img
+    srcset="
+      {{site.data.pop-up.ok_status_img_1x}} 1x,
+      {{site.data.pop-up.ok_status_img_2x}} 2x
+    "
+    alt="{{site.data.pop-up.title}}"
+    class="popup-status-image ztna-margin-bottom-30-20"
+  />
+  <p class="h2 dark-text ztna-margin-bottom-20-10">
+    {{site.data.pop-up.title}}
+  </p>
+  <p class="ztna-small-text light-text-1 ztna-margin-bottom-30-20">
+    {{site.data.pop-up.description}}
+  </p>
+  <button
+    class="ztna-button light-blue-background-1 white ztna-h4"
+    id="close-popup"
+  >
+    {{site.data.pop-up.button_CTA}}
+  </button>
+</div>
