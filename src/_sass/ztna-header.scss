@@ -17,6 +17,15 @@ nav {
       color: $light-blue-1 !important;
     }
   }
+  .navbar-hamburger {
+    &:hover {
+      button.hamburger:before,
+      button.hamburger span,
+      button.hamburger:after {
+        background: $light-blue-1 !important;
+      }
+    }
+  }
 }
 
 .open {
