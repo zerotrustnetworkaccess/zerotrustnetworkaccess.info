@@ -30,8 +30,7 @@ nav {
   box-sizing: content-box;
   width: fit-content;
   &:hover {
-    padding-bottom: 4px;
-    border-bottom: 1px solid;
+    color: $light-blue-1;
   }
 }
 
@@ -55,8 +54,7 @@ nav {
     }
 
     &:hover {
-      padding-bottom: 4px;
-      border-bottom: 1px solid $dark-text;
+      color: $light-blue-1 !important;
     }
   }
 }

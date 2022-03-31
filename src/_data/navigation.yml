@@ -6,4 +6,4 @@ main_menu:
 
   - text: "Github"
     url: "#"
-    icon: github-header-icon.svg
+    icon: github.svg
