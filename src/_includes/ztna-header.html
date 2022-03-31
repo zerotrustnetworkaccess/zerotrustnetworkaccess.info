@@ -13,6 +13,7 @@
     <li class="nav-item">
       <div class="navbar-hamburger d-lg-none d-xl-none d-md-none mr-20 mt-20">
         <button class="hamburger animate plain" data-toggle="offcanvas-nav">
+          <span></span>
         </button>
       </div>
     </li>
@@ -46,10 +47,11 @@
 
       {% endfor %}
       <li class="ztna-nav-item">
-        <button class="plain text-link" data-toggle="offcanvas-info">
+        <button class="plain nav-link nav-link d-flex align-items-center" data-toggle="offcanvas-info">
           {% include icons/info-header-icon.svg cls="nav-link
-          mobile-menu-items-fill" %}<span
-            class="h4 ml-10 {% if include.dark_logo %} mobile-menu-items-color {% endif %}"
+          mobile-menu-items-fill" %}
+          <span
+            class="h4 ml-10 text-link {% if include.dark_logo %} mobile-menu-items-color {% endif %}"
             >Info</span
           >
         </button>

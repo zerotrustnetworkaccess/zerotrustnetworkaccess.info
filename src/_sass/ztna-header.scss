@@ -1,7 +1,21 @@
 nav {
   height: 80px;
-  a {
-    text-decoration: none;
+  .nav-link {
+    &:hover {
+      .text-link {
+        color: $light-blue-1 !important;
+      }
+
+      .mobile-menu-items-fill {
+        fill: $light-blue-1 !important;
+      }
+    }
+  }
+
+  .text-link {
+    &:hover {
+      color: $light-blue-1 !important;
+    }
   }
 }
 
@@ -29,14 +43,11 @@ nav {
   padding-right: 0 !important;
   box-sizing: content-box;
   width: fit-content;
-  &:hover {
-    color: $light-blue-1;
-  }
 }
 
 .banner--clone {
   @extend .ztna-shadow;
-  z-index: 1009;
+
   opacity: 0;
   .ztna-logo {
     background: -webkit-image-set(
@@ -61,10 +72,12 @@ nav {
 
 .banner--unstick {
   opacity: 0;
+  z-index: 1;
 }
 
 .banner--stick {
   opacity: 1 !important;
+  z-index: 1009;
 }
 
 .ztna-logo-base {
@@ -166,7 +179,7 @@ nav {
   }
   .ztna-nav-item {
     &:hover {
-      border-bottom: 1px solid $dark-text;
+      color: red;
     }
   }
 }
