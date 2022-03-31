@@ -11,8 +11,8 @@
 }
 #popup {
   display: none;
-  position: absolute;
-  top: 10%;
+  position: fixed;
+  top: 45%;
   left: 50%;
   width: 500px;
   height: 506px;
@@ -32,7 +32,7 @@
   #popup {
     width: 336px;
     height: 332px;
-    padding: 0;
+    padding: 20px;
     margin-left: -168px;
     margin-top: -166px;
     .popup-status-image {

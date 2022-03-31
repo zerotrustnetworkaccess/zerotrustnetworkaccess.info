@@ -3,14 +3,21 @@
   <h3 class="dark-text">{{content.title}}</h3>
   <div class="space10"></div>
   <p class="ztna-small-text ztna-margin-bottom-30-12">{{content.text}}</p>
+  <form>
+    <input
+      type="email"
+      name=""
+      id=""
+      placeholder="Email"
+      class="ztna-small-text dark-text white-background ztna-input-light"
+    />
 
-  {% include components/input.html cls="ztna-small-text dark-text
-  white-background ztna-input-light"%}
-  <div class="space20"></div>
-  <button
-    class="ztna-button light-blue-background-1 white ztna-h4"
-    id="subscription"
-  >
-    {{content.button_text}}
-  </button>
+    <div class="space20"></div>
+    <button
+      type="button"
+      class="ztna-button light-blue-background-1 white ztna-h4 subscription"
+    >
+      {{content.button_text}}
+    </button>
+  </form>
 </div>
