@@ -37,7 +37,12 @@
           {% include components/input.html cls="ztna-small-text light-text-3
           dark-buttons-background ztna-input-dark"%}
           <div class="space20"></div>
-          {% include components/button.html content=subscription.cta%}
+          <button
+            type="button"
+            class="ztna-button light-blue-background-1 white ztna-h4 subscription"
+          >
+            {{subscription.cta}}
+          </button>
         </div>
       </div>
 

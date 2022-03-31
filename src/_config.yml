@@ -104,7 +104,13 @@ netlify:
       headers:
         - "X-Content-Type-Options: nosniff"
         - "X-Frame-Options: deny"
-        - "Content-Security-Policy: default-src 'self'; script-src 'self' www.googletagmanager.com 'unsafe-inline'; style-src 'self' 'unsafe-inline' fonts.googleapis.com; img-src 'self' data: via.placeholder.com; font-src 'self' fonts.gstatic.com; connect-src 'self' www.google-analytics.com www.googletagmanager.com"
+        - "Content-Security-Policy: 
+        default-src 'self'; 
+        script-src 'self' www.googletagmanager.com 'unsafe-inline'; 
+        style-src 'self' 'unsafe-inline' fonts.googleapis.com; 
+        img-src 'self' data: via.placeholder.com; 
+        font-src 'self' fonts.gstatic.com; 
+        connect-src 'self' www.google-analytics.com www.googletagmanager.com enclave-networks.activehosted.com"
     - paths:
         - /*.js
         - /*.css

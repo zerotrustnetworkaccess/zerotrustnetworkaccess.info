@@ -1,0 +1,5 @@
+ok_status_img_1x: "/assets/images/popup/pop-up-ok.png"
+ok_status_img_2x: "/assets/images/popup/pop-up-ok.png"
+title: "Subscription successfully completed!"
+description: "Thank you for your subscription!"
+button_CTA: "Ok"
