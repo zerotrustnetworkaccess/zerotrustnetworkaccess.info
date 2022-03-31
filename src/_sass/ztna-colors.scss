@@ -19,6 +19,7 @@ $divider: #efefef;
 $timeline-active: #bdcfe2;
 $input-active-dark: #1f3f5d;
 $head-background: #142a53;
+$flyout-back: #1e2228;
 
 $gradient-proportion: $light-blue-1 0%, $dark-blue-1 31.59%, $violet-1 67.71%,
   $pink 100%;
@@ -38,6 +39,10 @@ $direction: left;
 
 .light-blue-1-fill {
   fill: $light-blue-1;
+}
+
+.light-blue-1-background {
+  background-color: $light-blue-1;
 }
 
 .light-blue-2 {
@@ -158,4 +163,8 @@ $direction: left;
 
 .light-blue-1-fill {
   fill: $light-blue-1;
+}
+
+.flyout-background {
+  background-color: $flyout-back;
 }

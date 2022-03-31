@@ -30,11 +30,11 @@ nav {
 
 .open {
   .h4 {
-    color: $dark-text !important;
+    color: $white !important;
   }
   a {
     .text-link {
-      color: $dark-text !important;
+      color: $white !important;
     }
   }
 }
@@ -132,7 +132,7 @@ nav {
 }
 
 .icon-hover:hover {
-  color: $light-text-1;
+  color: $light-blue-1;
 }
 
 @media only screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-lg) {
