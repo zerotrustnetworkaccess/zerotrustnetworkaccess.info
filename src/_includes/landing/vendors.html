@@ -43,7 +43,7 @@
         {% for architecture in site.data.architecture %} {% assign arch =
         architecture[1] %} {% if arch.vendors %}
         <div
-          class="item grid-sizer col-12 mx-auto
+          class="item grid-sizer col-12 mx-auto mb-0
           {% for filter in arch.filters %} {{filter}} {% endfor %}
           {% if arch.displayByDeafult %} focus {% endif %}
           "
@@ -125,9 +125,7 @@
             {{arch.name}} Vendors
           </h3>
           <div class="scroll-wrapper ml-md-40 mr-md-40 mr-lg-40 ml-lg-40">
-            <table
-              class="ztna-table ztna-margin-bottom-50-40 mr-sm-20 ml-sm-20"
-            >
+            <table class="ztna-table mr-sm-20 ml-sm-20">
               <thead class="ztna-table-head background-color light-text-2">
                 <tr>
                   <th scope="col">#</th>
@@ -161,6 +159,11 @@
                 {% endfor %}
               </tbody>
             </table>
+            <div {% if forloop.index == forloop.length %} class="table-spacers-remover" {% endif %}>
+              <div class="mb-70-50"></div>
+              <hr class="post-divider" />
+              <div class="mb-70-50"></div>
+            </div>
           </div>
         </div>
         {% endif %} {% endfor %}
