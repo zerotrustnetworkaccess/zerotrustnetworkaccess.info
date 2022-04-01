@@ -1,7 +1,8 @@
 encoding: utf-8
 
-baseurl: "/" # the subpath of your site, e.g. /blog
 url: "http://zerotrustnetworkaccess.com"
+baseurl: "/" # the subpath of your site, e.g. /blog
+
 # url: "https://snowlake.netlify.app" # the base hostname & protocol for your site, e.g. http://example.com
 
 permalink: "/:title"
@@ -10,7 +11,7 @@ permalink: "/:title"
 #theme: snowlake
 plugins:
   - jekyll-feed
-  - jekyll-paginate-v2
+  - jekyll-paginate
   - jekyll-archives
 
 collections:
@@ -31,7 +32,9 @@ pagination:
   collection: "posts"
 
   # How many objects per paginated page, used to be `paginate` (default: 0, means all)
-  per_page: 6
+  per_page: 4
+
+  paginate_path: "/page:num/"
 
   # The permalink structure for the paginated pages (this can be any level deep)
   permalink: "/page/:num/" # Pages are index.html inside this folder (default)
@@ -39,7 +42,7 @@ pagination:
   #permalink: '/page/:num' # Pages are html files, linked jekyll extensionless permalink style.
 
   # Optional the title format for the paginated pages (supports :title for original page title, :num for pagination page number, :max for total number of pages)
-  title: ":title - page :num"
+  title: ":title"
 
   # Limit how many pagenated pages to create (default: 0, means all)
   limit: 0

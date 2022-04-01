@@ -6,7 +6,7 @@ black_menu: true
 pagination:
   enabled: true
   per_page: 4
-permalink: "/blog"
+permalink: "/blog/"
 ---
 
 <div class="row mx-0">
@@ -19,5 +19,5 @@ permalink: "/blog"
   <div class="col-md-6 col-sm-6">
     {% include components/post-preview.html cls="mb-70-50" %}
   </div>
-  {% endfor %} {% include advanced-pagination.html %}
+  {% endfor %} {% include pagination.html %}
 </div>

@@ -16,8 +16,8 @@ social_accounts:
   links:
     - url: "#"
       title: "Edit on GitHub"
-      icon: /assets/icons/github-footer-icon.svg
+      icon: github.svg
 
     - url: "#"
       title: "Guidelines"
-      icon: /assets/icons/guidelines-footer-icon.svg
+      icon: guidelines.svg

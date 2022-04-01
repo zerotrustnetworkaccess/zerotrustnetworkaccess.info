@@ -60,6 +60,18 @@ html {
   display: flex;
   align-items: center;
   column-gap: 10px;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.ztna-small-button-static {
+  @extend .ztna-small-button;
+  &:hover {
+    cursor: pointer;
+    -webkit-box-shadow: 0 0 0 4px rgba(68, 160, 248, 0.5);
+    box-shadow: 0 0 0 4px rgba(68, 160, 248, 0.5);
+  }
 }
 
 .ztna-small-button-right {
@@ -244,6 +256,10 @@ td {
   a {
     @extend .h4;
   }
+}
+
+.table-spacers-remover {
+  display: none;
 }
 
 .ztna-overflow {

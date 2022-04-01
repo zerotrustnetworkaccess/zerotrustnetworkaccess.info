@@ -20,17 +20,17 @@
   </div>
 
   <div
-    class="navbar-collapse offcanvas-nav align-self-center justify-content-end mobile-bg pl-40"
+    class="navbar-collapse offcanvas-nav align-self-center justify-content-end mobile-bg pl-md-40"
   >
     <div class="offcanvas-header d-lg-none d-xl-none d-md-none">
       <button
-        class="plain offcanvas-close offcanvas-nav-close icon-hover light-text-2"
+        class="plain offcanvas-close offcanvas-nav-close icon-hover white"
       >
         <i class="jam jam-close"></i>
       </button>
     </div>
 
-    <ul class="navbar-nav menu align-items-center">
+    <ul class="navbar-nav menu align-items-lg-center align-items-md-start">
       {% for menu in site.data.navigation.main_menu %}
 
       <li
@@ -47,10 +47,11 @@
 
       {% endfor %}
       <li class="ztna-nav-item">
-        <button class="plain text-link" data-toggle="offcanvas-info">
+        <button class="plain nav-link nav-link d-flex align-items-center" data-toggle="offcanvas-info">
           {% include icons/info-header-icon.svg cls="nav-link
-          mobile-menu-items-fill" %}<span
-            class="h4 ml-10 {% if include.dark_logo %} mobile-menu-items-color {% endif %}"
+          mobile-menu-items-fill" %}
+          <span
+            class="h4 ml-10 text-link {% if include.dark_logo %} mobile-menu-items-color {% endif %}"
             >Info</span
           >
         </button>
@@ -65,7 +66,7 @@
 </nav>
 <!-- /.navbar -->
 <div
-  class="offcanvas-info white-background fly-out-bg"
+  class="offcanvas-info flyout-background fly-out-bg"
   style="
 background-image: -webkit-image-set(
     url({{site.data.ztna-header.fly-out-bg}}) 1x,
@@ -78,15 +79,15 @@ background-image: -webkit-image-set(
 "
 >
   <button
-    class="plain offcanvas-close offcanvas-info-close light-text-2 icon-hover"
+    class="plain offcanvas-close offcanvas-info-close white icon-hover"
   >
     <i class="jam jam-close"></i>
   </button>
   <a href="{{site.url}}">
     <img
       srcset="
-        {{site.data.general_settings.enclave_logo_1x}} 1x,
-        {{site.data.general_settings.enclave_logo_2x}} 2x
+        {{site.data.general_settings.enclave_logo_light_1x}} 1x,
+        {{site.data.general_settings.enclave_logo_light_2x}} 2x
       "
       class="{% if include.logo_class %} {{include.logo_class}} {% else %} logo-light fly-out-logo{% endif %}"
       alt="{{site.data.general_settings.title}}"
@@ -97,26 +98,26 @@ background-image: -webkit-image-set(
   <ul class="list-unstyled mb-0">
     {% for content in description %}
     <li class="ztna-margin-bottom-20">
-      <p class="ztna-small-text light-text-1">{{content.text}}</p>
+      <p class="ztna-small-text white">{{content.text}}</p>
     </li>
     {% endfor %}
   </ul>
   <div class="space10"></div>
   <hr class="post-divider" />
   <div class="space30"></div>
-  <a href="https://enclave.io/" class="button-link">
+  <a href="https://enclave.io/" class="button-link white">
     <div
-      class="ztna-small-button white-background light-blue-1 h4 justify-content-center"
+      class="ztna-small-button-static light-blue-1-background  h4 justify-content-center"
     >
-      {%include icons/web-header-icon.svg %} Visit website
+      {%include icons/web-header-icon.svg cls="white-fill"%} Visit website
     </div>
   </a>
   <div class="space10"></div>
-  <a href="#" class="button-link">
+  <a href="#" class="button-link white">
     <div
-      class="ztna-small-button white-background light-blue-1 h4 justify-content-center"
+      class="ztna-small-button-static light-blue-1-background h4 justify-content-center"
     >
-      {%include icons/github-header-icon.svg cls="light-blue-1-fill"%} Visit
+      {%include icons/github.svg cls="white-fill"%} Visit
       github
     </div>
   </a>

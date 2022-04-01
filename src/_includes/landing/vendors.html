@@ -18,6 +18,14 @@
       {% endif %}
       <div class="isotope-filter ztna-margin-bottom-40-20">
         <ul class="pl-md-40-20 mr-lg-40 ml-lg-40">
+          <li>
+            <a
+              class="active ztna-tag-large background-color light-text-1 h4 mb-10 mr-10 button"
+              data-filter="*"
+            >
+              All
+            </a>
+          </li>
           {% for filters in vendors.categories %}
           <li>
             <a
@@ -28,14 +36,6 @@
             </a>
           </li>
           {% endfor %}
-          <li>
-            <a
-              class="active ztna-tag-large background-color light-text-1 h4 mb-10 mr-10 button"
-              data-filter="*"
-            >
-              All
-            </a>
-          </li>
         </ul>
       </div>
 
@@ -43,7 +43,7 @@
         {% for architecture in site.data.architecture %} {% assign arch =
         architecture[1] %} {% if arch.vendors %}
         <div
-          class="item grid-sizer col-12 mx-auto
+          class="item grid-sizer col-12 mx-auto mb-0
           {% for filter in arch.filters %} {{filter}} {% endfor %}
           {% if arch.displayByDeafult %} focus {% endif %}
           "
@@ -125,9 +125,7 @@
             {{arch.name}} Vendors
           </h3>
           <div class="scroll-wrapper ml-md-40 mr-md-40 mr-lg-40 ml-lg-40">
-            <table
-              class="ztna-table ztna-margin-bottom-50-40 mr-sm-20 ml-sm-20"
-            >
+            <table class="ztna-table mr-sm-20 ml-sm-20">
               <thead class="ztna-table-head background-color light-text-2">
                 <tr>
                   <th scope="col">#</th>
@@ -161,6 +159,13 @@
                 {% endfor %}
               </tbody>
             </table>
+            <div
+              class="spacesers-container {% if forloop.index == forloop.length %} table-spacers-remover {% endif %}"
+            >
+              <div class="mb-70-50"></div>
+              <hr class="post-divider" />
+              <div class="mb-70-50"></div>
+            </div>
           </div>
         </div>
         {% endif %} {% endfor %}

@@ -1,5 +1,5 @@
-<div
-  class="container-fluid ztna-landing-section-wrapper dark-text-background px-md-40-20"
+<footer
+  class="container-fluid pb-60-30 dark-text-background px-md-40-20 pt-100-70"
 >
   <div class="ztna-content-wrapper mx-auto {{include.cls}}">
     <div class="row">
@@ -57,13 +57,12 @@
             {% for links in social_accounts.links %}
             <li>
               <a
-                class="text-link light-blue-1 mr-md-50 d-flex align-items-center"
+                class="mr-md-50 d-flex align-items-center"
                 href="{{links.url}}"
-                ><img
-                  src="{{links.icon}}"
-                  class="ztna-margin-right-10 ztna-menu-icon"
-                />{{links.title}}</a
               >
+                {% include icons/{{links.icon}} cls="footer-icon" %}
+                <span class="white ml-10"> {{links.title}} </span>
+              </a>
               <div class="space20"></div>
             </li>
             {% endfor %}
@@ -72,4 +71,4 @@
       </div>
     </div>
   </div>
-</div>
+</footer>
