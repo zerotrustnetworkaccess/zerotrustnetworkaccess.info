@@ -11,7 +11,7 @@ subscribeButton.forEach(
         "https://enclave-networks.activehosted.com/proc.php?u=8&f=8&s=&c=0&m=0&act=sub&v=2&or=99d0a5901dfe9737d4076db8322acd47&email=ivan.s@dashbouquet.com&jsonp=true";
 
       try {
-        await fetch(url).then((res) => console.log(res));
+        await fetch(url, { mode: "no-cors" }).then((res) => console.log(res));
 
         // overlay.style.display = "block";
         // popup.style.display = "block";
