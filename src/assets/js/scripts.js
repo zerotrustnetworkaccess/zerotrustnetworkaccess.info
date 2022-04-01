@@ -225,6 +225,7 @@ $(document).ready(function () {
         // set selected class on button
         if (hashFilter) {
           var $filterButtonGroup = $(".isotope-filter");
+          var $spacers = $(".spacesers-container");
           $filterButtonGroup.find(".active").removeClass("active");
           $filterButtonGroup
             .find('[data-filter="' + hashFilter + '"]')
