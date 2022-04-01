@@ -9,7 +9,8 @@
   opacity: 0.8;
   z-index: 18999;
 }
-#popup {
+#popup-ok,
+#popup-error {
   display: none;
   position: fixed;
   top: 45%;
@@ -29,7 +30,8 @@
 }
 
 @media only screen and (max-width: $breakpoint-sm) {
-  #popup {
+  #popup-ok,
+  #popup-error {
     width: 336px;
     height: 332px;
     padding: 20px;
