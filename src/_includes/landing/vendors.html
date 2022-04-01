@@ -18,6 +18,14 @@
       {% endif %}
       <div class="isotope-filter ztna-margin-bottom-40-20">
         <ul class="pl-md-40-20 mr-lg-40 ml-lg-40">
+          <li>
+            <a
+              class="active ztna-tag-large background-color light-text-1 h4 mb-10 mr-10 button"
+              data-filter="*"
+            >
+              All
+            </a>
+          </li>
           {% for filters in vendors.categories %}
           <li>
             <a
@@ -28,14 +36,6 @@
             </a>
           </li>
           {% endfor %}
-          <li>
-            <a
-              class="active ztna-tag-large background-color light-text-1 h4 mb-10 mr-10 button"
-              data-filter="*"
-            >
-              All
-            </a>
-          </li>
         </ul>
       </div>
 

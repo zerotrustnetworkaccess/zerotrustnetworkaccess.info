@@ -2,7 +2,6 @@ main_menu:
   - text: "Blog"
     url: "/blog"
     icon: blog-header-icon.svg
-    # icon: "/assets/icons/blog-header-icon.svg"
 
   - text: "Github"
     url: "#"

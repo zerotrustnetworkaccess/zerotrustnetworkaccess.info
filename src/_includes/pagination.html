@@ -1,0 +1,37 @@
+<div class="row justify-content-center w-100">
+  {% if paginator.total_pages > 1 %}
+  <ul class="d-flex list-unstyled">
+    {% if paginator.previous_page %}
+    <li>
+      <a
+        class="ztna-small-button-left white-background light-blue-1 h4 mr-10"
+        href="{{ paginator.previous_page_path | prepend: site.url }}"
+      >
+        <img
+          src="/assets/icons/left-arrow.svg"
+          alt="svg icon"
+          class="ztna-margin-right-10"
+        />
+        Prev
+      </a>
+    </li>
+    {% endif %} {% if paginator.next_page %}
+    <li>
+      <a
+        class="ztna-small-button-right white-background light-blue-1 h4"
+        href="{{ paginator.next_page_path | prepend: site.url }}"
+      >
+        Next
+        <img
+          src="/assets/icons/right-arrow.svg"
+          alt="svg icon"
+          class="ztna-margin-left-10"
+        />
+      </a>
+    </li>
+    {% endif %}
+  </ul>
+  {% endif %}
+</div>
+
+<!-- /.pagination -->

@@ -10,19 +10,19 @@ nav {
         fill: $light-blue-1 !important;
       }
     }
-  }
 
-  .text-link {
-    &:hover {
-      color: $light-blue-1 !important;
+    .text-link {
+      &:hover {
+        color: $light-blue-1 !important;
+      }
     }
-  }
-  .navbar-hamburger {
-    &:hover {
-      button.hamburger:before,
-      button.hamburger span,
-      button.hamburger:after {
-        background: $light-blue-1 !important;
+    .navbar-hamburger {
+      &:hover {
+        button.hamburger:before,
+        button.hamburger span,
+        button.hamburger:after {
+          background: $light-blue-1 !important;
+        }
       }
     }
   }
@@ -186,9 +186,8 @@ nav {
   .mobile-menu-items-fill {
     fill: $white !important;
   }
-  .ztna-nav-item {
-    &:hover {
-      color: red;
-    }
+
+  .offcanvas-nav {
+    background-color: $flyout-back;
   }
 }

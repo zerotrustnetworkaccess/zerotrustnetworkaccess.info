@@ -60,6 +60,9 @@ html {
   display: flex;
   align-items: center;
   column-gap: 10px;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .ztna-small-button-static {
