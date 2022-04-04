@@ -33,28 +33,12 @@
           <p class="ztna-small-text light-text-2 ztna-margin-bottom-30-20">
             {{subscription.text}}
           </p>
-          <!-- 
-          <form id="footer-subscription">
-            <input
-              type="email"
-              name=""
-              id="subscribe-form-mail"
-              placeholder="Email"
-              class="ztna-small-text light-text-3 dark-buttons-background ztna-input-dark"
-            />
 
-            <div class="space20"></div>
-            <button
-              type="submit"
-              class="ztna-button light-blue-background-1 white ztna-h4 subscription"
-            >
-              {{subscription.cta}}
-            </button>
-          </form> -->
-          {%include components/email-form.html input_style="ztna-small-text
-          light-text-3 dark-buttons-background ztna-input-dark"
-          button_style="ztna-button light-blue-background-1 white ztna-h4
-          subscription" button_caption=subscription.cta %}
+          {%include components/email-form.html form-id="footer-subscription"
+          input-id="footer-form-mail" input_style="ztna-small-text light-text-3
+          dark-buttons-background ztna-input-dark" button_style="ztna-button
+          light-blue-background-1 white ztna-h4 subscription"
+          button_caption=subscription.cta %}
         </div>
       </div>
 
