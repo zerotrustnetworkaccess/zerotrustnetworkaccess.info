@@ -598,10 +598,10 @@ acronym[title] {
   z-index: 1008;
   top: 0;
   left: 0;
-  /* -webkit-transform: translateY(-100%);
+  -webkit-transform: translateY(-100%);
   -ms-transform: translateY(-100%);
   transform: translateY(-100%);
-  -webkit-transition: all 300ms ease-in-out;
+  /* -webkit-transition: all 300ms ease-in-out;
   -o-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out; */
 }
@@ -609,9 +609,9 @@ acronym[title] {
   display: none !important;
 }
 .banner--stick {
-  /* -webkit-transform: translateY(0%);
+  -webkit-transform: translateY(0%);
   -ms-transform: translateY(0%);
-  transform: translateY(0%); */
+  transform: translateY(0%);
   background: rgba(var(--rgb-white), 1);
 }
 .banner--stick.bg-white {
@@ -7152,9 +7152,9 @@ footer.inverse-text address {
     right: 0;
     visibility: visible;
   }
-  .navbar.fixed .offcanvas-nav.open {
+  /* .navbar.fixed .offcanvas-nav.open {
     display: none !important;
-  }
+  } */
 }
 @media (max-width: 575.98px) {
   .navbar .dropdown-menu.search-dropdown-menu,

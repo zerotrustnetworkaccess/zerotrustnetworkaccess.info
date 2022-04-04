@@ -13,7 +13,7 @@ $(document).ready(function () {
 
   if ($(".navbar").length) {
     var options = {
-      offset: 0,
+      offset: 90,
       offsetSide: "top",
       classes: {
         clone: "banner--clone fixed",
@@ -34,7 +34,7 @@ $(document).ready(function () {
 /*-----------------------------------------------------------------------------------*/
   var $header_hamburger = $(".hamburger.animate");
   // var $header_search = $(".search-dropdown .dropdown-menu");
-  var $header_cart = $(".cart-dropdown .dropdown-menu");
+  //var $header_cart = $(".cart-dropdown .dropdown-menu");
   var $navbar_offcanvas = $(".offcanvas-nav");
   var $navbar_offcanvas_toggle = $('[data-toggle="offcanvas-nav"]');
   var $navbar_offcanvas_close = $(".offcanvas-nav-close");
@@ -66,10 +66,11 @@ $(document).ready(function () {
   $navbar_offcanvas.on("click", function (e) {
     e.stopPropagation();
   });
-  $header_cart.on("click", function (e) {
-    e.stopPropagation();
-  });
+  // $header_cart.on("click", function (e) {
+  //   e.stopPropagation();
+  // });
   $navbar_offcanvas_close.on("click", function (e) {
+    e.stopPropagation();
     $navbar_offcanvas.removeClass("open");
     $header_hamburger.removeClass("active");
   });
@@ -225,7 +226,6 @@ $(document).ready(function () {
         // set selected class on button
         if (hashFilter) {
           var $filterButtonGroup = $(".isotope-filter");
-          var $spacers = $(".spacesers-container");
           $filterButtonGroup.find(".active").removeClass("active");
           $filterButtonGroup
             .find('[data-filter="' + hashFilter + '"]')

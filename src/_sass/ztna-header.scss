@@ -16,14 +16,15 @@ nav {
         color: $light-blue-1 !important;
       }
     }
-    .navbar-hamburger {
-      &:hover {
-        button.hamburger:before,
-        button.hamburger span,
-        button.hamburger:after {
-          background: $light-blue-1 !important;
-        }
-      }
+  }
+}
+
+.navbar-hamburger {
+  &:hover {
+    button.hamburger:before,
+    button.hamburger span,
+    button.hamburger:after {
+      background: $light-blue-1 !important;
     }
   }
 }
@@ -57,7 +58,7 @@ nav {
 .banner--clone {
   @extend .ztna-shadow;
 
-  opacity: 0;
+  //opacity: 0;
   .ztna-logo {
     background: -webkit-image-set(
       url("/assets/images/logo.png") 1x,
@@ -80,13 +81,13 @@ nav {
 }
 
 .banner--unstick {
-  opacity: 0;
-  z-index: 1;
+  // opacity: 0;
+  // z-index: 1;
 }
 
 .banner--stick {
-  opacity: 1 !important;
-  z-index: 1009;
+  // opacity: 1 !important;
+  // z-index: 1009;
 }
 
 .ztna-logo-base {
@@ -96,7 +97,7 @@ nav {
   align-self: center;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 256px;
+  width: 258px;
   height: 20px;
 }
 
@@ -156,9 +157,22 @@ nav {
   .ztna-dark-logo {
     margin-left: 35px !important;
     margin-top: 20px !important;
-    width: 180px;
-    background-size: 100%;
+    width: 182px;
+    height: 14px;
+    background-size: cover;
     background-repeat: no-repeat;
+  }
+
+  .banner--clone {
+    .ztna-logo,
+    .ztna-dark-logo {
+      margin-left: 35px !important;
+      margin-top: 20px !important;
+      width: 182px;
+      height: 14px;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
   }
 
   .menu {
