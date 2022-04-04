@@ -7,12 +7,22 @@ const body = document.getElementsByTagName("body")[0];
 const bodyForm = document.getElementById("body-subscription");
 const footerForm = document.getElementById("footer-subscription");
 
+const handleError = () => {
+  overlay.style.display = "block";
+  popUpError.style.display = "block";
+  body.style.overflowY = "hidden";
+};
+
 const _show_thank_you = (code, msg, link, mail) => {
   console.log(msg);
+  overlay.style.display = "block";
+  popUpOk.style.display = "block";
+  body.style.overflowY = "hidden";
 };
 
 const _show_error = (code, msg) => {
   console.log(msg);
+  handleError();
 };
 
 function subscribe(e) {
@@ -28,16 +38,8 @@ function subscribe(e) {
   subscriptionScript.src = `https://enclave-networks.activehosted.com/proc.php?u=8&f=8&s=&c=0&m=0&act=sub&v=2&or=99d0a5901dfe9737d4076db8322acd47&email=${mail}&jsonp=true`;
   document.body.appendChild(subscriptionScript);
 
-  subscriptionScript.onload = function () {
-    overlay.style.display = "block";
-    popUpOk.style.display = "block";
-    body.style.overflowY = "hidden";
-  };
-
   subscriptionScript.onerror = function () {
-    overlay.style.display = "block";
-    popUpError.style.display = "block";
-    body.style.overflowY = "hidden";
+    handleError();
   };
 }
 if (bodyForm) {
