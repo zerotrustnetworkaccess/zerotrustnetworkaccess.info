@@ -112,3 +112,10 @@ vendors:
     license: ""
     deployment: ""
     pricing: ""
+
+  - company: "Barracuda"
+    product: "CloudGen Access (previously https://www.fyde.com/)"
+    url: "https://www.fyde.com/"
+    license: ""
+    deployment: ""
+    pricing: ""
