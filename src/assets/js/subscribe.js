@@ -4,9 +4,14 @@ const popUpOk = document.getElementById("popup-ok");
 const popUpError = document.getElementById("popup-error");
 const body = document.getElementsByTagName("body")[0];
 
-const bodyForm = document.getElementById("body-subscription");
+const form = document.getElementById("subscription-form");
+//const footerForm = document.getElementById("footer-subscription");
 
 const _show_thank_you = (code, msg, link, mail) => {
+  console.log(msg);
+};
+
+const _show_error = (code, msg) => {
   console.log(msg);
 };
 
@@ -29,7 +34,8 @@ function subscribe(e) {
     body.style.overflowY = "hidden";
   };
 }
-bodyForm.addEventListener("submit", subscribe);
+form.addEventListener("submit", subscribe);
+// footerForm.addEventListener("submit", subscribe);
 
 closePopup.forEach(
   (el) =>
