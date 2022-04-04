@@ -1,9 +1,13 @@
 name: "Secure Web Gateway"
+filters:
+  - swg
+displayByDeafult: false
 abbreviation: "SWG"
 sort_order: "3"
-description: "..."
-image: "https://via.placeholder.com/2280x1200"
-paragraphs: 
+description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non libero at sapien laoreet dapibus. Donec in semper augue. Sed elit odio, consectetur ut risus ac, sodales scelerisque nisl. Integer enim eros, ullamcorper a sodales faucibus, molestie vel urna. Sed euismod molestie pretium."
+image: "/assets/images/architecture/sdp.png"
+image_2x: "/assets/images/architecture/sdp@2x.png"
+paragraphs:
   - text: "Nullam quis risus eget urna mollis ornare."
 strengths:
   - title: "Nullam quis risus eget urna mollis ornare."
@@ -26,4 +30,4 @@ tradeoffs:
     description: ""
   - title: "Fusce dapibus, tellus ac cursus commodo."
     description: ""
-vendors: 
+vendors:

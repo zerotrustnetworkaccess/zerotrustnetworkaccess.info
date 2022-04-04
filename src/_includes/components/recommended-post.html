@@ -1,0 +1,37 @@
+<div class="recommended-post-wrapper ml-md-40-20 mr-md-40-20">
+  <div class="ztna-tag-large white-background green h4 recomended-label">
+    Recommended
+  </div>
+  <a href="{{post.url}}">
+    <div
+      class="ztna-recomended-post-image"
+      style="background-image: url({{post.post_image}})"
+    ></div>
+  </a>
+  <div class="space20"></div>
+
+  <div
+    class="ztna-tag-small background-color ztna-margin-bottom-10 ztna-small-text light-text-1"
+  >
+    {{post.categories[0] | slugify}}
+  </div>
+  <a href="{{post.url}}">
+    <h2 class="dark-text">{{post.title}}</h2>
+  </a>
+  <div class="space30"></div>
+  <div class="ztna-post-ui">
+    <a
+      class="ztna-small-button-right white-background light-blue-1 h4"
+      href="{{post.url}}"
+    >
+      Read
+      <img
+        src="/assets/icons/right-arrow.svg"
+        alt="svg icon"
+        class="ztna-margin-left-10"
+      />
+    </a>
+    {% include components/post-date.html%}
+  </div>
+  <div class="space60"></div>
+</div>

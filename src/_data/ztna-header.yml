@@ -1,0 +1,15 @@
+main_menu:
+  - url: "#"
+    title: "Blog"
+    icon: ../assets/icons/blog-header-icon.svg
+  - url: "#"
+    title: "Edit on GitHub"
+    icon: ../assets/icons/github-header-icon.svg
+  - url: "#"
+    title: "Info"
+    icon: ../assets/icons/info-header-icon.svg
+
+    icon: ../assets/icons/info-header-icon.svg
+fly-out-bg: "/assets/images/header/fly-out-back.png"
+fly-out-bg-2x: "/assets/images/header/fly-out-back@2x.png"
+enclave-website: https://enclave.io/

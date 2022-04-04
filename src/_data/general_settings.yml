@@ -1,12 +1,15 @@
-# General Settings
 title: "The no-bullshit ZTNA vendor directory | Enclave Networks"
-email: "tortoizthemes@gmail.com"
-email_2: "support@tortoizthemes.com"
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
 
+description:
+  - text: The Zero Trust Network Access site is curated by Enclave Networks Ltd.
+  - text: Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat.
+  - text: Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat.
+  - text: Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat.
+
+enclave_logo_1x: "/assets/images/enclave_logo.png"
+enclave_logo_2x: "/assets/images/enclave_logo@2x.png"
+enclave_logo_light_1x: "/assets/images/enclave_logo_light.png"
+enclave_logo_light_2x: "/assets/images/enclave_logo_lighto@2x.png"
 black_logo_1x: "/assets/images/logo.png"
 black_logo_2x: "/assets/images/logo@2x.png"
 light_logo_1x: "/assets/images/logo-light.png"
@@ -17,42 +20,8 @@ phone_number: ""
 copyright_text: "© 2021 Enclave Networks. All rights reserved."
 
 google_analytics:
-  enable: false
-  key: "UA-664136761-1"  # UA-664136761-1
-
-social_accounts:
-  title: "Follow Us"
-  links:
-    - url: "#"
-      icon: "jam jam-twitter"
-
-    - url: "#"
-      icon: "jam jam-facebook"
-
-    - url: "#"
-      icon: "jam jam-instagram"
-
-    - url: "#"
-      icon: "jam jam-vimeo"
-      
-    - url: "#"
-      icon: "jam jam-youtube"
-
-
-external_links:
-  title: "Learn More"
-  links:
-    - url: "#"
-      text: "About Us"
-    - url: "#"
-      text: "Our Story"
-    - url: "#"
-      text: "Projects"
-    - url: "#"
-      text: "Pricing"
-    - url: "#"
-      text: "Features"
-
+  enable: true
+  key: "G-XW7G2V52ZN"
 
 external_links_02:
   title: "Need Help?"
@@ -67,7 +36,6 @@ external_links_02:
       text: "Terms of Use"
     - url: "#"
       text: "Privacy Policy"
-
 
 external_links_03:
   title: "Company"
@@ -87,7 +55,6 @@ footer_newsletter:
   title: "Our Newsletter"
   sub_title: "Subscribe to our newsletter to get our news & deals delivered to your inbox!"
   subscribe_button_text: "Join"
-
 
 one_page_nav_settings:
   links:
@@ -109,11 +76,11 @@ author_page_header:
 
 gallery:
   images:
-  - img: "/assets/images/art/z1.svg"
-  - img: "/assets/images/art/z2.svg"
-  - img: "/assets/images/art/z3.svg"
-  - img: "/assets/images/art/z4.svg"
-  - img: "/assets/images/art/z5.svg"
-  - img: "/assets/images/art/z6.svg"
-  - img: "/assets/images/art/z7.svg"
-  - img: "/assets/images/art/z8.svg"
+    - img: "/assets/images/art/z1.svg"
+    - img: "/assets/images/art/z2.svg"
+    - img: "/assets/images/art/z3.svg"
+    - img: "/assets/images/art/z4.svg"
+    - img: "/assets/images/art/z5.svg"
+    - img: "/assets/images/art/z6.svg"
+    - img: "/assets/images/art/z7.svg"
+    - img: "/assets/images/art/z8.svg"

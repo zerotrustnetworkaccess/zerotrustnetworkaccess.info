@@ -1,0 +1,56 @@
+@import "ztna-colors.scss";
+@import "ztna-typography.scss";
+
+footer {
+  .footer-icon {
+    fill: $white;
+  }
+
+  a {
+    @extend .h4;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+
+      span {
+        color: $light-blue-1 !important;
+      }
+
+      .footer-icon {
+        fill: $light-blue-1 !important;
+      }
+    }
+  }
+}
+
+p {
+  @extend .ztna-small-text;
+}
+
+.footer-col {
+  max-width: 364px;
+}
+
+@media only screen and (max-width: $breakpoint-sm) {
+  .footer-col {
+    max-width: 335px;
+  }
+}
+
+@media only screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+  .mr-md-50 {
+    margin-right: 50px;
+  }
+}
+
+@media only screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-lg) {
+  .footer-col {
+    max-width: 316px;
+  }
+
+  .md-flex {
+    display: flex;
+    justify-content: flex-start;
+  }
+}

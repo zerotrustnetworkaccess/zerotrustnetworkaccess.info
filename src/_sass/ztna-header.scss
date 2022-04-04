@@ -1,0 +1,193 @@
+nav {
+  height: 80px;
+  .nav-link {
+    &:hover {
+      .text-link {
+        color: $light-blue-1 !important;
+      }
+
+      .mobile-menu-items-fill {
+        fill: $light-blue-1 !important;
+      }
+    }
+
+    .text-link {
+      &:hover {
+        color: $light-blue-1 !important;
+      }
+    }
+    .navbar-hamburger {
+      &:hover {
+        button.hamburger:before,
+        button.hamburger span,
+        button.hamburger:after {
+          background: $light-blue-1 !important;
+        }
+      }
+    }
+  }
+}
+
+.open {
+  .h4 {
+    color: $white !important;
+  }
+  a {
+    .text-link {
+      color: $white !important;
+    }
+  }
+}
+.ztna-nav {
+  max-width: 1280px;
+  width: 100%;
+}
+
+.ztna-shadow {
+  -webkit-box-shadow: 0px 0px 15px rgba(10, 63, 113, 0.15);
+  box-shadow: 0px 0px 15px rgba(10, 63, 113, 0.15);
+}
+.ztna-nav-item {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  box-sizing: content-box;
+  width: fit-content;
+}
+
+.banner--clone {
+  @extend .ztna-shadow;
+
+  opacity: 0;
+  .ztna-logo {
+    background: -webkit-image-set(
+      url("/assets/images/logo.png") 1x,
+      url("/assets/images/logo@2x.png") 2x
+    );
+    background-repeat: no-repeat;
+    background-size: contain;
+    align-self: center;
+  }
+  .ztna-nav-item {
+    .text-link,
+    .h4 {
+      color: $dark-text;
+    }
+
+    &:hover {
+      color: $light-blue-1 !important;
+    }
+  }
+}
+
+.banner--unstick {
+  opacity: 0;
+  z-index: 1;
+}
+
+.banner--stick {
+  opacity: 1 !important;
+  z-index: 1009;
+}
+
+.ztna-logo-base {
+  margin-left: 55px !important;
+  margin-top: 30px !important;
+  margin-bottom: 30px !important;
+  align-self: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 256px;
+  height: 20px;
+}
+
+.ztna-logo {
+  @extend .ztna-logo-base;
+  background: -webkit-image-set(
+    url("/assets/images/logo-light.png") 1x,
+    url("/assets/images/logo-light@2x.png") 2x
+  );
+}
+
+.ztna-dark-logo {
+  @extend .ztna-logo-base;
+  background: -webkit-image-set(
+    url("/assets/images/logo.png") 1x,
+    url("/assets/images/logo@2x.png") 2x
+  );
+}
+
+.menu {
+  margin-right: 55px;
+  width: fit-content;
+}
+
+.fly-out-bg {
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100%;
+}
+
+.fly-out-logo {
+  width: 57%;
+}
+
+.icon-hover:hover {
+  color: $light-blue-1;
+}
+
+@media only screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-lg) {
+  .ztna-logo,
+  .ztna-dark-logo {
+    margin-left: 40px !important;
+    margin-top: 20px !important;
+  }
+
+  .menu {
+    margin-right: 55px;
+  }
+
+  .mobile-menu-items-color {
+    color: $dark-text !important;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-sm) {
+  .ztna-logo,
+  .ztna-dark-logo {
+    margin-left: 35px !important;
+    margin-top: 20px !important;
+    width: 180px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+  .menu {
+    margin-right: 20px;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-md) {
+  .menu {
+    margin-right: 0;
+  }
+
+  .mobile-bg {
+    background-color: $white;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100%;
+    background-image: url("/assets/images/header/fly-out-back@2x.png");
+  }
+
+  .mobile-menu-items-color {
+    color: $dark-text !important;
+  }
+
+  .mobile-menu-items-fill {
+    fill: $white !important;
+  }
+
+  .offcanvas-nav {
+    background-color: $flyout-back;
+  }
+}

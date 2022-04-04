@@ -1,0 +1,8 @@
+.isotope-filter {
+  .active {
+    font-weight: 500;
+
+    @extend .light-blue-background-2;
+    @extend .white;
+  }
+}

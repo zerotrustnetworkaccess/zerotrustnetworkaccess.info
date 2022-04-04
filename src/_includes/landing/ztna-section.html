@@ -1,0 +1,55 @@
+{% if site.data.landing.ztna.enable %} {% assign ztna = site.data.landing.ztna
+%}
+<div
+  class="container-fluid background-white ztna-landing-section-wrapper d-flex justify-content-center px-md-40-20"
+>
+  <div class="ztna-content-wrapper">
+    <div class="row align-items-center d-flex mb-0">
+      {% if ztna.image %}
+      <div
+        class="col-md-12 col-lg-6 d-flex justify-content-center order-last order-lg-first pr-lg-40 mb-0"
+      >
+        <figure>
+          <img
+            srcset="{{ztna.image}} 1x, {{ztna.image_2x}} 2x"
+            alt="{{ztna.title}}"
+            class="ztna-margin-top-50-40"
+          />
+        </figure>
+      </div>
+      {% endif %}
+
+      <div
+        class="col-md-12 col-lg-6 order-first d-flex justify-content-center pl-lg-40"
+      >
+        <div>
+          {% if ztna.label %}
+
+          <p class="h5 light-text-2">{{ztna.label}}</p>
+          {% endif %}
+          <div class="space10"></div>
+          {% if ztna.title %}
+          <h2 class="dark-text ztna-margin-bottom-30-20">{{ztna.title}}</h2>
+          {% endif %} {% if ztna.description %}
+          <p class="ztna-small-text light-text-1">{{ztna.description}}</p>
+          <div class="space20"></div>
+          <div class="ztna-margin-bottom-30-20">
+            {{ztna.citation}}
+          </div>
+
+          {% endif %}
+          <ul class="icon-list bullet-default mb-0">
+            {% for list in ztna.lists.text %}
+            <li class="ztna-small-text light-text-1">
+              <img src="{{site.data.landing.ztna.lists.icon}}" />
+              {{list}}
+              <div class="space10"></div>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}

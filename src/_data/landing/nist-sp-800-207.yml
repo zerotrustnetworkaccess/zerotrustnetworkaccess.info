@@ -1,0 +1,59 @@
+enable: true
+title: "NIST Special Publication 800-207"
+label: "The Seven Tenets of Zero Trust"
+paragraphs:
+  - text: The United States National Institute of Standards and Technology (NIST) defines Zero Trust and a Zero Trust Architecture in terms of seven basic tenets. Though these tenets are the ideal goal, not all tenets need be fully implemented in their purest form for a given strategy. The British National Cyber Security Centre (NCSC) has also published a set of Zero Trust architecture design principles in which they define eight principles to help organizations implement a zero trust network architecture.
+
+more:
+  - text: Zero Trust Architecture, NIST (2020)
+    link: https://csrc.nist.gov/publications/detail/sp/800-207/final
+  - text: Zero Trust Architecture Design Principles, NCSC (2021)
+    link: https://csrc.nist.gov/publications/detail/sp/800-207/final
+
+tenets:
+  - title: "Everything is a resource"
+    description: "All data sources and computing services are considered resources"
+    position: "1"
+    color: "light-blue-1"
+    image: "/assets/images/landing/nist/nist-tenets-lg/1.png"
+
+  - title: "Secure all communications"
+    description: "All communication is secured regardless of network location"
+    position: "2"
+    color: "light-blue-2"
+    image: "/assets/images/landing/nist/nist-tenets-lg/2.png"
+
+  - title: "Session-based access"
+    description: "Access to individual resources is granted on a per-session basis"
+    position: "3"
+    color: "dark-blue-1"
+    image: "/assets/images/landing/nist/nist-tenets-lg/3.png"
+
+  - title: "Policies must be dynamic"
+    description: "Access to resources is determined by dynamic policy"
+    position: "4"
+    color: "dark-blue-2"
+    image: "/assets/images/landing/nist/nist-tenets-lg/4.png"
+
+  - title: "Monitor security posture"
+    description: "Monitor and measure the integrity and security posture all assets"
+    position: "5"
+    color: "violet-1"
+    image: "/assets/images/landing/nist/nist-tenets-lg/5.png"
+
+  - title: "Authenticate before connect"
+    description: "Authentication and authorization are dynamic and enforced before access"
+    position: "6"
+    color: "violet-2"
+    image: "/assets/images/landing/nist/nist-tenets-lg/6.png"
+
+  - title: "Collect, measure and improve"
+    description: "Collect as much information as possible. Use it to improve security posture"
+    position: "7"
+    color: "pink"
+    image: "/assets/images/landing/nist/nist-tenets-lg/7.png"
+
+desktop_illustration: "/assets/images/landing/7tenets-arrows-desktop.png"
+desktop_illustration_2x: "/assets/images/landing/7tenets-arrows-desktop@2x.png"
+mobile_illustration: "/assets/images/landing/7tenets-arrows-responsive.png"
+mobile_illustration_2x: "/assets/images/landing/7tenets-arrows-responsive@2x.png"

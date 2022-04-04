@@ -1,0 +1,65 @@
+{% if site.data.landing.architecture-summary.enable %} {% assign
+architecture-summary = site.data.landing.architecture-summary %}
+<div
+  class="container-fluid background-color ztna-landing-section-wrapper px-md-40-20"
+>
+  <div class="ztna-content-wrappe mx-auto">
+    <div class="row d-flex justify-content-center">
+      <div
+        class="col-lg-7 col-md-10 col-sm-12 ztna-margin-bottom-50-40 text-center"
+      >
+        <p class="h5 light-text-2 text-center">
+          {{architecture-summary.label}}
+        </p>
+        <div class="space10"></div>
+        <h2 class="dark-text text-center">{{architecture-summary.title}}</h2>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="basic-slider owl-carousel ztna-carousels-wrapper grid"
+    data-margin="5"
+  >
+    {% for architecture in site.data.architecture %} {% assign arch =
+    architecture[1] %}
+    <div class="item item-detailed">
+      <div class="item-content px-0 mx-auto">
+        <div class="row">
+          <div class="col-lg-4 col-md-12 text-center text-lg-left mb-0">
+            {% if arch.name %}
+            <h3 id="arch.name" class="dark-text">{{arch.name}}</h3>
+            {% endif %}
+            <div class="space10"></div>
+            <div class="ztna-margin-bottom-30-20">
+              {% if arch.description %}
+              <p class="light-text-1 ztna-small-text">{{arch.description}}</p>
+              {% endif %}
+            </div>
+            <div class="ml-5 ztna-margin-bottom-30-20">
+              <a href="#filter=.{{arch.filters}}">
+                {%include components/link.html
+                content=architecture-summary.button %}
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-8 col-md-12 mb-0">
+            <figure class="ztna-slider-image mb-10">
+              {% if arch.image %}
+              <div class="item-detailed-image">
+                <img
+                  srcset="{{arch.image}} 1x, {{arch.image_2x}} 2x"
+                  alt="{{arch.name}}"
+                />
+              </div>
+              {% endif %}
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}

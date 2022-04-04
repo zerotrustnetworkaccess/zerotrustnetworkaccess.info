@@ -1,6 +1,8 @@
 main_menu:
   - text: "Blog"
-    url: "/blogs/index-4"
+    url: "/blog"
+    icon: blog-header-icon.svg
 
   - text: "Github"
-    url: "/"
+    url: "#"
+    icon: github.svg

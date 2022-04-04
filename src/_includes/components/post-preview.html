@@ -1,0 +1,36 @@
+<div class="ztna-post-wrapper {{include.cls}}">
+  <div>
+    <a href="{{post.url}}">
+      <img
+        class="ztna-post-image {{include.post-styling}}"
+        src="{{post.post_image}}"
+        alt="{{post.title}}"
+      />
+    </a>
+  </div>
+  <div class="space20"></div>
+  <div
+    class="ztna-tag-small ztna-small-text light-text-1 {% if post.categories !=empty %} background-color {% else %} white-background space30 {% endif %}"
+  >
+    {{post.categories[0]}}
+  </div>
+  <div class="space10"></div>
+  <a href="{{post.url}}">
+    <h3 class="dark-text ztna-post-title">{{post.title}}</h3>
+    <div class="space20"></div>
+  </a>
+  <div class="ztna-post-ui">
+    <a
+      class="ztna-small-button-right white-background light-blue-1 h4"
+      href="{{post.url}}"
+    >
+      Read
+      <img
+        src="/assets/icons/right-arrow.svg"
+        alt="svg icon"
+        class="ztna-margin-left-10"
+      />
+    </a>
+    {% include components/post-date.html%}
+  </div>
+</div>

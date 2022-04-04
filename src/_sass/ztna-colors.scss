@@ -1,0 +1,170 @@
+$light-blue-1: #44a0f8;
+$light-blue-2: #4476f8;
+$dark-blue-1: #254be9;
+$dark-blue-2: #4c25e9;
+$violet-1: #7416ed;
+$violet-2: #a118e1;
+$pink: #bc1dcb;
+$green: #30c9ad;
+$red: #ea5b8e;
+$white: #fff;
+$dark-text: #0e2942;
+$dark-buttons: #16334f;
+$light-text-1: #3e5871;
+$light-text-2: #99acbe;
+$light-text-3: #cad8e6;
+$background-color: #f5f7fb;
+$table-backgroud: #fdfdff;
+$divider: #efefef;
+$timeline-active: #bdcfe2;
+$input-active-dark: #1f3f5d;
+$head-background: #142a53;
+$flyout-back: #1e2228;
+
+$gradient-proportion: $light-blue-1 0%, $dark-blue-1 31.59%, $violet-1 67.71%,
+  $pink 100%;
+
+$direction: left;
+
+@mixin gradient($direction, $gradient-proportion) {
+  background: -webkit-linear-gradient($direction, $gradient-proportion);
+  background: -moz-linear-gradient($direction, $gradient-proportion);
+  background: -o-linear-gradient($direction, $gradient-proportion);
+  background: linear-gradient($direction, $gradient-proportion);
+}
+
+.light-blue-1 {
+  color: $light-blue-1;
+}
+
+.light-blue-1-fill {
+  fill: $light-blue-1;
+}
+
+.light-blue-1-background {
+  background-color: $light-blue-1;
+}
+
+.light-blue-2 {
+  color: $light-blue-2;
+}
+
+.dark-blue-1 {
+  color: $dark-blue-1;
+}
+
+.dark-blue-2 {
+  color: $dark-blue-2;
+}
+
+.violet-1 {
+  color: $violet-1;
+}
+
+.violet-2 {
+  color: $violet-2;
+}
+
+.pink {
+  color: $pink;
+}
+
+.green {
+  color: $green;
+}
+
+.green-background {
+  background-color: $green;
+}
+
+.red {
+  color: $red;
+}
+
+.white {
+  color: $white;
+}
+
+.white-background {
+  background-color: $white;
+}
+
+.white-fill {
+  fill: $white;
+}
+
+.dark-text {
+  color: $dark-text;
+}
+
+.dark-text-background {
+  background-color: $dark-text;
+}
+
+.dark-text-fill {
+  fill: $dark-text;
+}
+
+.dark-buttons {
+  color: $dark-buttons;
+}
+
+.light-text-1 {
+  color: $light-text-1;
+}
+
+.light-text-1-fill {
+  fill: $light-text-1;
+}
+
+.light-text-2 {
+  color: $light-text-2;
+}
+
+.light-text-3 {
+  color: $light-text-3;
+}
+
+.background-color {
+  background-color: $background-color;
+}
+
+.light-blue-background-1 {
+  background-color: $light-blue-1;
+}
+
+.light-blue-background-2 {
+  background-color: $light-blue-2;
+}
+
+.dark-buttons-background {
+  background-color: $dark-buttons;
+}
+
+.white-background {
+  background-color: $white;
+}
+
+.light-text-2-background {
+  background-color: $light-text-2;
+}
+
+.gradient-background {
+  @include gradient($direction, $gradient-proportion);
+}
+
+.timeline-active {
+  color: $timeline-active;
+}
+
+.input-active-dark {
+  background-color: $input-active-dark;
+}
+
+.light-blue-1-fill {
+  fill: $light-blue-1;
+}
+
+.flyout-background {
+  background-color: $flyout-back;
+}

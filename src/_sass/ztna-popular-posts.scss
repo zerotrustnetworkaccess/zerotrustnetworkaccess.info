@@ -1,0 +1,35 @@
+@import "ztna-colors.scss";
+
+.popular-post-wrapper {
+  padding: 20px;
+  background-color: $background-color;
+  border-radius: 30px;
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+.popular-post-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.post-meta {
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-divider {
+  padding: 0;
+  margin: 0;
+  color: $divider;
+}
+li:last-child {
+  .post-divider {
+    display: none;
+  }
+  .space20 {
+    display: none;
+  }
+}

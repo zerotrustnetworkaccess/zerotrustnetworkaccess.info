@@ -1,0 +1,34 @@
+<div class="d-flex justify-content-between flex-wrap mr-md-40-20 ml-md-40-20">
+  <div class="d-flex">
+    {% for category in page.categories%}
+    <a
+      class="ztna-tag-small background-color ztna-margin-bottom-10 ztna-small-text light-text-1 ztna-margin-right-10"
+      href="/category/{{category}}"
+    >
+      {{category}}
+    </a>
+    {% endfor%}
+  </div>
+  <div class="d-flex">
+    <div
+      class="ztna-tag-small background-color ztna-margin-bottom-10 ztna-small-text light-text-1 mr-10 ml-sm-0"
+    >
+      {% include icons/time.svg %}
+      <span class="ml-10">{% include components/time-2-read.html%}to read</span>
+    </div>
+
+    <div
+      class="ztna-tag-small background-color ztna-margin-bottom-10 ztna-small-text light-text-1 mr-10"
+    >
+      {% include icons/user.svg %} <span class="ml-10">{{page.author}}</span>
+    </div>
+
+    <div
+      class="ztna-tag-small background-color ztna-margin-bottom-10 ztna-small-text light-text-1 mr-10"
+    >
+      {% include icons/calendar.svg cls="light-text-1-fill"%}
+      <span class="ml-10">{{ page.date | date_to_string}}</span>
+    </div>
+  </div>
+</div>
+<div class="space15"></div>

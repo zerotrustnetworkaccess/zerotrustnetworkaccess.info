@@ -1,0 +1,12 @@
+enable: true
+title: "The no-bullshit ZTNA vendor directory"
+sub_title: "A curated, impartial and <strong>open-source</strong> directory of ZTNA vendors and architectures."
+button_text: "Show me the full list of ZTNA vendors"
+button_url: "#vendors"
+background_image: "assets/images/landing/cover.png"
+
+statistics:
+  - title: "NIST tenets"
+    quantity: 7
+  - title: "Executive Orders"
+    quantity: 1
