@@ -5,7 +5,9 @@ const slides = document.querySelectorAll(".timeline-item");
 let translateAmount = 100;
 let translate = 0;
 
-document.getElementById("prev").disabled = true;
+if (document.getElementById("prev")) {
+  document.getElementById("prev").disabled = true;
+}
 
 function plusTimelineItem(index, direction) {
   showTimelineItems((timelineItemIndex += index));
@@ -67,12 +69,3 @@ function showTimelineItems(n) {
 }
 
 showTimelineItems(timelineItemIndex);
-
-// slide = (direction) => {
-//   direction === "next"
-//     ? (translate -= translateAmount)
-//     : (translate += translateAmount);
-//   slides.forEach(
-//     (slide) => (slide.style.transform = `translateX(${translate}%)`)
-//   );
-// };
