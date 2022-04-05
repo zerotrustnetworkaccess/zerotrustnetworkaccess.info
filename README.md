@@ -2,10 +2,10 @@
 
 How to start
 
-1. Install Gems
+Use run.sh script at root folder or start project without docker:
+
+1. Install Gems:
    bundle install
 
-2. Run project
+2. Run project:
    bundle exec jekyll serve
-
-Or use run.sh script at root folder.

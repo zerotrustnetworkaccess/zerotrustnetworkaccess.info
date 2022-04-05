@@ -14,6 +14,10 @@ permalink: "/blog/"
   components/recommended-post.html %} {% endif%} {% endfor %}
 </div>
 
+{% for post in paginator.posts %}
+<p>{{post.title}}</p>
+{% endfor %}
+
 <div class="row mr-md-25-5 ml-md-25-5 mb-100-70">
   {% for post in paginator.posts %}
   <div class="col-md-6 col-sm-6">
