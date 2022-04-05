@@ -9,6 +9,9 @@
 .ztna-hero-background {
   background: $head-background -webkit-image-set(url("/assets/images/landing/cover.png")
         1x, url("/assets/images/landing/cover@2x.png") 2x);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .ztna-counter-wrapper {
@@ -39,20 +42,6 @@
 .mobile-nist-illustration {
   display: none;
 }
-
-// .ztna-nist-section-wrapper {
-//   padding-top: 100px;
-//   padding-bottom: 100px;
-// }
-
-// .ztna-nist-container-fluid {
-//   width: 100%;
-//   padding-right: 15px;
-//   padding-left: 15px;
-//   margin-right: auto;
-//   margin-left: auto;
-//   margin-bottom: 40px;
-// }
 
 .ztna-post-container {
   display: flex;
@@ -203,9 +192,6 @@
     margin-bottom: 30px;
   }
 
-  // .ztna-nist-section-wrapper {
-  //   padding-bottom: 40px;
-  // }
 
   .nist-mobile-scroll-item {
     width: 160px;
