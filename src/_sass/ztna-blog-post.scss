@@ -24,13 +24,13 @@ $fig-spacer: 10px;
     margin-bottom: $small-spacer;
   }
 
-  // p {
-  //   @extend .mr-md-40-20;
-  //   @extend .ml-md-40-20;
-  //   // @extend .ztna-small-text;
-  //   @extend .light-text-1;
-  //   margin-bottom: $medium-spacer;
-  // }
+  p {
+    @extend .mr-md-40-20;
+    @extend .ml-md-40-20;
+    @extend .ztna-small-text;
+    @extend .light-text-1;
+    margin-bottom: $medium-spacer;
+  }
 
   a {
     @extend .light-blue-1;
