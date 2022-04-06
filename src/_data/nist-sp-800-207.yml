@@ -9,37 +9,37 @@ paragraphs:
   - text: |
       — <a href="https://csrc.nist.gov/publications/detail/sp/800-207/final"> Zero Trust Architecture, NIST (2020)</a>
 tenents:
-  - title: "Everything is a Resource"
+  - title: "1. Everything is a Resource"
     description: "All data sources and computing services are considered resources."
     icon: "icofont-chart-arrows-axis"
     color: "blue"
 
-  - title: "Secure all communications"
+  - title: "2. Secure all communications"
     description: "All communication is secured regardless of network location."
     icon: "icofont-pen-holder"
     color: "green"
 
-  - title: "Session-based access"
+  - title: "3. Session-based access"
     description: "Access to individual enterprise resources is granted on a per-session basis."
     icon: "icofont-chart-arrows-axis"
     color: "pink"
 
-  - title: "Policies must be dynamic"
+  - title: "4. Policies must be dynamic"
     description: "Access to resources is determined by dynamic policy and real-time security posture."
     icon: "icofont-ui-clip-board"
     color: "purple"
 
-  - title: "Monitor security posture"
+  - title: "5. Monitor security posture"
     description: "No asset is inherently trusted."
     icon: "icofont-chart-arrows-axis"
     color: "yellow"
 
-  - title: "Authenticate before connect"
+  - title: "6. Authenticate before connect"
     description: "Resource authentication and authorization is dynamic and strictly enforced before access is granted."
     icon: "icofont-box"
     color: "orange"
 
-  - title: "Measure and Improve"
+  - title: "7. Measure and Improve"
     description: "Collect as much data as possible, monitor and measure the integrity and security posture of all assets and use it to improve security posture."
     icon: "icofont-box"
     color: "orange"

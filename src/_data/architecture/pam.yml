@@ -1,0 +1,50 @@
+name: "Privileged Access Management"
+abbreviation: "PAM"
+display: true
+sort_order: "1"
+description: "Vendor product owns access to end systems. End-users are transparently granted temporary access credentials and access is logged by the vendor platform"
+image: "https://via.placeholder.com/2280x1200"
+paragraphs: 
+  - text: ""
+strengths:
+  - title: ""
+    description: ""
+weaknesses:
+  - title: ""
+    description: ""
+tradeoffs:
+  - title: ""
+    description: ""
+vendors: 
+
+  - company: "Cyber Ark"
+    product: "Privileged Access"
+    url: "https://www.cyberark.com/products/privileged-access/"
+    license: "Commercial"
+    deployment: ""
+    pricing: "Not Published"
+    notes: ""
+
+  - company: "StrongDM"
+    product: "StrongDM"
+    url: "https://www.strongdm.com/"
+    license: "Commercial"
+    deployment: "SaaS"
+    pricing: "Published"
+    notes: ""
+
+  - company: "Gravitational, Inc"
+    product: "Teleport"
+    url: "https://gravitational.com/teleport/"
+    license: "Commercial"
+    deployment: "SaaS"
+    pricing: "Published"
+    notes: ""
+
+  - company: "Smallstep"
+    product: "Smallstep"
+    url: "https://smallstep.com/"
+    license: "Open Source"
+    deployment: "SaaS or Self-hosted"
+    pricing: "Published"
+    notes: ""

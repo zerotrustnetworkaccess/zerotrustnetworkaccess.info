@@ -1,0 +1,25 @@
+name: "Identity Provider"
+abbreviation: "IdP"
+display: true
+sort_order: "1"
+description: "Assume the asset is reachable via the network and protect login with IdP integration"
+image: "https://developer.okta.com/assets-jekyll/blog/asa-gcp-jenkins/architecture-ssh-1a3cb18bfed3e54a65463a48d1824e5906a378c2b232f2b675998523edbb0a56.png"
+paragraphs: 
+  - text: ""
+strengths:
+  - title: ""
+    description: ""
+weaknesses:
+  - title: ""
+    description: ""
+tradeoffs:
+  - title: ""
+    description: ""
+vendors: 
+  - company: "Okta"
+    product: "Advanced Server Access"
+    url: "https://www.okta.com/products/advanced-server-access/"
+    license: ""
+    deployment: "ZTNA as a Service"
+    pricing: ""
+    notes: "Formerly ScaleFT Server Access"

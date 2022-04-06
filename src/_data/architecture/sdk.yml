@@ -1,44 +1,34 @@
-name: "Software Development Kits (SDKs)"
+name: "Software Development Kit"
 abbreviation: "SDK"
-sort_order: "5"
+display: true
+sort_order: "1"
 description: ""
 image: "https://via.placeholder.com/2280x1200"
-paragraphs: 
-  - text: "Nullam quis risus eget urna mollis ornare."
+paragraphs:
+  - text: ""
 strengths:
-  - title: "Nullam quis risus eget urna mollis ornare."
-    description: ""
-  - title: "Donec id elit non mi porta gravida at eget."
-    description: ""
-  - title: "Fusce dapibus, tellus ac cursus commodo."
+  - title: ""
     description: ""
 weaknesses:
-  - title: "Nullam quis risus eget urna mollis ornare."
-    description: ""
-  - title: "Donec id elit non mi porta gravida at eget."
-    description: ""
-  - title: "Fusce dapibus, tellus ac cursus commodo."
+  - title: ""
     description: ""
 tradeoffs:
-  - title: "Nullam quis risus eget urna mollis ornare."
-    description: ""
-  - title: "Donec id elit non mi porta gravida at eget."
-    description: ""
-  - title: "Fusce dapibus, tellus ac cursus commodo."
+  - title: ""
     description: ""
 vendors: 
-
   - company: "NetFoundry"
     product: "Ziti"
     url: "https://ziti.dev/"
     license: ""
     deployment: ""
     pricing: "" 
+    notes: ""
 
   - company: "ZeroTier"
     product: "libzt"
     url: "https://github.com/zerotier/libzt"
     license: "Open Source"
     deployment: "SaaS"
-    pricing: "Available"
+    pricing: "Published"
+    notes: ""
   

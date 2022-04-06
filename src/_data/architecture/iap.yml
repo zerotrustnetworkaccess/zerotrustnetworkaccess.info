@@ -1,0 +1,106 @@
+name: "Identity Aware Proxy"
+abbreviation: "IAP"
+display: false
+sort_order: "1"
+description: ""
+image: "https://via.placeholder.com/2280x1200"
+paragraphs: 
+  - text: "Connector appliance establishes connection out to vendor. Clients to connect to public address, vendor adds SSO to inbound traffic. Usually no endpoint agent is required. Proxies are often publicly visible. Applications are accessed through standard HTTPS protocols at the application layer."
+strengths:
+  - title: "Protocol aware. Access to application traffic."
+    description: ""
+  - title: "Vendor applies security on their platform."
+    description: ""
+weaknesses:
+  - title: "Business network depends on vendor uptime."
+    description: ""
+tradeoffs:
+  - title: "All network traffic is routed via the vendor."
+    description: ""
+  - title: "Vendor terminates your TLS sessions."
+    description: ""
+  - title: "Vendor has access to your data."
+    description: ""
+vendors:
+
+  - company: "Xaptum"
+    product: "Edge Network Fabric"
+    url: "https://www.xaptum.com/product"
+    license: "Commercial"
+    deployment: "SaaS"
+    pricing: "n/a"
+    notes: "Is this really a reverse proxy? They talk about Overlay..."
+
+
+
+
+
+
+
+
+
+
+
+  - company: "ZScaler"
+    product: "Private Access"
+    url: "https://www.zscaler.com/products/zscaler-private-access"
+    license: ""
+    deployment: ""
+    pricing: ""
+    notes: ""
+
+  - company: "Pomerium"
+    product: "Pomerium"
+    url: "https://www.pomerium.com/"
+    license: ""
+    deployment: ""
+    pricing: ""
+    notes: ""
+
+  - company: "CloudFlare"
+    product: "Access"
+    url: "https://www.cloudflare.com/en-gb/teams/access/"
+    license: ""
+    deployment: ""
+    pricing: ""
+    notes: ""
+
+  - company: "CloudFlare"
+    product: "Gateway"
+    url: "https://www.cloudflare.com/en-gb/teams/gateway/"
+    license: ""
+    deployment: ""
+    pricing: ""
+    notes: ""
+
+  - company: "Axis Security"
+    product: ""
+    url: "https://www.axissecurity.com/"
+    license: ""
+    deployment: ""
+    pricing: ""
+    notes: ""
+
+  - company: "BlackBerry"
+    product: "BlackBerry Gateway"
+    url: "https://www.blackberry.com/us/en/products/unified-endpoint-security/blackberry-gateway"
+    license: ""
+    deployment: ""
+    pricing: ""
+    notes: ""
+
+  - company: "Cato Networks"
+    product: ""
+    url: "https://www.catonetworks.com/"
+    license: "Commercial"
+    deployment: ""
+    pricing: "Not Published"
+    notes: "App Proxy"
+
+  - company: "Todyl"
+    product: "Todyl"
+    url: "https://www.todyl.com/"
+    license: ""
+    deployment: ""
+    pricing: "" 
+    notes: ""

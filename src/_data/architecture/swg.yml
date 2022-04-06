@@ -1,29 +1,18 @@
 name: "Secure Web Gateway"
 abbreviation: "SWG"
-sort_order: "3"
-description: "..."
+display: false
+sort_order: "1"
+description: ""
 image: "https://via.placeholder.com/2280x1200"
 paragraphs: 
-  - text: "Nullam quis risus eget urna mollis ornare."
+  - text: ""
 strengths:
-  - title: "Nullam quis risus eget urna mollis ornare."
-    description: ""
-  - title: "Donec id elit non mi porta gravida at eget."
-    description: ""
-  - title: "Fusce dapibus, tellus ac cursus commodo."
+  - title: ""
     description: ""
 weaknesses:
-  - title: "Nullam quis risus eget urna mollis ornare."
-    description: ""
-  - title: "Donec id elit non mi porta gravida at eget."
-    description: ""
-  - title: "Fusce dapibus, tellus ac cursus commodo."
+  - title: ""
     description: ""
 tradeoffs:
-  - title: "Nullam quis risus eget urna mollis ornare."
-    description: ""
-  - title: "Donec id elit non mi porta gravida at eget."
-    description: ""
-  - title: "Fusce dapibus, tellus ac cursus commodo."
+  - title: ""
     description: ""
 vendors: 
