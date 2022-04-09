@@ -24,9 +24,8 @@ COPY ./ .
 RUN bundle install && \
     rm -rf $WEB_DIR
 
-#RUN gem install tzinfo -v "~> 1.2"
-#RUN gem install wdm -v "~> 0.1.1"
-
 ENTRYPOINT ["/usr/local/bin/bundle"]
 
 CMD [ "exec", "jekyll serve --host 0.0.0.0 --port 8080" ]
+
+# if problems with gems, remove Gemfile.lock and resync using bundle update
