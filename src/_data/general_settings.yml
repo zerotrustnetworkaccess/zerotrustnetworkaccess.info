@@ -10,66 +10,23 @@ enclave_logo_1x: "/assets/images/enclave_logo.png"
 enclave_logo_2x: "/assets/images/enclave_logo@2x.png"
 enclave_logo_light_1x: "/assets/images/enclave_logo_light.png"
 enclave_logo_light_2x: "/assets/images/enclave_logo_lighto@2x.png"
+
 black_logo_1x: "/assets/images/logo.png"
 black_logo_2x: "/assets/images/logo@2x.png"
+
 light_logo_1x: "/assets/images/logo-light.png"
 light_logo_2x: "/assets/images/logo-light@2x.png"
 
-address_01: ""
-phone_number: ""
-copyright_text: "© 2021 Enclave Networks. All rights reserved."
+copyright_text: "© 2022 Enclave Networks. All rights reserved."
 
 google_analytics:
   enable: true
   key: "G-XW7G2V52ZN"
 
-external_links_02:
-  title: "Need Help?"
-  links:
-    - url: "#"
-      text: "Support"
-    - url: "#"
-      text: "Get Started"
-    - url: "#"
-      text: "Contact Us"
-    - url: "#"
-      text: "Terms of Use"
-    - url: "#"
-      text: "Privacy Policy"
-
-external_links_03:
-  title: "Company"
-  links:
-    - url: "#"
-      text: "Our Team"
-    - url: "#"
-      text: "Strategy"
-    - url: "#"
-      text: "Service"
-    - url: "#"
-      text: "Mission"
-    - url: "#"
-      text: "Process"
-
 footer_newsletter:
   title: "Our Newsletter"
   sub_title: "Subscribe to our newsletter to get our news & deals delivered to your inbox!"
   subscribe_button_text: "Join"
-
-one_page_nav_settings:
-  links:
-    - text: "Home"
-      url: "#home"
-    - text: "Services"
-      url: "#services"
-    - text: "Experiences"
-      url: "#experiences"
-    - text: "Portfolio"
-      url: "#portfolio"
-    - text: "Testimonials"
-      url: "#testimonials"
-    - text: "Contact"
-      url: "#contact"
 
 author_page_header:
   header_background_image: "/assets/images/art/bg31.jpg"
