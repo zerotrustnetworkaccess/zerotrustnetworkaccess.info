@@ -27,7 +27,6 @@
             </a>
           </li>
           {% for vendor in vendors.categories %}
-            {% if vendor.display == true %}
             <li>
               <a
                 class="ztna-tag-large background-color light-text-1 h4 mb-10 mr-10 button"
@@ -36,6 +35,7 @@
                 {{vendor.name}}
               </a>
             </li>
+            {% if vendor.display == true %}
             {% endif %}
           {% endfor %}
         </ul>
