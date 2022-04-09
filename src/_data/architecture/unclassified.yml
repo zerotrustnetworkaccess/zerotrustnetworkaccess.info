@@ -1,4 +1,4 @@
-name: "Unclassified backup"
+name: "Unclassified"
 abbreviation: ""
 display: false
 sort_order: "1"
@@ -23,15 +23,15 @@ vendors:
     license: "Commercial"
     deployment: "SaaS"
     pricing: "Not Published"
-    notes: "Unable to determine architecture (March 2022)"
+    notes: "Is it zero trust? Unable to determine architecture (March 2022)"
 
   - company: "Elisity"
-    product: "?????"
+    product: ""
     url: "http://www.elisity.com/"
     license: "Commercial"
     deployment: ""
     pricing: "Not Published"
-    notes: ""
+    notes: "Is it zero trust?"
 
   - company: "Fly.io"
     product: "??????"
@@ -39,55 +39,47 @@ vendors:
     license: "Commercial"
     deployment: "SaaS"
     pricing: "Published"
-    notes: ""
-
-  - company: "Centrify"
-    product: "??????"
-    url: "https://www.centrify.com/"
-    license: "Commercial"
-    deployment: "Privileged Access Management"
-    pricing: "Not Published"
-    notes: ""
+    notes: "Is it zero trust?"
 
   - company: "Cohesive"
-    product: "??????"
+    product: ""
     url: "https://cohesive.net/"
     license: "Commercial"
     deployment: "SDN"
     pricing: "Not Published"
-    notes: ""
+    notes: "Is it zero trust?"
 
   - company: "Dexter Edward"
-    product: "?????"
+    product: ""
     url: "https://dexteredward.com/"
     license: "Commercial"
     deployment: ""
     pricing: "Not Published"
-    notes: ""
+    notes: "Is it zero trust?"
 
   - company: "Fyde"
-    product: "???????????"
+    product: ""
     url: "https://www.fyde.com/"
     license: ""
-    deployment: "Acquired by Barracuda"
+    deployment: ""
     pricing: ""
-    notes: ""
+    notes: "Acquired by Barracuda (2020)"
 
   - company: "LogMeIn"
     product: "Hamachi"
     url: "https://www.vpn.net/"
     license: "Commercial"
-    deployment: "???????"
+    deployment: ""
     pricing: "Published"
-    notes: ""
+    notes: "Is it zero trust?"
 
   - company: "Megaport"
     product: "Megaport"
     url: "https://www.megaport.com/"
     license: "Commercial"
-    deployment: "???????"
+    deployment: ""
     pricing: "Published"
-    notes: ""
+    notes: "Is it zero trust?"
 
   - company: "Guardicore"
     product: "Segmentation"
@@ -101,9 +93,9 @@ vendors:
     product: ""
     url: "https://www.midonet.org/"
     license: ""
-    deployment: "Dead website.. (Feb & March 2022)"
+    deployment: ""
     pricing: ""
-    notes: ""
+    notes: "Dead website.. (Feb & March 2022)"
 
   - company: "Palo Alto Networks"
     product: "Prisma Access"
@@ -127,7 +119,7 @@ vendors:
     license: "Open Source or Enterprise"
     deployment: ""
     pricing: "Not Published"
-    notes: "Is it zero trust?"
+    notes: "Is it zero trust network access?"
 
   - company: "Edgewise"
     product: ""
@@ -143,7 +135,7 @@ vendors:
     license: "Open Source"
     deployment: "Self-hosted"
     pricing: "Published"
-    notes: "Is it zero trust?"
+    notes: "Is it zero trust network access?"
 
   - company: "Remote.it"
     product: ""
@@ -151,7 +143,7 @@ vendors:
     license: ""
     deployment: ""
     pricing: "" 
-    notes: "Is it zero trust?"
+    notes: "Is it zero trust network access?"
 
   - company: "Trasa"
     product: ""
@@ -161,70 +153,13 @@ vendors:
     pricing: ""
     notes: "How does this work? Github repo is archived. Is it abandoned?"
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  - company: "Unisys"
-    product: "Stealth"
-    url: "https://www.unisys.com/offerings/security-solutions/unisys-stealth-products-and-services"
-    license: ""
-    deployment: ""
-    pricing: ""
-    notes: ""
-
-  - company: "Verizon"
-    product: "Vidder Precision Access"
-    url: "https://enterprise.verizon.com/resources/vidder/"
-    license: ""
-    deployment: "ZTNA as a Service"
-    pricing: ""
-    notes: ""
-
-  - company: "VMWare"
-    product: "Workspace One Unified Access Gateway"
-    url: "https://docs.vmware.com/en/Unified-Access-Gateway/index.html"
-    license: ""
-    deployment: ""
-    pricing: ""
-    notes: ""
-
-  - company: "Wavery Labs"
-    product: ""
-    url: "https://www.waverleylabs.com/open-source-sdp/"
-    license: "Open Source"
-    deployment: "SDP"
-    pricing: ""
-    notes: ""
-
   - company: "Weave Works"
     product: ""
     url: "https://www.weave.works/"
     license: ""
     deployment: ""
     pricing: "" 
-    notes: ""
+    notes: "Is it zero trust network access?"
 
   - company: "Xage"
     product: ""
@@ -232,39 +167,7 @@ vendors:
     license: ""
     deployment: ""
     pricing: ""
-    notes: ""
-
-  - company: "Zentera"
-    product: ""
-    url: "http://zentera.net/"
-    license: ""
-    deployment: "Cloud-Over-IP (COiP) Access"
-    pricing: ""
-    notes: ""
-
-  - company: "ZeroC"
-    product: ""
-    url: "https://zeroc.com/"
-    license: ""
-    deployment: ""
-    pricing: ""
-    notes: ""
-
-  - company: "ZeroTrustEdge"
-    product: ""
-    url: "https://www.zerotrustedge.com/"
-    license: ""
-    deployment: "Client + Clientless SDP"
-    pricing: ""
-    notes: ""
-
-  - company: "Barracuda"
-    product: "CloudGen Access"
-    url: "https://www.barracuda.com/products/cloudgen-access"
-    license: "Commercial"
-    deployment: ""
-    pricing: "Not Published"
-    notes: ""
+    notes: "Unable to determine architecture (April 2022)"
 
   - company: "Dispersive Networks"
     product: "Virtual Network"
@@ -272,47 +175,15 @@ vendors:
     license: ""
     deployment: ""
     pricing: ""
-    notes: "Don't even know what the fuck this is. Some kind of SDN / SD-WAN gateway thing that routes traffic over multiple paths"
-
-  - company: "Zentry Security"
-    product: ""
-    url: "xxxxxxxxxxxxxxxxxxxxxxxx"
-    license: ""
-    deployment: ""
-    pricing: ""
-    notes: ""
-
-  - company: "SecureLink"
-    product: "SecureLink"
-    url: "https://www.securelink.com/wp-content/uploads/2015/06/SLINK_TechnicalOverview.pdf"
-    license: ""
-    deployment: ""
-    pricing: ""
-    notes: ""
-
-  - company: "Silverfort"
-    product: "Silverfort"
-    url: "https://www.silverfort.com/"
-    license: ""
-    deployment: ""
-    pricing: ""
-    notes: ""
-
-  - company: "BitGlass"
-    product: "Zero Trust Network Access"
-    url: "https://www.bitglass.com/zero-trust-network-access"
-    license: ""
-    deployment: ""
-    pricing: ""
-    notes: ""
+    notes: "Don't even know what this is, some kind of SDN / SD-WAN gateway thing that routes traffic over multiple paths? How does it work?"
 
   - company: "Alkira"
     product: "Alkira"
     url: "https://www.alkira.com/"
     license: ""
-    deployment: ""
-    pricing: ""
-    notes: ""
+    deployment: "SaaS"
+    pricing: "Not Published"
+    notes: "Cloud-based private internet exchange points (IXP). Abstracts inter-cloud connectivity configuration. Is this really zero trust? https://www.youtube.com/watch?v=Je4iQFSb5qY&ab_channel=Alkira"
 
   - company: "Aviatrix"
     product: "Aviatrix"
@@ -320,55 +191,15 @@ vendors:
     license: ""
     deployment: ""
     pricing: ""
-    notes: ""
+    notes: "Also looks like a cloud-based IXP"
 
-  - company: "Witesand"
-    product: "Witesand"
-    url: "https://witesand.io/"
+  - company: "Aryaka"
+    product: "Aryaka"
+    url: "https://aryaka.com/"
     license: ""
     deployment: ""
     pricing: ""
-    notes: ""
-
-  - company: "Versa Networks"
-    product: "ZTNA"
-    url: "https://versa-networks.com/"
-    license: ""
-    deployment: ""
-    pricing: ""
-    notes: ""
-
-  - company: "Elisity"
-    product: "Elisity"
-    url: "https://www.elisity.com/"
-    license: ""
-    deployment: ""
-    pricing: ""
-    notes: ""
-
-  - company: "Prosimo"
-    product: "Prosimo"
-    url: "https://prosimo.io/"
-    license: ""
-    deployment: ""
-    pricing: ""
-    notes: ""
-
-  - company: "Cisco"
-    product: "Identity Service Engine | or Cisco SD-WAN"
-    url: ""
-    license: ""
-    deployment: ""
-    pricing: ""
-    notes: ""
-
-  - company: "Citrix"
-    product: ""
-    url: ""
-    license: ""
-    deployment: ""
-    pricing: ""
-    notes: ""
+    notes: "Also looks like a cloud-based IXP"
 
   - company: "Juniper Networks"
     product: ""
@@ -376,47 +207,23 @@ vendors:
     license: ""
     deployment: ""
     pricing: ""
-    notes: ""
+    notes: "No clear ZTNA play (March 2022). Previously Witesand. Acquired by Juniper (2022). Product appeared to be cloud-based Network Access Control (NAC), an alternative to systems like Cisco's Identity Services Engine and Aruba's Clearpass"
 
-  - company: "OPSWAT"
-    product: ""
+  - company: "Cisco"
+    product: "Identity Service Engine | or Cisco SD-WAN"
     url: ""
     license: ""
     deployment: ""
     pricing: ""
-    notes: ""
+    notes: "No clear ZTNA play (March 2022)."
 
-  - company: "QI-ANXIN Group"
-    product: ""
-    url: ""
-    license: ""
+  - company: "Prosimo"
+    product: "Prosimo AXI"
+    url: "https://prosimo.io/"
+    license: "Commercial"
     deployment: ""
-    pricing: ""
-    notes: ""
-
-  - company: "Tencent Security"
-    product: ""
-    url: ""
-    license: ""
-    deployment: ""
-    pricing: ""
-    notes: ""
-
-  - company: "Ericom"
-    product: "Ericom ZTEdge SASE Platform"
-    url: "https://www.ericom.com/"
-    license: ""
-    deployment: ""
-    pricing: ""
-    notes: ""
-
-  - company: "Sophos"
-    product: "Zero Trust Network Access"
-    url: "https://www.sophos.com/en-us/products/zero-trust-network-access"
-    license: ""
-    deployment: ""
-    pricing: ""
-    notes: ""
+    pricing: "Not Published"
+    notes: "Also looks like a cloud-based IXP"
 
   - company: "BastionZero"
     product: "BastionZero"
@@ -424,31 +231,15 @@ vendors:
     license: ""
     deployment: ""
     pricing: ""
-    notes: ""
+    notes: "This needs it's own architecture diagram."
 
-  - company: "Appaegis"
-    product: "Appaegis"
-    url: "https://www.appaegis.com/"
-    license: "Commercial"
-    deployment: "SaaS"
-    pricing: "Published"
-    notes: ""
-
-  - company: "DH2i"
-    product: "DxOdyssey"
-    url: "https://dh2i.com/"
-    license: ""
-    deployment: ""
-    pricing: "" 
-    notes: ""
-
-  - company: ""
+  - company: "Nucleus"
     product: "Nucleus"
     url: "https://usenucleus.cloud/"
     license: ""
     deployment: ""
     pricing: "" 
-    notes: ""
+    notes: "Is this zero trust network access? Not launched yet (March 2022)"
 
   - company: "NetFoundry"
     product: "Ziti"
@@ -456,6 +247,44 @@ vendors:
     license: ""
     deployment: ""
     pricing: "" 
-    notes: ""
+    notes: "May need its own architecture diagram? Making something dark can be done in a few ways, but the way it's generally handled in Ziti is that services reach out and establish one or more connections to the Ziti network fabric. Clients coming into the fabric can then reach the service through these connections after being authenticated and authorized."
 
-    
+  - company: "QI-ANXIN Group"
+    product: ""
+    url: ""
+    license: ""
+    deployment: ""
+    pricing: ""
+    notes: "Not enough public information to classify (March 2022)"
+
+  - company: "Tencent Security"
+    product: ""
+    url: ""
+    license: ""
+    deployment: ""
+    pricing: ""
+    notes: "Not enough public information to classify (March 2022)"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

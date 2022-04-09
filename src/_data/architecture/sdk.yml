@@ -31,4 +31,11 @@ vendors:
     deployment: "SaaS"
     pricing: "Published"
     notes: ""
-  
+
+  - company: "ZeroC"
+    product: ""
+    url: "https://zeroc.com/"
+    license: ""
+    deployment: ""
+    pricing: ""
+    notes: "Is it zero trust?"
