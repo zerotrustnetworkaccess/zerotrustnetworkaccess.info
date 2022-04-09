@@ -1,0 +1,33 @@
+name: "Identity Aware Proxy Chain"
+abbreviation: "IAP"
+display: true
+sort_order: "1"
+description: "..."
+image: "https://patentimages.storage.googleapis.com/39/d6/81/b6e073ccf3fdbd/US20180375963A1-20181227-D00006.png"
+paragraphs: 
+  - text: "Vendor routes customer traffic through multiple, dynamically rotated cloud providers to obscure network location of origin servers."
+strengths:
+  - title: ""
+    description: ""
+weaknesses:
+  - title: ""
+    description: ""
+tradeoffs:
+  - title: ""
+    description: ""
+vendors: 
+  - company: "Net Abstraction"
+    product: "NetEnclave"
+    url: "https://netabstraction.com/"
+    license: "Commercial"
+    deployment: "SaaS"
+    pricing: "Not Published"
+    notes: ""
+
+  - company: "Dispel"
+    product: "Dispel"
+    url: "https://dispel.io/"
+    license: "Commercial"
+    deployment: "SaaS"
+    pricing: "Not Published"
+    notes: ""

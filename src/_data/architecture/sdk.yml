@@ -1,46 +1,41 @@
-name: "Software Development Kits (SDKs)"
-filters:
-  - sdk
-displayByDeafult: false
+name: "Software Development Kit"
 abbreviation: "SDK"
-sort_order: "5"
+display: true
+sort_order: "1"
 description: ""
-image: "/assets/images/architecture/768-580.png"
-
+image: "https://via.placeholder.com/2280x1200"
 paragraphs:
-  - text: "Nullam quis risus eget urna mollis ornare."
+  - text: ""
 strengths:
-  - title: "Nullam quis risus eget urna mollis ornare."
-    description: ""
-  - title: "Donec id elit non mi porta gravida at eget."
-    description: ""
-  - title: "Fusce dapibus, tellus ac cursus commodo."
+  - title: ""
     description: ""
 weaknesses:
-  - title: "Nullam quis risus eget urna mollis ornare."
-    description: ""
-  - title: "Donec id elit non mi porta gravida at eget."
-    description: ""
-  - title: "Fusce dapibus, tellus ac cursus commodo."
+  - title: ""
     description: ""
 tradeoffs:
-  - title: "Nullam quis risus eget urna mollis ornare."
+  - title: ""
     description: ""
-  - title: "Donec id elit non mi porta gravida at eget."
-    description: ""
-  - title: "Fusce dapibus, tellus ac cursus commodo."
-    description: ""
-vendors:
+vendors: 
   - company: "NetFoundry"
     product: "Ziti"
     url: "https://ziti.dev/"
     license: ""
     deployment: ""
-    pricing: ""
+    pricing: "" 
+    notes: ""
 
   - company: "ZeroTier"
     product: "libzt"
     url: "https://github.com/zerotier/libzt"
     license: "Open Source"
     deployment: "SaaS"
-    pricing: "Available"
+    pricing: "Published"
+    notes: ""
+
+  - company: "ZeroC"
+    product: ""
+    url: "https://zeroc.com/"
+    license: ""
+    deployment: ""
+    pricing: ""
+    notes: "Is it zero trust?"
