@@ -28,4 +28,5 @@ ENTRYPOINT ["/usr/local/bin/bundle"]
 
 CMD [ "exec", "jekyll serve --host 0.0.0.0 --port 8080" ]
 
-# if problems with gems, remove Gemfile.lock and resync using bundle update
+# if problems with gems, remove Gemfile.lock and resync using: bundle update
+# if the build time is high, investigate with: bundle exec jekyll build --profile --verbose
