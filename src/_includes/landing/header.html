@@ -11,11 +11,17 @@ site.data.landing.page-header %}
     <p class="ztna-margin-bottom-30-20">{{page_d.sub_title}}</p>
     {% endif %} {% if page_d.statistics %}
     <div class="ztna-counter-wrapper">
-      {% for architecture in site.data.architecture %} {% assign
-      total_architectures = forloop.length %} {% assign arch = architecture[1]
-      %} {% assign vendors = arch.vendors %} {% for vendor in vendors %} {%
-      capture amount %}{{ amount | plus:1 }}{% endcapture %} {% endfor %} {%
-      endfor %}
+      {% for architecture in site.data.architecture %}
+        {% assign total_architectures = forloop.length %} 
+        {% assign arch = architecture[1] %}
+
+        {% if arch.display == true %}
+          {% assign vendors = arch.vendors %}
+          {% for vendor in vendors %} 
+            {% capture amount %}{{ amount | plus:1 }}{% endcapture %}
+          {% endfor %}
+        {% endif %}
+      {% endfor %}
       <div class="ztna-counter-item counter">
         <p class="h1 value">{{amount}}</p>
 

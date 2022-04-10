@@ -1,5 +1,6 @@
 name: "Software Defined Perimeter"
 abbreviation: "SDP"
+filter: "software-defined-perimeter"
 display: true
 sort_order: "1"
 description: "Endpoint agent connectivity to an SDP connector (reverse proxy appliance) deployed at the network edge governed by a controller. Usually based on <a href=\"https://en.wikipedia.org/wiki/Port_knocking\">single packet authorization</a> (SPA). May also be deployed as a straight Identity Aware Proxy (IAP), with no agent or SDP connector. Applications are accessed through a tunnel at the network layer or a reverse proxy."

@@ -1,5 +1,6 @@
 name: "Zero-Trust Overlay Network"
 abbreviation: ""
+filter: "zero-trust-overlay-network"
 display: true
 sort_order: 1
 description: "Direct, peer to peer connectivity enabled by UDP or TCP hole punching."

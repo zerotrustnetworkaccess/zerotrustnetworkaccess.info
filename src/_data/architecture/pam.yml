@@ -1,5 +1,6 @@
 name: "Privileged Access Management"
 abbreviation: "PAM"
+filter: "privileged-access-management"
 display: true
 sort_order: "1"
 description: "Vendor product owns access to end systems. End-users are transparently granted temporary access credentials and access is logged by the vendor platform"

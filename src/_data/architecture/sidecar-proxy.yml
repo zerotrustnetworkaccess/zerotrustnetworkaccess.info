@@ -1,5 +1,6 @@
 name: "Sidecar Proxy"
 abbreviation: ""
+filter: "sidecar"
 display: false
 sort_order: "1"
 description: ""

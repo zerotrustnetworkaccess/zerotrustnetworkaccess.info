@@ -1,5 +1,6 @@
 name: "Secure Web Gateway"
 abbreviation: "SWG"
+filter: "secure-web-gateway"
 display: false
 sort_order: "1"
 description: ""

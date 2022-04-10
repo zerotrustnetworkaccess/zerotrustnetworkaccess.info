@@ -1,5 +1,6 @@
 name: "Software Development Kit"
 abbreviation: "SDK"
+filter: "sdk"
 display: true
 sort_order: "1"
 description: ""

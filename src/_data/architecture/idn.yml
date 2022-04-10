@@ -1,5 +1,6 @@
 name: "Identity Defined Network"
 abbreviation: "IDN"
+filter: "identity-defined-network"
 display: true
 sort_order: "1"
 description: "Implementation of the HIP protocol"

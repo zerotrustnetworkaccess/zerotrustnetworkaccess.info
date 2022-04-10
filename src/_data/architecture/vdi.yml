@@ -1,5 +1,6 @@
 name: "Virtual Desktop Infrastructure"
 abbreviation: "VDI"
+filter: "virtual-desktop-infrastructure"
 display: false
 sort_order: "1"
 description: "Vendor provides and manages virtual desktops or containers rendered into vector or bitmap graphics over a secure network access pathway."

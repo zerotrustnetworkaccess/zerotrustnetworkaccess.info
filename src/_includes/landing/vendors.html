@@ -26,37 +26,42 @@
               All
             </a>
           </li>
-          {% for vendor in vendors.categories %}
+
+          {% for architecture in site.data.architecture %}
+          {% assign arch = architecture[1] %}
+          {% if arch.display == true %}
             <li>
               <a
                 class="ztna-tag-large background-color light-text-1 h4 mb-10 mr-10 button"
-                data-filter=".{{vendor.filter}}"
+                data-filter=".{{arch.filter}}"
               >
-                {{vendor.name}}
+                {{arch.name}}
               </a>
             </li>
-            {% if vendor.display == true %}
-            {% endif %}
+          {% endif %}
           {% endfor %}
+
         </ul>
       </div>
 
+
+
+
       <div class="row isotope">
         {% for architecture in site.data.architecture %}
-          {% assign arch = architecture[1] %}
+        {% assign arch = architecture[1] %}
         {% if arch.vendors %}
         <div
-          class="item grid-sizer col-12 mx-auto mb-0
+          class="item grid-sizer col-12 mx-auto mb-0 {{arch.filter}}
           {% for filter in arch.filters %} {{filter}} {% endfor %}
           {% if arch.displayByDeafult %} focus {% endif %}
           "
         >
-          <div id="{{arch.filters}}"></div>
+          <div id="{{arch.filter}}"></div>
           <h2
             class="dark-text ztna-margin-bottom-20-10 mr-md-40-20 ml-md-40-20 mr-lg-40 ml-lg-40"
           >
-            {{arch.name}} {% if arch.abbreviation != ""
-            %}({{arch.abbreviation}}){% endif %}
+            {{arch.name}} {% if arch.abbreviation != "" %}({{arch.abbreviation}}){% endif %}
           </h2>
           <div class="row">
             <div class="col-12">

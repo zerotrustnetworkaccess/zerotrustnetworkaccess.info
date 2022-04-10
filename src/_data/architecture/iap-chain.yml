@@ -1,5 +1,6 @@
 name: "Identity Aware Proxy Chain"
 abbreviation: "IAP"
+filter: "identity-aware-proxy-chain"
 display: true
 sort_order: "1"
 description: "..."
