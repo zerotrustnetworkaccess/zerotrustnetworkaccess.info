@@ -265,6 +265,23 @@ vendors:
     pricing: ""
     notes: "Not enough public information to classify (March 2022)"
 
+  - company: "Xaptum"
+    product: "Edge Network Fabric"
+    url: "https://www.xaptum.com/product"
+    license: "Commercial"
+    deployment: "SaaS"
+    pricing: "n/a"
+    notes: "Is this really an identity aware proxy? They talk about overlay..."
+
+  - company: "CloudFlare"
+    product: "Gateway"
+    url: "https://www.cloudflare.com/en-gb/teams/gateway/"
+    license: "SaaS"
+    deployment: "SaaS"
+    pricing: "Published"
+    notes: "This is an Internet facing secure web gateway, not ZTNA"
+
+
 
 
 
