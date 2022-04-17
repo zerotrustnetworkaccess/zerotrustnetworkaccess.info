@@ -5,7 +5,7 @@
     <li>
       <a
         class="ztna-small-button-left white-background light-blue-1 h4 mr-10"
-        href="{{ paginator.previous_page_path | prepend: site.url }}"
+        href="{{ paginator.previous_page_path | prepend: base.url }}"
       >
         <img
           src="/assets/icons/left-arrow.svg"
@@ -19,7 +19,7 @@
     <li>
       <a
         class="ztna-small-button-right white-background light-blue-1 h4"
-        href="{{ paginator.next_page_path | prepend: site.url }}"
+        href="{{ paginator.next_page_path | prepend: base.url }}"
       >
         Next
         <img

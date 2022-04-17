@@ -3,17 +3,14 @@ layout: ztna-page
 title: "Blog"
 sub_title: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard."
 black_menu: true
-pagination:
-  enabled: true
-  per_page: 4
-permalink: "/blog/"
 ---
 
+{% if page.url contains "page" %} {% else %}
 <div class="row mx-0">
   {% for post in site.posts %} {% if post.recommended %} {% include
   components/recommended-post.html %} {% endif%} {% endfor %}
 </div>
-
+{% endif%}
 <div class="row mr-md-25-5 ml-md-25-5 mb-100-70">
   {% for post in paginator.posts %}
   <div class="col-md-6 col-sm-6">

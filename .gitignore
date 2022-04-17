@@ -182,3 +182,4 @@ node_modules
 .vscode/
 vendor
 .zshrc
+.bundle
