@@ -46,6 +46,10 @@
   padding-top: 100px !important;
 }
 
+.pb-100-70 {
+  padding-bottom: 100px !important;
+}
+
 .mt-50-40 {
   margin-top: 50px !important;
 }
@@ -120,6 +124,14 @@
 .mb-50-30 {
   margin-bottom: 50px;
 }
+
+// .ztna-pt-100 {
+//   padding-top: 100px;
+// }
+
+// .ztna-pb-100 {
+//   padding-bottom: 100px;
+// }
 
 @media only screen and (max-width: $breakpoint-sm) {
   .ztna-margin-bottom-30-20 {
@@ -268,6 +280,10 @@
 
   .pt-100-70 {
     padding-top: 70px !important;
+  }
+
+  .pt-100-70 {
+    padding-bottom: 70px !important;
   }
 
   .pb-60-30 {
@@ -424,10 +440,10 @@
   .pr-lg-16 {
     padding-right: 16px !important;
   }
-  .pl-lg-3 {
+  .pl-lg-1p {
     padding-left: 1% !important;
   }
-  .pr-lg-3 {
+  .pr-lg-1p {
     padding-right: 1% !important;
   }
 }

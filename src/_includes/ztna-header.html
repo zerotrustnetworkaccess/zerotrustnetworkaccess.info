@@ -34,7 +34,7 @@
       {% for menu in site.data.navigation.main_menu %}
 
       <li
-        class="ztna-nav-item mr-60-40 mb-md-50 {% if menu.text == 'Github' and include.hide_github %} ztna-hidden {% endif %}"
+        class="ztna-nav-item pl-0 pr-0 mr-60-40 mb-md-50 {% if menu.text == 'Github' and include.hide_github %} ztna-hidden {% endif %}"
       >
         <a class="nav-link d-flex align-items-center" href="{{menu.url}}"
           >{% include icons/{{menu.icon}} cls="nav-link mobile-menu-items-fill"
@@ -46,7 +46,7 @@
       </li>
 
       {% endfor %}
-      <li class="ztna-nav-item">
+      <li class="ztna-nav-item pl-0 pr-0">
         <button class="plain nav-link nav-link d-flex align-items-center" data-toggle="offcanvas-info">
           {% include icons/info-header-icon.svg cls="nav-link
           mobile-menu-items-fill" %}

@@ -1,4 +1,4 @@
-@import "ztna-breakpoionts";
+@import "ztna-breakpoints";
 
 .ztna-head-container {
   max-width: 900px;
@@ -16,7 +16,6 @@
 
 .ztna-counter-wrapper {
   max-width: 600px;
-  display: flex;
   column-gap: 40px;
   margin: 0 auto 50px;
 }
@@ -26,31 +25,12 @@
   text-align: center;
 }
 
-.ztna-subtitle {
-  width: 100%;
-}
 
-.ztna-landing-section-wrapper {
-  padding-top: 100px;
-  padding-bottom: 100px;
-}
-
-.ztna-num-label-wrapper {
-  margin-top: 40px;
-}
 
 .mobile-nist-illustration {
   display: none;
 }
 
-.ztna-post-container {
-  display: flex;
-  justify-content: space-between;
-}
-
-.tenets-wrapper {
-  display: flex;
-}
 
 .nist-mobile-scroll-container {
   width: 1580px;
@@ -118,9 +98,7 @@
     padding: 180px 0 68px 0;
   }
 
-  .ztna-num-label-wrapper {
-    margin-bottom: 50px;
-  }
+
   .ztna-post-responsive {
     &:nth-child(3),
     &:nth-child(4) {
@@ -143,13 +121,6 @@
     }
   }
 
-  // .ztna-nist-section-wrapper {
-  //   padding-bottom: 50px;
-  // }
-  .ztna-nist-container-fluid {
-    padding-left: 40px;
-  }
-
   .ztna-testimonial-card {
     margin-left: 15px;
     margin-right: 15px;
@@ -163,14 +134,8 @@
   .ztna-counter-wrapper {
     max-width: 100%;
   }
-  .ztna-subtitle {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  .ztna-landing-section-wrapper {
-    padding-top: 70px;
-    padding-bottom: 70px;
-  }
+ 
+
 
   .desktop-nist-illustration {
     display: none;
@@ -186,10 +151,6 @@
     &:nth-child(4) {
       display: none;
     }
-  }
-
-  .ztna-nist-container-fluid {
-    margin-bottom: 30px;
   }
 
 

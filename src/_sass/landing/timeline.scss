@@ -10,9 +10,6 @@
   max-width: 1170px;
   height: 50px;
   border-radius: 25px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 0 5px;
   position: relative;
 
@@ -23,6 +20,7 @@
     padding: 8px 4%;
     cursor: pointer;
   }
+
 }
 
 .year-wrapper {
@@ -41,15 +39,12 @@
     padding: 8px 4%;
     cursor: pointer;
   }
+
 }
 
 .timeline-data-wrapper {
   width: 100%;
   overflow: hidden;
-}
-
-.timeline-data {
-  display: flex;
 }
 
 .timeline-item {
@@ -67,7 +62,6 @@
 @media only screen and (max-width: $breakpoint-md) {
   .timeline {
     margin: 0;
-
     border-radius: 0;
     padding-left: 20px;
 

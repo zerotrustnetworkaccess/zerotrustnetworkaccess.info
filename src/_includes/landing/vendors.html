@@ -1,8 +1,8 @@
 <div
-  class="container-fluid background-white ztna-landing-section-wrapper d-flex justify-content-center px-0"
+  class="container-fluid background-white pt-100-70 pb-100-70 d-flex justify-content-center px-0"
   id="vendors"
 >
-  <div class="ztna-content-wrapper width-100">
+  <div class="ztna-content-wrapper w-100">
     {% assign vendors = site.data.landing.vendors %}
     <div class="grid grid-view">
       {% if vendors.title %}
@@ -27,30 +27,23 @@
             </a>
           </li>
 
-          {% for architecture in site.data.architecture %}
-          {% assign arch = architecture[1] %}
-          {% if arch.display == true %}
-            <li>
-              <a
-                class="ztna-tag-large background-color light-text-1 h4 mb-10 mr-10 button"
-                data-filter=".{{arch.filter}}"
-              >
-                {{arch.name}}
-              </a>
-            </li>
-          {% endif %}
-          {% endfor %}
-
+          {% for architecture in site.data.architecture %} {% assign arch =
+          architecture[1] %} {% if arch.display == true %}
+          <li>
+            <a
+              class="ztna-tag-large background-color light-text-1 h4 mb-10 mr-10 button"
+              data-filter=".{{arch.filter}}"
+            >
+              {{arch.name}}
+            </a>
+          </li>
+          {% endif %} {% endfor %}
         </ul>
       </div>
 
-
-
-
       <div class="row isotope">
-        {% for architecture in site.data.architecture %}
-        {% assign arch = architecture[1] %}
-        {% if arch.vendors %}
+        {% for architecture in site.data.architecture %} {% assign arch =
+        architecture[1] %} {% if arch.vendors %}
         <div
           class="item grid-sizer col-12 mx-auto mb-0 {{arch.filter}}
           {% for filter in arch.filters %} {{filter}} {% endfor %}
@@ -61,7 +54,8 @@
           <h2
             class="dark-text ztna-margin-bottom-20-10 mr-md-40-20 ml-md-40-20 mr-lg-40 ml-lg-40"
           >
-            {{arch.name}} {% if arch.abbreviation != "" %}({{arch.abbreviation}}){% endif %}
+            {{arch.name}} {% if arch.abbreviation != ""
+            %}({{arch.abbreviation}}){% endif %}
           </h2>
           <div class="row">
             <div class="col-12">
@@ -127,7 +121,9 @@
             </div>
           </div>
           <div class="space20"></div>
-          <h3 class="dark-text ztna-margin-bottom-20-10 mr-md-40-20 ml-md-40-20 mr-lg-40 ml-lg-40">
+          <h3
+            class="dark-text ztna-margin-bottom-20-10 mr-md-40-20 ml-md-40-20 mr-lg-40 ml-lg-40"
+          >
             {{arch.name}} Vendors
           </h3>
           <div class="scroll-wrapper ml-md-40 mr-md-40 mr-lg-40 ml-lg-40">

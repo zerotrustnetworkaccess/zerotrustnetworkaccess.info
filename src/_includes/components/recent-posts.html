@@ -5,7 +5,7 @@
   <ul class="popular-post-list">
     {% for post in site.posts limit: "3" %}
     <li>
-      <div class="post-meta">
+      <div class="d-flex justify-content-between">
         <div
           class="ztna-tag-small ztna-small-text light-text-1 {% if post.categories !=empty %} white-background {% else %} background-color {% endif %}"
         >
@@ -18,7 +18,7 @@
         <h4 class="dark-text">{{post.title}}</h4>
       </a>
       <div class="space20"></div>
-      <hr class="post-divider" />
+      <hr class="post-divider p-0 m-0" />
       <div class="space20"></div>
     </li>
     {% endfor %}

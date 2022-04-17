@@ -1,7 +1,7 @@
 {% if site.data.landing.ztna.enable %} {% assign ztna = site.data.landing.ztna
 %}
 <div
-  class="container-fluid background-white ztna-landing-section-wrapper d-flex justify-content-center px-md-40-20"
+  class="container-fluid background-white pt-100-70 pb-100-70 d-flex justify-content-center px-md-40-20"
 >
   <div class="ztna-content-wrapper">
     <div class="row align-items-center d-flex mb-0">
@@ -33,9 +33,7 @@
           {% endif %} {% if ztna.description %}
           <p class="ztna-small-text light-text-1">{{ztna.description}}</p>
           <div class="space20"></div>
-          <div class="ztna-margin-bottom-30-20">
-            {{ztna.citation}}
-          </div>
+          <div class="ztna-margin-bottom-30-20">{{ztna.citation}}</div>
 
           {% endif %}
           <ul class="icon-list bullet-default mb-0">

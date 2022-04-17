@@ -49,8 +49,7 @@ nav {
   box-shadow: 0px 0px 15px rgba(10, 63, 113, 0.15);
 }
 .ztna-nav-item {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+ 
   box-sizing: content-box;
   width: fit-content;
 }
@@ -58,7 +57,6 @@ nav {
 .banner--clone {
   @extend .ztna-shadow;
 
-  //opacity: 0;
   .ztna-logo {
     background: -webkit-image-set(
       url("/assets/images/logo.png") 1x,
@@ -80,15 +78,6 @@ nav {
   }
 }
 
-.banner--unstick {
-  // opacity: 0;
-  // z-index: 1;
-}
-
-.banner--stick {
-  // opacity: 1 !important;
-  // z-index: 1009;
-}
 
 .ztna-logo-base {
   margin-left: 55px !important;

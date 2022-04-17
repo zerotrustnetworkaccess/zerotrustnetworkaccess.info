@@ -182,10 +182,6 @@ html {
   object-fit: cover;
 }
 
-.ztna-blog-date {
-  display: flex;
-  align-items: center;
-}
 
 .ztna-post-title {
   height: $h3lineheight * 2;
@@ -193,15 +189,6 @@ html {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-}
-
-.ztna-post-ui {
-  display: flex;
-  justify-content: space-between;
-}
-
-.width-100 {
-  width: 100%;
 }
 
 .ztna-table {
