@@ -114,14 +114,6 @@ vendors:
     pricing: ""
     notes: ""
 
-  - company: "Banyan Security"
-    product: ""
-    url: "https://www.banyansecurity.io/"
-    license: ""
-    deployment: ""
-    pricing: ""
-    notes: ""
-
   - company: "Barracuda"
     product: "CloudGen Access (previously https://www.fyde.com/)"
     url: "https://www.fyde.com/"
