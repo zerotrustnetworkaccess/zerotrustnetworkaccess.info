@@ -8,7 +8,7 @@ black_menu: true
 {% if page.url contains "page" %} {% else %}
 <div class="row mx-0">
   {% for post in site.posts %} {% if post.recommended %} {% include
-  components/recommended-post.html %} {% endif%} {% endfor %}
+  blog/recommended-post.html %} {% endif%} {% endfor %}
 </div>
 {% endif%}
 <div class="row mr-md-25-5 ml-md-25-5 mb-100-70">
@@ -16,5 +16,5 @@ black_menu: true
   <div class="col-md-6 col-sm-6">
     {% include components/post-preview.html cls="mb-70-50" %}
   </div>
-  {% endfor %} {% include pagination.html %}
+  {% endfor %} {% include post/pagination.html %}
 </div>

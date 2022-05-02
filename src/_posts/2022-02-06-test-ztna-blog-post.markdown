@@ -75,7 +75,7 @@ table:
 
 <p>The main functionality of the Enclave plug-in for Cockpit is based on the Enclave command-line interface. Enclave offers a --json modifier for most CLI commands, so I’ve made the plug-in call enclave status --json to get a structured document representing the status of the Enclave agent.</p>
 
-{% include components/bloquote.html author=page.qoute.author occupation=page.qoute.occupation blockquote=page.qoute.blockquote author_photo=page.qoute.author_photo%}
+{% include post/bloquote.html author=page.qoute.author occupation=page.qoute.occupation blockquote=page.qoute.blockquote author_photo=page.qoute.author_photo%}
 
 <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
 <p>eleifend hac porta faucibus aliquam eros, massa facilisis, sed pede maecenas porttitor id magnis. Ac sed aliquam in felis amet, adipiscing pede a amet faucibus sit, quis in et ullamcorper vel commodo. Volutpat ut pede sem ipsum non, sapien adipiscing, suspendisse neque, quis dolor donec dolor. Sit voluptatibus, scelerisque in semper lacus nostra, ac integer dolor mauris tempus eget</p>

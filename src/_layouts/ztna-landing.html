@@ -62,15 +62,15 @@
       rel="stylesheet"
     />
     {% if site.data.general_settings.google_analytics.enable %} {% include
-    analytics.html %} {% endif %}
+    components/analytics.html %} {% endif %}
   </head>
   <body {% if page.overflow %} class="overflow-hidden" {% endif %}>
-    {% include ztna-header.html container_class="container"
+    {% include modules/ztna-header.html container_class="container"
     extra_class="absolute transparent inverse-text" %}
 
     <div class="content-wrapper">{{ content }}</div>
-    {% include components/popup-success.html %} {% include
-    components/popup-error.html %} {% include ztna-footer.html%}
+    {% include modules/popup/popup-success.html %} {% include
+    modules/popup/popup-error.html %} {% include modules/ztna-footer.html%}
     <script src="{{relative_url}}/assets/js/jquery.min.js"></script>
     <script src="{{relative_url}}/assets/js/popper.min.js"></script>
     <script src="{{relative_url}}/assets/js/bootstrap.min.js"></script>

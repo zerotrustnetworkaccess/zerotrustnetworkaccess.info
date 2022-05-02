@@ -66,37 +66,37 @@
       rel="stylesheet"
     />
     {% if site.data.general_settings.google_analytics.enable %} {% include
-    analytics.html %} {% endif %}
+      components/analytics.html %} {% endif %}
   </head>
   <body {% if page.overflow %} class="overflow-hidden" {% endif %}>
-    {% include ztna-header.html container_class="container" dark_logo="true"
+    {% include modules/ztna-header.html container_class="container" dark_logo="true"
     hide_github="true" %}
     {% if page.post_image %} 
     <img style="background-image: url({{page.post_image}})" class="ztna-post-cover ztna-margin-bottom-50-40 w-100"> 
     {% endif %} 
     <div class="container-fluid ztna-blog-wrapper mx-auto px-0">
-      {% include components/bread-crumbs.html %} 
+      {% include post/bread-crumbs.html %} 
      
         <div class="row ztna-margin-bottom-50-40 ml-lg-40 mr-lg-40">
           <div class="col-lg-8 post-typography ">
-            {% include components/post-metadata.html %} 
+            {% include post/post-metadata.html %} 
             {{content}}
             <a class="ztna-small-button-left white-background light-blue-1 h4 mt-50-40 ztna-margin-bottom-50-40" href="/blog">{%include icons/button-left-arrow.svg %} Back to blog</a>
             <div class="mr-md-40-20 ml-md-40-20 mb-70-100-70">
-              {% include components/ztna-disqus.html %} 
+              {% include post/ztna-disqus.html %} 
             </div>
             
           </div>
-          <aside class="col-lg-4 sidebar mt-0"> {% include sidebar.html cls="mr-md-40-20 ml-md-40-20" %} </aside>
+          <aside class="col-lg-4 sidebar mt-0"> {% include modules/sidebar.html cls="mr-md-40-20 ml-md-40-20" %} </aside>
         </div>
       </div>
      
-      {% include components/related-posts.html category=page.categories %}
+      {% include post/related-posts.html category=page.categories %}
       
     </div>
-    {% include components/popup-success.html %}
-    {% include components/popup-error.html %}
-    {% include ztna-footer.html%}
+    {% include modules/popup/popup-success.html %}
+    {% include modules/popup/popup-error.html %}
+    {% include modules/ztna-footer.html%}
     <script src="{{relative_url}}/assets/js/jquery.min.js"></script>
     <script src="{{relative_url}}/assets/js/popper.min.js"></script>
     <script src="{{relative_url}}/assets/js/bootstrap.min.js"></script>

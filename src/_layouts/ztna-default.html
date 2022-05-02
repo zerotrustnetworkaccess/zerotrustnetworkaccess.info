@@ -66,14 +66,14 @@
       rel="stylesheet"
     />
     {% if site.data.general_settings.google_analytics.enable %} {% include
-    analytics.html %} {% endif %}
+    components/analytics.html %} {% endif %}
   </head>
   <body {% if page.overflow %} class="overflow-hidden" {% endif %}>
-    {% include ztna-header.html container_class="container" dark_logo="true"
-    hide_github="true" %}
+    {% include modules/ztna-header.html container_class="container"
+    dark_logo="true" hide_github="true" %}
 
     <div class="content-wrapper">{{ content }}</div>
-    {% include ztna-footer.html%}
+    {% include modules/ztna-footer.html%}
     <script src="{{relative_url}}/assets/js/jquery.min.js"></script>
     <script src="{{relative_url}}/assets/js/popper.min.js"></script>
     <script src="{{relative_url}}/assets/js/bootstrap.min.js"></script>

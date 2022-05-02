@@ -6,7 +6,13 @@
       <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-md-54-40">
         <div class="footer-col">
           <div class="ztna-margin-bottom-30-20">
-            {% include components/ztna-logo.html%}
+            <img
+              srcset="
+                {{site.data.general_settings.light_logo_1x}} 1x,
+                {{site.data.general_settings.light_logo_2x}} 2x
+              "
+              alt="Zero Trust Network Access"
+            />
           </div>
 
           {% assign description = site.data.ztna-footer.about_ZTNA %}

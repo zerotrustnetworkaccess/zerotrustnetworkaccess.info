@@ -2,7 +2,7 @@
 ---
 
 @import "ztna-typography", "ztna-colors", "ztna-interface", 
-  "ztna-footer", "ztna-spacers", "ztna-header", "ztna-subscription",
-  "ztna-popular-posts.scss", "ztna-recommended-post.scss", "ztna-spacing.scss",
-  "blog/ztna-blog-post.scss", "ztna-landing.scss", "ztna-breakpoints.scss",
-  "ztna-popup.scss", "landing/timeline.scss", "landing/vendors.scss";
+  "modules/ztna-footer", "ztna-spacers", "modules/ztna-header", "modules/ztna-subscription",
+  "components/ztna-popular-posts.scss", "components/ztna-recommended-post.scss", 
+  "blog/ztna-blog-post.scss", "landing/ztna-landing.scss", "ztna-breakpoints.scss",
+  "modules/ztna-popup.scss", "landing/timeline.scss", "landing/vendors.scss";
