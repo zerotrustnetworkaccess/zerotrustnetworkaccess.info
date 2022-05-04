@@ -26,6 +26,8 @@ weaknesses:
     description: ""
   - title: "Must be reconfigured if network changes."
     description: ""
+  - title: "High-availability requires additional appliances."
+    description: ""
 tradeoffs:
   - title: "SDP controller becomes the new target."
     description: ""
