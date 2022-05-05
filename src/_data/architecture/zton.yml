@@ -109,7 +109,15 @@ vendors:
     url: "https://gravitl.com/"
     license: "Open Source"
     deployment: "Self-hosted"
-    pricing: "Paid support" 
+    pricing: "n/a" 
+    notes: ""
+
+  - company: "FireZone"
+    product: "FireZone"
+    url: "https://www.firezone.dev/"
+    license: "Open Source"
+    deployment: "Self-hosted"
+    pricing: "n/a" 
     notes: ""
 
   - company: "Zentera"
