@@ -1,12 +1,11 @@
 <div class="d-flex justify-content-between flex-wrap mr-md-40-20 ml-md-40-20">
   <div class="d-flex">
     {% for category in page.categories%}
-    <a
+    <p
       class="ztna-tag-small background-color ztna-margin-bottom-10 ztna-small-text light-text-1 ztna-margin-right-10"
-      href="/category/{{category}}"
     >
       {{category}}
-    </a>
+    </p>
     {% endfor%}
   </div>
   <div class="d-flex">

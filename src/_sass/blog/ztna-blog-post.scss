@@ -10,7 +10,7 @@ $fig-spacer: 10px;
   background-repeat: no-repeat;
 }
 
-.post-typography {
+.ztna-post-typography {
   .h1,
   h1,
   .h2,
@@ -162,12 +162,12 @@ blockquote {
   .ztna-post-cover {
     height: 150px;
   }
-  .post-typography code {
+  .ztna-post-typography code {
     font-size: 14px;
     line-height: 21px;
   }
 
-  .post-typography blockquote {
+  .ztna-post-typography blockquote {
     border-radius: 30px;
     padding: 34px 30px 20px 30px;
     margin-bottom: $medium-spacer;
@@ -181,7 +181,7 @@ blockquote {
     }
   }
 
-  .post-typography pre {
+  .ztna-post-typography pre {
     width: fit-content;
   }
 }
@@ -195,14 +195,14 @@ blockquote {
     margin-right: 10px !important;
   }
 
-  .post-typography blockquote {
+  .ztna-post-typography blockquote {
     p {
       margin-left: 0 !important;
       margin-right: 0 !important;
     }
   }
 
-  .post-typography pre {
+  .ztna-post-typography pre {
     &::-webkit-scrollbar {
       display: none;
     }
