@@ -116,14 +116,6 @@ vendors:
     pricing: ""
     notes: ""
 
-  - company: "Barracuda"
-    product: "CloudGen Access (previously https://www.fyde.com/)"
-    url: "https://www.fyde.com/"
-    license: ""
-    deployment: ""
-    pricing: ""
-    notes: ""
-
   - company: "NetSkope"
     product: "Private Access"
     url: "https://www.netskope.com/products/private-access"
@@ -248,9 +240,9 @@ vendors:
     product: "Continuum"
     url: "https://www.saife.io/products/continuum_/"
     license: ""
-    deployment: "ZTNA as a Service"
+    deployment: ""
     pricing: "" 
-    notes: ""
+    notes: "ZTNA as a Service"
 
   - company: "DH2i"
     product: "DxOdyssey"
@@ -272,9 +264,9 @@ vendors:
     product: "Vidder Precision Access"
     url: "https://enterprise.verizon.com/resources/vidder/"
     license: ""
-    deployment: "ZTNA as a Service"
+    deployment: ""
     pricing: ""
-    notes: ""
+    notes: "ZTNA as a Service"
 
   - company: "VMWare"
     product: "Horizon Unified Access Gateway"
@@ -306,7 +298,7 @@ vendors:
     license: "Commercial"
     deployment: "SaaS"
     pricing: "Not Published"
-    notes: ""
+    notes: "Previously Fyde. Acquired by Barracuda in 2020"
 
   - company: "Zentry Security"
     product: "Zentry Trusted Access"

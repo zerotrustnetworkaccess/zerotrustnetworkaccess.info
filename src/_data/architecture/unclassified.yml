@@ -34,7 +34,7 @@ vendors:
     notes: "Is it zero trust?"
 
   - company: "Fly.io"
-    product: "??????"
+    product: ""
     url: "https://fly.io/"
     license: "Commercial"
     deployment: "SaaS"
@@ -56,14 +56,6 @@ vendors:
     deployment: ""
     pricing: "Not Published"
     notes: "Is it zero trust?"
-
-  - company: "Fyde"
-    product: ""
-    url: "https://www.fyde.com/"
-    license: ""
-    deployment: ""
-    pricing: ""
-    notes: "Acquired by Barracuda (2020)"
 
   - company: "LogMeIn"
     product: "Hamachi"
@@ -210,12 +202,12 @@ vendors:
     notes: "No clear ZTNA play (March 2022). Previously Witesand. Acquired by Juniper (2022). Product appeared to be cloud-based Network Access Control (NAC), an alternative to systems like Cisco's Identity Services Engine and Aruba's Clearpass"
 
   - company: "Cisco"
-    product: "Identity Service Engine | or Cisco SD-WAN"
+    product: ""
     url: ""
     license: ""
     deployment: ""
     pricing: ""
-    notes: "No clear ZTNA play (March 2022)."
+    notes: "No clear ZTNA play (March 2022). Identity Service Engine | or Cisco SD-WAN"
 
   - company: "Prosimo"
     product: "Prosimo AXI"

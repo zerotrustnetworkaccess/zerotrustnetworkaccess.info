@@ -1,4 +1,4 @@
-name: "Host-based Firewall"
+name: "Host-based Firewall Control"
 abbreviation: ""
 filter: "host-based-firewall"
 display: true

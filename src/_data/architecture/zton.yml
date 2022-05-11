@@ -124,6 +124,6 @@ vendors:
     product: ""
     url: "http://zentera.net/"
     license: ""
-    deployment: "Cloud-Over-IP (COiP) Access"
+    deployment: ""
     pricing: ""
-    notes: "This looks a little like ZTON, but hard to tell if the architecture is peer-to-peer."
+    notes: "Cloud-Over-IP (COiP) Access. This looks a little like ZTON, but hard to tell if the architecture is peer-to-peer."
