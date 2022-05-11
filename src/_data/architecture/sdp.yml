@@ -104,9 +104,9 @@ vendors:
     product: "SecureLink"
     url: "https://cyolo.io/"
     license: ""
-    deployment: "https://cyolo.io/blog/zero-trust/7-questions-zero-trust-provider/ | https://cyolo.io/zero-trust/"
+    deployment: ""
     pricing: ""
-    notes: ""
+    notes: "https://cyolo.io/blog/zero-trust/7-questions-zero-trust-provider/ | https://cyolo.io/zero-trust/"
 
   - company: "Fortinet"
     product: "FortiGate"
@@ -240,9 +240,9 @@ vendors:
     product: ""
     url: "https://www.safe-t.com/"
     license: ""
-    deployment: "Software-Defined Access Suite"
+    deployment: ""
     pricing: "" 
-    notes: ""
+    notes: "Software-Defined Access Suite"
 
   - company: "SAIFE"
     product: "Continuum"
