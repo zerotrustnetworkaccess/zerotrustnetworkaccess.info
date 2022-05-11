@@ -65,24 +65,22 @@
   </div>
 </nav>
 <!-- /.navbar -->
+
 <div
   class="offcanvas-info flyout-background fly-out-bg"
   style="
-background-image: -webkit-image-set(
+    background-image: -webkit-image-set(
     url({{site.data.ztna-header.fly-out-bg}}) 1x,
     url({{site.data.ztna-header.fly-out-bg-2x}}) 2x
   );
-  background-image: image-set(
+    background-image: image-set(
     url({{site.data.ztna-header.fly-out-bg}}) 1x,
     url({{site.data.ztna-header.fly-out-bg-2x}}) 2x
-  );
-"
->
-  <button
-    class="plain offcanvas-close offcanvas-info-close white icon-hover"
-  >
+  );">
+  <button class="plain offcanvas-close offcanvas-info-close white icon-hover">
     <i class="jam jam-close"></i>
   </button>
+  <!--
   <a href="{{site.url}}">
     <img
       srcset="
@@ -93,34 +91,29 @@ background-image: -webkit-image-set(
       alt="{{site.data.general_settings.title}}"
     />
   </a>
-  <div class="space30"></div>
+  <div class="space30"></div>-->
   {% assign description = site.data.general_settings.description %}
   <ul class="list-unstyled mb-0">
     {% for content in description %}
-    <li class="ztna-margin-bottom-20">
+    <li class="ztna-margin-bottom-30-20">
       <p class="ztna-small-text white">{{content.text}}</p>
     </li>
     {% endfor %}
   </ul>
-  <div class="space10"></div>
+  <!--<div class="space10"></div>
   <hr class="post-divider" />
   <div class="space30"></div>
   <a href="https://enclave.io/" class="button-link white">
-    <div
-      class="ztna-small-button-static light-blue-1-background  h4 justify-content-center"
-    >
-      {%include icons/web-header-icon.svg cls="white-fill"%} Visit website
+    <div class="ztna-small-button-static light-blue-1-background  h4 justify-content-center">
+      {%include icons/web-header-icon.svg cls="white-fill"%} Website
     </div>
   </a>
   <div class="space10"></div>
   <a href="#" class="button-link white">
-    <div
-      class="ztna-small-button-static light-blue-1-background h4 justify-content-center"
-    >
-      {%include icons/github.svg cls="white-fill"%} Visit
-      github
+    <div class="ztna-small-button-static light-blue-1-background h4 justify-content-center">
+      {%include icons/github.svg cls="white-fill"%} GitHub
     </div>
   </a>
-  <div class="space40"></div>
+  <div class="space40"></div>-->
 </div>
 <!-- /.offcanvas-info -->

@@ -1,10 +1,10 @@
-title: "The no-bullshit ZTNA vendor directory | Enclave Networks"
+title: "The no-bullshit ZTNA vendor directory"
 
 description:
-  - text: The Zero Trust Network Access site is curated by Enclave Networks Ltd.
-  - text: Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat.
-  - text: Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat.
-  - text: Sed posuere consectetur est at lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat.
+  - text: This vendor directory is curated and maintained by the team at <a href="https://enclave.io" target="_blank">https://enclave.io</a> and other <a href="https://github.com/zerotrustnetworkaccess/zerotrustnetworkaccess.info/graphs/contributors" target="_blank">contributors</a>.
+  - text: Like us, you might also be fed up with the hype and outlandish Zero Trust marketing claims being made by (some) frothing vendors. We built this site to help bring a little clarity back to the conversation and highlight the different architectures and options available.
+  - text: We believe the community as a whole benefits from an impartial, engineering-led and open-source resource to help better understand this emerging technology, so we've made the source code for this directory available on <a href="https://github.com/zerotrustnetworkaccess/zerotrustnetworkaccess.info" target="_blank">GitHub</a> and all the data is published under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">Creative Commons</a> license.
+  - text: Keeping the directory up to date and accurate requires a lot of work and while we maintain the vendor list on a best-effort basis, we welcome and encourage readers to submit a <a href="https://github.com/zerotrustnetworkaccess/zerotrustnetworkaccess.info/pulls" target="_blank">pull request</a> via GitHub to address any inaccuracies or omissions in the list.
 
 enclave_logo_1x: "/assets/images/enclave_logo.png"
 enclave_logo_2x: "/assets/images/enclave_logo@2x.png"
