@@ -108,7 +108,7 @@ vendors:
   - company: "Traefik"
     product: "Traefik Mesh"
     url: "https://traefik.io/traefik-mesh/"
-    license: "Open Source or Enterprise"
+    license: "Open Source"
     deployment: ""
     pricing: "Not Published"
     notes: "Is it zero trust network access?"
@@ -262,7 +262,7 @@ vendors:
     url: "https://www.xaptum.com/product"
     license: "Commercial"
     deployment: "SaaS"
-    pricing: "n/a"
+    pricing: "Published"
     notes: "Is this really an identity aware proxy? They talk about overlay..."
 
   - company: "CloudFlare"

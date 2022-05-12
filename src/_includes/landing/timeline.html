@@ -19,12 +19,13 @@ site.data.landing.timeline %}
         class="year-wrapper pr-lg-3 pl-lg-3"
         onclick="currentTimelineItem({{index}})"
       >
-        <p
-          class="h4 white timelineYear text-center"
+        <div
+          class="h4 white text-center timelinePill"
           onclick="currentTimelineItem({{index}})"
         >
-          {{node.year}}
-        </p>
+          <div class="timelineYear">{{node.year}}</div>
+          <div class="timelineAcronym ztna-small-text">{{node.acronym}}</div>
+        </div>
       </div>
       {% endfor %}
     </div>
@@ -38,10 +39,11 @@ site.data.landing.timeline %}
           <div
             class="timeline-item ztna-margin-bottom-40-20 -40-20 pr-md-40-20 pl-lg-16 pr-lg-16"
           >
-            <div class="timeline-item-date-wrapper ztna-margin-bottom-30-20">
+            <div class="timeline-item-date-wrapper">
               {% include icons/calendar.svg cls="light-blue-1" %}
               <p class="h4 light-blue-1">{{node.year}}</p>
             </div>
+            <div class="space10"></div>
             <h3 class="light-text-3">{{node.title}}</h3>
             <div class="space10"></div>
             <p class="ztna-small-text light-text-2">{{node.description}}</p>

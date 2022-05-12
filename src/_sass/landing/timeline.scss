@@ -8,8 +8,8 @@
 .timeline {
   width: 100%;
   max-width: 1170px;
-  height: 50px;
-  border-radius: 25px;
+  height: auto;
+  border-radius: 33px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,7 +19,7 @@
   .active {
     color: $timeline-active !important;
     background-color: $dark-text !important;
-    border-radius: 25px;
+    border-radius: 33px;
     padding: 8px 4%;
     cursor: pointer;
   }
@@ -31,16 +31,22 @@
   }
 }
 
-.timelineYear {
+.timelinePill {
   padding: 8px 4%;
+  margin: 5px 1px;
 
   &:hover {
     color: $timeline-active !important;
     background-color: $dark-text !important;
-    border-radius: 25px;
+    border-radius: 33px;
     padding: 8px 4%;
     cursor: pointer;
   }
+}
+
+.timelineAcronym {
+  font-size: 0.89em;
+  font-weight: 300;
 }
 
 .timeline-data-wrapper {
@@ -50,6 +56,16 @@
 
 .timeline-data {
   display: flex;
+
+  p {
+    a {
+      text-decoration: underline;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
 }
 
 .timeline-item {
@@ -76,7 +92,7 @@
     }
   }
 
-  .timelineYear {
+  .timelinePill {
     padding: 11px 3%;
 
     &:hover {
@@ -97,7 +113,7 @@
     }
   }
 
-  .timelineYear {
+  .timelinePill {
     padding: 8px 3%;
 
     &:hover {
