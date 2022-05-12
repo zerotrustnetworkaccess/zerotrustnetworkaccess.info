@@ -244,14 +244,6 @@ vendors:
     pricing: "" 
     notes: "ZTNA as a Service"
 
-  - company: "DH2i"
-    product: "DxOdyssey"
-    url: "https://dh2i.com/"
-    license: ""
-    deployment: ""
-    pricing: "" 
-    notes: ""
-
   - company: "Unisys"
     product: "Stealth"
     url: "https://stealthsecurity.unisys.com/"

@@ -17,6 +17,7 @@
   <div class="basic-slider owl-carousel ztna-carousels-wrapper grid" data-margin="5">
     {% for architecture in site.data.architecture %}
     {% assign arch = architecture[1] %}
+    {% if arch.display == true %}
     <div class="item item-detailed">
       <div class="item-content px-0 mx-auto">
         <div class="row">
@@ -53,6 +54,7 @@
         </div>
       </div>
     </div>
+    {% endif %}
     {% endfor %}
   </div>
 </div>

@@ -1,7 +1,7 @@
 name: "Identity Aware Proxy"
 abbreviation: "IAP"
 filter: "identity-aware-proxy"
-display: false
+display: true
 sort_order: "1"
 description: ""
 image: "https://via.placeholder.com/2280x1200"

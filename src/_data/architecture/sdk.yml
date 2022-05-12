@@ -1,7 +1,7 @@
 name: "Software Development Kit"
 abbreviation: "SDK"
 filter: "sdk"
-display: true
+display: false
 sort_order: "1"
 description: ""
 image: "https://via.placeholder.com/2280x1200"

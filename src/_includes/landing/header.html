@@ -12,23 +12,20 @@ site.data.landing.page-header %}
     {% endif %} {% if page_d.statistics %}
     <div class="ztna-counter-wrapper">
       {% for architecture in site.data.architecture %}
-        {% assign total_architectures = forloop.length %} 
         {% assign arch = architecture[1] %}
-
         {% if arch.display == true %}
-          {% assign vendors = arch.vendors %}
-          {% for vendor in vendors %} 
-            {% capture amount %}{{ amount | plus:1 }}{% endcapture %}
+          {% capture architectures %}{{ architectures | plus:1 }}{% endcapture %}
+          {% for vendor in arch.vendors %}
+            {% capture vendors %}{{ vendors | plus:1 }}{% endcapture %}
           {% endfor %}
         {% endif %}
       {% endfor %}
       <div class="ztna-counter-item counter">
-        <p class="h1 value">{{amount}}</p>
-
+        <p class="h1 value">{{vendors}}</p>
         <p class="ztna-small-text">Vendors</p>
       </div>
       <div class="ztna-counter-item counter">
-        <p class="h1 value">{{total_architectures}}</p>
+        <p class="h1 value">{{architectures}}</p>
         <p class="ztna-small-text">Architectures</p>
       </div>
       {% for list in page_d.statistics %}
