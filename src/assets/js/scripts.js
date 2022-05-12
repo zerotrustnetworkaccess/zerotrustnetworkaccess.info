@@ -109,8 +109,19 @@ $(document).ready(function () {
     setTimeout(function () {
       if (location.hash) {
         window.scrollTo(0, 0);
-        var target = location.hash.split("#");
-        smoothScrollTo($("#" + target[1]));
+        var filter = location.hash.split("#");
+        var target = filter[1].split("=");
+        
+        try {
+          var targetEval = $("#" + target[1]);
+          smoothScrollTo(targetEval);
+        }
+        catch (e)
+        {
+          // handle url fragments which don't eval to an 
+          // object on the dom, and don't smoothscroll
+          location.hash = "#vendors";
+        }
       }
     }, 1);
     $('a.scroll[href*="#"]:not([href="#"])').on("click", function () {
@@ -217,11 +228,16 @@ $(document).ready(function () {
         if (!hashFilter && isIsotopeInit) {
           return;
         }
-        isIsotopeInit = true;
         // filter isotope
+        var isotopeFilter = hashFilter;
+        if (hashFilter != "*")
+        {
+          isotopeFilter = "." + hashFilter;
+        }
+        isIsotopeInit = true;
         $grid.isotope({
           itemSelector: ".item",
-          filter: "." + hashFilter,
+          filter: isotopeFilter,
         });
         // set selected class on button
         if (hashFilter) {
