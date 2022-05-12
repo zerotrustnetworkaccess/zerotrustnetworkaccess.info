@@ -4,18 +4,18 @@ bg_image: "/assets/images/art/bg7.jpg"
 nodes:
   - year: "1996-98"
     acronym: "VPN"
-    title: "Virtual Private Network"
+    title: "Virtual Private Network (VPN)"
     description: 'Twenty years and two major architectures (hub-and-spoke, also known as remote access or point-to-site &amp; site-to-site) and a plethora of protocols (IPsec, L2TP, PPTP, IKE, OpenVPN, SSL/TLS VPN, Cisco AnyConnect etc.) all trying to achieve the same thing: provide a secure, private network on top of the public Internet; either by extending one logical network into another, or placing remote peers directly onto the local network.'
 
   - year: "2001"
     acronym: "MPLS"
-    title: "Multiprotocol Label Switching"
+    title: "Multiprotocol Label Switching (MPLS)"
     description: First conceived in an era when bandwidth was slow, high-speed broadband was not available either widely or cheaply, <a href="https://datatracker.ietf.org/doc/html/rfc3031">MPLS</a> helped to manage the delivery of traffic using labels. For example some packets may be labeled as mission critical traffic, others for real-time traffic or simple best effort delivery. The fastest, and lowest latency paths were reserved for the most important traffic. By enriching each packet with labels, routers had additional information to tell them how best route traffic most efficiently across the WAN.
 
   - year: "2003"
     acronym: "802.1x"
     title: "Network Access Control (NAC)"
-    description: "Network Access Control https://datatracker.ietf.org/doc/html/rfc3580"
+    description: "802.1x - later Network Access Control https://datatracker.ietf.org/doc/html/rfc3580"
 
   - year: "2005"
     acronym: "IPsec"
@@ -24,22 +24,22 @@ nodes:
 
   - year: "2007"
     acronym: "SDP"
-    title: "Software-Defined Perimeter"
+    title: "Software-Defined Perimeter (SDP)"
     description: The Software-Defined Perimeter architecture evolved out of single packet authorization and port knocking before it. Occasionally also referred to as Black Cloud, the SDP architecture evolved from the work done at the Defense Information Systems Agency (DISA) under the Global Information Grid (GIG) Black Core Network initiative around 2007, concepts of which were carried forwards by the <a href="https://en.wikipedia.org/wiki/Jericho_Forum" target="_blank">Jericho Forum</a> and later in 2014 as part of Google's <a href="https://research.google/pubs/pub43231/" target="_blank">BeyondCorp Initiative</a>. Now promoted by many vendors as the de facto architecture for ZTNA.
 
   - year: "2014"
     acronym: "SD-WAN"
-    title: "Software-Defined Wide Area Network"
+    title: "Software-Defined Wide Area Network (SD-WAN)"
     description: SD-WAN solutions started to enter the market in 2014 where it sought to bring Software Defined Networking (SDN) concepts to the WAN; switching from the painstakingly provisioned and predetermined MPLS routes on fixed circuits, to policy based WAN routing using the open Internet. SD-WAN  is often presented by vendors as means to achieve similar WAN optimization capabilities to MPLS for lower cost and less complexity.
 
   - year: "2018"
     acronym: "ZTON"
-    title: "Zero Trust Overlay Network"
+    title: "Zero Trust Overlay Network (ZTON)"
     description: xxx
 
   - year: "2019"
     acronym: "SASE"
-    title: "Secure access service edge"
+    title: "Secure Access Service Edge (SASE)"
     description: SASE (pronounced “sassy”)
 
   - year: "2022"
