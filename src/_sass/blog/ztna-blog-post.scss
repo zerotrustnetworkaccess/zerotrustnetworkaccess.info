@@ -3,14 +3,14 @@ $medium-spacer: 30px;
 $large-spacer: 50px;
 $fig-spacer: 10px;
 
-.ztna-post-cover {
+.post-cover {
   height: 300px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-.ztna-post-typography {
+.post-typography {
   .h1,
   h1,
   .h2,
@@ -159,15 +159,15 @@ blockquote {
 @media only screen and (max-width: $breakpoint-sm) {
   $small-spacer: 10px;
   $large-spacer: 40px;
-  .ztna-post-cover {
+  .post-cover {
     height: 150px;
   }
-  .ztna-post-typography code {
+  .post-typography code {
     font-size: 14px;
     line-height: 21px;
   }
 
-  .ztna-post-typography blockquote {
+  .post-typography blockquote {
     border-radius: 30px;
     padding: 34px 30px 20px 30px;
     margin-bottom: $medium-spacer;
@@ -181,13 +181,13 @@ blockquote {
     }
   }
 
-  .ztna-post-typography pre {
+  .post-typography pre {
     width: fit-content;
   }
 }
 
 @media only screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-lg) {
-  .ztna-post-cover {
+  .post-cover {
     height: 250px;
   }
   p.ztna-tag-small {
@@ -195,14 +195,14 @@ blockquote {
     margin-right: 10px !important;
   }
 
-  .ztna-post-typography blockquote {
+  .post-typography blockquote {
     p {
       margin-left: 0 !important;
       margin-right: 0 !important;
     }
   }
 
-  .ztna-post-typography pre {
+  .post-typography pre {
     &::-webkit-scrollbar {
       display: none;
     }

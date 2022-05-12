@@ -268,7 +268,7 @@ $(document).ready(function () {
       autoHeight: true,
       loop: true,
       margin: $bslider.data("margin"),
-      navContainerClass: "ztna-slider-navbuttons-wrapper",
+      navContainerClass: "slider-navbuttons-wrapper",
       navClass: [
         "owl-prev ztna-small-button-left white-background light-blue-1 h4 ml-10",
         "owl-next ztna-small-button-right white-background light-blue-1 h4 ml-10",
@@ -277,8 +277,8 @@ $(document).ready(function () {
         "<img src='/assets/icons/left-arrow.svg'> Prev",
         "Next <img src='/assets/icons/right-arrow.svg'>",
       ],
-      dotsClass: "ztna-slider-dots-wrapper",
-      dotClass: "ztna-slider-dot-item light-text-2-background",
+      dotsClass: "slider-dots-wrapper",
+      dotClass: "slider-dot-item light-text-2-background",
     });
   });
   $(".carousel").each(function () {
@@ -292,7 +292,7 @@ $(document).ready(function () {
       margin: $carousel.data("margin"),
       autoplay: false,
       autoplayTimeout: 3000,
-      navContainerClass: "ztna-slider-navbuttons-wrapper",
+      navContainerClass: "slider-navbuttons-wrapper",
       navClass: [
         "owl-prev ztna-small-button-left white-background light-blue-1 h4 ml-10",
         "owl-next ztna-small-button-right white-background light-blue-1 h4 ml-10",
@@ -301,8 +301,8 @@ $(document).ready(function () {
         "<img src='/assets/icons/left-arrow.svg'> Prev",
         "Next <img src='/assets/icons/right-arrow.svg'>",
       ],
-      dotsClass: "ztna-slider-dots-wrapper",
-      dotClass: "ztna-slider-dot-item light-text-2-background",
+      dotsClass: "slider-dots-wrapper",
+      dotClass: "slider-dot-item light-text-2-background",
 
       responsiveClass: true,
       responsive: {

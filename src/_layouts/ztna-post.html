@@ -72,13 +72,13 @@
     {% include modules/ztna-header.html container_class="container" dark_logo="true"
     hide_github="true" %}
     {% if page.post_image %} 
-    <img style="background-image: url({{page.post_image}})" class="ztna-post-cover ztna-margin-bottom-50-40 w-100"> 
+    <img style="background-image: url({{page.post_image}})" class="post-cover ztna-margin-bottom-50-40 w-100"> 
     {% endif %} 
     <div class="container-fluid ztna-blog-wrapper mx-auto px-0">
       {% include post/bread-crumbs.html %} 
      
         <div class="row ztna-margin-bottom-50-40 ml-lg-40 mr-lg-40">
-          <div class="col-lg-8 ztna-post-typography ">
+          <div class="col-lg-8 post-typography ">
             {% include post/post-metadata.html %} 
             {{content}}
             <a class="ztna-small-button-left white-background light-blue-1 h4 mt-50-40 ztna-margin-bottom-50-40" href="/blog">{%include icons/button-left-arrow.svg %} Back to blog</a>

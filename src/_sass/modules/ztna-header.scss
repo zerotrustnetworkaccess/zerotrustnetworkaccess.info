@@ -39,6 +39,7 @@ nav {
     }
   }
 }
+
 .ztna-nav {
   max-width: 1280px;
   width: 100%;
@@ -79,7 +80,7 @@ nav {
 }
 
 
-.ztna-logo-base {
+.logo-base {
   margin-left: 55px !important;
   margin-top: 30px !important;
   margin-bottom: 30px !important;
@@ -91,7 +92,7 @@ nav {
 }
 
 .ztna-logo {
-  @extend .ztna-logo-base;
+  @extend .logo-base;
   background: -webkit-image-set(
     url("/assets/images/logo-light.png") 1x,
     url("/assets/images/logo-light@2x.png") 2x
@@ -99,7 +100,7 @@ nav {
 }
 
 .ztna-dark-logo {
-  @extend .ztna-logo-base;
+  @extend .logo-base;
   background: -webkit-image-set(
     url("/assets/images/logo.png") 1x,
     url("/assets/images/logo@2x.png") 2x

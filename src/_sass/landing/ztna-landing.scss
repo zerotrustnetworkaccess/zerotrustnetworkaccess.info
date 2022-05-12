@@ -1,12 +1,12 @@
 @import "ztna-breakpoints";
 
-.ztna-head-container {
+.head-container {
   max-width: 900px;
   padding-top: 226px;
   padding-bottom: 116px;
 }
 
-.ztna-hero-background {
+.hero-background {
   background: $head-background -webkit-image-set(url("/assets/images/landing/cover.png")
         1x, url("/assets/images/landing/cover@2x.png") 2x);
   background-size: cover;
@@ -14,13 +14,13 @@
   background-position: center;
 }
 
-.ztna-counter-wrapper {
+.counter-wrapper {
   max-width: 600px;
   column-gap: 40px;
   margin: 0 auto 50px;
 }
 
-.ztna-counter-item {
+.counter-item {
   width: 120px;
   text-align: center;
 }
@@ -46,20 +46,20 @@
   width: 94%;
 }
 
-.ztna-slider-navbuttons-wrapper {
+.slider-navbuttons-wrapper {
   display: flex;
   gap: 20px;
   justify-content: center;
 }
 
-.ztna-slider-dots-wrapper {
+.slider-dots-wrapper {
   display: flex;
   justify-content: center;
   margin-top: 30px;
   margin-bottom: 40px;
 }
 
-.ztna-slider-dot-item {
+.slider-dot-item {
   width: 10px;
   height: 10px;
   margin: 10px;
@@ -78,11 +78,11 @@
   }
 }
 
-.ztna-carousels-wrapper {
+.carousels-wrapper {
   max-width: 1170px;
   margin: 0 auto;
 }
-.ztna-testimonial-card {
+.testimonial-card {
   margin-left: 20px;
   margin-right: 20px;
   border-radius: 30px;
@@ -90,7 +90,7 @@
 }
 
 @media only screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-lg) {
-  .ztna-head-container {
+  .head-container {
     max-width: 600px;
     margin: 0 auto;
     padding: 180px 0 68px 0;
@@ -119,17 +119,17 @@
     }
   }
 
-  .ztna-testimonial-card {
+  .testimonial-card {
     margin-left: 15px;
     margin-right: 15px;
   }
 }
 
 @media only screen and (max-width: $breakpoint-sm) {
-  .ztna-head-container {
+  .head-container {
     padding: 120px 20px 50px 20px;
   }
-  .ztna-counter-wrapper {
+  .counter-wrapper {
     max-width: 100%;
   }
  
@@ -165,16 +165,16 @@
     width: 1280px;
   }
 
-  .ztna-slider-dot-item {
+  .slider-dot-item {
     width: 8px;
     height: 8px;
   }
-  .ztna-slider-dots-wrapper {
+  .slider-dots-wrapper {
     margin-top: 0px;
     margin-bottom: 10px;
   }
 
-  .ztna-testimonial-card {
+  .testimonial-card {
     margin: 0 auto;
     padding-left: 20px;
     padding-right: 20px;

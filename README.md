@@ -26,11 +26,6 @@ Other elements are ZTNA custom solution.
 
 All custom styles located in \_sass folder. In \_sass root are common styles and in subfolders situated particular styles.
 
-In html code you can distinguish styles by name:
-bootstrap names are kept original
-custom ztna styles came with ztna-prefix
-all other styles came from theme.
-
 features
 custom timeline
 subscription
