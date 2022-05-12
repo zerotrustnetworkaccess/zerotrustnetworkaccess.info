@@ -11,6 +11,8 @@ $(document).ready(function () {
   //   });
   // }
 
+/* disable sticky nav
+
   if ($(".navbar").length) {
     var options = {
       offset: 90,
@@ -29,6 +31,7 @@ $(document).ready(function () {
     };
     var banner = new Headhesive(".navbar", options);
   }
+*/
   /*-----------------------------------------------------------------------------------*/
   /*	HEADER BUTTONS
 /*-----------------------------------------------------------------------------------*/
