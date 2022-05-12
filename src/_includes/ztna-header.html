@@ -31,29 +31,21 @@
     </div>
 
     <ul class="navbar-nav menu align-items-lg-center align-items-md-center align-items-sm-start">
-      {% for menu in site.data.navigation.main_menu %}
 
-      <li
-        class="ztna-nav-item mr-60-40 mb-md-50 {% if menu.text == 'Github' and include.hide_github %} ztna-hidden {% endif %}"
-      >
-        <a class="nav-link d-flex align-items-center" href="{{menu.url}}"
-          >{% include icons/{{menu.icon}} cls="nav-link mobile-menu-items-fill"
-          %}
-          <span class="text-link ml-10 {% if include.dark_logo %} mobile-menu-items-color {% endif %}"
-            >{{menu.text}}</span
+      {% for menu in site.data.navigation.main_menu %}
+      <li class="ztna-nav-item mr-60-40 mb-md-50 {% if menu.text == 'Github' and include.hide_github %} ztna-hidden {% endif %}">
+        <a class="nav-link d-flex align-items-center" href="{{menu.url}}" {% if menu.new_window %} target="_blank" {% endif %}>
+          {% include icons/{{menu.icon}} cls="nav-link mobile-menu-items-fill" %}
+          <span class="h4 ml-10 text-link {% if include.dark_logo %} mobile-menu-items-color {% endif %}">{{menu.text}}</span
           >
         </a>
       </li>
-
       {% endfor %}
+
       <li class="ztna-nav-item">
-        <button class="plain nav-link nav-link d-flex align-items-center" data-toggle="offcanvas-info">
-          {% include icons/info-header-icon.svg cls="nav-link
-          mobile-menu-items-fill" %}
-          <span
-            class="h4 ml-10 text-link {% if include.dark_logo %} mobile-menu-items-color {% endif %}"
-            >Info</span
-          >
+        <button class="plain nav-link d-flex align-items-center" data-toggle="offcanvas-info">
+          {% include icons/info-header-icon.svg cls="nav-link mobile-menu-items-fill" %}
+          <span class="h4 ml-10 text-link {% if include.dark_logo %} mobile-menu-items-color {% endif %}">Info</span>
         </button>
       </li>
     </ul>

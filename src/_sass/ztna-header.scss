@@ -3,17 +3,18 @@ nav {
   .nav-link {
     &:hover {
       .text-link {
-        color: $light-blue-1 !important;
+        color: $logo-blue !important;
       }
 
       .mobile-menu-items-fill {
-        fill: $light-blue-1 !important;
+        fill: $logo-blue !important;
       }
     }
 
     .text-link {
+      font-size: 13px;
       &:hover {
-        color: $light-blue-1 !important;
+        color: $logo-blue !important;
       }
     }
   }
@@ -24,7 +25,7 @@ nav {
     button.hamburger:before,
     button.hamburger span,
     button.hamburger:after {
-      background: $light-blue-1 !important;
+      background: $logo-blue !important;
     }
   }
 }
