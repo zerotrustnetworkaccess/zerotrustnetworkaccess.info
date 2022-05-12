@@ -33,7 +33,7 @@
           {% assign arch = architecture[1] %}
           {% if arch.display == true %}
             <li>
-              <a class="ztna-tag-large background-color light-text-1 h4 mb-10 mr-10 button" data-filter=".{{arch.filter}}">
+              <a class="ztna-tag-large background-color light-text-1 h4 mb-10 mr-10 button" data-filter="{{arch.filter}}">
                 {{arch.name}} ({{arch.vendors.size}})
               </a>
             </li>
@@ -134,7 +134,7 @@
           </div>
           <div class="space20"></div>
           <h3 class="dark-text ztna-margin-bottom-20-10 mr-md-40-20 ml-md-40-20 mr-lg-40 ml-lg-40">
-            {{arch.name}} Vendors
+            {{arch.name}} Vendors ({{arch.vendors.size}})
           </h3>
           <div class="scroll-wrapper ml-md-40 mr-md-40 mr-lg-40 ml-lg-40">
             <table class="ztna-table mr-sm-20 ml-sm-20">

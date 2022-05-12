@@ -221,7 +221,7 @@ $(document).ready(function () {
         // filter isotope
         $grid.isotope({
           itemSelector: ".item",
-          filter: hashFilter,
+          filter: "." + hashFilter,
         });
         // set selected class on button
         if (hashFilter) {
