@@ -146,7 +146,7 @@ $(document).ready(function () {
           {
             scrollTop: target.offset().top,
           },
-          1500,
+          500,
           "easeInOutExpo"
         );
       }
@@ -169,6 +169,7 @@ $(document).ready(function () {
   /*	ISOTOPE GRID
 /*-----------------------------------------------------------------------------------*/
 
+  /* relax the overly keen auto-scroll
   const scrolltoVendors = () => {
     $(document).ready(function () {
       // Handler for .ready() called.
@@ -186,6 +187,7 @@ $(document).ready(function () {
   }
 
   $(window).on("hashchange", scrolltoVendors);
+  */
 
   function enableIsotope() {
     // for each container
