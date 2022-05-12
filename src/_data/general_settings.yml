@@ -17,8 +17,6 @@ black_logo_2x: "/assets/images/logo@2x.png"
 light_logo_1x: "/assets/images/logo-light.png"
 light_logo_2x: "/assets/images/logo-light@2x.png"
 
-copyright_text: "© 2022 Enclave Networks. All rights reserved."
-
 google_analytics:
   enable: true
   key: "G-XW7G2V52ZN"
