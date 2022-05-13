@@ -235,7 +235,7 @@ $(document).ready(function () {
         }
         // filter isotope
         var isotopeFilter = hashFilter;
-        if (hashFilter != "*")
+        if (hashFilter !== null && hashFilter != "*")
         {
           isotopeFilter = "." + hashFilter;
         }
