@@ -2,7 +2,7 @@
 site.data.landing.timeline %}
 <div class="timeline-container-fluid dark-text-background pt-100-70 pb-100-70">
   <div class="content-сontainer d-flex flex-column align-items-center mx-auto">
-    <div class="col-8 col-md-12 col-sm-12 ztna-margin-bottom-50-40 text-center">
+    <div class="col-8 col-md-12 col-sm-12 mb-50-40 text-center">
       <h2 class="light-text-3 text-center">{{timeline.title}}</h2>
     </div>
     <div
@@ -32,9 +32,9 @@ site.data.landing.timeline %}
         <div class="d-flex" style="width: {{size}}00%">
           {% for node in timeline.nodes %}
           <div
-            class="timeline-item ztna-margin-bottom-40-20 -40-20 pr-md-40-20 pl-lg-16 pr-lg-16"
+            class="timeline-item mb-40-20-40-20 pr-md-40-20 pl-lg-16 pr-lg-16"
           >
-            <div class="timeline-item-date-wrapper ztna-margin-bottom-30-20">
+            <div class="timeline-item-date-wrapper mb-30-20">
               {% include icons/calendar.svg cls="light-blue-1" %}
               <p class="h4 light-blue-1">{{node.year}}</p>
             </div>

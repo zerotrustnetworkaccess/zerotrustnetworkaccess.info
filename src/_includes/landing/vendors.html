@@ -6,9 +6,7 @@
     {% assign vendors = site.data.landing.vendors %}
     <div class="grid grid-view">
       {% if vendors.title %}
-      <div
-        class="mr-md-40-20 ml-md-40-20 ztna-margin-bottom-30-20 mr-lg-40 ml-lg-40"
-      >
+      <div class="mr-md-40-20 ml-md-40-20 mb-30-20 mr-lg-40 ml-lg-40">
         <p class="h5 light-text-2">{{vendors.label}}</p>
         {% endif %}
         <div class="space10"></div>
@@ -52,7 +50,7 @@
         >
           <div id="{{arch.filter}}"></div>
           <h2
-            class="dark-text ztna-margin-bottom-20-10 mr-md-40-20 ml-md-40-20 mr-lg-40 ml-lg-40"
+            class="dark-text mb-20-10 mr-md-40-20 ml-md-40-20 mr-lg-40 ml-lg-40"
           >
             {{arch.name}} {% if arch.abbreviation != ""
             %}({{arch.abbreviation}}){% endif %}
@@ -74,7 +72,7 @@
             <div class="col-lg-4 col-md-6 col-sm-6">
               <div class="mr-md-40-20 ml-md-40-20 mb-md-30 ml-lg-40">
                 {% if arch.strengths %}
-                <h3 class="dark-text ztna-margin-bottom-20-10">Strengths</h3>
+                <h3 class="dark-text mb-20-10">Strengths</h3>
                 <ul class="icon-list bullet-green mb-0">
                   {% for strength in arch.strengths %}
                   <li class="ztna-small-text light-text-1">
@@ -90,7 +88,7 @@
             <div class="col-lg-4 col-md-6 col-sm-6">
               <div class="mr-md-40-20 ml-md-40-20 mb-md-30">
                 {% if arch.strengths %}
-                <h3 class="dark-text ztna-margin-bottom-20-10">Weaknesses</h3>
+                <h3 class="dark-text mb-20-10">Weaknesses</h3>
                 <ul class="icon-list bullet-red mb-0">
                   {% for weakness in arch.weaknesses %}
                   <li class="ztna-small-text light-text-1">
@@ -106,7 +104,7 @@
             <div class="col-lg-4 col-md-6 col-sm-6">
               <div class="mr-md-40-20 ml-md-40-20">
                 {% if arch.strengths %}
-                <h3 class="dark-text ztna-margin-bottom-20-10">Trade-offs</h3>
+                <h3 class="dark-text mb-20-10">Trade-offs</h3>
                 <ul class="icon-list bullet-blue mb-0">
                   {% for tradeoff in arch.tradeoffs %}
                   <li class="ztna-small-text light-text-1">
@@ -122,7 +120,7 @@
           </div>
           <div class="space20"></div>
           <h3
-            class="dark-text ztna-margin-bottom-20-10 mr-md-40-20 ml-md-40-20 mr-lg-40 ml-lg-40"
+            class="dark-text mb-20-10 mr-md-40-20 ml-md-40-20 mr-lg-40 ml-lg-40"
           >
             {{arch.name}} Vendors
           </h3>

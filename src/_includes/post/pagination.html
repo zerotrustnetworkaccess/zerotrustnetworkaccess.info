@@ -7,11 +7,7 @@
         class="small-button-left white-background light-blue-1 h4 mr-10"
         href="{{ paginator.previous_page_path | prepend: base.url }}"
       >
-        <img
-          src="/assets/icons/left-arrow.svg"
-          alt="svg icon"
-          class="ztna-margin-right-10"
-        />
+        <img src="/assets/icons/left-arrow.svg" alt="svg icon" class="mr-10" />
         Prev
       </a>
     </li>
@@ -22,11 +18,7 @@
         href="{{ paginator.next_page_path | prepend: base.url }}"
       >
         Next
-        <img
-          src="/assets/icons/right-arrow.svg"
-          alt="svg icon"
-          class="ztna-margin-left-10"
-        />
+        <img src="/assets/icons/right-arrow.svg" alt="svg icon" class="ml-10" />
       </a>
     </li>
     {% endif %}

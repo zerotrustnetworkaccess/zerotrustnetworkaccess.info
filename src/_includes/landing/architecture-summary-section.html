@@ -3,9 +3,7 @@ architecture-summary = site.data.landing.architecture-summary %}
 <div class="container-fluid background-color pt-100-70 pb-100-70 px-md-40-20">
   <div class="ztna-content-wrappe mx-auto">
     <div class="row d-flex justify-content-center">
-      <div
-        class="col-lg-7 col-md-10 col-sm-12 ztna-margin-bottom-50-40 text-center"
-      >
+      <div class="col-lg-7 col-md-10 col-sm-12 mb-50-40 text-center">
         <p class="h5 light-text-2 text-center">
           {{architecture-summary.label}}
         </p>
@@ -26,12 +24,12 @@ architecture-summary = site.data.landing.architecture-summary %}
             <h3 id="arch.name" class="dark-text">{{arch.name}}</h3>
             {% endif %}
             <div class="space10"></div>
-            <div class="ztna-margin-bottom-30-20">
+            <div class="mb-30-20">
               {% if arch.description %}
               <p class="light-text-1 ztna-small-text">{{arch.description}}</p>
               {% endif %}
             </div>
-            <div class="ml-5 ztna-margin-bottom-30-20">
+            <div class="ml-5 mb-30-20">
               <a href="#filter=.{{arch.filters}}">
                 {%include components/link.html
                 content=architecture-summary.button %}

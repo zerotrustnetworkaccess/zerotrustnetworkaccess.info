@@ -5,7 +5,7 @@
     <div class="row">
       <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-md-54-40">
         <div class="footer-col">
-          <div class="ztna-margin-bottom-30-20">
+          <div class="mb-30-20">
             <img
               srcset="
                 {{site.data.general_settings.light_logo_1x}} 1x,
@@ -30,13 +30,11 @@
       <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-md-54-40">
         {% assign subscription = site.data.ztna-footer.subscribtion %}
         <div class="footer-col">
-          <h3
-            class="light-text-3 ztna-margin-bottom-30 ztna-margin-bottom-30-20"
-          >
+          <h3 class="light-text-3 ztna-margin-bottom-30 mb-30-20">
             {{subscription.title}}
           </h3>
 
-          <p class="ztna-small-text light-text-2 ztna-margin-bottom-30-20">
+          <p class="ztna-small-text light-text-2 mb-30-20">
             {{subscription.text}}
           </p>
 
@@ -51,9 +49,7 @@
       <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
         {% assign social_accounts = site.data.ztna-footer.social_accounts %}
         <div>
-          <h3 class="light-text-3 ztna-margin-bottom-30-20">
-            {{social_accounts.title}}
-          </h3>
+          <h3 class="light-text-3 mb-30-20">{{social_accounts.title}}</h3>
 
           <ul class="list-unstyled md-flex mb-0">
             {% for links in social_accounts.links %}
