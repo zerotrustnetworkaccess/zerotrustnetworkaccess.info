@@ -34,7 +34,7 @@
       {% for menu in site.data.navigation.main_menu %}
 
       <li
-        class="ztna-nav-item pl-0 pr-0 mr-60-40 mb-md-50 {% if menu.text == 'Github' and include.hide_github %} ztna-hidden {% endif %}"
+        class="ztna-nav-item pl-0 pr-0 mr-60-40 mb-md-50 {% if menu.text == 'Github' and include.hide_github %} d-none {% endif %}"
       >
         <a class="nav-link d-flex align-items-center" href="{{menu.url}}"
           >{% include icons/{{menu.icon}} cls="nav-link mobile-menu-items-fill"
@@ -107,7 +107,7 @@ background-image: -webkit-image-set(
   <div class="space30"></div>
   <a href="https://enclave.io/" class="button-link white">
     <div
-      class="ztna-small-button-static light-blue-1-background  h4 justify-content-center"
+      class="small-button-static light-blue-1-background  h4 justify-content-center"
     >
       {%include icons/web-header-icon.svg cls="white-fill"%} Visit website
     </div>
@@ -115,7 +115,7 @@ background-image: -webkit-image-set(
   <div class="space10"></div>
   <a href="#" class="button-link white">
     <div
-      class="ztna-small-button-static light-blue-1-background h4 justify-content-center"
+      class="small-button-static light-blue-1-background h4 justify-content-center"
     >
       {%include icons/github.svg cls="white-fill"%} Visit
       github

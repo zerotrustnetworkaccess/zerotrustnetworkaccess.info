@@ -4,7 +4,7 @@
     {% if paginator.previous_page %}
     <li>
       <a
-        class="ztna-small-button-left white-background light-blue-1 h4 mr-10"
+        class="small-button-left white-background light-blue-1 h4 mr-10"
         href="{{ paginator.previous_page_path | prepend: base.url }}"
       >
         <img
@@ -18,7 +18,7 @@
     {% endif %} {% if paginator.next_page %}
     <li>
       <a
-        class="ztna-small-button-right white-background light-blue-1 h4"
+        class="small-button-right white-background light-blue-1 h4"
         href="{{ paginator.next_page_path | prepend: base.url }}"
       >
         Next

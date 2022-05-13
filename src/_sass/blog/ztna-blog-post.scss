@@ -46,12 +46,12 @@ $fig-spacer: 10px;
     margin-bottom: $medium-spacer;
 
     thead {
-      @extend .ztna-table-head;
+      @extend .table-head;
       @extend .background-color;
       @extend .light-text-2;
     }
     tbody {
-      @extend .ztna-table-body;
+      @extend .table-body;
       @extend .ztna-small-text;
       @extend .dark-text;
     }
@@ -102,28 +102,28 @@ $fig-spacer: 10px;
     line-height: 24px;
   }
 
-  .ztna-small-button-left {
+  .small-button-left {
     @extend .mr-md-40-20;
     @extend .ml-md-40-20;
     width: fit-content;
   }
 
-  a.ztna-small-button-left {
+  a.small-button-left {
     text-decoration: none;
   }
 
-  .ztna-tag-small {
+  .tag-small {
     width: max-content;
   }
 
-  a.ztna-tag-small {
+  a.tag-small {
     @extend .light-text-1;
     &:hover {
       @extend .light-blue-1;
     }
   }
 
-  p.ztna-tag-small {
+  p.tag-small {
     margin-bottom: 10px;
     pointer-events: none;
   }
@@ -190,7 +190,7 @@ blockquote {
   .post-cover {
     height: 250px;
   }
-  p.ztna-tag-small {
+  p.tag-small {
     margin-left: 0 !important;
     margin-right: 10px !important;
   }

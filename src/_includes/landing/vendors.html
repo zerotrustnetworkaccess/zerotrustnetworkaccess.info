@@ -2,7 +2,7 @@
   class="container-fluid background-white pt-100-70 pb-100-70 d-flex justify-content-center px-0"
   id="vendors"
 >
-  <div class="ztna-content-wrapper w-100">
+  <div class="content-сontainer w-100">
     {% assign vendors = site.data.landing.vendors %}
     <div class="grid grid-view">
       {% if vendors.title %}
@@ -20,7 +20,7 @@
         <ul class="pl-md-40-20 mr-lg-40 ml-lg-40">
           <li>
             <a
-              class="active ztna-tag-large background-color light-text-1 h4 mb-10 mr-10 button"
+              class="active tag-large background-color light-text-1 h4 mb-10 mr-10 button"
               data-filter="*"
             >
               All
@@ -31,7 +31,7 @@
           architecture[1] %} {% if arch.display == true %}
           <li>
             <a
-              class="ztna-tag-large background-color light-text-1 h4 mb-10 mr-10 button"
+              class="tag-large background-color light-text-1 h4 mb-10 mr-10 button"
               data-filter=".{{arch.filter}}"
             >
               {{arch.name}}
@@ -128,7 +128,7 @@
           </h3>
           <div class="scroll-wrapper ml-md-40 mr-md-40 mr-lg-40 ml-lg-40">
             <table class="ztna-table mr-sm-20 ml-sm-20">
-              <thead class="ztna-table-head background-color light-text-2">
+              <thead class="table-head background-color light-text-2">
                 <tr>
                   <th scope="col">#</th>
                   <th scope="col">Company</th>
@@ -138,7 +138,7 @@
                   <th scope="col">Pricing</th>
                 </tr>
               </thead>
-              <tbody class="ztna-table-body ztna-small-text dark-text">
+              <tbody class="table-body ztna-small-text dark-text">
                 {% assign vendors = arch.vendors | sort: 'company' %} {% for
                 vendor in vendors %}
                 <tr>

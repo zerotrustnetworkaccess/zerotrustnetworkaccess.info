@@ -270,8 +270,8 @@ $(document).ready(function () {
       margin: $bslider.data("margin"),
       navContainerClass: "slider-navbuttons-wrapper",
       navClass: [
-        "owl-prev ztna-small-button-left white-background light-blue-1 h4 ml-10",
-        "owl-next ztna-small-button-right white-background light-blue-1 h4 ml-10",
+        "owl-prev small-button-left white-background light-blue-1 h4 ml-10",
+        "owl-next small-button-right white-background light-blue-1 h4 ml-10",
       ],
       navText: [
         "<img src='/assets/icons/left-arrow.svg'> Prev",
@@ -294,8 +294,8 @@ $(document).ready(function () {
       autoplayTimeout: 3000,
       navContainerClass: "slider-navbuttons-wrapper",
       navClass: [
-        "owl-prev ztna-small-button-left white-background light-blue-1 h4 ml-10",
-        "owl-next ztna-small-button-right white-background light-blue-1 h4 ml-10",
+        "owl-prev small-button-left white-background light-blue-1 h4 ml-10",
+        "owl-next small-button-right white-background light-blue-1 h4 ml-10",
       ],
       navText: [
         "<img src='/assets/icons/left-arrow.svg'> Prev",

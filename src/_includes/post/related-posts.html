@@ -1,6 +1,4 @@
-<div
-  class="container-fluid mb-100 ztna-mb-md-100-70 ztna-blog-wrapper px-0 mx-auto"
->
+<div class="container-fluid mb-100 ztna-mb-md-100-70 blog-wrapper px-0 mx-auto">
   {% assign posts = site.posts | where: "categories", include.category[0]%} {%
   if posts.size == 1 %}
   <div class="ml-lg-40 mr-lg-40 mr-md-25-5 ml-md-25-5">

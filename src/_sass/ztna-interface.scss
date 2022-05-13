@@ -20,19 +20,15 @@ html {
   scroll-behavior: smooth;
 }
 
-.ztna-content-wrapper {
+.content-сontainer {
   max-width: $landing-width;
 }
 
-.ztna-blog-wrapper {
+.blog-wrapper {
   max-width: $blog-width;
 }
 
-.ztna-hidden {
-  display: none;
-}
-
-.ztna-button {
+.button {
   padding: 13px 30px;
   border-radius: 25px;
   border: none;
@@ -52,7 +48,7 @@ html {
   }
 }
 
-.ztna-small-button {
+.small-button {
   padding: 6px 20px;
   border-radius: 25px;
   box-sizing: border-box;
@@ -65,8 +61,8 @@ html {
   }
 }
 
-.ztna-small-button-static {
-  @extend .ztna-small-button;
+.small-button-static {
+  @extend .small-button;
   &:hover {
     cursor: pointer;
     -webkit-box-shadow: 0 0 0 4px rgba(68, 160, 248, 0.5);
@@ -74,8 +70,8 @@ html {
   }
 }
 
-.ztna-small-button-right {
-  @extend .ztna-small-button;
+.small-button-right {
+  @extend .small-button;
   &:hover {
     cursor: pointer;
     column-gap: 15px;
@@ -83,8 +79,8 @@ html {
   }
 }
 
-.ztna-small-button-left {
-  @extend .ztna-small-button;
+.small-button-left {
+  @extend .small-button;
   &:hover {
     cursor: pointer;
     column-gap: 15px;
@@ -92,7 +88,7 @@ html {
   }
 }
 
-.ztna-input {
+.input {
   width: 100%;
   border: none;
   border-radius: 20px;
@@ -104,8 +100,8 @@ html {
   }
 }
 
-.ztna-input-dark {
-  @extend .ztna-input;
+.input-dark {
+  @extend .input;
   &:hover {
     cursor: pointer;
     @extend .input-active-dark;
@@ -118,8 +114,8 @@ html {
   }
 }
 
-.ztna-input-light {
-  @extend .ztna-input;
+.input-light {
+  @extend .input;
   border: 2px solid $light-blue-1;
 
   &:hover {
@@ -133,7 +129,7 @@ html {
   align-items: center;
 }
 
-.ztna-tag-large {
+.tag-large {
   @extend .ztna-tag;
   padding: 8px 20px;
   width: max-content;
@@ -148,13 +144,13 @@ html {
   }
 }
 
-.ztna-tag-small {
+.tag-small {
   @extend .ztna-tag;
   padding: 3px 10px;
   width: min-content;
 }
 
-.ztna-num-label {
+.num-label {
   width: 80px;
   height: 80px;
   border-radius: 50%;
@@ -163,12 +159,7 @@ html {
   align-items: center;
 }
 
-.ztna-menu-icon {
-  width: auto;
-  height: 18px;
-}
-
-.ztna-post-wrapper {
+.post-wrapper {
   width: 100%;
   margin: 0;
   a:hover {
@@ -176,14 +167,14 @@ html {
   }
 }
 
-.ztna-post-image {
+.post-image {
   border-radius: 5px;
   width: 100%;
   object-fit: cover;
 }
 
 
-.ztna-post-title {
+.post-title {
   height: $h3lineheight * 2;
   overflow: hidden;
   display: -webkit-box;
@@ -196,7 +187,7 @@ html {
   width: 100%;
 }
 
-.ztna-table-head {
+.table-head {
   tr:first-child th:first-child {
     border-top-left-radius: 20px;
     padding: 8px 20px;
@@ -207,7 +198,7 @@ html {
   }
 }
 
-.ztna-table-body {
+.table-body {
   tr:last-child {
     th:first-child,
     td:first-child {
@@ -249,25 +240,13 @@ td {
   display: none;
 }
 
-.ztna-overflow {
-  overflow-x: scroll;
-  scroll-behavior: smooth;
-  &::-webkit-scrollbar {
-    display: none;
-  }
-}
-
-.ztna-slider-image {
+.slider-image {
   border-radius: 30px;
 }
 
 @media only screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-lg) {
-  .ztna-md-sm-posts-height {
+  .md-sm-posts-height {
     height: $md-sm-posts-height;
-  }
-
-  .ztna-md-max-width {
-    max-width: $md-posts-max-width;
   }
 }
 
@@ -290,12 +269,8 @@ td {
     z-index: 10;
   }
 
-  .ztna-md-sm-posts-height {
+  .md-sm-posts-height {
     height: $md-sm-posts-height;
-  }
-
-  .ztna-sm-max-width {
-    max-width: $sm-posts-max-width;
   }
 
   .sm-flex {
@@ -304,24 +279,16 @@ td {
 }
 
 @media only screen and (min-width: $breakpoint-lg) {
-  .ztna-lg-4-posts-max-width {
-    max-width: $four-in-row-posts-max-width;
-  }
-  .ztna-lg-4-posts-height {
+  
+  .lg-4-posts-height {
     height: $four-in-row-posts-height;
   }
 
-  .ztna-lg-3-posts-max-width {
-    max-width: $three-in-row-posts-max-width;
-  }
-
-  .ztna-lg-3-posts-height {
+  .lg-3-posts-height {
     height: $three-in-row-posts-height;
   }
-  .ztna-lg-2-posts-max-width {
-    max-width: $two-in-row-posts-max-width;
-  }
-  .ztna-lg-2-posts-height {
+
+  .lg-2-posts-height {
     height: $two-in-row-posts-height;
   }
 }

@@ -1,9 +1,7 @@
 {% if site.data.landing.timeline.enable %} {% assign timeline =
 site.data.landing.timeline %}
 <div class="timeline-container-fluid dark-text-background pt-100-70 pb-100-70">
-  <div
-    class="ztna-content-wrapper d-flex flex-column align-items-center mx-auto"
-  >
+  <div class="content-сontainer d-flex flex-column align-items-center mx-auto">
     <div class="col-8 col-md-12 col-sm-12 ztna-margin-bottom-50-40 text-center">
       <h2 class="light-text-3 text-center">{{timeline.title}}</h2>
     </div>
@@ -52,14 +50,14 @@ site.data.landing.timeline %}
     <div class="row d-flex justify-content-center dark-text-background">
       <button
         id="prev"
-        class="ztna-small-button-left dark-buttons-background light-blue-1 h4 mr-10"
+        class="small-button-left dark-buttons-background light-blue-1 h4 mr-10"
         onClick="plusTimelineItem(-1, 'prev')"
       >
         {%include icons/button-left-arrow.svg %} Prev
       </button>
       <button
         id="next"
-        class="ztna-small-button-right dark-buttons-background light-blue-1 h4 ml-10"
+        class="small-button-right dark-buttons-background light-blue-1 h4 ml-10"
         onClick="plusTimelineItem(1, 'next')"
       >
         Next {%include icons/button-right-arrow.svg %}
