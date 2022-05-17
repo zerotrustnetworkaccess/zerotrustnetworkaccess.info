@@ -1,13 +1,10 @@
-{% if site.data.landing.architecture-summary.enable %} {% assign
-architecture-summary = site.data.landing.architecture-summary %}
-<div
-  class="container-fluid background-color ztna-landing-section-wrapper px-md-40-20"
->
+{% if site.data.landing.architecture-summary.enable %}
+
+{% assign architecture-summary = site.data.landing.architecture-summary %}
+<div class="container-fluid background-color ztna-landing-section-wrapper px-md-40-20">
   <div class="ztna-content-wrappe mx-auto">
     <div class="row d-flex justify-content-center">
-      <div
-        class="col-lg-7 col-md-10 col-sm-12 ztna-margin-bottom-50-40 text-center"
-      >
+      <div class="col-12 ztna-margin-bottom-50-40 text-center">
         <p class="h5 light-text-2 text-center">
           {{architecture-summary.label}}
         </p>
@@ -17,12 +14,10 @@ architecture-summary = site.data.landing.architecture-summary %}
     </div>
   </div>
 
-  <div
-    class="basic-slider owl-carousel ztna-carousels-wrapper grid"
-    data-margin="5"
-  >
-    {% for architecture in site.data.architecture %} {% assign arch =
-    architecture[1] %}
+  <div class="basic-slider owl-carousel ztna-carousels-wrapper grid" data-margin="5">
+    {% for architecture in site.data.architecture %}
+    {% assign arch = architecture[1] %}
+    {% if arch.display == true %}
     <div class="item item-detailed">
       <div class="item-content px-0 mx-auto">
         <div class="row">
@@ -37,7 +32,7 @@ architecture-summary = site.data.landing.architecture-summary %}
               {% endif %}
             </div>
             <div class="ml-5 ztna-margin-bottom-30-20">
-              <a href="#filter=.{{arch.filters}}">
+              <a href="#filter=.{{arch.filter}}">
                 {%include components/link.html
                 content=architecture-summary.button %}
               </a>
@@ -59,6 +54,7 @@ architecture-summary = site.data.landing.architecture-summary %}
         </div>
       </div>
     </div>
+    {% endif %}
     {% endfor %}
   </div>
 </div>

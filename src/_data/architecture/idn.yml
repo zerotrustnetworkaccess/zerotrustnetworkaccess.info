@@ -1,39 +1,26 @@
 name: "Identity Defined Network"
-filters:
-  - idn
 abbreviation: "IDN"
-displayByDeafult: false
-sort_order: "5"
-description: "..."
+filter: "identity-defined-network"
+display: true
+sort_order: "1"
+description: "Implementation of the HIP protocol"
 image: "/assets/images/architecture/idn.png"
-image_2x: "/assets/images/architecture/idn@2x.png"
-paragraphs:
-  - text: "Nullam quis risus eget urna mollis ornare."
+paragraphs: 
+  - text: ""
 strengths:
-  - title: "Nullam quis risus eget urna mollis ornare."
-    description: ""
-  - title: "Donec id elit non mi porta gravida at eget."
-    description: ""
-  - title: "Fusce dapibus, tellus ac cursus commodo."
+  - title: ""
     description: ""
 weaknesses:
-  - title: "Nullam quis risus eget urna mollis ornare."
-    description: ""
-  - title: "Donec id elit non mi porta gravida at eget."
-    description: ""
-  - title: "Fusce dapibus, tellus ac cursus commodo."
+  - title: ""
     description: ""
 tradeoffs:
-  - title: "Nullam quis risus eget urna mollis ornare."
+  - title: ""
     description: ""
-  - title: "Donec id elit non mi porta gravida at eget."
-    description: ""
-  - title: "Fusce dapibus, tellus ac cursus commodo."
-    description: ""
-vendors:
+vendors: 
   - company: "Tempered Networks"
     product: "Airwall"
     url: "https://www.temperednetworks.com/"
-    license: ""
-    deployment: ""
-    pricing: ""
+    license: "Commercial"
+    deployment: "SaaS and Hardware"
+    pricing: "Not Published"
+    notes: ""

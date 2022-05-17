@@ -1,17 +1,17 @@
 enable: true
 label: "Approach meets architecture"
-title: "Zero Trust Network Access (ZTNA)"
+title: "Zero Trust Network Access"
 image: "/assets/images/landing/ztna.png"
 image_2x: "/assets/images/landing/ztna@2x.png"
-description: "ZTNA is a product or service that creates an identity and context-based, logical access boundary around an application or set of applications. The applications are hidden from discovery, and access is restricted via a trust broker to a set of named entities."
+description: 'Gartner have defined <a href="https://www.gartner.com/en/information-technology/glossary/zero-trust-network-access-ztna-" target="_blank"> Zero Trust Network Access</a>, or ZTNA, as "<em>a product or service that creates an identity- and context-based, logical access boundary around an application or set of applications. The applications are hidden from discovery, and access is restricted via a trust broker to a set of named entities.</em>"<br /><br />Put simply, this means that:'
 more:
   link: https://www.gartner.com/en/information-technology/glossary/zero-trust-network-access-ztna-
   text: Zero Trust Network Access (ZTNA), Gartner Glossary 2019
 lists:
   text:
-    - "Applications are hidden from discovery, no public visibility."
-    - "Access is restricted via a trust broker."
-    - "Broker verifies the identity, context and policy."
-    - "Lateral movement in the network is prohibited."
-    - "Reduced surface area available for attack."
+    - "Applications are hidden from discovery, no public visibility"
+    - "Access is restricted via a trust broker"
+    - "The trust broker verifies the identity, context and policy"
+    - "Lateral movement in the network is prohibited"
+    - "There is a reduced surface area available for attack"
   icon: "/assets/icons/round-check.svg"

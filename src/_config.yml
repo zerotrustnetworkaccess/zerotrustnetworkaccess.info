@@ -96,6 +96,7 @@ feed:
 
 sass:
   sass_dir: _sass
+  sourcemap: never
 
 disqus:
   shortname: "zerotrustnetworkaccess"

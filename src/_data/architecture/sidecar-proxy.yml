@@ -1,9 +1,9 @@
-name: "Network Virtualization Overlays"
-abbreviation: "NVO3"
-filter: "nvo3"
+name: "Sidecar Proxy"
+abbreviation: ""
+filter: "sidecar"
 display: false
 sort_order: "1"
-description: "https://datatracker.ietf.org/wg/nvo3/documents/"
+description: ""
 image: "https://via.placeholder.com/2280x1200"
 paragraphs: 
   - text: ""
@@ -17,3 +17,11 @@ tradeoffs:
   - title: ""
     description: ""
 vendors: 
+
+  - company: "Kuma"
+    product: "Kuma"
+    url: "https://kuma.io/"
+    license: "Open Source"
+    deployment: "Self-hosted"
+    pricing: "Not Published"
+    notes: ""

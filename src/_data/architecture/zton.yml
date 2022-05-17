@@ -1,12 +1,10 @@
 name: "Zero-Trust Overlay Network"
-filters:
-  - zton
-displayByDeafult: true
 abbreviation: ""
-sort_order: "1"
+filter: "zero-trust-overlay-network"
+display: true
+sort_order: 1
 description: "Direct, peer to peer connectivity enabled by UDP or TCP hole punching."
 image: "/assets/images/architecture/zton.png"
-image_2x: "/assets/images/architecture/zton@2x.png"
 paragraphs:
   - text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non libero at sapien laoreet dapibus. Donec in semper augue. Sed elit odio, consectetur ut risus ac, sodales scelerisque nisl. Integer enim eros, ullamcorper a sodales faucibus, molestie vel urna. Sed euismod molestie pretium."
   - text: "Proin ultricies tortor justo, sed pulvinar sem tincidunt id. Vivamus ullamcorper dictum ante ac dignissim."
@@ -48,6 +46,7 @@ vendors:
     license: "Open Source"
     deployment: "Self-hosted"
     pricing: "n/a"
+    notes: ""
 
   - company: "Enclave Networks"
     product: "Enclave"
@@ -55,6 +54,7 @@ vendors:
     license: "Commercial"
     deployment: "SaaS"
     pricing: "Published"
+    notes: ""
 
   - company: "Tailscale"
     product: "Tailscale"
@@ -62,6 +62,7 @@ vendors:
     license: "Open Source"
     deployment: "SaaS"
     pricing: "Published"
+    notes: ""
 
   - company: "ZeroTier"
     product: "ZeroTier"
@@ -69,6 +70,7 @@ vendors:
     license: "Open Source"
     deployment: "SaaS and Self-hosted"
     pricing: "Published"
+    notes: ""
 
   - company: "Husarnet"
     product: "Husarnet"
@@ -76,38 +78,52 @@ vendors:
     license: "Open Source"
     deployment: "SaaS and Self-hosted"
     pricing: "Published"
-
+    notes: ""
+  
   - company: "Ananda Networks"
     product: "Ananda"
     url: "https://www.ananda.net/"
     license: "Commercial"
     deployment: "SaaS"
-    pricing: "Not Published"
+    pricing: "Published"
+    notes: ""
 
-  - company: "Wiretrustee"
-    product: "Wiretrustee"
-    url: "https://wiretrustee.com/"
+  - company: "Netbird"
+    product: "Netbird"
+    url: "https://netbird.io/"
     license: "Open Source"
     deployment: "SaaS"
-    pricing: "n/a"
+    pricing: "Published"
+    notes: "Formerly Wiretrustee"
 
-  - company: "n/a"
-    product: "Headscale (Tailscale Clone)"
+  - company: "juanfont/headscale"
+    product: "Headscale"
     url: "https://github.com/juanfont/headscale"
     license: "Open Source"
     deployment: "Self-hosted"
     pricing: "n/a"
-
-  - company: "Twingate"
-    product: "Twingate"
-    url: "https://twingate.com/"
-    license: "Commercial"
-    deployment: "SaaS"
-    pricing: "Published"
+    notes: ""
 
   - company: "Gravitl"
     product: "Netmaker"
     url: "https://gravitl.com/"
     license: "Open Source"
     deployment: "Self-hosted"
-    pricing: "Paid support"
+    pricing: "n/a" 
+    notes: ""
+
+  - company: "FireZone"
+    product: "FireZone"
+    url: "https://www.firezone.dev/"
+    license: "Open Source"
+    deployment: "Self-hosted"
+    pricing: "n/a" 
+    notes: ""
+
+  - company: "Zentera"
+    product: ""
+    url: "http://zentera.net/"
+    license: ""
+    deployment: ""
+    pricing: ""
+    notes: "Cloud-Over-IP (COiP) Access. This looks a little like ZTON, but hard to tell if the architecture is peer-to-peer."

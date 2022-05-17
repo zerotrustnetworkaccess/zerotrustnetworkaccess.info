@@ -3,6 +3,7 @@ main_menu:
     url: "/blog"
     icon: blog-header-icon.svg
 
-  - text: "Github"
-    url: "#"
+  - text: "GitHub"
+    url: "https://github.com/zerotrustnetworkaccess/zerotrustnetworkaccess.info"
+    new_window: true
     icon: github.svg

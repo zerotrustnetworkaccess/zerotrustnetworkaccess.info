@@ -9,7 +9,7 @@ main_menu:
     title: "Info"
     icon: ../assets/icons/info-header-icon.svg
 
-    icon: ../assets/icons/info-header-icon.svg
 fly-out-bg: "/assets/images/header/fly-out-back.png"
 fly-out-bg-2x: "/assets/images/header/fly-out-back@2x.png"
+
 enclave-website: https://enclave.io/

@@ -1,0 +1,26 @@
+name: "Virtual Desktop Infrastructure"
+abbreviation: "VDI"
+filter: "virtual-desktop-infrastructure"
+display: false
+sort_order: "1"
+description: "Vendor provides and manages virtual desktops or containers rendered into vector or bitmap graphics over a secure network access pathway."
+image: "https://via.placeholder.com/2280x1200"
+paragraphs: 
+  - text: ""
+strengths:
+  - title: ""
+    description: ""
+weaknesses:
+  - title: ""
+    description: ""
+tradeoffs:
+  - title: ""
+    description: ""
+vendors: 
+  - company: "Amazon Web Services"
+    product: "WorkLink"
+    url: "https://aws.amazon.com/worklink/"
+    license: "Commercial"
+    deployment: "SaaS"
+    pricing: "Published"
+    notes: "VDI, own category, doesn't make ZTNA claims. Not listing for now (March 2022)"

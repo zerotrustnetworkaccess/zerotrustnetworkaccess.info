@@ -58,7 +58,7 @@ function currentTimelineItem(index) {
 
 function showTimelineItems(n) {
   let i;
-  const timelineYears = document.getElementsByClassName("timelineYear");
+  const timelineYears = document.getElementsByClassName("timelinePill");
   for (i = 0; i < timelineYears.length; i++) {
     timelineYears[i].className = timelineYears[i].className.replace(
       " active",
