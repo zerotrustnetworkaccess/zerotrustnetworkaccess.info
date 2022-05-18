@@ -1,23 +1,24 @@
 @import "ztna-breakpoionts";
 @import "ztna-colors.scss";
 
-$fontfamily: jost;
+$fontfamily-jost: jost, sans-serif;
+$fontfamily-inter: inter, sans-serif;
 $fontstyle: normal;
-$title-fontweight: 500;
-$text-fontweight: 300;
+$title-fontweight: 400;
+$text-fontweight: 400;
 $tablet: 744px;
 
 $h3lineheight: 32px;
 
 .titles {
-  font-family: $fontfamily;
+  font-family: $fontfamily-inter;
   font-style: $fontstyle;
   font-weight: $title-fontweight;
   margin: 0;
 }
 
 .text {
-  font-family: $fontfamily;
+  font-family: $fontfamily-inter;
   font-style: $fontstyle;
   font-weight: $text-fontweight;
   margin: 0;
@@ -35,6 +36,8 @@ h2,
   @extend .titles;
   font-size: 32px;
   line-height: 46px;
+  font-family: $fontfamily-jost;
+  font-weight: 500;
 }
 
 h3,
@@ -47,7 +50,7 @@ h3,
 h4,
 .h4 {
   @extend .titles;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 150%;
 }
 
@@ -67,8 +70,8 @@ p {
 
 .ztna-small-text {
   @extend .text;
-  font-size: 16px;
-  line-height: 150%;
+  font-size: 14px;
+  line-height: 170%;
 }
 
 a.text-link {
@@ -135,7 +138,6 @@ a.button-link {
   }
 
   a.text-link {
-    font-weight: 500;
     line-height: 130%;
   }
 }

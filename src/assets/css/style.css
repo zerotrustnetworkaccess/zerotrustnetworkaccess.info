@@ -127,7 +127,6 @@ html {
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "Jost", sans-serif;
   color: #606060;
   font-size: 0.8rem;
   background: #f9fafb;
@@ -2149,11 +2148,6 @@ ol {
   left: 0;
   z-index: -1;
 }
-.icon-blob span,
-.icon-blob h3,
-.icon-blob p {
-  font-family: "Jost", sans-serif !important;
-}
 .icon-blob span {
   font-weight: 500;
 }
@@ -2182,7 +2176,6 @@ ol {
   position: absolute;
   bottom: -0.15rem;
   left: 0.55rem;
-  font-family: "Jost", sans-serif !important;
   width: 1rem;
   height: 1rem;
   border-radius: 100%;
