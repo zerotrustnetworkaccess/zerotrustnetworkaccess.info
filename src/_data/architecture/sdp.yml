@@ -363,3 +363,11 @@ vendors:
     deployment: "SaaS"
     pricing: "Published"
     notes: ""
+
+  - company: "Infra"
+    product: "Infra"
+    url: "https://infrahq.com/"
+    license: "Open Source"
+    deployment: "SaaS or Self-hosted"
+    pricing: "n/a"
+    notes: ""
