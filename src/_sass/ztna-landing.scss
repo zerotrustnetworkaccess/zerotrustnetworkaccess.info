@@ -13,6 +13,17 @@
   background-repeat: no-repeat;
   background-position: center;
   
+  h1, p {
+    font-family: $fontfamily-jost;
+  }
+
+  h1 {
+    font-weight: 500;
+  }
+
+  p {
+    font-weight: 300;
+  }
 }
 
 .ztna-counter-wrapper {

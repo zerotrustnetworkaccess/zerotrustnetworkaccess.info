@@ -57,6 +57,10 @@
 .timeline-data {
   display: flex;
 
+  .light-text-3 {
+    font-family: $fontfamily-jost;
+  }
+
   p {
     a {
       text-decoration: underline;
