@@ -725,9 +725,9 @@ button.hamburger.animate.active:after {
   top: 0;
   bottom: 0;
   left: auto;
-  right: -300px;
-  width: 300px;
-  padding-top: 5rem;
+  right: -410px;
+  width: 410px;
+  padding-top: 3.2rem;
   padding-right: 1.5rem;
   padding-left: 1.5rem;
   overflow-y: auto;
@@ -750,14 +750,24 @@ button.hamburger.animate.active:after {
   -webkit-background-clip: padding;
   background-clip: padding-box;
 }
+.offcanvas-info a {
+  color: #cad8e6;
+  text-decoration: underline;
+}
+.offcanvas-info a:hover {
+  color: #fff;
+}
+.offcanvas-info p {
+  font-weight: 300;
+}
 .offcanvas-info.open {
   right: 0;
   visibility: visible;
 }
 .offcanvas-close {
   position: absolute;
-  top: 2rem;
-  left: 1.3rem;
+  top: 1rem;
+  right: 1.3rem;
   cursor: pointer;
   font-size: 1.2rem;
   -webkit-transition: all 200ms ease-in-out !important;
