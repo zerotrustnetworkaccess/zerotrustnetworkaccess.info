@@ -84,6 +84,6 @@ vendors:
     product: "Agilicus"
     url: "https://www.agilicus.com"
     license: "Commercial"
-    deployment: "SaaS & Self-hosted"
+    deployment: "SaaS or Self-hosted"
     pricing: "Published" 
     notes: ""

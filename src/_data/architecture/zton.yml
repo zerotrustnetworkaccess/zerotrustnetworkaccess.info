@@ -68,7 +68,7 @@ vendors:
     product: "ZeroTier"
     url: "https://zerotier.com/"
     license: "Open Source"
-    deployment: "SaaS and Self-hosted"
+    deployment: "SaaS or Self-hosted"
     pricing: "Published"
     notes: ""
 
@@ -76,7 +76,7 @@ vendors:
     product: "Husarnet"
     url: "https://husarnet.com/"
     license: "Open Source"
-    deployment: "SaaS and Self-hosted"
+    deployment: "SaaS or Self-hosted"
     pricing: "Published"
     notes: ""
   
