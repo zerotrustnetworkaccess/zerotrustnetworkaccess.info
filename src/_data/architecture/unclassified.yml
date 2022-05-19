@@ -223,7 +223,7 @@ vendors:
     license: ""
     deployment: ""
     pricing: ""
-    notes: "This needs it's own architecture diagram."
+    notes: "This needs it's own architecture diagram"
 
   - company: "Nucleus"
     product: "Nucleus"
@@ -239,7 +239,7 @@ vendors:
     license: ""
     deployment: ""
     pricing: "" 
-    notes: "May need its own architecture diagram? Making something dark can be done in a few ways, but the way it's generally handled in Ziti is that services reach out and establish one or more connections to the Ziti network fabric. Clients coming into the fabric can then reach the service through these connections after being authenticated and authorized."
+    notes: "May need its own architecture diagram? Making something dark can be done in a few ways, but the way it's generally handled in Ziti is that services reach out and establish one or more connections to the Ziti network fabric. Clients coming into the fabric can then reach the service through these connections after being authenticated and authorized"
 
   - company: "QI-ANXIN Group"
     product: ""
@@ -263,7 +263,7 @@ vendors:
     license: "Commercial"
     deployment: "SaaS"
     pricing: "Published"
-    notes: "Is this really an identity aware proxy? They talk about overlay..."
+    notes: "Is this really an identity aware proxy? They talk about overlay.."
 
   - company: "CloudFlare"
     product: "Gateway"

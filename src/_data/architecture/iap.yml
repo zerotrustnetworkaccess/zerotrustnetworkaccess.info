@@ -8,19 +8,19 @@ image: "https://via.placeholder.com/2280x1200"
 paragraphs: 
   - text: "Connector appliance establishes connection out to vendor. Clients to connect to public address, vendor adds SSO to inbound traffic. Usually no endpoint agent is required. Proxies are often publicly visible. Applications are accessed through standard HTTPS protocols at the application layer."
 strengths:
-  - title: "Protocol aware. Access to application traffic."
+  - title: "Protocol aware. Access to application traffic"
     description: ""
-  - title: "Vendor applies security on their platform."
+  - title: "Vendor applies security on their platform"
     description: ""
 weaknesses:
-  - title: "Business network depends on vendor uptime."
+  - title: "Business network depends on vendor uptime"
     description: ""
 tradeoffs:
-  - title: "All network traffic is routed via the vendor."
+  - title: "All network traffic is routed via the vendor"
     description: ""
-  - title: "Vendor terminates your TLS sessions."
+  - title: "Vendor terminates your TLS sessions"
     description: ""
-  - title: "Vendor has access to your data."
+  - title: "Vendor has access to your data"
     description: ""
 vendors:
 
