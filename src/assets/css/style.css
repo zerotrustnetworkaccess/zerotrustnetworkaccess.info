@@ -3942,7 +3942,7 @@ th {
   background-color: var(--color-dark);
   padding: 0.5rem 0.75rem;
   border-radius: 0.2rem;
-  font-size: 13px;
+  font-size: .64rem;
   font-weight: 300;
   line-height: 150%;
   max-width: 240px;
