@@ -7,19 +7,23 @@ image: "/assets/images/architecture/idn.png"
 paragraphs: 
   - text: "Implementation of the HIP protocol"
 strengths:
-  - title: ""
+  - title: "Hardware and software options available"
     description: ""
 weaknesses:
+  - title: "High-availability requires multiple appliances"
+    description: ""
+  - title: "Network traffic traverses relays"
+    description: ""
   - title: ""
     description: ""
 tradeoffs:
-  - title: ""
+  - title: "Conductor becomes new attack target"
     description: ""
 vendors: 
   - company: "Tempered Networks"
     product: "Airwall"
     url: "https://www.temperednetworks.com/"
     license: "Commercial"
-    deployment: "SaaS and Hardware"
+    deployment: "SaaS or Self-hosted"
     pricing: "Not Published"
     notes: ""

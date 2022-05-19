@@ -12,10 +12,10 @@ strengths:
   - title: "Single credential set for access"
     description: ""
 weaknesses:
-  - title: ""
+  - title: "Proxy servers are public on the Internet"
     description: ""
 tradeoffs:
-  - title: ""
+  - title: "Access is granted via proxy servers"
     description: ""
 vendors: 
 
