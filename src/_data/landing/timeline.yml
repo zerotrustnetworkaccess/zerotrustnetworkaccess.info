@@ -2,10 +2,16 @@ enable: true
 title: "Twenty Years of Private Access Technology"
 bg_image: "/assets/images/art/bg7.jpg"
 nodes:
+
+  - year: "1995"
+    acronym: "IPsec"
+    title: "IPSec"
+    description: IPsec traces its origins back to DARPA and NSA funded work in the last decades of the twentieth century, it continued to evolve for several years before arguably starting to enter mainstream use cirac 2005 with the addition of AES and <a href="https://datatracker.ietf.org/doc/html/rfc4718">IKEv2</a>. An open protocol most commonly used to construct network connections between hosts on the public Internet in either point-to-site or site-to-site network topologies.
+
   - year: "1996-98"
     acronym: "VPN"
     title: "Virtual Private Network (VPN)"
-    description: 'Twenty years and two major architectures (hub-and-spoke, also known as remote access or point-to-site &amp; site-to-site) and a plethora of protocols (IPsec, L2TP, PPTP, IKE, OpenVPN, SSL/TLS VPN, Cisco AnyConnect etc.) all trying to achieve the same thing: provide a secure, private network on top of the public Internet; either by extending one logical network into another, or placing remote peers directly onto the local network.'
+    description: 'Twenty years and two major architectures (hub-and-spoke, also known as remote access or point-to-site &amp; site-to-site) and a plethora of protocols (IPsec, IKEv2, L2TP, PPTP, OpenVPN, SSL/TLS VPN, Cisco AnyConnect etc.) all trying to achieve the same thing: provide a secure, private network on top of the public Internet; either by extending one logical network into another, or placing remote peers directly onto the local network.'
 
   - year: "2001"
     acronym: "MPLS"
@@ -15,12 +21,7 @@ nodes:
   - year: "2003"
     acronym: "802.1x"
     title: "Network Access Control (NAC)"
-    description: "802.1x - later Network Access Control https://datatracker.ietf.org/doc/html/rfc3580"
-
-  - year: "2005"
-    acronym: "IPsec"
-    title: "IPSec"
-    description: IPsec has been brewing for several years, but comes mainstream in 2005 with AES added. https://datatracker.ietf.org/doc/html/rfc4309
+    description: Network Access Control (<a href="https://datatracker.ietf.org/doc/html/rfc3580">802.1x</a>) provides an authentication framework that allows for user authentication before access is granted to the network to help provide protection from rogue or unauthorized devices connecting to the LAN. 802.1x is particularly effective for flat or default-open internal networks in which lateral movement is possible and for configurations in which devices and systems on the network have little or no endpoint protection software available.
 
   - year: "2007"
     acronym: "SDP"
@@ -35,14 +36,14 @@ nodes:
   - year: "2018"
     acronym: "ZTON"
     title: "Zero Trust Overlay Network (ZTON)"
-    description: xxx
-
+    description: A new form of serverless virtual private network delivered primarily as a Service designed to have a low attack surface. Zero trust overlay networks are composed of devices which talk directly to one another according to policy and real-time security conditions on the endpoint without the need for a VPN server or traffic concentrator. The solution may use techniques like UDP or TCP hole punching and traffic relays to operate behind NAT and not require firewalls to be opened for inbound traffic. Traffic should be end-to-end encrypted and authorization takes place via with service provider before connections are allowed. **
+ 
   - year: "2019"
     acronym: "SASE"
     title: "Secure Access Service Edge (SASE)"
-    description: SASE (pronounced “sassy”)
+    description: SASE (coined by Neil McDonald and Joe Skorupa at <a href="https://blogs.gartner.com/andrew-lerner/2019/12/23/say-hello-sase-secure-access-service-edge/">Gartner</a>, pronounced “sassy”) names a market trend toward combining network security functions with WAN capabilities into single products which are primarily delivered as a Service in order to support the access needs of organizations. SASE solutions are expected to place an emphasis on dynamic policies, informed by identity and real time security posture.
 
-  - year: "2022"
+  - year: "2019"
     acronym: "SSE"
     title: "Secure Service Edge (SSE)"
-    description: xxx
+    description: Security service edge (coined by <a href="https://www.gartner.com/reviews/market/security-service-edge">Gartner</a>) is a subset of SASE thought which represents an effort to secure access to the Internet, Cloud services, and private applications using a combination of Secure Web Gateways (SWG), Cloud Access Security Brokers (CASB) and Zero Trust Network Access (ZTNA). Capabilities include access control, threat protection, data security, security monitoring, and acceptable use control enforced by network-based and API-based integration. SSE is primarily delivered as a cloud-based service and may include on-premises or agent-based components.
