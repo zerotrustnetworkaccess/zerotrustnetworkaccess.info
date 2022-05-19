@@ -2,7 +2,7 @@ name: "Secure Web Gateway"
 abbreviation: "SWG"
 filter: "secure-web-gateway"
 display: false
-sort_order: "1"
+sort_order: 99
 description: ""
 image: "https://via.placeholder.com/2280x1200"
 paragraphs: 

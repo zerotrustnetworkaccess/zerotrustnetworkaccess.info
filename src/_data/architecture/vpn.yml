@@ -1,8 +1,8 @@
 name: "Virtual Private Network"
 abbreviation: "VPN"
 filter: "vpn"
-display: true
-sort_order: "1"
+display: false
+sort_order: 99
 description: "Assume the asset is reachable via the network and protect login with IdP integration"
 image: "https://via.placeholder.com/2280x1200"
 paragraphs: 

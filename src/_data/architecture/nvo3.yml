@@ -2,7 +2,7 @@ name: "Network Virtualization Overlays"
 abbreviation: "NVO3"
 filter: "nvo3"
 display: false
-sort_order: "1"
+sort_order: 99
 description: "https://datatracker.ietf.org/wg/nvo3/documents/"
 image: "https://via.placeholder.com/2280x1200"
 paragraphs: 
