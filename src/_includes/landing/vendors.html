@@ -163,14 +163,27 @@
                 <tr>
                   <td scope="row">{{ forloop.index }}.</td>
                   <td>
-                    <a
-                      href="{{vendor.url}}"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="light-blue-1"
-                    >
+                    {% if vendor.notes != null and vendor.notes != "" %}
+                      <a
+                        href="{{vendor.url}}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="light-blue-1 hover has-tooltip"
+                        title="" 
+                        data-placement="right" 
+                        data-original-title="{{vendor.notes}}">
+                          {{vendor.company}}
+                      </a>
+                    {% else %}                      
+                      <a
+                        href="{{vendor.url}}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="light-blue-1"
+                      >
                       {{vendor.company}}
-                    </a>
+                      </a>
+                    {% endif %}
                   </td>
                   <td>{{vendor.product}}</td>
                   <td>{{vendor.license}}</td>
