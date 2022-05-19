@@ -3932,32 +3932,48 @@ th {
 /*  46. TOOLTIP
 /*-----------------------------------------------------------------------------------*/
 .tooltip {
-  font: inherit;
+  font-family: Inter;
 }
 .tooltip.show {
-  opacity: 0.98;
+  opacity: 0.92;
 }
 .tooltip-inner {
   color: var(--color-white);
-  background-color: var(--color-default);
+  background-color: var(--color-dark);
   padding: 0.5rem 0.75rem;
   border-radius: 0.2rem;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 150%;
+  max-width: 240px;
+}
+.tooltip.bs-tooltip-right {
+  margin-left: 10px;
+}
+.tooltip.bs-tooltip-left {
+  margin-left: 3px;
 }
 .tooltip.bs-tooltip-auto[x-placement^="top"] .arrow::before,
 .tooltip.bs-tooltip-top .arrow::before {
-  border-top-color: var(--color-default);
+  border-top-color: var(--color-dark);
 }
 .tooltip.bs-tooltip-auto[x-placement^="right"] .arrow::before,
 .tooltip.bs-tooltip-right .arrow::before {
-  border-right-color: var(--color-default);
+  border-right-color: var(--color-dark);
 }
 .tooltip.bs-tooltip-auto[x-placement^="bottom"] .arrow::before,
 .tooltip.bs-tooltip-bottom .arrow::before {
-  border-bottom-color: var(--color-default);
+  border-bottom-color: var(--color-dark);
 }
 .tooltip.bs-tooltip-auto[x-placement^="left"] .arrow::before,
 .tooltip.bs-tooltip-left .arrow::before {
-  border-left-color: var(--color-default);
+  border-left-color: var(--color-dark);
+}
+
+.has-tooltip {
+  cursor: pointer;
+  text-decoration: underline dashed rgb(161, 161, 170);
+  text-underline-position: under;
 }
 /*-----------------------------------------------------------------------------------*/
 /*  47. POPOVER
