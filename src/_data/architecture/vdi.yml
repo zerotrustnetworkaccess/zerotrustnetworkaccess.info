@@ -3,10 +3,9 @@ abbreviation: "VDI"
 filter: "virtual-desktop-infrastructure"
 display: false
 sort_order: 99
-description: "Vendor provides and manages virtual desktops or containers rendered into vector or bitmap graphics over a secure network access pathway."
 image: "https://via.placeholder.com/2280x1200"
 paragraphs: 
-  - text: ""
+  - text: "Vendor provides and manages virtual desktops or containers rendered into vector or bitmap graphics over a secure network access pathway."
 strengths:
   - title: ""
     description: ""

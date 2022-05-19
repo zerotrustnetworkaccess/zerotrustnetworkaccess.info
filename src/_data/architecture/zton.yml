@@ -3,11 +3,10 @@ abbreviation: ""
 filter: "zero-trust-overlay-network"
 display: true
 sort_order: 2
-description: "Direct, peer to peer connectivity enabled by UDP or TCP hole punching."
 image: "/assets/images/architecture/zton.png"
 paragraphs:
-  - text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non libero at sapien laoreet dapibus. Donec in semper augue. Sed elit odio, consectetur ut risus ac, sodales scelerisque nisl. Integer enim eros, ullamcorper a sodales faucibus, molestie vel urna. Sed euismod molestie pretium"
-  - text: "Proin ultricies tortor justo, sed pulvinar sem tincidunt id. Vivamus ullamcorper dictum ante ac dignissim"
+  - text: "Direct, peer to peer connectivity enabled by UDP or TCP hole punching."
+  - text: "Proin ultricies tortor justo, sed pulvinar sem tincidunt id. Vivamus ullamcorper dictum ante ac dignissim."
 strengths:
   - title: "No gateway devices or proxy servers"
     description: ""

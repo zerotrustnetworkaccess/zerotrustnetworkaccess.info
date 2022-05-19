@@ -3,11 +3,9 @@ abbreviation: "NGFW"
 filter: "next-generation-firewall"
 display: false
 sort_order: 99
-description: "Perimeter and gateway devices slice the network into smaller logical segments and control access to applications and data in those segments. Diving the network into smaller segments reduces the attack surface for malicious attackers. Micro-segmentation policies are based on logical attributes or resource identity versus the user's identity or IP addresses."
-description: "Perimeter and gateway devices slice the network into smaller logical segments and control access to applications and data in those segments. Diving the network into smaller segments reduces the attack surface for malicious attackers. Micro-segmentation policies are based on logical attributes or resource identity versus the user's identity or IP addresses"
 image: "https://via.placeholder.com/2280x1200"
 paragraphs: 
-  - text: ""
+  - text: "Perimeter and gateway devices slice the network into smaller logical segments and control access to applications and data in those segments. Diving the network into smaller segments reduces the attack surface for malicious attackers. Micro-segmentation policies are based on logical attributes or resource identity versus the user's identity or IP addresses"
 strengths:
   - title: ""
     description: ""

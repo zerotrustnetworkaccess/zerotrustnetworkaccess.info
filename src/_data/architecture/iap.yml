@@ -3,7 +3,6 @@ abbreviation: "IAP"
 filter: "identity-aware-proxy"
 display: true
 sort_order: 3
-description: ""
 image: "https://via.placeholder.com/2280x1200"
 paragraphs: 
   - text: "Connector appliance establishes connection out to vendor. Clients to connect to public address, vendor adds SSO to inbound traffic. Usually no endpoint agent is required. Proxies are often publicly visible. Applications are accessed through standard HTTPS protocols at the application layer."

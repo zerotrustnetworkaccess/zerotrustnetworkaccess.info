@@ -3,12 +3,13 @@ abbreviation: "PAM"
 filter: "privileged-access-management"
 display: true
 sort_order: 4
-description: "Vendor product owns access to end systems. End-users are transparently granted temporary access credentials and access is logged by the vendor platform"
 image: "https://via.placeholder.com/2280x1200"
 paragraphs: 
-  - text: ""
+  - text: "Vendor product owns access to end systems. End-users are transparently granted temporary access credentials and access is logged by the vendor platform"
 strengths:
-  - title: ""
+  - title: "Layer 7 observability"
+    description: ""
+  - title: "Single credential set for access"
     description: ""
 weaknesses:
   - title: ""

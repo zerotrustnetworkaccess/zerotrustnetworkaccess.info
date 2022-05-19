@@ -3,10 +3,9 @@ abbreviation: "IdP"
 filter: "identity-provider"
 display: true
 sort_order: 7
-description: "Assume the asset is reachable via the network and protect login with IdP integration"
 image: "https://developer.okta.com/assets-jekyll/blog/asa-gcp-jenkins/architecture-ssh-1a3cb18bfed3e54a65463a48d1824e5906a378c2b232f2b675998523edbb0a56.png"
 paragraphs: 
-  - text: ""
+  - text: "Assume the asset is reachable via the network and protect login with IdP integration"
 strengths:
   - title: ""
     description: ""

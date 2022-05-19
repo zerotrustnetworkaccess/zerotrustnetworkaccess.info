@@ -3,10 +3,9 @@ abbreviation: "IDN"
 filter: "identity-defined-network"
 display: true
 sort_order: 6
-description: "Implementation of the HIP protocol"
 image: "/assets/images/architecture/idn.png"
 paragraphs: 
-  - text: ""
+  - text: "Implementation of the HIP protocol"
 strengths:
   - title: ""
     description: ""

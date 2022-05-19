@@ -3,10 +3,9 @@ abbreviation: "SDP"
 filter: "software-defined-perimeter"
 display: true
 sort_order: 1
-description: "Endpoint agent connectivity to an SDP connector (reverse proxy appliance) deployed at the network edge governed by a controller. Usually based on <a href=\"https://en.wikipedia.org/wiki/Port_knocking\">single packet authorization</a> (SPA). May also be deployed as a straight Identity Aware Proxy (IAP), with no agent or SDP connector. Applications are accessed through a tunnel at the network layer or a reverse proxy."
 image: "/assets/images/architecture/sdp.png"
 paragraphs:
-  - text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non libero at sapien laoreet dapibus. Donec in semper augue. Sed elit odio, consectetur ut risus ac, sodales scelerisque nisl. Integer enim eros, ullamcorper a sodales faucibus, molestie vel urna. Sed euismod molestie pretium"
+  - text: "Endpoint agent connectivity to an SDP connector (reverse proxy appliance) deployed at the network edge governed by a controller. Usually based on <a href=\"https://en.wikipedia.org/wiki/Port_knocking\">single packet authorization</a> (SPA). May also be deployed as a straight Identity Aware Proxy (IAP), with no agent or SDP connector. Applications are accessed through a tunnel at the network layer or a reverse proxy."
   - text: "Proin ultricies tortor justo, sed pulvinar sem tincidunt id. Vivamus ullamcorper dictum ante ac dignissim"
 strengths:
   - title: "No ingress traffic, firewalls can be closed"
@@ -68,7 +67,7 @@ vendors:
     license: ""
     deployment: ""
     pricing: ""
-    notes: "Acquired by Deloitte (2021)"
+    notes: "Acquired by Deloitte in 2021"
 
   - company: "Sangfor Technologies"
     product: "Sangfor Private Access"
@@ -140,7 +139,7 @@ vendors:
     license: ""
     deployment: ""
     pricing: "" 
-    notes: "Acquired by Ivanti (2020)"
+    notes: "Acquired by Ivanti in 2020"
 
   - company: "Proofpoint"
     product: "Zero Trust Network Access"
@@ -156,7 +155,7 @@ vendors:
     license: "Commercial"
     deployment: ""
     pricing: "Not Published"
-    notes: "Previously Symantec. Acquired by Broadcom (2019)"
+    notes: "Previously Symantec. Acquired by Broadcom in 2019"
 
   - company: "Check Point"
     product: "Harmony Connect Remote Access"
@@ -164,7 +163,7 @@ vendors:
     license: "Commercial"
     deployment: ""
     pricing: "Not Published"
-    notes: "Previously Odo Security. Acquired by Check Point (2020)"
+    notes: "Previously Odo Security. Acquired by Check Point in 2020"
 
   - company: "Deep Cloud Technology"
     product: "Deep Cloud SDP"
@@ -188,7 +187,7 @@ vendors:
     license: "Commercial"
     deployment: "SaaS"
     pricing: "Not Published"
-    notes: "Previously BitGlass. Acquired by ForcePoint (2021)"
+    notes: "Previously BitGlass. Acquired by ForcePoint in 2021"
 
   - company: "Forescout"
     product: "eyeSight"
