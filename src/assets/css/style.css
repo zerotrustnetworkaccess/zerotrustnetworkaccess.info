@@ -3935,14 +3935,14 @@ th {
   font-family: Inter;
 }
 .tooltip.show {
-  opacity: 0.92;
+  opacity: 0.98;
 }
 .tooltip-inner {
   color: var(--color-white);
   background-color: var(--color-dark);
   padding: 0.5rem 0.75rem;
   border-radius: 0.2rem;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 300;
   line-height: 150%;
   max-width: 240px;
@@ -3972,7 +3972,7 @@ th {
 
 .has-tooltip {
   cursor: pointer;
-  text-decoration: underline dashed rgb(161, 161, 170);
+  text-decoration: underline dashed;
   text-underline-position: under;
 }
 /*-----------------------------------------------------------------------------------*/
