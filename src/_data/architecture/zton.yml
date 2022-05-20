@@ -30,8 +30,6 @@ strengths:
     description: "Deploys on existing systems"
 
 weaknesses:
-  - title: "Emerging technology"
-    description: ""
   - title: "Primarily agent-based deployment"
     description: ""
   - title: "Agent software requires patching"
@@ -45,6 +43,8 @@ tradeoffs:
   - title: "Trust broker becomes the new target"
     description: "In order for endpoints to connect, the trust broker must be publicly accessible"
   - title: "Replaces multiple (separate) layers of protection"
+    description: ""
+  - title: "Emerging technology"
     description: ""
 
 vendors:
