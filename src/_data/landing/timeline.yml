@@ -38,10 +38,10 @@ nodes:
     title: "Zero Trust Overlay Network (ZTON)"
     description: A new form of serverless virtual private network delivered primarily as a Service designed to have a low attack surface. Zero trust overlay networks are composed of devices which talk directly to one another according to policy and real-time security conditions on the endpoint without the need for a VPN server or traffic concentrator. The solution may use techniques like UDP or TCP hole punching and traffic relays to operate behind NAT and not require firewalls to be opened for inbound traffic. Traffic should be end-to-end encrypted and authorization takes place via with service provider before connections are allowed. **
  
-  - year: "2019"
-    acronym: "SASE"
-    title: "Secure Access Service Edge (SASE)"
-    description: SASE (coined by Neil McDonald and Joe Skorupa at <a href="https://blogs.gartner.com/andrew-lerner/2019/12/23/say-hello-sase-secure-access-service-edge/">Gartner</a>, pronounced “sassy”) names a market trend toward combining network security functions with WAN capabilities into single products which are primarily delivered as a Service in order to support the access needs of organizations. SASE solutions are expected to place an emphasis on dynamic policies, informed by identity and real time security posture.
+#  - year: "2019"
+#    acronym: "SASE"
+#    title: "Secure Access Service Edge (SASE)"
+#    description: SASE (coined by Neil McDonald and Joe Skorupa at <a href="https://blogs.gartner.com/andrew-lerner/2019/12/23/say-hello-sase-secure-access-service-edge/">Gartner</a>, pronounced “sassy”) names a market trend toward combining network security functions with WAN capabilities into single products which are primarily delivered as a Service in order to support the access needs of organizations. SASE solutions are expected to place an emphasis on dynamic policies, informed by identity and real time security posture.
 
 #  - year: "2019"
 #    acronym: "SSE"
