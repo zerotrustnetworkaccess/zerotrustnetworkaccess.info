@@ -63,9 +63,9 @@ vendors:
   - company: "Perimeter81"
     product: "Perimeter81"
     url: "https://www.perimeter81.com/"
-    license: ""
-    deployment: ""
-    pricing: ""
+    license: "Commercial"
+    deployment: "SaaS"
+    pricing: "Published"
     notes: ""
 
   - company: "TransientX"
@@ -162,7 +162,7 @@ vendors:
     license: "Commercial"
     deployment: ""
     pricing: "Not Published"
-    notes: "Previously Symantec. Acquired by Broadcom in 2019"
+    notes: "Previously a Symantec product. Acquired by Broadcom in 2019"
 
   - company: "Check Point"
     product: "Harmony Connect Remote Access"
