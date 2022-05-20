@@ -725,8 +725,8 @@ button.hamburger.animate.active:after {
   top: 0;
   bottom: 0;
   left: auto;
-  right: -410px;
-  width: 410px;
+  right: -375px;
+  width: 375px;
   padding-top: 3.2rem;
   padding-right: 1.5rem;
   padding-left: 1.5rem;
