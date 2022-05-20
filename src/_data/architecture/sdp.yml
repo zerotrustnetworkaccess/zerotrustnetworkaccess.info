@@ -24,7 +24,7 @@ weaknesses:
     description: ""
   - title: "Connector appliance requires patching"
     description: ""
-  - title: "Connector availability determines system uptime"
+  - title: "Connector availability determines uptime"
     description: ""
   - title: "East-west (server-to-server) traffic"
     description: ""
