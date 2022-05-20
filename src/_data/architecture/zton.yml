@@ -4,42 +4,49 @@ filter: "zero-trust-overlay-network"
 display: true
 sort_order: 2
 image: "/assets/images/architecture/zton.png"
+
 paragraphs:
   - text: "Direct, peer to peer connectivity enabled by UDP or TCP hole punching."
-  - text: "Proin ultricies tortor justo, sed pulvinar sem tincidunt id. Vivamus ullamcorper dictum ante ac dignissim."
+  - text: ""
+
 strengths:
-  - title: "No gateway devices or proxy servers"
-    description: ""
   - title: "No ingress traffic, firewalls can be closed"
+    description: ""
+  - title: "No gateway devices or proxy servers"
     description: ""
   - title: "Universal protocol support"
     description: ""
   - title: "Incremental deployment"
     description: ""
   - title: "North-south (client-to-server) traffic"
-    description: ""
+    description: "Agnostic to endpoint location, heterogeneous provider networks and logical boundaries"
   - title: "East-west (server-to-server) traffic"
-    description: ""
+    description: "Agnostic to endpoint location, heterogeneous provider networks and logical boundaries"
   - title: "Removes complexity from the network"
     description: ""
   - title: "Resilient to temporary trust broker failures"
-    description: ""
-  - title: "Resilient to temporary controller failures"
-    description: ""
+    description: "Policy is cached by endpoints should trust broker become temporarily unavailable"
+  - title: "No network changes to deploy"
+    description: "Deploys on existing systems"
+
 weaknesses:
   - title: "Emerging technology"
     description: ""
-  - title: "Agent-based deployment model"
+  - title: "Primarily agent-based deployment"
     description: ""
   - title: "Agent software requires patching"
     description: ""
+  - title: "Trust properties not applied to peripherals"
+    description: "If the agent software is not installed, Zero Trust Network Access principles are lost as traffic leaves the overlay network"
+  - title: "Not protocol aware"
+    description: "As of May 2022, most implementations are not yet protocol aware"
+
 tradeoffs:
-  - title: "SaaS trust broker becomes the new target"
-    description: ""
+  - title: "Trust broker becomes the new target"
+    description: "In order for endpoints to connect, the trust broker must be publicly accessible"
   - title: "Replaces multiple (separate) layers of protection"
     description: ""
-  - title: "Deploys on existing systems"
-    description: ""
+
 vendors:
   - company: "Defined Networking"
     product: "Nebula"

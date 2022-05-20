@@ -1,28 +1,45 @@
-name: "Identity Aware Proxy"
+name: "Identity Aware Reverse Proxy"
 abbreviation: "IAP"
-filter: "identity-aware-proxy"
+filter: "identity-aware-reverse-proxy"
 display: true
 sort_order: 3
 image: "https://via.placeholder.com/2280x1200"
+
 paragraphs: 
   - text: "Connector appliance establishes connection out to vendor. Clients to connect to public address, vendor adds SSO to inbound traffic. Usually no endpoint agent is required. Proxies are often publicly visible. Applications are accessed through standard HTTPS protocols at the application layer."
+  - text: "Connector deploys and reaches out to vendor's cloud network to act as a reverse proxy, leaving the firewall closed to ingress."
+
 strengths:
-  - title: "Protocol aware. Access to application traffic"
+  - title: "No ingress traffic, firewalls can be closed"
     description: ""
-  - title: "Vendor applies security on their platform"
+  - title: "Agentless deployment for clients"
     description: ""
+  - title: "Protocol aware"
+    description: "Access to application traffic"
+  - title: "Session recording and playback"
+    description: "Products are often able to record and playback sessions for some protocols such as SSH, RDP and database traffic"
+  - title: "Vendor may bundle complimentary services"
+    description: "Vendor may also offer Secure Web Gateway and Cloud Access Security Broker services"
+
 weaknesses:
   - title: "Business network depends on vendor uptime"
     description: ""
+  - title: "Limited protocol support"
+    description: "Proxy based, so offers limited protocol support and so may not be able to replace VPN"
+  - title: "East-west (server-to-server) traffic"
+    description: "Can introduce latency and be expensive to move east-west traffic via the vendors network"
+
 tradeoffs:
-  - title: "All network traffic is routed via the vendor"
+  - title: "Vendor becomes the new target"
+    description: "In order for endpoints to connect, the vendor must be publicly accessible"
+  - title: "Internal network traffic routed via vendor"
     description: ""
   - title: "Vendor terminates your TLS sessions"
-    description: ""
-  - title: "Vendor has access to your data"
-    description: ""
-vendors:
+    description: "Vendor's network and employees may have access to your unencrypted data"
+  - title: "Vendor applies security on their platform"
+    description: "Vendor may change or re-classify the security status of something which you weren't expecting or don't agree with"
 
+vendors:
   - company: "ZScaler"
     product: "Private Access"
     url: "https://www.zscaler.com/products/zscaler-private-access"

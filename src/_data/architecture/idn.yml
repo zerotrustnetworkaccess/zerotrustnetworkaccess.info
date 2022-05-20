@@ -4,21 +4,35 @@ filter: "identity-defined-network"
 display: true
 sort_order: 6
 image: "/assets/images/architecture/idn.png"
+
 paragraphs: 
   - text: "Implementation of the HIP protocol"
+  - text: "All traffic traverses network relays"
+
 strengths:
-  - title: "Hardware and software options available"
+  - title: "North-south (client-to-server) traffic"
     description: ""
+  - title: "Universal protocol support"
+    description: ""
+
 weaknesses:
+  - title: "Business network depends on relay uptime"
+    description: ""
   - title: "High-availability requires multiple appliances"
     description: ""
-  - title: "Network traffic traverses relays"
+  - title: "All network traffic traverses relays"
+    description: "Traffic relays can act as concentrators, introducing latency and throughput bottlenecks"
+  - title: "Hardware, appliances and agents require patching"
     description: ""
-  - title: ""
+  - title: "Must be reconfigured if network changes"
     description: ""
+  - title: "East-west (server-to-server) traffic"
+    description: "Moving east-west traffic through network relays can be inefficient"
+
 tradeoffs:
-  - title: "Conductor becomes new attack target"
-    description: ""
+  - title: "Trust broker becomes the new target"
+    description: "In order for endpoints to connect to it, the trust broker must be publicly accessible"
+
 vendors: 
   - company: "Tempered Networks"
     product: "Airwall"

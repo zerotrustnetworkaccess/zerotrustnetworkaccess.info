@@ -1,0 +1,23 @@
+name: "Identity Provider"
+abbreviation: "IdP"
+filter: "identity-provider"
+display: false
+sort_order: 99
+image: ""
+
+paragraphs: 
+  - text: ""
+
+strengths:
+  - title: ""
+    description: ""
+
+weaknesses:
+  - title: ""
+    description: ""
+
+tradeoffs:
+  - title: ""
+    description: ""
+
+vendors: 
