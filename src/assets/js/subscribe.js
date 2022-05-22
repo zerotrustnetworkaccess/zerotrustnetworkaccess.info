@@ -7,6 +7,11 @@ const body = document.getElementsByTagName("body")[0];
 const bodyForm = document.getElementById("body-subscription");
 const footerForm = document.getElementById("footer-subscription");
 
+const bodyFormInput = document.getElementById("body-form-mail");
+const footerFormInput = document.getElementById("footer-form-mail");
+
+let mail;
+
 const handleError = () => {
   overlay.style.display = "block";
   popUpError.style.display = "block";
@@ -27,13 +32,6 @@ const _show_error = (code, msg) => {
 
 function subscribe(e) {
   e.preventDefault();
-  let mail;
-  (function getMail() {
-    document.getElementById("body-form-mail")
-      ? (mail = document.getElementById("body-form-mail").value)
-      : (mail = document.getElementById("footer-form-mail").value);
-  })();
-
   let subscriptionScript = document.createElement("script");
   subscriptionScript.src = `https://enclave-networks.activehosted.com/proc.php?u=8&f=8&s=&c=0&m=0&act=sub&v=2&or=99d0a5901dfe9737d4076db8322acd47&email=${mail}&jsonp=true`;
   document.body.appendChild(subscriptionScript);
@@ -42,6 +40,15 @@ function subscribe(e) {
     handleError();
   };
 }
+
+bodyFormInput.addEventListener("blur", (event) => {
+  mail = event.target.value;
+});
+
+footerFormInput.addEventListener("blur", (event) => {
+  mail = event.target.value;
+});
+
 if (bodyForm) {
   bodyForm.addEventListener("submit", subscribe);
 }
