@@ -1,5 +1,5 @@
 ---
-layout: ztna-post
+layout: post
 title: "Ligula tristique quis risus eget urna mollis ornare porttitor"
 date: 2020-10-05 20:37:13 +0600
 tags: technology education

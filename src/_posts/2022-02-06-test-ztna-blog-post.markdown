@@ -1,5 +1,5 @@
 ---
-layout: ztna-post
+layout: post
 title: "Linux, Cockpit And Enclave"
 date: 2022-02-06 23:37:13 +0600
 categories: [wedding, SD-WAN, SDP]

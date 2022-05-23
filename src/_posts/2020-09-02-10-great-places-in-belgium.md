@@ -1,5 +1,5 @@
 ---
-layout: ztna-post
+layout: post
 title: "10 Great Places in Belgium"
 date: 2020-09-02 20:37:13 +0600
 author: "Tortoiz Theme"

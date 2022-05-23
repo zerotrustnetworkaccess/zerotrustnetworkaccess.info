@@ -66,14 +66,36 @@
       rel="stylesheet"
     />
     {% if site.data.general_settings.google_analytics.enable %} {% include
-    components/analytics.html %} {% endif %}
+      components/analytics.html %} {% endif %}
   </head>
   <body {% if page.overflow %} class="overflow-hidden" {% endif %}>
-    {% include modules/ztna-header.html container_class="container"
-    dark_logo="true" hide_github="true" %}
+    {% include modules/header.html container_class="container" dark_logo="true"
+    hide_github="true" extra_class="ztna-shadow" %}
+   
+    <div class="container-fluid blog-wrapper mx-auto px-0">
+        <div
+    class="col-lg-8 col-md-12 col-sm-12 mb-50-40 mx-auto text-center mt-50-40"
+  >
+    {% if page.title %}
+    <h1 class="dark-text mr-md-40-20 ml-md-40-20">{{page.title}}</h1>
+    <div class="space10"></div>
+    {% endif %} {% if page.sub_title %}
+    <p class="light-text-1 mr-md-40-20 ml-md-40-20">{{page.sub_title}}</p>
 
-    <div class="content-wrapper">{{ content }}</div>
-    {% include modules/ztna-footer.html%}
+    {% endif %}
+  </div>
+  
+        <div class="row mb-100-70 ml-lg-40 mr-lg-40">
+          <div class="col-lg-8 mb-0">
+            {{content}}
+          </div>
+          <aside class="col-lg-4 sidebar mt-0"> {% include modules/sidebar.html cls="mr-md-40-20 ml-md-40-20" %} </aside>
+        </div>
+      </div>
+    </div>
+    {% include modules/popup/popup-success.html %}
+    {% include modules/popup/popup-error.html %}
+    {% include modules/footer.html %}
     <script src="{{relative_url}}/assets/js/jquery.min.js"></script>
     <script src="{{relative_url}}/assets/js/popper.min.js"></script>
     <script src="{{relative_url}}/assets/js/bootstrap.min.js"></script>
@@ -91,6 +113,8 @@
     <script src="{{relative_url}}/assets/js/plugins.js"></script>
     <script src="{{relative_url}}/assets/js/scripts.js"></script>
     <script src="{{relative_url}}/assets/js/slideButtons.js"></script>
-    <script src="{{relative_url}}/assets/js/ztna-timeline.js"></script>
+    <script src="{{relative_url}}/assets/js/subscribe.js"></script>
   </body>
 </html>
+
+

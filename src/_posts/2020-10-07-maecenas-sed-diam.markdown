@@ -1,5 +1,5 @@
 ---
-layout: ztna-post
+layout: post
 title: "Maecenas sed diam eget risus varius blandit sit amet non"
 date: 2020-10-07 14:05:11 +0600
 categories: [jekyll]

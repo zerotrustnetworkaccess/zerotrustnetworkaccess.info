@@ -41,9 +41,11 @@ function subscribe(e) {
   };
 }
 
-bodyFormInput.addEventListener("blur", (event) => {
-  mail = event.target.value;
-});
+if (bodyFormInput) {
+  bodyFormInput.addEventListener("blur", (event) => {
+    mail = event.target.value;
+  });
+}
 
 footerFormInput.addEventListener("blur", (event) => {
   mail = event.target.value;

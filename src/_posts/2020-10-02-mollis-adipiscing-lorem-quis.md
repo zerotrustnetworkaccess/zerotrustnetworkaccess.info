@@ -1,5 +1,5 @@
 ---
-layout: ztna-post
+layout: post
 title: "Mollis adipiscing lorem quis mollis eget lacinia faucibus"
 date: 2020-10-02 20:37:13 +0600
 categories: [wedding]

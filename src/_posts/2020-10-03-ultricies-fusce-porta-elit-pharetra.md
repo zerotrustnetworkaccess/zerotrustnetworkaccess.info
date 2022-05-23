@@ -1,5 +1,5 @@
 ---
-layout: ztna-post
+layout: post
 title: "Nullam id dolor elit id nibh pharetra augue venenatis"
 date: 2020-10-03 20:37:13 +0600
 categories: [couples]

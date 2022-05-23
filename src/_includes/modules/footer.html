@@ -15,7 +15,7 @@
             />
           </div>
 
-          {% assign description = site.data.ztna-footer.about_ZTNA %}
+          {% assign description = site.data.footer.about_ZTNA %}
           <ul class="list-unstyled mb-0">
             {% for content in description.content %}
             <li>
@@ -28,7 +28,7 @@
         </div>
       </div>
       <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 mb-md-54-40">
-        {% assign subscription = site.data.ztna-footer.subscribtion %}
+        {% assign subscription = site.data.footer.subscribtion %}
         <div class="footer-col">
           <h3 class="light-text-3 ztna-margin-bottom-30 mb-30-20">
             {{subscription.title}}
@@ -47,7 +47,7 @@
       </div>
 
       <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
-        {% assign social_accounts = site.data.ztna-footer.social_accounts %}
+        {% assign social_accounts = site.data.footer.social_accounts %}
         <div>
           <h3 class="light-text-3 mb-30-20">{{social_accounts.title}}</h3>
 

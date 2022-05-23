@@ -1,5 +1,5 @@
 ---
-layout: ztna-post
+layout: post
 title: "The Best Moments in Venice"
 date: 2020-09-01 20:37:13 +0600
 author: "Tortoiz Theme"

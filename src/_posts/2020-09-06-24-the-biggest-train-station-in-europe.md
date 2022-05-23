@@ -1,5 +1,5 @@
 ---
-layout: ztna-post
+layout: post
 title: "The Biggest Train Station in Europe"
 date: 2020-09-06 20:37:13 +0600
 author: "Tortoiz Theme"

@@ -1,5 +1,5 @@
 ---
-layout: ztna-post
+layout: post
 title: "Morbi leo risus porta eget metus est non commodolacus"
 date: 2020-10-03 20:37:13 +0600
 categories: [engagement]

@@ -1,5 +1,5 @@
 ---
-layout: ztna-post
+layout: post
 title: "A Dreamy Roadtrip in Australia"
 date: 2020-09-03 20:37:13 +0600
 author: "Tortoiz Theme"

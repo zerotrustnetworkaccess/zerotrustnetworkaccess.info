@@ -1,5 +1,5 @@
 ---
-layout: ztna-post
+layout: post
 title: "Engagement Our Statement With Goal"
 date: 2020-10-07 20:37:13 +0600
 tags: technology education
