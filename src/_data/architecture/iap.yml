@@ -1,6 +1,6 @@
-name: "Identity Aware Reverse Proxy"
+name: "Identity Aware Proxy"
 abbreviation: "IAP"
-filter: "identity-aware-reverse-proxy"
+filter: "identity-aware-proxy"
 display: true
 sort_order: 3
 image: "https://via.placeholder.com/2280x1200"

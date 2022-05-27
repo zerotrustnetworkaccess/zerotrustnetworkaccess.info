@@ -6,8 +6,8 @@ sort_order: 6
 image: "/assets/images/architecture/idn.png"
 
 paragraphs: 
-  - text: "Implementation of the HIP protocol"
-  - text: "All traffic traverses network relays"
+  - text: "All traffic flows through a cloud relay. This is a L2/L3 (routed via) or L4 (proxied via)?"
+  - text: "All traffic traverses network relays.  Implementation of the HIP protocol"
 
 strengths:
   - title: "North-south (client-to-server) traffic"
@@ -43,3 +43,11 @@ vendors:
     deployment: "SaaS or Self-hosted"
     pricing: "Not Published"
     notes: ""
+
+  - company: "Zentera"
+    product: ""
+    url: "http://zentera.net/"
+    license: ""
+    deployment: ""
+    pricing: ""
+    notes: "https://www.zentera.net/hubfs/coip%20architecture.png data flow doesn't look to be peer-to-peer"

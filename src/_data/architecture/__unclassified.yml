@@ -280,6 +280,14 @@ vendors:
     pricing: ""
     notes: "Appears to be SD-WAN with SDP characterstics? https://www.youtube.com/watch?v=5qGMokSYOIs&ab_channel=Trustgrid"
 
+  - company: "ZeroC"
+    product: ""
+    url: "https://zeroc.com/"
+    license: ""
+    deployment: ""
+    pricing: ""
+    notes: "Is it zero trust?"
+
 
 
 

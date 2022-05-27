@@ -36,7 +36,7 @@ vendors:
     product: "Privileged Access"
     url: "https://www.cyberark.com/products/privileged-access/"
     license: "Commercial"
-    deployment: ""
+    deployment: "Self-hosted"
     pricing: "Not Published"
     notes: ""
 
@@ -68,7 +68,7 @@ vendors:
     product: "Server Suite"
     url: "https://delinea.com/"
     license: "Commercial"
-    deployment: ""
+    deployment: "Self-hosted"
     pricing: "Not Published"
     notes: "Formerly Centrify"
 
