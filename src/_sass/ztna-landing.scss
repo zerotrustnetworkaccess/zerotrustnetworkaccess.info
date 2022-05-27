@@ -12,6 +12,18 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  
+  h1, p {
+    font-family: $fontfamily-jost;
+  }
+
+  h1 {
+    font-weight: 500;
+  }
+
+  p {
+    font-weight: 300;
+  }
 }
 
 .ztna-counter-wrapper {
@@ -24,6 +36,10 @@
 .ztna-counter-item {
   width: 120px;
   text-align: center;
+  
+  .ztna-small-text {
+    font-size: .82rem;
+  }
 }
 
 .ztna-subtitle {

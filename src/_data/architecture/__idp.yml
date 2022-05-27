@@ -1,19 +1,23 @@
-name: "Secure Web Gateway"
-abbreviation: "SWG"
-filter: "secure-web-gateway"
+name: "Identity Provider"
+abbreviation: "IdP"
+filter: "identity-provider"
 display: false
-sort_order: "1"
-description: ""
-image: "https://via.placeholder.com/2280x1200"
+sort_order: 99
+image: ""
+
 paragraphs: 
   - text: ""
+
 strengths:
   - title: ""
     description: ""
+
 weaknesses:
   - title: ""
     description: ""
+
 tradeoffs:
   - title: ""
     description: ""
+
 vendors: 

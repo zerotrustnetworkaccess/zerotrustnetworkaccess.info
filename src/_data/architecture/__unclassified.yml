@@ -1,8 +1,7 @@
 name: "Unclassified"
 abbreviation: ""
 display: false
-sort_order: "1"
-description: "..."
+sort_order: 99
 image: "https://via.placeholder.com/2280x1200"
 paragraphs: 
   - text: ""
@@ -119,7 +118,7 @@ vendors:
     license: "Commercial"
     deployment: " SaaS"
     pricing: "Not Published"
-    notes: "Acquired by ZScaler (2020). Website is gone"
+    notes: "Acquired by ZScaler in 2020"
 
   - company: "Inlets"
     product: "Inlets"
@@ -199,7 +198,7 @@ vendors:
     license: ""
     deployment: ""
     pricing: ""
-    notes: "No clear ZTNA play (March 2022). Previously Witesand. Acquired by Juniper (2022). Product appeared to be cloud-based Network Access Control (NAC), an alternative to systems like Cisco's Identity Services Engine and Aruba's Clearpass"
+    notes: "No clear ZTNA play (March 2022). Previously Witesand. Acquired by Juniper in 2022. Product appeared to be cloud-based Network Access Control (NAC), an alternative to systems like Cisco's Identity Services Engine and Aruba's Clearpass"
 
   - company: "Cisco"
     product: ""
@@ -223,7 +222,7 @@ vendors:
     license: ""
     deployment: ""
     pricing: ""
-    notes: "This needs it's own architecture diagram."
+    notes: "This needs it's own architecture diagram"
 
   - company: "Nucleus"
     product: "Nucleus"
@@ -239,7 +238,7 @@ vendors:
     license: ""
     deployment: ""
     pricing: "" 
-    notes: "May need its own architecture diagram? Making something dark can be done in a few ways, but the way it's generally handled in Ziti is that services reach out and establish one or more connections to the Ziti network fabric. Clients coming into the fabric can then reach the service through these connections after being authenticated and authorized."
+    notes: "May need its own architecture diagram? Making something dark can be done in a few ways, but the way it's generally handled in Ziti is that services reach out and establish one or more connections to the Ziti network fabric. Clients coming into the fabric can then reach the service through these connections after being authenticated and authorized"
 
   - company: "QI-ANXIN Group"
     product: ""
@@ -263,7 +262,7 @@ vendors:
     license: "Commercial"
     deployment: "SaaS"
     pricing: "Published"
-    notes: "Is this really an identity aware proxy? They talk about overlay..."
+    notes: "Is this really an identity aware proxy? They talk about overlay.."
 
   - company: "CloudFlare"
     product: "Gateway"
@@ -272,6 +271,22 @@ vendors:
     deployment: "SaaS"
     pricing: "Published"
     notes: "This is an Internet facing secure web gateway, not ZTNA"
+
+  - company: "Trustgrid"
+    product: ""
+    url: "https://trustgrid.io/"
+    license: ""
+    deployment: ""
+    pricing: ""
+    notes: "Appears to be SD-WAN with SDP characterstics? https://www.youtube.com/watch?v=5qGMokSYOIs&ab_channel=Trustgrid"
+
+  - company: "ZeroC"
+    product: ""
+    url: "https://zeroc.com/"
+    license: ""
+    deployment: ""
+    pricing: ""
+    notes: "Is it zero trust?"
 
 
 

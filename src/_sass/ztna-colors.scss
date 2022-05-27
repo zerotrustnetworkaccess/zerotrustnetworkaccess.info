@@ -168,4 +168,6 @@ $direction: left;
 
 .flyout-background {
   background-color: $flyout-back;
+  border: none;
+  border-left: solid 1px #222;
 }

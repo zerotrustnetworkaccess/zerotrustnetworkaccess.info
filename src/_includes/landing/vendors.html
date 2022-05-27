@@ -64,26 +64,23 @@
           {% if arch.displayByDeafult %} focus {% endif %}"
         >
           <div id="{{arch.filter}}"></div>
-          <h2
-            class="dark-text ztna-margin-bottom-20-10 mr-md-40-20 ml-md-40-20 mr-lg-40 ml-lg-40"
-          >
+          <h2 class="dark-text ztna-margin-bottom-20-10 mr-md-40-20 ml-md-40-20 mr-lg-40 ml-lg-40">
             {{arch.name}} {% if arch.abbreviation != "" %}({{arch.abbreviation}}){% endif %}
           </h2>
           <div class="row">
             <div class="col-lg-8 col-md-10 col-sm-12">
               {% for paragraph in arch.paragraphs %}
-              <p
-                class="ztna-small-text light-text-1 mr-md-40-20 ml-md-40-20 mr-lg-40 ml-lg-40"
-              >
+              <p class="ztna-small-text light-text-1 mr-md-40-20 ml-md-40-20 mr-lg-40 ml-lg-40">
                 {{paragraph.text}}
               </p>
+              <div class="space20"></div>
               {% endfor %}
             </div>
           </div>
-          <div class="space30"></div>
+          <div class="space40"></div>
 
           <div class="row">
-            <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="col-lg-4 col-md-12 col-sm-12">
               <div class="mr-md-40-20 ml-md-40-20 mb-md-30 ml-lg-40">
                 {% if arch.strengths %}
                 <h3 class="dark-text ztna-margin-bottom-20-10">Strengths</h3>
@@ -91,7 +88,11 @@
                   {% for strength in arch.strengths %}
                   <li class="ztna-small-text light-text-1">
                     <i class="jam jam-check"></i>
-                    {{strength.title}}
+                    {% if strength.description != null and strength.description != "" %}
+                      <span class="hover has-tooltip" title="" data-placement="right" data-original-title="{{strength.description}}">{{strength.title}}</span>
+                    {% else %}
+                      {{strength.title}}
+                    {% endif %}
                   </li>
                   <div class="space5"></div>
                   {% endfor %}
@@ -99,7 +100,7 @@
                 {% endif %}
               </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="col-lg-4 col-md-12 col-sm-12">
               <div class="mr-md-40-20 ml-md-40-20 mb-md-30">
                 {% if arch.strengths %}
                 <h3 class="dark-text ztna-margin-bottom-20-10">Weaknesses</h3>
@@ -107,7 +108,11 @@
                   {% for weakness in arch.weaknesses %}
                   <li class="ztna-small-text light-text-1">
                     <i class="jam jam-minus-circle"></i>
-                    {{weakness.title}}
+                    {% if weakness.description != null and weakness.description != "" %}
+                      <span class="hover has-tooltip" title="" data-placement="right" data-original-title="{{weakness.description}}">{{weakness.title}}</span>
+                    {% else %}
+                      {{weakness.title}}
+                    {% endif %}
                   </li>
                   <div class="space5"></div>
                   {% endfor %}
@@ -115,7 +120,7 @@
                 {% endif %}
               </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="col-lg-4 col-md-12 col-sm-12">
               <div class="mr-md-40-20 ml-md-40-20">
                 {% if arch.strengths %}
                 <h3 class="dark-text ztna-margin-bottom-20-10">Trade-offs</h3>
@@ -123,7 +128,11 @@
                   {% for tradeoff in arch.tradeoffs %}
                   <li class="ztna-small-text light-text-1">
                     <i class="jam jam-star"></i>
-                    {{tradeoff.title}}
+                    {% if tradeoff.description != null and tradeoff.description != "" %}
+                      <span class="hover has-tooltip" title="" data-placement="right" data-original-title="{{tradeoff.description}}">{{tradeoff.title}}</span>
+                    {% else %}
+                      {{tradeoff.title}}
+                    {% endif %}
                   </li>
                   <div class="space5"></div>
                   {% endfor %}
@@ -132,7 +141,7 @@
               </div>
             </div>
           </div>
-          <div class="space20"></div>
+          <div class="space60"></div>
           <h3 class="dark-text ztna-margin-bottom-20-10 mr-md-40-20 ml-md-40-20 mr-lg-40 ml-lg-40">
             {{arch.name}} Vendors ({{arch.vendors.size}})
           </h3>
@@ -154,14 +163,27 @@
                 <tr>
                   <td scope="row">{{ forloop.index }}.</td>
                   <td>
-                    <a
-                      href="{{vendor.url}}"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="light-blue-1"
-                    >
+                    {% if vendor.notes != null and vendor.notes != "" %}
+                      <a
+                        href="{{vendor.url}}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="light-blue-1 hover has-tooltip"
+                        title="" 
+                        data-placement="right" 
+                        data-original-title="{{vendor.notes}}">
+                          {{vendor.company}}
+                      </a>
+                    {% else %}                      
+                      <a
+                        href="{{vendor.url}}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="light-blue-1"
+                      >
                       {{vendor.company}}
-                    </a>
+                      </a>
+                    {% endif %}
                   </td>
                   <td>{{vendor.product}}</td>
                   <td>{{vendor.license}}</td>

@@ -1,0 +1,59 @@
+name: "Host-based Firewall Control"
+abbreviation: ""
+filter: "host-based-firewall"
+display: true
+sort_order: 5
+image: "https://via.placeholder.com/2280x1200"
+
+paragraphs: 
+  - text: "Requires different all areas of the network be connected, and routable for any kind of traffic and uses host-based firewalls instead of perimeter devices to enforce ACLs."
+  - text: "Vendor manages firewalls on the host OS to control access"
+
+strengths:
+  - title: "No appliances to deploy"
+    description: ""
+  - title: "Universal protocol support"
+    description: ""
+  - title: "North-south (client-to-server) traffic"
+    description: "Host-based firewalls determine access so are agnostic to traffic type provided the endpoints are able to route packets to each another"
+  - title: "East-west (server-to-server) traffic"
+    description: "Host-based firewalls determine access so are agnostic to traffic type provided the endpoints are able to route packets to each another"
+  - title: "Resilient to temporary trust broker failures"
+    description: "Policy is cached by endpoints should trust broker become temporarily unavailable"
+
+weaknesses:
+  - title: "Primarily agent-based deployment"
+    description: ""
+  - title: "Non-manageable devices not serviced"
+    description: ""
+  - title: "Assumes network reachability"
+    description: "Assumes appropriate WAN links"
+  - title: "Inconsistent per-OS firewall capabilities"
+    description: "Not all host-based firewalls have the same capabilities"
+  - title: "Legacy systems may not be manageable"
+    description: "Older operating systems without host-based firewalls may not be manageable"
+
+tradeoffs:
+  - title: "Trust broker becomes the new target"
+    description: "In order for endpoints to connect, the trust broker must be accessible on the network"
+  - title: "Network can remain fundamentally flat"
+    description: ""
+  - title: "Relies on IP addresses"
+    description: ""
+
+vendors: 
+  - company: "Illumio"
+    product: "Illumio Edge"
+    url: "https://www.illumio.com/"
+    license: "Commercial"
+    deployment: "SaaS or Self-hosted"
+    pricing: "Not Published"
+    notes: ""
+
+  - company: "Colortokens"
+    product: "XAccess"
+    url: "https://colortokens.com/product/xshield-workload-protection/"
+    license: "Commercial"
+    deployment: "SaaS"
+    pricing: "Not Published"
+    notes: ""

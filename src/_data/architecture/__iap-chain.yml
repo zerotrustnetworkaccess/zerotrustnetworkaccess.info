@@ -2,11 +2,10 @@ name: "Identity Aware Proxy Chain"
 abbreviation: "IAP"
 filter: "identity-aware-proxy-chain"
 display: false
-sort_order: "1"
-description: "..."
+sort_order: 99
 image: "https://patentimages.storage.googleapis.com/39/d6/81/b6e073ccf3fdbd/US20180375963A1-20181227-D00006.png"
 paragraphs: 
-  - text: "Vendor routes customer traffic through multiple, dynamically rotated cloud providers to obscure network location of origin servers."
+  - text: "Vendor routes customer traffic through multiple, dynamically rotated cloud providers to obscure network location of origin servers"
 strengths:
   - title: ""
     description: ""

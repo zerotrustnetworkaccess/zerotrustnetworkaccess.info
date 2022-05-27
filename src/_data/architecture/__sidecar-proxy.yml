@@ -2,8 +2,7 @@ name: "Sidecar Proxy"
 abbreviation: ""
 filter: "sidecar"
 display: false
-sort_order: "1"
-description: ""
+sort_order: 99
 image: "https://via.placeholder.com/2280x1200"
 paragraphs: 
   - text: ""

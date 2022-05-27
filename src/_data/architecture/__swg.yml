@@ -1,9 +1,8 @@
-name: "Network Virtualization Overlays"
-abbreviation: "NVO3"
-filter: "nvo3"
+name: "Secure Web Gateway"
+abbreviation: "SWG"
+filter: "secure-web-gateway"
 display: false
-sort_order: "1"
-description: "https://datatracker.ietf.org/wg/nvo3/documents/"
+sort_order: 99
 image: "https://via.placeholder.com/2280x1200"
 paragraphs: 
   - text: ""

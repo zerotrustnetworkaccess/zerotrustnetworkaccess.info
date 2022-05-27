@@ -27,13 +27,18 @@
             {% endif %}
             <div class="space10"></div>
             <div class="ztna-margin-bottom-30-20">
-              {% if arch.description %}
-              <p class="light-text-1 ztna-small-text">{{arch.description}}</p>
-              {% endif %}
+
+            {% for paragraph in arch.paragraphs %}
+              <p class="light-text-1 ztna-small-text">
+                {{paragraph.text}}
+              </p>
+              <div class="space20"></div>
+            {% endfor %}
+
             </div>
             <div class="ml-5 ztna-margin-bottom-30-20">
-              <a href="#filter=.{{arch.filter}}">
-                {%include components/link.html
+              <a href="#filter={{arch.filter}}">
+                {%include components/link.html 
                 content=architecture-summary.button %}
               </a>
             </div>

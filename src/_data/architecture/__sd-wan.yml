@@ -2,11 +2,10 @@ name: "SD-WAN"
 abbreviation: ""
 filter: "sd-wan"
 display: false
-sort_order: "1"
-description: "Inter-site encryption and routing, bandwidth control, path selection and application visibility between appliances at the edge of each logical or physical network in the organisation adjusting dynamically for the most efficient routes. Avoid MPLS backhaul by selecting the best path for traffic to reach applications. Allows customers to choose what runs over MPLS vs. what runs over home broadband. May calculate the best possible path to application resources on an almost real time basis. Control plane pushes config to the routers and networking devices."
+sort_order: 99
 image: "https://via.placeholder.com/2280x1200"
 paragraphs:
-  - text: ""
+  - text: "Inter-site encryption and routing, bandwidth control, path selection and application visibility between appliances at the edge of each logical or physical network in the organisation adjusting dynamically for the most efficient routes. Avoid MPLS backhaul by selecting the best path for traffic to reach applications. Allows customers to choose what runs over MPLS vs. what runs over home broadband. May calculate the best possible path to application resources on an almost real time basis. Control plane pushes config to the routers and networking devices."
 strengths:
   - title: ""
     description: ""
@@ -31,7 +30,7 @@ vendors:
     license: "Commercial"
     deployment: "SaaS"
     pricing: "Not Published" 
-    notes: "Acquired by Cisco (2017)"
+    notes: "Acquired by Cisco in 2017"
 
   - company: "Aruba"
     product: "EdgeConnect"
@@ -39,4 +38,4 @@ vendors:
     license: "Commercial"
     deployment: ""
     pricing: "Not Published"
-    notes: "Previously Silver Peak. Acquired by Aruba (2020)"
+    notes: "Previously Silver Peak. Acquired by Aruba in 2020"

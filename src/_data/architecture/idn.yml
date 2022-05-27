@@ -2,25 +2,52 @@ name: "Identity Defined Network"
 abbreviation: "IDN"
 filter: "identity-defined-network"
 display: true
-sort_order: "1"
-description: "Implementation of the HIP protocol"
+sort_order: 6
 image: "/assets/images/architecture/idn.png"
+
 paragraphs: 
-  - text: ""
+  - text: "All traffic flows through a cloud relay. This is a L2/L3 (routed via) or L4 (proxied via)?"
+  - text: "All traffic traverses network relays.  Implementation of the HIP protocol"
+
 strengths:
-  - title: ""
+  - title: "North-south (client-to-server) traffic"
     description: ""
+  - title: "Universal protocol support"
+    description: ""
+
 weaknesses:
-  - title: ""
+  - title: "Business network depends on relay uptime"
     description: ""
+  - title: "High-availability requires multiple appliances"
+    description: ""
+  - title: "All network traffic traverses relays"
+    description: "Traffic relays can act as concentrators, introducing latency and throughput bottlenecks"
+  - title: "Appliances require patching"
+    description: ""
+  - title: "Agents require patching"
+    description: ""
+  - title: "Must be reconfigured if network changes"
+    description: ""
+  - title: "East-west (server-to-server) traffic"
+    description: "Moving east-west traffic through network relays can be inefficient"
+
 tradeoffs:
-  - title: ""
-    description: ""
+  - title: "Trust broker becomes the new target"
+    description: "In order for endpoints to connect to it, the trust broker must be publicly accessible"
+
 vendors: 
   - company: "Tempered Networks"
     product: "Airwall"
     url: "https://www.temperednetworks.com/"
     license: "Commercial"
-    deployment: "SaaS and Hardware"
+    deployment: "SaaS or Self-hosted"
     pricing: "Not Published"
     notes: ""
+
+  - company: "Zentera"
+    product: ""
+    url: "http://zentera.net/"
+    license: ""
+    deployment: ""
+    pricing: ""
+    notes: "https://www.zentera.net/hubfs/coip%20architecture.png data flow doesn't look to be peer-to-peer"

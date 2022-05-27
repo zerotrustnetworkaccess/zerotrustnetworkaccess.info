@@ -127,7 +127,6 @@ html {
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "Jost", sans-serif;
   color: #606060;
   font-size: 0.8rem;
   background: #f9fafb;
@@ -726,9 +725,9 @@ button.hamburger.animate.active:after {
   top: 0;
   bottom: 0;
   left: auto;
-  right: -300px;
-  width: 300px;
-  padding-top: 5rem;
+  right: -375px;
+  width: 375px;
+  padding-top: 3.2rem;
   padding-right: 1.5rem;
   padding-left: 1.5rem;
   overflow-y: auto;
@@ -751,14 +750,24 @@ button.hamburger.animate.active:after {
   -webkit-background-clip: padding;
   background-clip: padding-box;
 }
+.offcanvas-info a {
+  color: #cad8e6;
+  text-decoration: underline;
+}
+.offcanvas-info a:hover {
+  color: #fff;
+}
+.offcanvas-info p {
+  font-weight: 300;
+}
 .offcanvas-info.open {
   right: 0;
   visibility: visible;
 }
 .offcanvas-close {
   position: absolute;
-  top: 2rem;
-  left: 1.3rem;
+  top: 1rem;
+  right: 1.3rem;
   cursor: pointer;
   font-size: 1.2rem;
   -webkit-transition: all 200ms ease-in-out !important;
@@ -2149,11 +2158,6 @@ ol {
   left: 0;
   z-index: -1;
 }
-.icon-blob span,
-.icon-blob h3,
-.icon-blob p {
-  font-family: "Jost", sans-serif !important;
-}
 .icon-blob span {
   font-weight: 500;
 }
@@ -2182,7 +2186,6 @@ ol {
   position: absolute;
   bottom: -0.15rem;
   left: 0.55rem;
-  font-family: "Jost", sans-serif !important;
   width: 1rem;
   height: 1rem;
   border-radius: 100%;
@@ -3929,32 +3932,48 @@ th {
 /*  46. TOOLTIP
 /*-----------------------------------------------------------------------------------*/
 .tooltip {
-  font: inherit;
+  font-family: Inter;
 }
 .tooltip.show {
   opacity: 0.98;
 }
 .tooltip-inner {
   color: var(--color-white);
-  background-color: var(--color-default);
+  background-color: var(--color-dark);
   padding: 0.5rem 0.75rem;
   border-radius: 0.2rem;
+  font-size: .64rem;
+  font-weight: 300;
+  line-height: 150%;
+  max-width: 240px;
+}
+.tooltip.bs-tooltip-right {
+  margin-left: 10px;
+}
+.tooltip.bs-tooltip-left {
+  margin-left: 3px;
 }
 .tooltip.bs-tooltip-auto[x-placement^="top"] .arrow::before,
 .tooltip.bs-tooltip-top .arrow::before {
-  border-top-color: var(--color-default);
+  border-top-color: var(--color-dark);
 }
 .tooltip.bs-tooltip-auto[x-placement^="right"] .arrow::before,
 .tooltip.bs-tooltip-right .arrow::before {
-  border-right-color: var(--color-default);
+  border-right-color: var(--color-dark);
 }
 .tooltip.bs-tooltip-auto[x-placement^="bottom"] .arrow::before,
 .tooltip.bs-tooltip-bottom .arrow::before {
-  border-bottom-color: var(--color-default);
+  border-bottom-color: var(--color-dark);
 }
 .tooltip.bs-tooltip-auto[x-placement^="left"] .arrow::before,
 .tooltip.bs-tooltip-left .arrow::before {
-  border-left-color: var(--color-default);
+  border-left-color: var(--color-dark);
+}
+
+.has-tooltip {
+  cursor: pointer;
+  text-decoration: underline dashed;
+  text-underline-position: under;
 }
 /*-----------------------------------------------------------------------------------*/
 /*  47. POPOVER

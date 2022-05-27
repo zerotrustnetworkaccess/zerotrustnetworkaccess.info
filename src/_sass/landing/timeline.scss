@@ -44,6 +44,10 @@
   }
 }
 
+.timelineYear {
+  font-weight: 500;
+}
+
 .timelineAcronym {
   font-size: 0.89em;
   font-weight: 300;
@@ -56,6 +60,10 @@
 
 .timeline-data {
   display: flex;
+
+  .light-text-3 {
+    font-family: $fontfamily-jost;
+  }
 
   p {
     a {
@@ -70,7 +78,7 @@
 
 .timeline-item {
   width: 100%;
-  transition: all 1s;
+  transition: all .25s;
 }
 
 .timeline-item-date-wrapper {
