@@ -15,8 +15,13 @@
   </div>
 
   <div class="basic-slider owl-carousel ztna-carousels-wrapper grid" data-margin="5">
+    {% assign datas = "" | split: "" %}
     {% for architecture in site.data.architecture %}
-    {% assign arch = architecture[1] %}
+      {% assign datas = datas | push: architecture[1] %}
+    {% endfor %}
+
+    {% assign datas = datas | sort: "sort_order" %}
+    {% for arch in datas %}
     {% if arch.display == true %}
     <div class="item item-detailed">
       <div class="item-content px-0 mx-auto">
