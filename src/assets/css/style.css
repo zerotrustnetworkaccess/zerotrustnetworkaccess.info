@@ -3730,6 +3730,7 @@ th {
   height: auto;
 }
 .item-detailed figure img:first-child {
+  image-rendering: -webkit-optimize-contrast;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-transition: all 300ms ease-in-out 0.05s;
