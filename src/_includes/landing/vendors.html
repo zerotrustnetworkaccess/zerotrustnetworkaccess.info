@@ -29,8 +29,13 @@
             </a>
           </li>
 
+          {% assign datas = "" | split: "" %}
           {% for architecture in site.data.architecture %}
-          {% assign arch = architecture[1] %}
+            {% assign datas = datas | push: architecture[1] %}
+          {% endfor %}
+      
+          {% assign datas = datas | sort: "sort_order" %}
+          {% for arch in datas %}
           {% if arch.display == true %}
             <li>
               <a class="ztna-tag-large background-color light-text-1 h4 mb-10 mr-10 button" data-filter="{{arch.filter}}">
