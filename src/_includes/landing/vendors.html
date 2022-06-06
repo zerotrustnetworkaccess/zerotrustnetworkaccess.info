@@ -58,9 +58,7 @@
 
 
       <div class="row isotope">
-
-        {% for architecture in site.data.architecture %}
-        {% assign arch = architecture[1] %}
+        {% for arch in datas %}
         {% if arch.vendors %}
         {% if arch.display == true %}
         <div
