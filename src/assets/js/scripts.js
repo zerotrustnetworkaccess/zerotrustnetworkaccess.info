@@ -1,67 +1,18 @@
 $(document).ready(function () {
   "use strict";
   /*-----------------------------------------------------------------------------------*/
-  /*	STICKY HEADER
-/*-----------------------------------------------------------------------------------*/
-  // if ($("#search-input").length > 0) {
-  //   var sjs = SimpleJekyllSearch({
-  //     searchInput: document.getElementById("search-input"),
-  //     resultsContainer: document.getElementById("results-container"),
-  //     json: "/search.json",
-  //   });
-  // }
-
-/* disable sticky nav
-
-  if ($(".navbar").length) {
-    var options = {
-      offset: 90,
-      offsetSide: "top",
-      classes: {
-        clone: "banner--clone fixed",
-        stick: "banner--stick",
-        unstick: "banner--unstick",
-      },
-      onStick: function () {
-        $($.SmartMenus.Bootstrap.init);
-      },
-      // onUnstick: function () {
-      //   $(".search-dropdown .dropdown-menu").collapse("hide");
-      // },
-    };
-    var banner = new Headhesive(".navbar", options);
-  }
-*/
-  /*-----------------------------------------------------------------------------------*/
   /*	HEADER BUTTONS
 /*-----------------------------------------------------------------------------------*/
   var $header_hamburger = $(".hamburger.animate");
-  // var $header_search = $(".search-dropdown .dropdown-menu");
-  //var $header_cart = $(".cart-dropdown .dropdown-menu");
   var $navbar_offcanvas = $(".offcanvas-nav");
   var $navbar_offcanvas_toggle = $('[data-toggle="offcanvas-nav"]');
   var $navbar_offcanvas_close = $(".offcanvas-nav-close");
-  // var $navbar_search_toggle = $(".search-dropdown .collapse-toggle");
-  // var $navbar_search_close = $(
-  //   ".search-dropdown .dropdown-menu .dropdown-close"
-  // );
   var $info_offcanvas = $(".offcanvas-info");
   var $info_offcanvas_close = $(".offcanvas-info-close");
   var $info_offcanvas_toggle = $('[data-toggle="offcanvas-info"]');
   $header_hamburger.on("click", function () {
     $header_hamburger.toggleClass("active");
-    // $header_search.collapse("hide");
   });
-  // $header_search.on("click", function (e) {
-  //   e.stopPropagation();
-  // });
-  // $navbar_search_close.click(function () {
-  //   $header_search.collapse("hide");
-  // });
-  // $navbar_search_toggle.on("click", function (e) {
-  //   $navbar_offcanvas.removeClass("open");
-  //   $header_hamburger.removeClass("active");
-  // });
   $navbar_offcanvas_toggle.on("click", function (e) {
     e.stopPropagation();
     $navbar_offcanvas.toggleClass("open");
@@ -69,9 +20,6 @@ $(document).ready(function () {
   $navbar_offcanvas.on("click", function (e) {
     e.stopPropagation();
   });
-  // $header_cart.on("click", function (e) {
-  //   e.stopPropagation();
-  // });
   $navbar_offcanvas_close.on("click", function (e) {
     e.stopPropagation();
     $navbar_offcanvas.removeClass("open");
@@ -80,13 +28,11 @@ $(document).ready(function () {
   $info_offcanvas_toggle.on("click", function (e) {
     e.stopPropagation();
     $info_offcanvas.toggleClass("open");
-    // $header_search.collapse("hide");
   });
   $info_offcanvas.on("click", function (e) {
     e.stopPropagation();
   });
   $(document).on("click", function () {
-    // $header_search.collapse("hide");
     $navbar_offcanvas.removeClass("open");
     $info_offcanvas.removeClass("open");
     $header_hamburger.removeClass("active");
@@ -114,13 +60,12 @@ $(document).ready(function () {
         window.scrollTo(0, 0);
         var filter = location.hash.split("#");
         var target = filter[1].split("=");
-        
+
         try {
           var targetEval = $("#" + target[1]);
           smoothScrollTo(targetEval);
         }
-        catch (e)
-        {
+        catch (e) {
           // handle url fragments which don't eval to an 
           // object on the dom, and don't smoothscroll
           location.hash = "#vendors";
@@ -130,7 +75,7 @@ $(document).ready(function () {
     $('a.scroll[href*="#"]:not([href="#"])').on("click", function () {
       if (
         location.pathname.replace(/^\//, "") ==
-          this.pathname.replace(/^\//, "") &&
+        this.pathname.replace(/^\//, "") &&
         location.hostname == this.hostname
       ) {
         smoothScrollTo($(this.hash));
@@ -168,31 +113,8 @@ $(document).ready(function () {
   /*-----------------------------------------------------------------------------------*/
   /*	ISOTOPE GRID
 /*-----------------------------------------------------------------------------------*/
-
-  /* relax the overly keen auto-scroll
-  const scrolltoVendors = () => {
-    $(document).ready(function () {
-      // Handler for .ready() called.
-      $("html, body").animate(
-        {
-          scrollTop: $("#vendors").offset().top,
-        },
-        "slow"
-      );
-    });
-  };
-
-  if (window.location.hash.match(/filter/)) {
-    scrolltoVendors();
-  }
-
-  $(window).on("hashchange", scrolltoVendors);
-  */
-
   function enableIsotope() {
-    // for each container
     function getHashFilter() {
-      // get filter=filterName
       var matches = location.hash.match(/filter=([^&]+)/i);
       var hashFilter = matches && matches[1];
       return hashFilter && decodeURIComponent(hashFilter);
@@ -204,7 +126,6 @@ $(document).ready(function () {
       var $grid = $gridContainer.find(".isotope").imagesLoaded(function () {
         $grid.isotope({
           itemSelector: ".item",
-          // filter: ".focus",
           layoutMode: "masonry",
           percentPosition: true,
           masonry: {
@@ -235,8 +156,7 @@ $(document).ready(function () {
         }
         // filter isotope
         var isotopeFilter = hashFilter;
-        if (hashFilter !== null && hashFilter != "*")
-        {
+        if (hashFilter !== null && hashFilter != "*") {
           isotopeFilter = "." + hashFilter;
         }
         isIsotopeInit = true;
@@ -310,6 +230,8 @@ $(document).ready(function () {
       dots: true,
       dotsEach: true,
       loop: true,
+      URLhashListener: true,
+      startPosition: 'filter=host-based-firewall',
       margin: $carousel.data("margin"),
       autoplay: false,
       autoplayTimeout: 3000,
