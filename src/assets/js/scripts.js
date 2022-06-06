@@ -11,27 +11,27 @@ $(document).ready(function () {
   //   });
   // }
 
-/* disable sticky nav
-
-  if ($(".navbar").length) {
-    var options = {
-      offset: 90,
-      offsetSide: "top",
-      classes: {
-        clone: "banner--clone fixed",
-        stick: "banner--stick",
-        unstick: "banner--unstick",
-      },
-      onStick: function () {
-        $($.SmartMenus.Bootstrap.init);
-      },
-      // onUnstick: function () {
-      //   $(".search-dropdown .dropdown-menu").collapse("hide");
-      // },
-    };
-    var banner = new Headhesive(".navbar", options);
-  }
-*/
+  /* disable sticky nav
+  
+    if ($(".navbar").length) {
+      var options = {
+        offset: 90,
+        offsetSide: "top",
+        classes: {
+          clone: "banner--clone fixed",
+          stick: "banner--stick",
+          unstick: "banner--unstick",
+        },
+        onStick: function () {
+          $($.SmartMenus.Bootstrap.init);
+        },
+        // onUnstick: function () {
+        //   $(".search-dropdown .dropdown-menu").collapse("hide");
+        // },
+      };
+      var banner = new Headhesive(".navbar", options);
+    }
+  */
   /*-----------------------------------------------------------------------------------*/
   /*	HEADER BUTTONS
 /*-----------------------------------------------------------------------------------*/
@@ -114,13 +114,12 @@ $(document).ready(function () {
         window.scrollTo(0, 0);
         var filter = location.hash.split("#");
         var target = filter[1].split("=");
-        
+
         try {
           var targetEval = $("#" + target[1]);
           smoothScrollTo(targetEval);
         }
-        catch (e)
-        {
+        catch (e) {
           // handle url fragments which don't eval to an 
           // object on the dom, and don't smoothscroll
           location.hash = "#vendors";
@@ -130,7 +129,7 @@ $(document).ready(function () {
     $('a.scroll[href*="#"]:not([href="#"])').on("click", function () {
       if (
         location.pathname.replace(/^\//, "") ==
-          this.pathname.replace(/^\//, "") &&
+        this.pathname.replace(/^\//, "") &&
         location.hostname == this.hostname
       ) {
         smoothScrollTo($(this.hash));
@@ -235,8 +234,7 @@ $(document).ready(function () {
         }
         // filter isotope
         var isotopeFilter = hashFilter;
-        if (hashFilter !== null && hashFilter != "*")
-        {
+        if (hashFilter !== null && hashFilter != "*") {
           isotopeFilter = "." + hashFilter;
         }
         isIsotopeInit = true;
@@ -310,6 +308,8 @@ $(document).ready(function () {
       dots: true,
       dotsEach: true,
       loop: true,
+      URLhashListener: true,
+      startPosition: 'filter=host-based-firewall',
       margin: $carousel.data("margin"),
       autoplay: false,
       autoplayTimeout: 3000,

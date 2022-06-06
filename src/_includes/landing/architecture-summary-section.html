@@ -18,7 +18,9 @@
     {% for architecture in site.data.architecture %}
     {% assign arch = architecture[1] %}
     {% if arch.display == true %}
-    <div class="item item-detailed">
+      {% if arch.filter %}
+    <div class="item item-detailed {{arch.filter}}" data-hash="filter={{arch.filter}}">
+      {% endif %}
       <div class="item-content px-0 mx-auto">
         <div class="row">
           <div class="col-lg-4 col-md-12 text-center text-lg-left mb-0">
