@@ -208,6 +208,11 @@ $(document).ready(function () {
       dotsEach: true,
       autoHeight: true,
       loop: true,
+      touchDrag: false,
+      mouseDrag: false,
+      pullDrag: false,
+      URLhashListener: true,
+      startPosition: 'filter=host-based-firewall',
       margin: $bslider.data("margin"),
       navContainerClass: "ztna-slider-navbuttons-wrapper",
       navClass: [
@@ -222,117 +227,115 @@ $(document).ready(function () {
       dotClass: "ztna-slider-dot-item light-text-2-background",
     });
   });
-  $(".carousel").each(function () {
-    var $carousel = $(this);
-    $carousel.owlCarousel({
-      autoHeight: false,
-      nav: true,
-      dots: true,
-      dotsEach: true,
-      loop: true,
-      URLhashListener: true,
-      startPosition: 'filter=host-based-firewall',
-      margin: $carousel.data("margin"),
-      autoplay: false,
-      autoplayTimeout: 3000,
-      navContainerClass: "ztna-slider-navbuttons-wrapper",
-      navClass: [
-        "owl-prev ztna-small-button-left white-background light-blue-1 h4 ml-10",
-        "owl-next ztna-small-button-right white-background light-blue-1 h4 ml-10",
-      ],
-      navText: [
-        "<img src='/assets/icons/left-arrow.svg'> Prev",
-        "Next <img src='/assets/icons/right-arrow.svg'>",
-      ],
-      dotsClass: "ztna-slider-dots-wrapper",
-      dotClass: "ztna-slider-dot-item light-text-2-background",
+  // $(".carousel").each(function () {
+  //   var $carousel = $(this);
+  //   $carousel.owlCarousel({
+  //     autoHeight: false,
+  //     nav: true,
+  //     dots: true,
+  //     dotsEach: true,
+  //     loop: true,
+  //     margin: $carousel.data("margin"),
+  //     autoplay: false,
+  //     autoplayTimeout: 3000,
+  //     navContainerClass: "ztna-slider-navbuttons-wrapper",
+  //     navClass: [
+  //       "owl-prev ztna-small-button-left white-background light-blue-1 h4 ml-10",
+  //       "owl-next ztna-small-button-right white-background light-blue-1 h4 ml-10",
+  //     ],
+  //     navText: [
+  //       "<img src='/assets/icons/left-arrow.svg'> Prev",
+  //       "Next <img src='/assets/icons/right-arrow.svg'>",
+  //     ],
+  //     dotsClass: "ztna-slider-dots-wrapper",
+  //     dotClass: "ztna-slider-dot-item light-text-2-background",
 
-      responsiveClass: true,
-      responsive: {
-        0: {
-          items: 1,
-        },
-        575: {
-          items: 2,
-        },
-        992: {
-          items: 3,
-        },
-      },
-    });
-  });
+  //     responsiveClass: true,
+  //     responsive: {
+  //       0: {
+  //         items: 1,
+  //       },
+  //       575: {
+  //         items: 2,
+  //       },
+  //       992: {
+  //         items: 3,
+  //       },
+  //     },
+  //   });
+  // });
   /*-----------------------------------------------------------------------------------*/
   /*	OWL SLIDER WITH THUMBNAILS
 /*-----------------------------------------------------------------------------------*/
-  var $owlmain = $(".owl-slider-main");
-  var $owlnav = $(".owl-slider-nav");
-  //var totalslides = 10;
-  var syncedSecondary = true;
-  $owlmain
-    .owlCarousel({
-      items: 1,
-      nav: false,
-      margin: 10,
-      autoplay: false,
-      dots: false,
-      loop: true,
-      responsiveRefreshRate: 200,
-    })
-    .on("changed.owl.carousel", syncPosition);
-  $owlnav
-    .on("initialized.owl.carousel", function () {
-      $owlnav.find(".owl-item").eq(0).addClass("current");
-    })
-    .owlCarousel({
-      items: 3,
-      margin: 10,
-      dots: false,
-      nav: false,
-      smartSpeed: 200,
-      slideSpeed: 500,
-      slideBy: 3,
-      responsiveRefreshRate: 100,
-    })
-    .on("changed.owl.carousel", syncPosition2);
-  function syncPosition(el) {
-    //if loop is set to false, then you have to uncomment the next line
-    //var current = el.item.index;
-    //to disable loop, comment this block
-    var count = el.item.count - 1;
-    var current = Math.round(el.item.index - el.item.count / 2 - 0.5);
-    if (current < 0) {
-      current = count;
-    }
-    if (current > count) {
-      current = 0;
-    }
-    //to this
-    $owlnav
-      .find(".owl-item")
-      .removeClass("current")
-      .eq(current)
-      .addClass("current");
-    var onscreen = $owlnav.find(".owl-item.active").length - 1;
-    var start = $owlnav.find(".owl-item.active").first().index();
-    var end = $owlnav.find(".owl-item.active").last().index();
-    if (current > end) {
-      $owlnav.data("owl.carousel").to(current, 100, true);
-    }
-    if (current < start) {
-      $owlnav.data("owl.carousel").to(current - onscreen, 100, true);
-    }
-  }
-  function syncPosition2(el) {
-    if (syncedSecondary) {
-      var number = el.item.index;
-      $owlmain.data("owl.carousel").to(number, 100, true);
-    }
-  }
-  $owlnav.on("click", ".owl-item", function (e) {
-    e.preventDefault();
-    var number = $(this).index();
-    $owlmain.data("owl.carousel").to(number, 300, true);
-  });
+  // var $owlmain = $(".owl-slider-main");
+  // var $owlnav = $(".owl-slider-nav");
+  // //var totalslides = 10;
+  // var syncedSecondary = true;
+  // $owlmain
+  //   .owlCarousel({
+  //     items: 1,
+  //     nav: false,
+  //     margin: 10,
+  //     autoplay: false,
+  //     dots: false,
+  //     loop: true,
+  //     responsiveRefreshRate: 200,
+  //   })
+  //   .on("changed.owl.carousel", syncPosition);
+  // $owlnav
+  //   .on("initialized.owl.carousel", function () {
+  //     $owlnav.find(".owl-item").eq(0).addClass("current");
+  //   })
+  //   .owlCarousel({
+  //     items: 3,
+  //     margin: 10,
+  //     dots: false,
+  //     nav: false,
+  //     smartSpeed: 200,
+  //     slideSpeed: 500,
+  //     slideBy: 3,
+  //     responsiveRefreshRate: 100,
+  //   })
+  //   .on("changed.owl.carousel", syncPosition2);
+  // function syncPosition(el) {
+  //   //if loop is set to false, then you have to uncomment the next line
+  //   //var current = el.item.index;
+  //   //to disable loop, comment this block
+  //   var count = el.item.count - 1;
+  //   var current = Math.round(el.item.index - el.item.count / 2 - 0.5);
+  //   if (current < 0) {
+  //     current = count;
+  //   }
+  //   if (current > count) {
+  //     current = 0;
+  //   }
+  //   //to this
+  //   $owlnav
+  //     .find(".owl-item")
+  //     .removeClass("current")
+  //     .eq(current)
+  //     .addClass("current");
+  //   var onscreen = $owlnav.find(".owl-item.active").length - 1;
+  //   var start = $owlnav.find(".owl-item.active").first().index();
+  //   var end = $owlnav.find(".owl-item.active").last().index();
+  //   if (current > end) {
+  //     $owlnav.data("owl.carousel").to(current, 100, true);
+  //   }
+  //   if (current < start) {
+  //     $owlnav.data("owl.carousel").to(current - onscreen, 100, true);
+  //   }
+  // }
+  // function syncPosition2(el) {
+  //   if (syncedSecondary) {
+  //     var number = el.item.index;
+  //     $owlmain.data("owl.carousel").to(number, 100, true);
+  //   }
+  // }
+  // $owlnav.on("click", ".owl-item", function (e) {
+  //   e.preventDefault();
+  //   var number = $(this).index();
+  //   $owlmain.data("owl.carousel").to(number, 300, true);
+  // });
   /*-----------------------------------------------------------------------------------*/
   /*	LIGHTGALLERY
 /*-----------------------------------------------------------------------------------*/
