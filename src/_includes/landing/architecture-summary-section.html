@@ -25,7 +25,7 @@
     {% assign datas = datas | sort: "sort_order" %}
     {% for arch in datas %}
     {% if arch.display == true %}
-      <li >
+      <li data-slide-filter="#filter={{arch.filter}}">
         <a href="#filter={{arch.filter}}">
           {{arch.name}}
         </a>

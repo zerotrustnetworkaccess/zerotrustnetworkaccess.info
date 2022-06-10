@@ -266,6 +266,40 @@ $(document).ready(function () {
   });
   // --------------------slides control btns--------------------- //
   $(function () {
+    function getHashFilter() {
+      var matches = location.hash.match(/filter=([^&]+)/i);
+      var hashFilter = matches && matches[1];
+      return hashFilter && decodeURIComponent(hashFilter);
+    }
+    $(window).on('hashchange', function () {
+
+      var hashFilter = getHashFilter();
+
+      if (!hashFilter) {
+        return;
+      }
+      // filter 
+      var sliderFilter = hashFilter;
+      if (hashFilter !== null) {
+        sliderFilter = "#filter=" + hashFilter;
+      }
+
+      // // set selected class on button
+      if (sliderFilter == location.hash) {
+        var activeButton = $('.slider-list').find(".active");
+        if (activeButton) {
+          $('.slider-list').find(".active").removeClass("active");
+          $('.slider-list')
+            .find('[data-slide-filter="' + sliderFilter + '"]')
+            .addClass("active");
+        }
+      } else {
+        $('.slider-list')
+          .find('[data-slide-filter="' + sliderFilter + '"]')
+          .addClass("active");
+      }
+    });
+
     $('.slider-list li').click(function (e) {
       var $that = $(this);
       $that.parent().find('li').removeClass('active');
