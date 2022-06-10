@@ -1,0 +1,23 @@
+@import "ztna-interface.scss";
+
+.slider-list{
+    margin: 20px auto 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    max-width: 1200px;
+    li {
+        margin-bottom: 10px;
+        &.active a{
+            color: $white;
+            background-color: $light-blue-2;
+        }
+    }
+    a { 
+        @extend .ztna-small-button; 
+        color: $light-text-1;
+        border: unset;
+        background-color: $white;
+    }
+}
