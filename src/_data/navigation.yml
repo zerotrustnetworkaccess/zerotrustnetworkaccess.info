@@ -1,6 +1,6 @@
 main_menu:
   - text: "Blog"
-    url: "/"
+    url: "https://blog-zero-trust-network-access.netlify.app"
     icon: blog-header-icon.svg
 
   - text: "GitHub"
