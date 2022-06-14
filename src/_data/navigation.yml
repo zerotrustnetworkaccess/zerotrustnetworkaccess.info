@@ -1,7 +1,7 @@
 main_menu:
-  - text: "Blog"
-    url: "https://blog-zero-trust-network-access.netlify.app"
-    icon: blog-header-icon.svg
+  # - text: "Blog"
+  #   url: "https://blog-zero-trust-network-access.netlify.app"
+  #   icon: blog-header-icon.svg
 
   - text: "GitHub"
     url: "https://github.com/zerotrustnetworkaccess/zerotrustnetworkaccess.info"
