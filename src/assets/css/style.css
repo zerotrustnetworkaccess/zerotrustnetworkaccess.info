@@ -760,6 +760,12 @@ button.hamburger.animate.active:after {
 .offcanvas-info p {
   font-weight: 300;
 }
+.offcanvas-info span {
+  font-size: 13px;
+}
+.offcanvas-info svg {
+  width: 16px;
+}
 .offcanvas-info.open {
   right: 0;
   visibility: visible;
