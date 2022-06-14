@@ -742,6 +742,7 @@ button.hamburger.animate.active:after {
   -webkit-transition-property: right, visibility;
   -o-transition-property: right, visibility;
   transition-property: right, visibility;
+  z-index: 1041;
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: start;
