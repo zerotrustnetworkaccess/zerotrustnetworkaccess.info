@@ -1,7 +1,7 @@
 main_menu:
-  - text: "Read our Blog"
-    url: "/blog"
-    icon: blog-header-icon.svg
+  # - text: "Read our Blog"
+  #   url: "https://blog.zerotrustnetworkaccess.info"
+  #   icon: blog-header-icon.svg
 
   - text: "Fork us on GitHub"
     url: "https://github.com/zerotrustnetworkaccess/zerotrustnetworkaccess.info"
