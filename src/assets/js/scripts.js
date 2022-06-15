@@ -1,5 +1,6 @@
 $(document).ready(function () {
   "use strict";
+
   /*-----------------------------------------------------------------------------------*/
   /*	HEADER BUTTONS
 /*-----------------------------------------------------------------------------------*/
@@ -56,7 +57,7 @@ $(document).ready(function () {
 /*-----------------------------------------------------------------------------------*/
   $(function () {
     setTimeout(function () {
-      if (location.hash) {
+      if (location.hash && location.hash !== '#success') {
         window.scrollTo(0, 0);
         var filter = location.hash.split("#");
         var target = filter[1].split("=");
@@ -1052,6 +1053,8 @@ $(document).ready(function () {
     });
   }
   enableContactForm();
+
+
   /*-----------------------------------------------------------------------------------*/
   /*	MODAL
 /*-----------------------------------------------------------------------------------*/
@@ -1080,6 +1083,36 @@ $(document).ready(function () {
   ) {
     $(".image-wrapper").addClass("mobile");
   }
+
+
+  //-----------------------------------------------------------------------------// 
+  //   check ../#success for displaying popup "Thank you for subscription" ------//
+  //-----------------------------------------------------------------------------//
+
+  if (location.hash == "#success") {
+    const closePopup = document.querySelectorAll("#close-popup");
+    const overlay = document.getElementById("overlay");
+    const popUpSuccess = document.getElementById("popup-success");
+    //const popUpOk = document.getElementById("popup-ok");
+    const body = document.getElementsByTagName("body")[0];
+
+    overlay.style.display = "block";
+    popUpSuccess.style.display = "block";
+    body.style.overflowY = "hidden";
+
+    closePopup.forEach(
+      (el) =>
+      (el.onclick = () => {
+        overlay.style.display = "none";
+        popUpSuccess.style.display = "none";
+        popUpError.style.display = "none";
+        popUpOk.style.display = "none";
+        body.style.overflowY = "auto";
+        location.hash = '';
+      })
+    );
+
+  } else console.log("wrong")
   /*-----------------------------------------------------------------------------------*/
   /*	PRICING
 /*-----------------------------------------------------------------------------------*/

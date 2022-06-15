@@ -20,6 +20,7 @@ const handleError = () => {
 
 const _show_thank_you = (code, msg, link, mail) => {
   console.log(msg);
+  location.hash = '';
   overlay.style.display = "block";
   popUpOk.style.display = "block";
   body.style.overflowY = "hidden";
@@ -59,10 +60,10 @@ footerForm.addEventListener("submit", subscribe);
 
 closePopup.forEach(
   (el) =>
-    (el.onclick = () => {
-      overlay.style.display = "none";
-      popUpOk.style.display = "none";
-      popUpError.style.display = "none";
-      body.style.overflowY = "auto";
-    })
+  (el.onclick = () => {
+    overlay.style.display = "none";
+    popUpOk.style.display = "none";
+    popUpError.style.display = "none";
+    body.style.overflowY = "auto";
+  })
 );
