@@ -1,42 +1,43 @@
 enable: true
-title: "Twenty Years of Private Access Technology"
+title: "Twenty-Five Years of Private Access Technology"
+subtitle: "Evolution of Private Access"
 bg_image: "/assets/images/art/bg7.jpg"
 nodes:
 
   - year: "1995"
     acronym: "IPsec"
     title: "IPSec"
-    description: IPsec traces its origins back to DARPA and NSA funded work in the last decades of the twentieth century, it continued to evolve for several years before arguably starting to enter mainstream use cirac 2005 with the addition of AES and <a href="https://datatracker.ietf.org/doc/html/rfc4718">IKEv2</a>. An open protocol most commonly used to construct network connections between hosts on the public Internet in either point-to-site or site-to-site network topologies.
+    description: IPsec traces its origins back to DARPA and NSA funded work in the last decades of the twentieth century, it continued to evolve for several years before arguably starting to enter mainstream use circa 2005 with the addition of AES and <a href="https://datatracker.ietf.org/doc/html/rfc4718">IKEv2</a>. An open protocol most commonly used to construct network connections between hosts on the public Internet in either point-to-site or site-to-site network topologies.
 
   - year: "1996-98"
     acronym: "VPN"
     title: "Virtual Private Network (VPN)"
-    description: 'Twenty years and two major architectures (hub-and-spoke, also known as remote access or point-to-site &amp; site-to-site) and a plethora of protocols (IPsec, IKEv2, L2TP, PPTP, OpenVPN, SSL/TLS VPN, Cisco AnyConnect etc.) all trying to achieve the same thing: provide a secure, private network on top of the public Internet; either by extending one logical network into another, or placing remote peers directly onto the local network.'
+    description: 'The workhorse of private networks with two major architectures: hub-and-spoke (also known as remote access or point-to-site) and site-to-site. VPNs are constructed from a plethora of protocols (IPsec, IKEv2, L2TP, PPTP, OpenVPN, SSL/TLS VPN, Cisco AnyConnect etc.) all trying to achieve the same thing: provide a secure, private network on top of the public Internet; either by extending one logical network into another or placing remote peers directly onto the local network.'
 
   - year: "2001"
     acronym: "MPLS"
     title: "Multiprotocol Label Switching (MPLS)"
-    description: First conceived in an era when bandwidth was slow, high-speed broadband was not available either widely or cheaply, <a href="https://datatracker.ietf.org/doc/html/rfc3031">MPLS</a> helped to manage the delivery of traffic using labels. For example some packets may be labeled as mission critical traffic, others for real-time traffic or simple best effort delivery. The fastest, and lowest latency paths were reserved for the most important traffic. By enriching each packet with labels, routers had additional information to tell them how best route traffic most efficiently across the WAN.
+    description: First conceived in an era when bandwidth was expensive and high-speed broadband was not available widely or cheaply. <a href="https://datatracker.ietf.org/doc/html/rfc3031">MPLS</a> helped to manage delivery of traffic using labels to indicate mission critical traffic, near real-time delivery or simple best effort delivery. The fastest, and lowest latency paths were reserved for the most important traffic. By enriching each packet with labels, carrier routers had additional information to help best route traffic most efficiently across the WAN.
 
   - year: "2003"
     acronym: "802.1x"
     title: "Network Access Control (NAC)"
-    description: Network Access Control (<a href="https://datatracker.ietf.org/doc/html/rfc3580">802.1x</a>) provides an authentication framework that allows for user authentication before access is granted to the network to help provide protection from rogue or unauthorized devices connecting to the LAN. 802.1x is particularly effective for flat or default-open internal networks in which lateral movement is possible and for configurations in which devices and systems on the network have little or no endpoint protection software available.
+    description: Network Access Control (<a href="https://datatracker.ietf.org/doc/html/rfc3580">802.1x</a>) provides an authentication framework that allows for user authentication before access is granted to the network to help provide protection from rogue or unauthorized devices connecting to the LAN. 802.1x is particularly effective for flat or default-open internal networks in which lateral movement is possible, and for configurations in which devices and systems on the network had little or no endpoint protection software available.
 
   - year: "2007"
     acronym: "SDP"
     title: "Software-Defined Perimeter (SDP)"
-    description: The Software-Defined Perimeter architecture evolved out of single packet authorization and port knocking before it. Occasionally also referred to as Black Cloud, the SDP architecture evolved from the work done at the Defense Information Systems Agency (DISA) under the Global Information Grid (GIG) Black Core Network initiative around 2007, concepts of which were carried forwards by the <a href="https://en.wikipedia.org/wiki/Jericho_Forum" target="_blank">Jericho Forum</a> and later in 2014 as part of Google's <a href="https://research.google/pubs/pub43231/" target="_blank">BeyondCorp Initiative</a>. Now promoted by many vendors as the de facto architecture for ZTNA.
+    description: Based on the concept of single packet authorization and port knocking before it and originally also referred to as Black Cloud, the SDP architecture evolved from work done at the Defense Information Systems Agency (DISA) under the Global Information Grid (GIG) Black Core Network initiative around 2007. Concepts of which were carried forwards by the <a href="https://en.wikipedia.org/wiki/Jericho_Forum" target="_blank">Jericho Forum</a>, and later in 2014 as part of Google's <a href="https://research.google/pubs/pub43231/" target="_blank">BeyondCorp Initiative</a>. A front-runner to align with ZTNA principles, SDP is currently the most common ZTNA vendor implementation.
 
   - year: "2014"
     acronym: "SD-WAN"
     title: "Software-Defined Wide Area Network (SD-WAN)"
-    description: SD-WAN solutions started to enter the market in 2014 where it sought to bring Software Defined Networking (SDN) concepts to the WAN; switching from the painstakingly provisioned and predetermined MPLS routes on fixed circuits, to policy based WAN routing using the open Internet. SD-WAN  is often presented by vendors as means to achieve similar WAN optimization capabilities to MPLS for lower cost and less complexity.
+    description: SD-WAN solutions started to enter the market close to 2014 as an effort to bring Software Defined Networking (SDN) concepts to the WAN. Intended to achieve similar WAN optimization capabilities to MPLS for lower cost and less complexity, SD-WAN was positioned in the market as an alternative to predetermined MPLS routes on fixed circuits which were more complicated to provision in favour of policy-based routing using the open Internet.
 
   - year: "2018"
     acronym: "ZTON"
     title: "Zero Trust Overlay Network (ZTON)"
-    description: A new form of serverless virtual private network delivered primarily as a Service designed to have a low attack surface. Zero trust overlay networks are composed of devices which talk directly to one another according to policy and real-time security conditions on the endpoint without the need for a VPN server or traffic concentrator. The solution may use techniques like UDP or TCP hole punching and traffic relays to operate behind NAT and not require firewalls to be opened for inbound traffic. Traffic should be end-to-end encrypted and authorization takes place via with service provider before connections are allowed. **
+    description: A software-based overlay network aligned to with ZTNA principles in which devices and systems talk directly without the need for VPN servers. Entrance to the overlay network is governed by centralised policy-based management according to real-time security conditions on each endpoint. Notably, connectivity is achieved using techniques like UDP/TCP hole punching and traffic relays to operate transparently through NAT devices and not require firewalls to be opened for inbound traffic, dramatically reducing surface area available for attack.
  
 #  - year: "2019"
 #    acronym: "SASE"

@@ -20,8 +20,8 @@ strengths:
 weaknesses:
   - title: "Proxy servers are public on the Internet"
     description: "Some vendors may offer proxy servers to provide access to services separated from the client via the WAN. If available, proxy servers need to be publicly available so end-users may connect in order to authenticate"
-  - title: "East-west (server-to-server) traffic"
-    description: "Sessions lean heavily on user identity which may not be available for east-west traffic patterns"
+  - title: "East-West traffic"
+    description: "Internal network traffic, originating inside the network perimeter and addressed to other private systems within the network. Often resembles server-to-server, machine-to-machine, inter-region connectivity or traffic inside a service mesh or service cluster. Sessions lean heavily on user identity which may not be available for headless systems in East-West traffic patterns"
   - title: "Limited protocol support"
     description: "Proxy based, so offers limited protocol support and so may not be able to replace VPN"
 

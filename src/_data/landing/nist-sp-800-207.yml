@@ -2,13 +2,13 @@ enable: true
 title: "NIST Special Publication 800-207"
 label: "The Seven Tenets of Zero Trust"
 paragraphs:
-  - text: The United States National Institute of Standards and Technology (NIST) defines Zero Trust and a Zero Trust Architecture in terms of seven basic tenets. Though these tenets are the ideal goal, not all tenets need be fully implemented in their purest form for a given strategy. The British National Cyber Security Centre (NCSC) has also published a set of Zero Trust architecture design principles in which they define eight principles to help organizations implement a zero trust network architecture.
+  - text: "<strong>Zero Trust, defined:</strong> The United States National Institute of Standards and Technology (NIST) defines Zero Trust and a Zero Trust Architecture in terms of seven basic tenets. These tenets are the ideal goal, not all tenets need be fully implemented in their purest form for a given strategy. The British National Cyber Security Centre (NCSC) has also published guidance in which they define eight principles to help organizations adopt Zero Trust."
 
 more:
   - text: Zero Trust Architecture, NIST (2020)
     link: https://csrc.nist.gov/publications/detail/sp/800-207/final
   - text: Zero Trust Architecture Design Principles, NCSC (2021)
-    link: https://csrc.nist.gov/publications/detail/sp/800-207/final
+    link: https://www.ncsc.gov.uk/collection/zero-trust-architecture
 
 tenets:
   - title: "1. Everything is a Resource"

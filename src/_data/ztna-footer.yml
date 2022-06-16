@@ -17,5 +17,5 @@ social_accounts:
       icon: github.svg
 
     - url: "https://github.com/zerotrustnetworkaccess/zerotrustnetworkaccess.info/blob/main/CONTRIBUTOR.md"
-      title: "Contributor Guidelines"
+      title: "Contributor guidelines"
       icon: guidelines.svg

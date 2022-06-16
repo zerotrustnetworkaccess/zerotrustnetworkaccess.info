@@ -14,10 +14,10 @@ strengths:
     description: ""
   - title: "Universal protocol support"
     description: ""
-  - title: "North-south (client-to-server) traffic"
-    description: "Host-based firewalls determine access so are agnostic to traffic type provided the endpoints are able to route packets to each another"
-  - title: "East-west (server-to-server) traffic"
-    description: "Host-based firewalls determine access so are agnostic to traffic type provided the endpoints are able to route packets to each another"
+  - title: "North-South traffic"
+    description: "Traffic crossing the network perimeter, originating from outside the network, addressed to private systems within the network. Often resembles client-to-server connectivity. This architecture is agnostic to traffic pattern provided the endpoints are able to route packets to each another"
+  - title: "East-West traffic"
+    description: "Internal network traffic, originating inside the network perimeter and addressed to other private systems within the network. Often resembles server-to-server, machine-to-machine, inter-region connectivity or traffic inside a service mesh or service cluster. This architecture is agnostic to traffic pattern provided the endpoints are able to route packets to each another"
   - title: "Resilient to temporary trust broker failures"
     description: "Policy is cached by endpoints should trust broker become temporarily unavailable"
 
@@ -38,8 +38,8 @@ tradeoffs:
     description: "In order for endpoints to connect, the trust broker must be accessible on the network"
   - title: "Network can remain fundamentally flat"
     description: ""
-  - title: "Relies on IP addresses"
-    description: ""
+  - title: "Built on IP addresses and ACLs"
+    description: "Depending on the maturity of the tooling, debugging connectivity problems can be challenging in larger, multi-site deployments based on IP addresses"
 
 vendors: 
   - company: "Illumio"

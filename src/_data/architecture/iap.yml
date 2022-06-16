@@ -26,8 +26,8 @@ weaknesses:
     description: ""
   - title: "Limited protocol support"
     description: "Proxy based, so offers limited protocol support and so may not be able to replace VPN"
-  - title: "East-west (server-to-server) traffic"
-    description: "Can introduce latency and be expensive to move east-west traffic via the vendors network"
+  - title: "East-West traffic"
+    description: "Internal network traffic, originating inside the network perimeter and addressed to other private systems within the network. Often resembles server-to-server, machine-to-machine, inter-region connectivity or traffic inside a service mesh or service cluster. Can introduce latency and be expensive to move East-West traffic via the vendor's network"
 
 tradeoffs:
   - title: "Vendor becomes the new target"
@@ -107,6 +107,14 @@ vendors:
   - company: "Genians"
     product: "Genian ZTNA"
     url: "https://www.genians.com/zero-trust-network-access/"
+    license: "Commercial"
+    deployment: "SaaS"
+    pricing: "Not Published" 
+    notes: ""
+
+  - company: "iBoss"
+    product: "iBoss"
+    url: "https://www.iboss.com/"
     license: "Commercial"
     deployment: "SaaS"
     pricing: "Not Published" 
