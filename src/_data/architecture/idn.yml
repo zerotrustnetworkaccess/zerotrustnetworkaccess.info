@@ -3,7 +3,7 @@ abbreviation: "IDN"
 filter: "identity-defined-network"
 display: true
 sort_order: 6
-image: "/assets/images/architecture/idn.png"
+image: "/assets/images/architecture/idn.svg"
 
 paragraphs: 
   - text: "All traffic flows through a cloud relay. This is a L2/L3 (routed via) or L4 (proxied via)?"

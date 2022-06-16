@@ -3,7 +3,7 @@ abbreviation: "PAM"
 filter: "privileged-access-management"
 display: true
 sort_order: 4
-image: "https://developer.okta.com/assets-jekyll/blog/asa-gcp-jenkins/architecture-ssh-1a3cb18bfed3e54a65463a48d1824e5906a378c2b232f2b675998523edbb0a56.png"
+image: "/assets/images/architecture/pam.svg"
 
 paragraphs: 
   - text: "Vendor's product controls access to end systems. End-user credentials are transparently swapped for ephemeral credentials which grant temporary access. Some vendors may offer session recording and playback. Assumes client has network access to target system."

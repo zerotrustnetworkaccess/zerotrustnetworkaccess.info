@@ -3,7 +3,7 @@ abbreviation: ""
 filter: "zero-trust-overlay-network"
 display: true
 sort_order: 2
-image: "/assets/images/architecture/zton.png"
+image: "/assets/images/architecture/zton.svg"
 
 paragraphs:
   - text: "Direct, peer to peer connectivity enabled by UDP or TCP hole punching."

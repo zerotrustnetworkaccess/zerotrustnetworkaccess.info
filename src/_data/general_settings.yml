@@ -6,11 +6,6 @@ description:
   - text: We believe Zero Trust Network Access is here to stay, and that the community as a whole benefit from honest, impartial, and open knowledge. We built this site as a technical resource to help bring engineering discourse back to the conversation and to highlight the different architectures, approaches, and options.
   - text: Keeping the directory up to date and accurate requires a lot of work and while we maintain the vendor list on a best-effort basis, we welcome and encourage readers to submit a <a href="https://github.com/zerotrustnetworkaccess/zerotrustnetworkaccess.info/pulls" target="_blank">pull request</a> via GitHub to address any inaccuracies or omissions in the list. Full source code is available on <a href="https://github.com/zerotrustnetworkaccess/zerotrustnetworkaccess.info" target="_blank">GitHub</a> and all data is published under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">Creative Commons</a> license.
 
-enclave_logo_1x: "/assets/images/enclave_logo.png"
-enclave_logo_2x: "/assets/images/enclave_logo@2x.png"
-enclave_logo_light_1x: "/assets/images/enclave_logo_light.png"
-enclave_logo_light_2x: "/assets/images/enclave_logo_lighto@2x.png"
-
 black_logo_1x: "/assets/images/logo.png"
 black_logo_2x: "/assets/images/logo@2x.png"
 
