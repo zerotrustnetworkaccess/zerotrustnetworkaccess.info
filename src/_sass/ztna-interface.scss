@@ -106,15 +106,16 @@ html {
 
 .ztna-input-dark {
   @extend .ztna-input;
-  &:hover {
-    cursor: pointer;
+  color: $light-text-3;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:target {
     @extend .input-active-dark;
   }
   &::placeholder {
     @extend .light-text-2;
-  }
-  &:active {
-    @extend .input-active-dark;
   }
 }
 
@@ -123,7 +124,6 @@ html {
   border: 2px solid $light-blue-1;
 
   &:hover {
-    cursor: pointer;
   }
 }
 
@@ -258,8 +258,14 @@ td {
   }
 }
 
-.table-spacers-remover {
-  display: none;
+.architecture-section {
+  border-bottom: 1px solid $divider;
+}
+
+.architecture-section:last-child {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+  border-bottom: none;
 }
 
 .ztna-overflow {

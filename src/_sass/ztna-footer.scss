@@ -2,8 +2,15 @@
 @import "ztna-typography.scss";
 
 footer {
+  font-size: 13px;
+
   .footer-icon {
     fill: $white;
+  }
+
+  img {
+    width: 100%;
+    max-width: 258px;
   }
 
   a {
@@ -14,11 +21,11 @@ footer {
       text-decoration: none;
 
       span {
-        color: $light-blue-1 !important;
+        color: $logo-blue !important;
       }
 
       .footer-icon {
-        fill: $light-blue-1 !important;
+        fill: $logo-blue !important;
       }
     }
   }
@@ -26,25 +33,23 @@ footer {
 
 
 
-.footer-col {
-  max-width: 364px;
-}
 
 @media only screen and (max-width: $breakpoint-sm) {
-  .footer-col {
-    max-width: 335px;
-  }
+
 }
 
 @media only screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
   .mr-md-50 {
     margin-right: 50px;
   }
+  .get-involved {
+    text-align: left;
+  }
 }
 
 @media only screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-lg) {
-  .footer-col {
-    max-width: 316px;
+  .get-involved {
+    text-align: left;
   }
 
   .md-flex {

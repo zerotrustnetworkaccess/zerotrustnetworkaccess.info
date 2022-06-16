@@ -12,12 +12,15 @@ nav {
     }
 
     .text-link {
-      font-size: 13px;
       &:hover {
         color: $logo-blue !important;
       }
     }
   }
+}
+
+.text-link {
+  font-size: 13px;
 }
 
 .navbar-hamburger {
