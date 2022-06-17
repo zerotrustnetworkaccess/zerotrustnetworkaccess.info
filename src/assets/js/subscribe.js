@@ -20,7 +20,6 @@ const handleError = () => {
 
 const _show_thank_you = (code, msg, link, mail) => {
   console.log(msg);
-  location.hash = '';
   overlay.style.display = "block";
   popUpOk.style.display = "block";
   body.style.overflowY = "hidden";

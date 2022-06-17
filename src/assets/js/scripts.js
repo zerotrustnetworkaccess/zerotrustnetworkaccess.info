@@ -1093,7 +1093,6 @@ $(document).ready(function () {
     const closePopup = document.querySelectorAll("#close-popup");
     const overlay = document.getElementById("overlay");
     const popUpSuccess = document.getElementById("popup-success");
-    //const popUpOk = document.getElementById("popup-ok");
     const body = document.getElementsByTagName("body")[0];
 
     overlay.style.display = "block";
@@ -1111,8 +1110,7 @@ $(document).ready(function () {
         location.hash = '';
       })
     );
-
-  } else console.log("wrong")
+  }
   /*-----------------------------------------------------------------------------------*/
   /*	PRICING
 /*-----------------------------------------------------------------------------------*/
