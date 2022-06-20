@@ -6,8 +6,8 @@ sort_order: 1
 image: "/assets/images/architecture/sdp.svg"
 
 paragraphs:
-  - text: "Endpoint agent connectivity to an SDP connector (reverse proxy appliance) deployed at the network edge governed by a controller. Usually based on <a href=\"https://en.wikipedia.org/wiki/Port_knocking\">single packet authorization</a> (SPA). May also be deployed as a straight Identity Aware Proxy (IAP), with no agent or SDP connector. Applications are accessed through a tunnel at the network layer or a reverse proxy."
-  - text: "Runs as a proxy, but proxy is invisible on account of SPA"
+  - text: "Appliance and proxy-based architecture. A reverse proxy appliance (the SDP connector) is deployed at the network edge and governed by a centralised policy-based controller."
+  - text: "Usually based on <a href=\"https://en.wikipedia.org/wiki/Port_knocking\">Single Packet Authorization</a> (SPA). Often agentless for the client (initiating host). May not require a separate SDP connector appliance if the SDP Connector software is deployed directly to the target system(s)."
 
 strengths:
   - title: "No ingress traffic, firewalls can be closed"

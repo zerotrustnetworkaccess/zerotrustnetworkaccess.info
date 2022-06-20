@@ -6,8 +6,9 @@ sort_order: 2
 image: "/assets/images/architecture/zton.svg"
 
 paragraphs:
-  - text: "Direct, peer to peer connectivity enabled by UDP or TCP hole punching."
-  - text: ""
+  - text: "Agent based architecture. Devices talk directly to one another coordinated by centralised policy-based management."
+  - text: "Direct connections between cooperating systems are established using outbound-only traffic and a combination of device and user identity, UDP & TCP hole punching and NAT traversal techniques together create fast, end-to-end encrypted tunnels between connected systems from behind closed firewalls."
+  - text: "Some NAT configurations prevent the direct connection establishment, in such cases traffic relays are used to ensure a connection can be made."
 
 strengths:
   - title: "No ingress traffic, firewalls can be closed"

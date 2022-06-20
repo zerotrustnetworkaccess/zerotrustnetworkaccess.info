@@ -6,9 +6,10 @@ sort_order: 4
 image: "/assets/images/architecture/pam.svg"
 
 paragraphs: 
-  - text: "Vendor's product controls access to end systems. End-user credentials are transparently swapped for ephemeral credentials which grant temporary access. Some vendors may offer session recording and playback. Assumes client has network access to target system."
-  - text: "Vendor assumes client has a network pathway available to reach target server"
-
+  - text: "Agent-based architecture. Vendor's product centrally manages credentials for access to target servers."
+  - text: "Long-lived end-user credentials are authorized and authenticated before being transparently swapped out for unique, often single-use or limit-limited credentials which grant temporary access to target servers. Some vendors may offer protocol aware features like session recording and playback."
+  - text: "Products often assume different all areas of the network be connected and routable such that clients have a network pathway available to reach target servers."
+ 
 strengths:
   - title: "Protocol aware"
     description: "Access to application traffic"

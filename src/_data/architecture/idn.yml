@@ -6,8 +6,8 @@ sort_order: 6
 image: "/assets/images/architecture/idn.svg"
 
 paragraphs: 
-  - text: "All traffic flows through a cloud relay. This is a L2/L3 (routed via) or L4 (proxied via)?"
-  - text: "All traffic traverses network relays.  Implementation of the HIP protocol"
+  - text: "Agent based architecture. All traffic traverses network relays coordinated by centralised policy-based management."
+  - text: "Some vendors offer hardware devices to transparently connect devices to the network."
 
 strengths:
   - title: "North-South traffic"
