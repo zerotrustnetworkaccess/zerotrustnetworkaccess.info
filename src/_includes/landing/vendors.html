@@ -1,0 +1,207 @@
+{% for architecture in site.data.architecture %}
+{% assign arch = architecture[1] %}
+{% if arch.display == true %}
+  {% for vendor in arch.vendors %}
+    {% capture vendor_count %}{{ vendor_count | plus:1 }}{% endcapture %}
+  {% endfor %}
+{% endif %}
+{% endfor %}
+
+<div class="container-fluid background-white ztna-landing-section-wrapper d-flex justify-content-center px-0" id="vendors">
+  <div class="ztna-content-wrapper width-100">
+    {% assign section = site.data.landing.vendors %}
+    <div class="grid grid-view">
+      {% if section.title %}
+      <div class="mr-md-40-20 ml-md-40-20 ztna-margin-bottom-30-20 mr-lg-40 ml-lg-40">
+        <p class="h5 light-text-2">{{section.label}}</p>
+        {% endif %}
+        <div class="space10"></div>
+        {% if section.title %}
+        <h2 class="dark-text">{{section.title}}</h2>
+      </div>
+      {% endif %}
+
+      <div class="isotope-filter ztna-margin-bottom-40-20">
+        <ul class="pl-md-40-20 mr-lg-40 ml-lg-40">
+          <li>
+            <a class="active ztna-tag-large background-color light-text-1 h4 mb-10 mr-10 button" data-filter="*">
+              All ({{vendor_count}})
+            </a>
+          </li>
+
+          {% assign datas = "" | split: "" %}
+          {% for architecture in site.data.architecture %}
+            {% assign datas = datas | push: architecture[1] %}
+          {% endfor %}
+      
+          {% assign datas = datas | sort: "sort_order" %}
+          {% for arch in datas %}
+          {% if arch.display == true %}
+            <li>
+              <a class="ztna-tag-large background-color light-text-1 h4 mb-10 mr-10 button" data-filter="{{arch.filter}}">
+                {{arch.name}} ({{arch.vendors.size}})
+              </a>
+            </li>
+          {% endif %}
+          {% endfor %}
+        </ul>
+        
+        <div class="spacers-container">
+          <div class="mb-70-50"></div>
+          <hr class="post-divider" />
+          <div class="mb-70-50"></div>
+        </div>
+
+      </div>
+
+
+
+
+      <div class="row isotope">
+        {% for arch in datas %}
+        {% if arch.vendors %}
+        {% if arch.display == true %}
+        <div
+          class="item grid-sizer architecture-section col-12 mx-auto mb-70 pb-80 {{arch.filter}}
+          {% for filter in arch.filters %} {{filter}} {% endfor %}
+          {% if arch.displayByDeafult %} focus {% endif %}"
+        >
+          <div id="{{arch.filter}}"></div>
+          <h2 class="dark-text ztna-margin-bottom-20-10 mr-md-40-20 ml-md-40-20 mr-lg-40 ml-lg-40">
+            {{arch.name}} {% if arch.abbreviation != "" %}({{arch.abbreviation}}){% endif %}
+          </h2>
+          <div class="row">
+            <div class="col-lg-8 col-md-10 col-sm-12">
+              {% for paragraph in arch.paragraphs %}
+              <p class="ztna-small-text light-text-1 mr-md-40-20 ml-md-40-20 mr-lg-40 ml-lg-40">
+                {{paragraph.text}}
+              </p>
+              <div class="space20"></div>
+              {% endfor %}
+            </div>
+          </div>
+          <div class="space40"></div>
+
+          <div class="row">
+            <div class="col-lg-4 col-md-12 col-sm-12">
+              <div class="mr-md-40-20 ml-md-40-20 mb-md-30 ml-lg-40">
+                {% if arch.strengths %}
+                <h3 class="dark-text ztna-margin-bottom-20-10">Strengths</h3>
+                <ul class="icon-list bullet-green mb-0">
+                  {% for strength in arch.strengths %}
+                  <li class="ztna-small-text light-text-1">
+                    <i class="jam jam-check"></i>
+                    {% if strength.description != null and strength.description != "" %}
+                      <span class="hover has-tooltip" title="" data-placement="right" data-original-title="{{strength.description}}">{{strength.title}}</span>
+                    {% else %}
+                      {{strength.title}}
+                    {% endif %}
+                  </li>
+                  <div class="space5"></div>
+                  {% endfor %}
+                </ul>
+                {% endif %}
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12 col-sm-12">
+              <div class="mr-md-40-20 ml-md-40-20 mb-md-30">
+                {% if arch.strengths %}
+                <h3 class="dark-text ztna-margin-bottom-20-10">Weaknesses</h3>
+                <ul class="icon-list bullet-red mb-0">
+                  {% for weakness in arch.weaknesses %}
+                  <li class="ztna-small-text light-text-1">
+                    <i class="jam jam-minus-circle"></i>
+                    {% if weakness.description != null and weakness.description != "" %}
+                      <span class="hover has-tooltip" title="" data-placement="right" data-original-title="{{weakness.description}}">{{weakness.title}}</span>
+                    {% else %}
+                      {{weakness.title}}
+                    {% endif %}
+                  </li>
+                  <div class="space5"></div>
+                  {% endfor %}
+                </ul>
+                {% endif %}
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12 col-sm-12">
+              <div class="mr-md-40-20 ml-md-40-20">
+                {% if arch.strengths %}
+                <h3 class="dark-text ztna-margin-bottom-20-10">Trade-offs</h3>
+                <ul class="icon-list bullet-blue mb-0">
+                  {% for tradeoff in arch.tradeoffs %}
+                  <li class="ztna-small-text light-text-1">
+                    <i class="jam jam-star"></i>
+                    {% if tradeoff.description != null and tradeoff.description != "" %}
+                      <span class="hover has-tooltip" title="" data-placement="right" data-original-title="{{tradeoff.description}}">{{tradeoff.title}}</span>
+                    {% else %}
+                      {{tradeoff.title}}
+                    {% endif %}
+                  </li>
+                  <div class="space5"></div>
+                  {% endfor %}
+                </ul>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          <div class="space60"></div>
+          <h3 class="dark-text ztna-margin-bottom-20-10 mr-md-40-20 ml-md-40-20 mr-lg-40 ml-lg-40">
+            {{arch.name}} Vendors ({{arch.vendors.size}})
+          </h3>
+          <div class="scroll-wrapper ml-md-40 mr-md-40 mr-lg-40 ml-lg-40">
+            <table class="ztna-table mr-sm-20 ml-sm-20">
+              <thead class="ztna-table-head background-color light-text-2">
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Company</th>
+                  <th scope="col">Product</th>
+                  <th scope="col">License</th>
+                  <th scope="col">Deployment</th>
+                  <th scope="col">Pricing</th>
+                </tr>
+              </thead>
+              <tbody class="ztna-table-body ztna-small-text dark-text">
+                {% assign vendors = arch.vendors | sort: 'company' %} {% for
+                vendor in vendors %}
+                <tr>
+                  <td scope="row">{{ forloop.index }}.</td>
+                  <td>
+                    {% if vendor.notes != null and vendor.notes != "" %}
+                      <a
+                        href="{{vendor.url}}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="light-blue-1 hover has-tooltip"
+                        title="" 
+                        data-placement="right" 
+                        data-original-title="{{vendor.notes}}">
+                          {{vendor.company}}
+                      </a>
+                    {% else %}                      
+                      <a
+                        href="{{vendor.url}}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="light-blue-1"
+                      >
+                      {{vendor.company}}
+                      </a>
+                    {% endif %}
+                  </td>
+                  <td>{{vendor.product}}</td>
+                  <td>{{vendor.license}}</td>
+                  <td>{{vendor.deployment}}</td>
+                  <td>{{vendor.pricing}}</td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+        {% endif %}
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>

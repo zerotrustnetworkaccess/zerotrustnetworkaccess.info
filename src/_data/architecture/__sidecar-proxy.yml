@@ -1,0 +1,26 @@
+name: "Sidecar Proxy"
+abbreviation: ""
+filter: "sidecar"
+display: false
+sort_order: 99
+image: "https://via.placeholder.com/2280x1200"
+paragraphs: 
+  - text: ""
+strengths:
+  - title: ""
+    description: ""
+weaknesses:
+  - title: ""
+    description: ""
+tradeoffs:
+  - title: ""
+    description: ""
+vendors: 
+
+  - company: "Kuma"
+    product: "Kuma"
+    url: "https://kuma.io/"
+    license: "Open Source"
+    deployment: "Self-hosted"
+    pricing: "Not Published"
+    notes: ""

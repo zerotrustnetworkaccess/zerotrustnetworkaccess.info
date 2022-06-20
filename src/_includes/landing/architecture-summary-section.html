@@ -1,0 +1,72 @@
+{% if site.data.landing.architecture-summary.enable %}
+
+{% assign architecture-summary = site.data.landing.architecture-summary %}
+<div class="container-fluid background-color ztna-landing-section-wrapper px-md-40-20">
+  <div class="ztna-content-wrappe mx-auto">
+    <div class="row d-flex justify-content-center">
+      <div class="col-12 ztna-margin-bottom-50-40 text-center">
+        <p class="h5 light-text-2 text-center">
+          {{architecture-summary.label}}
+        </p>
+        <div class="space10"></div>
+        <h2 class="dark-text text-center">{{architecture-summary.title}}</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="basic-slider owl-carousel ztna-carousels-wrapper grid" data-margin="5">
+    {% assign datas = "" | split: "" %}
+    {% for architecture in site.data.architecture %}
+      {% assign datas = datas | push: architecture[1] %}
+    {% endfor %}
+
+    {% assign datas = datas | sort: "sort_order" %}
+    {% for arch in datas %}
+    {% if arch.display == true %}
+      {% if arch.filter %}
+    <div class="item item-detailed {{arch.filter}}" data-hash="filter={{arch.filter}}">
+      {% endif %}
+      <div class="item-content px-0 mx-auto">
+        <div class="row">
+          <div class="col-lg-4 col-md-12 text-center text-lg-left mb-0">
+            {% if arch.name %}
+            <h3 id="arch.name" class="dark-text">{{arch.name}}</h3>
+            {% endif %}
+            <div class="space10"></div>
+            <div class="ztna-margin-bottom-30-20">
+
+            {% for paragraph in arch.paragraphs %}
+              <p class="light-text-1 ztna-small-text">
+                {{paragraph.text}}
+              </p>
+              <div class="space20"></div>
+            {% endfor %}
+
+            </div>
+            <div class="ml-5 ztna-margin-bottom-30-20">
+              <div class="ztna-button light-blue-background-1 white h4" onclick="location.hash=''; location.hash='#{{arch.filter}}';">
+                {{architecture-summary.button }}
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-8 col-md-12 mb-0">
+            <figure class="ztna-slider-image mb-10">
+              {% if arch.image %}
+              <div class="item-detailed-image">
+                <img
+                  srcset="{{arch.image}} 1x, {{arch.image_2x}} 2x"
+                  alt="{{arch.name}}"
+                />
+              </div>
+              {% endif %}
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+  </div>
+</div>
+{% endif %}

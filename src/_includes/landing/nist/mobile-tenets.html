@@ -1,0 +1,41 @@
+<div class="mobile-nist-illustration background-color">
+  <div class="scroll-wrapper pl-md-40-20 mx-auto mb-md-40-30" id="container">
+    <div class="nist-mobile-scroll-container">
+      <img
+        srcset="
+          {{site.data.landing.nist-sp-800-207.mobile_illustration}}    1x,
+          {{site.data.landing.nist-sp-800-207.mobile_illustration_2x}} 2x
+        "
+        class="tenet-illustration-mobile"
+        alt="{{site.data.landing.nist-sp-800-207.title}}"
+      />
+      <div class="tenets-wrapper">
+        {% for tenet in nist.tenets %}
+        <div class="nist-mobile-scroll-item text-center">
+          <div class="space20"></div>
+          {% include components/tenet-mobile.html color=tenet.color title=tenet.title
+          description=tenet.description %}
+          <div class="space20"></div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="row d-flex justify-content-center background-color">
+      <button
+        class="ztna-small-button-left white-background light-blue-1 h4 mr-10"
+        id="slideLeft"
+      >
+        {%include icons/button-left-arrow.svg %} Prev
+      </button>
+      <button
+        class="ztna-small-button-right white-background light-blue-1 h4 ml-10"
+        id="slideRight"
+      >
+        Next {%include icons/button-right-arrow.svg %}
+      </button>
+    </div>
+    <div class="space70"></div>
+  </div>
+</div>

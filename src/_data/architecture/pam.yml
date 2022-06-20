@@ -1,0 +1,90 @@
+name: "Privileged Access Management"
+abbreviation: "PAM"
+filter: "privileged-access-management"
+display: true
+sort_order: 4
+image: "/assets/images/architecture/pam.svg"
+
+paragraphs: 
+  - text: "Agent-based architecture. Vendor's product centrally manages credentials for access to target servers."
+  - text: "Long-lived end-user credentials are authorized and authenticated before being transparently swapped out for unique, often single-use or limit-limited credentials which grant temporary access to target servers. Some vendors may offer protocol aware features like session recording and playback."
+  - text: "Products often assume different all areas of the network be connected and routable such that clients have a network pathway available to reach target servers."
+ 
+strengths:
+  - title: "Protocol aware"
+    description: "Access to application traffic"
+  - title: "Session recording and playback"
+    description: "Products are often able to record and playback sessions for some protocols such as SSH, RDP and database traffic"
+  - title: "Credentials never exposed to end-user"
+    description: "End-users are given temporary credentials for access, safeguarding primary credentials for the system"
+
+weaknesses:
+  - title: "Proxy servers are public on the Internet"
+    description: "Some vendors may offer proxy servers to provide access to services separated from the client via the WAN. If available, proxy servers need to be publicly available so end-users may connect in order to authenticate"
+  - title: "East-West traffic"
+    description: "Internal network traffic, originating inside the network perimeter and addressed to other private systems within the network. Often resembles server-to-server, machine-to-machine, inter-region connectivity or traffic inside a service mesh or service cluster. Sessions lean heavily on user identity which may not be available for headless systems in East-West traffic patterns"
+  - title: "Limited protocol support"
+    description: "Proxy based, so offers limited protocol support and so may not be able to replace VPN"
+
+tradeoffs:
+  - title: "Trust broker becomes the new target"
+    description: "In order for endpoints to connect, the trust broker must be accessible on the network"
+  - title: "Assumes network reachability"
+    description: "PAM solutions provide temporary credentials for service access, but often assumes a private network is already in place to provide network connectivity to target services either via the local network or WAN"
+
+vendors: 
+  - company: "Cyber Ark"
+    product: "Privileged Access"
+    url: "https://www.cyberark.com/products/privileged-access/"
+    license: "Commercial"
+    deployment: "Self-hosted"
+    pricing: "Not Published"
+    notes: ""
+
+  - company: "StrongDM"
+    product: "StrongDM"
+    url: "https://www.strongdm.com/"
+    license: "Commercial"
+    deployment: "SaaS"
+    pricing: "Published"
+    notes: ""
+
+  - company: "Gravitational, Inc"
+    product: "Teleport"
+    url: "https://gravitational.com/teleport/"
+    license: "Commercial"
+    deployment: "SaaS"
+    pricing: "Published"
+    notes: ""
+
+  - company: "Smallstep"
+    product: "Smallstep"
+    url: "https://smallstep.com/"
+    license: "Open Source"
+    deployment: "SaaS or Self-hosted"
+    pricing: "Published"
+    notes: ""
+
+  - company: "Delinea"
+    product: "Server Suite"
+    url: "https://delinea.com/"
+    license: "Commercial"
+    deployment: "Self-hosted"
+    pricing: "Not Published"
+    notes: "Formerly Centrify"
+
+  - company: "Silverfort"
+    product: "Silverfort"
+    url: "https://www.silverfort.com/"
+    license: "Commercial"
+    deployment: "SaaS"
+    pricing: "Not Published"
+    notes: "Is this actually PAM or a technology in support of PAM? It's not clear. https://www.silverfort.com/blog/pam-is-king-but-who-is-protecting-the-king/"
+
+  - company: "Okta"
+    product: "Advanced Server Access"
+    url: "https://www.okta.com/products/advanced-server-access/"
+    license: "Commercial"
+    deployment: "SaaS"
+    pricing: "Published"
+    notes: "Formerly ScaleFT Server Access"

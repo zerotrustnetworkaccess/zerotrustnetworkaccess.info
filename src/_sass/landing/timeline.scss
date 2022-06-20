@@ -1,0 +1,131 @@
+@import "ztna-colors";
+
+.timeline-container-fluid {
+  padding-left: 40px !important;
+  padding-right: 40px !important;
+}
+
+.timeline {
+  width: 100%;
+  max-width: 1170px;
+  height: auto;
+  border-radius: 33px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5px;
+  position: relative;
+
+  .active {
+    color: $timeline-active !important;
+    background-color: $dark-text !important;
+    border-radius: 33px;
+    padding: 8px 4%;
+    cursor: pointer;
+  }
+}
+
+.year-wrapper {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.timelinePill {
+  padding: 8px 4%;
+  margin: 5px 1px;
+
+  &:hover {
+    color: $timeline-active !important;
+    background-color: $dark-text !important;
+    border-radius: 33px;
+    padding: 8px 4%;
+    cursor: pointer;
+  }
+}
+
+.timelineYear {
+  font-weight: 500;
+}
+
+.timelineAcronym {
+  font-size: 0.89em;
+  font-weight: 300;
+}
+
+.timeline-data-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.timeline-data {
+  display: flex;
+
+  .light-text-3 {
+    font-family: $fontfamily-jost;
+  }
+
+  p {
+    a {
+      text-decoration: underline;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}
+
+.timeline-item {
+  width: 100%;
+  transition: all .25s;
+}
+
+.timeline-item-date-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+@media only screen and (max-width: $breakpoint-md) {
+  .timeline {
+    margin: 0;
+
+    border-radius: 0;
+    padding-left: 20px;
+
+    .active {
+      padding: 11px 3%;
+    }
+  }
+
+  .timelinePill {
+    padding: 11px 3%;
+
+    &:hover {
+      padding: 11px 3%;
+    }
+  }
+
+  .timeline-container-fluid {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+@media only screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-xl) {
+  .timeline {
+    .active {
+      padding: 8px 3%;
+    }
+  }
+
+  .timelinePill {
+    padding: 8px 3%;
+
+    &:hover {
+      padding: 8px 3%;
+    }
+  }
+}

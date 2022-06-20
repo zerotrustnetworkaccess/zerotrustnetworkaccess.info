@@ -1,0 +1,21 @@
+about_ZTNA:
+  content:
+    - text: The Zero Trust Network Access vendor directory is curated and maintained by the team at <a href="https://enclave.io" target="_blank">https://enclave.io</a> and other <a href="https://github.com/zerotrustnetworkaccess/zerotrustnetworkaccess.info/graphs/contributors" target="_blank">contributors</a>.
+    - text: "Unless otherwise noted, content on this site is licensed under the Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License."
+    - text: "© 2022 Enclave. All rights reserved."
+
+subscribtion:
+  title: "Subscribe"
+  text: "Subscribe to be notified when the vendors list is updated or new content is published."
+  cta: "Subscribe"
+
+social_accounts:
+  title: "Get Involved"
+  links:
+    - url: "https://github.com/zerotrustnetworkaccess/zerotrustnetworkaccess.info"
+      title: "Edit this page on GitHub"
+      icon: github.svg
+
+    - url: "https://github.com/zerotrustnetworkaccess/zerotrustnetworkaccess.info/blob/main/CONTRIBUTOR.md"
+      title: "Contributor guidelines"
+      icon: guidelines.svg

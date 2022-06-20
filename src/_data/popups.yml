@@ -1,0 +1,15 @@
+ok:
+  id: "popup-ok"
+  status_img_1x: "/assets/images/popup/ok.png"
+  status_img_2x: "/assets/images/popup/ok@2x.png"
+  title: "Subscription successfully completed!"
+  description: "Thank you for your subscription!"
+  button_CTA: "Ok"
+
+error:
+  id: "popup-error"
+  status_img_1x: "/assets/images/popup/error.png"
+  status_img_2x: "/assets/images/popup/error@2x.png"
+  title: "Something went wrong"
+  description: "Oops, we encountered a problem trying to add you to our mailing list. Please try again!"
+  button_CTA: "Ok"

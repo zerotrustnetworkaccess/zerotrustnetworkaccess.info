@@ -1,119 +1,36 @@
-# General Settings
-title: "The no-bullshit ZTNA vendor directory | Enclave Networks"
-email: "tortoizthemes@gmail.com"
-email_2: "support@tortoizthemes.com"
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+title: "The no-bullshit ZTNA vendor directory"
+
+description:
+  - text: This ZTNA vendor directory is curated and maintained by the team at <a href="https://enclave.io" target="_blank">https://enclave.io</a> and other <a href="https://github.com/zerotrustnetworkaccess/zerotrustnetworkaccess.info/graphs/contributors" target="_blank">contributors</a>. We hope you find it useful.
+  - text: Like us, you might also be fed up with the outlandish Zero Trust marketing claims and hype coming from some vendors.
+  - text: We believe Zero Trust Network Access is here to stay, and that the community as a whole benefit from honest, impartial, and open knowledge. We built this site as a technical resource to help bring engineering discourse back to the conversation and to highlight the different architectures, approaches, and options.
+  - text: Keeping the directory up to date and accurate requires a lot of work and while we maintain the vendor list on a best-effort basis, we welcome and encourage readers to submit a <a href="https://github.com/zerotrustnetworkaccess/zerotrustnetworkaccess.info/pulls" target="_blank">pull request</a> via GitHub to address any inaccuracies or omissions in the list. Full source code is available on <a href="https://github.com/zerotrustnetworkaccess/zerotrustnetworkaccess.info" target="_blank">GitHub</a> and all data is published under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">Creative Commons</a> license.
 
 black_logo_1x: "/assets/images/logo.png"
 black_logo_2x: "/assets/images/logo@2x.png"
+
 light_logo_1x: "/assets/images/logo-light.png"
 light_logo_2x: "/assets/images/logo-light@2x.png"
 
-address_01: ""
-phone_number: ""
-copyright_text: "© 2021 Enclave Networks. All rights reserved."
-
 google_analytics:
-  enable: false
-  key: "UA-664136761-1"  # UA-664136761-1
-
-social_accounts:
-  title: "Follow Us"
-  links:
-    - url: "#"
-      icon: "jam jam-twitter"
-
-    - url: "#"
-      icon: "jam jam-facebook"
-
-    - url: "#"
-      icon: "jam jam-instagram"
-
-    - url: "#"
-      icon: "jam jam-vimeo"
-      
-    - url: "#"
-      icon: "jam jam-youtube"
-
-
-external_links:
-  title: "Learn More"
-  links:
-    - url: "#"
-      text: "About Us"
-    - url: "#"
-      text: "Our Story"
-    - url: "#"
-      text: "Projects"
-    - url: "#"
-      text: "Pricing"
-    - url: "#"
-      text: "Features"
-
-
-external_links_02:
-  title: "Need Help?"
-  links:
-    - url: "#"
-      text: "Support"
-    - url: "#"
-      text: "Get Started"
-    - url: "#"
-      text: "Contact Us"
-    - url: "#"
-      text: "Terms of Use"
-    - url: "#"
-      text: "Privacy Policy"
-
-
-external_links_03:
-  title: "Company"
-  links:
-    - url: "#"
-      text: "Our Team"
-    - url: "#"
-      text: "Strategy"
-    - url: "#"
-      text: "Service"
-    - url: "#"
-      text: "Mission"
-    - url: "#"
-      text: "Process"
+  enable: true
+  key: "G-XW7G2V52ZN"
 
 footer_newsletter:
   title: "Our Newsletter"
   sub_title: "Subscribe to our newsletter to get our news & deals delivered to your inbox!"
   subscribe_button_text: "Join"
 
-
-one_page_nav_settings:
-  links:
-    - text: "Home"
-      url: "#home"
-    - text: "Services"
-      url: "#services"
-    - text: "Experiences"
-      url: "#experiences"
-    - text: "Portfolio"
-      url: "#portfolio"
-    - text: "Testimonials"
-      url: "#testimonials"
-    - text: "Contact"
-      url: "#contact"
-
 author_page_header:
   header_background_image: "/assets/images/art/bg31.jpg"
 
 gallery:
   images:
-  - img: "/assets/images/art/z1.svg"
-  - img: "/assets/images/art/z2.svg"
-  - img: "/assets/images/art/z3.svg"
-  - img: "/assets/images/art/z4.svg"
-  - img: "/assets/images/art/z5.svg"
-  - img: "/assets/images/art/z6.svg"
-  - img: "/assets/images/art/z7.svg"
-  - img: "/assets/images/art/z8.svg"
+    - img: "/assets/images/art/z1.svg"
+    - img: "/assets/images/art/z2.svg"
+    - img: "/assets/images/art/z3.svg"
+    - img: "/assets/images/art/z4.svg"
+    - img: "/assets/images/art/z5.svg"
+    - img: "/assets/images/art/z6.svg"
+    - img: "/assets/images/art/z7.svg"
+    - img: "/assets/images/art/z8.svg"

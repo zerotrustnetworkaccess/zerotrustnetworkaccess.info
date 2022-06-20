@@ -1,0 +1,45 @@
+{% if site.data.landing.sase.enable %} {% assign sase = site.data.landing.sase
+%}
+<div
+  class="container-fluid background-white ztna-landing-section-wrapper d-flex justify-content-center px-md-40-20"
+>
+  <div class="ztna-content-wrapper">
+    <div class="row align-items-center d-flex">
+      <div class="col-md-12 col-lg-6 pr-lg-40 mb-0">
+        {% if sase.label %}
+        <p class="h5 light-text-2">{{sase.label}}</p>
+        {% endif %}
+        <div class="space10"></div>
+        {% if sase.title %}
+        <h2 class="dark-text ztna-margin-bottom-30-20">{{sase.title}}</h2>
+        {% endif %} {% if sase.description %}
+        <p class="ztna-small-text light-text-1">{{sase.description}}</p>
+        <div class="space20"></div>
+        {% endif %}
+        — {% for links in sase.more %}
+        <a
+          href="{{links.link}}"
+          target="_blank"
+          class="ztna-small-text light-blue-1 text-link"
+          >{{links.text}}</a
+        >
+        {% unless forloop.last %}&{% endunless %}
+        {% endfor %}
+      </div>
+      <!--/column -->
+      {% if sase.image %}
+      <div class="col-md-12 col-lg-6 d-flex justify-content-center pl-lg-40">
+        <figure class="ztna-margin-top-50-40">
+          <img
+            srcset="{{sase.image}} 1x, {{sase.image_2x}} 2x"
+            alt="{{sase.title}}"
+            alt="{{sase.title}}"
+          />
+        </figure>
+      </div>
+      {% endif %}
+      <!--/.row -->
+    </div>
+  </div>
+</div>
+{% endif %}

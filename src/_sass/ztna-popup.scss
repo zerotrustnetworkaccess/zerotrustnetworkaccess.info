@@ -1,0 +1,45 @@
+#overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: #999;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  z-index: 18999;
+}
+#popup-ok,
+#popup-error {
+  display: none;
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  width: 500px;
+  height: 506px;
+  border-radius: 30px;
+  padding: 40px;
+  margin-left: -253px;
+  margin-top: -250px;
+
+  z-index: 20000;
+  .popup-status-image {
+    width: 180px;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-sm) {
+  #popup-ok,
+  #popup-error {
+    width: 336px;
+    height: 332px;
+    padding: 20px;
+    margin-left: -168px;
+    margin-top: -166px;
+    .popup-status-image {
+      width: 100px;
+      height: auto;
+    }
+  }
+}

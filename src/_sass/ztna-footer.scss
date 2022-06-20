@@ -1,0 +1,59 @@
+@import "ztna-colors.scss";
+@import "ztna-typography.scss";
+
+footer {
+  font-size: 13px;
+
+  .footer-icon {
+    fill: $white;
+  }
+
+  img {
+    width: 100%;
+    max-width: 258px;
+  }
+
+  a {
+    @extend .h4;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+
+      span {
+        color: $logo-blue !important;
+      }
+
+      .footer-icon {
+        fill: $logo-blue !important;
+      }
+    }
+  }
+}
+
+
+
+
+@media only screen and (max-width: $breakpoint-sm) {
+
+}
+
+@media only screen and (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+  .mr-md-50 {
+    margin-right: 50px;
+  }
+  .get-involved {
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-lg) {
+  .get-involved {
+    text-align: left;
+  }
+
+  .md-flex {
+    display: flex;
+    justify-content: flex-start;
+  }
+}

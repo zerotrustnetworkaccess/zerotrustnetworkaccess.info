@@ -1,0 +1,31 @@
+<div class="desktop-nist-illustration">
+  <div class="row">
+    {% for tenet in nist.tenets %} {% assign mod = forloop.index | modulo: 2 %}
+    {% if mod != 0 %}
+    <div class="col-3 text-center">
+      {% include components/tenet-desktop.html color=tenet.color title=tenet.title
+      description=tenet.description %}
+      <div class="space20"></div>
+    </div>
+    {% endif %} {% endfor %}
+  </div>
+  <div class="row justify-content-start">
+    <img
+      srcset="
+        {{site.data.landing.nist-sp-800-207.desktop_illustration}}    1x,
+        {{site.data.landing.nist-sp-800-207.desktop_illustration_2x}} 2x
+      "
+      class="tenet-illustration-desktop"
+      alt="{{site.data.landing.nist-sp-800-207.title}}"
+    />
+  </div>
+  <div class="row d-flex justify-content-center">
+    {% for tenet in nist.tenets %} {% assign mod = forloop.index | modulo: 2 %}
+    {% if mod == 0 %}
+    <div class="col-3 text-center">
+      {% include components/tenet-desktop.html color=tenet.color title=tenet.title
+      description=tenet.description %}
+    </div>
+    {% endif %} {% endfor %}
+  </div>
+</div>

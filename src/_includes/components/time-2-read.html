@@ -1,0 +1,5 @@
+{% assign words = content | number_of_words %} {% if words < 360 %}
+<span>1 min</span>
+{%else %}
+<span>{{ words | divided_by:180 }} mins</span>
+{% endif %}

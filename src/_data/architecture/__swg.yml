@@ -1,0 +1,18 @@
+name: "Secure Web Gateway"
+abbreviation: "SWG"
+filter: "secure-web-gateway"
+display: false
+sort_order: 99
+image: "https://via.placeholder.com/2280x1200"
+paragraphs: 
+  - text: ""
+strengths:
+  - title: ""
+    description: ""
+weaknesses:
+  - title: ""
+    description: ""
+tradeoffs:
+  - title: ""
+    description: ""
+vendors: 
