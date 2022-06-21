@@ -371,3 +371,11 @@ vendors:
     deployment: "SaaS or Self-hosted"
     pricing: "n/a"
     notes: ""
+
+  - company: "Cisco"
+    product: "Cisco+ Secure Connect Now (Duo)"
+    url: "https://www.cisco.com/c/en/us/products/plus-as-a-service/secure-connect.html"
+    license: "Commercial"
+    deployment: "SaaS"
+    pricing: "Published"
+    notes: ""
