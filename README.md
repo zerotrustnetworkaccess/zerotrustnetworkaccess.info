@@ -1,6 +1,8 @@
 ## Before getting started
 
-A big welcome and thank you for considering contributing to the the [The no-bullshit ZTNA vendor directory](zerotrustnetworkaccess.info)! It’s people like you that will help to ensure this is a site useful resource for the community as a whole benefit from honest, impartial, and open knowledge about the vendors operating in this space. 
+A big welcome and thank you for considering contributing to the the [The no-bullshit ZTNA vendor directory](zerotrustnetworkaccess.info)!
+
+It’s people like you that will help to ensure this is a site useful resource for the community as a whole benefit from honest, impartial, and open knowledge about the vendors operating in this space. 
 
 Reading and following these guidelines will help us make the contribution process easy and effective for everyone involved. It also communicates that you agree to respect the time of the developers managing and developing this open source project.
 
