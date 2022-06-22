@@ -59,10 +59,10 @@ footerForm.addEventListener("submit", subscribe);
 
 closePopup.forEach(
   (el) =>
-    (el.onclick = () => {
-      overlay.style.display = "none";
-      popUpOk.style.display = "none";
-      popUpError.style.display = "none";
-      body.style.overflowY = "auto";
-    })
+  (el.onclick = () => {
+    overlay.style.display = "none";
+    popUpOk.style.display = "none";
+    popUpError.style.display = "none";
+    body.style.overflowY = "auto";
+  })
 );
