@@ -58,3 +58,12 @@ vendors:
     deployment: "SaaS"
     pricing: "Not Published"
     notes: ""
+
+  - company: "Unisys"
+    product: "Stealth"
+    url: "https://stealthsecurity.unisys.com/"
+    license: "Commercial"
+    deployment: "SaaS"
+    pricing: "Not Published"
+    notes: ""
+

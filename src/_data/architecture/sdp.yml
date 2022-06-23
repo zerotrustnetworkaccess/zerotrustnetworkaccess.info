@@ -243,15 +243,7 @@ vendors:
     deployment: "SaaS"
     pricing: "Not Published" 
     notes: ""
-
-  - company: "Unisys"
-    product: "Stealth"
-    url: "https://stealthsecurity.unisys.com/"
-    license: "Commercial"
-    deployment: "SaaS"
-    pricing: "Not Published"
-    notes: ""
-
+    
   - company: "Verizon"
     product: "Vidder Precision Access"
     url: "https://enterprise.verizon.com/resources/vidder/"
