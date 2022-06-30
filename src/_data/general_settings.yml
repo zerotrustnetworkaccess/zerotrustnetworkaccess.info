@@ -13,8 +13,12 @@ light_logo_1x: "/assets/images/logo-light.png"
 light_logo_2x: "/assets/images/logo-light@2x.png"
 
 google_analytics:
+  enable: false
+  key: ""
+
+google_tag_manager:
   enable: true
-  key: "G-XW7G2V52ZN"
+  key: "GTM-5MC6MW7"
 
 footer_newsletter:
   title: "Our Newsletter"
