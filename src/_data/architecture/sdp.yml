@@ -243,15 +243,7 @@ vendors:
     deployment: "SaaS"
     pricing: "Not Published" 
     notes: ""
-
-  - company: "Unisys"
-    product: "Stealth"
-    url: "https://stealthsecurity.unisys.com/"
-    license: "Commercial"
-    deployment: "SaaS"
-    pricing: "Not Published"
-    notes: ""
-
+    
   - company: "Verizon"
     product: "Vidder Precision Access"
     url: "https://enterprise.verizon.com/resources/vidder/"
@@ -370,4 +362,13 @@ vendors:
     license: "Open Source"
     deployment: "SaaS or Self-hosted"
     pricing: "n/a"
+    notes: ""
+
+  - company: "Cisco"
+    product: "Cisco+ Secure Connect Now (Duo)"
+    url: "https://www.cisco.com/c/en/us/products/plus-as-a-service/secure-connect.html"
+    license: "Commercial"
+    deployment: "SaaS"
+    pricing: "Published"
+    notes: ""
     notes: ""

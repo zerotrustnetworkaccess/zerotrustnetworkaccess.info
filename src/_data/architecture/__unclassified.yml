@@ -200,14 +200,6 @@ vendors:
     pricing: ""
     notes: "No clear ZTNA play (March 2022). Previously Witesand. Acquired by Juniper in 2022. Product appeared to be cloud-based Network Access Control (NAC), an alternative to systems like Cisco's Identity Services Engine and Aruba's Clearpass"
 
-  - company: "Cisco"
-    product: "Cisco+ Secure Connect Now"
-    url: ""
-    license: ""
-    deployment: ""
-    pricing: ""
-    notes: ""
-
   - company: "Prosimo"
     product: "Prosimo AXI"
     url: "https://prosimo.io/"
