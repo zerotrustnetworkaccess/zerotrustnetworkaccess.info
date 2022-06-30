@@ -1,5 +1,6 @@
 $(document).ready(function () {
   "use strict";
+
   /*-----------------------------------------------------------------------------------*/
   /*	HEADER BUTTONS
 /*-----------------------------------------------------------------------------------*/
@@ -56,7 +57,7 @@ $(document).ready(function () {
 /*-----------------------------------------------------------------------------------*/
   $(function () {
     setTimeout(function () {
-      if (location.hash) {
+      if (location.hash && location.hash !== '#success') {
         window.scrollTo(0, 0);
         var filter = location.hash.split("#");
         var target = filter[1].split("=");
@@ -204,10 +205,15 @@ $(document).ready(function () {
     $bslider.owlCarousel({
       items: 1,
       nav: true,
-      dots: true,
-      dotsEach: true,
+      dots: false,
+      dotsEach: false,
       autoHeight: true,
       loop: true,
+      touchDrag: false,
+      mouseDrag: false,
+      pullDrag: false,
+      URLhashListener: true,
+      startPosition: 'filter=host-based-firewall',
       margin: $bslider.data("margin"),
       navContainerClass: "ztna-slider-navbuttons-wrapper",
       navClass: [
@@ -218,8 +224,8 @@ $(document).ready(function () {
         "<img src='/assets/icons/left-arrow.svg'> Prev",
         "Next <img src='/assets/icons/right-arrow.svg'>",
       ],
-      dotsClass: "ztna-slider-dots-wrapper",
-      dotClass: "ztna-slider-dot-item light-text-2-background",
+      // dotsClass: "ztna-slider-dots-wrapper",
+      // dotClass: "ztna-slider-dot-item light-text-2-background",
     });
   });
   $(".carousel").each(function () {
@@ -230,8 +236,6 @@ $(document).ready(function () {
       dots: true,
       dotsEach: true,
       loop: true,
-      URLhashListener: true,
-      startPosition: 'filter=host-based-firewall',
       margin: $carousel.data("margin"),
       autoplay: false,
       autoplayTimeout: 3000,
@@ -261,6 +265,49 @@ $(document).ready(function () {
       },
     });
   });
+  // --------------------slides control btns--------------------- //
+  $(function () {
+    function getHashFilter() {
+      var matches = location.hash.match(/filter=([^&]+)/i);
+      var hashFilter = matches && matches[1];
+      return hashFilter && decodeURIComponent(hashFilter);
+    }
+    $(window).on('hashchange', function () {
+
+      var hashFilter = getHashFilter();
+
+      if (!hashFilter) {
+        return;
+      }
+      // filter 
+      var sliderFilter = hashFilter;
+      if (hashFilter !== null) {
+        sliderFilter = "#filter=" + hashFilter;
+      }
+
+      // // set selected class on button
+      if (sliderFilter == location.hash) {
+        var activeButton = $('.slider-list').find(".active");
+        if (activeButton) {
+          $('.slider-list').find(".active").removeClass("active");
+          $('.slider-list')
+            .find('[data-slide-filter="' + sliderFilter + '"]')
+            .addClass("active");
+        }
+      } else {
+        $('.slider-list')
+          .find('[data-slide-filter="' + sliderFilter + '"]')
+          .addClass("active");
+      }
+    });
+
+    $('.slider-list li').click(function (e) {
+      var $that = $(this);
+      $that.parent().find('li').removeClass('active');
+      $that.addClass('active');
+    });
+  })
+
   /*-----------------------------------------------------------------------------------*/
   /*	OWL SLIDER WITH THUMBNAILS
 /*-----------------------------------------------------------------------------------*/
@@ -272,11 +319,18 @@ $(document).ready(function () {
     .owlCarousel({
       items: 1,
       nav: false,
-      margin: 10,
+      // margin: 10,
+      touchDrag: false,
+      mouseDrag: false,
+      pullDrag: false,
       autoplay: false,
       dots: false,
       loop: true,
       responsiveRefreshRate: 200,
+      URLhashListener: true,
+      startPosition: 'filter=host-based-firewall',
+      navText: ['<svg width="10%" height="10%" viewBox="0 0 11 20"><path style="fill:none;stroke-width: 1px;stroke: #000;" d="M9.554,1.001l-8.607,8.607l8.607,8.606"/></svg>', '<svg width="10%" height="10%" viewBox="0 0 11 20" version="1.1"><path style="fill:none;stroke-width: 1px;stroke: #000;" d="M1.054,18.214l8.606,-8.606l-8.606,-8.607"/></svg>'],
+
     })
     .on("changed.owl.carousel", syncPosition);
   $owlnav
@@ -284,14 +338,25 @@ $(document).ready(function () {
       $owlnav.find(".owl-item").eq(0).addClass("current");
     })
     .owlCarousel({
-      items: 3,
+      items: 6,
       margin: 10,
       dots: false,
-      nav: false,
+      nav: true,
       smartSpeed: 200,
       slideSpeed: 500,
       slideBy: 3,
       responsiveRefreshRate: 100,
+      URLhashListener: true,
+      startPosition: 'filter=host-based-firewall',
+      navContainerClass: "ztna-slider-navbuttons-wrapper",
+      navClass: [
+        "owl-prev ztna-small-button-left white-background light-blue-1 h4 ml-10",
+        "owl-next ztna-small-button-right white-background light-blue-1 h4 ml-10",
+      ],
+      navText: [
+        "<img src='/assets/icons/left-arrow.svg'> Prev",
+        "Next <img src='/assets/icons/right-arrow.svg'>",
+      ],
     })
     .on("changed.owl.carousel", syncPosition2);
   function syncPosition(el) {
@@ -1052,6 +1117,8 @@ $(document).ready(function () {
     });
   }
   enableContactForm();
+
+
   /*-----------------------------------------------------------------------------------*/
   /*	MODAL
 /*-----------------------------------------------------------------------------------*/
@@ -1079,6 +1146,34 @@ $(document).ready(function () {
     navigator.userAgent.match(/BlackBerry/i)
   ) {
     $(".image-wrapper").addClass("mobile");
+  }
+
+
+  //-----------------------------------------------------------------------------// 
+  //   check ../#success for displaying popup "Thank you for subscription" ------//
+  //-----------------------------------------------------------------------------//
+
+  if (location.hash == "#success") {
+    const closePopup = document.querySelectorAll("#close-popup");
+    const overlay = document.getElementById("overlay");
+    const popUpSuccess = document.getElementById("popup-success");
+    const body = document.getElementsByTagName("body")[0];
+
+    overlay.style.display = "block";
+    popUpSuccess.style.display = "block";
+    body.style.overflowY = "hidden";
+
+    closePopup.forEach(
+      (el) =>
+      (el.onclick = () => {
+        overlay.style.display = "none";
+        popUpSuccess.style.display = "none";
+        popUpError.style.display = "none";
+        popUpOk.style.display = "none";
+        body.style.overflowY = "auto";
+        location.hash = '';
+      })
+    );
   }
   /*-----------------------------------------------------------------------------------*/
   /*	PRICING
