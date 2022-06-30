@@ -127,6 +127,47 @@
   max-width: 364px;
 }
 
+.post-divider {
+  padding: 0;
+  margin: 0;
+  color: $divider;
+}
+
+li:last-child {
+  .post-divider {
+    display: none;
+  }
+  .space20 {
+    display: none;
+  }}
+
+  blockquote {
+    @extend .mr-md-40-20;
+    @extend .ml-md-40-20;
+    border-radius: 30px;
+    padding: 34px 30px 20px 30px;
+    margin-bottom: 30px;
+    p {
+      margin-bottom: 0 !important;
+    }
+    p.h4 {
+      @extend .h4;
+      margin-bottom: 0 !important;
+    }
+    img {
+      -webkit-mask-box-image: url(../images/blob/blob1.svg);
+      -webkit-mask-image: url(../images/blob/blob1.svg);
+      mask-image: url(../images/blob/blob1.svg);
+      -webkit-mask-position: center center;
+      mask-position: center center;
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      width: 60px !important;
+      height: auto;
+      margin: 0 !important;
+    }
+  }
+
 @media only screen and (min-width: $breakpoint-sm) and (max-width: $breakpoint-lg) {
   .ztna-head-container {
     max-width: 600px;

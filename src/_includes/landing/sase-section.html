@@ -15,14 +15,15 @@
         {% endif %} {% if sase.description %}
         <p class="ztna-small-text light-text-1">{{sase.description}}</p>
         <div class="space20"></div>
-        {% endif %} {% for links in sase.more %}
+        {% endif %}
+        — {% for links in sase.more %}
         <a
           href="{{links.link}}"
           target="_blank"
           class="ztna-small-text light-blue-1 text-link"
           >{{links.text}}</a
         >
-        <div class="space10"></div>
+        {% unless forloop.last %}&{% endunless %}
         {% endfor %}
       </div>
       <!--/column -->

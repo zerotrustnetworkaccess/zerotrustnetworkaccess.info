@@ -62,7 +62,7 @@
         {% if arch.vendors %}
         {% if arch.display == true %}
         <div
-          class="item grid-sizer col-12 mx-auto mb-0 {{arch.filter}}
+          class="item grid-sizer architecture-section col-12 mx-auto mb-70 pb-80 {{arch.filter}}
           {% for filter in arch.filters %} {{filter}} {% endfor %}
           {% if arch.displayByDeafult %} focus {% endif %}"
         >
@@ -196,11 +196,6 @@
                 {% endfor %}
               </tbody>
             </table>
-            <div class="spacers-container {% if forloop.index == forloop.length %} table-spacers-remover {% endif %}">
-              <div class="mb-70-50"></div>
-              <hr class="post-divider" />
-              <div class="mb-70-50"></div>
-            </div>
           </div>
         </div>
         {% endif %}

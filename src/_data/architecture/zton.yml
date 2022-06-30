@@ -3,11 +3,12 @@ abbreviation: ""
 filter: "zero-trust-overlay-network"
 display: true
 sort_order: 2
-image: "/assets/images/architecture/zton.png"
+image: "/assets/images/architecture/zton.svg"
 
 paragraphs:
-  - text: "Direct, peer to peer connectivity enabled by UDP or TCP hole punching."
-  - text: ""
+  - text: "Agent based architecture. Devices talk directly to one another coordinated by centralised policy-based management."
+  - text: "Direct connections between cooperating systems are established using outbound-only traffic and a combination of device and user identity, UDP & TCP hole punching and NAT traversal techniques together create fast, end-to-end encrypted tunnels between connected systems from behind closed firewalls."
+  - text: "Some NAT configurations prevent the direct connection establishment, in such cases traffic relays are used to ensure a connection can be made."
 
 strengths:
   - title: "No ingress traffic, firewalls can be closed"
@@ -18,12 +19,12 @@ strengths:
     description: ""
   - title: "Incremental deployment"
     description: ""
-  - title: "North-south (client-to-server) traffic"
-    description: "Agnostic to endpoint location, heterogeneous provider networks and logical boundaries"
-  - title: "East-west (server-to-server) traffic"
-    description: "Agnostic to endpoint location, heterogeneous provider networks and logical boundaries"
+  - title: "North-South traffic"
+    description: "Traffic crossing the network perimeter, originating from outside the network, addressed to private systems within the network. Often resembles client-to-server connectivity. This architecture is agnostic to system location, heterogeneous provider networks and logical network boundaries"
+  - title: "East-West traffic"
+    description: "Internal network traffic, originating inside the network perimeter and addressed to other private systems within the network. Often resembles server-to-server, machine-to-machine, inter-region connectivity or traffic inside a service mesh or service cluster. This architecture is agnostic to system location, heterogeneous provider networks and logical network boundaries"
   - title: "Removes complexity from the network"
-    description: ""
+    description: "Overlay networks are often formed using egress-only traffic, so administrators don't need to change the underlying network in order to arrange connectivity"
   - title: "Resilient to temporary trust broker failures"
     description: "Policy is cached by endpoints should trust broker become temporarily unavailable"
   - title: "No network changes to deploy"
@@ -37,7 +38,7 @@ weaknesses:
   - title: "Trust properties not applied to peripherals"
     description: "If the agent software is not installed, Zero Trust Network Access principles are lost as traffic leaves the overlay network"
   - title: "Not protocol aware"
-    description: "As of May 2022, most implementations are not yet protocol aware"
+    description: "As of May 2022, most implementations of this architecture are not yet protocol aware"
 
 tradeoffs:
   - title: "Trust broker becomes the new target"
@@ -56,7 +57,7 @@ vendors:
     pricing: "n/a"
     notes: ""
 
-  - company: "Enclave Networks"
+  - company: "Enclave"
     product: "Enclave"
     url: "https://www.akamai.com/uk/en/products/security/enterprise-application-access.jsp"
     license: "Commercial"
@@ -126,12 +127,4 @@ vendors:
     license: "Open Source"
     deployment: "Self-hosted"
     pricing: "n/a" 
-    notes: ""
-
-  - company: "NetFoundry"
-    product: "Ziti"
-    url: "https://ziti.dev/"
-    license: "Open-source"
-    deployment: "SaaS or Self-hosted (& SDK)"
-    pricing: "Published" 
     notes: ""

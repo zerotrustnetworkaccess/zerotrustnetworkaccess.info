@@ -1,6 +1,0 @@
-enable: true
-label: "Our Blog"
-title: "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-button:
-  text: "Show more articles"
-  link: "/blog"

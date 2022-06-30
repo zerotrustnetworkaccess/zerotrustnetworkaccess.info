@@ -3,22 +3,22 @@ abbreviation: "IDN"
 filter: "identity-defined-network"
 display: true
 sort_order: 6
-image: "/assets/images/architecture/idn.png"
+image: "/assets/images/architecture/idn.svg"
 
 paragraphs: 
-  - text: "All traffic flows through a cloud relay. This is a L2/L3 (routed via) or L4 (proxied via)?"
-  - text: "All traffic traverses network relays.  Implementation of the HIP protocol"
+  - text: "Agent based architecture. All traffic traverses network relays coordinated by centralised policy-based management."
+  - text: "Some vendors offer hardware devices to transparently connect devices to the network."
 
 strengths:
-  - title: "North-south (client-to-server) traffic"
-    description: ""
+  - title: "North-South traffic"
+    description: "Traffic crossing the network perimeter, originating from outside the network, addressed to private systems within the network. Often resembles client-to-server connectivity"
   - title: "Universal protocol support"
     description: ""
 
 weaknesses:
   - title: "Business network depends on relay uptime"
     description: ""
-  - title: "High-availability requires multiple appliances"
+  - title: "High availability requires multiple appliances"
     description: ""
   - title: "All network traffic traverses relays"
     description: "Traffic relays can act as concentrators, introducing latency and throughput bottlenecks"
@@ -28,8 +28,8 @@ weaknesses:
     description: ""
   - title: "Must be reconfigured if network changes"
     description: ""
-  - title: "East-west (server-to-server) traffic"
-    description: "Moving east-west traffic through network relays can be inefficient"
+  - title: "East-West traffic"
+    description: "Internal network traffic, originating inside the network perimeter and addressed to other private systems within the network. Often resembles server-to-server, machine-to-machine, inter-region connectivity or traffic inside a service mesh or service cluster. Moving East-West traffic through network relays can be inefficient"
 
 tradeoffs:
   - title: "Trust broker becomes the new target"
@@ -45,9 +45,9 @@ vendors:
     notes: ""
 
   - company: "Zentera"
-    product: ""
+    product: "CoIP Access Platform"
     url: "http://zentera.net/"
-    license: ""
-    deployment: ""
-    pricing: ""
-    notes: "https://www.zentera.net/hubfs/coip%20architecture.png data flow doesn't look to be peer-to-peer"
+    license: "Commercial"
+    deployment: "SaaS or Self-hosted"
+    pricing: "Not Published"
+    notes: ""

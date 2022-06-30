@@ -3,12 +3,13 @@ abbreviation: "PAM"
 filter: "privileged-access-management"
 display: true
 sort_order: 4
-image: "https://developer.okta.com/assets-jekyll/blog/asa-gcp-jenkins/architecture-ssh-1a3cb18bfed3e54a65463a48d1824e5906a378c2b232f2b675998523edbb0a56.png"
+image: "/assets/images/architecture/pam.svg"
 
 paragraphs: 
-  - text: "Vendor's product controls access to end systems. End-user credentials are transparently swapped for ephemeral credentials which grant temporary access. Some vendors may offer session recording and playback. Assumes client has network access to target system."
-  - text: "Vendor assumes client has a network pathway available to reach target server"
-
+  - text: "Agent-based architecture. Vendor's product centrally manages credentials for access to target servers."
+  - text: "Long-lived end-user credentials are authorized and authenticated before being transparently swapped out for unique, often single-use or limit-limited credentials which grant temporary access to target servers. Some vendors may offer protocol aware features like session recording and playback."
+  - text: "Products often assume different all areas of the network be connected and routable such that clients have a network pathway available to reach target servers."
+ 
 strengths:
   - title: "Protocol aware"
     description: "Access to application traffic"
@@ -20,8 +21,8 @@ strengths:
 weaknesses:
   - title: "Proxy servers are public on the Internet"
     description: "Some vendors may offer proxy servers to provide access to services separated from the client via the WAN. If available, proxy servers need to be publicly available so end-users may connect in order to authenticate"
-  - title: "East-west (server-to-server) traffic"
-    description: "Sessions lean heavily on user identity which may not be available for east-west traffic patterns"
+  - title: "East-West traffic"
+    description: "Internal network traffic, originating inside the network perimeter and addressed to other private systems within the network. Often resembles server-to-server, machine-to-machine, inter-region connectivity or traffic inside a service mesh or service cluster. Sessions lean heavily on user identity which may not be available for headless systems in East-West traffic patterns"
   - title: "Limited protocol support"
     description: "Proxy based, so offers limited protocol support and so may not be able to replace VPN"
 

@@ -3,7 +3,7 @@ label: "Approach meets architecture"
 title: "Zero Trust Network Access"
 image: "/assets/images/landing/ztna.png"
 image_2x: "/assets/images/landing/ztna@2x.png"
-description: 'Gartner have defined <a href="https://www.gartner.com/en/information-technology/glossary/zero-trust-network-access-ztna-" target="_blank"> Zero Trust Network Access</a>, or ZTNA, as "<em>a product or service that creates an identity- and context-based, logical access boundary around an application or set of applications. The applications are hidden from discovery, and access is restricted via a trust broker to a set of named entities.</em>"<br /><br />Put simply, this means:'
+description: 'Zero Trust Network Access, or ZTNA is a Zero Trust approach to private networking which Gartner <a href="https://www.gartner.com/en/information-technology/glossary/zero-trust-network-access-ztna-" target="_blank">define</a>, as "<em>a product or service that creates an identity- and context-based, logical access boundary around an application or set of applications. The applications are hidden from discovery, and access is restricted via a trust broker to a set of named entities.</em>"<br /><br />Put simply, these principles are:'
 more:
   link: https://www.gartner.com/en/information-technology/glossary/zero-trust-network-access-ztna-
   text: Zero Trust Network Access (ZTNA), Gartner Glossary 2019
