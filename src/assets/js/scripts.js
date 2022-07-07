@@ -1169,12 +1169,34 @@ $(document).ready(function () {
         overlay.style.display = "none";
         popUpSuccess.style.display = "none";
         popUpError.style.display = "none";
+        body.style.overflowY = "auto";
+        location.hash = '';
+      })
+    );
+  }
+
+  if (location.hash == "#confirm") {
+    const closePopup = document.querySelectorAll("#close-popup");
+    const overlay = document.getElementById("overlay");
+    const popUpOk = document.getElementById("popup-ok");
+    const body = document.getElementsByTagName("body")[0];
+
+    overlay.style.display = "block";
+    popUpOk.style.display = "block";
+    body.style.overflowY = "hidden";
+
+    closePopup.forEach(
+      (el) =>
+      (el.onclick = () => {
+        overlay.style.display = "none";
+        popUpError.style.display = "none";
         popUpOk.style.display = "none";
         body.style.overflowY = "auto";
         location.hash = '';
       })
     );
   }
+
   /*-----------------------------------------------------------------------------------*/
   /*	PRICING
 /*-----------------------------------------------------------------------------------*/
