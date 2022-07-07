@@ -56,6 +56,6 @@ vendors:
     product: "Enterprise Microservices Platform"
     url: "https://greymatter.io/"
     license: "Commercial"
-    deployment: "SaaS"
+    deployment: "SaaS or Self-hosted"
     pricing: "Not Published"
     notes: ""
