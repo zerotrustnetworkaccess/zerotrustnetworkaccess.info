@@ -17,7 +17,7 @@ site.data.landing.timeline %}
       {% for node in timeline.nodes %} {% assign index = forloop.index %}
       <div
         style="width: calc(100% / {{forloop.length}})"
-        class="year-wrapper pr-lg-3 pl-lg-3"
+        class="year-wrapper "
         onclick="currentTimelineItem({{index}})"
       >
         <div

@@ -22,6 +22,10 @@
     border-radius: 33px;
     padding: 8px 4%;
     cursor: pointer;
+      
+    &:hover {
+      background-color: $dark-text !important;
+    }
   }
 }
 
@@ -33,11 +37,11 @@
 
 .timelinePill {
   padding: 8px 4%;
-  margin: 5px 1px;
+  margin: 3px 1px !important;
 
   &:hover {
     color: $timeline-active !important;
-    background-color: $dark-text !important;
+    background-color: $timeline-hover !important;
     border-radius: 33px;
     padding: 8px 4%;
     cursor: pointer;
