@@ -52,7 +52,7 @@ vendors:
     pricing: "Not Published"
     notes: ""
 
-  - company: "Greymatter"
+  - company: "greymatter.io"
     product: "Enterprise Microservices Platform"
     url: "https://greymatter.io/"
     license: "Commercial"
