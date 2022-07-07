@@ -51,3 +51,11 @@ vendors:
     deployment: "SaaS or Self-hosted"
     pricing: "Not Published"
     notes: ""
+
+  - company: "Greymatter"
+    product: "Enterprise Microservices Platform"
+    url: "https://greymatter.io/"
+    license: "Commercial"
+    deployment: "SaaS"
+    pricing: "Not Published"
+    notes: ""
