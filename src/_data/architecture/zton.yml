@@ -59,7 +59,7 @@ vendors:
 
   - company: "Enclave"
     product: "Enclave"
-    url: "https://www.akamai.com/uk/en/products/security/enterprise-application-access.jsp"
+    url: "https://enclave.io"
     license: "Commercial"
     deployment: "SaaS"
     pricing: "Published"
