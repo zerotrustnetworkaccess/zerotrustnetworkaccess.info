@@ -110,7 +110,7 @@ netlify:
         - "X-Frame-Options: deny"
         - "Content-Security-Policy: 
         default-src 'self' *.lfeeder.com *.leadfeeder.com; 
-        script-src 'self' 'unsafe-inline' *.googletagmanager.com enclave-networks.activehosted.com 'unsafe-inline'; 
+        script-src 'self' 'unsafe-inline' *.lfeeder.com *.leadfeeder.com *.googletagmanager.com enclave-networks.activehosted.com; 
         style-src 'self' 'unsafe-inline' fonts.googleapis.com; 
         img-src 'self' data: via.placeholder.com *.google-analytics.com *.googletagmanager.com *.lfeeder.com *.leadfeeder.com; 
         font-src 'self' fonts.gstatic.com; 
