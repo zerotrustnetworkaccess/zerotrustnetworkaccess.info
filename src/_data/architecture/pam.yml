@@ -51,9 +51,9 @@ vendors:
 
   - company: "Gravitational, Inc"
     product: "Teleport"
-    url: "https://gravitational.com/teleport/"
+    url: "https://goteleport.com/"
     license: "Commercial"
-    deployment: "SaaS"
+    deployment: "SaaS or Self-hosted"
     pricing: "Published"
     notes: ""
 
