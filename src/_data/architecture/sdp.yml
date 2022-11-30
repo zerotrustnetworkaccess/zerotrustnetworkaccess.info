@@ -371,3 +371,11 @@ vendors:
     deployment: "SaaS"
     pricing: "Published"
     notes: ""
+
+  - company: "AWS"
+    product: "Verified Access"
+    url: "https://aws.amazon.com/verified-access/"
+    license: "Commercial"
+    deployment: "SaaS"
+    pricing: "Published"
+    notes: ""
