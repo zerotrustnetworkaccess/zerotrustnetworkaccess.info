@@ -365,7 +365,7 @@ vendors:
     notes: ""
 
   - company: "Cisco"
-    product: "Cisco+ Secure Connect Now (Duo)"
+    product: "Cisco+ Secure Connect"
     url: "https://www.cisco.com/c/en/us/products/plus-as-a-service/secure-connect.html"
     license: "Commercial"
     deployment: "SaaS"
