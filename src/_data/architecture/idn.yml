@@ -14,14 +14,16 @@ strengths:
     description: "Traffic crossing the network perimeter, originating from outside the network, addressed to private systems within the network. Often resembles client-to-server connectivity"
   - title: "Universal protocol support"
     description: ""
+  - title: "Incremental deployment"
+    description: "" 
+  - title: "No ingress traffic, firewalls can be closed"
+    description: "Most agent implementations establish outbound connections to relay servers, enabling administrators to deny inbound network traffic"
 
 weaknesses:
   - title: "Business network depends on relay uptime"
     description: ""
-  - title: "High availability requires multiple appliances"
-    description: ""
   - title: "All network traffic traverses relays"
-    description: "Traffic relays can act as concentrators, introducing latency and throughput bottlenecks"
+    description: "Traffic relays can act as concentrators, introducing latency and throughput bottlenecks. Note, not all traffic will traverse relays, most implementations are split-tunnel, only relaying traffic for specific applications"
   - title: "Appliances require patching"
     description: ""
   - title: "Agents require patching"
@@ -29,11 +31,13 @@ weaknesses:
   - title: "Must be reconfigured if network changes"
     description: ""
   - title: "East-West traffic"
-    description: "Internal network traffic, originating inside the network perimeter and addressed to other private systems within the network. Often resembles server-to-server, machine-to-machine, inter-region connectivity or traffic inside a service mesh or service cluster. Moving East-West traffic through network relays can be inefficient"
+    description: "Internal network traffic, originating inside the network perimeter and addressed to other private systems within the network. Often resembles server-to-server, machine-to-machine, inter-region connectivity or traffic inside a service mesh or service cluster. Achieved in this architecture by moving traffic through network relays, which can be inefficient"
 
 tradeoffs:
   - title: "Trust broker becomes the new target"
     description: "In order for endpoints to connect to it, the trust broker must be publicly accessible"
+  - title: "High availability requires multiple appliances"
+    description: "Some vendors allow deployment of multiple relays which can load balance traffic for greater resilience and availability"
 
 vendors: 
   - company: "Tempered Networks"
@@ -58,4 +62,12 @@ vendors:
     license: "Commercial"
     deployment: "SaaS or Self-hosted"
     pricing: "Not Published"
+    notes: ""
+
+  - company: "NetFoundry"
+    product: "OpenZiti"
+    url: "https://netfoundry.io/"
+    license: "Open-source"
+    deployment: "SaaS or Self-hosted (& SDK)"
+    pricing: "Published" 
     notes: ""

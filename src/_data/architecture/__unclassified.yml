@@ -224,14 +224,6 @@ vendors:
     pricing: "" 
     notes: "Is this zero trust network access? Not launched yet (March 2022)"
 
-  - company: "NetFoundry"
-    product: "Ziti"
-    url: "https://ziti.dev/"
-    license: "Open-source"
-    deployment: "SaaS or Self-hosted (& SDK)"
-    pricing: "Published" 
-    notes: "Is this ZTON or IAP? In Ziti services reach out and establish one or more connections to the Ziti network fabric. Clients coming into the fabric can then reach the service through these connections after being authenticated and authorized."
-
   - company: "QI-ANXIN Group"
     product: ""
     url: ""
