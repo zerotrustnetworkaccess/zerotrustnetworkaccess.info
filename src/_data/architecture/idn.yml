@@ -65,9 +65,9 @@ vendors:
     notes: ""
 
   - company: "NetFoundry"
-    product: "OpenZiti"
+    product: "CloudZiti (& OpenZiti)"
     url: "https://netfoundry.io/"
-    license: "Open-source"
+    license: "Open-source & commercial"
     deployment: "SaaS or Self-hosted (& SDK)"
     pricing: "Published" 
     notes: ""
