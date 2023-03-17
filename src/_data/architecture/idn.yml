@@ -71,3 +71,11 @@ vendors:
     deployment: "SaaS or Self-hosted (& SDK)"
     pricing: "Published" 
     notes: ""
+
+  - company: "Intrusion Inc"
+    product: "Intrusion Shield Endpoint"
+    url: "https://www.intrusion.com/products/endpoint-protection/"
+    license: "Commercial"
+    deployment: "SaaS"
+    pricing: "Not Published" 
+    notes: "Built on top of NetFoundry's CloudZiti product"
