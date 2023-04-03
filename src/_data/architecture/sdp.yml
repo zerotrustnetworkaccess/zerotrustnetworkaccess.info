@@ -379,3 +379,11 @@ vendors:
     deployment: "SaaS"
     pricing: "Published"
     notes: ""
+
+  - company: "FerrumGate"
+    product: "FerrumGate"
+    url: "https://ferrumgate.com"
+    license: "Open Source"
+    deployment: "Self-hosted"
+    pricing: "n/a"
+    notes: ""
