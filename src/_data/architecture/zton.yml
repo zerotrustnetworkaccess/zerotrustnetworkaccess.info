@@ -128,3 +128,11 @@ vendors:
     deployment: "Self-hosted"
     pricing: "n/a" 
     notes: ""
+
+  - company: "Zero Networks"
+    product: "Zero Networks Connect"
+    url: "https://zeronetworks.com/zero-networks-connect/"
+    license: "Commercial"
+    deployment: "SaaS"
+    pricing: "n/a" 
+    notes: ""
