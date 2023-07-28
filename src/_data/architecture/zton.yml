@@ -136,3 +136,11 @@ vendors:
     deployment: "SaaS"
     pricing: "n/a" 
     notes: ""
+
+  - company: "COSGrid"
+    product: "MicroZAccess"
+    url: "https://www.cosgrid.com/products/ztna/microzaccess/"
+    license: "Commercial"
+    deployment: "SaaS"
+    pricing: "n/a"
+    notes : ""
