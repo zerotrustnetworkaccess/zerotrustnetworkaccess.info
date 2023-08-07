@@ -136,3 +136,11 @@ vendors:
     deployment: "SaaS"
     pricing: "n/a" 
     notes: ""
+
+  - company: "NordVPN"
+    product: "Meshnet"
+    url: "https://nordvpn.com/meshnet/"
+    license: "Commercial"
+    deployment: "SaaS"
+    pricing: "n/a" 
+    notes: ""
