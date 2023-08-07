@@ -128,3 +128,12 @@ vendors:
     deployment: "SaaS"
     pricing: "Not Published"
     notes: ""
+
+  - company: "Microsoft"
+    product: "Entra"
+    url: "https://www.microsoft.com/en-gb/security/business/microsoft-entra"
+    license: "Commercial"
+    deployment: "SaaS"
+    pricing: "Published"
+    notes: ""
+
