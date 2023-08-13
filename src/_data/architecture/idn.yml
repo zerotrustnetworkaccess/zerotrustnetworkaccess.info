@@ -79,3 +79,11 @@ vendors:
     deployment: "SaaS"
     pricing: "Not Published" 
     notes: "Built on top of NetFoundry's CloudZiti product"
+
+  - company: "Narrowlink"
+    product: "Narrowlink"
+    url: "https://narrowlink.com/"
+    license: "Open-source"
+    deployment: "Self-hosted"
+    pricing: "n/a"
+    notes: ""
