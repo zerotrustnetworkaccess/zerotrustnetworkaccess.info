@@ -137,3 +137,10 @@ vendors:
     pricing: "Published"
     notes: ""
 
+  - company: "Akamai"
+    product: "Akamai Enterprise Application Access"
+    url: "akamai.com/eaa"
+    license: "Commercial"
+    deployment: "SaaS"
+    pricing: "Not Published"
+    notes: ""

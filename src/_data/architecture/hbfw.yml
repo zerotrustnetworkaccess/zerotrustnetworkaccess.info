@@ -67,3 +67,11 @@ vendors:
     pricing: "Not Published"
     notes: ""
 
+  - company: "Akamai"
+    product: "Akamai Guardicore Segmentation"
+    url: "https://www.akamai.com/products/akamai-guardicore-segmentation"
+    license: "Commercial"
+    deployment: "SaaS or Self-hosted"
+    pricing: "Not Published"
+    notes: ""
+
