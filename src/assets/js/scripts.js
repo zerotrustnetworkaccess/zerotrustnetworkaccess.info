@@ -1,8 +1,8 @@
 $(document).ready(function () {
   "use strict";
 
-  /*-----------------------------------------------------------------------------------*/
-  /*	HEADER BUTTONS
+/*-----------------------------------------------------------------------------------*/
+/*	HEADER BUTTONS
 /*-----------------------------------------------------------------------------------*/
   var $header_hamburger = $(".hamburger.animate");
   var $navbar_offcanvas = $(".offcanvas-nav");
@@ -11,6 +11,10 @@ $(document).ready(function () {
   var $info_offcanvas = $(".offcanvas-info");
   var $info_offcanvas_close = $(".offcanvas-info-close");
   var $info_offcanvas_toggle = $('[data-toggle="offcanvas-info"]');
+
+  // open the infobar on page load
+  $('.offcanvas-info').toggleClass("open");
+
   $header_hamburger.on("click", function () {
     $header_hamburger.toggleClass("active");
   });
