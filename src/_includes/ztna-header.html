@@ -47,6 +47,7 @@
 </nav>
 <!-- /.navbar -->
 
+<!-- info bar -->
 <div class="offcanvas-info flyout-background fly-out-bg"
   style="
     background-image: -webkit-image-set(
@@ -61,16 +62,11 @@
   <button class="plain offcanvas-close offcanvas-info-close white icon-hover">
     <i class="jam jam-close"></i>
   </button>
-  
+
   <ul class="list-unstyled">
-  {% for menu in site.data.navigation.main_menu %}
-  <li class="ztna-margin-bottom-3 {% if menu.text == 'Github' and include.hide_github %} ztna-hidden {% endif %}">
-    {% include icons/{{menu.icon}} cls="nav-link mobile-menu-items-fill" %}
-    <a href="{{menu.url}}" {% if menu.new_window %} target="_blank" {% endif %}>
-      <span class="ztna-small-text ml-10 {% if include.dark_logo %} mobile-menu-items-color {% endif %}">{{menu.text}}</span>
-    </a>
+  <li class="ztna-margin-bottom-3">
+    <p class="ztna-small-text white"><strong>zerotrustnetworkaccess.info</strong></p>
   </li>
-  {% endfor %}
   </ul>
 
   {% assign description = site.data.general_settings.description %}
@@ -82,6 +78,17 @@
     </li>
     {% endfor %}
   </ul>
-  
+
+  <ul class="list-unstyled">
+    {% for menu in site.data.navigation.main_menu %}
+    <li class="ztna-margin-bottom-3 {% if menu.text == 'Github' and include.hide_github %} ztna-hidden {% endif %}">
+      {% include icons/{{menu.icon}} cls="nav-link mobile-menu-items-fill" %}
+      <a href="{{menu.url}}" {% if menu.new_window %} target="_blank" {% endif %}>
+        <span class="ztna-small-text ml-10 {% if include.dark_logo %} mobile-menu-items-color {% endif %}">{{menu.text}}</span>
+      </a>
+    </li>
+    {% endfor %}
+    </ul>
+
 </div>
 <!-- /.offcanvas-info -->
