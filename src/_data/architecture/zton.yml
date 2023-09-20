@@ -152,3 +152,11 @@ vendors:
     deployment: "SaaS"
     pricing: "n/a" 
     notes: ""
+
+  - company: "Webmesh"
+    product: "Webmesh"
+    url: "https://webmeshproj.github.io/"
+    license: "Open Source"
+    deployment: "Self-hosted"
+    pricing: "n/a" 
+    notes: ""
