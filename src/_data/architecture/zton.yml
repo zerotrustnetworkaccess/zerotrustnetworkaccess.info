@@ -153,7 +153,7 @@ vendors:
     pricing: "n/a" 
     notes: ""
 
-  - company: "Webmesh"
+  - company: "webmeshproj/webmesh"
     product: "Webmesh"
     url: "https://webmeshproj.github.io/"
     license: "Open Source"
