@@ -137,6 +137,14 @@ vendors:
     pricing: "Published"
     notes: ""
 
+  - company: "Akamai"
+    product: "Akamai Enterprise Application Access"
+    url: "https://www.akamai.com/products/enterprise-application-access"
+    license: "Commercial"
+    deployment: "SaaS"
+    pricing: "Not Published"
+    notes: ""
+
   - company: "Exium"
     product: "Secure Private Access"
     url: "https://exium.net/products/#private"
