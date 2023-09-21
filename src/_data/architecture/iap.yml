@@ -139,7 +139,7 @@ vendors:
 
   - company: "Akamai"
     product: "Akamai Enterprise Application Access"
-    url: "akamai.com/eaa"
+    url: "https://www.akamai.com/products/enterprise-application-access"
     license: "Commercial"
     deployment: "SaaS"
     pricing: "Not Published"
