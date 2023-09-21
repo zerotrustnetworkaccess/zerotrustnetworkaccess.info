@@ -144,3 +144,11 @@ vendors:
     deployment: "SaaS"
     pricing: "Not Published"
     notes: ""
+
+  - company: "Exium"
+    product: "Secure Private Access"
+    url: "https://exium.net/products/#private"
+    license: "Commercial"
+    deployment: "SaaS"
+    pricing: "Not Published"
+    notes: ""
