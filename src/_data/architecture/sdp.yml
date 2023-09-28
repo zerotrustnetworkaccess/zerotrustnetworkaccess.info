@@ -60,13 +60,13 @@ vendors:
     pricing: "Not published"
     notes: ""
 
-  - company: "Perimeter81"
-    product: "Perimeter81"
+  - company: "Perimeter 81"
+    product: "Perimeter 81"
     url: "https://www.perimeter81.com/"
     license: "Commercial"
     deployment: "SaaS"
     pricing: "Published"
-    notes: ""
+    notes: "Acquired by Checkpoint in 2023"
 
   - company: "TransientX"
     product: "TransientAccess"
@@ -162,7 +162,7 @@ vendors:
     license: "Commercial"
     deployment: "SaaS"
     pricing: "Not Published"
-    notes: "Previously Odo Security. Acquired by Check Point in 2020"
+    notes: "Previously Odo Security. Acquired by Check Point in 2020. Checkpoint also acquired Perimeter 81 in 2023."
 
   - company: "Deep Cloud Technology"
     product: "Deep Cloud SDP"
