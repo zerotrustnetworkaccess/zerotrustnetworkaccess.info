@@ -44,13 +44,13 @@ tradeoffs:
     description: ""
 
 vendors:
-  - company: "NetMotion Software"
-    product: "Zero Trust Access"
-    url: "https://www.netmotionsoftware.com/"
+  - company: "Absolute"
+    product: "Absolute ZTNA"
+    url: "https://www.absolute.com/"
     license: "Commercial"
     deployment: "SaaS"
     pricing: "Not Published"
-    notes: ""
+    notes: "Previously NetMotion Software"
 
   - company: "AppGate"
     product: "Secure Access"
