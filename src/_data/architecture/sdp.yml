@@ -387,3 +387,11 @@ vendors:
     deployment: "Self-hosted"
     pricing: "n/a"
     notes: ""
+
+  - company: "Timus Networks"
+    product: "Timus Networks"
+    url: "https://timusnetworks.com"
+    license: "Commercial"
+    deployment: "SaaS"
+    pricing: "https://www.timusnetworks.com/plans/"
+    notes: ""
