@@ -160,3 +160,12 @@ vendors:
     deployment: "Self-hosted"
     pricing: "n/a" 
     notes: ""
+ 
+  - company: "XplicitTrust"
+    product: "XplicitTrust Network Access"
+    url: "https://www.xplicittrust.com/"
+    license: "Commercial"
+    deployment: "SaaS"
+    pricing: "Published"
+    notes: ""
+  
