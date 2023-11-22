@@ -387,3 +387,11 @@ vendors:
     deployment: "Self-hosted"
     pricing: "n/a"
     notes: ""
+
+  - company: "SonicWall"
+    product: "Cloud Edge Secure Access"
+    url: "https://www.sonicwall.com/products/cloud-edge-secure-access/"
+    license: "Commercial"
+    deployment: "SaaS"
+    pricing: "n/a"
+    notes: ""
