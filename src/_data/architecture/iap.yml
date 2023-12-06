@@ -65,13 +65,13 @@ vendors:
     pricing: "Published"
     notes: ""
 
-  - company: "Axis Security"
+  - company: "HPE"
     product: "Atmos ZTNA"
     url: "https://www.axissecurity.com/"
     license: "Commercial"
     deployment: "SaaS"
     pricing: "Not Published"
-    notes: ""
+    notes: "Formerly Axis Security"
 
   - company: "BlackBerry"
     product: "CylanceGATEWAY"
