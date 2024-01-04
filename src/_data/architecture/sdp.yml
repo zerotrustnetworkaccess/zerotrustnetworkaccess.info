@@ -90,7 +90,7 @@ vendors:
     license: "Commercial"
     deployment: "SaaS"
     pricing: "Published"
-    notes: ""
+    notes: "Acquired by Sonicwall in 2024"
 
   - company: "Twingate"
     product: "Twingate"
@@ -394,4 +394,4 @@ vendors:
     license: "Commercial"
     deployment: "SaaS"
     pricing: "n/a"
-    notes: ""
+    notes: "White-label version of Perimeter 81"
