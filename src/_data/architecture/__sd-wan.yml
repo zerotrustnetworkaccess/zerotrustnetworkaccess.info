@@ -22,7 +22,7 @@ vendors:
     license: "Commercial"
     deployment: ""
     pricing: "Not Published"
-    notes: "SDP / SD-WAN / Claims Zero Trust Overlay"
+    notes: "SDP / SD-WAN / Claims Mesh Overlay Network"
 
   - company: "Viptela"
     product: "Viptela WAN"

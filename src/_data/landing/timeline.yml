@@ -35,16 +35,6 @@ nodes:
     description: SD-WAN solutions started to enter the market close to 2014 as an effort to bring Software Defined Networking (SDN) concepts to the WAN. Intended to achieve similar WAN optimization capabilities to MPLS for lower cost and less complexity, SD-WAN was positioned in the market as an alternative to predetermined MPLS routes on fixed circuits which were more complicated to provision in favour of policy-based routing using the open Internet.
 
   - year: "2018"
-    acronym: "ZTON"
-    title: "Zero Trust Overlay Network (ZTON)"
+    acronym: "Overlay"
+    title: "Mesh Overlay Network"
     description: A software-based overlay network aligned to with ZTNA principles in which devices and systems talk directly without the need for VPN servers. Entrance to the overlay network is governed by centralised policy-based management according to real-time security conditions on each endpoint. Notably, connectivity is achieved using techniques like UDP/TCP hole punching and traffic relays to operate transparently through NAT devices and not require firewalls to be opened for inbound traffic, dramatically reducing surface area available for attack.
- 
-#  - year: "2019"
-#    acronym: "SASE"
-#    title: "Secure Access Service Edge (SASE)"
-#    description: SASE (coined by Neil McDonald and Joe Skorupa at <a href="https://blogs.gartner.com/andrew-lerner/2019/12/23/say-hello-sase-secure-access-service-edge/">Gartner</a>, pronounced “sassy”) names a market trend toward combining network security functions with WAN capabilities into single products which are primarily delivered as a Service in order to support the access needs of organizations. SASE solutions are expected to place an emphasis on dynamic policies, informed by identity and real time security posture.
-
-#  - year: "2019"
-#    acronym: "SSE"
-#    title: "Secure Service Edge (SSE)"
-#    description: Security service edge (coined by <a href="https://www.gartner.com/reviews/market/security-service-edge">Gartner</a>) is a subset of SASE thought which represents an effort to secure access to the Internet, Cloud services, and private applications using a combination of Secure Web Gateways (SWG), Cloud Access Security Brokers (CASB) and Zero Trust Network Access (ZTNA). Capabilities include access control, threat protection, data security, security monitoring, and acceptable use control enforced by network-based and API-based integration. SSE is primarily delivered as a cloud-based service and may include on-premises or agent-based components.

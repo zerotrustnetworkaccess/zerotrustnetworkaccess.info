@@ -1,13 +1,12 @@
-name: "Zero-Trust Overlay Network"
+name: "Mesh Overlay Network"
 abbreviation: ""
-filter: "zero-trust-overlay-network"
+filter: "mesh-overlay-network"
 display: true
 sort_order: 2
-image: "/assets/images/architecture/zton.svg"
+image: "/assets/images/architecture/mesh-overlay.svg"
 
 paragraphs:
-  - text: "Agent based architecture. Devices talk directly to one another coordinated by centralised policy-based management."
-  - text: "Direct connections between cooperating systems are established using outbound-only traffic and a combination of device and user identity, UDP & TCP hole punching and NAT traversal techniques together create fast, end-to-end encrypted tunnels between connected systems from behind closed firewalls."
+  - text: "Agent based architecture. Devices talk directly to one another coordinated by centralised policy-based management. Direct connections between cooperating systems are established using outbound-only traffic and a combination of device and user identity, UDP & TCP hole punching and NAT traversal techniques together create fast, end-to-end encrypted tunnels between connected systems from behind closed firewalls."
   - text: "Some NAT configurations prevent the direct connection establishment, in such cases traffic relays are used to ensure a connection can be made."
 
 strengths:
