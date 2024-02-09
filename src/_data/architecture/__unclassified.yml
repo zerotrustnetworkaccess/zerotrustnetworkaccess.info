@@ -423,3 +423,11 @@ vendors:
     deployment: ""
     pricing: ""
     notes: ""
+  
+  - company: "Lumen"
+    product: "Product name unknown"
+    url: "https://assets.lumen.com/is/content/Lumen/ztna-appgate-sell-sheet"
+    license: ""
+    deployment: ""
+    pricing: ""
+    notes: "White-label version of AppGate"
