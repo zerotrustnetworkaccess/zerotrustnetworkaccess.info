@@ -365,12 +365,12 @@ vendors:
     notes: ""
 
   - company: "Cisco"
-    product: "Cisco+ Secure Connect"
-    url: "https://www.cisco.com/c/en/us/products/plus-as-a-service/secure-connect.html"
+    product: "Cisco Secure Access"
+    url: "https://www.cisco.com/site/us/en/products/security/secure-access/index.html"
     license: "Commercial"
     deployment: "SaaS"
-    pricing: "Published"
-    notes: ""
+    pricing: "Not Published"
+    notes: "Replaced Cisco Secure Connect in 2024"
 
   - company: "AWS"
     product: "Verified Access"
