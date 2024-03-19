@@ -403,3 +403,11 @@ vendors:
     deployment: "SaaS"
     pricing: "n/a"
     notes: "White-label version of AppGate"
+
+  - company: "Citrix"
+    product: "Secure Private Access"
+    url: "https://www.citrix.com/platform/citrix-secure-private-access/"
+    license: "Commercial"
+    deployment: "SaaS"
+    pricing: "n/a"
+    notes: ""

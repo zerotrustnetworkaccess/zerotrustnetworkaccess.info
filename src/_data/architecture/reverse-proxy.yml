@@ -144,3 +144,11 @@ vendors:
     deployment: "SaaS"
     pricing: "Not Published"
     notes: ""
+
+  - company: "Palo Alto"
+    product: "Prisma Access"
+    url: "https://www.paloaltonetworks.co.uk/sase/access"
+    license: "Commercial"
+    deployment: "SaaS"
+    pricing: "Not Published"
+    notes: ""
