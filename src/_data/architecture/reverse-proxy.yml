@@ -1,14 +1,14 @@
-name: "Identity Aware Proxy"
-abbreviation: "IAP"
-filter: "identity-aware-proxy"
+name: "Reverse Proxy"
+abbreviation: ""
+filter: "reverse-proxy"
 display: true
 sort_order: 3
-image: "/assets/images/architecture/iap.svg"
+image: "/assets/images/architecture/reverse-proxy.svg"
 
 paragraphs: 
   - text: "Agent-based architecture. Vendor's network acts as the default route for all devices. All traffic is routed via the vendor's network."
-  - text: "Agent connects out to vendor's network and opens a reverse proxy data channel. Any other traffic entering the vendors network can then be routed to the connected device."
-  - text: " End-user access may be agentless. Vendors commonly also provide Cloud Access Security Broker (CASB) and Secure Web Gateway (SWG) functions complimentary to ZTNA."
+  - text: "Reverse Proxy application connects out to vendor's network, opening a reverse proxy data channel. Any other traffic entering the vendors network can then be routed to the connected device."
+  - text: "End-user access may be agentless. Vendors commonly also provide Cloud Access Security Broker (CASB) and Secure Web Gateway (SWG) functions complimentary to ZTNA."
 
 strengths:
   - title: "No ingress traffic, firewalls can be closed"
@@ -65,13 +65,13 @@ vendors:
     pricing: "Published"
     notes: ""
 
-  - company: "Axis Security"
+  - company: "HPE"
     product: "Atmos ZTNA"
     url: "https://www.axissecurity.com/"
     license: "Commercial"
     deployment: "SaaS"
     pricing: "Not Published"
-    notes: ""
+    notes: "Formerly Axis Security"
 
   - company: "BlackBerry"
     product: "CylanceGATEWAY"
@@ -121,14 +121,6 @@ vendors:
     pricing: "Not Published" 
     notes: ""
 
-  - company: "Cisco"
-    product: "Cisco+ Secure Connect Now"
-    url: "https://www.cisco.com/c/en/us/products/plus-as-a-service/secure-connect.html"
-    license: "Commercial"
-    deployment: "SaaS"
-    pricing: "Not Published"
-    notes: ""
-
   - company: "Microsoft"
     product: "Entra"
     url: "https://www.microsoft.com/en-gb/security/business/microsoft-entra"
@@ -148,6 +140,14 @@ vendors:
   - company: "Exium"
     product: "Secure Private Access"
     url: "https://exium.net/products/#private"
+    license: "Commercial"
+    deployment: "SaaS"
+    pricing: "Not Published"
+    notes: ""
+
+  - company: "Palo Alto"
+    product: "Prisma Access"
+    url: "https://www.paloaltonetworks.co.uk/sase/access"
     license: "Commercial"
     deployment: "SaaS"
     pricing: "Not Published"
