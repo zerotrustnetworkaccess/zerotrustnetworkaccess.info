@@ -52,7 +52,7 @@ vendors:
   - company: "Pomerium"
     product: "Pomerium"
     url: "https://www.pomerium.com/"
-    license: "Commercial"
+    license: "Open source"
     deployment: "Self-hosted"
     pricing: "Not Published"
     notes: ""
