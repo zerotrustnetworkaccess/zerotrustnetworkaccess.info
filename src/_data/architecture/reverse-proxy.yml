@@ -152,3 +152,11 @@ vendors:
     deployment: "SaaS"
     pricing: "Not Published"
     notes: ""
+
+  - company: "Netskope"
+    product: "ZTNA Next"
+    url: "https://www.netskope.com/products/ztna-next"
+    license: "Commercial"
+    deployment: "SaaS"
+    pricing: "Not Published"
+    notes: ""

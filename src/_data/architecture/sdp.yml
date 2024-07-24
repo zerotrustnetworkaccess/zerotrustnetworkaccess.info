@@ -125,8 +125,8 @@ vendors:
     notes: "Does not use Single Packet Authorization (SPA) to hide the access proxies from the public Internet"
 
   - company: "NetSkope"
-    product: "Private Access"
-    url: "https://www.netskope.com/products/private-access"
+    product: "ZTNA Next"
+    url: "https://www.netskope.com/products/ztna-next"
     license: "Commercial"
     deployment: "SaaS"
     pricing: "Not Published"
