@@ -8,7 +8,7 @@ We believe Zero Trust Network Access is here to stay, and that the community as 
 
 # Contributing
 
-A big welcome and thank you for considering contributing to the the [The no-bullshit ZTNA vendor directory](zerotrustnetworkaccess.info)!
+A big welcome and thank you for considering contributing to [The no-bullshit ZTNA vendor directory](https://zerotrustnetworkaccess.info/)!
 
 It’s people like you that will help to ensure this is a site useful resource for the community as a whole benefit from honest, impartial, and open knowledge about the vendors operating in this space. 
 
@@ -36,9 +36,9 @@ We love your input! This is a fast-moving and incredibly diverse space. We want 
 
 We use GitHub to host code, to track issues and feature requests, as well as accept pull requests.
 
-### We use [GitHub Flow](https://guides.github.com/introduction/flow/index.html), so all code changes happen through pull requests
+### We use [GitHub Flow](https://docs.github.com/en/get-started/using-github/github-flow), so all code changes happen through pull requests
 
-Pull requests are the best way to propose changes to the codebase (we use [Github Flow](https://guides.github.com/introduction/flow/index.html)). We actively welcome your pull requests:
+Pull requests are the best way to propose changes to the codebase (we use [Github Flow](https://docs.github.com/en/get-started/using-github/github-flow)). We actively welcome your pull requests:
 
 1. Fork the repo and create your branch from `main`.
 2. Test your changes to make sure they work as expected.

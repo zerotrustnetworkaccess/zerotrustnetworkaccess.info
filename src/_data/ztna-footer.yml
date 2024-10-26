@@ -16,6 +16,6 @@ social_accounts:
       title: "Edit this page on GitHub"
       icon: github.svg
 
-    - url: "https://github.com/zerotrustnetworkaccess/zerotrustnetworkaccess.info/blob/main/CONTRIBUTOR.md"
+    - url: "https://github.com/zerotrustnetworkaccess/zerotrustnetworkaccess.info/blob/main/README.md"
       title: "Contributor guidelines"
       icon: guidelines.svg
