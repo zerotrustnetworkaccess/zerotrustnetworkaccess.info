@@ -46,7 +46,7 @@ Pull requests are the best way to propose changes to the codebase (we use [Githu
 4. Make sure your code lints.
 5. Issue that pull request!
 
-### Any contributions you make will be under the MIT Software License
+### Any contributions you make will be under the GPL 3.0 License
 
 In short, when you submit code changes, your submissions are understood to be under the same [GPL 3.0](https://choosealicense.com/licenses/gpl-3.0/) license that covers the project. Feel free to contact the maintainers if that's a concern.
 
