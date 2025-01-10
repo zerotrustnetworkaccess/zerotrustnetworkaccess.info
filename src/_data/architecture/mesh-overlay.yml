@@ -100,7 +100,7 @@ vendors:
     product: "Netbird"
     url: "https://netbird.io/"
     license: "Open Source"
-    deployment: "SaaS"
+    deployment: "SaaS of Self-hosted"
     pricing: "Published"
     notes: "Formerly Wiretrustee"
 
