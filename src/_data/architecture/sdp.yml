@@ -34,6 +34,8 @@ weaknesses:
     description: ""
   - title: "High availability requires multiple appliances"
     description: ""
+  - title: "No level of access availabe before user login"
+    description: "Can make it difficult to provide pre-login connectivity to resources like Domain Controllers"
 
 tradeoffs:
   - title: "Trust broker becomes the new target"
