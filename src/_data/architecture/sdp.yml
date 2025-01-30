@@ -413,3 +413,11 @@ vendors:
     deployment: "Self-hosted"
     pricing: "Published"
     notes: ""
+
+  - company: "GoodAccess"
+    product: "GoodAccess"
+    url: "https://www.goodaccess.com/"
+    license: "Commercial"
+    deployment: "SaaS"
+    pricing: "Published"
+    notes: ""
