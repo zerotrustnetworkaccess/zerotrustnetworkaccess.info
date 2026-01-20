@@ -87,3 +87,11 @@ vendors:
     deployment: "Self-hosted"
     pricing: "n/a"
     notes: ""
+
+  - company: "Diode"
+    product: "Diode Network"
+    url: "https://diode.io/"
+    license: "Open Source"
+    deployment: "SaaS or Self-hosted"
+    pricing: "n/a"
+    notes: "Decentralised and permissionless network using self-custody blockchain credentials."
