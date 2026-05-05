@@ -1,0 +1,51 @@
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "deny"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' *.googletagmanager.com; style-src 'self' 'unsafe-inline' fonts.googleapis.com; img-src 'self' data: via.placeholder.com *.google-analytics.com *.googletagmanager.com; font-src 'self' fonts.gstatic.com; connect-src 'self' *.google-analytics.com *.analytics.google.com *.googletagmanager.com; object-src 'none';"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Content-Security-Policy = "default-src 'none'"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Content-Security-Policy = "default-src 'none'"
+
+[[headers]]
+  for = "/*.svg"
+  [headers.values]
+    Content-Security-Policy = "default-src 'none'"
+
+[[headers]]
+  for = "/*.png"
+  [headers.values]
+    Content-Security-Policy = "default-src 'none'"
+
+[[headers]]
+  for = "/*.jpg"
+  [headers.values]
+    Content-Security-Policy = "default-src 'none'"
+
+[[headers]]
+  for = "/*.jpeg"
+  [headers.values]
+    Content-Security-Policy = "default-src 'none'"
+
+[[headers]]
+  for = "/*.woff"
+  [headers.values]
+    Content-Security-Policy = "default-src 'none'"
+
+[[headers]]
+  for = "/*.woff2"
+  [headers.values]
+    Content-Security-Policy = "default-src 'none'"
+
+[[headers]]
+  for = "/*.json"
+  [headers.values]
+    Content-Security-Policy = "default-src 'none'"
