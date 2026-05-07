@@ -167,4 +167,14 @@ vendors:
     deployment: "SaaS"
     pricing: "Published"
     notes: ""
+
+  - company: "COSGrid Networks"
+    product: "MicroZAccess"
+    url: "https://www.cosgrid.com/"
+    license: "Commercial"
+    deployment: "SaaS"
+    pricing: "n/a"
+    notes: ""
+
+  
   
