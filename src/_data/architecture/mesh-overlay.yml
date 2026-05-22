@@ -167,4 +167,12 @@ vendors:
     deployment: "SaaS"
     pricing: "Published"
     notes: ""
+
+  - company: "Pangolin"
+    product: "Pangolin"
+    url: "https://pangolin.net/"
+    license: "Open Source & Commercial"
+    deployment: "SaaS or Self-hosted"
+    pricing: "Published"
+    notes: "Private resources use WireGuard peer-to-peer tunnels between clients and sites; public resources also provide identity-aware reverse proxy access."
   

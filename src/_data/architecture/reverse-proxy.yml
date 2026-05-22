@@ -152,3 +152,11 @@ vendors:
     deployment: "SaaS"
     pricing: "Not Published"
     notes: ""
+
+  - company: "Jimber"
+    product: "ZTNA Network Isolation"
+    url: "https://jimber.io/components/network-isolation/"
+    license: "Commercial"
+    deployment: "SaaS"
+    pricing: "Not Published"
+    notes: "Brokered ZTNA model using outbound connector-to-broker connectivity; also part of Jimber SASE."
