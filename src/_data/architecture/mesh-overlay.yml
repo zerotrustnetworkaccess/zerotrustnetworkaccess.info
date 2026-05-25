@@ -162,11 +162,11 @@ vendors:
  
   - company: "XplicitTrust"
     product: "XplicitTrust Network Access"
-    url: "https://www.xplicittrust.com/"
+    url: "https://xplicittrust.com/en/product"
     license: "Commercial"
     deployment: "SaaS"
-    pricing: "Published"
-    notes: ""
+    pricing: "Not Published"
+    notes: "German company (Karlsruhe)"
 
   - company: "Pangolin"
     product: "Pangolin"
