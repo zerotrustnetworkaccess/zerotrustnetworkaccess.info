@@ -6,7 +6,7 @@ RUN apt-get update && \
 
 WORKDIR /srv/jekyll
 
-COPY Gemfile ./
+COPY Gemfile Gemfile.lock ./
 RUN bundle install
 
 COPY . .
