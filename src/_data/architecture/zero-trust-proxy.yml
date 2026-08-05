@@ -107,7 +107,7 @@ vendors:
     deployment: "SaaS"
     pricing: "Not Published"
     sales_channel: "Channel"
-    notes: "MSP-only sales model"
+    notes: ""
 
   - company: "Agilicus"
     product: "Agilicus AnyX"

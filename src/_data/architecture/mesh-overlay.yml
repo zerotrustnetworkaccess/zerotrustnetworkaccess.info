@@ -159,7 +159,7 @@ vendors:
     deployment: "SaaS"
     pricing: "n/a"
     sales_channel: "Direct only"
-    notes: "Free product included with NordVPN subscription."
+    notes: ""
 
   - company: "CyberHive"
     product: "CyberHive Connect"
