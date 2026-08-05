@@ -72,7 +72,7 @@ vendors:
 
   - company: "ColorTokens"
     product: "Xshield"
-    url: "https://colortokens.com/product/xshield-workload-protection/"
+    url: "https://colortokens.com/products/xshield-microsegmentation-platform/"
     license: "Commercial"
     deployment: "SaaS"
     pricing: "Not Published"
@@ -80,13 +80,13 @@ vendors:
     notes: ""
 
   - company: "Unisys"
-    product: "Stealth"
+    product: "Secure Network Access"
     url: "https://www.unisys.com/solutions/cybersecurity-solutions/"
     license: "Commercial"
-    deployment: "SaaS"
+    deployment: "Managed Service"
     pricing: "Not Published"
     sales_channel: "Direct + Channel"
-    notes: ""
+    notes: "Formerly Stealth. Microsegmentation now part of Secure Network Access managed service."
 
   - company: "Akamai"
     product: "Akamai Guardicore Segmentation"
@@ -96,3 +96,12 @@ vendors:
     pricing: "Not Published"
     sales_channel: "Direct + Channel"
     notes: ""
+
+  - company: "Elisity"
+    product: "Elisity"
+    url: "https://www.elisity.com/"
+    license: "Commercial"
+    deployment: "SaaS"
+    pricing: "Not Published"
+    sales_channel: "Direct + Channel"
+    notes: "Identity-based microsegmentation. Formerly listed under SDP."
