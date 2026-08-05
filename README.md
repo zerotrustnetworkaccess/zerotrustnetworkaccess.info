@@ -8,7 +8,7 @@ We believe Zero Trust Network Access is here to stay, and that the community as 
 
 # Contributing
 
-A big welcome and thank you for considering contributing to [The no-bullshit ZTNA vendor directory](https://zerotrustnetworkaccess.info/)!
+A big welcome and thank you for considering contributing to [The no-BS ZTNA vendor directory](https://zerotrustnetworkaccess.info/)!
 
 It’s people like you that will help to ensure this is a site useful resource for the community as a whole benefit from honest, impartial, and open knowledge about the vendors operating in this space. 
 
