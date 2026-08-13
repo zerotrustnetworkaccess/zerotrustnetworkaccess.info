@@ -39,7 +39,10 @@
         </ul>
       </div>
 
-      <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 mb-md-54-40">
+      <!-- Once the grid collapses, "about" fills the first row alongside
+           "community". The offsets push "learn" onto the second row under
+           "community" rather than back to the left edge under the about copy. -->
+      <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 offset-sm-6 offset-md-8 offset-lg-0 mb-md-54-40">
         {% assign learn = site.data.ztna-footer.learn %}
         <p class="footer-column-title">{{learn.title}}</p>
         <div class="space20"></div>

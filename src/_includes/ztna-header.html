@@ -1,40 +1,62 @@
 <nav
   class="navbar navbar-hover-opacity navbar-expand-lg {% if include.extra_class %} {{include.extra_class}} {% endif %} "
 >
-  <div class="d-flex mx-auto justify-content-between ztna-nav">
-  {% if include.dark_logo %}
-  <a href="{{site.baseurl}}" class="ztna-dark-logo"></a>
-  {% else %}
-  <a href="{{site.baseurl}}" class="ztna-logo"></a>
-  {% endif %}
+  <div class="d-flex mx-auto justify-content-between align-items-center ztna-nav">
+    {% if include.dark_logo %}
+    <a href="{{site.baseurl}}" class="ztna-dark-logo" aria-label="{{site.data.general_settings.title}} — home"></a>
+    {% else %}
+    <a href="{{site.baseurl}}" class="ztna-logo" aria-label="{{site.data.general_settings.title}} — home"></a>
+    {% endif %}
 
-  <div class="navbar-nav" data-sm-skip="true">
-    <li class="nav-item">
-      <div class="navbar-hamburger d-lg-none mr-20 mt-20">
-        <button class="hamburger animate plain" data-toggle="offcanvas-nav">
-          <span></span>
-        </button>
-      </div>
-    </li>
-  </div>
-
-  <div class="navbar-collapse offcanvas-nav align-self-center justify-content-end mobile-bg">
-    <div class="offcanvas-header d-lg-none">
-      <button class="plain offcanvas-close offcanvas-nav-close icon-hover white">
-        <i class="jam jam-close"></i>
-      </button>
-    </div>
-
-    <ul class="navbar-nav menu align-items-lg-center align-items-start">
+    <ul class="navbar-nav menu align-items-lg-center d-none d-lg-flex">
       {% for menu in site.data.navigation.main_menu %}
-      <li class="ztna-nav-item mr-32 mb-md-50 {% if page.url == menu.url %} active {% endif %} {% if menu.text == 'Github' and include.hide_github %} ztna-hidden {% endif %}">
-        <a class="nav-link d-flex align-items-center" href="{{menu.url}}" {% if menu.new_window %} target="_blank" {% endif %}>
-          {% if menu.icon %}{% include icons/{{menu.icon}} cls="nav-link mobile-menu-items-fill" %}{% endif %}
-          <span class="h4 {% if menu.icon %}ml-10{% endif %} text-link {% if include.dark_logo %} mobile-menu-items-color {% endif %}">{{menu.text}}</span>
+      <li class="ztna-nav-item mr-32 {% if page.url == menu.url %} active {% endif %}">
+        <a class="nav-link d-flex align-items-center" href="{{menu.url}}" {% if menu.new_window %} target="_blank" rel="noopener" {% endif %}>
+          <span class="h4 text-link">{{menu.text}}</span>
         </a>
       </li>
       {% endfor %}
     </ul>
+
+    <button
+      class="ztna-mnav__toggle d-lg-none"
+      type="button"
+      data-ztna-mnav-open
+      aria-expanded="false"
+      aria-label="Open menu"
+    >
+      <span class="ztna-mnav__bars" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </span>
+    </button>
+  </div>
+
+  <div class="ztna-mnav d-lg-none" data-ztna-mnav>
+    <div class="ztna-mnav__scrim" data-ztna-mnav-close></div>
+
+    <div class="ztna-mnav__panel" role="dialog" aria-modal="true" aria-label="Site menu">
+      <div class="ztna-mnav__head">
+        <span class="ztna-mnav__eyebrow">Menu</span>
+        <button class="ztna-mnav__close" type="button" data-ztna-mnav-close aria-label="Close menu">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false">
+            <path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+
+      <ul class="ztna-mnav__list">
+        {% for menu in site.data.navigation.main_menu %}
+        <li>
+          <a
+            class="ztna-mnav__link {% if page.url == menu.url %} is-active {% endif %}"
+            href="{{menu.url}}"
+            {% if menu.new_window %} target="_blank" rel="noopener" {% endif %}
+            {% if page.url == menu.url %} aria-current="page" {% endif %}
+          >{{menu.text}}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
   </div>
 </nav>
 <!-- /.navbar -->

@@ -73,8 +73,9 @@
   }
 
   &__count {
-    padding: 1px 10px;
-    border-radius: 18px;
+    padding: 1px 14px;
+    border-radius: 6px;
+    white-space: nowrap;
     background: $background-color;
     color: $light-text-1;
     font-family: $fontfamily-inter;

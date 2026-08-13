@@ -215,15 +215,6 @@ nodes:
     shift: "Access could be restricted or revoked as risk changed during a session."
 
   - year: "2023"
-    acronym: "NIS2"
-    title: "Cybersecurity resilience becomes a duty"
-    category: "EU regulation"
-    kind: "standard"
-    side: "left"
-    description: 'The EU''s <a href="https://eur-lex.europa.eu/eli/dir/2022/2555/oj" target="_blank" rel="noopener noreferrer">NIS2 Directive</a> required essential and important entities to adopt proportionate cybersecurity risk-management measures, including access-control policies.'
-    shift: "Secure access became part of an enforceable resilience and governance obligation across more sectors."
-
-  - year: "2023"
     acronym: "ZTMM 2"
     title: "Maturity models broaden the programme"
     category: "Implementation guidance"
@@ -241,6 +232,15 @@ nodes:
     description: '<a href="https://csrc.nist.gov/pubs/sp/800/207/a/final" target="_blank" rel="noopener noreferrer">NIST SP 800-207A</a> extended the model to application and service identities across hybrid and multi-cloud environments.'
     shift: "Workload identity joined user and device identity as a first-class signal."
 
+  - year: "2024"
+    acronym: "NIS2"
+    title: "Cybersecurity resilience becomes a duty"
+    category: "EU regulation"
+    kind: "standard"
+    side: "left"
+    description: 'The EU''s <a href="https://eur-lex.europa.eu/eli/dir/2022/2555/oj" target="_blank" rel="noopener noreferrer">NIS2 Directive</a> required essential and important entities, MSPs among them, to adopt proportionate risk-management measures, including access-control policies — though it applies only once each Member State writes it into its own law, and <a href="https://digital-strategy.ec.europa.eu/en/news/commission-calls-23-member-states-fully-transpose-nis2-directive" target="_blank" rel="noopener noreferrer">most were late</a>.'
+    shift: "Secure access became part of an enforceable resilience and governance obligation across more sectors."
+
   - era: "AI & Agentic Identity Era"
     mentality: "Autonomous agents act for users and services; identity must capture authority, delegation and intent."
 
@@ -257,10 +257,7 @@ nodes:
     tick: true
 
   - year: "2026"
-    acronym: "CONVERGE"
-    title: "Private access becomes a portfolio"
-    category: "Current state"
-    kind: "adoption"
-    side: "right"
-    description: "Organisations combine proxies, overlays, microsegmentation, PAM, posture checks and traditional controls. No single architecture fits every application, protocol or risk model."
-    shift: "The useful question is where and how trust is evaluated and enforced."
+    tick: true
+
+  - era: "Now"
+    mentality: "Proxies, overlays, microsegmentation and PAM all persist. No single architecture fits every application, protocol or risk model. If comparing them feels difficult, that's because it is."

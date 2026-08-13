@@ -23,26 +23,6 @@ nav.navbar {
   font-size: 13px;
 }
 
-.navbar-hamburger {
-  &:hover {
-    button.hamburger:before,
-    button.hamburger span,
-    button.hamburger:after {
-      background: $logo-blue !important;
-    }
-  }
-}
-
-.open {
-  .h4 {
-    color: $white !important;
-  }
-  a {
-    .text-link {
-      color: $white !important;
-    }
-  }
-}
 .ztna-nav {
   max-width: 1280px;
   width: 100%;
@@ -137,20 +117,6 @@ nav.navbar {
   width: fit-content;
 }
 
-.fly-out-bg {
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: 100%;
-}
-
-.fly-out-logo {
-  width: 57%;
-}
-
-.icon-hover:hover {
-  color: $light-blue-1;
-}
-
 // The logo keeps a fixed 258x20 at every breakpoint — only its outer margin
 // tightens on small screens so it clears the hamburger.
 @media only screen and (max-width: $breakpoint-sm) {
@@ -162,28 +128,5 @@ nav.navbar {
   }
 }
 
-@media only screen and (max-width: $breakpoint-lg) {
-  .menu {
-    margin-right: 0;
-  }
-
-  .mobile-bg {
-    background-color: $white;
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: 100%;
-    background-image: url("/assets/images/header/fly-out-back@2x.png");
-  }
-
-  .mobile-menu-items-color {
-    color: $dark-text !important;
-  }
-
-  .mobile-menu-items-fill {
-    fill: $white !important;
-  }
-
-  .offcanvas-nav {
-    background-color: $flyout-back;
-  }
-}
+// Below lg the desktop menu is hidden outright and the drawer in
+// _sass/ztna-mobile-nav.scss takes over.

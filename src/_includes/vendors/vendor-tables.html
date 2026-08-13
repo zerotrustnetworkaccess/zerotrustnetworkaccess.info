@@ -64,7 +64,7 @@
                 {{arch.name}} {% if arch.abbreviation != "" %}({{arch.abbreviation}}){% endif %}
               </h2>
               <span class="vendor-architecture-heading__separator" aria-hidden="true"></span>
-              <span class="vendor-architecture-heading__count" aria-label="{{arch.vendors.size}} vendors">{{arch.vendors.size}}</span>
+              <span class="vendor-architecture-heading__count">{{arch.vendors.size}} vendor{% unless arch.vendors.size == 1 %}s{% endunless %}</span>
             </div>
             <a href="/architectures#{{arch.filter}}" class="ztna-small-button-static white-background light-blue-1 h4">
               About this architecture &rarr;

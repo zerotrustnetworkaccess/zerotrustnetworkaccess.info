@@ -2,6 +2,11 @@
 
 $timeline-orange: #f2ad5c;
 
+// The spine stops short of the list's end and hands off to a dashed tail that
+// fades downwards, so the timeline trails off rather than stopping dead.
+$timeline-tail-height: 132px;
+$timeline-list-pad-bottom: 20px;
+
 .history-timeline {
   position: relative;
   overflow: hidden;
@@ -48,13 +53,13 @@ $timeline-orange: #f2ad5c;
     position: relative;
     max-width: 1100px;
     margin: 0 auto;
-    padding: 10px 0 20px;
+    padding: 10px 0 $timeline-list-pad-bottom;
     list-style: none;
 
     &::before {
       position: absolute;
       top: 0;
-      bottom: 0;
+      bottom: $timeline-tail-height + $timeline-list-pad-bottom;
       left: 50%;
       width: 3px;
       border-radius: 3px;
@@ -62,6 +67,33 @@ $timeline-orange: #f2ad5c;
       box-shadow: 0 0 20px rgba($light-blue-1, .38);
       content: "";
       transform: translateX(-50%);
+    }
+  }
+
+  // Picks up where the solid spine leaves off, in the gradient's closing colour.
+  &__tail {
+    position: relative;
+    height: $timeline-tail-height;
+    pointer-events: none;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 3px;
+      height: 100%;
+      border-radius: 3px;
+      background-image: repeating-linear-gradient(
+        to bottom,
+        #{$pink} 0,
+        #{$pink} 9px,
+        transparent 9px,
+        transparent 20px
+      );
+      content: "";
+      transform: translateX(-50%);
+      -webkit-mask-image: linear-gradient(to bottom, #000 0%, transparent 90%);
+      mask-image: linear-gradient(to bottom, #000 0%, transparent 90%);
     }
   }
 
@@ -222,6 +254,7 @@ $timeline-orange: #f2ad5c;
     &__header { margin-bottom: 50px; }
     &__legend { align-items: flex-start; flex-direction: column; gap: 8px; width: max-content; margin-right: auto; margin-left: auto; text-align: left; }
     &__list::before { left: 32px; transform: none; }
+    &__tail::before { left: 32px; transform: none; }
     &__era {
       justify-content: flex-start;
       width: 100%;

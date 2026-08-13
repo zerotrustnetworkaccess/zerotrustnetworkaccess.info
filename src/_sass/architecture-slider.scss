@@ -243,13 +243,54 @@
 }
 
 @media (max-width: 767px) {
+    // The folder-tab metaphor only survives as a single row: once the tabs wrap,
+    // each row draws its own baseline and the active tab's open bottom edge
+    // connects to nothing. Below md they drop the tab styling and become badges.
     .architecture-tabs__list {
         flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 40px;
+        padding: 0 20px;
+
+        &::after {
+            display: none;
+        }
     }
 
     .architecture-tabs__tab {
-        flex: 0 0 50%;
-        margin-bottom: -1px;
+        flex: 0 1 auto;
+        width: auto;
+        max-width: 100%;
+        margin-right: 0;
+        padding: 8px 14px;
+        border: 1px solid $light-text-3;
+        border-radius: 100px;
+        box-shadow: none;
+        font-size: 13px;
+        line-height: 18px;
+
+        // Base styles give non-active tabs a 3px blue underline to meet the
+        // strip's baseline; a badge has no baseline to meet.
+        &:not(.active) {
+            border-bottom: 1px solid $light-text-3;
+        }
+
+        &:not(.active):hover {
+            border-bottom-color: $light-blue-1;
+        }
+
+        &.active,
+        &.active:hover {
+            border: 1px solid $light-blue-2;
+            background-color: $light-blue-2;
+            box-shadow: none;
+            color: $white;
+        }
+
+        &.active:focus-visible {
+            box-shadow: 0 0 0 4px rgba($light-blue-1, .35);
+        }
     }
 
     .architecture-tabs__panel {

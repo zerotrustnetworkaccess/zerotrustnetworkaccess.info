@@ -1,4 +1,4 @@
-@import "ztna-breakpoionts";
+@import "ztna-breakpoints";
 
 .ztna-head-container {
   max-width: 900px;
@@ -49,6 +49,14 @@
 .ztna-landing-section-wrapper {
   padding-top: 100px;
   padding-bottom: 100px;
+}
+
+// A CTA that follows another section inherits that section's 100px of bottom
+// padding on top of its own, so the gap above the button reads bigger than the
+// one below it. Trimming the top padding to the button's own bottom margin
+// (ztna-margin-bottom-50-40) makes both gaps come out equal.
+.ztna-cta-section {
+  padding-top: 50px;
 }
 
 .homepage-wayfinding-button {
@@ -283,6 +291,10 @@ li:last-child {
   .ztna-landing-section-wrapper {
     padding-top: 70px;
     padding-bottom: 70px;
+  }
+
+  .ztna-cta-section {
+    padding-top: 40px;
   }
 
   .desktop-nist-illustration {
