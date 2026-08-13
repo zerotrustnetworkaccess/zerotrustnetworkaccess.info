@@ -73,8 +73,8 @@
   }
 
   &__count {
-    padding: 1px 14px;
-    border-radius: 6px;
+    padding: 1px 16px;
+    border-radius: 100px;
     white-space: nowrap;
     background: $background-color;
     color: $light-text-1;
@@ -95,6 +95,14 @@
   td {
     padding-right: 14px;
     padding-left: 14px;
+    font-size: 13px;
+  }
+
+  // Cell links pick up .h4 via `td a` in ztna-interface, so they carry their own
+  // font-size and will not inherit the above — the company column would stay a
+  // size larger than every other column without this.
+  td a {
+    font-size: 13px;
   }
 
   th:nth-child(n + 4),
