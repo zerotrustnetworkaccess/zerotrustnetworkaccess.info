@@ -1,0 +1,23 @@
+enable: true
+label: "Explore"
+title: "What are you looking for?"
+cards:
+  - title: "Explore Standards & Frameworks"
+    sort_order: 3
+    description: "NIST, NCSC and SASE guidance."
+    url: "/standards"
+
+  - title: "Trace the History of ZTNA"
+    sort_order: 4
+    description: "From IPsec to modern overlays."
+    url: "/history"
+
+  - title: "Compare ZTNA Architectures"
+    sort_order: 2
+    description: "Strengths, weaknesses and trade-offs."
+    url: "/architectures"
+
+  - title: "Browse the Vendor Directory"
+    sort_order: 1
+    description: "Filter vendors by architecture."
+    url: "/vendors"

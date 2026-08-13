@@ -1,0 +1,81 @@
+<div class="container-fluid background-white ztna-landing-section-wrapper d-flex justify-content-center px-0">
+  <div class="ztna-content-wrapper width-100">
+    <div class="mr-md-40-20 ml-md-40-20 mr-lg-40 ml-lg-40">
+
+      <h2 class="dark-text ztna-margin-bottom-20-10">
+        Acquisitions & Mergers ({{ site.data.market-activity.acquisitions.size }})
+      </h2>
+      <p class="light-text-1 ztna-small-text ztna-margin-bottom-20-10">
+        ZTNA vendors acquired by or merged with other companies. Most recent first.
+      </p>
+      <div class="space20"></div>
+
+      <div class="scroll-wrapper">
+        <table class="ztna-table">
+          <thead class="ztna-table-head background-color light-text-2">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Company</th>
+              <th scope="col">Acquired By</th>
+              <th scope="col">Date</th>
+              <th scope="col">Architecture</th>
+              <th scope="col">Notes</th>
+            </tr>
+          </thead>
+          <tbody class="ztna-table-body ztna-small-text dark-text">
+            {% for entry in site.data.market-activity.acquisitions %}
+            <tr>
+              <td scope="row">{{ forloop.index }}.</td>
+              <td>{{ entry.company }}</td>
+              <td>{{ entry.acquirer }}</td>
+              <td>{{ entry.date }}</td>
+              <td>{{ entry.architecture }}</td>
+              <td>{{ entry.notes }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="spacers-container">
+        <div class="mb-70-50"></div>
+        <hr class="post-divider" />
+        <div class="mb-70-50"></div>
+      </div>
+
+      <h2 class="dark-text ztna-margin-bottom-20-10">
+        Defunct & Exited ({{ site.data.market-activity.defunct.size }})
+      </h2>
+      <p class="light-text-1 ztna-small-text ztna-margin-bottom-20-10">
+        Companies or products that appear to have left the ZTNA market, been shut down, or become unreachable.
+      </p>
+      <div class="space20"></div>
+
+      <div class="scroll-wrapper">
+        <table class="ztna-table">
+          <thead class="ztna-table-head background-color light-text-2">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Company</th>
+              <th scope="col">Product</th>
+              <th scope="col">Architecture</th>
+              <th scope="col">Reason</th>
+            </tr>
+          </thead>
+          <tbody class="ztna-table-body ztna-small-text dark-text">
+            {% for entry in site.data.market-activity.defunct %}
+            <tr>
+              <td scope="row">{{ forloop.index }}.</td>
+              <td>{{ entry.company }}</td>
+              <td>{{ entry.product }}</td>
+              <td>{{ entry.architecture }}</td>
+              <td>{{ entry.reason }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</div>

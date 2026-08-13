@@ -68,4 +68,6 @@ function showTimelineItems(n) {
   timelineYears[timelineItemIndex - 1].className += " active";
 }
 
-showTimelineItems(timelineItemIndex);
+if (slides.length > 0) {
+  showTimelineItems(timelineItemIndex);
+}

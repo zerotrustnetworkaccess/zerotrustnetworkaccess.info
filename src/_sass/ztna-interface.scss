@@ -28,6 +28,33 @@ html {
   max-width: $blog-width;
 }
 
+.ztna-page-header {
+  max-width: 760px;
+  padding: 100px 20px 0;
+
+  &__eyebrow {
+    margin: 0 0 10px;
+    color: $light-text-2;
+    font-family: $fontfamily-inter;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 23px;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    margin: 0;
+    color: $dark-text;
+  }
+}
+
+@media only screen and (max-width: $breakpoint-sm) {
+  .ztna-page-header {
+    padding: 70px 20px 0;
+  }
+}
+
 .ztna-hidden {
   display: none;
 }
@@ -135,7 +162,7 @@ html {
 
 .ztna-tag-large {
   @extend .ztna-tag;
-  padding: 8px 20px;
+  padding: 14px 20px;
   width: max-content;
   &:hover {
     cursor: pointer;

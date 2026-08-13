@@ -158,6 +158,7 @@
                   <th scope="col">License</th>
                   <th scope="col">Deployment</th>
                   <th scope="col">Pricing</th>
+                  <th scope="col">Sales channel</th>
                 </tr>
               </thead>
               <tbody class="ztna-table-body ztna-small-text dark-text">
@@ -192,6 +193,7 @@
                   <td>{{vendor.license}}</td>
                   <td>{{vendor.deployment}}</td>
                   <td>{{vendor.pricing}}</td>
+                  <td>{{vendor.sales_channel | default: "Not specified"}}</td>
                 </tr>
                 {% endfor %}
               </tbody>

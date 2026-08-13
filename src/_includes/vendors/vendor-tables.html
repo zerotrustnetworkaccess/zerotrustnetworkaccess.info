@@ -1,0 +1,134 @@
+{% for architecture in site.data.architecture %}
+{% assign arch = architecture[1] %}
+{% if arch.display == true %}
+  {% for vendor in arch.vendors %}
+    {% capture vendor_count %}{{ vendor_count | plus:1 }}{% endcapture %}
+  {% endfor %}
+{% endif %}
+{% endfor %}
+
+<div class="container-fluid background-white ztna-landing-section-wrapper d-flex justify-content-center px-0" id="vendors">
+  <div class="ztna-content-wrapper width-100">
+    <div class="grid grid-view">
+
+      <div class="isotope-filter ztna-margin-bottom-40-20">
+        <div class="vendor-filter-bar pl-md-40-20 mr-lg-40 ml-lg-40">
+          <ul class="vendor-filter-bar__all">
+            <li>
+              <a class="active ztna-tag-large background-color light-text-1 h4 button" data-filter="*">
+              All Architectures ({{vendor_count}})
+              </a>
+            </li>
+          </ul>
+
+          {% assign datas = "" | split: "" %}
+          {% for architecture in site.data.architecture %}
+            {% assign datas = datas | push: architecture[1] %}
+          {% endfor %}
+
+          {% assign datas = datas | sort: "sort_order" %}
+          <ul class="vendor-filter-bar__architectures">
+            {% for arch in datas %}
+            {% if arch.display == true %}
+              <li>
+                <a class="ztna-tag-large background-color light-text-1 h4 button" data-filter="{{arch.filter}}">
+                  {{arch.name}} ({{arch.vendors.size}})
+                </a>
+              </li>
+            {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+
+        <div class="spacers-container">
+          <div class="mb-70-50"></div>
+          <hr class="post-divider" />
+          <div class="mb-70-50"></div>
+        </div>
+
+      </div>
+
+      <div class="row isotope">
+        {% for arch in datas %}
+        {% if arch.vendors %}
+        {% if arch.display == true %}
+        <div
+          class="item grid-sizer architecture-section col-12 mx-auto mb-70 pb-80 {{arch.filter}}
+          {% for filter in arch.filters %} {{filter}} {% endfor %}
+          {% if arch.displayByDeafult %} focus {% endif %}"
+        >
+          <div id="{{arch.filter}}"></div>
+          <div class="vendor-architecture-heading mr-md-40-20 ml-md-40-20 mr-lg-40 ml-lg-40 ztna-margin-bottom-40-20">
+            <div class="vendor-architecture-heading__title">
+              <h2 class="dark-text">
+                {{arch.name}} {% if arch.abbreviation != "" %}({{arch.abbreviation}}){% endif %}
+              </h2>
+              <span class="vendor-architecture-heading__separator" aria-hidden="true"></span>
+              <span class="vendor-architecture-heading__count" aria-label="{{arch.vendors.size}} vendors">{{arch.vendors.size}}</span>
+            </div>
+            <a href="/architectures#{{arch.filter}}" class="ztna-small-button-static white-background light-blue-1 h4">
+              About this architecture &rarr;
+            </a>
+          </div>
+          <div class="scroll-wrapper ml-md-40 mr-md-40 mr-lg-40 ml-lg-40">
+            <table class="ztna-table mr-sm-20 ml-sm-20">
+              <thead class="ztna-table-head background-color light-text-2">
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Company</th>
+                  <th scope="col">Product</th>
+                  <th scope="col">License</th>
+                  <th scope="col">Deployment</th>
+                  <th scope="col">Pricing</th>
+                  <th scope="col">Distribution</th>
+                </tr>
+              </thead>
+              <tbody class="ztna-table-body ztna-small-text dark-text">
+                {% assign vendors = arch.vendors | sort: 'company' %} {% for
+                vendor in vendors %}
+                <tr>
+                  <td scope="row">{{ forloop.index }}.</td>
+                  <td>
+                    {% if vendor.notes != null and vendor.notes != "" %}
+                      <a
+                        href="{{vendor.url}}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="light-blue-1 hover has-tooltip"
+                        title=""
+                        data-placement="right"
+                        data-original-title="{{vendor.notes}}">
+                          {{vendor.company}}
+                      </a>
+                    {% else %}
+                      <a
+                        href="{{vendor.url}}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="light-blue-1"
+                      >
+                      {{vendor.company}}
+                      </a>
+                    {% endif %}
+                  </td>
+                  <td>{{vendor.product}}</td>
+                  <td>{{vendor.license}}</td>
+                  <td>{{vendor.deployment}}</td>
+                  <td>{{vendor.pricing}}</td>
+                  <td>
+                    {% assign distribution = vendor.sales_channel | default: "Not specified" %}
+                    {% if distribution contains "Direct" and distribution contains "Channel" %}<span class="vendor-distribution">Direct + Channel</span>{% elsif distribution contains "Direct" %}<span class="vendor-distribution">Direct</span>{% elsif distribution contains "Channel" %}<span class="vendor-distribution vendor-distribution--channel">Channel</span>{% else %}<span class="vendor-distribution">Not specified</span>{% endif %}
+                  </td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+        {% endif %}
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>

@@ -13,6 +13,14 @@ footer {
     max-width: 258px;
   }
 
+  .footer-column-title {
+    @extend .h4;
+    color: $white;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    opacity: 0.6;
+  }
+
   a {
     @extend .h4;
     text-decoration: none;
