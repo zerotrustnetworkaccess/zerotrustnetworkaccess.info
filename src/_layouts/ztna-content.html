@@ -1,0 +1,24 @@
+---
+layout: ztna-base
+---
+
+{% include ztna-header.html container_class="container" extra_class="ztna-header-background inverse-text ztna-shadow" %}
+
+<div class="content-wrapper">
+  {% unless page.hide_page_header %}
+  <header class="ztna-page-header mx-auto text-center">
+    {% if page.title %}
+    <h1 class="ztna-page-header__eyebrow">{{ page.title }}</h1>
+    {% endif %}
+    {% if page.sub_title %}
+    <h2 class="ztna-page-header__title">{{ page.sub_title }}</h2>
+    {% endif %}
+  </header>
+  {% endunless %}
+
+  {{ content }}
+</div>
+
+{% include components/popup-success.html %}
+{% include components/popup-error.html %}
+{% include ztna-footer.html %}

@@ -24,14 +24,6 @@ vendors:
     pricing: "Not Published"
     notes: "Is it ZTNA? Unable to determine architecture (March 2022)"
 
-  - company: "Elisity"
-    product: ""
-    url: "http://www.elisity.com/"
-    license: "Commercial"
-    deployment: ""
-    pricing: "Not Published"
-    notes: "Is it ZTNA?"
-
   - company: "Fly.io"
     product: ""
     url: "https://fly.io/"

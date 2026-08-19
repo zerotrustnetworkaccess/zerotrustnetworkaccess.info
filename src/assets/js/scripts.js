@@ -186,8 +186,9 @@ $(document).ready(function () {
         .find(".isotope-filter")
         .on("click", ".button", function () {
           var filterValue = $(this).attr("data-filter");
+          var isotopeFilter = filterValue === "*" ? "*" : "." + filterValue;
           location.hash = "filter=" + encodeURIComponent(filterValue);
-          $grid.isotope({ filter: filterValue });
+          $grid.isotope({ filter: isotopeFilter });
         });
     });
     $(".isotope-filter").each(function (i, buttonGroup) {
@@ -217,7 +218,7 @@ $(document).ready(function () {
       mouseDrag: false,
       pullDrag: false,
       URLhashListener: true,
-      startPosition: 'filter=host-based-firewall',
+      startPosition: 'filter=host-based-microsegmentation',
       margin: $bslider.data("margin"),
       navContainerClass: "ztna-slider-navbuttons-wrapper",
       navClass: [
@@ -332,7 +333,7 @@ $(document).ready(function () {
       loop: true,
       responsiveRefreshRate: 200,
       URLhashListener: true,
-      startPosition: 'filter=host-based-firewall',
+      startPosition: 'filter=host-based-microsegmentation',
       navText: ['<svg width="10%" height="10%" viewBox="0 0 11 20"><path style="fill:none;stroke-width: 1px;stroke: #000;" d="M9.554,1.001l-8.607,8.607l8.607,8.606"/></svg>', '<svg width="10%" height="10%" viewBox="0 0 11 20" version="1.1"><path style="fill:none;stroke-width: 1px;stroke: #000;" d="M1.054,18.214l8.606,-8.606l-8.606,-8.607"/></svg>'],
 
     })
@@ -351,7 +352,7 @@ $(document).ready(function () {
       slideBy: 3,
       responsiveRefreshRate: 100,
       URLhashListener: true,
-      startPosition: 'filter=host-based-firewall',
+      startPosition: 'filter=host-based-microsegmentation',
       navContainerClass: "ztna-slider-navbuttons-wrapper",
       navClass: [
         "owl-prev ztna-small-button-left white-background light-blue-1 h4 ml-10",

@@ -1,40 +1,263 @@
 enable: true
-title: "Twenty-Five Years of Private Access Technology"
-subtitle: "Evolution of Private Access"
-bg_image: "/assets/images/art/bg7.jpg"
+title: "The Evolution of Private Access"
+subtitle: "From Perimeters to Identity"
+introduction: "Network transports, access architectures, identity controls and standards evolved in parallel — and most remain in use today."
+
 nodes:
+  - era: "Perimeter Era"
+    mentality: "Keep threats outside; trust the network inside."
 
   - year: "1995"
     acronym: "IPsec"
-    title: "IPSec"
-    description: IPsec traces its origins back to DARPA and NSA funded work in the last decades of the twentieth century, it continued to evolve for several years before arguably starting to enter mainstream use circa 2005 with the addition of AES and <a href="https://datatracker.ietf.org/doc/html/rfc4718">IKEv2</a>. An open protocol most commonly used to construct network connections between hosts on the public Internet in either point-to-site or site-to-site network topologies.
+    title: "IPsec standardises protected IP traffic"
+    category: "Network technology"
+    kind: "technology"
+    side: "left"
+    description: "IPsec brought authentication and encryption to the IP layer, enabling protected host-to-host and site-to-site communication across untrusted networks."
+    shift: "Private traffic could cross the public Internet without a private carrier network."
 
-  - year: "1996-98"
+  - year: "1996"
     acronym: "VPN"
-    title: "Virtual Private Network (VPN)"
-    description: 'The workhorse of private networks with two major architectures: hub-and-spoke (also known as remote access or point-to-site) and site-to-site. VPNs are constructed from a plethora of protocols (IPsec, IKEv2, L2TP, PPTP, OpenVPN, SSL/TLS VPN, Cisco AnyConnect etc.) all trying to achieve the same thing: provide a secure, private network on top of the public Internet; either by extending one logical network into another or placing remote peers directly onto the local network.'
+    title: "Remote-access VPN becomes the default"
+    category: "Access technology"
+    kind: "technology"
+    side: "left"
+    description: "PPTP, IPsec and later SSL/TLS VPNs made encrypted remote access broadly deployable. Users were commonly placed onto the private network, extending its implicit trust to remote devices."
+    shift: "The enterprise perimeter stretched to wherever an authenticated user happened to be."
+
+  - year: "1997"
+    tick: true
+
+  - year: "1998"
+    tick: true
+
+  - year: "1999"
+    tick: true
+
+  - year: "2000"
+    tick: true
+
+  - era: "Defence in Depth Era"
+    mentality: "One control will fail, so put another behind it."
 
   - year: "2001"
     acronym: "MPLS"
-    title: "Multiprotocol Label Switching (MPLS)"
-    description: First conceived in an era when bandwidth was expensive and high-speed broadband was not available widely or cheaply. <a href="https://datatracker.ietf.org/doc/html/rfc3031">MPLS</a> helped to manage delivery of traffic using labels to indicate mission critical traffic, near real-time delivery or simple best effort delivery. The fastest, and lowest latency paths were reserved for the most important traffic. By enriching each packet with labels, carrier routers had additional information to help best route traffic most efficiently across the WAN.
+    title: "MPLS reshapes the enterprise WAN"
+    category: "Network technology"
+    kind: "technology"
+    side: "left"
+    description: '<a href="https://datatracker.ietf.org/doc/html/rfc3031" target="_blank" rel="noopener noreferrer">MPLS</a> used labels to steer traffic across carrier networks with predictable routing and service quality.'
+    shift: "Private access became a managed wide-area network rather than isolated sites."
+
+  - year: "2002"
+    tick: true
 
   - year: "2003"
-    acronym: "802.1x"
-    title: "Network Access Control (NAC)"
-    description: Network Access Control (<a href="https://datatracker.ietf.org/doc/html/rfc3580">802.1x</a>) provides an authentication framework that allows for user authentication before access is granted to the network to help provide protection from rogue or unauthorized devices connecting to the LAN. 802.1x is particularly effective for flat or default-open internal networks in which lateral movement is possible, and for configurations in which devices and systems on the network had little or no endpoint protection software available.
+    acronym: "802.1X"
+    title: "Network Access Control checks devices"
+    category: "Identity control"
+    kind: "technology"
+    side: "left"
+    description: '<a href="https://datatracker.ietf.org/doc/html/rfc3580" target="_blank" rel="noopener noreferrer">802.1X</a> introduced port-based authentication. NAC products added device checks before granting access, although admission often still led to broad network reachability.'
+    shift: "Identity and device state began influencing whether a connection reached the LAN."
+
+  - year: "2004"
+    acronym: "JERICHO"
+    title: "De-perimeterisation challenges the castle"
+    category: "Security principle"
+    kind: "milestone"
+    side: "right"
+    description: "The Jericho Forum argued that cloud services, collaboration and mobile users were dissolving the enterprise boundary. Security needed to move closer to data and systems."
+    shift: "The perimeter was recognised as an unreliable basis for trust."
+
+  - year: "2005"
+    tick: true
+
+  - year: "2006"
+    tick: true
 
   - year: "2007"
     acronym: "SDP"
-    title: "Software-Defined Perimeter (SDP)"
-    description: Based on the concept of single packet authorization and port knocking before it and originally also referred to as Black Cloud, the SDP architecture evolved from work done at the Defense Information Systems Agency (DISA) under the Global Information Grid (GIG) Black Core Network initiative around 2007. Concepts of which were carried forwards by the <a href="https://en.wikipedia.org/wiki/Jericho_Forum" target="_blank">Jericho Forum</a>, and later in 2014 as part of Google's <a href="https://research.google/pubs/pub43231/" target="_blank">BeyondCorp Initiative</a>. A front-runner to align with ZTNA principles, SDP is currently the most common ZTNA vendor implementation.
+    title: "Software-Defined Perimeter hides services"
+    category: "Access architecture"
+    kind: "architecture"
+    side: "left"
+    description: "Work associated with DISA's Black Core initiative helped shape an architecture in which policy brokers authenticate access before protected services become reachable."
+    shift: "Authorisation could precede network reachability instead of following it."
+
+  - year: "2008"
+    tick: true
+
+  - year: "2009"
+    tick: true
+
+  - era: "Cloud Security Era"
+    mentality: "Security must follow users, applications and data beyond the corporate network."
+
+  - year: "2010"
+    acronym: "ZT"
+    title: "Zero Trust becomes an explicit model"
+    category: "Security model"
+    kind: "milestone"
+    side: "right"
+    description: "Zero Trust gave a name to the principle that network location should not grant implicit trust. Decisions instead consider identity, device state, context and the requested resource."
+    shift: "Trust moved from a network property to an evaluated access decision."
+
+  - year: "2011"
+    tick: true
+
+  - year: "2012"
+    tick: true
+
+  - year: "2013"
+    tick: true
+
+  - era: "Identity Era"
+    mentality: "Identity becomes the control plane for access beyond the corporate network."
+
+  - year: "2014"
+    acronym: "BeyondCorp"
+    title: "Google publishes BeyondCorp"
+    category: "Field implementation"
+    kind: "milestone"
+    side: "right"
+    description: 'Google described removing the privileged intranet and using user- and device-aware controls. <a href="https://research.google/pubs/beyondcorp-a-new-approach-to-enterprise-security/" target="_blank" rel="noopener noreferrer">BeyondCorp</a> demonstrated the model at enterprise scale.'
+    shift: "Application access no longer had to depend on a traditional VPN."
 
   - year: "2014"
     acronym: "SD-WAN"
-    title: "Software-Defined Wide Area Network (SD-WAN)"
-    description: SD-WAN solutions started to enter the market close to 2014 as an effort to bring Software Defined Networking (SDN) concepts to the WAN. Intended to achieve similar WAN optimization capabilities to MPLS for lower cost and less complexity, SD-WAN was positioned in the market as an alternative to predetermined MPLS routes on fixed circuits which were more complicated to provision in favour of policy-based routing using the open Internet.
+    title: "Software-defined policy reaches the WAN"
+    category: "Network technology"
+    kind: "technology"
+    side: "left"
+    description: "SD-WAN applied central policy and dynamic path selection to commodity Internet links, reducing dependence on fixed MPLS circuits."
+    shift: "WAN routing became software-directed, application-aware and easier to change."
+
+  - year: "2015"
+    tick: true
+
+  - year: "2016"
+    tick: true
+
+  - year: "2017"
+    tick: true
+
+  - era: "Assume Breach Era"
+    mentality: "Attackers may already be inside; limit movement and impact."
 
   - year: "2018"
-    acronym: "Overlay"
-    title: "Mesh Overlay Network"
-    description: A software-based overlay network aligned to with ZTNA principles in which devices and systems talk directly without the need for VPN servers. Entrance to the overlay network is governed by centralised policy-based management according to real-time security conditions on each endpoint. Notably, connectivity is achieved using techniques like UDP/TCP hole punching and traffic relays to operate transparently through NAT devices and not require firewalls to be opened for inbound traffic, dramatically reducing surface area available for attack.
+    acronym: "MESH"
+    title: "Mesh overlays remove the central gateway"
+    category: "Access architecture"
+    kind: "architecture"
+    side: "left"
+    description: "Identity-governed overlays established encrypted peer-to-peer paths through NAT, falling back to relays where direct connections failed."
+    shift: "Private connectivity could follow identity without backhauling every session."
+
+  - year: "2019"
+    acronym: "SASE"
+    title: "Networking and security converge at the edge"
+    category: "Architecture model"
+    kind: "architecture"
+    side: "left"
+    description: "Secure Access Service Edge brought SD-WAN and cloud-delivered security services into one model, placing policy enforcement nearer users and applications."
+    shift: "The network path and its security controls could be designed and operated as one service."
+
+  - era: "Zero Trust Era"
+    mentality: "Never trust implicitly; verify every request and limit every connection."
+
+  - year: "2020"
+    acronym: "800-207"
+    title: "NIST defines Zero Trust Architecture"
+    category: "Standard"
+    kind: "standard"
+    side: "right"
+    description: '<a href="https://www.nist.gov/publications/zero-trust-architecture" target="_blank" rel="noopener noreferrer">NIST SP 800-207</a> defined Zero Trust independently of any vendor and rejected implicit trust based on location or ownership.'
+    shift: "The industry gained a durable, vendor-neutral vocabulary and logical model."
+
+  - year: "2020"
+    acronym: "REMOTE"
+    title: "Remote work becomes the default overnight"
+    category: "Adoption catalyst"
+    kind: "adoption"
+    side: "left"
+    description: "Mass remote working exposed VPN concentration limits and brittle perimeter assumptions. ZTNA adoption accelerated as organisations needed application access from anywhere."
+    shift: "Remote access changed from an exception into a primary access pattern."
+
+  - year: "2021"
+    acronym: "EO 14028"
+    title: "Zero Trust becomes federal policy"
+    category: "Public policy"
+    kind: "standard"
+    side: "right"
+    description: 'US <a href="https://www.cisa.gov/topics/cybersecurity-best-practices/executive-order-improving-nations-cybersecurity" target="_blank" rel="noopener noreferrer">Executive Order 14028</a> directed federal agencies to plan for Zero Trust Architecture.'
+    shift: "Zero Trust became a funded transformation programme rather than an optional strategy."
+
+  - year: "2021"
+    acronym: "SSE"
+    title: "Cloud security separates from the WAN"
+    category: "Architecture model"
+    kind: "architecture"
+    side: "right"
+    description: "Security Service Edge grouped ZTNA, secure web gateways and cloud access controls as cloud-delivered security, without requiring customers to replace their WAN."
+    shift: "Organisations could modernise access and security independently of network transport."
+
+  - era: "Continuous Verification Era"
+    mentality: "A decision made at login is not good forever."
+
+  - year: "2022"
+    acronym: "RISK"
+    title: "Access decisions become continuous"
+    category: "Policy evolution"
+    kind: "technology"
+    side: "left"
+    description: "ZTNA platforms increasingly re-evaluated device posture, identity risk and session context after login instead of treating authentication as a one-time decision."
+    shift: "Access could be restricted or revoked as risk changed during a session."
+
+  - year: "2023"
+    acronym: "ZTMM 2"
+    title: "Maturity models broaden the programme"
+    category: "Implementation guidance"
+    kind: "standard"
+    side: "right"
+    description: '<a href="https://www.cisa.gov/sites/default/files/2023-04/zero_trust_maturity_model_v2_508.pdf" target="_blank" rel="noopener noreferrer">CISA''s model</a> organised progress across identity, devices, networks, applications and data.'
+    shift: "Adoption became a measured, multi-pillar capability—not a product purchase."
+
+  - year: "2023"
+    acronym: "207A"
+    title: "Zero Trust reaches cloud-native workloads"
+    category: "Cloud-native standard"
+    kind: "standard"
+    side: "right"
+    description: '<a href="https://csrc.nist.gov/pubs/sp/800/207/a/final" target="_blank" rel="noopener noreferrer">NIST SP 800-207A</a> extended the model to application and service identities across hybrid and multi-cloud environments.'
+    shift: "Workload identity joined user and device identity as a first-class signal."
+
+  - year: "2024"
+    acronym: "NIS2"
+    title: "Cybersecurity resilience becomes a duty"
+    category: "EU regulation"
+    kind: "standard"
+    side: "left"
+    description: 'The EU''s <a href="https://eur-lex.europa.eu/eli/dir/2022/2555/oj" target="_blank" rel="noopener noreferrer">NIS2 Directive</a> required essential and important entities, MSPs among them, to adopt proportionate risk-management measures, including access-control policies — though it applies only once each Member State writes it into its own law, and <a href="https://digital-strategy.ec.europa.eu/en/news/commission-calls-23-member-states-fully-transpose-nis2-directive" target="_blank" rel="noopener noreferrer">most were late</a>.'
+    shift: "Secure access became part of an enforceable resilience and governance obligation across more sectors."
+
+  - era: "AI & Agentic Identity Era"
+    mentality: "Autonomous agents act for users and services; identity must capture authority, delegation and intent."
+
+  - year: "2024"
+    acronym: "NHI"
+    title: "Non-human identities enter access policy"
+    category: "Emerging practice"
+    kind: "technology"
+    side: "right"
+    description: "Ephemeral workloads, service accounts and AI agents increased the need for short-lived credentials and policy based on workload identity rather than a human user."
+    shift: "Zero Trust policy began treating machines and autonomous agents as first-class subjects."
+
+  - year: "2025"
+    tick: true
+
+  - year: "2026"
+    tick: true
+
+  - era: "Now"
+    mentality: "Proxies, overlays, microsegmentation and PAM all persist. No single architecture fits every application, protocol or risk model. If comparing them feels difficult, that's because it is."

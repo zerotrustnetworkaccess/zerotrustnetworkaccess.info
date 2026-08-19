@@ -1,0 +1,216 @@
+acquisitions:
+  - company: "StrongDM"
+    acquirer: "Delinea"
+    date: "March 2026"
+    year: 2026
+    architecture: "PAM"
+    notes: ""
+
+  - company: "Exium"
+    acquirer: "NETGEAR"
+    date: "June 2025"
+    year: 2025
+    architecture: "Zero Trust Proxy"
+    notes: "Being integrated into NETGEAR Insight platform targeting MSPs and SMEs"
+
+  - company: "HashiCorp"
+    acquirer: "IBM"
+    date: "February 2025"
+    year: 2025
+    architecture: "SDP"
+    notes: "Boundary product continues under IBM stewardship"
+
+  - company: "Cylance (BlackBerry)"
+    acquirer: "Arctic Wolf"
+    date: "February 2025"
+    year: 2025
+    architecture: "Zero Trust Proxy"
+    notes: "CylanceGATEWAY may be discontinued or absorbed into Arctic Wolf Aurora platform"
+
+  - company: "VMware"
+    acquirer: "Broadcom"
+    date: "November 2023"
+    year: 2023
+    architecture: "SDP"
+    notes: "VMware had previously acquired Ananda Networks (Mesh Overlay) in 2022"
+
+  - company: "Absolute"
+    acquirer: "Crosspoint Capital Partners"
+    date: "August 2023"
+    year: 2023
+    architecture: "SDP"
+    notes: "PE take-private. Previously NetMotion Software."
+
+  - company: "Perimeter 81"
+    acquirer: "Check Point"
+    date: "2023"
+    year: 2023
+    architecture: "SDP"
+    notes: "Rebranded to Check Point SASE. Docs sunset July 2026."
+
+  - company: "Axis Security"
+    acquirer: "HPE"
+    date: "March 2023"
+    year: 2023
+    architecture: "Zero Trust Proxy"
+    notes: "Now Aruba Networking SSE"
+
+  - company: "Ericom Software"
+    acquirer: "Cradlepoint (Ericsson)"
+    date: "April 2023"
+    year: 2023
+    architecture: "SDP"
+    notes: "Rebranded as ZTEdge"
+
+  - company: "Citrix"
+    acquirer: "Vista Equity / Elliott"
+    date: "2022"
+    year: 2022
+    architecture: "SDP"
+    notes: "PE take-private. Merged with TIBCO to form Cloud Software Group."
+
+  - company: "Tempered Networks"
+    acquirer: "Johnson Controls"
+    date: "July 2022"
+    year: 2022
+    architecture: "IDN"
+    notes: "Airwall product"
+
+  - company: "SecureLink"
+    acquirer: "Imprivata"
+    date: "April 2022"
+    year: 2022
+    architecture: "PAM"
+    notes: "Now Imprivata Vendor Privileged Access Management"
+
+  - company: "Ananda Networks"
+    acquirer: "VMware"
+    date: "2022"
+    year: 2022
+    architecture: "Mesh Overlay"
+    notes: "VMware subsequently acquired by Broadcom in November 2023"
+
+  - company: "TransientX"
+    acquirer: "Deloitte"
+    date: "2021"
+    year: 2021
+    architecture: "SDP"
+    notes: "Absorbed into Deloitte Zero Trust Access managed service. Website defunct."
+
+  - company: "Proofpoint"
+    acquirer: "Thoma Bravo"
+    date: "August 2021"
+    year: 2021
+    architecture: "SDP"
+    notes: "PE take-private. ZTNA product appears discontinued."
+
+  - company: "Banyan Security"
+    acquirer: "SonicWall"
+    date: "2024"
+    year: 2024
+    architecture: "SDP"
+    notes: "Now Cloud Secure Edge"
+
+  - company: "Odo Security"
+    acquirer: "Check Point"
+    date: "2020"
+    year: 2020
+    architecture: "SDP"
+    notes: "Now Check Point SASE Private Access"
+
+  - company: "Pulse Secure"
+    acquirer: "Ivanti"
+    date: "2020"
+    year: 2020
+    architecture: "SDP"
+    notes: "Now Ivanti Neurons"
+
+  - company: "Fyde"
+    acquirer: "Barracuda"
+    date: "2020"
+    year: 2020
+    architecture: "SDP"
+    notes: "Now SecureEdge Access"
+
+  - company: "Forescout"
+    acquirer: "Advent International"
+    date: "2020"
+    year: 2020
+    architecture: "SDP"
+    notes: "PE take-private. NAC/device visibility platform."
+
+  - company: "Sophos"
+    acquirer: "Thoma Bravo"
+    date: "March 2020"
+    year: 2020
+    architecture: "SDP"
+    notes: "PE take-private"
+
+  - company: "Symantec Enterprise"
+    acquirer: "Broadcom"
+    date: "2019"
+    year: 2019
+    architecture: "SDP"
+    notes: "Now Broadcom Secure Access Cloud"
+
+  - company: "Duo"
+    acquirer: "Cisco"
+    date: "2018"
+    year: 2018
+    architecture: "SDP"
+    notes: "Still branded as Duo Premier under Cisco"
+
+defunct:
+  - company: "TransientX"
+    product: "TransientAccess"
+    year: 2021
+    architecture: "SDP"
+    reason: "Acquired by Deloitte in 2021. Absorbed into managed service."
+
+  - company: "Waverley Labs"
+    product: "Panther SDP"
+    year: ""
+    architecture: "SDP"
+    reason: "Open-source SDP project appears abandoned."
+
+  - company: "Zentry Security"
+    product: "Zentry Trusted Access"
+    year: ""
+    architecture: "SDP"
+    reason: "Subsidiary of Array Networks."
+
+  - company: "Infra"
+    product: "Infra"
+    year: ""
+    architecture: "SDP"
+    reason: "Commercial operations appear shut down."
+
+  - company: "Appaegis"
+    product: "Appaegis"
+    year: ""
+    architecture: "SDP"
+    reason: "Rebranded to Mammoth Cyber. Pivoted to enterprise browser; ZTNA product effectively discontinued."
+
+  - company: "Proofpoint ZTNA"
+    product: "Zero Trust Network Access"
+    year: ""
+    architecture: "SDP"
+    reason: "ZTNA product appears discontinued following Thoma Bravo acquisition."
+
+  - company: "BlackBerry CylanceGATEWAY"
+    product: "CylanceGATEWAY"
+    year: 2025
+    architecture: "Zero Trust Proxy"
+    reason: "Cylance assets sold to Arctic Wolf (February 2025). CylanceGATEWAY discontinued."
+
+  - company: "Deep Cloud Technology"
+    product: "Deep Cloud SDP"
+    year: ""
+    architecture: "SDP"
+    reason: "Only available in China. Status unclear."
+
+  - company: "Ananda Networks"
+    product: "Ananda"
+    year: 2022
+    architecture: "Mesh Overlay"
+    reason: "Acquired by VMware (2022), then Broadcom (Nov 2023). Technology transferred to Arista Networks."

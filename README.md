@@ -2,13 +2,13 @@
 
 This ZTNA vendor directory is curated and maintained by the team at [https://enclave.io](https://enclave.io/) and other contributors. We hope you find it useful.
 
-Like us, you might also be fed up with the outlandish Zero Trust marketing claims and hype coming from some vendors.
+Like us, you might also be fed up with the outlandish marketing claims and hype coming from some Zero Trust vendors.
 
-We believe Zero Trust Network Access is here to stay, and that the community as a whole benefit from honest, impartial, and open knowledge. We built this site as a technical resource to help bring engineering discourse back to the conversation and to highlight the different architectures, approaches, and options.
+We believe Zero Trust and Zero Trust Network Access are here to stay, and that the community as a whole benefits from honest, impartial, and open knowledge. We built this site as a technical resource to help bring technical discourse back into the conversation and to highlight the different options: architectures, approaches, strengths, tradeoffs, and weaknesses.
 
 # Contributing
 
-A big welcome and thank you for considering contributing to [The no-bullshit ZTNA vendor directory](https://zerotrustnetworkaccess.info/)!
+A big welcome and thank you for considering contributing to [The ZTNA vendor directory](https://zerotrustnetworkaccess.info/)!
 
 It’s people like you that will help to ensure this is a site useful resource for the community as a whole benefit from honest, impartial, and open knowledge about the vendors operating in this space. 
 

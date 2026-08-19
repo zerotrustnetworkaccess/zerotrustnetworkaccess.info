@@ -1,0 +1,37 @@
+{% assign description = site.data.general_settings.description %}
+{% assign wayfinding = site.data.landing.wayfinding %}
+<div class="container-fluid background-white ztna-landing-section-wrapper d-flex justify-content-center px-0">
+  <div class="ztna-content-wrapper">
+    <div class="mr-md-40-20 ml-md-40-20 mr-lg-40 ml-lg-40 ztna-margin-bottom-30-20">
+      <p class="h5 light-text-2">About this site</p>
+      <div class="space10"></div>
+      <h2 class="dark-text">Zero Trust Network Access</h2>
+    </div>
+
+    <div class="row mr-md-40-20 ml-md-40-20 mr-lg-40 ml-lg-40">
+      <div class="col-lg-7 col-md-12 pl-0 pr-lg-40 ztna-margin-bottom-30-20">
+        {% for content in description %}
+        <p class="ztna-small-text light-text-1">{{ content.text }}</p>
+        <div class="space20"></div>
+        {% endfor %}
+      </div>
+
+      {% if wayfinding.enable %}
+      <nav class="col-lg-5 col-md-12 d-flex flex-column align-items-stretch" aria-label="Explore this site">
+        {% assign wayfinding_cards = wayfinding.cards | sort: "sort_order" %}
+        {% for card in wayfinding_cards %}
+        <a href="{{ card.url }}" class="ztna-tag-large homepage-wayfinding-button background-color light-text-1 mb-20">
+          <span class="homepage-wayfinding-button__content">
+            <span class="d-block h4">{{ card.title }}</span>
+            <span class="d-block ztna-small-text">{{ card.description }}</span>
+          </span>
+          <span class="homepage-wayfinding-button__arrow" aria-hidden="true">
+            {% include icons/button-right-arrow.svg cls="homepage-wayfinding-button__arrow-fill" %}
+          </span>
+        </a>
+        {% endfor %}
+      </nav>
+      {% endif %}
+    </div>
+  </div>
+</div>

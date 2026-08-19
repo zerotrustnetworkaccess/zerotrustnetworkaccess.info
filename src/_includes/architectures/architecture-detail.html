@@ -1,0 +1,180 @@
+{% assign datas = "" | split: "" %}
+{% for architecture in site.data.architecture %}
+  {% assign datas = datas | push: architecture[1] %}
+{% endfor %}
+{% assign datas = datas | sort: "sort_order" %}
+
+<div class="container-fluid background-white ztna-landing-section-wrapper d-flex justify-content-center px-0">
+  <div class="ztna-content-wrapper width-100 architecture-tabs" data-architecture-tabs>
+    <div class="architecture-tabs__list" role="tablist" aria-label="ZTNA architectures">
+      {% assign first_tab = true %}
+      {% for arch in datas %}
+      {% if arch.display == true %}
+      <a href="#{{arch.filter}}"
+         id="{{arch.filter}}-tab"
+         class="architecture-tabs__tab ztna-tag-large background-color light-text-1 h4{% if first_tab %} active{% endif %}"
+         role="tab"
+         aria-controls="{{arch.filter}}"
+         aria-selected="{% if first_tab %}true{% else %}false{% endif %}"
+         tabindex="{% if first_tab %}0{% else %}-1{% endif %}">
+        {{arch.name}}{% if arch.abbreviation != "" %} ({{arch.abbreviation}}){% endif %}
+      </a>
+      {% assign first_tab = false %}
+      {% endif %}
+      {% endfor %}
+    </div>
+
+    {% assign first_panel = true %}
+    {% for arch in datas %}
+    {% if arch.display == true %}
+    <section id="{{arch.filter}}"
+             class="architecture-tabs__panel{% if first_panel %} active{% endif %}"
+             role="tabpanel"
+             aria-labelledby="{{arch.filter}}-tab"
+             {% unless first_panel %}hidden{% endunless %}>
+      <div class="row align-items-start">
+        <div class="col-lg-5 col-md-12">
+          <h3 class="architecture-tabs__heading dark-text ztna-margin-bottom-20-10">
+            {{arch.name}} {% if arch.abbreviation != "" %}({{arch.abbreviation}}){% endif %}
+          </h3>
+          {% for paragraph in arch.paragraphs %}
+          <p class="ztna-small-text light-text-1">{{paragraph.text}}</p>
+          <div class="space20"></div>
+          {% endfor %}
+        </div>
+        <div class="col-lg-7 col-md-12">
+          {% if arch.image %}
+          <figure class="ztna-slider-image architecture-tabs__image mb-30">
+            <div class="item-detailed-image">
+              <button type="button"
+                      class="architecture-tabs__image-trigger"
+                      data-architecture-image="{% if arch.image_2x %}{{arch.image_2x}}{% else %}{{arch.image}}{% endif %}"
+                      data-architecture-image-alt="{{arch.name}} architecture diagram"
+                      aria-label="Enlarge {{arch.name}} architecture diagram">
+                <img src="{{arch.image}}"
+                     {% if arch.image_2x %}srcset="{{arch.image}} 1x, {{arch.image_2x}} 2x"{% endif %}
+                     alt="{{arch.name}} architecture diagram" />
+                <span class="architecture-tabs__zoom-icon" aria-hidden="true"></span>
+              </button>
+            </div>
+          </figure>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="row architecture-tabs__attributes">
+        <div class="col-lg-4 col-md-12">
+          {% if arch.strengths %}
+          <h3 class="dark-text ztna-margin-bottom-20-10">Strengths</h3>
+          <ul class="icon-list bullet-green mb-0">
+            {% for item in arch.strengths %}
+            <li class="ztna-small-text light-text-1"><i class="jam jam-check"></i>{% if item.description != null and item.description != "" %}<span class="hover has-tooltip" title="" data-placement="right" data-original-title="{{item.description}}">{{item.title}}</span>{% else %}{{item.title}}{% endif %}</li>
+            <div class="space5"></div>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </div>
+        <div class="col-lg-4 col-md-12">
+          {% if arch.weaknesses %}
+          <h3 class="dark-text ztna-margin-bottom-20-10">Weaknesses</h3>
+          <ul class="icon-list bullet-red mb-0">
+            {% for item in arch.weaknesses %}
+            <li class="ztna-small-text light-text-1"><i class="jam jam-minus-circle"></i>{% if item.description != null and item.description != "" %}<span class="hover has-tooltip" title="" data-placement="right" data-original-title="{{item.description}}">{{item.title}}</span>{% else %}{{item.title}}{% endif %}</li>
+            <div class="space5"></div>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </div>
+        <div class="col-lg-4 col-md-12">
+          {% if arch.tradeoffs %}
+          <h3 class="dark-text ztna-margin-bottom-20-10">Trade-offs</h3>
+          <ul class="icon-list bullet-blue mb-0">
+            {% for item in arch.tradeoffs %}
+            <li class="ztna-small-text light-text-1"><i class="jam jam-star"></i>{% if item.description != null and item.description != "" %}<span class="hover has-tooltip" title="" data-placement="right" data-original-title="{{item.description}}">{{item.title}}</span>{% else %}{{item.title}}{% endif %}</li>
+            <div class="space5"></div>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="space40"></div>
+      <a href="/vendors#filter={{arch.filter}}" class="ztna-button light-blue-background-1 white h4">View {{arch.name}} vendors</a>
+    </section>
+    {% assign first_panel = false %}
+    {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+<dialog class="architecture-image-modal" data-architecture-image-modal aria-label="Enlarged architecture diagram">
+  <button type="button" class="architecture-image-modal__close" data-architecture-image-close aria-label="Close enlarged diagram"><span aria-hidden="true">&times;</span></button>
+  <img class="architecture-image-modal__image" data-architecture-modal-image src="" alt="" />
+</dialog>
+
+<script>
+(function () {
+  var root = document.querySelector('[data-architecture-tabs]');
+  if (!root) return;
+  var tabs = Array.prototype.slice.call(root.querySelectorAll('[role="tab"]'));
+  var panels = Array.prototype.slice.call(root.querySelectorAll('[role="tabpanel"]'));
+
+  function activate(tab, updateHash) {
+    tabs.forEach(function (item) {
+      var selected = item === tab;
+      item.classList.toggle('active', selected);
+      item.setAttribute('aria-selected', selected ? 'true' : 'false');
+      item.setAttribute('tabindex', selected ? '0' : '-1');
+    });
+    panels.forEach(function (panel) {
+      var selected = panel.id === tab.getAttribute('aria-controls');
+      panel.hidden = !selected;
+      panel.classList.toggle('active', selected);
+    });
+    if (updateHash) history.replaceState(null, '', tab.getAttribute('href'));
+  }
+
+  tabs.forEach(function (tab, index) {
+    tab.addEventListener('click', function (event) {
+      event.preventDefault();
+      activate(tab, true);
+    });
+    tab.addEventListener('keydown', function (event) {
+      if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+      event.preventDefault();
+      var direction = event.key === 'ArrowRight' ? 1 : -1;
+      var next = tabs[(index + direction + tabs.length) % tabs.length];
+      activate(next, true);
+      next.focus();
+    });
+  });
+
+  var hashTab = tabs.filter(function (tab) {
+    return tab.getAttribute('href') === window.location.hash;
+  })[0];
+  if (hashTab) activate(hashTab, false);
+
+  var imageModal = document.querySelector('[data-architecture-image-modal]');
+  var modalImage = imageModal && imageModal.querySelector('[data-architecture-modal-image]');
+  var closeImageModal = imageModal && imageModal.querySelector('[data-architecture-image-close]');
+
+  root.querySelectorAll('[data-architecture-image]').forEach(function (trigger) {
+    trigger.addEventListener('click', function () {
+      modalImage.src = trigger.getAttribute('data-architecture-image');
+      modalImage.alt = trigger.getAttribute('data-architecture-image-alt');
+      imageModal.showModal();
+    });
+  });
+
+  if (imageModal) {
+    closeImageModal.addEventListener('click', function () { imageModal.close(); });
+    imageModal.addEventListener('click', function (event) {
+      if (event.target === imageModal) imageModal.close();
+    });
+    imageModal.addEventListener('close', function () {
+      modalImage.src = '';
+      modalImage.alt = '';
+    });
+  }
+}());
+</script>

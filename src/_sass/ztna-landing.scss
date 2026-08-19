@@ -1,4 +1,4 @@
-@import "ztna-breakpoionts";
+@import "ztna-breakpoints";
 
 .ztna-head-container {
   max-width: 900px;
@@ -49,6 +49,70 @@
 .ztna-landing-section-wrapper {
   padding-top: 100px;
   padding-bottom: 100px;
+}
+
+// A CTA that follows another section inherits that section's 100px of bottom
+// padding on top of its own, so the gap above the button reads bigger than the
+// one below it. Trimming the top padding to the button's own bottom margin
+// (ztna-margin-bottom-50-40) makes both gaps come out equal.
+.ztna-cta-section {
+  padding-top: 50px;
+}
+
+.homepage-wayfinding-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100% !important;
+  padding: 16px 20px;
+  text-align: left;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2px;
+  }
+
+  .h4,
+  .ztna-small-text {
+    width: 100%;
+    color: inherit;
+    text-align: left;
+  }
+
+  .h4 {
+    font-weight: 600;
+  }
+
+  &__arrow {
+    flex: 0 0 auto;
+    margin-left: 20px;
+    line-height: 0;
+    transition: transform 150ms ease-in-out;
+  }
+
+  &__arrow-fill {
+    fill: $light-text-1;
+    transition: fill 150ms ease-in-out;
+  }
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    color: $light-blue-1;
+    background-color: $white;
+    box-shadow: 0 0 0 4px rgba($light-blue-1, .5);
+    text-decoration: none;
+
+    .homepage-wayfinding-button__arrow {
+      transform: translateX(5px);
+    }
+
+    .homepage-wayfinding-button__arrow-fill {
+      fill: $light-blue-1;
+    }
+  }
 }
 
 .ztna-num-label-wrapper {
@@ -227,6 +291,10 @@ li:last-child {
   .ztna-landing-section-wrapper {
     padding-top: 70px;
     padding-bottom: 70px;
+  }
+
+  .ztna-cta-section {
+    padding-top: 40px;
   }
 
   .desktop-nist-illustration {

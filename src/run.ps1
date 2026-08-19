@@ -1,2 +1,2 @@
 docker build -t ztna-microsite .
-docker run --rm -it -p 8080:8080 -v ${PWD}:/home ztna-microsite
+docker run --rm -p 4000:4000 ztna-microsite

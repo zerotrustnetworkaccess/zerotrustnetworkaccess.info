@@ -4,3 +4,144 @@
     @extend .white;
   }
 }
+
+.vendor-filter-bar {
+  display: flex;
+  align-items: stretch;
+  gap: 16px;
+
+  ul {
+    margin: 0;
+  }
+
+  &__all {
+    flex: 0 0 auto;
+  }
+
+  &__architectures {
+    position: relative;
+    display: flex;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 10px;
+    min-width: 0;
+    padding-left: 16px !important;
+
+    &::before {
+      position: absolute;
+      top: -8px;
+      bottom: -8px;
+      left: 0;
+      width: 1px;
+      background: linear-gradient(
+        to bottom,
+        rgba($light-text-1, 0),
+        rgba($light-text-1, .14) 24%,
+        rgba($light-text-1, .14) 76%,
+        rgba($light-text-1, 0)
+      );
+      content: "";
+    }
+  }
+}
+
+.vendor-architecture-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  &__title {
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    min-width: 0;
+  }
+
+  h2 {
+    flex: 0 1 auto;
+  }
+
+  &__separator {
+    flex: 0 0 18px;
+    width: 18px;
+    height: 1px;
+    background: rgba($light-text-2, .45);
+  }
+
+  &__count {
+    padding: 1px 16px;
+    border-radius: 100px;
+    white-space: nowrap;
+    background: $background-color;
+    color: $light-text-1;
+    font-family: $fontfamily-inter;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 30px;
+  }
+
+  .ztna-small-button-static {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+}
+
+.isotope .ztna-table {
+  th,
+  td {
+    padding-right: 14px;
+    padding-left: 14px;
+    font-size: 13px;
+  }
+
+  // Cell links pick up .h4 via `td a` in ztna-interface, so they carry their own
+  // font-size and will not inherit the above — the company column would stay a
+  // size larger than every other column without this.
+  td a {
+    font-size: 13px;
+  }
+
+  th:nth-child(n + 4),
+  td:nth-child(n + 4) {
+    white-space: nowrap;
+  }
+
+  // Prevent the final column absorbing spare table width; with nowrap, 1% makes
+  // it shrink to its longest value so right-aligned "Channel" stays in position.
+  th:nth-child(7),
+  td:nth-child(7) {
+    width: 1%;
+  }
+}
+
+.vendor-distribution {
+  display: block;
+  width: 100%;
+
+  &--channel {
+    text-align: right;
+  }
+}
+
+@media (max-width: 575px) {
+  .vendor-filter-bar {
+    gap: 10px;
+
+    &__architectures {
+      gap: 8px;
+      padding-left: 10px !important;
+    }
+  }
+
+  .vendor-architecture-heading {
+    align-items: flex-start;
+    flex-direction: column;
+
+    &__title { gap: 7px; }
+    &__count { font-size: 18px; line-height: 24px; }
+  }
+}
