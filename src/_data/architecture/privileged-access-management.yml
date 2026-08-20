@@ -105,7 +105,7 @@ vendors:
     deployment: "SaaS + Self-hosted"
     pricing: "Not Published"
     sales_channel: "Direct + Channel"
-    notes: "Identity-based zero trust with MFA everywhere, service account protection."
+    notes: ""
 
   - company: "Okta"
     product: "Okta Privileged Access"

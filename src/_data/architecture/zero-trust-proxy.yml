@@ -125,7 +125,7 @@ vendors:
     deployment: "SaaS or On-premises"
     pricing: "Not Published"
     sales_channel: "Direct + Channel"
-    notes: "Built on Genians NAC with Layer 2/3 network enforcement. Supports on-premises, cloud-managed, and hybrid deployment."
+    notes: ""
 
   - company: "iboss"
     product: "iboss"
@@ -161,7 +161,7 @@ vendors:
     deployment: "SaaS"
     pricing: "Published"
     sales_channel: "Direct + Channel"
-    notes: "Acquired by NETGEAR, completed June 2025. Being integrated into NETGEAR Insight platform targeting MSPs and SMEs."
+    notes: "Acquired by NETGEAR, completed June 2025. Being integrated into NETGEAR Insight platform."
 
   - company: "Palo Alto"
     product: "Prisma Access"
@@ -179,4 +179,4 @@ vendors:
     deployment: "SaaS"
     pricing: "Not Published"
     sales_channel: "Direct + Channel"
-    notes: "Brokered ZTNA model using outbound connector-to-broker connectivity; also part of Jimber SASE."
+    notes: ""

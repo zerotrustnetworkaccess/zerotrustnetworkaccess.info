@@ -116,8 +116,8 @@
                   <td>{{vendor.deployment}}</td>
                   <td>{{vendor.pricing}}</td>
                   <td>
-                    {% assign distribution = vendor.sales_channel | default: "Not specified" %}
-                    {% if distribution contains "Direct" and distribution contains "Channel" %}<span class="vendor-distribution">Direct + Channel</span>{% elsif distribution contains "Direct" %}<span class="vendor-distribution">Direct</span>{% elsif distribution contains "Channel" %}<span class="vendor-distribution vendor-distribution--channel">Channel</span>{% else %}<span class="vendor-distribution">Not specified</span>{% endif %}
+                    {% assign distribution = vendor.sales_channel | default: "" %}
+                    {% if distribution contains "Direct" and distribution contains "Channel" %}<span class="vendor-distribution">Direct + Channel</span>{% elsif distribution contains "Direct" %}<span class="vendor-distribution">Direct</span>{% elsif distribution contains "Channel" %}<span class="vendor-distribution vendor-distribution--channel">Channel</span>{% endif %}
                   </td>
                 </tr>
                 {% endfor %}

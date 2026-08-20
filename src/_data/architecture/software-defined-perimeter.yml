@@ -107,7 +107,7 @@ vendors:
     deployment: "Self-hosted"
     pricing: "Published"
     sales_channel: "Channel only"
-    notes: "Does not use Single Packet Authorization (SPA) to hide the access proxies from the public Internet"
+    notes: ""
 
   - company: "Netskope"
     product: "Netskope One Private Access"
@@ -170,7 +170,7 @@ vendors:
     deployment: "SaaS"
     pricing: "Not Published"
     sales_channel: "Direct + Channel"
-    notes: "Acquired by Advent International in 2020. NAC/device visibility platform; partners with Netskope for ZTNA."
+    notes: "Acquired by Advent International in 2020."
 
   - company: "Google"
     product: "BeyondCorp Enterprise"
@@ -224,7 +224,7 @@ vendors:
     deployment: "SaaS"
     pricing: "Not Published"
     sales_channel: "Direct + Channel"
-    notes: "ZTNA as a Service. Previously Vidder Precision Access."
+    notes: "Previously Vidder Precision Access."
 
   - company: "Ericom Software"
     product: "ZTEdge"
@@ -251,7 +251,7 @@ vendors:
     deployment: "SaaS or Self-hosted"
     pricing: "Not Published"
     sales_channel: "Channel only"
-    notes: "Part of VersaONE Universal SASE platform."
+    notes: ""
 
   - company: "Sophos"
     product: "Sophos ZTNA"
@@ -350,4 +350,4 @@ vendors:
     deployment: "SaaS"
     pricing: "Not Published"
     sales_channel: "Direct + Channel"
-    notes: "Spanish hosted headscale control plane, based on WireGuard"
+    notes: ""

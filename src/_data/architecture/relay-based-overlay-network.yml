@@ -87,7 +87,7 @@ vendors:
     deployment: "SaaS or Self-hosted"
     pricing: "Not Published"
     sales_channel: "Direct + Channel"
-    notes: "Strong government/DoD focus with multiple federal procurement vehicles."
+    notes: ""
 
   - company: "NetFoundry"
     product: "NetFoundry Platform (& OpenZiti)"

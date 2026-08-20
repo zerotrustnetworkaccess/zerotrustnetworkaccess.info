@@ -122,7 +122,7 @@ vendors:
     license: "Open Source"
     deployment: "Self-hosted"
     pricing: "n/a"
-    sales_channel: "n/a"
+    sales_channel: ""
     notes: ""
 
   - company: "Gravitl"
@@ -186,7 +186,7 @@ vendors:
     deployment: "SaaS or Self-hosted"
     pricing: "Not Published"
     sales_channel: "Channel only"
-    notes: "German company (Karlsruhe)"
+    notes: ""
 
   - company: "Fossorial"
     product: "Pangolin"
@@ -195,7 +195,7 @@ vendors:
     deployment: "SaaS or Self-hosted"
     pricing: "Published"
     sales_channel: "Direct only"
-    notes: "Private resources use WireGuard peer-to-peer tunnels between clients and sites; public resources also provide identity-aware reverse proxy access."
+    notes: ""
 
   - company: "Bowtie Works, Inc."
     product: "Bowtie"
@@ -204,7 +204,7 @@ vendors:
     deployment: "Self-hosted"
     pricing: "Published"
     sales_channel: "Direct only"
-    notes: "WireGuard-based mesh overlay. Formerly listed under SDP."
+    notes: ""
 
   - company: "Intrusion Inc"
     product: "Shield Endpoint"
@@ -213,5 +213,5 @@ vendors:
     deployment: "SaaS"
     pricing: "Not Published"
     sales_channel: "Direct + Channel"
-    notes: "Peer-to-peer encrypted network overlay. Formerly listed under Relay-Based Overlay."
+    notes: ""
 

@@ -11,7 +11,7 @@ acquisitions:
     date: "June 2025"
     year: 2025
     architecture: "Zero Trust Proxy"
-    notes: "Being integrated into NETGEAR Insight platform targeting MSPs and SMEs"
+    notes: "Being integrated into NETGEAR Insight platform"
 
   - company: "HashiCorp"
     acquirer: "IBM"
@@ -137,7 +137,7 @@ acquisitions:
     date: "2020"
     year: 2020
     architecture: "SDP"
-    notes: "PE take-private. NAC/device visibility platform."
+    notes: "PE take-private."
 
   - company: "Sophos"
     acquirer: "Thoma Bravo"
