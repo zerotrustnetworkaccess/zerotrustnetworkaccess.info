@@ -23,7 +23,8 @@
             </tr>
           </thead>
           <tbody class="ztna-table-body ztna-small-text dark-text">
-            {% for entry in site.data.market-activity.acquisitions %}
+            {% assign acquisitions = site.data.market-activity.acquisitions | sort: "sort_date" | reverse %}
+            {% for entry in acquisitions %}
             <tr>
               <td scope="row">{{ forloop.index }}.</td>
               <td>{{ entry.company }}</td>
