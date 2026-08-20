@@ -170,15 +170,6 @@ vendors:
     sales_channel: "Direct + Channel"
     notes: ""
 
-  - company: "webmeshproj/webmesh"
-    product: "Webmesh"
-    url: "https://webmeshproj.github.io/"
-    license: "Open Source"
-    deployment: "Self-hosted"
-    pricing: "n/a"
-    sales_channel: "Direct only"
-    notes: "Inactive since December 2023."
-
   - company: "XplicitTrust"
     product: "XplicitTrust"
     url: "https://xplicittrust.com/en/product"

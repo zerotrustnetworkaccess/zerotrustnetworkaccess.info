@@ -214,3 +214,9 @@ defunct:
     year: 2022
     architecture: "Mesh Overlay"
     reason: "Acquired by VMware (2022), then Broadcom (Nov 2023). Technology transferred to Arista Networks."
+
+  - company: "webmeshproj/webmesh"
+    product: "Webmesh"
+    year: 2023
+    architecture: "Mesh Overlay"
+    reason: "Open-source project inactive since December 2023."
