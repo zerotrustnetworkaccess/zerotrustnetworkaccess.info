@@ -114,7 +114,7 @@ vendors:
     deployment: "SaaS or Self-hosted"
     pricing: "Published"
     sales_channel: "Direct + Channel"
-    notes: "Formerly Wiretrustee"
+    notes: ""
 
   - company: "juanfont/headscale"
     product: "Headscale"
