@@ -23,3 +23,11 @@ vendors:
     deployment: ""
     pricing: "" 
     notes: "https://openvpn.net/for/zero-trust/"
+
+  - company: "GoTo"
+    product: "Hamachi"
+    url: "https://www.vpn.net/"
+    license: "Commercial"
+    deployment: ""
+    pricing: "Published"
+    notes: "Formerly LogMeIn Hamachi"

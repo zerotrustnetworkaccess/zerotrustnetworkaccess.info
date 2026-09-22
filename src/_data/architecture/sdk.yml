@@ -16,3 +16,12 @@ tradeoffs:
   - title: ""
     description: ""
 vendors: 
+
+  - company: "Blue Cedar"
+    product: "Blue Cedar Connect"
+    url: "https://www.bluecedar.com/connect"
+    license: "Commercial"
+    deployment: ""
+    pricing: ""
+    sales_channel: ""
+    notes: ""

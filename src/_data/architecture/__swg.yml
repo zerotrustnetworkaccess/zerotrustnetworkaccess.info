@@ -16,3 +16,11 @@ tradeoffs:
   - title: ""
     description: ""
 vendors: 
+
+  - company: "Cloudflare"
+    product: "Gateway"
+    url: "https://www.cloudflare.com/products/gateway/"
+    license: "Commercial"
+    deployment: "SaaS"
+    pricing: "Published"
+    notes: "Distinct product from Cloudflare Access, listed under Zero Trust Proxy"

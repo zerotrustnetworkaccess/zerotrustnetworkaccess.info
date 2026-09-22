@@ -31,3 +31,11 @@ vendors:
     deployment: "SaaS"
     pricing: "Not Published"
     notes: ""
+
+  - company: "Dexter Edward"
+    product: "Fognigma"
+    url: "https://dexteredward.com/"
+    license: "Commercial"
+    deployment: ""
+    pricing: "Not Published"
+    notes: ""

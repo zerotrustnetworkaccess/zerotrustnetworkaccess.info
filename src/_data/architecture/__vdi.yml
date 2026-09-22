@@ -23,3 +23,11 @@ vendors:
     deployment: "SaaS"
     pricing: "Published"
     notes: "VDI, own category, doesn't make ZTNA claims. Not listing for now (March 2022)"
+
+  - company: "Workspot"
+    product: "Workspot Enterprise VDI Platform"
+    url: "https://www.workspot.com/"
+    license: "Commercial"
+    deployment: "SaaS"
+    pricing: ""
+    notes: "VDI, own category, doesn't make ZTNA claims"

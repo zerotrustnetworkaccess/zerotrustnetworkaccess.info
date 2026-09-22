@@ -16,3 +16,27 @@ tradeoffs:
   - title: ""
     description: ""
 vendors: 
+
+  - company: "Megaport"
+    product: "Megaport"
+    url: "https://www.megaport.com/"
+    license: "Commercial"
+    deployment: ""
+    pricing: "Published"
+    notes: ""
+
+  - company: "Weaveworks"
+    product: "Weave Net"
+    url: "https://github.com/weaveworks/weave"
+    license: "Open Source"
+    deployment: "Self-hosted"
+    pricing: ""
+    notes: "Weaveworks ceased operations in February 2024; repo archived June 2024"
+
+  - company: "Aviatrix"
+    product: "Aviatrix Cloud Native Security Fabric"
+    url: "https://aviatrix.com/"
+    license: "Commercial"
+    deployment: ""
+    pricing: ""
+    notes: ""

@@ -21,3 +21,11 @@ tradeoffs:
     description: ""
 
 vendors: 
+
+  - company: "Juniper Networks"
+    product: "Mist Access Assurance"
+    url: "https://www.juniper.net/us/en/products/security/mist-access-assurance.html"
+    license: "Commercial"
+    deployment: ""
+    pricing: ""
+    notes: "Formerly WiteSand, acquired by Juniper Networks in 2022"

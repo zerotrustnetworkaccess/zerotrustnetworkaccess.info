@@ -206,3 +206,21 @@ vendors:
     sales_channel: "Direct + Channel"
     notes: ""
 
+
+  - company: "Remote.It"
+    product: "Remote.It"
+    url: "https://www.remote.it/"
+    license: "Commercial"
+    deployment: ""
+    pricing: ""
+    sales_channel: ""
+    notes: ""
+
+  - company: "KnectIQ"
+    product: "SelectiveTRUST"
+    url: "https://www.knectiq.com/"
+    license: "Commercial"
+    deployment: ""
+    pricing: ""
+    sales_channel: ""
+    notes: ""

@@ -24,3 +24,11 @@ vendors:
     deployment: "Self-hosted"
     pricing: "Not Published"
     notes: ""
+
+  - company: "Traefik"
+    product: "Traefik Mesh"
+    url: "https://doc.traefik.io/traefik-mesh/"
+    license: "Open Source"
+    deployment: ""
+    pricing: "Not Published"
+    notes: "Unmaintained since 2022"
