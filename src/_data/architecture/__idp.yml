@@ -25,6 +25,7 @@ vendors:
   - company: "Juniper Networks"
     product: "Mist Access Assurance"
     url: "https://www.juniper.net/us/en/products/security/mist-access-assurance.html"
+    country: "US"
     license: "Commercial"
     deployment: ""
     pricing: ""

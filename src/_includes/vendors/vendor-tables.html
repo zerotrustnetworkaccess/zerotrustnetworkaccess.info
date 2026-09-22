@@ -89,6 +89,19 @@
                 <tr>
                   <td scope="row">{{ forloop.index }}.</td>
                   <td>
+                    {% assign country = site.data.countries[vendor.country] %}
+                    <span class="vendor-flag-slot">
+                      {%- if country -%}
+                        <img
+                          class="vendor-flag"
+                          src="/assets/images/flags/{{ vendor.country | downcase }}.svg"
+                          width="20"
+                          height="15"
+                          loading="lazy"
+                          alt="{{ country }}"
+                          title="{{ country }}" />
+                      {%- endif -%}
+                    </span>
                     {% if vendor.notes != null and vendor.notes != "" %}
                       <a
                         href="{{vendor.url}}"

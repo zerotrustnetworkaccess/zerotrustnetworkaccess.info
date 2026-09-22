@@ -20,6 +20,7 @@ vendors:
   - company: "Blue Cedar"
     product: "Blue Cedar Connect"
     url: "https://www.bluecedar.com/connect"
+    country: "US"
     license: "Commercial"
     deployment: ""
     pricing: ""

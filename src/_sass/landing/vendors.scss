@@ -105,6 +105,30 @@
     font-size: 13px;
   }
 
+  // The number is a row marker, not a column of data, so Company is pulled in
+  // tight against it and the two read as one unit. The fixed width is what
+  // holds Company's text on the same x in every table: left to size itself,
+  // this column is narrower in a one-vendor table than in the 40-row SDP one.
+  th:nth-child(1),
+  td:nth-child(1) {
+    width: 38px;
+    padding-right: 0;
+    white-space: nowrap;
+  }
+
+  // The head's first cell sets its own padding in .ztna-table-head, at a higher
+  // specificity than the rule above, so "#" needs it restated to sit over the
+  // numbers rather than 6px to their right.
+  .ztna-table-head th:nth-child(1) {
+    padding-right: 0;
+    padding-left: 14px;
+  }
+
+  th:nth-child(2),
+  td:nth-child(2) {
+    padding-left: 0;
+  }
+
   th:nth-child(n + 4),
   td:nth-child(n + 4) {
     white-space: nowrap;
@@ -125,6 +149,23 @@
   &--channel {
     text-align: right;
   }
+}
+
+// The slot is always rendered, even for a vendor with no country, so company
+// names stay on a single left edge while the country data is filled in.
+.vendor-flag-slot {
+  display: inline-block;
+  width: 20px;
+  margin-right: 8px;
+  text-align: center;
+  vertical-align: baseline;
+}
+
+.vendor-flag {
+  width: 16px;
+  height: 14px;
+  // Nudged below the baseline so the flag sits optically level with the text
+  vertical-align: -2px;
 }
 
 @media (max-width: 575px) {

@@ -20,6 +20,7 @@ vendors:
   - company: "Cloudflare"
     product: "Gateway"
     url: "https://www.cloudflare.com/products/gateway/"
+    country: "US"
     license: "Commercial"
     deployment: "SaaS"
     pricing: "Published"

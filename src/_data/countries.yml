@@ -1,0 +1,33 @@
+# ISO 3166-1 alpha-2 code -> country name, used for the flag shown against each
+# vendor's company name.
+#
+# This file is the switch that turns a flag on. A vendor's `country:` only
+# renders once its code is listed here, so a code with no matching flag asset
+# degrades to no flag rather than a broken image. When adding a country, add
+# the matching 4:3 SVG to /assets/images/flags/<code lowercased>.svg at the
+# same time.
+#
+# Quote any code YAML would read as a boolean — "NO" (Norway) becomes false
+# unquoted, and the lookup then silently misses. All keys are quoted here so
+# that trap cannot be reintroduced by copying a neighbouring line.
+
+"AU": "Australia"
+"BE": "Belgium"
+"CA": "Canada"
+"CH": "Switzerland"
+"CN": "China"
+"CZ": "Czechia"
+"DE": "Germany"
+"DK": "Denmark"
+"ES": "Spain"
+"FR": "France"
+"GB": "United Kingdom"
+"IE": "Ireland"
+"IL": "Israel"
+"IN": "India"
+"IT": "Italy"
+"KR": "South Korea"
+"NL": "Netherlands"
+"PA": "Panama"
+"PL": "Poland"
+"US": "United States"
