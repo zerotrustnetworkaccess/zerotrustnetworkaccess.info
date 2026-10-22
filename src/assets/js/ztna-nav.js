@@ -16,7 +16,7 @@
   var OPEN_CLASS = "is-open";
   var BODY_CLASS = "ztna-mnav-open";
   var FOCUSABLE = 'a[href], button:not([disabled]), input, select, textarea, [tabindex]:not([tabindex="-1"])';
-  var DESKTOP_BREAKPOINT = 992;
+  var DESKTOP_BREAKPOINT = 1200;
 
   var openDrawer = null;
   var lastToggle = null;

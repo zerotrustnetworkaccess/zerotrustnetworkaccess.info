@@ -1,0 +1,206 @@
+# Content for the Zero Trust Maturity Model page (/maturity-model).
+#
+# Simplified from CISA's Zero Trust Maturity Model, Version 2.0 (April 2023):
+# https://www.cisa.gov/zero-trust-maturity-model
+# Keep wording impartial and technical, with no vendor or product names.
+# "\u00AD" is a soft hyphen: where a long word may break in a narrow cell.
+
+intro: "Traditional security trusts whatever sits inside the network perimeter, and relies on fixed rules, manual work and systems that don't talk to each other. Zero Trust checks every request, every time. CISA's model maps the journey between the two across five pillars and four stages. Most organisations are somewhere in between, and rarely at the same stage everywhere."
+
+source:
+  text: "Simplified from CISA Zero Trust Maturity Model, Version 2.0 (April 2023). Not every function in the original tables is shown."
+  url: "https://www.cisa.gov/zero-trust-maturity-model"
+
+# Shown in the panel when nothing is selected.
+how_to_read:
+  label: "How to read this"
+  title: "Five pillars, four stages"
+  paragraphs:
+    - "Each column is a pillar: one area of security that has to mature. Each row is a stage. Organisations climb from Traditional at the bottom towards Optimal at the top."
+    - "The three bands underneath support every pillar. Without them, each pillar improves on its own and the pillars stay disconnected."
+  prompt: "Select a pillar, a stage, a cell or a band to see what changes."
+
+# Lowest to highest. The grid draws them top-down, Optimal first.
+# `tagline` is optional and shows under the stage name in the grid.
+stages:
+  - id: traditional
+    name: "Traditional"
+    tagline: "Siloed, static, manual"
+    description: "Lifecycles and access are set up by hand. Policies are static, each pillar is managed on its own, and incidents are dealt with manually."
+  - id: initial
+    name: "Initial"
+    description: "Automation starts: for assigning attributes, managing lifecycles and enforcing policy. The first solutions that span more than one pillar appear, and visibility is starting to be pulled together."
+  - id: advanced
+    name: "Advanced"
+    description: "Lifecycles and policy enforcement are automated where possible and coordinated across pillars. Visibility and identity control are centralised, and access adjusts to risk."
+  - id: optimal
+    name: "Optimal"
+    tagline: "Integrated, dynamic, automated"
+    description: "Lifecycles and access are fully automated and just-in-time. Policies change dynamically based on what's observed, with visibility across the whole organisation."
+
+pillars:
+  - id: identity
+    name: "Identity"
+    question: "Who is requesting access?"
+    cells:
+      traditional: "Passwords, permanent access"
+      initial: "MFA, some stores combined"
+      advanced: "Phishing-resistant MFA"
+      optimal: "Continuous, just-in-time access"
+    functions:
+      - name: "Authentication"
+        from: "Passwords or basic MFA, checked once at sign-in"
+        to: "Phishing-resistant MFA, validated continuously"
+      - name: "Identity stores"
+        from: "Separate, self-managed stores"
+        to: "All stores integrated, on-premises and cloud"
+      - name: "Risk assessments"
+        from: "Manual, static judgements of identity risk"
+        to: "Real-time analysis of user behaviour"
+      - name: "Access management"
+        from: "Permanent access, reviewed now and then"
+        to: "Just-in-time, just-enough access for each request"
+
+  - id: devices
+    name: "Devices"
+    question: "What is connecting?"
+    cells:
+      traditional: "Little visibility, manual"
+      initial: "Inventory, some checks"
+      advanced: "Health checked at access"
+      optimal: "Continuously verified"
+    functions:
+      - name: "Policy enforcement and compliance"
+        from: "Little visibility into whether devices comply"
+        to: "Compliance verified continuously, across the device lifecycle"
+      - name: "Asset and supply chain risk"
+        from: "Assets tracked by hand, if at all"
+        to: "Real-time inventory, including supply chain risk"
+      - name: "Resource access"
+        from: "Access ignores the device it comes from"
+        to: "Access decisions use real-time device risk"
+      - name: "Device threat protection"
+        from: "Manual protection on some devices"
+        to: "Centralised, automated protection on every device"
+
+  - id: networks
+    name: "Networks"
+    question: "How is connectivity controlled?"
+    cells:
+      traditional: "Large perimeter, VPNs"
+      initial: "Critical workloads isolated"
+      advanced: "Micro\u00ADperimeters, all encrypted"
+      optimal: "Dynamic micro\u00ADsegmentation"
+    functions:
+      - name: "Network segmentation"
+        from: "Large perimeter with broad implicit trust inside"
+        to: "Dynamic microperimeters around each workload"
+      - name: "Traffic management"
+        from: "Static rules, changed by hand"
+        to: "Rules that adapt automatically to application needs"
+      - name: "Traffic encryption"
+        from: "Little internal traffic encrypted"
+        to: "All traffic encrypted, with least-privilege key management"
+      - name: "Network resilience"
+        from: "Availability set up case by case"
+        to: "Resilience built in, adapting to demand"
+
+  - id: applications
+    name: "Applications"
+    question: "What systems can be accessed?"
+    cells:
+      traditional: "Static permissions, VPN"
+      initial: "Some context, some public access"
+      advanced: "Most apps without VPN"
+      optimal: "Continuously authorised"
+    functions:
+      - name: "Application access"
+        from: "Static permissions, checked once"
+        to: "Access authorised continuously, using real-time risk"
+      - name: "Threat protection"
+        from: "Protection separate from application workflows"
+        to: "Real-time protection built into every application"
+      - name: "Accessible applications"
+        from: "Key applications reachable only through private networks"
+        to: "Applications reachable over public networks by authorised users and devices"
+      - name: "Development and deployment"
+        from: "Ad hoc environments, manual deployments"
+        to: "Immutable workloads, changed only by redeploying"
+      - name: "Security testing"
+        from: "Manual testing before release"
+        to: "Testing built in throughout the lifecycle"
+
+  - id: data
+    name: "Data"
+    question: "What information is protected?"
+    cells:
+      traditional: "Limited visibility, manual labels"
+      initial: "Some inventory, some encryption"
+      advanced: "Consistent labels, encrypted"
+      optimal: "Continuous discovery, dynamic access"
+    functions:
+      - name: "Data inventory"
+        from: "Some data identified by hand"
+        to: "Continuous, automated inventory of all data"
+      - name: "Data categorisation"
+        from: "Limited, ad hoc labelling"
+        to: "Automated, consistent labelling everywhere"
+      - name: "Data availability"
+        from: "Mostly on-premises, with offline backups"
+        to: "Availability adjusted dynamically to how data is used"
+      - name: "Data access"
+        from: "Static access controls"
+        to: "Just-in-time, just-enough access"
+      - name: "Data encryption"
+        from: "Little encryption, keys managed by hand"
+        to: "Encrypted in use, with least-privilege key management"
+
+# The bands under the grid. `colour` picks the dot and connector colour:
+# visibility (Blue 2), automation (Violet 2) or governance (Pink).
+capabilities:
+  - id: visibility
+    name: "Visibility and Analytics"
+    colour: visibility
+    summary: "From limited, manually reviewed logs to continuous visibility across the organisation."
+    why: "You can't enforce policy on what you can't see. Shared visibility lets each pillar's decisions draw on signals from the others."
+    stages:
+      traditional: "Logs collected by hand and rarely reviewed"
+      initial: "Some automated collection, starting to correlate"
+      advanced: "Collected centrally and analysed across pillars"
+      optimal: "Continuous visibility across the whole organisation"
+  - id: automation
+    name: "Automation and Orchestration"
+    colour: automation
+    summary: "From manual administration to coordinated, automated responses."
+    why: "Manual changes can't keep pace with access decided per request. Automation applies policy and responds to incidents consistently and quickly."
+    stages:
+      traditional: "Manual administration and responses"
+      initial: "Some tasks automated, starting to integrate"
+      advanced: "Automated workflows that span pillars"
+      optimal: "Dynamic, organisation-wide orchestration"
+  - id: governance
+    name: "Governance"
+    colour: governance
+    summary: "From static, unevenly enforced policies to dynamic, coordinated enforcement."
+    why: "Policies only work if they're defined once and enforced everywhere. Governance stops the pillars drifting apart as each one matures."
+    stages:
+      traditional: "Static policies, enforced unevenly"
+      initial: "Policies defined, some enforcement automated"
+      advanced: "Organisation-wide policies, mostly automated"
+      optimal: "Policies updated and enforced automatically"
+
+capabilities_note: "These three capabilities run underneath every pillar and connect them together."
+
+# "An example organisation" view: the current stage for each pillar.
+example:
+  title: "An example organisation"
+  paragraphs:
+    - "This organisation uses phishing-resistant MFA and has microperimeters in place, but its device and application controls are only starting out and its data controls are still traditional."
+    - "That's normal. Pillars mature at different rates, and the least mature pillar is often where an attacker gets in."
+  legend: "Dashed outlines show the stages each pillar still has ahead."
+  profile:
+    identity: advanced
+    devices: initial
+    networks: advanced
+    applications: initial
+    data: traditional

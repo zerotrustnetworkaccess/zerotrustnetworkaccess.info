@@ -8,7 +8,7 @@
     <a href="{{site.baseurl}}" class="ztna-logo" aria-label="{{site.data.general_settings.title}} — home"></a>
     {% endif %}
 
-    <ul class="navbar-nav menu align-items-lg-center d-none d-lg-flex">
+    <ul class="navbar-nav menu align-items-xl-center d-none d-xl-flex">
       {% for menu in site.data.navigation.main_menu %}
       <li class="ztna-nav-item mr-32 {% if page.url == menu.url %} active {% endif %}">
         <a class="nav-link d-flex align-items-center" href="{{menu.url}}" {% if menu.new_window %} target="_blank" rel="noopener" {% endif %}>
@@ -19,7 +19,7 @@
     </ul>
 
     <button
-      class="ztna-mnav__toggle d-lg-none"
+      class="ztna-mnav__toggle d-xl-none"
       type="button"
       data-ztna-mnav-open
       aria-expanded="false"
@@ -31,7 +31,7 @@
     </button>
   </div>
 
-  <div class="ztna-mnav d-lg-none" data-ztna-mnav>
+  <div class="ztna-mnav d-xl-none" data-ztna-mnav>
     <div class="ztna-mnav__scrim" data-ztna-mnav-close></div>
 
     <div class="ztna-mnav__panel" role="dialog" aria-modal="true" aria-label="Site menu">

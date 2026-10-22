@@ -1,0 +1,627 @@
+// CISA Zero Trust Maturity Model explorer (/maturity-model).
+// Markup: _includes/maturity/explorer.html. Behaviour: assets/js/ztna-maturity.js.
+
+@use "sass:map";
+
+$mm-ring: 0 0 0 4px rgba($light-blue-1, 0.5);
+$mm-panel-width: 320px;
+$mm-stack-below: 1200px;
+
+// Per-stage fill (cells) and marker (stage labels, ladder dots).
+$mm-stages: (
+  traditional: (fill: $background-color, marker: $light-text-3, text: $light-text-1),
+  initial: (fill: $pale-blue, marker: $light-blue-1, text: $dark-text),
+  advanced: (fill: $logo-blue, marker: $dark-blue-1, text: $dark-text),
+  optimal: (fill: $violet-1, marker: $violet-1, text: $white),
+);
+
+$mm-capabilities: (
+  visibility: $light-blue-2,
+  automation: $violet-2,
+  governance: $pink,
+);
+
+.mm {
+  max-width: $landing-width;
+  margin: 0 auto;
+  padding: 0 20px 100px;
+}
+
+// Zero-specificity resets, so component classes below win without.
+:where(.mm) button {
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+// The theme's style.css removes every button's focus outline with
+// `button:focus { outline: none !important }`, so this has to match it.
+.mm button:focus-visible {
+  outline: 3px solid $dark-blue-1 !important;
+  outline-offset: 2px;
+}
+
+:where(.mm) p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+// Parts that only make sense with or without JS.
+.mm:not(.mm--js) .mm-js-only,
+.mm--js .mm-nojs-only {
+  display: none !important;
+}
+
+.mm-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.mm-intro {
+  max-width: 760px;
+  margin-top: 24px;
+  margin-bottom: 48px;
+  text-align: center;
+
+  p.ztna-small-text {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+}
+
+// View toggle
+.mm-view {
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px;
+
+  &__label {
+    margin-right: 16px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: $light-text-1;
+  }
+
+  &__toggle {
+    display: inline-flex;
+    padding: 4px;
+    border-radius: 25px;
+    background: $background-color;
+  }
+
+  .mm-view__option {
+    white-space: nowrap;
+    padding: 8px 18px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    color: $light-text-1;
+    transition: background-color 0.2s ease, color 0.2s ease;
+
+    &[aria-pressed="true"] {
+      background: $white;
+      color: $dark-text;
+      box-shadow: 0 1px 4px rgba($dark-text, 0.12);
+    }
+  }
+}
+
+@media only screen and (max-width: $breakpoint-sm) {
+  .mm-view__label {
+    display: none;
+  }
+
+  .mm-view .mm-view__option {
+    padding: 8px 14px;
+  }
+}
+
+// Layout: grid and a sticky panel side by side, stacked on smaller screens.
+.mm-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) $mm-panel-width;
+  gap: 40px;
+  align-items: start;
+}
+
+.mm-panel {
+  position: sticky;
+  top: 24px;
+}
+
+@media only screen and (max-width: $mm-stack-below - 1px) {
+  .mm-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .mm-panel {
+    position: static;
+  }
+}
+
+// Below the grid's minimum width (about 810px viewports) it scrolls sideways
+// rather than squashing cells until words like "Continuously" break.
+.mm-scroll {
+  min-width: 0;
+  overflow-x: auto;
+  margin: 0 -20px;
+  padding: 4px 20px 12px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.mm-grid {
+  display: grid;
+  grid-template-columns: 120px repeat(5, minmax(0, 1fr));
+  gap: 10px;
+  min-width: 770px;
+}
+
+// Everything that fades when something else is selected.
+.mm-pillar,
+.mm-stage,
+.mm-cell,
+.mm-band {
+  transition: opacity 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease,
+    border-color 0.2s ease;
+
+  &.is-dimmed {
+    opacity: 0.35;
+  }
+}
+
+// Pillar headers
+.mm-pillar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 4px 12px;
+  border-bottom: 3px solid $divider;
+  border-radius: 4px 4px 0 0;
+
+  &__name {
+    font-size: 18px;
+    font-weight: 600;
+    color: $dark-text;
+  }
+
+  &__question {
+    margin-top: 4px;
+    font-size: 13px;
+    line-height: 1.4;
+    color: $light-text-1;
+  }
+
+  &:hover,
+  &[aria-pressed="true"] {
+    border-bottom-color: $light-blue-1;
+  }
+}
+
+// Stage labels
+.mm-stage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8px 12px 8px 14px;
+  border-left: 4px solid;
+  border-radius: 0 8px 8px 0;
+
+  &__name {
+    font-size: 16px;
+    font-weight: 600;
+    color: $dark-text;
+  }
+
+  &__tagline {
+    margin-top: 2px;
+    font-size: 12px;
+    line-height: 1.4;
+    color: $light-text-1;
+  }
+
+  &:hover,
+  &[aria-pressed="true"] {
+    background: $background-color;
+  }
+}
+
+// Cells
+.mm-cell {
+  // Anchors the visually hidden .mm-sr text, which would otherwise widen the
+  // page on mobile by escaping the grid's scroll container.
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  min-height: 96px;
+  padding: 12px;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  font-size: 13.5px;
+  font-weight: 600;
+  line-height: 1.35;
+  overflow-wrap: break-word;
+  // `backwards` only: holding the end state would override .is-dimmed's opacity.
+  animation: mm-rise 0.45s ease backwards;
+  animation-delay: var(--mm-delay, 0ms);
+
+  &:hover {
+    box-shadow: 0 4px 14px rgba($dark-text, 0.12);
+  }
+
+  &[aria-pressed="true"] {
+    box-shadow: $mm-ring;
+  }
+
+  &__now {
+    display: none;
+    margin-bottom: 8px;
+    padding: 2px 7px;
+    border-radius: 10px;
+    background: $dark-text;
+    color: $white;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  // Example view: the pillar's current stage, and the stages still ahead.
+  &.is-now .mm-cell__now {
+    display: block;
+  }
+
+  &.is-ahead {
+    background: $white;
+    border: 2px dashed $light-text-3;
+    color: $light-text-1;
+    font-weight: 500;
+  }
+}
+
+@each $stage, $c in $mm-stages {
+  .mm-cell--#{$stage} {
+    background: map.get($c, fill);
+    color: map.get($c, text);
+  }
+
+  .mm-stage--#{$stage} {
+    border-left-color: map.get($c, marker);
+  }
+
+  .mm-marker--#{$stage} {
+    background: map.get($c, marker);
+  }
+}
+
+.mm-cell--traditional {
+  font-weight: 500;
+}
+
+.mm-cell--optimal .mm-cell__now {
+  background: $white;
+  color: $violet-1;
+}
+
+@keyframes mm-rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+// Short lines from each pillar down into the capability bands.
+.mm-connector {
+  justify-self: center;
+  width: 2px;
+  height: 28px;
+  background: $light-text-3;
+  transition: background-color 0.2s ease;
+}
+
+@each $cap, $colour in $mm-capabilities {
+  .mm[data-band="#{$cap}"] .mm-connector {
+    background: $colour;
+  }
+
+  .mm-cap--#{$cap} {
+    --mm-cap: #{$colour};
+  }
+}
+
+// Capability bands
+.mm-band {
+  grid-column: 2 / -1;
+  display: grid;
+  grid-template-columns: minmax(180px, 2fr) 3fr;
+  gap: 24px;
+  align-items: center;
+  padding: 16px 22px;
+  border: 1px solid $divider;
+  border-radius: 12px;
+  background: $background-color;
+
+  &__name {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: $dark-text;
+  }
+
+  &__summary {
+    font-size: 14px;
+    line-height: 1.5;
+    color: $light-text-1;
+  }
+
+  &:hover {
+    border-color: $light-text-3;
+  }
+
+  &[aria-pressed="true"] {
+    background: $white;
+    border-color: var(--mm-cap);
+    box-shadow: 0 0 0 1px var(--mm-cap);
+  }
+}
+
+.mm-dot {
+  flex: none;
+  width: 10px;
+  height: 10px;
+  margin-right: 12px;
+  border-radius: 50%;
+  background: var(--mm-cap);
+}
+
+.mm-bands-note {
+  grid-column: 2 / -1;
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: $light-text-1;
+}
+
+@media only screen and (max-width: $breakpoint-md) {
+  .mm-band {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+}
+
+// Detail panel
+.mm-panel__inner {
+  padding: 28px;
+  border: 1px solid $divider;
+  border-radius: 16px;
+  background: $white;
+}
+
+.mm-eyebrow {
+  margin: 0 0 8px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $light-text-1;
+}
+
+.mm-panel__title {
+  margin: 0 0 12px;
+  font-family: $fontfamily-jost;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: $dark-text;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.mm-panel__text {
+  margin: 0 0 14px;
+  color: $light-text-1;
+
+  &--strong {
+    color: $dark-text;
+  }
+}
+
+.mm-panel__subhead {
+  margin: 22px 0 10px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $light-text-1;
+}
+
+.mm-back {
+  margin-bottom: 18px;
+  font-size: 14px;
+  font-weight: 500;
+  color: $light-blue-2;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Stage ladder (pillar and band views) and per-pillar list (stage view)
+.mm-ladder {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    display: grid;
+    grid-template-columns: 10px 1fr;
+    gap: 2px 12px;
+    padding: 10px 12px;
+    border-radius: 10px;
+
+    &.is-current {
+      background: $background-color;
+      box-shadow: inset 0 0 0 2px rgba($light-blue-1, 0.5);
+    }
+  }
+
+  &__marker {
+    grid-row: 1 / span 2;
+    width: 10px;
+    height: 10px;
+    margin-top: 5px;
+    border-radius: 50%;
+  }
+
+  &__stage {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: $light-text-1;
+  }
+
+  &__label {
+    font-size: 15px;
+    line-height: 1.45;
+    color: $dark-text;
+  }
+}
+
+// Function chips with a From / To comparison
+.mm-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.mm-chip {
+  padding: 6px 12px;
+  border: 1px solid $light-text-3;
+  border-radius: 25px;
+  font-size: 13px;
+  font-weight: 500;
+  color: $dark-text;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+
+  &:hover {
+    border-color: $light-blue-1;
+  }
+
+  &[aria-expanded="true"] {
+    background: $dark-text;
+    border-color: $dark-text;
+    color: $white;
+  }
+}
+
+.mm-compare {
+  margin-top: 14px;
+  border: 1px solid $divider;
+  border-radius: 12px;
+  overflow: hidden;
+
+  &__row {
+    padding: 12px 14px;
+
+    & + & {
+      border-top: 1px solid $divider;
+    }
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 2px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: $light-text-1;
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 1.45;
+    color: $dark-text;
+  }
+}
+
+.mm-why {
+  padding: 14px 16px;
+  border-left: 3px solid var(--mm-cap);
+  border-radius: 0 10px 10px 0;
+  background: $background-color;
+}
+
+// Stage descriptions shown in the panel when JS is off
+.mm-stage-list {
+  margin: 20px 0 0;
+
+  &__item {
+    padding: 10px 0 10px 14px;
+    border-left: 4px solid;
+  }
+
+  &__item + &__item {
+    margin-top: 8px;
+  }
+
+  @each $stage, $c in $mm-stages {
+    &__item--#{$stage} {
+      border-left-color: map.get($c, marker);
+    }
+  }
+
+  dt {
+    font-weight: 600;
+    color: $dark-text;
+  }
+
+  dd {
+    margin: 2px 0 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: $light-text-1;
+  }
+}
+
+.mm-source {
+  margin-top: 32px;
+  font-size: 13px;
+
+  a {
+    color: $light-text-1;
+    text-decoration: underline;
+    text-decoration-color: $light-text-3;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mm *,
+  .mm *::before,
+  .mm *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
