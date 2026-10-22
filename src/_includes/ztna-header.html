@@ -2,11 +2,17 @@
   class="navbar navbar-hover-opacity navbar-expand-lg {% if include.extra_class %} {{include.extra_class}} {% endif %} "
 >
   <div class="d-flex mx-auto justify-content-between align-items-center ztna-nav">
-    {% if include.dark_logo %}
-    <a href="{{site.baseurl}}" class="ztna-dark-logo" aria-label="{{site.data.general_settings.title}} — home"></a>
-    {% else %}
-    <a href="{{site.baseurl}}" class="ztna-logo" aria-label="{{site.data.general_settings.title}} — home"></a>
-    {% endif %}
+    <div class="ztna-brand">
+      {% if include.dark_logo %}
+      <a href="{{site.baseurl}}" class="ztna-dark-logo" aria-label="{{site.data.general_settings.title}} — home"></a>
+      {% else %}
+      <a href="{{site.baseurl}}" class="ztna-logo" aria-label="{{site.data.general_settings.title}} — home"></a>
+      {% endif %}
+      <a href="{{site.data.ztna-header.enclave-website}}" class="ztna-publisher" target="_blank" rel="noopener">
+        <span>Published by</span>
+        {% include icons/enclave-logo.svg cls="ztna-publisher__logo" %}
+      </a>
+    </div>
 
     <ul class="navbar-nav menu align-items-lg-center d-none d-lg-flex">
       {% for menu in site.data.navigation.main_menu %}

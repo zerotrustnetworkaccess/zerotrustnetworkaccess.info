@@ -1,0 +1,17 @@
+{% comment %}
+  Link to the "Talk to Enclave" form. With a Tally form ID set it opens the
+  form as a popup (see assets/js/tally.js); otherwise it's a mailto link.
+  Params: cls, content.
+{% endcomment %}
+{% assign contact = site.data.contact %}
+{% if contact.tally_form_id != "" %}
+<a
+  href="https://tally.so/r/{{contact.tally_form_id}}"
+  class="{{include.cls}}"
+  data-tally-form="{{contact.tally_form_id}}"
+  target="_blank"
+  rel="noopener"
+>{{include.content}}</a>
+{% else %}
+<a href="mailto:{{contact.fallback_email}}" class="{{include.cls}}">{{include.content}}</a>
+{% endif %}

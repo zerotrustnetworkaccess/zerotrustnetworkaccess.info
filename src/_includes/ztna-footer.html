@@ -18,6 +18,16 @@
 
           {% endfor %}
         </ul>
+
+        <div class="footer-contact">
+          <a href="{{site.data.ztna-header.enclave-website}}" class="footer-contact__logo" target="_blank" rel="noopener">
+            {% include icons/enclave-logo.svg cls="footer-enclave-logo" %}
+          </a>
+          <div class="space20"></div>
+          <p class="ztna-small-text light-text-2">{{site.data.contact.footer_text}}</p>
+          <div class="space20"></div>
+          {% include components/contact-link.html cls="ztna-button light-blue-background-1 white" content=site.data.contact.footer_button_text %}
+        </div>
       </div>
 
       <div class="col-xl-2 col-lg-1 d-none d-lg-block"></div>

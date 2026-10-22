@@ -1,0 +1,47 @@
+// "Talk to Enclave" button pinned to the bottom right of every page. It sits
+// under the mobile nav drawer ($mnav-z: 1050) and hides while the Tally popup
+// it opens is showing in the same corner.
+.enclave-launcher {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 1000;
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 18px 10px 12px;
+  border-radius: 25px;
+  background: $head-background;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: $white;
+  font-size: 14px;
+  line-height: 1;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(10, 63, 113, 0.25);
+  transition: box-shadow 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+
+  &:hover,
+  &:focus {
+    color: $white;
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 0 0 4px rgba(68, 160, 248, 0.5), 0 6px 20px rgba(10, 63, 113, 0.25);
+  }
+
+  .enclave-launcher__mark {
+    width: 22px;
+    height: 24px;
+    margin-right: 10px;
+  }
+}
+
+.tally-popup-open .enclave-launcher {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media only screen and (max-width: $breakpoint-sm) {
+  .enclave-launcher {
+    right: 16px;
+    bottom: 16px;
+  }
+}
