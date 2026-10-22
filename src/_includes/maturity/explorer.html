@@ -1,0 +1,102 @@
+{% comment %}
+  Interactive CISA Zero Trust Maturity Model. All content comes from
+  _data/maturity.yml; assets/js/ztna-maturity.js adds the interactions.
+  Without JS the full grid, bands and stage descriptions still render.
+{% endcomment %}
+{% assign mm = site.data.maturity %}
+{% assign stages_top_down = mm.stages | reverse %}
+
+<div class="mm" data-mm data-view="model">
+  <div class="mm-intro mx-auto">
+    <p class="ztna-small-text light-text-1">{{ mm.intro }}</p>
+  </div>
+
+  <div class="mm-view mm-js-only" role="group" aria-label="View">
+    <span class="mm-view__label" aria-hidden="true">View</span>
+    <div class="mm-view__toggle">
+      <button type="button" class="mm-view__option" data-mm-view="model" aria-pressed="true">The model</button>
+      <button type="button" class="mm-view__option" data-mm-view="example" aria-pressed="false">An example organisation</button>
+    </div>
+  </div>
+
+  <div class="mm-layout">
+    <div class="mm-scroll">
+      <div class="mm-grid">
+        <div class="mm-corner" aria-hidden="true"></div>
+
+        {% for pillar in mm.pillars %}
+        <button type="button" class="mm-pillar" data-mm-pillar="{{ pillar.id }}" aria-pressed="false">
+          <span class="mm-pillar__name">{{ pillar.name }}</span>
+          <span class="mm-pillar__question">{{ pillar.question }}</span>
+        </button>
+        {% endfor %}
+
+        {% for stage in stages_top_down %}
+        {% assign row = forloop.index0 %}
+        <button type="button" class="mm-stage mm-stage--{{ stage.id }}" data-mm-stage="{{ stage.id }}" aria-pressed="false">
+          <span class="mm-stage__name">{{ stage.name }}</span>
+          {% if stage.tagline %}<span class="mm-stage__tagline">{{ stage.tagline }}</span>{% endif %}
+        </button>
+
+        {% for pillar in mm.pillars %}
+        {% comment %} Intro animation rises from the bottom row up. {% endcomment %}
+        {% assign row_delay = 3 | minus: row | times: 120 %}
+        {% assign col_delay = forloop.index0 | times: 30 %}
+        <button
+          type="button"
+          class="mm-cell mm-cell--{{ stage.id }}"
+          data-mm-pillar="{{ pillar.id }}"
+          data-mm-stage="{{ stage.id }}"
+          aria-pressed="false"
+          style="--mm-delay: {{ row_delay | plus: col_delay }}ms"
+        >
+          <span class="mm-sr">{{ pillar.name }}, {{ stage.name }}: </span>
+          <span class="mm-cell__now" aria-hidden="true">Now</span>
+          <span class="mm-cell__label">{{ pillar.cells[stage.id] }}</span>
+        </button>
+        {% endfor %}
+        {% endfor %}
+
+        <div class="mm-connector-gap" aria-hidden="true"></div>
+        {% for pillar in mm.pillars %}
+        <div class="mm-connector" data-mm-connector="{{ pillar.id }}" aria-hidden="true"></div>
+        {% endfor %}
+
+        {% for capability in mm.capabilities %}
+        <button type="button" class="mm-band mm-cap--{{ capability.colour }}" data-mm-band="{{ capability.id }}" aria-pressed="false">
+          <span class="mm-band__name"><span class="mm-dot" aria-hidden="true"></span>{{ capability.name }}</span>
+          <span class="mm-band__summary">{{ capability.summary }}</span>
+        </button>
+        {% endfor %}
+
+        <p class="mm-bands-note">{{ mm.capabilities_note }}</p>
+      </div>
+    </div>
+
+    <aside class="mm-panel" aria-labelledby="mm-panel-title">
+      <div class="mm-panel__inner" data-mm-panel aria-live="polite">
+        <p class="mm-eyebrow">{{ mm.how_to_read.label }}</p>
+        <h2 class="mm-panel__title" id="mm-panel-title" tabindex="-1">{{ mm.how_to_read.title }}</h2>
+        {% for paragraph in mm.how_to_read.paragraphs %}
+        <p class="mm-panel__text">{{ paragraph }}</p>
+        {% endfor %}
+        <p class="mm-panel__text mm-panel__text--strong mm-js-only">{{ mm.how_to_read.prompt }}</p>
+
+        <dl class="mm-stage-list mm-nojs-only">
+          {% for stage in stages_top_down %}
+          <div class="mm-stage-list__item mm-stage-list__item--{{ stage.id }}">
+            <dt>{{ stage.name }}</dt>
+            <dd>{{ stage.description }}</dd>
+          </div>
+          {% endfor %}
+        </dl>
+      </div>
+    </aside>
+  </div>
+
+  <p class="mm-source">
+    <a href="{{ mm.source.url }}" target="_blank" rel="noopener">{{ mm.source.text }}</a>
+  </p>
+
+  <script type="application/json" data-mm-data>{{ mm | jsonify }}</script>
+</div>
