@@ -85,11 +85,55 @@ nav.navbar {
   // z-index: 1009;
 }
 
+// Logo with the "Published by Enclave" line stacked underneath. The pair is
+// centred in the 80px navbar, so the outer margin lives here, not on the logo.
+.ztna-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 55px;
+}
+
+.ztna-publisher {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 11px;
+  line-height: 1;
+  color: $light-text-2;
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover,
+  &:focus {
+    color: $white;
+    text-decoration: none;
+  }
+
+  // Full-colour lockup: the hexagon keeps its brand colours and the wordmark
+  // takes `color`, so it can flip to dark on a light header.
+  .ztna-publisher__logo {
+    width: 68px;
+    height: 18px;
+    margin-left: 5px;
+    color: $white;
+  }
+}
+
+.banner--clone .ztna-publisher {
+  color: $light-text-1;
+
+  &:hover,
+  &:focus {
+    color: $dark-text;
+  }
+
+  .ztna-publisher__logo {
+    color: $dark-text;
+  }
+}
+
 .ztna-logo-base {
-  margin-left: 55px !important;
-  margin-top: 30px !important;
-  margin-bottom: 30px !important;
-  align-self: center;
   background-repeat: no-repeat;
   background-size: contain;
   width: 258px;
@@ -117,14 +161,11 @@ nav.navbar {
   width: fit-content;
 }
 
-// The logo keeps a fixed 258x20 at every breakpoint — only its outer margin
+// The logo keeps a fixed 258x20 at every breakpoint — only the brand's outer margin
 // tightens on small screens so it clears the hamburger.
 @media only screen and (max-width: $breakpoint-sm) {
-  .ztna-logo,
-  .ztna-dark-logo,
-  .banner--clone .ztna-logo,
-  .banner--clone .ztna-dark-logo {
-    margin-left: 20px !important;
+  .ztna-brand {
+    margin-left: 20px;
   }
 }
 
