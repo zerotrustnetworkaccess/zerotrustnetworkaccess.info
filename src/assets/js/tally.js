@@ -2,8 +2,8 @@
  * Opens Tally forms as a popup in the bottom-right corner of the page.
  *
  * Any link with a `data-tally-form` attribute (the form ID) opens that form.
- * While it's open the body gets OPEN_CLASS, which hides the pinned "Talk to
- * Enclave" button that would otherwise sit underneath. Tally's embed script is only fetched on the first click, so visitors
+ * While it's open the body gets OPEN_CLASS, which hides the pinned "Get in
+ * touch" button that would otherwise sit underneath. Tally's embed script is only fetched on the first click, so visitors
  * who never use the form don't load anything from tally.so. If the script
  * can't be loaded, the browser goes to the link's own href (the hosted form).
  */

@@ -28,14 +28,6 @@ footer {
     max-width: 420px;
   }
 
-  // Wordmark takes `color`; the hexagon keeps its brand colours.
-  .footer-enclave-logo {
-    display: block;
-    width: 120px;
-    height: 32px;
-    color: $white;
-  }
-
   a {
     @extend .h4;
     text-decoration: none;

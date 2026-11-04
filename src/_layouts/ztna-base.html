@@ -105,8 +105,7 @@
 
     {{ content }}
 
-    {% capture launcher_content %}{% include icons/enclave-mark.svg cls="enclave-launcher__mark" %}<span>{{ site.data.contact.launcher_text }}</span>{% endcapture %}
-    {% include components/contact-link.html cls="enclave-launcher" content=launcher_content %}
+    {% include components/contact-link.html cls="ztna-button light-blue-background-1 white enclave-launcher" content=site.data.contact.launcher_text %}
 
     <script src="{{relative_url}}/assets/js/jquery.min.js"></script>
     <script src="{{relative_url}}/assets/js/popper.min.js"></script>
