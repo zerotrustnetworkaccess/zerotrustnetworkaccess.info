@@ -49,7 +49,6 @@
       function (Tally) {
         Tally.openPopup(link.getAttribute("data-tally-form"), {
           width: 320,
-          emoji: { text: "👋", animation: "wave" },
           // Fills the form's "page" hidden field, if it has one, so submissions
           // show which page the visitor was reading.
           hiddenFields: { page: window.location.pathname },
