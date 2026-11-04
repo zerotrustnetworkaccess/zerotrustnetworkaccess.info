@@ -21,6 +21,13 @@ footer {
     opacity: 0.6;
   }
 
+  .footer-contact {
+    margin-top: 10px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 420px;
+  }
+
   a {
     @extend .h4;
     text-decoration: none;

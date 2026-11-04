@@ -3,7 +3,7 @@
   [headers.values]
     X-Content-Type-Options = "nosniff"
     X-Frame-Options = "deny"
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' *.googletagmanager.com; style-src 'self' 'unsafe-inline' fonts.googleapis.com; img-src 'self' data: via.placeholder.com *.google-analytics.com *.googletagmanager.com; font-src 'self' fonts.gstatic.com; connect-src 'self' *.google-analytics.com *.analytics.google.com *.googletagmanager.com; object-src 'none';"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' *.googletagmanager.com tally.so; frame-src tally.so; style-src 'self' 'unsafe-inline' fonts.googleapis.com; img-src 'self' data: via.placeholder.com *.google-analytics.com *.googletagmanager.com; font-src 'self' fonts.gstatic.com; connect-src 'self' *.google-analytics.com *.analytics.google.com *.googletagmanager.com; object-src 'none';"
 
 [[headers]]
   for = "/*.js"

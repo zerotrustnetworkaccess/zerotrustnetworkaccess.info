@@ -1,0 +1,33 @@
+// "Get in touch" button pinned to the bottom right of every page. It looks the
+// same as the footer button (.ztna-button), plus a drop shadow so it stands out
+// over page content. It sits under the mobile nav drawer ($mnav-z: 1050) and
+// hides while the Tally popup it opens is showing in the same corner.
+.enclave-launcher {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 1000;
+  @extend .h4;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(10, 63, 113, 0.25);
+  transition: box-shadow 0.2s ease, opacity 0.2s ease;
+
+  &:hover,
+  &:focus {
+    color: $white;
+    text-decoration: none;
+    box-shadow: 0 0 0 4px rgba(68, 160, 248, 0.5), 0 6px 20px rgba(10, 63, 113, 0.25);
+  }
+}
+
+.tally-popup-open .enclave-launcher {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media only screen and (max-width: $breakpoint-sm) {
+  .enclave-launcher {
+    right: 16px;
+    bottom: 16px;
+  }
+}

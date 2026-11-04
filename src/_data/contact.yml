@@ -1,0 +1,10 @@
+# "Get in touch" contact form, used by the footer section and the floating
+# button pinned to the bottom right of every page.
+
+# The ID from the form's share link, e.g. "wA1bC2" for https://tally.so/r/wA1bC2.
+# Until it's set, both buttons fall back to emailing fallback_email.
+tally_form_id: "Dq4AP5"
+fallback_email: "team@enclave.io"
+
+footer_button_text: "Get in touch"
+launcher_text: "Get in touch"
