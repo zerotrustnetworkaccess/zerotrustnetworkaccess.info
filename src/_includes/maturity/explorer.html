@@ -1,102 +1,175 @@
 {% comment %}
-  Interactive CISA Zero Trust Maturity Model. All content comes from
+  Interactive CISA Zero Trust Maturity Model 2.0. All content comes from
   _data/maturity.yml; assets/js/ztna-maturity.js adds the interactions.
-  Without JS the full grid, bands and stage descriptions still render.
+
+  Everything below is rendered at build time, so the full matrix is in the
+  HTML. Without JS every group stays open, the toolbar is hidden and the
+  example-organisation overlay never shows.
 {% endcomment %}
 {% assign mm = site.data.maturity %}
-{% assign stages_top_down = mm.stages | reverse %}
+{% capture source_link %}<a href="{{ mm.source_url }}" target="_blank" rel="noopener">CISA Zero Trust Maturity Model, Version 2.0</a>{% endcapture %}
 
-<div class="mm" data-mm data-view="model">
-  <div class="mm-intro mx-auto">
-    <p class="ztna-small-text light-text-1">{{ mm.intro }}</p>
-  </div>
-
-  <div class="mm-view mm-js-only" role="group" aria-label="View">
-    <span class="mm-view__label" aria-hidden="true">View</span>
-    <div class="mm-view__toggle">
-      <button type="button" class="mm-view__option" data-mm-view="model" aria-pressed="true">The model</button>
-      <button type="button" class="mm-view__option" data-mm-view="example" aria-pressed="false">An example organisation</button>
+<div class="mm" data-mm data-default-open="{{ mm.default_open }}">
+  <div class="mm-intro">
+    <p class="mm-intro__lede">{{ mm.intro }}</p>
+    <div class="mm-intro__how">
+      <p class="mm-intro__how-title">{{ mm.how_to_read.title }}</p>
+      <p class="mm-intro__how-text">{{ mm.how_to_read.text }}</p>
     </div>
   </div>
 
-  <div class="mm-layout">
-    <div class="mm-scroll">
-      <div class="mm-grid">
-        <div class="mm-corner" aria-hidden="true"></div>
+  <div class="mm-toolbar mm-js-only">
+    <div class="mm-toolbar__set">
+      <button type="button" class="mm-btn" data-mm-all="open">Open all pillars</button>
+      <button type="button" class="mm-btn" data-mm-all="close">Close all</button>
+    </div>
+    <div class="mm-toolbar__set" role="group" aria-labelledby="mm-trace-label">
+      <span class="mm-eyebrow" id="mm-trace-label">Trace a capability</span>
+      {% for cap in mm.capabilities %}
+      <button
+        type="button"
+        class="mm-chip"
+        aria-pressed="false"
+        data-mm-cap="{{ cap.id }}"
+        data-mm-note-title="{{ cap.name | escape }}"
+        data-mm-note-text="{{ cap.explanation | escape }}"
+      ><span class="mm-mark mm-mark--{{ cap.shape }} mm-mark--{{ cap.colour }}" aria-hidden="true"></span>{{ cap.name }}</button>
+      {% endfor %}
+    </div>
+    <div class="mm-toolbar__set mm-toolbar__set--end">
+      <button
+        type="button"
+        class="mm-toggle"
+        aria-pressed="false"
+        data-mm-example
+        data-mm-note-title="{{ mm.example.title | escape }}"
+        data-mm-note-text="{{ mm.example.text | escape }}"
+      ><span class="mm-toggle__track" aria-hidden="true"></span>Example organisation</button>
+    </div>
+  </div>
 
-        {% for pillar in mm.pillars %}
-        <button type="button" class="mm-pillar" data-mm-pillar="{{ pillar.id }}" aria-pressed="false">
-          <span class="mm-pillar__name">{{ pillar.name }}</span>
-          <span class="mm-pillar__question">{{ pillar.question }}</span>
-        </button>
-        {% endfor %}
+  {% comment %} Live regions stay in the DOM; the JS swaps their content. {% endcomment %}
+  <div class="mm-note mm-js-only" data-mm-note aria-live="polite"></div>
 
-        {% for stage in stages_top_down %}
-        {% assign row = forloop.index0 %}
-        <button type="button" class="mm-stage mm-stage--{{ stage.id }}" data-mm-stage="{{ stage.id }}" aria-pressed="false">
-          <span class="mm-stage__name">{{ stage.name }}</span>
-          {% if stage.tagline %}<span class="mm-stage__tagline">{{ stage.tagline }}</span>{% endif %}
-        </button>
+  <div class="mm-scroll" role="region" aria-label="Maturity matrix: pillars and functions by stage" tabindex="0">
+    <div class="mm-matrix">
 
-        {% for pillar in mm.pillars %}
-        {% comment %} Intro animation rises from the bottom row up. {% endcomment %}
-        {% assign row_delay = 3 | minus: row | times: 120 %}
-        {% assign col_delay = forloop.index0 | times: 30 %}
-        <button
-          type="button"
-          class="mm-cell mm-cell--{{ stage.id }}"
-          data-mm-pillar="{{ pillar.id }}"
-          data-mm-stage="{{ stage.id }}"
-          aria-pressed="false"
-          style="--mm-delay: {{ row_delay | plus: col_delay }}ms"
-        >
-          <span class="mm-sr">{{ pillar.name }}, {{ stage.name }}: </span>
-          <span class="mm-cell__now" aria-hidden="true">Now</span>
-          <span class="mm-cell__label">{{ pillar.cells[stage.id] }}</span>
-        </button>
-        {% endfor %}
-        {% endfor %}
-
-        <div class="mm-connector-gap" aria-hidden="true"></div>
-        {% for pillar in mm.pillars %}
-        <div class="mm-connector" data-mm-connector="{{ pillar.id }}" aria-hidden="true"></div>
-        {% endfor %}
-
-        {% for capability in mm.capabilities %}
-        <button type="button" class="mm-band mm-cap--{{ capability.colour }}" data-mm-band="{{ capability.id }}" aria-pressed="false">
-          <span class="mm-band__name"><span class="mm-dot" aria-hidden="true"></span>{{ capability.name }}</span>
-          <span class="mm-band__summary">{{ capability.summary }}</span>
-        </button>
-        {% endfor %}
-
-        <p class="mm-bands-note">{{ mm.capabilities_note }}</p>
+      <div class="mm-row mm-row--scale" aria-hidden="true">
+        <div></div>
+        <div class="mm-scale">
+          <span>{{ mm.scale.from }}</span>
+          <span class="mm-scale__line"></span>
+          <span class="mm-scale__to">{{ mm.scale.to }}</span>
+        </div>
       </div>
-    </div>
 
-    <aside class="mm-panel" aria-labelledby="mm-panel-title">
-      <div class="mm-panel__inner" data-mm-panel aria-live="polite">
-        <p class="mm-eyebrow">{{ mm.how_to_read.label }}</p>
-        <h2 class="mm-panel__title" id="mm-panel-title" tabindex="-1">{{ mm.how_to_read.title }}</h2>
-        {% for paragraph in mm.how_to_read.paragraphs %}
-        <p class="mm-panel__text">{{ paragraph }}</p>
+      <div class="mm-row mm-row--stages">
+        <div class="mm-eyebrow mm-row__corner">Pillar / function</div>
+        {% for stage in mm.stages %}
+        <button type="button" class="mm-stage mm-c mm-c--{{ forloop.index0 }}" data-mm-stage="{{ forloop.index0 }}" aria-pressed="false">
+          <span class="mm-stage__top">
+            <span class="mm-stage__bar mm-stage__bar--{{ forloop.index0 }}" aria-hidden="true"></span>
+            <span class="mm-stage__name">{{ stage.name }}</span>
+          </span>
+          <span class="mm-stage__short">{{ stage.short }}</span>
+        </button>
         {% endfor %}
-        <p class="mm-panel__text mm-panel__text--strong mm-js-only">{{ mm.how_to_read.prompt }}</p>
+      </div>
 
-        <dl class="mm-stage-list mm-nojs-only">
-          {% for stage in stages_top_down %}
-          <div class="mm-stage-list__item mm-stage-list__item--{{ stage.id }}">
-            <dt>{{ stage.name }}</dt>
-            <dd>{{ stage.description }}</dd>
+      <div class="mm-focus" data-mm-focus aria-live="polite"></div>
+      {% for stage in mm.stages %}
+      <template data-mm-points="{{ forloop.index0 }}">
+        <div class="mm-row mm-focus__row">
+          <div></div>
+          <div class="mm-focus__panel">
+            <div class="mm-focus__head">
+              <p class="mm-focus__title">What {{ stage.name }} looks like across the organisation</p>
+              <button type="button" class="mm-focus__clear" data-mm-clear>Clear <span aria-hidden="true">✕</span></button>
+            </div>
+            <ul class="mm-focus__points">
+              {% for point in stage.points %}<li>{{ point }}</li>{% endfor %}
+            </ul>
+          </div>
+        </div>
+      </template>
+      {% endfor %}
+
+      {% for group in mm.groups %}
+      {% comment %} The stage most of this group's functions sit at in the example: "MOSTLY HERE". Ties go to the lower stage. {% endcomment %}
+      {% assign mode_index = 0 %}
+      {% assign mode_count = -1 %}
+      {% for stage in mm.stages %}
+        {% assign stage_count = group.functions | where: "example", stage.id | size %}
+        {% if stage_count > mode_count %}
+          {% assign mode_index = forloop.index0 %}
+          {% assign mode_count = stage_count %}
+        {% endif %}
+      {% endfor %}
+      {% assign own_functions = group.functions | where_exp: "f", "f.capability == nil" | size %}
+
+      <section class="mm-group{% if group.cross %} mm-group--cross{% endif %}" data-mm-group="{{ group.id }}" aria-labelledby="mm-g-{{ group.id }}-name" style="--mm-i: {{ forloop.index0 }}">
+        {% if group.cross %}
+        <div class="mm-divider">
+          <span class="mm-eyebrow">{{ mm.cross_cutting.label }}</span>
+          <span class="mm-divider__line" aria-hidden="true"></span>
+          <span class="mm-divider__text">{{ mm.cross_cutting.text }}</span>
+        </div>
+        {% endif %}
+
+        <div class="mm-row mm-group__head">
+          <h3 class="mm-group__heading">
+            <button type="button" class="mm-group__toggle" aria-expanded="true" aria-controls="mm-g-{{ group.id }}-body" data-mm-toggle>
+              <span class="mm-group__chev" aria-hidden="true">›</span>
+              <span class="mm-group__text">
+                <span class="mm-group__name" id="mm-g-{{ group.id }}-name">{{ group.name }}</span>
+                <span class="mm-group__question">{{ group.question }}</span>
+                <span class="mm-group__count">{% if group.cross %}3 capabilities{% else %}{{ own_functions }} functions + 3 cross-cutting capabilities{% endif %}</span>
+              </span>
+            </button>
+          </h3>
+          {% for stage in mm.stages %}
+          <div class="mm-sum mm-sum--{{ forloop.index0 }} mm-c mm-c--{{ forloop.index0 }}{% if forloop.index0 == mode_index %} is-now{% elsif forloop.index0 > mode_index %} is-ahead{% endif %}" data-mm-toggle-proxy>
+            {% if forloop.index0 == mode_index %}<span class="mm-tag mm-ex-only">Mostly here</span>{% endif %}
+            <span class="mm-sr-only">{{ stage.name }}: </span>
+            <span>{{ group.summary[stage.id] }}</span>
           </div>
           {% endfor %}
-        </dl>
-      </div>
-    </aside>
+        </div>
+
+        <div class="mm-group__body" id="mm-g-{{ group.id }}-body">
+          {% for fn in group.functions %}
+          {% assign ex_index = 0 %}
+          {% for stage in mm.stages %}{% if stage.id == fn.example %}{% assign ex_index = forloop.index0 %}{% endif %}{% endfor %}
+          {% assign cap = nil %}
+          {% if fn.capability %}{% assign cap = mm.capabilities | where: "id", fn.capability | first %}{% endif %}
+          <div class="mm-row mm-fn"{% if cap %} data-mm-cap="{{ cap.id }}"{% endif %}>
+            <div class="mm-fn__label">
+              {% if cap %}
+              <span class="mm-mark mm-mark--{{ cap.shape }} mm-mark--{{ cap.colour }}" role="img" aria-label="{{ cap.name }} capability"></span>
+              {% else %}
+              <span class="mm-mark mm-mark--empty" aria-hidden="true"></span>
+              {% endif %}
+              <div class="mm-fn__text">
+                <h4 class="mm-fn__name">{{ fn.name }}</h4>
+                <p class="mm-fn__plain">{{ fn.plain }}</p>
+              </div>
+            </div>
+            {% for stage in mm.stages %}
+            <div class="mm-cell mm-cell--{{ forloop.index0 }} mm-c mm-c--{{ forloop.index0 }}{% if forloop.index0 == ex_index %} is-now{% elsif forloop.index0 > ex_index %} is-ahead{% endif %}">
+              {% if forloop.index0 == ex_index %}<span class="mm-tag mm-ex-only">Now</span>{% endif %}
+              <span class="mm-sr-only">{{ stage.name }}: </span>
+              <span>{{ fn.stages[stage.id] }}</span>
+              {% if forloop.index0 > ex_index %}<span class="mm-sr-only mm-ex-only"> (not yet reached)</span>{% endif %}
+            </div>
+            {% endfor %}
+          </div>
+          {% endfor %}
+        </div>
+      </section>
+      {% endfor %}
+
+    </div>
   </div>
 
-  <p class="mm-source">
-    <a href="{{ mm.source.url }}" target="_blank" rel="noopener">{{ mm.source.text }}</a>
-  </p>
-
-  <script type="application/json" data-mm-data>{{ mm | jsonify }}</script>
+  <p class="mm-footnote">{{ mm.footnote | replace: "CISA Zero Trust Maturity Model, Version 2.0", source_link }}</p>
 </div>
