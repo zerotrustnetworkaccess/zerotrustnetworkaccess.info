@@ -185,7 +185,7 @@ body.ztna-mnav-open {
   overflow: hidden;
 }
 
-@media (min-width: $breakpoint-lg) {
+@media (min-width: $breakpoint-xl) {
   .ztna-mnav,
   .ztna-mnav__toggle {
     display: none !important;

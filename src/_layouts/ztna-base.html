@@ -11,9 +11,15 @@
       href="{{relative_url}}/assets/images/favicon.png"
     />
     <title>
-      {% if page.title %} {{ page.title }} {% else %} {{
+      {% if page.seo_title %} {{ page.seo_title }} {% elsif page.title %} {{ page.title }} {% else %} {{
       site.data.general_settings.title }}{% endif %}
     </title>
+    {% if page.canonical_url %}
+    <link rel="canonical" href="{{ page.canonical_url }}" />
+    {% endif %}
+    {% if page.structured_data %}
+    {% include {{ page.structured_data }} %}
+    {% endif %}
     <link
       rel="stylesheet"
       type="text/css"

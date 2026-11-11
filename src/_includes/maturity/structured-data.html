@@ -1,0 +1,31 @@
+{% assign mm = site.data.maturity %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": {{ page.seo_title | jsonify }},
+  "headline": {{ page.sub_title | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "url": {{ page.canonical_url | jsonify }},
+  "inLanguage": "en",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": {{ site.data.general_settings.title | jsonify }},
+    "url": "https://zerotrustnetworkaccess.info/"
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "Zero Trust Maturity Model"
+  },
+  "isBasedOn": {
+    "@type": "CreativeWork",
+    "name": "Zero Trust Maturity Model, Version 2.0",
+    "datePublished": "2023-04",
+    "url": {{ mm.source_url | jsonify }},
+    "author": {
+      "@type": "GovernmentOrganization",
+      "name": "Cybersecurity and Infrastructure Security Agency"
+    }
+  }
+}
+</script>

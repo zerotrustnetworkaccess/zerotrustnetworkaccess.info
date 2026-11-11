@@ -1,0 +1,498 @@
+# Content for the Zero Trust Maturity Model page (/maturity-model).
+#
+# Adapted and condensed from CISA's Zero Trust Maturity Model, Version 2.0
+# (April 2023), Tables 2–7: https://www.cisa.gov/zero-trust-maturity-model
+# Keep wording impartial and technical, with no vendor or product names.
+#
+# Stage ids (traditional, initial, advanced, optimal) are used as keys below:
+# every `summary` and every function's `stages` needs all four.
+
+intro: "Traditional security trusts whatever is inside the network perimeter. Zero Trust verifies every request. CISA breaks the journey into five pillars, each with its own functions, and three capabilities that run through all of them. Every function matures through four stages, often at a different pace from the others."
+
+how_to_read:
+  title: "How to read this"
+  text: "Rows are pillars. Open one to see each function and how it changes from Traditional to Optimal. Select a stage to focus on it."
+
+# The arrow above the stage headers.
+scale:
+  from: "Siloed, static and manual"
+  to: "Integrated, dynamic and automated"
+
+# Which group is open when the page loads: a group id from `groups`, or "none".
+default_open: networks
+
+footnote: "Adapted and condensed from CISA Zero Trust Maturity Model, Version 2.0 (April 2023), Tables 2–7. CISA wording refers to federal agencies; here it is written for any organisation."
+source_url: "https://www.cisa.gov/zero-trust-maturity-model"
+
+# Lowest to highest. `points` appear in the panel when a stage is selected.
+stages:
+  - id: traditional
+    name: "Traditional"
+    short: "Manual, static, one pillar at a time"
+    points:
+      - "Lifecycles and security settings configured by hand"
+      - "Static policies and tools that each address one pillar"
+      - "Least privilege set only when access is first granted"
+      - "Policy enforced in silos"
+      - "Response and mitigation done manually"
+      - "Little correlation between logs, telemetry and dependencies"
+  - id: initial
+    name: "Initial"
+    short: "First automation and cross-pillar links"
+    points:
+      - "Automation of settings and lifecycles begins"
+      - "First policy decisions and enforcement automated"
+      - "Early solutions that span more than one pillar"
+      - "Some least-privilege changes after access is granted"
+      - "Combined visibility across internal systems"
+  - id: advanced
+    name: "Advanced"
+    short: "Automated, centralised, risk-informed"
+    points:
+      - "Automated lifecycle and configuration control, coordinated across pillars"
+      - "Centralised visibility and identity control"
+      - "Policy enforcement integrated across pillars"
+      - "Pre-defined responses to known threats"
+      - "Access adjusted based on risk and security posture"
+      - "Building towards organisation-wide awareness, including external resources"
+  - id: optimal
+    name: "Optimal"
+    short: "Continuous, dynamic, fully integrated"
+    points:
+      - "Fully automated, just-in-time lifecycles with assets reporting their own state"
+      - "Dynamic policies triggered by what is observed"
+      - "Just-in-time, just-enough access for every asset and its dependencies"
+      - "Pillars interoperate with continuous monitoring"
+      - "Centralised visibility and full situational awareness"
+
+# The three cross-cutting capabilities. A function with `capability: <id>`
+# gets this marker and is highlighted when the capability is traced.
+# shape: circle | square | diamond. colour: blue-2 | violet-2 | pink.
+capabilities:
+  - id: visibility
+    name: "Visibility and Analytics"
+    shape: circle
+    colour: blue-2
+    explanation: "Seeing what is happening across users, devices, networks, applications and data, so access decisions and responses are based on evidence. It appears inside every pillar and as an organisation-wide capability."
+  - id: automation
+    name: "Automation and Orchestration"
+    shape: square
+    colour: violet-2
+    explanation: "Acting on what visibility reveals, quickly and consistently, without waiting for manual work. Automation lets a signal in one pillar trigger action in another."
+  - id: governance
+    name: "Governance"
+    shape: diamond
+    colour: pink
+    explanation: "The rules each pillar follows, and how they are enforced. As maturity grows, policies move from static and manually enforced to unified and dynamically enforced."
+
+cross_cutting:
+  label: "Cross-cutting capabilities"
+  text: "These run underneath every pillar and connect them together"
+
+# Shown when "Example organisation" is switched on. Each function's
+# `example` is the stage this made-up organisation has reached.
+example:
+  title: "An example organisation"
+  text: "Each function sits at its own stage. This organisation is mostly Advanced in Networks and Identity, mostly Initial in Devices and Applications, and mostly Traditional in Data. Zero Trust maturity is a profile across functions, not a single score."
+
+# The five pillars, then the organisation-wide group (cross: true).
+# `summary` is the one-line view shown while a group is closed.
+groups:
+  - id: identity
+    name: "Identity"
+    question: "Who is requesting access?"
+    summary:
+      traditional: "Passwords, permanent access"
+      initial: "MFA, some stores combined"
+      advanced: "Phishing-resistant MFA, need-based access"
+      optimal: "Continuous validation, just-in-time access"
+    functions:
+      - name: "Authentication"
+        plain: "Proving a user or system is who it claims to be"
+        example: advanced
+        stages:
+          traditional: "Passwords or MFA, with static access once signed in."
+          initial: "MFA, possibly with a password as one factor, also checking attributes such as location or activity."
+          advanced: "Phishing-resistant MFA for all identities begins, including passwordless MFA via FIDO2 or PIV."
+          optimal: "Identity validated continuously with phishing-resistant MFA, not only when access is first granted."
+      - name: "Identity stores"
+        plain: "Where user and system accounts are held"
+        example: advanced
+        stages:
+          traditional: "Only self-managed, on-premises identity stores."
+          initial: "Mix of self-managed and hosted (e.g. cloud) stores with minimal integration, such as single sign-on."
+          advanced: "Some self-managed and hosted stores securely consolidated and integrated."
+          optimal: "Identity stores securely integrated across all partners and environments."
+      - name: "Risk assessments"
+        plain: "Judging how likely it is that an identity is compromised"
+        example: initial
+        stages:
+          traditional: "Limited assessment of identity risk."
+          initial: "Risk judged using manual methods and static rules."
+          advanced: "Some automated analysis and dynamic rules inform access decisions and response."
+          optimal: "Risk assessed in real time through continuous analysis and dynamic rules."
+      - name: "Access management"
+        plain: "Deciding what each identity may do, and for how long"
+        example: advanced
+        stages:
+          traditional: "Permanent access with periodic review, for privileged and standard accounts."
+          initial: "Access, including privileged access, expires and is reviewed automatically."
+          advanced: "Need-based and session-based access, tailored to specific actions and resources."
+          optimal: "Automated just-in-time, just-enough access for each individual action and resource."
+      - name: "Visibility and analytics"
+        plain: "Collecting and analysing user and system activity logs"
+        capability: visibility
+        example: initial
+        stages:
+          traditional: "Activity logs collected, especially for privileged accounts, with some routine manual analysis."
+          initial: "Routine manual and some automated analysis, with limited correlation between log types."
+          advanced: "Automated analysis across some log types; collection extended to close visibility gaps."
+          optimal: "Full visibility through automated analysis of user activity, including behaviour-based analytics."
+      - name: "Automation and orchestration"
+        plain: "Creating, changing and removing identities"
+        capability: automation
+        example: initial
+        stages:
+          traditional: "Onboarding, offboarding and disabling done by hand, with little integration."
+          initial: "Privileged and external identities managed by hand; standard users and self-managed systems automated."
+          advanced: "Only privileged identities managed by hand; all others automated and integrated across environments."
+          optimal: "All identities automated and fully integrated, driven by behaviour, enrolment and deployment needs."
+      - name: "Governance"
+        plain: "Rules for authentication, credentials, access and lifecycle"
+        capability: governance
+        example: advanced
+        stages:
+          traditional: "Identity policies enforced through static technical controls and manual review."
+          initial: "Organisation-wide identity policies defined and rolled out, with minimal automation."
+          advanced: "Organisation-wide policies enforced with automation and updated periodically."
+          optimal: "Fully automated policies for every user and system, continuously enforced and dynamically updated."
+
+  - id: devices
+    name: "Devices"
+    question: "What is connecting?"
+    summary:
+      traditional: "Little visibility, managed by hand"
+      initial: "Inventory and self-reported checks"
+      advanced: "Verified health, central protection"
+      optimal: "Continuously verified, automated lifecycle"
+    functions:
+      - name: "Policy enforcement and compliance"
+        plain: "Checking devices meet security rules, and acting when they don’t"
+        example: initial
+        stages:
+          traditional: "Little or no visibility of device compliance; few ways to enforce policy or manage software, configuration and vulnerabilities."
+          initial: "Devices self-report their characteristics but enforcement is limited. A basic process approves software and pushes updates."
+          advanced: "Device state verified at first access; compliance enforced for most devices. Software approval, vulnerability detection and patching automated."
+          optimal: "Compliance continuously verified and enforced for the device’s whole life. Device, software, configuration and vulnerability management integrated everywhere."
+      - name: "Asset and supply chain risk"
+        plain: "Knowing every device you have, and the risks in how it was sourced"
+        example: initial
+        stages:
+          traditional: "Assets not tracked organisation-wide; buying devices and services handled ad hoc."
+          initial: "All physical and some virtual assets tracked; supply chain risk managed against a framework such as NIST SCRM."
+          advanced: "An automated, cross-vendor view of assets develops, verifying acquisitions and third-party assessments."
+          optimal: "Near real-time view of all assets across suppliers; supply chain risk management automated and resilient to supplier failure."
+      - name: "Resource access"
+        plain: "Whether a device’s condition affects what it can reach"
+        example: traditional
+        stages:
+          traditional: "No visibility required of devices used to access resources."
+          initial: "Some devices must report their characteristics before access is approved."
+          advanced: "Access decisions consider verified device insights."
+          optimal: "Access decisions consider real-time risk analytics from the device."
+      - name: "Device threat protection"
+        plain: "Protection against malware and attacks on the device"
+        example: advanced
+        stages:
+          traditional: "Threat protection deployed by hand to some devices."
+          initial: "Some automated deployment and updating, loosely linked to policy and compliance."
+          advanced: "Protection consolidated into central tools and mostly integrated with policy and compliance."
+          optimal: "Centralised, advanced protection on all devices, unified with policy enforcement and compliance monitoring."
+      - name: "Visibility and analytics"
+        plain: "Keeping an inventory and spotting unusual devices"
+        capability: visibility
+        example: initial
+        stages:
+          traditional: "Physically labelled inventory and limited software monitoring, reviewed by hand."
+          initial: "Digital identifiers alongside a manual inventory; some devices scanned automatically for anomalies."
+          advanced: "Inventory collection and anomaly detection automated, with endpoint monitoring on all standard user devices."
+          optimal: "Status of every connected device collected automatically and correlated with identity to inform access."
+      - name: "Automation and orchestration"
+        plain: "Setting up, registering and retiring devices"
+        capability: automation
+        example: initial
+        stages:
+          traditional: "Devices provisioned, configured and registered by hand."
+          initial: "Tools and scripts begin to automate provisioning, registration and retirement."
+          advanced: "Non-compliant devices identified automatically, then disconnected or isolated by hand."
+          optimal: "Provisioning, monitoring, isolation, remediation and retirement fully automated."
+      - name: "Governance"
+        plain: "Rules for each stage of a device’s life, from purchase to disposal"
+        capability: governance
+        example: initial
+        stages:
+          traditional: "Some lifecycle policies; updating, patching and sanitising done by hand."
+          initial: "Policies set and enforced for procurement, non-traditional devices and regular scanning."
+          advanced: "Organisation-wide lifecycle policies, including accountability, with some automated enforcement."
+          optimal: "Lifecycle policies automated for every connected device and virtual asset."
+
+  - id: networks
+    name: "Networks"
+    question: "How is connectivity controlled?"
+    summary:
+      traditional: "Large perimeter, VPN tunnels"
+      initial: "Critical workloads isolated"
+      advanced: "Micro-perimeters, all traffic encrypted"
+      optimal: "Dynamic micro-segmentation"
+    functions:
+      - name: "Network segmentation"
+        plain: "Dividing the network so reaching one system doesn’t expose the rest"
+        example: advanced
+        stages:
+          traditional: "Large perimeter with few internal restrictions; bulk VPN tunnels connect many services."
+          initial: "Critical workloads isolated; connectivity limited to what is needed; move towards service-specific connections."
+          advanced: "Micro-perimeters around endpoints and applications extend across more of the network."
+          optimal: "Fully distributed micro-perimeters and extensive micro-segmentation, with just-in-time, just-enough service-specific connections."
+      - name: "Traffic management"
+        plain: "Controlling how traffic flows, based on each application’s needs"
+        example: advanced
+        stages:
+          traditional: "Static rules set by hand at provisioning; limited monitoring and manual audits."
+          initial: "Application profiles defined and applications mapped to them; static rules audited periodically."
+          advanced: "Dynamic rules adapted periodically using automated, risk-aware assessments."
+          optimal: "Dynamic rules evolve continuously, reprioritising applications by criticality and risk."
+      - name: "Traffic encryption"
+        plain: "Protecting data as it travels, and managing the keys"
+        example: advanced
+        stages:
+          traditional: "Minimal traffic encrypted; keys managed by hand or ad hoc."
+          initial: "All traffic to internal applications encrypted; external encryption preferred; key management formalised."
+          advanced: "All applicable internal and external traffic encrypted; key and certificate rotation managed; crypto agility begins."
+          optimal: "Traffic encrypted as appropriate, least-privilege key management everywhere, crypto agility as widely as possible."
+      - name: "Network resilience"
+        plain: "Keeping services available when demand changes or something fails"
+        example: initial
+        stages:
+          traditional: "Capabilities configured case by case; limited resilience for non-critical workloads."
+          initial: "Availability managed for more applications; resilience extended to non-critical workloads."
+          advanced: "Availability and resilience managed dynamically for most applications."
+          optimal: "Adapts to changing availability demands for all workloads, with proportionate resilience."
+      - name: "Visibility and analytics"
+        plain: "Monitoring network traffic to detect threats"
+        capability: visibility
+        example: initial
+        stages:
+          traditional: "Limited monitoring at the network boundary, with minimal analysis."
+          initial: "Monitoring for known signs of compromise; telemetry begins to be correlated across environments."
+          advanced: "Anomaly-based detection across all environments; automated threat hunting."
+          optimal: "Visibility across all networks, with telemetry correlated automatically across every detection source."
+      - name: "Automation and orchestration"
+        plain: "Configuring and managing network resources"
+        capability: automation
+        example: initial
+        stages:
+          traditional: "Network configuration and lifecycle managed by hand."
+          initial: "Some networks managed automatically; every resource has a defined lifetime."
+          advanced: "All networks managed through automated change management such as CI/CD."
+          optimal: "Networks defined as infrastructure-as-code, created and expired automatically as needs change."
+      - name: "Governance"
+        plain: "Policies for access, protocols, segmentation and alerts"
+        capability: governance
+        example: advanced
+        stages:
+          traditional: "Static policies focused on protecting the perimeter."
+          initial: "Policies tailored to individual segments and resources, inheriting organisation-wide rules."
+          advanced: "Tailored policies applied with automation; move away from perimeter-focused protection."
+          optimal: "Organisation-wide policies allow tailored local controls, dynamic updates and secure external connections based on user and application workflows."
+
+  - id: applications
+    name: "Applications and Workloads"
+    question: "What systems can be accessed?"
+    summary:
+      traditional: "Static permissions, VPN access"
+      initial: "Context-aware, some public access"
+      advanced: "Automated decisions, most apps public"
+      optimal: "Continuously authorised, immutable"
+    functions:
+      - name: "Application access"
+        plain: "Deciding who can use each application"
+        example: initial
+        stages:
+          traditional: "Access authorised locally using static attributes."
+          initial: "Each request checked with context such as identity and device compliance, with expiry."
+          advanced: "Decisions automated with more context and enforced expiry, following least privilege."
+          optimal: "Access authorised continuously using real-time risk analytics and behaviour or usage patterns."
+      - name: "Threat protections"
+        plain: "Protecting applications against attack"
+        example: initial
+        stages:
+          traditional: "General-purpose protection against known threats, minimally integrated."
+          initial: "Protection built into critical application workflows, covering known and some app-specific threats."
+          advanced: "Protection built into all application workflows, covering app-specific and targeted threats."
+          optimal: "Advanced, content-aware protection in all workflows, with real-time visibility of sophisticated attacks."
+      - name: "Accessible applications"
+        plain: "How authorised users reach applications"
+        example: initial
+        stages:
+          traditional: "Critical applications reachable only over private networks or VPN, with monitoring."
+          initial: "Some critical applications available over public networks to authorised users via brokered connections."
+          advanced: "Most critical applications available over public networks to authorised users."
+          optimal: "All applicable applications available over public networks to authorised users and devices."
+      - name: "Secure development and deployment"
+        plain: "How code moves from development into production"
+        example: initial
+        stages:
+          traditional: "Ad hoc development, test and production environments; unreliable deployment."
+          initial: "Formal CI/CD pipelines with least-privilege access controls."
+          advanced: "Separate development, security and operations teams; developers lose direct access to production."
+          optimal: "Immutable workloads changed only by redeployment; administrator access replaced by automation."
+      - name: "Application security testing"
+        plain: "Finding weaknesses in applications"
+        example: traditional
+        stages:
+          traditional: "Mostly manual testing before deployment."
+          initial: "Static and dynamic testing, with expert review, before deployment."
+          advanced: "Testing built into development and deployment, with periodic dynamic testing."
+          optimal: "Testing throughout the development lifecycle, with routine automated testing of live applications."
+      - name: "Visibility and analytics"
+        plain: "Monitoring application health, performance and security"
+        capability: visibility
+        example: initial
+        stages:
+          traditional: "Some monitoring of critical applications, with limited aggregation."
+          initial: "Health, performance and security monitoring begins to be automated."
+          advanced: "Automated monitoring of most applications, with heuristics to find trends."
+          optimal: "Continuous, dynamic monitoring across all applications."
+      - name: "Automation and orchestration"
+        plain: "Configuring where applications run and who can reach them"
+        capability: automation
+        example: traditional
+        stages:
+          traditional: "Hosting location and access set by hand at provisioning, rarely reviewed."
+          initial: "Configurations changed periodically to meet security and performance goals."
+          advanced: "Configurations automated in response to operational and environmental changes."
+          optimal: "Configurations automated to continuously optimise security and performance."
+      - name: "Governance"
+        plain: "Policies for access, development, deployment, patching and dependencies"
+        capability: governance
+        example: initial
+        stages:
+          traditional: "Policies enforced mainly by hand."
+          initial: "Enforcement begins to be automated, e.g. tracking dependencies with a Software Bill of Materials."
+          advanced: "Tiered, tailored policies across the development and deployment lifecycle, automated where possible."
+          optimal: "Policies fully automated, with dynamic updates through the CI/CD pipeline."
+
+  - id: data
+    name: "Data"
+    question: "What information is protected?"
+    summary:
+      traditional: "Limited visibility, manual labels"
+      initial: "Inventory and labels begin"
+      advanced: "Automated labels, attribute-based access"
+      optimal: "Continuous discovery, dynamic access"
+    functions:
+      - name: "Data inventory"
+        plain: "Knowing what data you have and where it is"
+        example: traditional
+        stages:
+          traditional: "Some data, such as mission-critical data, identified by hand."
+          initial: "Inventory automated for most data on-premises and in the cloud; data loss protection begins."
+          advanced: "All applicable data inventoried automatically; loss prevention based on static labels."
+          optimal: "Continuous inventory, with loss prevention that dynamically blocks suspected exfiltration."
+      - name: "Data categorisation"
+        plain: "Labelling data by sensitivity"
+        example: initial
+        stages:
+          traditional: "Limited, ad hoc categorisation."
+          initial: "Defined labels, enforced by hand."
+          advanced: "Some categorisation and labelling automated in a consistent, tiered way."
+          optimal: "Categorisation and labelling automated organisation-wide for all data types."
+      - name: "Data availability"
+        plain: "Making sure data is there when needed"
+        example: initial
+        stages:
+          traditional: "Mostly served from on-premises stores with some off-site backups."
+          initial: "Some data served from redundant, highly available stores such as cloud."
+          advanced: "Mostly served from redundant stores, with access to historical data."
+          optimal: "Availability optimised dynamically according to user and system need."
+      - name: "Data access"
+        plain: "Who can read, change, copy or share data"
+        example: traditional
+        stages:
+          traditional: "Static access controls."
+          initial: "Automated controls with elements of least privilege."
+          advanced: "Automated controls based on identity, device risk, application and data category; time-limited where applicable."
+          optimal: "Dynamic just-in-time, just-enough access with continuous review of permissions."
+      - name: "Data encryption"
+        plain: "Protecting stored and moving data, and the keys"
+        example: initial
+        stages:
+          traditional: "Minimal data encrypted; keys managed by hand."
+          initial: "All data in transit encrypted, and data at rest where feasible; key management formalised."
+          advanced: "All data at rest and in transit encrypted where possible; keys rotated, never hard-coded."
+          optimal: "Data in use encrypted where appropriate; least-privilege key management and crypto agility."
+      - name: "Visibility and analytics"
+        plain: "Understanding where data is and how it is used"
+        capability: visibility
+        example: traditional
+        stages:
+          traditional: "Limited visibility of data location, access and usage; manual analysis."
+          initial: "Visibility from inventory, labels, encryption and access attempts, with some automated analysis."
+          advanced: "Organisation-wide visibility with automated correlation; predictive analytics begin."
+          optimal: "Visibility across the full data lifecycle, with predictive analytics and continuous posture assessment."
+      - name: "Automation and orchestration"
+        plain: "Applying lifecycle and security policies to data"
+        capability: automation
+        example: traditional
+        stages:
+          traditional: "Lifecycle and security policies applied by hand or ad hoc."
+          initial: "Some policies applied automatically."
+          advanced: "Policies applied mainly through automation for most data."
+          optimal: "Lifecycles and security policies automated as far as possible for all data."
+      - name: "Governance"
+        plain: "Rules for protecting, storing, retaining and removing data"
+        capability: governance
+        example: traditional
+        stages:
+          traditional: "Ad hoc data governance policies, implemented by hand."
+          initial: "High-level policies defined; implementation mostly manual and fragmented."
+          advanced: "Lifecycle enforcement begins to be integrated across the organisation."
+          optimal: "Policies unified and dynamically enforced across the organisation."
+
+  - id: organisation
+    name: "Across the organisation"
+    question: "The three capabilities, independent of any pillar"
+    cross: true
+    summary:
+      traditional: "Manual, ad hoc, low-fidelity"
+      initial: "Automation begins for critical functions"
+      advanced: "Automated and correlated organisation-wide"
+      optimal: "Dynamic, continuous, fully automated"
+    functions:
+      - name: "Visibility and Analytics"
+        plain: "Seeing what is happening, so decisions are based on evidence"
+        capability: visibility
+        example: initial
+        stages:
+          traditional: "Limited logs collected by hand, with low fidelity and minimal analysis."
+          initial: "Log and event collection and analysis automated for critical functions; visibility gaps assessed regularly."
+          advanced: "Automated collection across the organisation, including virtual environments, with central correlation across sources."
+          optimal: "Comprehensive visibility through central, dynamic monitoring and advanced analysis of logs and events."
+      - name: "Automation and Orchestration"
+        plain: "Acting on what you see, quickly and consistently"
+        capability: automation
+        example: initial
+        stages:
+          traditional: "Static, manual processes for operations and response, with limited automation."
+          initial: "Automated orchestration and response begins for critical functions."
+          advanced: "Orchestration and response automated organisation-wide, using context from multiple sources."
+          optimal: "Orchestration and response adapt dynamically to changing requirements and conditions."
+      - name: "Governance"
+        plain: "The rules every pillar follows"
+        capability: governance
+        example: initial
+        stages:
+          traditional: "Ad hoc policies, enforced manually or through static mechanisms."
+          initial: "Organisation-wide policies defined, with minimal automation and manual updates."
+          advanced: "Tiered, tailored policies, automated where possible; access decisions use context from multiple sources."
+          optimal: "Fully automated policies with tailored local controls, continuous enforcement and dynamic updates."

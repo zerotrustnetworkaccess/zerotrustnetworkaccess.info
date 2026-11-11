@@ -1,0 +1,801 @@
+// CISA Zero Trust Maturity Model page (/maturity-model).
+// Markup: _includes/maturity/explorer.html. Behaviour: assets/js/ztna-maturity.js.
+//
+// State lives on the .mm root:
+//   .is-js          JS is running (toolbar shown, groups can collapse)
+//   .is-mounted     intro animation has started
+//   .is-example     "Example organisation" overlay
+//   [data-focus=N]  stage N (0-3) is focused
+//   [data-cap]      a capability is being traced; matching rows get .is-lit
+
+@import "ztna-colors.scss";
+@import "ztna-typography.scss";
+
+$mm-label-col: 230px;
+$mm-matrix-min: 1040px;
+$mm-ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+$mm-card-radius: 12px;
+$mm-pill-radius: 25px;
+
+// Solid fills used while a group is closed, Traditional to Optimal.
+$mm-fills: $background-color, $pale-blue, $logo-blue, $violet-1;
+$mm-fill-text: $light-text-1, $dark-text, $dark-text, $white;
+$mm-tints: $stage-tint-1, $stage-tint-2, $stage-tint-3, $stage-tint-4;
+$mm-accents: $light-text-3, $light-blue-1, $dark-blue-1, $violet-1;
+
+$mm-cols-default: minmax(150px, 1fr) minmax(150px, 1fr) minmax(150px, 1fr) minmax(150px, 1fr);
+
+@function mm-focus-cols($focus) {
+  $cols: ();
+  @for $i from 0 through 3 {
+    @if $i == $focus {
+      $cols: append($cols, minmax(200px, 1.9fr), space);
+    } @else {
+      $cols: append($cols, minmax(120px, 0.8fr), space);
+    }
+  }
+  @return $cols;
+}
+
+.mm {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 40px 24px 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  color: $dark-text;
+  font-family: $fontfamily-inter;
+
+  p {
+    margin: 0;
+  }
+
+  button {
+    font-family: inherit;
+    color: inherit;
+  }
+
+  // !important beats the theme's global `button:focus { outline: none !important }`
+  // (assets/css/style.css) so keyboard users get a visible focus ring here.
+  button:focus-visible,
+  .mm-scroll:focus-visible {
+    outline: 2px solid $dark-blue-1 !important;
+    outline-offset: 2px;
+  }
+
+  a {
+    color: $dark-blue-1;
+    font-weight: 500;
+  }
+}
+
+.mm-sr-only {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.mm:not(.is-js) .mm-js-only,
+.mm:not(.is-example) .mm-ex-only {
+  display: none !important;
+}
+
+.mm-eyebrow {
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  line-height: 1.3;
+  text-transform: uppercase;
+  color: $light-text-1;
+}
+
+// ---------------------------------------------------------------- Intro
+
+.mm-intro {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 56px;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  &__lede {
+    max-width: 640px;
+    font-size: 15px;
+    line-height: 1.65;
+    color: $light-text-1;
+  }
+
+  &__how {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-width: 360px;
+  }
+
+  &__how-title {
+    font-size: 12.5px;
+    font-weight: 600;
+    line-height: 1.55;
+    color: $dark-text;
+  }
+
+  &__how-text {
+    font-size: 12.5px;
+    line-height: 1.55;
+    color: $light-text-1;
+  }
+}
+
+// -------------------------------------------------------------- Toolbar
+
+.mm-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 22px;
+  padding: 12px 0;
+  border-top: 1px solid $divider;
+  border-bottom: 1px solid $divider;
+
+  &__set {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+
+    .mm-eyebrow {
+      margin-right: 4px;
+    }
+  }
+
+  &__set--end {
+    margin-left: auto;
+  }
+}
+
+.mm-btn,
+.mm-chip,
+.mm-toggle {
+  appearance: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 14px;
+  border: 1px solid $border-light;
+  border-radius: $mm-pill-radius;
+  background: $white;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: $dark-text;
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+
+  &:hover {
+    border-color: $light-text-3;
+    background: $background-color;
+  }
+}
+
+.mm-chip {
+  padding: 6px 12px 6px 10px;
+
+  &[aria-pressed="true"] {
+    border-color: $dark-text;
+    background: $dark-text;
+    color: $white;
+  }
+}
+
+.mm-toggle {
+  padding: 6px 14px 6px 8px;
+  gap: 8px;
+
+  &__track {
+    position: relative;
+    flex: none;
+    width: 26px;
+    height: 15px;
+    border-radius: $mm-pill-radius;
+    background: $border-light;
+    transition: background-color 0.2s;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: $white;
+      transition: transform 0.2s;
+    }
+  }
+
+  &[aria-pressed="true"] {
+    border-color: $light-blue-1;
+    background: rgba($light-blue-1, 0.08);
+
+    .mm-toggle__track {
+      background: $dark-blue-1;
+    }
+
+    .mm-toggle__track::after {
+      transform: translateX(11px);
+    }
+  }
+}
+
+// ---------------------------------------------- Capability markers
+
+.mm-mark {
+  display: inline-block;
+  flex: none;
+  width: 9px;
+  height: 9px;
+  border-radius: 2px;
+
+  &--circle {
+    border-radius: 50%;
+  }
+
+  &--diamond {
+    transform: rotate(45deg) scale(0.85);
+  }
+
+  &--blue-2 {
+    background: $light-blue-2;
+  }
+
+  &--violet-2 {
+    background: $violet-2;
+  }
+
+  &--pink {
+    background: $pink;
+  }
+
+  &--empty {
+    border: 1.5px solid $border-light;
+  }
+
+  .mm-chip & {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+// ----------------------------------------- Note bar and focus panel
+
+.mm-note:empty,
+.mm-focus:empty {
+  display: none;
+}
+
+.mm-note__box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 20px;
+  align-items: baseline;
+  padding: 14px 18px;
+  border-radius: $mm-card-radius;
+  background: $background-color;
+}
+
+.mm-note__title {
+  font-size: 15px;
+  font-weight: 600;
+  color: $dark-text;
+}
+
+.mm-note__text {
+  flex: 1 1 420px;
+  font-size: 13px;
+  line-height: 1.55;
+  color: $light-text-1;
+}
+
+.mm-focus__panel {
+  grid-column: span 4;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px 18px;
+  border: 1px solid $light-text-3;
+  border-radius: $mm-card-radius;
+  background: $stage-tint-1;
+}
+
+.mm-focus__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.mm-focus__title {
+  font-size: 15px;
+  font-weight: 600;
+  color: $dark-text;
+}
+
+.mm-focus__clear {
+  appearance: none;
+  cursor: pointer;
+  flex: none;
+  padding: 4px 10px;
+  border: none;
+  border-radius: $mm-pill-radius;
+  background: none;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $light-text-1;
+
+  &:hover {
+    background: $white;
+  }
+}
+
+.mm-focus__points {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 8px 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    position: relative;
+    padding-left: 14px;
+    font-size: 12.5px;
+    line-height: 1.5;
+    color: $light-text-1;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 7px;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: $light-blue-1;
+    }
+  }
+}
+
+// --------------------------------------------------------------- Matrix
+
+// The matrix keeps its full width and scrolls inside this container, so
+// the page itself never scrolls sideways.
+// position: relative keeps the visually hidden labels inside the scroller;
+// without it they are placed against the page and widen it on mobile.
+.mm-scroll {
+  position: relative;
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 0 -4px;
+  padding: 4px 4px 8px;
+  border-radius: 4px;
+}
+
+.mm-matrix {
+  min-width: $mm-matrix-min;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mm-row {
+  display: grid;
+  grid-template-columns: $mm-label-col $mm-cols-default;
+  gap: 6px;
+  align-items: stretch;
+  transition: grid-template-columns 0.45s $mm-ease, opacity 0.3s, background-color 0.3s;
+}
+
+@for $i from 0 through 3 {
+  .mm[data-focus="#{$i}"] .mm-row {
+    grid-template-columns: $mm-label-col mm-focus-cols($i);
+  }
+
+  .mm[data-focus="#{$i}"] .mm-c:not(.mm-c--#{$i}) {
+    opacity: 0.35;
+  }
+}
+
+.mm-c {
+  transition: opacity 0.3s, background-color 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.2s;
+}
+
+.mm-scale {
+  grid-column: span 4;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: $light-text-1;
+
+  &__line {
+    position: relative;
+    flex: 1;
+    height: 1px;
+    background: $light-text-3;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: -1px;
+      top: -4px;
+      border-left: 7px solid $light-blue-1;
+      border-top: 4.5px solid transparent;
+      border-bottom: 4.5px solid transparent;
+    }
+  }
+
+  &__to {
+    color: $violet-1;
+  }
+}
+
+.mm-row__corner {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 8px;
+}
+
+.mm-stage {
+  appearance: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 10px;
+  text-align: left;
+  border: 1px solid transparent;
+  border-radius: $mm-card-radius;
+  background: transparent;
+
+  &:hover {
+    background: $background-color;
+  }
+
+  &[aria-pressed="true"] {
+    border-color: $light-blue-1;
+    background: rgba($light-blue-1, 0.07);
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__bar {
+    flex: none;
+    width: 14px;
+    height: 4px;
+    border-radius: 2px;
+  }
+
+  @for $i from 1 through 4 {
+    &__bar--#{$i - 1} {
+      background: nth($mm-accents, $i);
+    }
+  }
+
+  &__name {
+    font-size: 16px;
+    font-weight: 600;
+    color: $dark-text;
+  }
+
+  &__short {
+    font-size: 11.5px;
+    line-height: 1.45;
+    color: $light-text-1;
+  }
+}
+
+// --------------------------------------------------------------- Groups
+
+.mm-group {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 6px;
+  border-bottom: 1px solid $divider;
+}
+
+// Intro: groups fade and rise in, 70ms apart.
+.mm.is-js .mm-group {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition-delay: calc(var(--mm-i, 0) * 70ms);
+}
+
+.mm.is-js.is-mounted .mm-group {
+  opacity: 1;
+  transform: none;
+}
+
+.mm.is-js.is-intro-done .mm-group {
+  transition: none;
+  transform: none;
+}
+
+.mm-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 0 4px;
+
+  &__line {
+    flex: 1;
+    height: 1px;
+    background: $divider;
+  }
+
+  &__text {
+    font-size: 11.5px;
+    color: $light-text-1;
+  }
+}
+
+.mm-group__heading {
+  margin: 0;
+  font: inherit;
+}
+
+.mm-group__toggle {
+  appearance: none;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  padding: 10px 8px 10px 0;
+  text-align: left;
+  border: none;
+  border-radius: $mm-card-radius;
+  background: none;
+}
+
+.mm-group__chev {
+  display: inline-block;
+  flex: none;
+  width: 12px;
+  margin-top: 1px;
+  font-size: 20px;
+  line-height: 1;
+  color: $light-text-1;
+  transition: transform 0.25s;
+
+  [aria-expanded="true"] > & {
+    transform: rotate(90deg);
+  }
+}
+
+.mm-group__text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.mm-group__name {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.15;
+  color: $dark-text;
+}
+
+.mm-group__question {
+  font-size: 12px;
+  line-height: 1.4;
+  color: $light-text-1;
+}
+
+.mm-group__count {
+  margin-top: 2px;
+  font-size: 11px;
+  font-weight: 500;
+  color: $dark-blue-1;
+}
+
+.mm-group__body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 2px 0 10px;
+
+  &[hidden] {
+    display: none;
+  }
+}
+
+.mm-sum {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 6px;
+  min-height: 64px;
+  padding: 10px 12px;
+  border: 1.5px solid transparent;
+  border-radius: $mm-card-radius;
+  font-size: 12.5px;
+  font-weight: 600;
+  line-height: 1.3;
+
+  @for $i from 1 through 4 {
+    &--#{$i - 1} {
+      background: nth($mm-fills, $i);
+      color: nth($mm-fill-text, $i);
+    }
+
+    .mm-group--cross &--#{$i - 1} {
+      background: nth($mm-tints, $i);
+      color: $dark-text;
+      border-color: $divider;
+    }
+  }
+}
+
+// ------------------------------------------------------------ Functions
+
+.mm-fn {
+  border-radius: $mm-card-radius;
+}
+
+.mm-fn__label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 9px 10px 9px 22px;
+
+  .mm-mark {
+    margin-top: 3px;
+  }
+}
+
+.mm-fn__text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.mm-fn__name {
+  margin: 0;
+  font-family: $fontfamily-inter;
+  font-size: 12.5px;
+  font-weight: 600;
+  line-height: 1.3;
+  text-transform: none;
+  color: $dark-text;
+}
+
+.mm .mm-fn__plain {
+  font-size: 11px;
+  line-height: 1.4;
+  color: $light-text-1;
+}
+
+.mm-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 9px 11px;
+  border: 1px solid transparent;
+  border-radius: $mm-card-radius;
+  font-size: 12px;
+  line-height: 1.45;
+  color: $dark-text;
+
+  @for $i from 1 through 4 {
+    &--#{$i - 1} {
+      background: nth($mm-tints, $i);
+    }
+  }
+}
+
+// ------------------------------------------------- Capability trace
+
+.mm[data-cap] .mm-group__head {
+  opacity: 0.45;
+}
+
+.mm[data-cap] .mm-fn {
+  opacity: 0.22;
+}
+
+.mm[data-cap] .mm-fn.is-lit {
+  opacity: 1;
+  background: rgba($light-blue-1, 0.05);
+}
+
+// ------------------------------------------------ Example organisation
+
+.mm-tag {
+  align-self: flex-start;
+  padding: 2px 7px;
+  border-radius: $mm-pill-radius;
+  background: $dark-text;
+  color: $white;
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.mm.is-example {
+  .mm-cell.is-now {
+    box-shadow: 0 0 0 2px $light-blue-1;
+  }
+
+  // Stages the example organisation hasn't reached yet. Text stays at
+  // Light Text 1 so it keeps 4.5:1 contrast on white.
+  .mm-cell.is-ahead,
+  .mm-sum.is-ahead {
+    background: transparent;
+    border-style: dashed;
+    border-color: $light-text-2;
+    color: $light-text-1;
+  }
+
+  .mm-cell.is-ahead {
+    border-width: 1px;
+  }
+}
+
+// --------------------------------------------------------------- Footer
+
+.mm .mm-footnote {
+  font-size: 11.5px;
+  line-height: 1.5;
+  color: $light-text-1;
+}
+
+// ---------------------------------------------------------- Responsive
+
+@media only screen and (max-width: $breakpoint-md) {
+  .mm {
+    padding: 32px 16px 48px;
+    gap: 22px;
+  }
+
+  .mm-toolbar__set--end {
+    margin-left: 0;
+  }
+
+  .mm-intro__how {
+    max-width: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mm *,
+  .mm *::before,
+  .mm *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+
+  .mm.is-js .mm-group {
+    opacity: 1;
+    transform: none;
+  }
+}

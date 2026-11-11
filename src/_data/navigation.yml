@@ -13,3 +13,6 @@ main_menu:
 
   - text: "Standards"
     url: "/standards"
+
+  - text: "Maturity Model"
+    url: "/maturity-model"
